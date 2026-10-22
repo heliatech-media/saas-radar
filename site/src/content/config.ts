@@ -27,6 +27,23 @@ const reviewsCollection = defineCollection({
       question: z.string(),
       answer: z.string(),
     })),
+    roi_metrics: z.object({
+      hours_saved_monthly: z.number(),
+      financial_lift_monthly: z.string(),
+      payback_period_weeks: z.number(),
+      roi_summary: z.string(),
+    }).optional(),
+    benchmark_scores: z.object({
+      performance: z.number(),
+      ease_of_use: z.number(),
+      value_for_money: z.number(),
+      integrations: z.number(),
+    }).optional(),
+    competitor_matches: z.array(z.object({
+      competitor: z.string(),
+      key_advantage: z.string(),
+      when_to_switch: z.string(),
+    })).optional(),
   }),
 });
 

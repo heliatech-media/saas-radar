@@ -52,11 +52,11 @@
   {
     "name": "ElevenLabs",
     "slug": "elevenlabs",
-    "tagline": "Industry-leading AI voice generator for hyper-realistic text-to-speech and voice cloning",
-    "category": "AI Video & Content Creation",
+    "tagline": "Industry-leading generative AI voice platform delivering hyper-realistic text-to-speech and dynamic voice cloning.",
+    "category": "AI Voice & Audio Generation",
     "rating": 4.8,
     "starting_price": "$5/mo",
-    "best_for": "Podcast creators, game developers, localization teams, and digital media producers",
+    "best_for": "Content creators, game studios, audiobook publishers, and localization teams needing studio-grade synthetic voices.",
     "affiliate_url": "https://try.elevenlabs.io/ajhd6t7k04dh"
   },
   {
@@ -82,11 +82,11 @@
   {
     "name": "Make",
     "slug": "make",
-    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "tagline": "Design, build, and automate anything from simple tasks to complex workflows without coding.",
     "category": "AI Automation & No-Code",
-    "rating": 4.8,
-    "starting_price": "$19/mo",
-    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "rating": 4.7,
+    "starting_price": "$9/mo",
+    "best_for": "Operations teams, growth marketers, and developers building multi-step automated data pipelines.",
     "affiliate_url": "https://www.make.com/en/register?pc=heliatechmake"
   },
   {

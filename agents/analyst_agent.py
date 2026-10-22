@@ -42,6 +42,9 @@ Ensure your evaluation includes:
 4. Concrete Pros (strengths, technical innovations) and Cons (real trade-offs, learning curve, price barriers).
 5. 3-4 High-intent FAQs directly addressing common questions searchers type into Google.
 6. A comprehensive verdict explaining exactly who gets the highest ROI from this tool.
+7. Rigorous ROI metrics: hours saved monthly for a standard 5-person team, estimated financial monthly value, payback period in weeks, and ROI rationale.
+8. Benchmark scores (1.0-10.0) for Performance, Ease of Use, Value for Money, and Integrations.
+9. Head-to-head comparison against 2-3 direct market competitors (key advantage and when to switch).
 """
 
         try:

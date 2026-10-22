@@ -42,6 +42,13 @@ class PublisherAgent:
             "faqs": [faq.model_dump() for faq in review.faqs],
         }
 
+        if review.roi_metrics:
+            frontmatter["roi_metrics"] = review.roi_metrics.model_dump()
+        if review.benchmark_scores:
+            frontmatter["benchmark_scores"] = review.benchmark_scores.model_dump()
+        if review.competitor_matches:
+            frontmatter["competitor_matches"] = [c.model_dump() for c in review.competitor_matches]
+
         # Format clean markdown with YAML frontmatter and detailed body
         yaml_header = yaml.dump(frontmatter, allow_unicode=True, sort_keys=False)
         content = f"""---

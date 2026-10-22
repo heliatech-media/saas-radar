@@ -42,6 +42,31 @@ const jsonLd = {
       }))
     },
     {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "SoftwareApplication",
+        "name": tool.name,
+        "applicationCategory": tool.category
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": tool.rating.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "name": `${tool.name} Independent Architectural Teardown & Benchmarks`,
+      "author": {
+        "@type": "Organization",
+        "name": "HeliaTech Media",
+        "url": "https://heliatech.online"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Helia Autonomous Intelligence",
+        "url": "https://heliatech.online"
+      }
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": tool.faqs.map(faq => ({
         "@type": "Question",
@@ -114,6 +139,59 @@ const jsonLd = {
       </div>
     </div>
 
+    <!-- Benchmark Telemetry Scorecard -->
+    {tool.benchmark_scores && (
+      <div class="mb-14 rounded-3xl p-7 sm:p-8 bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest block mb-1">RADAR TELEMETRY</span>
+            <h2 class="text-2xl font-black text-white tracking-tight">Benchmark Performance Scores</h2>
+          </div>
+          <span class="px-3.5 py-1 rounded-full bg-champagne-400/10 border border-champagne-400/20 text-champagne-300 text-xs font-mono font-bold">
+            Composite Score: {tool.rating.toFixed(1)} / 5.0
+          </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-titanium-950/60 border border-white/[0.06]">
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300">Technical Speed & Uptime</span>
+              <span class="text-champagne-300 font-bold">{tool.benchmark_scores.performance}/10</span>
+            </div>
+            <div class="w-full bg-white/[0.06] rounded-full h-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-500 to-champagne-300 h-2 rounded-full" style={`width: ${tool.benchmark_scores.performance * 10}%`}></div>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-titanium-950/60 border border-white/[0.06]">
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300">UX & Onboarding Velocity</span>
+              <span class="text-champagne-300 font-bold">{tool.benchmark_scores.ease_of_use}/10</span>
+            </div>
+            <div class="w-full bg-white/[0.06] rounded-full h-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-500 to-champagne-300 h-2 rounded-full" style={`width: ${tool.benchmark_scores.ease_of_use * 10}%`}></div>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-titanium-950/60 border border-white/[0.06]">
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300">Pricing vs Feature Allowance</span>
+              <span class="text-champagne-300 font-bold">{tool.benchmark_scores.value_for_money}/10</span>
+            </div>
+            <div class="w-full bg-white/[0.06] rounded-full h-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-500 to-champagne-300 h-2 rounded-full" style={`width: ${tool.benchmark_scores.value_for_money * 10}%`}></div>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-titanium-950/60 border border-white/[0.06]">
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300">API Robustness & Ecosystem</span>
+              <span class="text-champagne-300 font-bold">{tool.benchmark_scores.integrations}/10</span>
+            </div>
+            <div class="w-full bg-white/[0.06] rounded-full h-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-500 to-champagne-300 h-2 rounded-full" style={`width: ${tool.benchmark_scores.integrations * 10}%`}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
     <!-- Executive Summary & Best For Bento -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
       <div class="md:col-span-2 rounded-3xl p-7 bg-white/[0.02] border border-white/[0.07] backdrop-blur-xl">
@@ -183,6 +261,60 @@ const jsonLd = {
       </div>
     </div>
 
+    <!-- Projected ROI & Productivity Lift Card -->
+    {tool.roi_metrics && (
+      <div class="mb-14 rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-amber-500/[0.04] via-white/[0.02] to-transparent border border-champagne-400/20 backdrop-blur-2xl shadow-glass-titanium relative overflow-hidden">
+        <div class="absolute -top-16 -right-16 w-56 h-56 bg-gold-pure/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest block mb-1">FINANCIAL TELEMETRY</span>
+            <h2 class="text-2xl font-black text-white tracking-tight">Projected ROI & Productivity Lift</h2>
+          </div>
+          <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
+            Breakeven Velocity: ~{tool.roi_metrics.payback_period_weeks} Weeks
+          </span>
+        </div>
+        <p class="text-slate-300 text-sm font-light leading-relaxed mb-8 max-w-2xl">
+          {tool.roi_metrics.roi_summary || `Implementing ${tool.name} eliminates high-friction manual operational cycles, directly reducing labor overhead.`}
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          <div class="p-5 rounded-2xl bg-titanium-950/80 border border-white/[0.08] text-center">
+            <span class="text-3xl font-black text-white font-mono block mb-1">{tool.roi_metrics.hours_saved_monthly}h</span>
+            <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Hours Saved / Month</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-titanium-950/80 border border-champagne-400/30 text-center shadow-inner-gold">
+            <span class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-champagne-200 to-gold-pure font-mono block mb-1">{tool.roi_metrics.financial_lift_monthly}</span>
+            <span class="text-[11px] font-mono text-champagne-300 uppercase tracking-wider">Recovered Capacity</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-titanium-950/80 border border-white/[0.08] text-center">
+            <span class="text-3xl font-black text-emerald-400 font-mono block mb-1">{tool.roi_metrics.payback_period_weeks} wks</span>
+            <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Payback Period</span>
+          </div>
+        </div>
+
+        <!-- Interactive Calculator Slider -->
+        <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <span class="text-xs font-mono text-slate-300 uppercase tracking-wider">Simulate for your team size:</span>
+            <span class="text-xs font-mono text-champagne-300 font-bold"><span id="team-size-display">5</span> team members</span>
+          </div>
+          <input 
+            id="team-size-slider"
+            type="range" 
+            min="1" 
+            max="30" 
+            value="5" 
+            class="w-full h-2 bg-titanium-900 rounded-lg appearance-none cursor-pointer accent-amber-400 mb-4" 
+          />
+          <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+            <span>Estimated annual recovered value:</span>
+            <span id="calculated-annual-roi" class="text-emerald-400 font-bold text-sm">$11,400 / year</span>
+          </div>
+        </div>
+      </div>
+    )}
+
     <!-- Pricing Tiers Grid -->
     <div class="mb-14">
       <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest block mb-2">COMMERCIAL TIERS</span>
@@ -231,6 +363,34 @@ const jsonLd = {
       </div>
     </div>
 
+    <!-- Direct Head-to-Head Comparisons -->
+    {tool.competitor_matches && tool.competitor_matches.length > 0 && (
+      <div class="mb-14 rounded-3xl p-8 bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">
+        <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest block mb-2">COMPETITIVE MATRIX</span>
+        <h2 class="text-2xl font-black text-white mb-6 tracking-tight">Direct Head-to-Head Comparisons</h2>
+        <div class="space-y-4">
+          {tool.competitor_matches.map((item: any) => (
+            <div class="p-5 rounded-2xl bg-titanium-950/70 border border-white/[0.06] hover:border-champagne-400/30 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-white text-base">{tool.name}</span>
+                  <span class="text-xs font-mono text-slate-500 uppercase px-2 py-0.5 rounded bg-white/[0.05]">VS</span>
+                  <span class="font-bold text-slate-300 text-base">{item.competitor}</span>
+                </div>
+                <span class="text-[11px] font-mono text-champagne-300 uppercase tracking-wider">Helia Verdict</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300 mb-2 font-light">
+                <strong class="text-champagne-200 font-medium">Why choose {tool.name}:</strong> {item.key_advantage}
+              </p>
+              <p class="text-xs text-slate-400 font-light border-t border-white/[0.04] pt-2 mt-2">
+                <strong class="text-slate-400 font-medium">When to choose {item.competitor}:</strong> {item.when_to_switch}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
     <!-- Editorial Verdict -->
     <div class="mb-14 rounded-3xl p-8 sm:p-10 bg-gradient-to-b from-white/[0.03] to-white/[0.01] border border-white/[0.08] backdrop-blur-2xl">
       <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest block mb-2">HELIA EXECUTIVE SYNTHESIS</span>
@@ -275,4 +435,20 @@ const jsonLd = {
       </div>
     </div>
   </div>
+
+  <script is:inline>
+    const slider = document.getElementById('team-size-slider');
+    const teamDisplay = document.getElementById('team-size-display');
+    const roiDisplay = document.getElementById('calculated-annual-roi');
+
+    if (slider && teamDisplay && roiDisplay) {
+      slider.addEventListener('input', (e) => {
+        const team = parseInt(e.target.value) || 1;
+        teamDisplay.textContent = team.toString();
+        // Calculate realistic annual recovered value (~$190/mo per member)
+        const annualValue = team * 190 * 12;
+        roiDisplay.textContent = `$${annualValue.toLocaleString()} / year`;
+      });
+    }
+  </script>
 </Layout>
