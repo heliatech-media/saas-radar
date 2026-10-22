@@ -80,6 +80,12 @@ class PartnerStackSync:
                     # Common normalizations
                     if "eleven" in slug:
                         slug = "elevenlabs"
+                    elif "monday" in slug:
+                        slug = "monday-com"
+                    elif "webflow" in slug:
+                        slug = "webflow"
+                    elif "brevo" in slug or "sendinblue" in slug:
+                        slug = "brevo"
 
                     links_map[slug] = link_url
                     print(f"[Helia-Sync] [LINK] Active partnership: '{company_name}' -> {link_url} (slug: {slug})")

@@ -10,6 +10,16 @@
     "affiliate_url": "https://www.airtable.com"
   },
   {
+    "name": "Brevo",
+    "slug": "brevo",
+    "tagline": "The comprehensive CRM and marketing automation platform built to scale business relationships.",
+    "category": "Marketing Automation & CRM",
+    "rating": 4.5,
+    "starting_price": "$25/mo",
+    "best_for": "Small to medium-sized businesses, e-commerce stores, and startups seeking an affordable, unified CRM and multi-channel marketing suite.",
+    "affiliate_url": "https://www.brevo.com"
+  },
+  {
     "name": "Cursor",
     "slug": "cursor",
     "tagline": "The AI-first code editor built for maximum engineering velocity and deep codebase understanding.",
@@ -50,6 +60,16 @@
     "affiliate_url": "https://www.make.com/en/register?pc=heliatechmake"
   },
   {
+    "name": "Monday.com",
+    "slug": "monday-com",
+    "tagline": "A customizable Work OS where teams shape workflows, projects, and processes without code.",
+    "category": "Work OS & Project Management",
+    "rating": 4.6,
+    "starting_price": "$9/seat/mo",
+    "best_for": "Cross-functional teams, marketing agencies, and operations departments requiring high customization and visual clarity.",
+    "affiliate_url": "https://monday.com"
+  },
+  {
     "name": "Notion AI",
     "slug": "notion-ai",
     "tagline": "Embed generative intelligence directly into your workspace notes, databases, and documents.",
@@ -78,6 +98,16 @@
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
     "affiliate_url": "https://www.voiceflow.com"
+  },
+  {
+    "name": "Webflow",
+    "slug": "webflow",
+    "tagline": "Build production-ready, highly customized websites without writing production code.",
+    "category": "No-Code Web & CMS Architecture",
+    "rating": 4.6,
+    "starting_price": "$18/mo",
+    "best_for": "Design agencies, freelance web designers, and marketing teams requiring custom, high-performance web applications without heavy engineering dependencies.",
+    "affiliate_url": "https://webflow.com"
   },
   {
     "name": "Zapier",
