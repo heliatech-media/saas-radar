@@ -33,7 +33,7 @@ jobs:
       - name: Run Autonomous Multi-Agent Pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: 'gemini-3.8-flash'
+          GEMINI_MODEL: 'gemini-3.5-flash-lite'
         run: |
           # Runs discovery radar and generates 2 fresh in-depth reviews daily
           python agents/orchestrator.py --discover 2

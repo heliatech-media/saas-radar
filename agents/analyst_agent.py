@@ -44,16 +44,29 @@ Ensure your evaluation includes:
 6. A comprehensive verdict explaining exactly who gets the highest ROI from this tool.
 """
 
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=system_instruction,
-                response_mime_type="application/json",
-                response_json_schema=ToolReview.model_json_schema(),
-                temperature=0.4,
-            ),
-        )
+        try:
+            response = self.client.models.generate_content(
+                model=self.model,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_instruction,
+                    response_mime_type="application/json",
+                    response_json_schema=ToolReview.model_json_schema(),
+                    temperature=0.4,
+                ),
+            )
+        except Exception as e:
+            print(f"[Helia-Analyst] ⚠️ Primary model {self.model} busy ({e}). Switching to high-throughput fallback: gemini-3.5-flash-lite...")
+            response = self.client.models.generate_content(
+                model="gemini-3.5-flash-lite",
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_instruction,
+                    response_mime_type="application/json",
+                    response_json_schema=ToolReview.model_json_schema(),
+                    temperature=0.4,
+                ),
+            )
 
         data = json.loads(response.text)
         review = ToolReview(**data)
