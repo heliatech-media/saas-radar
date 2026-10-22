@@ -40,13 +40,13 @@ jobs:
 
       - name: Commit & Push New Reviews to GitHub
         run: |
-          git config --global user.name "SaaS Radar Agent [Bot]"
-          git config --global user.email "bot@saashunt.ai"
+          git config --global user.name "Helia [Autonomous Ops Director]"
+          git config --global user.email "helia@heliatech.online"
           git add site/src/content/reviews/ site/src/data/tools-index.json
           
           # Only commit if there are changes
           if ! git diff-index --quiet HEAD --; then
-            git commit -m "feat(content): automated daily reviews via senior Gemini agents [skip ci]"
+            git commit -m "feat(content): automated daily reviews via Director Helia [skip ci]"
             git push origin main
           else
             echo "No new reviews were generated today."

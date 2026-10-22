@@ -38,7 +38,7 @@ class RadarAgent:
             raise ValueError("GEMINI_API_KEY is not configured. Add it to .env or environment.")
 
         prompt = f"""
-You are a Senior SaaS Market Analyst & SEO Growth Director.
+You are Helia-Radar, Director Helia's Market Intelligence and Opportunity Discovery Agent at HeliaTech Media.
 Identify {count} high-growth B2B SaaS software tools {"in the category: " + category if category else "across high-margin B2B niches"}.
 
 Target criteria:
