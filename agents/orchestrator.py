@@ -22,6 +22,7 @@ from agents.config import GEMINI_API_KEY
 from agents.radar_agent import RadarAgent
 from agents.analyst_agent import AnalystAgent
 from agents.publisher_agent import PublisherAgent
+from agents.partnerstack_sync import PartnerStackSync
 from agents.models import ToolReview, PricingTier, FAQItem
 
 
@@ -126,6 +127,12 @@ def main():
     parser.add_argument("--seed", action="store_true", help="Generate reviews for top curated seed SaaS tools")
     parser.add_argument("--discover", type=int, default=0, help="Number of trending tools to discover with Radar Agent")
     args = parser.parse_args()
+
+    # Automatically synchronize active partner links from PartnerStack if configured
+    syncer = PartnerStackSync()
+    if syncer.is_configured():
+        print("[ORCHESTRATOR] 🔄 Auto-syncing active affiliate links from PartnerStack...")
+        syncer.sync_into_heliatech()
 
     radar = RadarAgent()
 
