@@ -10,6 +10,16 @@
     "affiliate_url": "https://www.airtable.com"
   },
   {
+    "name": "Cursor",
+    "slug": "cursor",
+    "tagline": "The AI-first code editor built for maximum engineering velocity and deep codebase understanding.",
+    "category": "AI & Developer Tools",
+    "rating": 4.8,
+    "starting_price": "$0/mo",
+    "best_for": "Software engineers, indie hackers, and technical teams looking to drastically accelerate development and prototyping.",
+    "affiliate_url": "https://www.cursor.com"
+  },
+  {
     "name": "ElevenLabs",
     "slug": "elevenlabs",
     "tagline": "Industry-leading AI voice generator for hyper-realistic text-to-speech and voice cloning",
@@ -20,6 +30,16 @@
     "affiliate_url": "https://try.elevenlabs.io/ajhd6t7k04dh"
   },
   {
+    "name": "HeyGen",
+    "slug": "heygen",
+    "tagline": "AI-powered video generation platform for creating hyper-realistic talking avatar videos at scale.",
+    "category": "AI Video & Content Creation",
+    "rating": 4.7,
+    "starting_price": "$29/mo",
+    "best_for": "Sales teams, content creators, global enterprises, and educators scaling localized video output.",
+    "affiliate_url": "https://www.heygen.com"
+  },
+  {
     "name": "Make",
     "slug": "make",
     "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
@@ -28,6 +48,16 @@
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
     "affiliate_url": "https://www.make.com"
+  },
+  {
+    "name": "Notion AI",
+    "slug": "notion-ai",
+    "tagline": "Embed generative intelligence directly into your workspace notes, databases, and documents.",
+    "category": "AI Productivity & Workspace",
+    "rating": 4.6,
+    "starting_price": "$10",
+    "best_for": "Teams and individuals already heavily invested in the Notion ecosystem who manage vast amounts of internal documentation.",
+    "affiliate_url": "https://www.notion.so/product/ai"
   },
   {
     "name": "Retool",
