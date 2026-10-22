@@ -34,15 +34,16 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: 'gemini-3.5-flash-lite'
+          PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
         run: |
-          # Runs discovery radar and generates 2 fresh in-depth reviews daily
+          # Runs discovery radar, auto-syncs PartnerStack links, and generates 2 fresh in-depth reviews daily
           python agents/orchestrator.py --discover 2
 
       - name: Commit & Push New Reviews to GitHub
         run: |
           git config --global user.name "Helia [Autonomous Ops Director]"
           git config --global user.email "helia@heliatech.online"
-          git add site/src/content/reviews/ site/src/data/tools-index.json
+          git add site/src/content/reviews/ site/src/data/tools-index.json agents/config.py
           
           # Only commit if there are changes
           if ! git diff-index --quiet HEAD --; then
