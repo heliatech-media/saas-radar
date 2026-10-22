@@ -6,7 +6,7 @@ tagline: Industry-leading AI voice generator for hyper-realistic text-to-speech 
 category: AI Video & Content Creation
 rating: 4.8
 website_url: https://elevenlabs.io
-affiliate_url: https://elevenlabs.io
+affiliate_url: https://try.elevenlabs.io/ajhd6t7k04dh
 summary: ElevenLabs is a cutting-edge voice AI platform that delivers emotionally
   rich, context-aware text-to-speech generation and high-fidelity instant voice cloning.
   It empowers developers, creators, and enterprises to produce professional-grade
