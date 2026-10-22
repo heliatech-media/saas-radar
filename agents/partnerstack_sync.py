@@ -88,6 +88,8 @@ class PartnerStackSync:
                         slug = "brevo"
                     elif "lusha" in slug:
                         slug = "lusha"
+                    elif "notion" in slug:
+                        slug = "notion-ai"
 
                     links_map[slug] = link_url
                     print(f"[Helia-Sync] [LINK] Active partnership: '{company_name}' -> {link_url} (slug: {slug})")
