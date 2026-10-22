@@ -100,6 +100,16 @@
     "affiliate_url": "https://www.notion.so/product/ai"
   },
   {
+    "name": "PartnerStack",
+    "slug": "partnerstack",
+    "tagline": "The complete partnership ecosystem to scale SaaS revenue through affiliates, resellers, and referral partners.",
+    "category": "B2B Partner Ecosystem",
+    "rating": 4.6,
+    "starting_price": "Free",
+    "best_for": "B2B SaaS companies, agencies, and enterprise software teams looking to manage multiple partnership channels at scale.",
+    "affiliate_url": "https://partnerstack.com"
+  },
+  {
     "name": "Retool",
     "slug": "retool",
     "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
