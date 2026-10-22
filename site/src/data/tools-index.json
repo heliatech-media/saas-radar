@@ -150,6 +150,16 @@
     "affiliate_url": "https://www.voiceflow.com"
   },
   {
+    "name": "WATI",
+    "slug": "wati",
+    "tagline": "Empower your business with WhatsApp Business API for team inbox, automation, and broadcasting.",
+    "category": "WhatsApp Business API & Customer Support Automation",
+    "rating": 4.5,
+    "starting_price": "$49/mo",
+    "best_for": "E-commerce brands, sales teams, and customer support departments looking to scale operations on WhatsApp.",
+    "affiliate_url": "https://www.wati.io"
+  },
+  {
     "name": "Webflow",
     "slug": "webflow",
     "tagline": "Build production-ready, highly customized websites without writing production code.",

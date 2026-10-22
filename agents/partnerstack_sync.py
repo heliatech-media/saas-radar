@@ -98,6 +98,8 @@ class PartnerStackSync:
                         slug = "adcreative-ai"
                     elif "printify" in slug:
                         slug = "printify"
+                    elif "wati" in slug:
+                        slug = "wati"
 
                     links_map[slug] = link_url
                     print(f"[Helia-Sync] [LINK] Active partnership: '{company_name}' -> {link_url} (slug: {slug})")
