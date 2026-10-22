@@ -54,5 +54,6 @@ TARGET_NICHES = [
 # Affiliate links map: Map tool name to your tracking URL (when you register)
 # If no affiliate URL is registered yet, it defaults to the official site.
 AFFILIATE_MAP = {
-    "elevenlabs": "https://try.elevenlabs.io/ajhd6t7k04dh"
+    "elevenlabs": "https://try.elevenlabs.io/ajhd6t7k04dh",
+    "make": "https://www.make.com/en/register?pc=heliatechmake"
 }
