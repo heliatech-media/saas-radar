@@ -1,0 +1,68 @@
+"""
+Agent 2: Senior Software Analyst & High-Converting SEO Copywriter.
+Generates comprehensive, authentic, technical SaaS teardowns with schema markup readiness.
+"""
+
+import json
+from typing import Optional
+from google import genai
+from google.genai import types
+from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP
+from agents.models import ToolReview
+
+
+class AnalystAgent:
+    def __init__(self, api_key: Optional[str] = None, model: str = GEMINI_MODEL):
+        self.api_key = api_key or GEMINI_API_KEY
+        self.model = model
+        self.client = genai.Client(api_key=self.api_key) if self.api_key else None
+
+    def analyze_tool(self, tool_name: str, category_hint: Optional[str] = None) -> ToolReview:
+        """
+        Conducts a deep technical teardown of the SaaS product.
+        Generates genuine pros/cons, accurate pricing tiers, and Google-rankable FAQ schema.
+        """
+        if not self.client:
+            raise ValueError("GEMINI_API_KEY is not configured. Add it to .env or environment.")
+
+        system_instruction = (
+            "You are a Senior Principal Software Architect and seasoned SaaS Reviewer with 15+ years of experience. "
+            "Write unbiased, deeply analytical, and helpful software teardowns. "
+            "Never write generic promotional fluff. Point out real limitations, accurate pricing structures, "
+            "and who should NOT buy the tool. Your goal is to provide maximum value so the reader makes a confident decision."
+        )
+
+        prompt = f"""
+Teardown the B2B SaaS product: "{tool_name}"{f" (Category: {category_hint})" if category_hint else ""}.
+
+Ensure your evaluation includes:
+1. Accurate official slug (lowercase, kebab-case, e.g. 'notion-ai').
+2. Realistic rating between 4.0 and 5.0 based on real industry reception.
+3. Realistic pricing plans (including Free tiers if they exist, monthly vs annual prices).
+4. Concrete Pros (strengths, technical innovations) and Cons (real trade-offs, learning curve, price barriers).
+5. 3-4 High-intent FAQs directly addressing common questions searchers type into Google.
+6. A comprehensive verdict explaining exactly who gets the highest ROI from this tool.
+"""
+
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=system_instruction,
+                response_mime_type="application/json",
+                response_json_schema=ToolReview.model_json_schema(),
+                temperature=0.4,
+            ),
+        )
+
+        data = json.loads(response.text)
+        review = ToolReview(**data)
+
+        # Check if an affiliate link exists for this tool; otherwise keep official URL
+        slug = review.slug.lower()
+        if slug in AFFILIATE_MAP:
+            review.affiliate_url = AFFILIATE_MAP[slug]
+        elif not review.affiliate_url:
+            review.affiliate_url = review.website_url
+
+        return review

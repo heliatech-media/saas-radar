@@ -1,0 +1,114 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  jsonLd?: Record<string, any>;
+}
+
+const { 
+  title, 
+  description = "Autonomous intelligence engine benchmarking the next generation of B2B SaaS and AI tools. Zero bias, real benchmarks.",
+  jsonLd
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth antialiased selection:bg-champagne-400/30 selection:text-champagne-100" style="background-color: #060608; color-scheme: dark;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | SaaS Radar Titanium</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${title} | SaaS Radar Titanium`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+  </head>
+  <body class="min-h-screen bg-titanium-950 text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #060608;">
+    <!-- Ambient Warm Titanium & Champagne Lighting (Apple Pro Aesthetics) -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <!-- Top Warm Champagne Aura -->
+      <div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[950px] h-[600px] bg-gradient-to-b from-amber-500/12 via-champagne-400/8 to-transparent blur-[150px] rounded-full"></div>
+      <!-- Right Warm Gold Flare -->
+      <div class="absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-gold-pure/5 blur-[170px] rounded-full"></div>
+      <!-- Left Titanium Bronze Flare -->
+      <div class="absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-amber-600/5 blur-[170px] rounded-full"></div>
+      <!-- Geometric Titanium Grid Lines -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
+    </div>
+
+    <!-- Floating Capsule Navbar (Titanium Frosted Glass) -->
+    <div class="sticky top-5 z-50 px-4 sm:px-6 max-w-5xl mx-auto">
+      <header class="backdrop-blur-2xl bg-titanium-900/60 border border-white/[0.08] shadow-glass-titanium rounded-full px-5 py-3 flex items-center justify-between transition-all duration-300 hover:border-champagne-300/30">
+        <!-- Brand -->
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-bronze via-gold-pure to-champagne-200 p-[1px] shadow-glow-gold transition-transform duration-300 group-hover:scale-110">
+            <div class="w-full h-full bg-titanium-950 rounded-full flex items-center justify-center">
+              <span class="text-xs font-black text-transparent bg-clip-text bg-gradient-to-r from-champagne-200 to-gold-pure">✦</span>
+            </div>
+          </div>
+          <span class="font-extrabold text-base tracking-tight text-white group-hover:text-champagne-200 transition-colors">
+            RADAR<span class="text-transparent bg-clip-text bg-gradient-to-r from-champagne-300 to-amber-500">.TITANIUM</span>
+          </span>
+        </a>
+
+        <!-- Links -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-medium text-slate-400 tracking-wider">
+          <a href="/" class="hover:text-champagne-200 transition-colors">EXPLORER</a>
+          <a href="/#categories" class="hover:text-champagne-200 transition-colors">TAXONOMY</a>
+          <a href="/#engine" class="hover:text-champagne-200 transition-colors">AUTONOMOUS ENGINE</a>
+        </nav>
+
+        <!-- Live Telemetry Capsule -->
+        <div class="flex items-center gap-2.5 bg-white/[0.03] border border-champagne-400/20 px-3.5 py-1.5 rounded-full">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-champagne-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-champagne-400"></span>
+          </span>
+          <span class="text-[11px] font-mono tracking-wider text-champagne-200 uppercase font-semibold">
+            3 Agents Live
+          </span>
+        </div>
+      </header>
+    </div>
+
+    <!-- Main Dynamic Content -->
+    <main class="relative z-10 flex-grow">
+      <slot />
+    </main>
+
+    <!-- Ultra-Clean Titanium Footer -->
+    <footer class="relative z-10 border-t border-white/[0.06] bg-titanium-950/80 backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="font-black text-sm tracking-widest text-white">RADAR.TITANIUM</span>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-champagne-400/10 text-champagne-300 border border-champagne-400/20">EDITION 2026</span>
+          </div>
+          <p class="max-w-md text-slate-400 text-xs leading-relaxed">
+            Autonomous programmatic intelligence platform evaluating global enterprise software, AI agents, and workflow systems. Zero human intervention required.
+          </p>
+        </div>
+
+        <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-white/[0.08] pl-4 md:pl-0 md:pr-4">
+          <p class="font-mono text-champagne-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures</p>
+          <p class="text-[11px] leading-relaxed">
+            Benchmarks, feature matrixes, and telemetry are synthesized autonomously via LLM reasoning. Qualifying outbound links may yield performance-based royalties without altering user price.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-white/[0.04] flex justify-between items-center text-[11px] font-mono text-slate-400">
+        <span>© 2026 RADAR TITANIUM INTELLIGENCE</span>
+        <span class="text-champagne-300/80">POWERED BY GEMINI 3.8 FLASH</span>
+      </div>
+    </footer>
+  </body>
+</html>

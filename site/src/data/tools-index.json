@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Airtable",
+    "slug": "airtable",
+    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "category": "AI Automation & No-Code",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "affiliate_url": "https://www.airtable.com"
+  },
+  {
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "tagline": "Industry-leading AI voice generator for hyper-realistic text-to-speech and voice cloning",
+    "category": "AI Video & Content Creation",
+    "rating": 4.8,
+    "starting_price": "$5/mo",
+    "best_for": "Podcast creators, game developers, localization teams, and digital media producers",
+    "affiliate_url": "https://elevenlabs.io"
+  },
+  {
+    "name": "Make",
+    "slug": "make",
+    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "category": "AI Automation & No-Code",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "affiliate_url": "https://www.make.com"
+  },
+  {
+    "name": "Retool",
+    "slug": "retool",
+    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "category": "AI Automation & No-Code",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "affiliate_url": "https://www.retool.com"
+  },
+  {
+    "name": "Voiceflow",
+    "slug": "voiceflow",
+    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "category": "AI Automation & No-Code",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "affiliate_url": "https://www.voiceflow.com"
+  },
+  {
+    "name": "Zapier",
+    "slug": "zapier",
+    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "category": "AI Automation & No-Code",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "affiliate_url": "https://www.zapier.com"
+  },
+  {
+    "name": "n8n",
+    "slug": "n8n",
+    "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
+    "category": "AI Automation & No-Code",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
+    "affiliate_url": "https://www.n8n.com"
+  }
+]
