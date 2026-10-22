@@ -86,6 +86,8 @@ class PartnerStackSync:
                         slug = "webflow"
                     elif "brevo" in slug or "sendinblue" in slug:
                         slug = "brevo"
+                    elif "lusha" in slug:
+                        slug = "lusha"
 
                     links_map[slug] = link_url
                     print(f"[Helia-Sync] [LINK] Active partnership: '{company_name}' -> {link_url} (slug: {slug})")

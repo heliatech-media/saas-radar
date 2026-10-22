@@ -50,6 +50,16 @@
     "affiliate_url": "https://www.heygen.com"
   },
   {
+    "name": "Lusha",
+    "slug": "lusha",
+    "tagline": "B2B sales intelligence and contact enrichment platform for finding verified decision-maker emails and direct dials.",
+    "category": "B2B Sales Intelligence & Lead Enrichment",
+    "rating": 4.4,
+    "starting_price": "$39/mo",
+    "best_for": "Outbound sales teams, SDRs, and tech recruiters looking for high-accuracy direct dials and email contacts.",
+    "affiliate_url": "https://www.lusha.com"
+  },
+  {
     "name": "Make",
     "slug": "make",
     "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
