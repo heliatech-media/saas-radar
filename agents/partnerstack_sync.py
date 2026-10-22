@@ -98,17 +98,29 @@ class PartnerStackSync:
         if not links:
             return 0
 
-        # 1. Update agents/config.py
+        # 1. Update agents/config.py (MERGE with existing affiliate map)
         if CONFIG_PATH.exists():
             content = CONFIG_PATH.read_text(encoding="utf-8")
-            map_repr = json.dumps(links, indent=4)
+            # Extract current map if present
+            current_map = {}
+            match = re.search(r'AFFILIATE_MAP\s*=\s*(\{[\s\S]*?\n\})', content)
+            if match:
+                try:
+                    # Parse as python dict literal safely
+                    import ast
+                    current_map = ast.literal_eval(match.group(1))
+                except Exception:
+                    current_map = {}
+            # Merge PartnerStack links
+            current_map.update(links)
+            map_repr = json.dumps(current_map, indent=4)
             new_content = re.sub(
-                r'AFFILIATE_MAP\s*=\s*\{[^}]*\}',
+                r'AFFILIATE_MAP\s*=\s*\{[\s\S]*?\n\}',
                 f'AFFILIATE_MAP = {map_repr}',
                 content
             )
             CONFIG_PATH.write_text(new_content, encoding="utf-8")
-            print(f"[Helia-Sync] [OK] Updated AFFILIATE_MAP in {CONFIG_PATH}")
+            print(f"[Helia-Sync] [OK] Merged and updated AFFILIATE_MAP in {CONFIG_PATH}")
 
         # 2. Update reviews markdown files
         for slug, url in links.items():
