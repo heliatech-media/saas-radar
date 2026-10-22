@@ -1,5 +1,15 @@
 [
   {
+    "name": "AdCreative.ai",
+    "slug": "adcreative-ai",
+    "tagline": "Data-backed AI advertising creative generation platform designed to maximize conversions.",
+    "category": "AI Advertising & Conversion Creative Automation",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Performance marketers, e-commerce brands, and digital agencies managing multi-channel ad spend.",
+    "affiliate_url": "https://www.adcreative.ai"
+  },
+  {
     "name": "Airtable",
     "slug": "airtable",
     "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
