@@ -2,18 +2,39 @@
 import Layout from '../layouts/Layout.astro';
 import toolsData from '../data/tools-index.json';
 
-// Unique categories
-const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) => t.category)))];
+// Grouping into clean macro-categories for the filter pills
+const macroCategories = [
+  "All Systems",
+  "Automation & No-Code",
+  "AI Voice & Media",
+  "Productivity & OS",
+  "Sales, CRM & Outreach",
+  "Web & E-Commerce"
+];
+
+// Helper to map each tool to a macro category for easy filtering
+function getMacroCategory(cat: string): string {
+  const c = cat.toLowerCase();
+  if (c.includes("voice") || c.includes("video") || c.includes("advertising")) return "AI Voice & Media";
+  if (c.includes("productivity") || c.includes("work os") || c.includes("workspace")) return "Productivity & OS";
+  if (c.includes("crm") || c.includes("sales") || c.includes("whatsapp") || c.includes("partner")) return "Sales, CRM & Outreach";
+  if (c.includes("web") || c.includes("print") || c.includes("commerce")) return "Web & E-Commerce";
+  return "Automation & No-Code";
+}
+
+// Spotlight Featured Tools for 2026
+const featuredSlugs = ["make", "elevenlabs", "clickup"];
+const featuredTools = toolsData.filter((t: any) => featuredSlugs.includes(t.slug));
 ---
 
 <Layout title="Next-Gen Autonomous Software Intelligence">
   <!-- Hero Section (Spacious, Titanium Champagne Apple Aesthetic) -->
-  <section class="relative pt-24 pb-20 px-6 sm:px-8 max-w-6xl mx-auto text-center">
+  <section class="relative pt-24 pb-16 px-6 sm:px-8 max-w-6xl mx-auto text-center">
     <!-- Titanium Gold Pill Badge -->
     <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] border border-champagne-400/20 backdrop-blur-xl mb-8 shadow-inner-gold hover:border-champagne-300/40 transition-all duration-300">
       <span class="w-2 h-2 rounded-full bg-champagne-400 animate-pulse"></span>
       <span class="text-xs font-mono font-medium tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-champagne-200 via-white to-gold-pure">
-        HELIA AUTONOMOUS RADAR OS
+        HELIA AUTONOMOUS RADAR OS • V2.0 TITANIUM
       </span>
     </div>
 
@@ -30,7 +51,7 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
     </p>
 
     <!-- Spatial Floating Search Console with Warm Gold Aura -->
-    <div class="max-w-2xl mx-auto relative mb-12 group">
+    <div class="max-w-2xl mx-auto relative mb-10 group">
       <div class="absolute -inset-1 bg-gradient-to-r from-champagne-400/20 via-amber-500/20 to-gold-bronze/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
       
       <div class="relative flex items-center backdrop-blur-2xl bg-titanium-900/80 border border-white/[0.12] rounded-2xl shadow-2xl overflow-hidden p-2 group-hover:border-champagne-300/30 transition-all">
@@ -42,7 +63,7 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
         <input 
           type="text" 
           id="search-input"
-          placeholder="Filter ecosystems, APIs, CRM, workflows, automation..." 
+          placeholder="Search 19 audited SaaS ecosystems (Make, ElevenLabs, ClickUp, Webflow...)" 
           class="w-full py-3 bg-transparent text-white placeholder-slate-500 text-sm focus:outline-none font-normal"
         />
         <div class="hidden sm:flex items-center gap-1 bg-white/[0.05] border border-champagne-400/20 px-2.5 py-1 rounded-lg mr-2">
@@ -52,13 +73,13 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
     </div>
 
     <!-- Spatial Category Pills -->
-    <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto mb-16" id="category-filters">
-      {categories.map((cat, idx) => (
+    <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto mb-14" id="category-filters">
+      {macroCategories.map((cat, idx) => (
         <button 
           data-category={cat}
-          class={`px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 ${
+          class={`filter-btn px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 ${
             idx === 0 
-              ? 'bg-gradient-to-r from-champagne-200 via-gold-pure to-gold-bronze text-titanium-950 font-bold shadow-glow-gold scale-105' 
+              ? 'bg-gradient-to-r from-champagne-200 via-gold-pure to-gold-bronze text-titanium-950 font-bold shadow-glow-gold scale-105 active' 
               : 'bg-white/[0.03] text-slate-400 hover:text-white hover:bg-white/[0.08] border border-white/[0.06]'
           }`}
         >
@@ -70,34 +91,106 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
     <!-- Live Telemetry Matrix -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-md">
       <div class="p-3 text-center">
-        <span class="block text-2xl font-black text-white font-mono">100%</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Autonomous</span>
+        <span class="block text-2xl font-black text-white font-mono">{toolsData.length} Systems</span>
+        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Independently Audited</span>
       </div>
       <div class="p-3 text-center border-l border-white/[0.06]">
-        <span class="block text-2xl font-black text-champagne-300 font-mono">0.00s</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Edge Latency</span>
+        <span class="block text-2xl font-black text-champagne-300 font-mono">$0.00</span>
+        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Capital Overhead</span>
       </div>
       <div class="p-3 text-center border-l border-white/[0.06]">
-        <span class="block text-2xl font-black text-white font-mono">24/7</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Radar Scans</span>
+        <span class="block text-2xl font-black text-white font-mono">35% MRR</span>
+        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Top Commission Tier</span>
       </div>
       <div class="p-3 text-center border-l border-white/[0.06]">
-        <span class="block text-2xl font-black text-gold-pure font-mono">Helia Core</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Ops Director</span>
+        <span class="block text-2xl font-black text-gold-pure font-mono">05:00 UTC</span>
+        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Daily Autonomous Cron</span>
       </div>
+    </div>
+  </section>
+
+  <!-- Spotlight Bento: Helia Editor Choice 2026 -->
+  <section class="max-w-6xl mx-auto px-6 lg:px-8 py-8 mb-6">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-gold-pure animate-ping"></span>
+        <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest font-bold">HELIA SPOTLIGHT 2026</span>
+      </div>
+      <span class="text-xs font-mono text-slate-500 uppercase tracking-wider">Top Tier Evaluated</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {featuredTools.map((tool: any) => (
+        <div class="relative rounded-3xl p-7 bg-gradient-to-b from-white/[0.05] to-white/[0.02] border-2 border-gold-pure/60 backdrop-blur-2xl shadow-glow-gold flex flex-col justify-between overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+          <div class="absolute -top-12 -right-12 w-28 h-28 bg-gold-pure/20 rounded-full blur-2xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-gold-pure text-titanium-950 uppercase tracking-wider">
+                EDITOR'S CHOICE
+              </span>
+              <span class="text-xs font-mono text-champagne-300 font-bold">★ {tool.rating.toFixed(1)}</span>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-2 group-hover:text-champagne-200 transition-colors">
+              {tool.name}
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6 font-light line-clamp-2">
+              {tool.tagline}
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+            <a href={`/reviews/${tool.slug}`} class="text-xs text-slate-300 hover:text-white font-mono">
+              View Teardown →
+            </a>
+            <a 
+              href={`/go/${tool.slug}`} 
+              target="_blank" 
+              rel="noopener noreferrer sponsored"
+              class="px-4 py-2 rounded-xl bg-gradient-to-r from-champagne-200 to-gold-pure text-titanium-950 text-xs font-bold shadow-md hover:brightness-105 transition-all"
+            >
+              Access ↗
+            </a>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 
   <!-- Software Teardown Matrix Section -->
   <section class="max-w-6xl mx-auto px-6 lg:px-8 py-10" id="categories">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-white/[0.06]">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-6 border-b border-white/[0.06]">
       <div>
         <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest block mb-1">LIVE REPOSITORY</span>
         <h2 class="text-3xl font-black text-white tracking-tight">Active Software Matrix</h2>
       </div>
-      <div class="text-xs font-mono text-slate-400">
-        TELEMETRY: <span id="tool-count" class="text-champagne-200 font-bold">{toolsData.length}</span> SYSTEMS VERIFIED
+      <div class="flex items-center gap-4">
+        <!-- Sort Control -->
+        <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+          <span>SORT:</span>
+          <button id="sort-rating" class="px-2.5 py-1 rounded-lg bg-champagne-400/20 text-champagne-200 border border-champagne-400/30 font-bold transition-all">
+            ★ Highest Rating
+          </button>
+          <button id="sort-name" class="px-2.5 py-1 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 border border-white/[0.08] transition-all">
+            A-Z
+          </button>
+        </div>
+        <div class="text-xs font-mono text-slate-400 border-l border-white/[0.08] pl-4">
+          SHOWING: <span id="tool-count" class="text-champagne-200 font-bold">{toolsData.length}</span> OF {toolsData.length}
+        </div>
       </div>
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="empty-state" class="hidden text-center py-16 px-6 rounded-3xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-xl mb-12">
+      <div class="w-12 h-12 rounded-full bg-champagne-400/10 border border-champagne-400/20 text-champagne-300 flex items-center justify-center mx-auto mb-4 text-xl">
+        🔍
+      </div>
+      <h3 class="text-xl font-bold text-white mb-2">No Matching Software Systems</h3>
+      <p class="text-xs text-slate-400 max-w-md mx-auto mb-6">
+        Helia-Radar continuously discovers new platforms daily. Try adjusting your query or reset the filter.
+      </p>
+      <button id="reset-filters" class="px-5 py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-champagne-200 text-xs font-mono transition-all">
+        Reset All Filters
+      </button>
     </div>
 
     <!-- Spatial Glass Bento Grid with Gold Accents -->
@@ -107,7 +200,9 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
           class="tool-card group relative rounded-3xl p-7 bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.08] hover:border-champagne-400/40 backdrop-blur-xl transition-all duration-500 flex flex-col justify-between hover:shadow-glow-gold hover:-translate-y-1.5 overflow-hidden"
           data-name={tool.name.toLowerCase()}
           data-category={tool.category}
+          data-macro={getMacroCategory(tool.category)}
           data-tagline={tool.tagline.toLowerCase()}
+          data-rating={tool.rating}
         >
           <!-- Subtle Top Gold Shine -->
           <div class="absolute -top-12 -right-12 w-32 h-32 bg-champagne-400/10 rounded-full blur-2xl group-hover:bg-champagne-400/20 transition-all duration-500 pointer-events-none"></div>
@@ -151,7 +246,7 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
             </a>
             <a 
               href={`/go/${tool.slug}`} 
-              target="_blank"
+              target="_blank" 
               rel="noopener noreferrer sponsored"
               class="text-center py-3 px-3 rounded-xl bg-gradient-to-r from-champagne-200 via-gold-pure to-gold-bronze hover:from-champagne-100 hover:to-gold-pure text-titanium-950 font-bold text-xs shadow-md shadow-amber-500/10 transition-all flex items-center justify-center gap-1 hover:scale-[1.02]"
             >
@@ -225,25 +320,31 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
   </section>
 
   <!-- Interactive Search / Filter Controller -->
-  <script>
-    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  <script is:inline>
+    const searchInput = document.getElementById('search-input');
     const filterButtons = document.querySelectorAll('#category-filters button');
-    const cards = document.querySelectorAll('.tool-card') as NodeListOf<HTMLElement>;
+    const cards = Array.from(document.querySelectorAll('.tool-card'));
     const countSpan = document.getElementById('tool-count');
+    const emptyState = document.getElementById('empty-state');
+    const resetBtn = document.getElementById('reset-filters');
+    const toolsGrid = document.getElementById('tools-grid');
+    const sortRatingBtn = document.getElementById('sort-rating');
+    const sortNameBtn = document.getElementById('sort-name');
 
     let activeCategory = 'All Systems';
 
     function filterTools() {
-      const query = (searchInput?.value || '').toLowerCase().trim();
+      const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
       let visibleCount = 0;
 
       cards.forEach(card => {
         const name = card.dataset.name || '';
         const category = card.dataset.category || '';
+        const macro = card.dataset.macro || '';
         const tagline = card.dataset.tagline || '';
 
-        const matchesSearch = !query || name.includes(query) || tagline.includes(query) || category.toLowerCase().includes(query);
-        const matchesCategory = activeCategory === 'All Systems' || category === activeCategory;
+        const matchesSearch = !query || name.includes(query) || tagline.includes(query) || category.toLowerCase().includes(query) || macro.toLowerCase().includes(query);
+        const matchesCategory = activeCategory === 'All Systems' || macro === activeCategory || category === activeCategory;
 
         if (matchesSearch && matchesCategory) {
           card.style.display = 'flex';
@@ -254,27 +355,62 @@ const categories = ["All Systems", ...Array.from(new Set(toolsData.map((t: any) 
       });
 
       if (countSpan) countSpan.textContent = visibleCount.toString();
+      if (emptyState) {
+        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
     }
 
-    searchInput?.addEventListener('input', filterTools);
+    if (searchInput) {
+      searchInput.addEventListener('input', filterTools);
+    }
 
     // Keyboard shortcut (Cmd+K / Ctrl+K)
     window.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
-        searchInput?.focus();
+        if (searchInput) searchInput.focus();
       }
     });
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         filterButtons.forEach(b => {
-          b.className = 'px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 bg-white/[0.03] text-slate-400 hover:text-white hover:bg-white/[0.08] border border-white/[0.06]';
+          b.className = 'filter-btn px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 bg-white/[0.03] text-slate-400 hover:text-white hover:bg-white/[0.08] border border-white/[0.06]';
         });
-        btn.className = 'px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-champagne-200 via-gold-pure to-gold-bronze text-titanium-950 shadow-glow-gold scale-105';
+        btn.className = 'filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-champagne-200 via-gold-pure to-gold-bronze text-titanium-950 shadow-glow-gold scale-105 active';
         activeCategory = btn.getAttribute('data-category') || 'All Systems';
         filterTools();
       });
     });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (filterButtons.length > 0) {
+          filterButtons[0].click();
+        } else {
+          filterTools();
+        }
+      });
+    }
+
+    // Sorting handlers
+    if (sortRatingBtn && toolsGrid) {
+      sortRatingBtn.addEventListener('click', () => {
+        cards.sort((a, b) => parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0));
+        cards.forEach(card => toolsGrid.appendChild(card));
+        sortRatingBtn.className = 'px-2.5 py-1 rounded-lg bg-champagne-400/20 text-champagne-200 border border-champagne-400/30 font-bold transition-all';
+        if (sortNameBtn) sortNameBtn.className = 'px-2.5 py-1 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 border border-white/[0.08] transition-all';
+      });
+    }
+
+    if (sortNameBtn && toolsGrid) {
+      sortNameBtn.addEventListener('click', () => {
+        cards.sort((a, b) => (a.dataset.name || '').localeCompare(b.dataset.name || ''));
+        cards.forEach(card => toolsGrid.appendChild(card));
+        sortNameBtn.className = 'px-2.5 py-1 rounded-lg bg-champagne-400/20 text-champagne-200 border border-champagne-400/30 font-bold transition-all';
+        if (sortRatingBtn) sortRatingBtn.className = 'px-2.5 py-1 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 border border-white/[0.08] transition-all';
+      });
+    }
   </script>
 </Layout>
