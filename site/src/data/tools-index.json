@@ -20,6 +20,16 @@
     "affiliate_url": "https://www.brevo.com"
   },
   {
+    "name": "ClickUp",
+    "slug": "clickup",
+    "tagline": "The one app to replace them all with customizable tasks, docs, goals, and chat.",
+    "category": "All-in-One Productivity & Workspace OS",
+    "rating": 4.5,
+    "starting_price": "$7/mo",
+    "best_for": "Growing startups, remote operations teams, and agile agencies looking for a centralized workspace.",
+    "affiliate_url": "https://clickup.com"
+  },
+  {
     "name": "Cursor",
     "slug": "cursor",
     "tagline": "The AI-first code editor built for maximum engineering velocity and deep codebase understanding.",
