@@ -28,7 +28,7 @@ jobs:
       - name: Install Python Agent Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install google-genai pydantic python-dotenv pyyaml tenacity
+          pip install google-genai pydantic python-dotenv pyyaml tenacity requests
 
       - name: Run Autonomous Multi-Agent Pipeline
         env:
@@ -47,7 +47,7 @@ jobs:
           
           # Only commit if there are changes
           if ! git diff-index --quiet HEAD --; then
-            git commit -m "feat(content): automated daily reviews via Director Helia [skip ci]"
+            git commit -m "feat(content): automated daily reviews via Director Helia"
             git push origin main
           else
             echo "No new reviews were generated today."

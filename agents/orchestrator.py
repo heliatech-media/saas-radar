@@ -23,7 +23,7 @@ from agents.radar_agent import RadarAgent
 from agents.analyst_agent import AnalystAgent
 from agents.publisher_agent import PublisherAgent
 from agents.partnerstack_sync import PartnerStackSync
-from agents.models import ToolReview, PricingTier, FAQItem
+from agents.models import ToolReview, PricingTier, FAQItem, ROIMetrics, BenchmarkScores, CompetitorMatch
 
 
 def run_pipeline_for_tool(tool_name: str, category: str = "", api_key: str = GEMINI_API_KEY):
@@ -115,6 +115,25 @@ The balance of visual simplicity and deep programmatic flexibility makes it an e
             FAQItem(
                 question=f"Can I integrate custom AI models and webhooks?",
                 answer="Yes, it features first-class support for custom REST endpoints, webhooks, and direct connections to AI APIs."
+            )
+        ],
+        roi_metrics=ROIMetrics(
+            hours_saved_monthly=24,
+            financial_lift_monthly="$1,200/mo",
+            payback_period_weeks=1.5,
+            roi_summary=f"Automating key operational bottlenecks with {tool_name} saves ~24 hours monthly, yielding over $1,200 in recovered bandwidth."
+        ),
+        benchmark_scores=BenchmarkScores(
+            performance=9.1,
+            ease_of_use=8.5,
+            value_for_money=9.0,
+            integrations=8.8
+        ),
+        competitor_matches=[
+            CompetitorMatch(
+                competitor="Legacy Alternatives",
+                key_advantage=f"Modern, AI-native interface with substantially lower total cost of ownership.",
+                when_to_switch="Only choose legacy tools if an enterprise mandate requires on-premise mainframe hosting."
             )
         ]
     )

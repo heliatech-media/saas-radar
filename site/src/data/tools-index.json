@@ -2,11 +2,11 @@
   {
     "name": "AdCreative.ai",
     "slug": "adcreative-ai",
-    "tagline": "Data-backed AI advertising creative generation platform designed to maximize conversions.",
-    "category": "AI Advertising & Conversion Creative Automation",
+    "tagline": "Data-driven AI creative generation platform that scales ad spend performance instantly",
+    "category": "AI Advertising",
     "rating": 4.6,
     "starting_price": "$29/mo",
-    "best_for": "Performance marketers, e-commerce brands, and digital agencies managing multi-channel ad spend.",
+    "best_for": "Growth marketers, e-commerce brands, and agency owners scaling multi-channel paid social campaigns",
     "affiliate_url": "https://www.adcreative.ai"
   },
   {
@@ -20,13 +20,23 @@
     "affiliate_url": "https://www.airtable.com"
   },
   {
+    "name": "Apollo.io",
+    "slug": "apollo-io",
+    "tagline": "The all-in-one B2B sales intelligence and engagement platform to find, contact, and close your ideal buyers.",
+    "category": "Marketing & Sales Intelligence",
+    "rating": 4.6,
+    "starting_price": "$49/mo",
+    "best_for": "B2B sales teams, growth marketers, founders, and outbound agencies seeking an all-in-one prospecting engine.",
+    "affiliate_url": "https://www.apollo.io"
+  },
+  {
     "name": "Brevo",
     "slug": "brevo",
-    "tagline": "The comprehensive CRM and marketing automation platform built to scale business relationships.",
+    "tagline": "All-in-one digital marketing platform built around transactional email and robust CRM capabilities.",
     "category": "Marketing Automation & CRM",
     "rating": 4.5,
     "starting_price": "$25/mo",
-    "best_for": "Small to medium-sized businesses, e-commerce stores, and startups seeking an affordable, unified CRM and multi-channel marketing suite.",
+    "best_for": "E-commerce brands, SMBs, and digital agencies looking for cost-effective multi-channel marketing and built-in sales pipelines.",
     "affiliate_url": "https://www.brevo.com"
   },
   {
@@ -72,11 +82,11 @@
   {
     "name": "Lusha",
     "slug": "lusha",
-    "tagline": "B2B sales intelligence and contact enrichment platform for finding verified decision-maker emails and direct dials.",
-    "category": "B2B Sales Intelligence & Lead Enrichment",
-    "rating": 4.4,
+    "tagline": "B2B sales intelligence and contact enrichment platform for finding direct dials and verified emails.",
+    "category": "B2B Sales Intelligence",
+    "rating": 4.3,
     "starting_price": "$39/mo",
-    "best_for": "Outbound sales teams, SDRs, and tech recruiters looking for high-accuracy direct dials and email contacts.",
+    "best_for": "Outbound sales development reps, account executives, and tech recruiters looking for high-accuracy contact data.",
     "affiliate_url": "https://www.lusha.com"
   },
   {
@@ -122,11 +132,11 @@
   {
     "name": "Printify",
     "slug": "printify",
-    "tagline": "A robust print-on-demand platform connecting e-commerce stores with a global network of automated fulfillment partners.",
-    "category": "Print on Demand & Automated E-Commerce Fulfillment",
+    "tagline": "A robust print-on-demand platform connecting e-commerce stores with a global network of print providers.",
+    "category": "Print on Demand",
     "rating": 4.6,
     "starting_price": "$29/mo",
-    "best_for": "E-commerce entrepreneurs, content creators, and retail brands looking to scale merch lines with zero upfront inventory costs.",
+    "best_for": "E-commerce entrepreneurs, creators, and brands wanting to launch custom merchandise without upfront inventory costs.",
     "affiliate_url": "https://printify.com"
   },
   {
@@ -152,11 +162,11 @@
   {
     "name": "WATI",
     "slug": "wati",
-    "tagline": "Empower your business with WhatsApp Business API for team inbox, automation, and broadcasting.",
+    "tagline": "The official WhatsApp Business API platform built for customer support, marketing automation, and team collaboration.",
     "category": "WhatsApp Business API & Customer Support Automation",
     "rating": 4.5,
     "starting_price": "$49/mo",
-    "best_for": "E-commerce brands, sales teams, and customer support departments looking to scale operations on WhatsApp.",
+    "best_for": "E-commerce brands, growing SMBs, and remote customer support teams scaling their WhatsApp channels.",
     "affiliate_url": "https://www.wati.io"
   },
   {
