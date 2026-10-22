@@ -33,10 +33,10 @@
     "name": "ClickUp",
     "slug": "clickup",
     "tagline": "The one app to replace them all with customizable tasks, docs, goals, and chat.",
-    "category": "All-in-One Productivity & Workspace OS",
-    "rating": 4.5,
-    "starting_price": "$7/mo",
-    "best_for": "Growing startups, remote operations teams, and agile agencies looking for a centralized workspace.",
+    "category": "Productivity & Workspace OS",
+    "rating": 4.3,
+    "starting_price": "$7",
+    "best_for": "Fast-growing agencies, operations teams, and project managers who need hyper-customizable workflows.",
     "affiliate_url": "https://clickup.com"
   },
   {
@@ -92,11 +92,11 @@
   {
     "name": "Monday.com",
     "slug": "monday-com",
-    "tagline": "A customizable Work OS where teams shape workflows, projects, and processes without code.",
+    "tagline": "A customizable Work OS where teams build custom workflows, manage projects, and scale operations.",
     "category": "Work OS & Project Management",
     "rating": 4.6,
     "starting_price": "$9/seat/mo",
-    "best_for": "Cross-functional teams, marketing agencies, and operations departments requiring high customization and visual clarity.",
+    "best_for": "Cross-functional teams, agency operations, and project managers seeking visual, highly automatable workflows.",
     "affiliate_url": "https://monday.com"
   },
   {
@@ -162,11 +162,11 @@
   {
     "name": "Webflow",
     "slug": "webflow",
-    "tagline": "Build production-ready, highly customized websites without writing production code.",
+    "tagline": "Build production-ready custom websites at scale without writing code",
     "category": "No-Code Web & CMS Architecture",
     "rating": 4.6,
-    "starting_price": "$18/mo",
-    "best_for": "Design agencies, freelance web designers, and marketing teams requiring custom, high-performance web applications without heavy engineering dependencies.",
+    "starting_price": "$0/mo",
+    "best_for": "UI/UX designers, marketing agencies, and scaling tech companies needing bespoke web experiences",
     "affiliate_url": "https://webflow.com"
   },
   {
