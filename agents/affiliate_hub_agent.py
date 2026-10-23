@@ -278,6 +278,35 @@ class CJAdapter(BaseNetworkAdapter):
         return results
 
 
+class RewardfulAdapter(BaseNetworkAdapter):
+    """
+    Rewardful Protocol Adapter.
+    Uses HeliaTech's universal affiliate token (?via=heliatech).
+    Monitors verified high-converting SaaS platforms powered by Rewardful.
+    """
+    name = "Rewardful"
+
+    def __init__(self):
+        self.token = os.getenv("REWARDFUL_AFFILIATE_TOKEN", "heliatech").strip()
+
+    def is_configured(self) -> bool:
+        return bool(self.token)
+
+    def fetch_links(self) -> Dict[str, str]:
+        if not self.is_configured():
+            return {}
+        try:
+            from agents.rewardful_engine_agent import CURATED_REWARDFUL_PARTNERS
+            results = {}
+            for p in CURATED_REWARDFUL_PARTNERS:
+                results[p["slug"]] = f"{p['domain'].rstrip('/')}/?via={self.token}"
+            logger.info(f"[Rewardful] Connected & active across {len(results)} SaaS programs under token '{self.token}'.")
+            return results
+        except Exception as e:
+            logger.error(f"Error in Rewardful adapter: {e}")
+            return {}
+
+
 class HeliaAffiliateHub:
     """
     Central Orchestrator for Multi-Network Affiliate API Management.
@@ -286,7 +315,8 @@ class HeliaAffiliateHub:
         self.adapters: List[BaseNetworkAdapter] = [
             ImpactAdapter(),
             PartnerStackAdapter(),
-            CJAdapter()
+            CJAdapter(),
+            RewardfulAdapter()
         ]
 
     def list_supported_adapters(self) -> List[Dict]:

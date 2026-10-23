@@ -76,5 +76,12 @@ AFFILIATE_MAP = {
     "printify": "https://printify.pxf.io/c/heliatech",
     "phantombuster": "https://phantombuster.com/?via=heliatech",
     "retool": "https://retool.grsm.io/heliatech",
-    "rewardful": "https://www.rewardful.com/?via=heliatech"
+    "rewardful": "https://www.rewardful.com/?via=heliatech",
+    "transistor-fm": "https://transistor.fm/?via=heliatech",
+    "memberstack": "https://www.memberstack.com/?via=heliatech",
+    "podia": "https://www.podia.com/?via=heliatech",
+    "riverside-fm": "https://riverside.fm/?via=heliatech",
+    "veed-io": "https://www.veed.io/?via=heliatech",
+    "opus-clip": "https://www.opus.pro/?via=heliatech",
+    "getimg-ai": "https://getimg.ai/?via=heliatech"
 }

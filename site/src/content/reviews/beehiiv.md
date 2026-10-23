@@ -5,7 +5,7 @@ tagline: The newsletter platform built for growth, scaling, and monetization.
 category: Marketing
 rating: 4.7
 website_url: https://www.beehiiv.com
-affiliate_url: "https://www.beehiiv.com/?via=heliatech"
+affiliate_url: https://www.beehiiv.com/?via=heliatech
 summary: Beehiiv is a modern newsletter publishing and audience-growth platform founded
   by the early team behind Morning Brew. It combines advanced delivery infrastructure
   with built-in recommendation networks, referral programs, and monetization tools.

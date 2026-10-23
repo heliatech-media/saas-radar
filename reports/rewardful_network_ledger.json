@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-10-24T00:46:10.885376",
+  "master_token": "heliatech",
+  "master_link": "https://www.rewardful.com/?via=heliatech",
+  "total_rewardful_partners": 9,
+  "new_routes_added": 7,
+  "partners": [
+    {
+      "slug": "rewardful",
+      "name": "Rewardful",
+      "domain": "https://www.rewardful.com",
+      "category": "Growth & Affiliate Infrastructure",
+      "payout": "Recurring Stripe Commission",
+      "affiliate_url": "https://www.rewardful.com/?via=heliatech",
+      "redirect_path": "/go/rewardful"
+    },
+    {
+      "slug": "beehiiv",
+      "name": "beehiiv",
+      "domain": "https://www.beehiiv.com",
+      "category": "Newsletter & Media Publishing",
+      "payout": "50% recurring for 12 months",
+      "affiliate_url": "https://www.beehiiv.com/?via=heliatech",
+      "redirect_path": "/go/beehiiv"
+    },
+    {
+      "slug": "transistor-fm",
+      "name": "Transistor.fm",
+      "domain": "https://transistor.fm",
+      "category": "Podcast Hosting & Analytics",
+      "payout": "25% lifetime recurring",
+      "affiliate_url": "https://transistor.fm/?via=heliatech",
+      "redirect_path": "/go/transistor-fm"
+    },
+    {
+      "slug": "memberstack",
+      "name": "Memberstack",
+      "domain": "https://www.memberstack.com",
+      "category": "Stripe Auth & Memberships",
+      "payout": "20% recurring",
+      "affiliate_url": "https://www.memberstack.com/?via=heliatech",
+      "redirect_path": "/go/memberstack"
+    },
+    {
+      "slug": "podia",
+      "name": "Podia",
+      "domain": "https://www.podia.com",
+      "category": "Creator Store & Courses",
+      "payout": "30% recurring monthly",
+      "affiliate_url": "https://www.podia.com/?via=heliatech",
+      "redirect_path": "/go/podia"
+    },
+    {
+      "slug": "riverside-fm",
+      "name": "Riverside.fm",
+      "domain": "https://riverside.fm",
+      "category": "4K Video & Audio Recording",
+      "payout": "20% recurring",
+      "affiliate_url": "https://riverside.fm/?via=heliatech",
+      "redirect_path": "/go/riverside-fm"
+    },
+    {
+      "slug": "veed-io",
+      "name": "VEED.IO",
+      "domain": "https://www.veed.io",
+      "category": "AI Video Editor & Subtitles",
+      "payout": "25% recurring",
+      "affiliate_url": "https://www.veed.io/?via=heliatech",
+      "redirect_path": "/go/veed-io"
+    },
+    {
+      "slug": "opus-clip",
+      "name": "OpusClip",
+      "domain": "https://www.opus.pro",
+      "category": "Generative Video Repurposing",
+      "payout": "25% recurring",
+      "affiliate_url": "https://www.opus.pro/?via=heliatech",
+      "redirect_path": "/go/opus-clip"
+    },
+    {
+      "slug": "getimg-ai",
+      "name": "getimg.ai",
+      "domain": "https://getimg.ai",
+      "category": "AI Image & Inpainting Suite",
+      "payout": "25% recurring",
+      "affiliate_url": "https://getimg.ai/?via=heliatech",
+      "redirect_path": "/go/getimg-ai"
+    }
+  ]
+}
