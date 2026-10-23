@@ -72,20 +72,33 @@ No markdown fences or commentary.
     def broadcast_thread_to_x(self, tweets: list[str]) -> bool:
         """
         Broadcasts thread to X when API keys are supplied in .env.
-        Posts a continuous threaded reply sequence via X API v2.
+        Supports both OAuth 1.0a (API Key + Secret + Access Token + Secret)
+        and OAuth 2.0 User Token (Bearer token with tweet.write scope).
         """
-        if not (self.twitter_api_key and self.twitter_api_secret and self.twitter_access_token and self.twitter_access_secret):
+        has_oauth1 = bool(self.twitter_api_key and self.twitter_api_secret and self.twitter_access_token and self.twitter_access_secret)
+        has_oauth2_user = bool(self.twitter_access_token and not self.twitter_access_secret)
+
+        if not (has_oauth1 or has_oauth2_user):
             print("[SOCIAL AGENT] ℹ️ Twitter API credentials not detected in .env. Thread drafted and ready for broadcast.")
             return False
 
         try:
-            from requests_oauthlib import OAuth1Session
-            oauth = OAuth1Session(
-                client_key=self.twitter_api_key,
-                client_secret=self.twitter_api_secret,
-                resource_owner_key=self.twitter_access_token,
-                resource_owner_secret=self.twitter_access_secret,
-            )
+            import requests
+
+            if has_oauth1:
+                from requests_oauthlib import OAuth1Session
+                session = OAuth1Session(
+                    client_key=self.twitter_api_key,
+                    client_secret=self.twitter_api_secret,
+                    resource_owner_key=self.twitter_access_token,
+                    resource_owner_secret=self.twitter_access_secret,
+                )
+            else:
+                session = requests.Session()
+                session.headers.update({
+                    "Authorization": f"Bearer {self.twitter_access_token}",
+                    "Content-Type": "application/json"
+                })
 
             print(f"[SOCIAL AGENT] 🚀 Broadcasting {len(tweets)}-tweet thread to X via API v2...")
             previous_tweet_id = None
@@ -96,7 +109,7 @@ No markdown fences or commentary.
                 if previous_tweet_id:
                     payload["reply"] = {"in_reply_to_tweet_id": previous_tweet_id}
 
-                response = oauth.post("https://api.twitter.com/2/tweets", json=payload, timeout=15)
+                response = session.post("https://api.twitter.com/2/tweets", json=payload, timeout=15)
                 if response.status_code in [200, 201]:
                     data = response.json().get("data", {})
                     previous_tweet_id = data.get("id")
