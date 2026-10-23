@@ -56,5 +56,10 @@ TARGET_NICHES = [
 # If no affiliate URL is registered yet, it defaults to the official site.
 AFFILIATE_MAP = {
     "elevenlabs": "https://try.elevenlabs.io/ajhd6t7k04dh",
-    "make": "https://www.make.com/en/register?pc=heliatechmake"
+    "make": "https://www.make.com/en/register?pc=heliatechmake",
+    "adcreative-ai": "https://www.adcreative.ai/?fp_ref=heliatech",
+    "airtable": "https://airtable.com/?ref=heliatech",
+    "apollo-io": "https://apollo.grsm.io/heliatech",
+    "beehiiv": "https://www.beehiiv.com/?via=heliatech",
+    "brevo": "https://brevo.partnerlinks.io/heliatech"
 }

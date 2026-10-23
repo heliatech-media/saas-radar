@@ -51,6 +51,7 @@ from agents.article_layout_agent import ArticleLayoutAgent
 from agents.image_generator_agent import ImageGeneratorAgent
 from agents.social_scheduler_agent import SocialSchedulerAgent
 from agents.affiliate_hub_agent import HeliaAffiliateHub
+from agents.affiliate_hunter_agent import AffiliateHunterAgent
 from agents.models import ToolReview
 
 
@@ -71,6 +72,7 @@ class HeliaAutonomousDirector:
         self.artist = ImageGeneratorAgent(api_key=api_key)
         self.scheduler = SocialSchedulerAgent(api_key=api_key)
         self.affiliate_hub = HeliaAffiliateHub()
+        self.hunter = AffiliateHunterAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -117,6 +119,11 @@ class HeliaAutonomousDirector:
         self.log("Helia-AffiliateHub", "Querying partner networks (Impact, PartnerStack, CJ) for tracking links...", "🔗")
         hub_res = self.affiliate_hub.sync_into_system()
         self.log("Helia-AffiliateHub", f"Affiliate sync complete: {hub_res['synced_count']} tools monetized.", "💰")
+
+        # Step 2.8: Sub-Agent AffiliateHunter (Autonomous AI Link & Partner Scout)
+        self.log("Helia-AffiliateHunter", "Autonomous AI link scout scanning unmonetized tools...", "🏹")
+        hunt_res = self.hunter.execute_hunt_cycle(max_tools=3)
+        self.log("Helia-AffiliateHunter", f"Affiliate hunt complete: {hunt_res['hunted']} tools monetized independently.", "🎯")
 
         # Step 3: Sub-Agent TrendScout
         self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")

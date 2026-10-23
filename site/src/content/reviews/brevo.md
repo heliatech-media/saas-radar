@@ -6,7 +6,7 @@ tagline: All-in-one digital marketing platform built around transactional email 
 category: Marketing Automation & CRM
 rating: 4.5
 website_url: https://www.brevo.com
-affiliate_url: https://www.brevo.com
+affiliate_url: "https://brevo.partnerlinks.io/heliatech"
 summary: Brevo (formerly Sendinblue) provides SMBs and enterprises with a comprehensive
   suite for email marketing, SMS, WhatsApp campaigns, chat, and a sales CRM. Unlike
   traditional ESPs that charge per subscriber, Brevo differentiates itself with a

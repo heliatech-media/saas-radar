@@ -1,8 +1,9 @@
 # Cloudflare Pages Edge Directives - Instant Affiliate Hops
-/go/adcreative-ai https://www.adcreative.ai 302
-/go/airtable https://www.airtable.com 302
-/go/apollo-io https://www.apollo.io 302
-/go/brevo https://www.brevo.com 302
+/go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
+/go/airtable https://airtable.com/?ref=heliatech 302
+/go/apollo-io https://apollo.grsm.io/heliatech 302
+/go/beehiiv https://www.beehiiv.com/?via=heliatech 302
+/go/brevo https://brevo.partnerlinks.io/heliatech 302
 /go/clickup https://clickup.com 302
 /go/cursor https://www.cursor.com 302
 /go/elevenlabs https://try.elevenlabs.io/ajhd6t7k04dh 302

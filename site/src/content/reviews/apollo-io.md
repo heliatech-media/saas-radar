@@ -6,7 +6,7 @@ tagline: The all-in-one B2B sales intelligence and engagement platform to find, 
 category: Marketing & Sales Intelligence
 rating: 4.6
 website_url: https://www.apollo.io
-affiliate_url: https://www.apollo.io
+affiliate_url: "https://apollo.grsm.io/heliatech"
 summary: Apollo.io is a powerful, data-driven go-to-market platform that combines
   a massive B2B contact database with robust email sequencing, CRM capabilities, and
   dialer functions. It streamlines prospecting workflows by centralizing lead generation

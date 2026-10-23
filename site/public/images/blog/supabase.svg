@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-radial" cx="75%" cy="30%" r="75%" fx="75%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="45%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Brand & Accent Gradients -->
+    <linearGradient id="supabase-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="cyan-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="violet-fuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feGaussianBlur stdDeviation="32" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="hex-grid" width="40" height="69.282" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M 40 0 L 20 11.547 L 0 0 L 0 23.094 L 20 34.641 L 40 23.094 Z M 0 34.641 L 20 46.188 L 40 34.641 L 40 57.735 L 20 69.282 L 0 57.735 Z" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.07"/>
+    </pattern>
+
+    <pattern id="dot-matrix" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.08" />
+    </pattern>
+  </defs>
+
+  <!-- 1. Background Layer -->
+  <rect width="1200" height="630" fill="url(#bg-radial)" />
+  <rect width="1200" height="630" fill="url(#hex-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-matrix)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="950" cy="180" r="280" fill="#06b6d4" opacity="0.1" filter="url(#glow-heavy)" />
+  <circle cx="800" cy="450" r="250" fill="#22c55e" opacity="0.07" filter="url(#glow-heavy)" />
+  <circle cx="200" cy="500" r="200" fill="#8b5cf6" opacity="0.08" filter="url(#glow-heavy)" />
+
+  <!-- 2. Architectural Grid Lines & Blueprint Accents -->
+  <g opacity="0.4">
+    <line x1="80" y1="0" x2="80" y2="630" stroke="url(#grid-fade)" stroke-width="1" stroke-dasharray="4 8" />
+    <line x1="1120" y1="0" x2="1120" y2="630" stroke="url(#grid-fade)" stroke-width="1" stroke-dasharray="4 8" />
+    <line x1="0" y1="80" x2="1200" y2="80" stroke="url(#grid-fade)" stroke-width="1" stroke-dasharray="4 8" />
+    <line x1="0" y1="560" x2="1200" y2="560" stroke="url(#grid-fade)" stroke-width="1" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- 3. Typography & Header Section -->
+  <g transform="translate(80, 80)">
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#0b1329" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+      <circle cx="18" cy="16" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+      <text x="34" y="21" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH DOSSIER</text>
+    </g>
+
+    <!-- Main Title & Subtitle -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="0" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="4">DEVTOOLS / INFRASTRUCTURE</text>
+      
+      <!-- Glowing SUPABASE Brand Title -->
+      <text x="0" y="65" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-1" filter="url(#glow-subtle)">
+        SUPABASE
+      </text>
+
+      <!-- Subtitle & Investigation Focus -->
+      <text x="0" y="110" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="500">
+        The Postgres Revolution &amp; The Blueprint
+      </text>
+      <text x="0" y="142" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700">
+        for Accelerated Full-Stack Velocity
+      </text>
+    </g>
+
+    <!-- Technical Metadata Chips -->
+    <g transform="translate(0, 275)" font-family="monospace" font-size="11" fill="#64748b">
+      <rect x="0" y="0" width="130" height="26" rx="4" fill="#0f172a" stroke="#1e293b" />
+      <text x="12" y="17" fill="#06b6d4">CORE: POSTGRES</text>
+
+      <rect x="140" y="0" width="140" height="26" rx="4" fill="#0f172a" stroke="#1e293b" />
+      <text x="152" y="17" fill="#22c55e">REALTIME: ACTIVE</text>
+
+      <rect x="290" y="0" width="130" height="26" rx="4" fill="#0f172a" stroke="#1e293b" />
+      <text x="302" y="17" fill="#d946ef">VECTOR: ENABLED</text>
+    </g>
+  </g>
+
+  <!-- 4. Domain Metaphor: 3D Isometric Database & Code Intelligence IDE -->
+  <g transform="translate(680, 80)">
+    <!-- Connection Vectors / Energy Pathways -->
+    <path d="M -80 180 L 80 180 L 160 100" fill="none" stroke="#06b6d4" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="6 6" />
+    <path d="M 0 350 L 120 350 L 220 250" fill="none" stroke="#22c55e" stroke-width="2" stroke-opacity="0.4" />
+    
+    <!-- Isometric IDE Window (Supabase Studio / SQL Editor Metaphor) -->
+    <g transform="translate(-40, 20)">
+      <!-- IDE Drop Shadow -->
+      <polygon points="40,320 380,360 420,120 80,80" fill="#000000" opacity="0.6" filter="url(#glow-heavy)" />
+
+      <!-- Backplate Base (Isometric Plane) -->
+      <path d="M 30,60 L 390,110 L 350,390 L -10,340 Z" fill="#090d16" stroke="#1e293b" stroke-width="2" />
+
+      <!-- IDE Header Bar -->
+      <path d="M 30,60 L 390,110 L 390,140 L 30,90 Z" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <!-- Window Controls -->
+      <circle cx="50" cy="78" r="4" fill="#ef4444" />
+      <circle cx="65" cy="80" r="4" fill="#f59e0b" />
+      <circle cx="80" cy="82" r="4" fill="#22c55e" />
+      <text x="105" y="84" fill="#64748b" font-family="monospace" font-size="10">supabase-prod-cluster / sql-editor.ts</text>
+
+      <!-- IDE Content Area -->
+      <g transform="translate(20, 110)" font-family="monospace" font-size="11">
+        <!-- Syntax Highlighting Lines -->
+        <text x="20" y="25" fill="#f43f5e">CREATE <tspan fill="#38bdf8">TABLE</tspan> profiles (</text>
+        <text x="40" y="45" fill="#e2e8f0">id UUID <tspan fill="#22c55e">PRIMARY KEY</tspan>,</text>
+        <text x="40" y="65" fill="#e2e8f0">username TEXT <tspan fill="#22c55e">UNIQUE</tspan>,</text>
+        <text x="40" y="85" fill="#e2e8f0">embeddings VECTOR(1536),</text>
+        <text x="40" y="105" fill="#e2e8f0">updated_at TIMESTAMPTZ</text>
+        <text x="20" y="125" fill="#f43f5e">);</text>
+
+        <!-- Realtime Trigger / Function Block -->
+        <text x="20" y="165" fill="#8b5cf6">CREATE POLICY</text>
+        <text x="110" y="165" fill="#e2e8f0">"Public profiles are viewable."</text>
+        <text x="20" y="185" fill="#8b5cf6">ON</text>
+        <text x="45" y="185" fill="#38bdf8">profiles FOR SELECT</text>
+        <text x="20" y="205" fill="#22c55e">USING ( true );</text>
+      </g>
+    </g>
+
+    <!-- 3D Multi-Layer Database Cubes (Postgres Architecture) -->
+    <g transform="translate(280, 260)">
+      <!-- Cube 3 (Top - Realtime / Edge) -->
+      <g transform="translate(0, -90)">
+        <polygon points="0,-40 60,-70 120,-40 60,-10" fill="url(#cyan-blue)" opacity="0.9" stroke="#38bdf8" stroke-width="1" filter="url(#glow-subtle)" />
+        <polygon points="0,-40 60,-10 60,50 0,20" fill="#082f49" stroke="#06b6d4" stroke-width="1" />
+        <polygon points="60,-10 120,-40 120,20 60,50" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1" />
+        <!-- Node Icon Symbol -->
+        <circle cx="60" cy="20" r="6" fill="#ffffff" filter="url(#glow-subtle)" />
+      </g>
+
+      <!-- Cube 2 (Middle - Vector Engine / Auth) -->
+      <g transform="translate(0, -30)">
+        <polygon points="0,-40 60,-70 120,-40 60,-10" fill="url(#supabase-green)" opacity="0.85" stroke="#22c55e" stroke-width="1" />
+        <polygon points="0,-40 60,-10 60,50 0,20" fill="#064e3b" stroke="#10b981" stroke-width="1" />
+        <polygon points="60,-10 120,-40 120,20 60,50" fill="#065f46" stroke="#10b981" stroke-width="1" />
+        <path d="M 50,10 L 60,25 L 75,0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+
+      <!-- Cube 1 (Bottom - Postgres Core Storage) -->
+      <g transform="translate(0, 30)">
+        <polygon points="0,-40 60,-70 120,-40 60,-10" fill="url(#violet-fuchsia)" opacity="0.9" stroke="#d946ef" stroke-width="1" />
+        <polygon points="0,-40 60,-10 60,50 0,20" fill="#581c87" stroke="#8b5cf6" stroke-width="1" />
+        <polygon points="60,-10 120,-40 120,20 60,50" fill="#6b21a8" stroke="#8b5cf6" stroke-width="1" />
+        <!-- Database Layers Lines -->
+        <line x1="25" y1="-5" x2="95" y2="30" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2" />
+        <line x1="25" y1="5" x2="95" y2="40" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2" />
+      </g>
+
+      <!-- Floating Data Particles & Connection Web -->
+      <path d="M 60,-130 L 60,-90 M 60,-30 L 60,30 M 60,90 L 60,130" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
+      
+      <!-- Pulsing Node Orbs -->
+      <circle cx="60" cy="-140" r="5" fill="#38bdf8" filter="url(#glow-heavy)" />
+      <circle cx="60" cy="140" r="5" fill="#22c55e" filter="url(#glow-heavy)" />
+      <circle cx="-30" cy="20" r="4" fill="#d946ef" filter="url(#glow-heavy)" />
+      <circle cx="150" cy="-60" r="4" fill="#06b6d4" filter="url(#glow-heavy)" />
+
+      <!-- Floating Hex Badge -->
+      <g transform="translate(90, -90)" filter="url(#glow-subtle)">
+        <polygon points="20,0 40,11.5 40,34.6 20,46.2 0,34.6 0,11.5" fill="#090d16" stroke="#38bdf8" stroke-width="1.5" />
+        <text x="13" y="27" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold">PG</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 5. Footer Branding Bar -->
+  <g transform="translate(80, 570)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1" />
+    <text x="0" y="25" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5">HELIATECH.ONLINE</text>
+    <text x="1040" y="25" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1" text-anchor="end">ENTERPRISE SOFTWARE INVESTIGATION</text>
+  </g>
+</svg>

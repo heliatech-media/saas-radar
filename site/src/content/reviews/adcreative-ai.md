@@ -6,7 +6,7 @@ tagline: Data-driven AI creative generation platform that scales ad spend perfor
 category: AI Advertising
 rating: 4.6
 website_url: https://www.adcreative.ai
-affiliate_url: https://www.adcreative.ai
+affiliate_url: "https://www.adcreative.ai/?fp_ref=heliatech"
 summary: AdCreative.ai leverages custom-trained machine learning models to generate
   high-converting ad banners, social media creatives, and text copy tailored to specific
   target audiences. It scores your creative assets based on historical performance

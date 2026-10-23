@@ -7,7 +7,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "Growth marketers, e-commerce brands, and agency owners scaling multi-channel paid social campaigns",
-    "affiliate_url": "https://www.adcreative.ai"
+    "affiliate_url": "https://www.adcreative.ai/?fp_ref=heliatech",
+    "commission_rate": "100% first month or 30% recurring"
   },
   {
     "name": "Airtable",
@@ -17,7 +18,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.airtable.com"
+    "affiliate_url": "https://airtable.com/?ref=heliatech",
+    "commission_rate": "Performance-based / CPA per paid plan conversion"
   },
   {
     "name": "Apollo.io",
@@ -27,7 +29,8 @@
     "rating": 4.6,
     "starting_price": "$49/mo",
     "best_for": "B2B sales teams, growth marketers, founders, and outbound agencies seeking an all-in-one prospecting engine.",
-    "affiliate_url": "https://www.apollo.io"
+    "affiliate_url": "https://apollo.grsm.io/heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Beehiiv",
@@ -37,7 +40,8 @@
     "rating": 4.7,
     "starting_price": "$0/mo",
     "best_for": "Content creators, media startups, and B2B marketers scaling email subscriber bases.",
-    "affiliate_url": "https://www.beehiiv.com"
+    "affiliate_url": "https://www.beehiiv.com/?via=heliatech",
+    "commission_rate": "50% recurring for 12 months"
   },
   {
     "name": "Brevo",
@@ -47,7 +51,8 @@
     "rating": 4.5,
     "starting_price": "$25/mo",
     "best_for": "E-commerce brands, SMBs, and digital agencies looking for cost-effective multi-channel marketing and built-in sales pipelines.",
-    "affiliate_url": "https://www.brevo.com"
+    "affiliate_url": "https://brevo.partnerlinks.io/heliatech",
+    "commission_rate": "€5 per free account signup + up to €500 per paid plan subscription"
   },
   {
     "name": "ClickUp",
@@ -158,6 +163,16 @@
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
     "affiliate_url": "https://www.retool.com"
+  },
+  {
+    "name": "Supabase",
+    "slug": "supabase",
+    "tagline": "The open source Firebase alternative providing all the backend features you need to build a product.",
+    "category": "DevTools",
+    "rating": 4.8,
+    "starting_price": "$25/mo",
+    "best_for": "Full-stack developers, indie hackers, and engineering teams scaling web and mobile applications.",
+    "affiliate_url": "https://supabase.com"
   },
   {
     "name": "Voiceflow",
