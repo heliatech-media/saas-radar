@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-10-23T10:07:32.667544",
+  "timestamp": "2026-10-23T10:11:23.300367",
   "current_status": {
     "published_reviews": 20,
-    "published_articles": 10,
-    "total_assets": 30
+    "published_articles": 13,
+    "total_assets": 33
   },
   "milestone_progress": {
     "phase1_100k": {
       "target_visitors": 100000,
       "assets_required": 45,
-      "progress_percent": 66.7,
+      "progress_percent": 73.3,
       "estimated_monthly_hops": 12000,
       "estimated_monthly_royalty": "$17,850"
     },
     "phase2_1m": {
       "target_visitors": 1000000,
       "assets_required": 454,
-      "progress_percent": 6.61,
+      "progress_percent": 7.27,
       "estimated_monthly_hops": 120000,
       "estimated_monthly_royalty": "$178,500"
     }
