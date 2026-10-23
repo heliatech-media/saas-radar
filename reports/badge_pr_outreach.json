@@ -1,0 +1,42 @@
+{
+  "campaign": "HeliaTech 2026 Independent Accreditation & Winner Badges",
+  "generated_at": "2026-10-23T21:43:29.792521",
+  "target_partners": [
+    {
+      "brand": "Make",
+      "domain": "make.com",
+      "contact_channel": "Twitter / LinkedIn marketing leaders & PR inbox",
+      "winner_badge_url": "https://heliatech.online/badges/winner-2026-make.svg",
+      "embed_code": "<a href=\"https://heliatech.online/awards\" target=\"_blank\"><img src=\"https://heliatech.online/badges/winner-2026-make.svg\" alt=\"HeliaTech 2026 Winner - Make\" width=\"320\" height=\"120\" /></a>",
+      "outreach_email_subject": "Official Accreditation: Make ranked #1 Enterprise Automation Platform in 2026 Teardown",
+      "outreach_message": "Hi Make Team,\n\nOur engineering division at HeliaTech Media recently completed an exhaustive head-to-head empirical benchmark comparing Make against Zapier across 500,000 tasks/month.\n\nMake came out as the definitive 2026 Winner (Score 9.8/10), demonstrating superior nodal execution and up to 70% TCO savings.\n\nYour official independent accreditation badge is ready for embed on your press page: https://heliatech.online/awards\n\nCongrats on the remarkable engineering!"
+    },
+    {
+      "brand": "Supabase",
+      "domain": "supabase.com",
+      "contact_channel": "DevRel team & Paul Copplestone (Twitter/X)",
+      "winner_badge_url": "https://heliatech.online/badges/winner-2026-supabase.svg",
+      "embed_code": "<a href=\"https://heliatech.online/awards\" target=\"_blank\"><img src=\"https://heliatech.online/badges/winner-2026-supabase.svg\" alt=\"HeliaTech 2026 #1 Heroku Replacement - Supabase\" width=\"320\" height=\"120\" /></a>",
+      "outreach_email_subject": "Accreditation: Supabase recognized as #1 Modern Cloud & Heroku Replacement 2026",
+      "outreach_message": "Hi Supabase Team,\n\nFollowing the phase-out of Heroku's free tier, our editorial benchmark ranked Supabase as the undisputed #1 modern database & backend platform for 2026.\n\nYou can embed your official accreditation badge directly from https://heliatech.online/awards or share the full architectural teardown.\n\nKeep building in open source!"
+    },
+    {
+      "brand": "HeyGen",
+      "domain": "heygen.com",
+      "contact_channel": "Press team & social marketing leads",
+      "winner_badge_url": "https://heliatech.online/badges/winner-2026-heygen.svg",
+      "embed_code": "<a href=\"https://heliatech.online/awards\" target=\"_blank\"><img src=\"https://heliatech.online/badges/winner-2026-heygen.svg\" alt=\"HeliaTech 2026 AI Video Excellence - HeyGen\" width=\"320\" height=\"120\" /></a>",
+      "outreach_email_subject": "Accreditation: HeyGen wins HeliaTech 2026 AI Video Avatar Shootout",
+      "outreach_message": "Hi HeyGen Team,\n\nIn our head-to-head benchmark against ElevenLabs and alternative avatar engines, HeyGen officially won the 2026 AI Video Avatar Shootout (Score 9.7/10) for photorealistic lip-sync and dynamic micro-gestures.\n\nYour official accreditation badge is live at https://heliatech.online/awards."
+    },
+    {
+      "brand": "Papaya Global",
+      "domain": "papayaglobal.com",
+      "contact_channel": "Corporate communications & VP Product Marketing",
+      "winner_badge_url": "https://heliatech.online/badges/winner-2026-papaya-global.svg",
+      "embed_code": "<a href=\"https://heliatech.online/awards\" target=\"_blank\"><img src=\"https://heliatech.online/badges/winner-2026-papaya-global.svg\" alt=\"HeliaTech 2026 #1 Global Payroll Architecture - Papaya Global\" width=\"320\" height=\"120\" /></a>",
+      "outreach_email_subject": "Accreditation: Papaya Global audited as #1 Tier-1 Banking Infrastructure for Global Payroll",
+      "outreach_message": "Hi Papaya Global Team,\n\nOur forensic financial audit of enterprise EOR and payroll models ranked Papaya Global as the 2026 Benchmark Winner for multi-currency treasury and Tier-1 banking rails.\n\nYour accreditation badge is accessible on our registry: https://heliatech.online/awards."
+    }
+  ]
+}

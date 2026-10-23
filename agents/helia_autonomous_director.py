@@ -64,6 +64,8 @@ from agents.link_sentinel_agent import LinkSentinelAgent
 from agents.quality_enforcer_agent import QualityEnforcerAgent
 from agents.budget_sentinel_agent import BudgetSentinelAgent
 from agents.lupin_agent import LupinAgent
+from agents.badge_trojan_agent import BadgeTrojanAgent
+from agents.reddit_infiltrator_agent import RedditInfiltratorAgent
 from agents.models import ToolReview
 
 
@@ -97,6 +99,8 @@ class HeliaAutonomousDirector:
         self.quality = QualityEnforcerAgent()
         self.budget = BudgetSentinelAgent()
         self.lupin = LupinAgent(api_key=api_key)
+        self.badge_trojan = BadgeTrojanAgent()
+        self.reddit_infiltrator = RedditInfiltratorAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -262,6 +266,22 @@ class HeliaAutonomousDirector:
             self.log("Helia-Lupin", "Lupin operations verified: Ghost Hijacking, Pricing Leaks & Parasite SEO active.", "💎")
         except Exception as e:
             self.log("Helia-Lupin", f"Lupin notice: {e}", "⚠️")
+
+        # Step 6.14: Sub-Agent BadgeTrojan (Trojan Horse G2/Trustpilot Partner Badges)
+        try:
+            self.log("Helia-BadgeTrojan", "Auditing accreditation badges & refreshing PR outreach kits...", "🏆")
+            badge_res = self.badge_trojan.run_full_trojan_campaign()
+            self.log("Helia-BadgeTrojan", f"Badges active: {badge_res['badges_generated']} SVGs deployed | {badge_res['kits_prepared']} PR kits locked.", "💎")
+        except Exception as e:
+            self.log("Helia-BadgeTrojan", f"Badge Trojan notice: {e}", "⚠️")
+
+        # Step 6.15: Sub-Agent RedditInfiltrator (High-Intent Community Traffic & Forum SEO)
+        try:
+            self.log("Helia-RedditInfiltrator", "Synthesizing high-karma technical answers for Google x Reddit targets...", "🥷")
+            reddit_res = self.reddit_infiltrator.synthesize_reddit_playbook()
+            self.log("Helia-RedditInfiltrator", f"Reddit playbook updated: {reddit_res['total_targets']} high-intent briefs live.", "🎯")
+        except Exception as e:
+            self.log("Helia-RedditInfiltrator", f"Reddit Infiltrator notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")

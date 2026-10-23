@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-23 21:25:13 UTC",
+  "last_updated": "2026-10-23 21:46:32 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 24,
+    "total_monetized_tools": 25,
     "total_published_investigations": 62,
     "reviews_audited": 25,
     "masterclasses_and_duels": 37,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$8,400 USD",
+    "projected_monthly_mrr": "$8,750 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -121,6 +121,11 @@
       "slug": "heygen",
       "destination": "https://heygen.grsm.io/heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "lemlist",
+      "destination": "https://www.lemlist.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "linear",

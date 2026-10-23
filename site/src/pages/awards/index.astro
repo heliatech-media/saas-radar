@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const awards = [
+  {
+    toolName: "Make",
+    toolSlug: "make",
+    category: "Workflow Automation & Cloud Integration",
+    badgeFile: "/badges/winner-2026-make.svg",
+    awardTitle: "Winner: Best Enterprise Orchestration 2026",
+    score: "9.8 / 10",
+    color: "from-purple-500/20 via-indigo-500/10 to-transparent",
+    borderColor: "border-purple-500/40",
+    accentColor: "text-purple-400",
+    teardownUrl: "/blog/make-vs-zapier",
+    affiliateUrl: "/go/make",
+    headline: "Demolished Zapier in 500k Task Scalability and TCO",
+    verdict: "Demonstrated superior multi-branch visual debugging, true JSON variable arrays, and up to 70% lower annual operating costs at scale.",
+    embedSnippet: `<a href="https://heliatech.online/awards" target="_blank" rel="noopener"><img src="https://heliatech.online/badges/winner-2026-make.svg" alt="HeliaTech 2026 Winner - Make" width="320" height="120" border="0" /></a>`
+  },
+  {
+    toolName: "Supabase",
+    toolSlug: "supabase",
+    category: "Developer Tools & Cloud Infrastructure",
+    badgeFile: "/badges/winner-2026-supabase.svg",
+    awardTitle: "#1 Modern Cloud & Heroku Postgres Replacement 2026",
+    score: "9.9 / 10",
+    color: "from-emerald-500/20 via-teal-500/10 to-transparent",
+    borderColor: "border-emerald-500/40",
+    accentColor: "text-emerald-400",
+    teardownUrl: "/blog/heroku-free-tier-alternatives-2026",
+    affiliateUrl: "/go/supabase",
+    headline: "The Undisputed Gold Standard for Modern PostgreSQL & Auth",
+    verdict: "Delivers native row-level security, instant auto-generated REST/GraphQL APIs, global edge functions, and real-time WebSockets with zero vendor lock-in.",
+    embedSnippet: `<a href="https://heliatech.online/awards" target="_blank" rel="noopener"><img src="https://heliatech.online/badges/winner-2026-supabase.svg" alt="HeliaTech 2026 Winner - Supabase" width="320" height="120" border="0" /></a>`
+  },
+  {
+    toolName: "HeyGen",
+    toolSlug: "heygen",
+    category: "Generative AI Video & Avatars",
+    badgeFile: "/badges/winner-2026-heygen.svg",
+    awardTitle: "Winner: Best AI Video Avatar Fidelity 2026",
+    score: "9.7 / 10",
+    color: "from-cyan-500/20 via-sky-500/10 to-transparent",
+    borderColor: "border-cyan-500/40",
+    accentColor: "text-cyan-400",
+    teardownUrl: "/blog/elevenlabs-vs-heygen",
+    affiliateUrl: "/go/heygen",
+    headline: "Sub-Millimeter Lip-Sync & Enterprise Avatar Realism",
+    verdict: "Outperformed ElevenLabs and Synthesia in micro-facial gestures, automated multi-language video translation, and instant studio camera framing.",
+    embedSnippet: `<a href="https://heliatech.online/awards" target="_blank" rel="noopener"><img src="https://heliatech.online/badges/winner-2026-heygen.svg" alt="HeliaTech 2026 Winner - HeyGen" width="320" height="120" border="0" /></a>`
+  },
+  {
+    toolName: "Papaya Global",
+    toolSlug: "papaya-global",
+    category: "Global Payroll & Employer of Record (EOR)",
+    badgeFile: "/badges/winner-2026-papaya-global.svg",
+    awardTitle: "Best Tier-1 Banking Infrastructure 2026",
+    score: "9.6 / 10",
+    color: "from-amber-500/20 via-orange-500/10 to-transparent",
+    borderColor: "border-amber-500/40",
+    accentColor: "text-amber-400",
+    teardownUrl: "/blog/papaya-global-2026-pricing-rate-card-leaks",
+    affiliateUrl: "/go/papaya-global",
+    headline: "Eliminated Intermediary Correspondent Bank Markups",
+    verdict: "Proprietary Tier-1 banking rails allow multinational CFOs to slash foreign exchange spreads and consolidate contractor and EOR liabilities under one dashboard.",
+    embedSnippet: `<a href="https://heliatech.online/awards" target="_blank" rel="noopener"><img src="https://heliatech.online/badges/winner-2026-papaya-global.svg" alt="HeliaTech 2026 Winner - Papaya Global" width="320" height="120" border="0" /></a>`
+  },
+  {
+    toolName: "Apollo.io",
+    toolSlug: "apollo-io",
+    category: "B2B Sales Intelligence & Lead Prospecting",
+    badgeFile: "/badges/winner-2026-apollo-io.svg",
+    awardTitle: "Best Scale Prospecting Database 2026",
+    score: "9.5 / 10",
+    color: "from-blue-500/20 via-cyan-500/10 to-transparent",
+    borderColor: "border-blue-500/40",
+    accentColor: "text-blue-400",
+    teardownUrl: "/blog/apollo-io-vs-lusha",
+    affiliateUrl: "/go/apollo-io",
+    headline: "275M+ Global Verified Contacts & Multi-Sequence Cadences",
+    verdict: "Delivers unprecedented unit economics for high-velocity outbound teams compared to legacy enterprise databases like ZoomInfo.",
+    embedSnippet: `<a href="https://heliatech.online/awards" target="_blank" rel="noopener"><img src="https://heliatech.online/badges/winner-2026-apollo-io.svg" alt="HeliaTech 2026 Winner - Apollo.io" width="320" height="120" border="0" /></a>`
+  }
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "HeliaTech Independent Accreditation & Award Winners 2026",
+  "description": "Official independent software engineering awards and accreditation registry audited by HeliaTech Media.",
+  "url": "https://heliatech.online/awards"
+};
+---
+
+<Layout 
+  title="HeliaTech 2026 Software Awards | Independent Accreditation Registry"
+  description="Official accreditation registry for the winners of our 2026 empirical software benchmarks. Verified architectures, transparent criteria, and embeddable badges."
+  jsonLd={jsonLd}
+>
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 py-16">
+    
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/10 text-pink-300 border border-pink-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-6 shadow-glow-pink">
+        <span>🏆</span>
+        <span>INDEPENDENT ACCREDITATION REGISTRY</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1] mb-6">
+        HeliaTech <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-amber-300 to-cyan-400">2026 Award Winners</span>
+      </h1>
+      
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+        We do not accept paid sponsorships for awards. Every badge in this registry represents an empirical victory proven through rigorous load-testing, API benchmarks, and financial TCO audits.
+      </p>
+    </div>
+
+    <!-- Awards Grid -->
+    <div class="space-y-12 mb-20">
+      {awards.map((award) => (
+        <article class={`p-6 sm:p-10 rounded-3xl bg-gradient-to-br ${award.color} bg-slate-950/80 border ${award.borderColor} shadow-2xl relative overflow-hidden backdrop-blur-xl`}>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left: Badge Preview & Embed Code -->
+            <div class="lg:col-span-5 flex flex-col items-center sm:items-start text-center sm:text-left">
+              <div class="mb-6 p-2 rounded-2xl bg-slate-950/90 border border-slate-800 shadow-xl max-w-[340px]">
+                <img 
+                  src={award.badgeFile} 
+                  alt={`${award.toolName} 2026 HeliaTech Award Badge`}
+                  class="w-full h-auto rounded-xl"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Embed Snippet Box -->
+              <div class="w-full">
+                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1.5">
+                  <span>EMBED OFFICIAL BADGE</span>
+                  <span class="text-slate-500">HTML Snippet</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-[11px] font-mono text-slate-300 break-all select-all hover:border-cyan-500/40 transition-colors">
+                  <code>{award.embedSnippet}</code>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Victory Teardown Details -->
+            <div class="lg:col-span-7 space-y-4">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-mono text-slate-300 uppercase tracking-wider font-semibold">
+                  {award.category}
+                </span>
+                <span class={`px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-xs font-mono font-black ${award.accentColor}`}>
+                  SCORE: {award.score}
+                </span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                {award.toolName}: <span class="text-slate-200">{award.awardTitle}</span>
+              </h2>
+
+              <p class="text-sm sm:text-base font-semibold text-slate-200 leading-snug">
+                {award.headline}
+              </p>
+
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+                {award.verdict}
+              </p>
+
+              <!-- CTAs -->
+              <div class="pt-4 flex flex-wrap items-center gap-4 border-t border-slate-800/80">
+                <a 
+                  href={award.teardownUrl}
+                  class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold border border-slate-700 transition-colors flex items-center gap-1.5"
+                >
+                  <span>Read Full Audit</span>
+                  <span>➔</span>
+                </a>
+                <a 
+                  href={award.affiliateUrl}
+                  target="_blank"
+                  rel="noopener sponsored"
+                  class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-mono text-xs font-black shadow-lg shadow-cyan-500/20 transition-transform active:scale-95 flex items-center gap-1.5"
+                >
+                  <span>Official Access</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Methodology & Integrity Statement -->
+    <div class="p-8 sm:p-10 rounded-3xl bg-slate-950/70 border border-slate-800 max-w-3xl mx-auto text-center space-y-4">
+      <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mx-auto text-xl">
+        ⚖️
+      </div>
+      <h3 class="text-lg font-bold text-white tracking-tight">HeliaTech Independent Evaluation Charter</h3>
+      <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light m-0">
+        All awards and ratings in this directory are issued strictly on the basis of empirical testing: API response times, cold start latency, total cost of ownership at 100k+ volume, and architectural resilience. We do not accept payment to grant or alter scores.
+      </p>
+      <div class="pt-2">
+        <a href="/terms" class="text-xs font-mono text-cyan-400 hover:underline">Read our full editorial & verification methodology →</a>
+      </div>
+    </div>
+
+  </div>
+</Layout>

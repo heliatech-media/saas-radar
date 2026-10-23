@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-23 21:26:13",
+    "title": "Cycle Autonome #Lemlist",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Lemlist et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-23 21:25:50",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
