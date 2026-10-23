@@ -168,7 +168,7 @@ Ultimately, if you are a resource-constrained B2B team needing to replace dispar
 
 ### How accurate is the contact data on Apollo.io?
 
-Apollo.io features a real-time email verification engine that significantly reduces hard bounce rates. While its coverage of North American tech and SaaS companies is exceptionally high, accuracy can vary when prospecting in niche international markets or very small local businesses.
+[Apollo.io](/reviews/apollo-io) features a real-time email verification engine that significantly reduces hard bounce rates. While its coverage of North American tech and SaaS companies is exceptionally high, accuracy can vary when prospecting in niche international markets or very small local businesses.
 
 ### Can I integrate Apollo.io with my existing CRM?
 

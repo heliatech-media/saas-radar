@@ -70,7 +70,7 @@ If your organization is processing more than 50,000 tasks per month, your financ
 
 ### Key Architectural Advantages:
 * **Advanced Data Mapping & Iterators:** Native support for array manipulation, data aggregators, and iterators lets you process thousands of line items in a single execution cycle without burning excessive operations.
-* **Granular Error Handling:** Unlike Zapier’s basic "stop on error" or "email me," Make features built-in directives like *Resume*, *Rollback*, and *Break*, allowing workflows to self-heal or execute fallback paths smoothly.
+* **Granular Error Handling:** Unlike Zapier’s basic "stop on error" or "email me," [Make](/reviews/make) features built-in directives like *Resume*, *Rollback*, and *Break*, allowing workflows to self-heal or execute fallback paths smoothly.
 * **Execution Visualizer:** Real-time data inspection per module. You can click on any historical execution step, inspect the exact JSON payload sent and received, and pinpoint mapping errors instantly.
 
 ### Where It Falls Short:

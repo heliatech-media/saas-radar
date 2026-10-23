@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-23 20:57:16",
+  "timestamp": "2026-10-23 21:20:12",
   "total_links_audited": 25,
   "healthy_links": 25,
   "broken_links_count": 0,
@@ -58,7 +58,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0c7GFpS6Brtrf8&gsxid=0c7GFpS6Brtrf8&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=vfqDlfsYG5criC&gsxid=vfqDlfsYG5criC&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

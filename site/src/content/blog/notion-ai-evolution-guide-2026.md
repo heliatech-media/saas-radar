@@ -75,7 +75,7 @@ flowchart LR
 > [!TIP]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Notion AI` with our verified enterprise trial link at [/go/notion-ai](/go/notion-ai).
+> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[Notion AI](/reviews/notion-ai)` with our verified enterprise trial link at [/go/notion-ai](/go/notion-ai).
 
 > [!TIP]
 > [!NOTE]

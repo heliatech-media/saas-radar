@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-23 20:43:00 UTC",
+  "last_updated": "2026-10-23 21:20:25 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 23,
-    "total_published_investigations": 58,
+    "total_monetized_tools": 24,
+    "total_published_investigations": 60,
     "reviews_audited": 24,
-    "masterclasses_and_duels": 34,
+    "masterclasses_and_duels": 36,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$8,050 USD",
+    "projected_monthly_mrr": "$8,400 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -110,6 +110,11 @@
     {
       "slug": "elevenlabs",
       "destination": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "framer",
+      "destination": "https://www.framer.com",
       "type": "Catalog Edge Hop"
     },
     {

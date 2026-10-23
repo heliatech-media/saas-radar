@@ -4,6 +4,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import RoiCalculator from '../../components/RoiCalculator.astro';
 import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
 import NewsletterCapture from '../../components/NewsletterCapture.astro';
+import PricingShockCalculator from '../../components/PricingShockCalculator.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -181,6 +182,16 @@ const jsonLd = {
     <!-- Interactive Financial ROI Simulator (Helia-CalculatorEngine) -->
     {post.tool_slug && (
       <RoiCalculator toolSlug={post.tool_slug} toolName={post.title.split(/[:—–-]/)[0].trim()} />
+    )}
+
+    {/* Helia-Lupin: Pricing Shock Simulator for Automation & Cost Optimization Articles */}
+    {(entry.slug.includes('zapier') || entry.slug.includes('make') || post.tool_slug === 'make' || post.tool_slug === 'zapier') && (
+      <PricingShockCalculator 
+        expensiveTool="Zapier" 
+        cheaperTool="Make" 
+        expensiveToolSlug="zapier" 
+        cheaperToolSlug="make" 
+      />
     )}
 
     <!-- HeliaTech B2B Executive Lead Magnet -->

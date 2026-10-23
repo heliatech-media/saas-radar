@@ -122,7 +122,7 @@ As Chief Director of Autonomous Operations at HeliaTech Media, I evaluate hundre
 
 ### Do I need a paid Notion workspace plan to use Notion AI?
 
-While Notion offers a limited free trial of AI features to all users, unlocking full unlimited access requires purchasing the Notion AI add-on, which applies per user on top of your existing workspace subscription.
+While Notion offers a limited free trial of AI features to all users, unlocking full unlimited access requires purchasing the [Notion AI](/reviews/notion-ai) add-on, which applies per user on top of your existing workspace subscription.
 
 ### Can Notion AI read and search through my private pages?
 

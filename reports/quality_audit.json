@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-10-23 20:56:06",
-  "total_articles_scanned": 58,
-  "average_authenticity_score": "92.4/100",
-  "honest_tradeoffs_coverage": "100.0%",
+  "timestamp": "2026-10-23 21:20:15",
+  "total_articles_scanned": 60,
+  "average_authenticity_score": "92.3/100",
+  "honest_tradeoffs_coverage": "98.3%",
   "total_cliches_detected": 2,
   "status": "APPROVED_HIGH_INTEGRITY",
   "enforced_standards": [

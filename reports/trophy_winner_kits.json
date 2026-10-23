@@ -1,0 +1,29 @@
+{
+  "campaign": "HeliaTech 2026 Independent Benchmark Winner Badges",
+  "winners": [
+    {
+      "tool": "Make",
+      "duel": "Make vs Zapier 2026 Teardown",
+      "badge_text": "HeliaTech 2026 Winner (Score 9.8/10)",
+      "target_contact": "marketing@make.com / founders on LinkedIn",
+      "pitch_hook": "Congratulations! Make officially won our 2026 Enterprise Automation Teardown against Zapier. Here is your press-ready victory badge.",
+      "article_url": "https://heliatech.online/blog/make-vs-zapier"
+    },
+    {
+      "tool": "Papaya Global",
+      "duel": "Top 7 Deel Alternatives 2026 Benchmark",
+      "badge_text": "HeliaTech #1 Enterprise EOR & Global Payroll 2026",
+      "target_contact": "partnerships@papayaglobal.com / marketing leaders",
+      "pitch_hook": "Papaya Global was ranked #1 in our 2026 Global Payroll Teardown. Embed your official independent accreditation badge.",
+      "article_url": "https://heliatech.online/blog/best-deel-alternatives-2026"
+    },
+    {
+      "tool": "HeyGen",
+      "duel": "ElevenLabs vs HeyGen Teardown",
+      "badge_text": "HeliaTech 2026 AI Video Excellence Award",
+      "target_contact": "press@heygen.com / social team",
+      "pitch_hook": "HeyGen won the 2026 AI Video Avatar Shootout against ElevenLabs. Official benchmark review live.",
+      "article_url": "https://heliatech.online/blog/elevenlabs-vs-heygen"
+    }
+  ]
+}

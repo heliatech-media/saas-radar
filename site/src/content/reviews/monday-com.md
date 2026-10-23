@@ -160,7 +160,7 @@ Yes, [Monday.com](/reviews/monday-com) offers a free tier for up to 2 users with
 
 ### Can Monday.com replace enterprise CRM systems?
 
-Monday.com offers a dedicated CRM product that handles pipeline management, contact tracking, and deal flows, which works well for small-to-midsize businesses.
+[Monday.com](/reviews/monday-com) offers a dedicated CRM product that handles pipeline management, contact tracking, and deal flows, which works well for small-to-midsize businesses.
 
 ### How do automations count toward monthly limits?
 

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import PricingShockCalculator from '../../components/PricingShockCalculator.astro';
 
 const allPosts = await getCollection('blog');
 const duelPosts = allPosts.filter(p => p.slug.includes('-vs-') || p.data.tags?.some((t: string) => t.toLowerCase().includes('vs')));
@@ -96,6 +97,16 @@ const jsonLd = {
           </div>
         </article>
       ))}
+    </div>
+
+    <!-- Helia-Lupin: Interactive Pricing Shock & Overcharge Simulator -->
+    <div class="mb-16">
+      <PricingShockCalculator 
+        expensiveTool="Zapier" 
+        cheaperTool="Make" 
+        expensiveToolSlug="zapier" 
+        cheaperToolSlug="make" 
+      />
     </div>
 
     <!-- Arena Guarantee Footer -->

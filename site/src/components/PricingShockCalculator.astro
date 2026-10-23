@@ -1,0 +1,133 @@
+---
+interface Props {
+  expensiveTool?: string;
+  cheaperTool?: string;
+  expensiveToolSlug?: string;
+  cheaperToolSlug?: string;
+}
+
+const {
+  expensiveTool = "Zapier",
+  cheaperTool = "Make",
+  expensiveToolSlug = "zapier",
+  cheaperToolSlug = "make"
+} = Astro.props;
+
+const affiliateHop = `/go/${cheaperToolSlug}`;
+---
+
+<!-- Helia-Lupin: Pricing Shock & Overcharge Simulator -->
+<div class="my-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-red-950/40 via-slate-950 to-slate-900 border border-red-500/30 shadow-2xl relative overflow-hidden">
+  
+  <div class="absolute -right-20 -top-20 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Header -->
+  <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-400 font-black text-lg">
+        ⚡
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white tracking-tight flex items-center gap-2">
+          <span>{expensiveTool} Overcharge & Markup Simulator</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-red-500/20 text-red-300 font-bold border border-red-500/30">FINANCIAL AUDIT</span>
+        </h3>
+        <p class="text-xs text-slate-400 font-mono">Calculate wasted annual capital on linear markups vs modern {cheaperTool} execution</p>
+      </div>
+    </div>
+    <span class="text-xs font-mono text-slate-500 hidden sm:inline-block">Scale Mathematics 2026</span>
+  </div>
+
+  <!-- Controls Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    
+    <!-- Left: Operations Slider -->
+    <div class="space-y-6">
+      <div>
+        <div class="flex justify-between items-center text-xs font-mono mb-2">
+          <span class="text-slate-300">Monthly Tasks / Automated Operations</span>
+          <span id="shock-volume-val" class="text-red-400 font-bold">50,000 ops / mo</span>
+        </div>
+        <input 
+          type="range" 
+          id="shock-volume-slider" 
+          min="5000" 
+          max="250000" 
+          step="5000" 
+          value="50000"
+          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-400"
+        />
+        <div class="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
+          <span>5,000</span>
+          <span>100,000</span>
+          <span>250,000+</span>
+        </div>
+      </div>
+
+      <!-- Cost Breakdown Cards -->
+      <div class="grid grid-cols-2 gap-3 text-xs font-mono">
+        <div class="p-3.5 rounded-xl bg-red-950/30 border border-red-500/30">
+          <span class="text-[10px] text-red-400 uppercase block mb-1">Estimated {expensiveTool} Cost</span>
+          <span id="expensive-cost" class="text-xl font-black text-white">$299 / mo</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-500/30">
+          <span class="text-[10px] text-emerald-400 uppercase block mb-1">TCO on {cheaperTool}</span>
+          <span id="cheaper-cost" class="text-xl font-black text-emerald-300">$29 / mo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Big Overcharge Counter & CTA -->
+    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 text-center flex flex-col justify-between h-full">
+      <span class="text-xs font-mono text-red-400 uppercase tracking-wider block mb-1">Recoverable Annual Overcharge</span>
+      
+      <div class="my-3">
+        <span id="overcharge-val" class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-emerald-400">
+          $3,240
+        </span>
+        <span class="text-xs font-mono text-slate-500 block mt-1">/ year wasted on linear markups</span>
+      </div>
+
+      <a 
+        href={affiliateHop}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="w-full py-3.5 px-6 rounded-xl font-black font-mono text-xs uppercase tracking-wider text-slate-950 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-300 hover:from-emerald-300 hover:to-cyan-300 shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+      >
+        <span>Stop Overpaying: Switch to {cheaperTool}</span>
+        <span>↗</span>
+      </a>
+      <span class="text-[10px] font-mono text-slate-500 mt-2 block">Zero-downtime migration architecture</span>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const slider = document.getElementById('shock-volume-slider');
+    const volVal = document.getElementById('shock-volume-val');
+    const expCost = document.getElementById('expensive-cost');
+    const chpCost = document.getElementById('cheaper-cost');
+    const overcharge = document.getElementById('overcharge-val');
+
+    function calculate() {
+      if (!slider) return;
+      const vol = parseInt(slider.value, 10);
+      if (volVal) volVal.textContent = vol.toLocaleString() + ' ops / mo';
+
+      // Zapier pricing: ~$299 for 50k, ~$599 for 100k, ~$1,200 for 250k
+      const zapCost = Math.round(vol * 0.0058);
+      // Make pricing: ~$29 for 50k, ~$59 for 100k, ~$149 for 250k
+      const makeCost = Math.round(vol * 0.00065);
+      const diffAnnual = (zapCost - makeCost) * 12;
+
+      if (expCost) expCost.textContent = '$' + zapCost + ' / mo';
+      if (chpCost) chpCost.textContent = '$' + makeCost + ' / mo';
+      if (overcharge) overcharge.textContent = '$' + diffAnnual.toLocaleString();
+    }
+
+    if (slider) slider.addEventListener('input', calculate);
+    calculate();
+  })();
+</script>

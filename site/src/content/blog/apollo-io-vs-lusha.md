@@ -62,7 +62,7 @@ Apollo-Io approaches the market as an all-in-one infrastructure layer. Rather th
 3. **The Analytics Layer:** Attribution tracking, rep performance metrics, and email deliverability monitors (warm-up and domain health).
 4. **The Enrichment Engine:** Real-time API calls that append missing fields to CRM objects.
 
-**The Architectural Trade-off:** By housing data and execution in one platform, Apollo eliminates the data-loss latency typical of Zapier-bridged stacks. However, its expansive feature set can lead to interface bloat and steeper onboarding curves for non-technical users.
+**The Architectural Trade-off:** By housing data and execution in one platform, Apollo eliminates the data-loss latency typical of [Zapier](/reviews/zapier)-bridged stacks. However, its expansive feature set can lead to interface bloat and steeper onboarding curves for non-technical users.
 
 ### Lusha: The Precision Enrichment Utility
 Lusha takes the opposite approach. It is built as a modular, lightweight insertion point into your existing workflow. Its architecture revolves around three primary access vectors:

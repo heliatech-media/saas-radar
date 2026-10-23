@@ -63,6 +63,7 @@ from agents.localizer_agent import LocalizerAgent
 from agents.link_sentinel_agent import LinkSentinelAgent
 from agents.quality_enforcer_agent import QualityEnforcerAgent
 from agents.budget_sentinel_agent import BudgetSentinelAgent
+from agents.lupin_agent import LupinAgent
 from agents.models import ToolReview
 
 
@@ -95,6 +96,7 @@ class HeliaAutonomousDirector:
         self.link_sentinel = LinkSentinelAgent()
         self.quality = QualityEnforcerAgent()
         self.budget = BudgetSentinelAgent()
+        self.lupin = LupinAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -252,6 +254,14 @@ class HeliaAutonomousDirector:
             self.budget.compute_daily_burn_rate()
         except Exception as e:
             self.log("Helia-BudgetSentinel", f"Budget sentinel notice: {e}", "⚠️")
+
+        # Step 6.13: Sub-Agent Lupin (Asymmetric Growth Hacking & Masterstroke Engine)
+        try:
+            self.log("Helia-Lupin", "Executing Lupin asymmetric growth hacking audit & masterstrokes...", "🎭")
+            self.lupin.execute_all_coups()
+            self.log("Helia-Lupin", "Lupin operations verified: Ghost Hijacking, Pricing Leaks & Parasite SEO active.", "💎")
+        except Exception as e:
+            self.log("Helia-Lupin", f"Lupin notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")

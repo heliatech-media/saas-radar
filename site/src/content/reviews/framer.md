@@ -159,7 +159,7 @@ Ultimately, if your primary bottleneck is marketing site velocity and creative i
 
 ### Is Framer better than Webflow for beginners?
 
-Framer is generally more intuitive for designers familiar with tools like Figma because of its visual canvas mechanics. Webflow utilizes a box-model approach rooted deeply in HTML/CSS principles, which has a steeper learning curve for non-developers.
+Framer is generally more intuitive for designers familiar with tools like Figma because of its visual canvas mechanics. [Webflow](/reviews/webflow) utilizes a box-model approach rooted deeply in HTML/CSS principles, which has a steeper learning curve for non-developers.
 
 ### Can I export clean code from Framer?
 
