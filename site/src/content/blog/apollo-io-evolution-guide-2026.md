@@ -68,7 +68,7 @@ flowchart LR
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Apollo.io` with our verified enterprise trial link at [/go/apollo-io](/go/apollo-io).
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[Apollo.io](/reviews/apollo-io)` with our verified enterprise trial link at [/go/apollo-io](/go/apollo-io).
 
 > [!TIP]
 > [!NOTE]

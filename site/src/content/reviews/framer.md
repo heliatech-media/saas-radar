@@ -142,7 +142,7 @@ Framer is a powerful design-to-publish platform that allows creative teams to bu
 
 
 ### Cons
-- Steeper learning curve for users coming strictly from traditional template builders like Webflow or WordPress.
+- Steeper learning curve for users coming strictly from traditional template builders like [Webflow](/reviews/webflow) or WordPress.
 - Advanced custom logic still requires a solid understanding of React code overrides or external integrations.
 - Per-site pricing structure can scale up quickly for agencies managing multiple client properties.
 

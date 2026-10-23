@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#050a18"/>
+      <stop offset="100%" stop-color="#021c1e"/>
+    </linearGradient>
+    <linearGradient id="glow-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glowing Aura Orbs -->
+  <circle cx="250" cy="280" r="320" fill="url(#glow-emerald)"/>
+  <circle cx="950" cy="350" r="300" fill="url(#glow-cyan)"/>
+
+  <!-- Top Badge -->
+  <g transform="translate(600, 100)">
+    <rect x="-180" y="-18" width="360" height="36" rx="18" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="0" y="5" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="3">HELIA TECH INTELLIGENCE REPORT</text>
+  </g>
+
+  <!-- Main Headline Card -->
+  <g transform="translate(600, 290)">
+    <rect x="-480" y="-110" width="960" height="220" rx="24" fill="#0b1329" fill-opacity="0.85" stroke="#334155" stroke-width="2"/>
+    
+    <text x="0" y="-35" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="800" fill="#06b6d4" text-anchor="middle" letter-spacing="4">DEFINITIVE 2026 ARCHITECTURAL BENCHMARK</text>
+    <text x="0" y="25" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="46" font-weight="900" fill="#ffffff" text-anchor="middle">TOP 7 ELEVENLABS ALTERNATIVES</text>
+    <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#94a3b8" text-anchor="middle">Cheaper • More Scalable • Enterprise-Grade Architecture</text>
+  </g>
+
+  <!-- Bottom Metric Pods -->
+  <g transform="translate(260, 480)">
+    <rect x="0" y="0" width="200" height="70" rx="14" fill="#020617" stroke="#10b981" stroke-width="1.2"/>
+    <text x="100" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#34d399" text-anchor="middle">7 CANDIDATES</text>
+    <text x="100" y="52" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b" text-anchor="middle">Hands-on Tested</text>
+  </g>
+  <g transform="translate(500, 480)">
+    <rect x="0" y="0" width="200" height="70" rx="14" fill="#020617" stroke="#06b6d4" stroke-width="1.2"/>
+    <text x="100" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#38bdf8" text-anchor="middle">UP TO 70% SAVINGS</text>
+    <text x="100" y="52" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b" text-anchor="middle">Total Cost Math</text>
+  </g>
+  <g transform="translate(740, 480)">
+    <rect x="0" y="0" width="200" height="70" rx="14" fill="#020617" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="100" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#fbbf24" text-anchor="middle">ZERO DATA LOSS</text>
+    <text x="100" y="52" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b" text-anchor="middle">Migration Framework</text>
+  </g>
+</svg>

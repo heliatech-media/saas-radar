@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import toolsData from '../data/tools-index.json';
 import { getCollection } from 'astro:content';
+import NewsletterCapture from '../components/NewsletterCapture.astro';
 
 // Grouping into clean macro-categories for the filter pills
 const macroCategories = [
@@ -376,6 +377,11 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
           Continuous Audit
         </span>
       </div>
+    </div>
+
+    <!-- HeliaTech B2B Executive Lead Magnet -->
+    <div class="mt-16">
+      <NewsletterCapture />
     </div>
   </section>
 

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import RoiCalculator from '../../components/RoiCalculator.astro';
 import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
+import NewsletterCapture from '../../components/NewsletterCapture.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -181,6 +182,9 @@ const jsonLd = {
     {post.tool_slug && (
       <RoiCalculator toolSlug={post.tool_slug} toolName={post.title.split(/[:—–-]/)[0].trim()} />
     )}
+
+    <!-- HeliaTech B2B Executive Lead Magnet -->
+    <NewsletterCapture />
 
     <!-- Bottom Tool Crosslink & Navigation -->
     <footer class="mt-20 pt-12 border-t border-slate-800">

@@ -182,6 +182,6 @@ Yes, the platform includes an integrated AI copywriter trained to write high-con
 
 ### Is there a free trial or free tier available?
 
-AdCreative.ai typically offers free trial credits upon sign-up, allowing you to test out several generations and see the platform's workflow before committing to a paid monthly subscription.
+[AdCreative.ai](/reviews/adcreative-ai) typically offers free trial credits upon sign-up, allowing you to test out several generations and see the platform's workflow before committing to a paid monthly subscription.
 
 

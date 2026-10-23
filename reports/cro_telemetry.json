@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-23 20:22:09",
-  "total_pages_audited": 28,
-  "monetized_pages": 28,
-  "total_ctas_tracked": 269,
-  "average_cro_score": "89.6/100",
+  "timestamp": "2026-10-23 20:43:01",
+  "total_pages_audited": 34,
+  "monetized_pages": 34,
+  "total_ctas_tracked": 305,
+  "average_cro_score": "89.7/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
     "Floating Sticky Affiliate Bar (StickyAffiliateBar.astro)",
@@ -40,10 +40,28 @@
       "status": "OPTIMIZED"
     },
     {
+      "slug": "apollo-io-vs-lusha",
+      "type": "blog",
+      "word_count": 1875,
+      "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
       "slug": "beehiiv-evolution-guide-2026",
       "type": "blog",
       "word_count": 1309,
       "cta_count": 11,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "beehiiv-vs-brevo",
+      "type": "blog",
+      "word_count": 1967,
+      "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -61,6 +79,15 @@
       "slug": "best-deel-alternatives-2026",
       "type": "blog",
       "word_count": 2984,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-elevenlabs-alternatives-2026",
+      "type": "blog",
+      "word_count": 2379,
       "cta_count": 14,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -94,6 +121,15 @@
       "status": "OPTIMIZED"
     },
     {
+      "slug": "clickup-vs-monday-com",
+      "type": "blog",
+      "word_count": 1818,
+      "cta_count": 8,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
       "slug": "cursor-evolution-guide-2026",
       "type": "blog",
       "word_count": 1125,
@@ -109,42 +145,6 @@
       "cta_count": 10,
       "has_monetized_hop": true,
       "cro_score": 80,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "framer-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1100,
-      "cta_count": 3,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "heygen-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1228,
-      "cta_count": 10,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "linear-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1313,
-      "cta_count": 5,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "lusha-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1264,
-      "cta_count": 11,
-      "has_monetized_hop": true,
-      "cro_score": 90,
       "status": "OPTIMIZED"
     }
   ]

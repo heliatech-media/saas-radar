@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const duelPosts = allPosts.filter(p => p.slug.includes('-vs-') || p.data.tags?.some((t: string) => t.toLowerCase().includes('vs')));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "HeliaTech B2B Versus Arena — Empirical Head-to-Head Software Showdowns",
+  "description": "Rigorous side-by-side technical benchmarks and pricing showdowns between leading enterprise SaaS platforms.",
+  "url": "https://heliatech.online/versus"
+};
+---
+
+<Layout 
+  title="B2B Software Versus Arena | Empirical Head-to-Head Duels 2026"
+  description="Exhaustive side-by-side software shootouts. Compare architecture, total cost of ownership at scale, and API performance between industry leaders."
+  jsonLd={jsonLd}
+>
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 py-16">
+    
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-6 shadow-glow-amber">
+        <span>⚔️</span>
+        <span>HELIA FORENSIC SHOWDOWNS</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1] mb-6">
+        The B2B Software <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-cyan-400 to-amber-300">Versus Arena</span>
+      </h1>
+      
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+        We eliminate marketing claims through side-by-side empirical benchmarking. Granular architecture teardowns, pricing math at 500k operations, and unvarnished executive verdicts.
+      </p>
+    </div>
+
+    <!-- Duels Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      {duelPosts.map((post) => (
+        <article class="p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between backdrop-blur-xl">
+          <div>
+            <!-- Header Badges -->
+            <div class="flex items-center justify-between gap-2 mb-4 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-semibold uppercase tracking-wider text-[10px]">
+                {post.data.category}
+              </span>
+              <span class="text-slate-500">{post.data.readingTime || '12 MIN READ'}</span>
+            </div>
+
+            <!-- Artwork Preview -->
+            {post.data.image && (
+              <div class="my-4 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 aspect-[1200/630]">
+                <img 
+                  src={post.data.image} 
+                  alt={post.data.title}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            )}
+
+            <!-- Title -->
+            <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight leading-snug mb-3 group-hover:text-cyan-300 transition-colors">
+              <a href={`/blog/${post.slug}`}>
+                {post.data.title}
+              </a>
+            </h2>
+
+            <!-- Excerpt -->
+            <p class="text-xs sm:text-sm text-slate-400 font-light leading-relaxed mb-6 line-clamp-3">
+              {post.data.description}
+            </p>
+
+            <!-- Key TL;DR Bullet if available -->
+            {post.data.tldr && post.data.tldr.length > 0 && (
+              <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80 mb-6 text-xs font-mono text-slate-300">
+                <span class="text-cyan-400 font-bold block mb-1">⚡ Core Benchmark Verdict:</span>
+                <p class="text-slate-400 line-clamp-2 m-0">{post.data.tldr[0]}</p>
+              </div>
+            )}
+          </div>
+
+          <!-- Bottom CTA -->
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-500">Full Teardown Matrix</span>
+            <a 
+              href={`/blog/${post.slug}`}
+              class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-cyan-500 text-slate-300 hover:text-slate-950 text-xs font-mono font-bold transition-all flex items-center gap-1.5 group-hover:bg-cyan-400 group-hover:text-slate-950"
+            >
+              <span>Explore Shootout</span>
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Arena Guarantee Footer -->
+    <div class="p-8 rounded-3xl bg-slate-950/60 border border-slate-800 text-center text-xs font-mono text-slate-400 max-w-2xl mx-auto">
+      <span class="text-amber-400 font-bold block mb-1">🏛️ HeliaTech Independent Benchmarking Standards</span>
+      <p class="m-0 leading-relaxed text-slate-500">
+        All duels are generated through empirical testing matrices. Neither software vendor pays for placement or scoring adjustments.
+      </p>
+    </div>
+
+  </div>
+</Layout>

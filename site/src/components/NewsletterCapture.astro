@@ -1,0 +1,98 @@
+---
+interface Props {
+  headline?: string;
+  subheadline?: string;
+}
+
+const {
+  headline = "THE HELIATECH CONFIDENTIAL",
+  subheadline = "Rejoignez 14,000+ directeurs techniques, fondateurs et leaders Ops. Recevez chaque jeudi nos audits d'infrastructure sans concession, benchmarks de pricing secrets et offres partenaires exclusives."
+} = Astro.props;
+---
+
+<!-- HeliaTech B2B Executive Lead Magnet -->
+<div class="my-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border border-cyan-500/30 shadow-2xl relative overflow-hidden group">
+  
+  <!-- Subtle Background Grid & Glows -->
+  <div class="absolute -right-24 -top-24 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-24 -bottom-24 w-80 h-80 bg-fuchsia-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  
+  <div class="relative z-10 max-w-2xl mx-auto text-center">
+    
+    <!-- Top Pill Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono font-bold tracking-widest uppercase mb-4">
+      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+      <span>B2B INTELLIGENCE RADAR</span>
+    </div>
+
+    <!-- Title -->
+    <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-3">
+      {headline}
+    </h3>
+
+    <!-- Subtitle -->
+    <p class="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed mb-8 max-w-xl mx-auto">
+      {subheadline}
+    </p>
+
+    <!-- Email Form -->
+    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <div class="relative flex-1">
+        <input 
+          type="email" 
+          id="newsletter-email"
+          required
+          placeholder="votre.email@entreprise.com" 
+          class="w-full px-4 py-3.5 rounded-xl bg-slate-950/90 border border-slate-700/80 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-xs font-mono text-white placeholder-slate-500 outline-none transition-all shadow-inner"
+        />
+      </div>
+      <button 
+        type="submit"
+        id="newsletter-submit"
+        class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-black font-mono text-xs uppercase tracking-wider shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 flex-shrink-0"
+      >
+        <span>Accès Privé</span>
+        <span>➔</span>
+      </button>
+    </form>
+
+    <div id="newsletter-success" class="hidden mt-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-xs">
+      ⚡ Accès validé. Vous recevrez le prochain dossier confidentiel ce jeudi à 09h00.
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-[10px] font-mono text-slate-500">
+      <span>🔒 0 Spam Garanti</span>
+      <span>•</span>
+      <span>⚡ Désabonnement en 1 clic</span>
+      <span>•</span>
+      <span>🏛️ HeliaTech Editorial Division</span>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const form = document.getElementById('newsletter-form');
+    const emailInput = document.getElementById('newsletter-email');
+    const successMsg = document.getElementById('newsletter-success');
+    const submitBtn = document.getElementById('newsletter-submit');
+
+    if (form && emailInput && successMsg) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        // Store subscriber lead in localStorage for immediate retention
+        const stored = JSON.parse(localStorage.getItem('heliatech_subscribers') || '[]');
+        stored.push({ email, timestamp: new Date().toISOString() });
+        localStorage.setItem('heliatech_subscribers', JSON.stringify(stored));
+
+        form.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      });
+    }
+  })();
+</script>

@@ -156,7 +156,7 @@ From a technical standpoint, [Monday.com](/reviews/monday-com)'s API and automat
 
 ### Is there a free tier available on Monday.com?
 
-Yes, Monday.com offers a free tier for up to 2 users with access to basic boards, templates, and mobile apps.
+Yes, [Monday.com](/reviews/monday-com) offers a free tier for up to 2 users with access to basic boards, templates, and mobile apps.
 
 ### Can Monday.com replace enterprise CRM systems?
 

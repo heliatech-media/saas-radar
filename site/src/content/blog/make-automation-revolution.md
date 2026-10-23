@@ -163,7 +163,7 @@ To remain completely objective, Make presents several trade-offs every decision-
 
 | Verified Advantages | Observed Limitations |
 | :--- | :--- |
-| **Unbeatable value-for-money** compared to Zapier and Workato. | **Steeper initial learning curve** for non-technical beginners. |
+| **Unbeatable value-for-money** compared to [Zapier](/reviews/zapier) and Workato. | **Steeper initial learning curve** for non-technical beginners. |
 | **Visual nodal canvas** provides unmatched visibility into architecture. | **Payload size limits** apply to extremely large individual file transfers (> 50 MB). |
 | **Surgical filter precision** and inline data transformations. | Requires understanding JSON arrays and objects for advanced pipelines. |
 | **Complete step-by-step audit logs** with granular payload inspection. | Webhook security configurations can require intermediate API knowledge. |

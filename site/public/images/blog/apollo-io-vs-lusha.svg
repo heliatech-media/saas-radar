@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    <linearGradient id="glow-a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Side Light Pillars -->
+  <circle cx="200" cy="315" r="280" fill="url(#glow-a)"/>
+  <circle cx="1000" cy="315" r="280" fill="url(#glow-b)"/>
+
+  <!-- Divider Line -->
+  <line x1="600" y1="80" x2="600" y2="550" stroke="#334155" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- VS Center Badge -->
+  <circle cx="600" cy="315" r="48" fill="#0f172a" stroke="#06b6d4" stroke-width="2.5"/>
+  <text x="600" y="324" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="900" fill="#f8fafc" text-anchor="middle" letter-spacing="2">VS</text>
+
+  <!-- Side A -->
+  <g transform="translate(140, 240)">
+    <rect x="0" y="0" width="360" height="150" rx="20" fill="#0b1329" fill-opacity="0.8" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="180" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">Apollo Io</text>
+    <text x="180" y="105" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#38bdf8" text-anchor="middle">EMPIRICAL BENCHMARK</text>
+  </g>
+
+  <!-- Side B -->
+  <g transform="translate(700, 240)">
+    <rect x="0" y="0" width="360" height="150" rx="20" fill="#1c1608" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="180" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">Lusha</text>
+    <text x="180" y="105" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#fbbf24" text-anchor="middle">FORENSIC TEARDOWN</text>
+  </g>
+
+  <!-- Top Header -->
+  <g transform="translate(600, 80)">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#06b6d4" text-anchor="middle" letter-spacing="4">HELIA TECH HEAD-TO-HEAD DUEL MATRIX</text>
+  </g>
+</svg>
