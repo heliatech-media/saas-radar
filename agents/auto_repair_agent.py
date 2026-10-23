@@ -65,12 +65,34 @@ class AutoRepairAgent:
             except Exception as e:
                 issues.append(f"{file.name}: Failed repair attempt: {e}")
 
+        # Sync Cloudflare edge redirects
+        self.sync_cloudflare_redirects()
+
         return {
             "inspected": inspected_count,
             "repaired": repaired_count,
             "issues": issues,
             "status": "HEALTHY" if len(issues) == 0 else "WARNING"
         }
+
+    def sync_cloudflare_redirects(self):
+        """Generates Cloudflare Pages _redirects file for instant edge 302 hops."""
+        redirects_file = SITE_DIR / "public" / "_redirects"
+        lines = ["# Cloudflare Pages Edge Directives - Instant Affiliate Hops\n"]
+        for md_file in sorted(self.reviews_dir.glob("*.md")):
+            slug = md_file.stem
+            try:
+                raw_text = md_file.read_text(encoding="utf-8")
+                parts = raw_text.split("---")
+                if len(parts) >= 3:
+                    data = yaml.safe_load(parts[1])
+                    target = data.get("affiliate_url") or data.get("website_url")
+                    if target:
+                        lines.append(f"/go/{slug} {target} 302\n")
+            except Exception:
+                continue
+        redirects_file.parent.mkdir(parents=True, exist_ok=True)
+        redirects_file.write_text("".join(lines), encoding="utf-8")
 
 
 if __name__ == "__main__":
