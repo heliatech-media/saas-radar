@@ -29,6 +29,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Webflow Account ➔
   url: /go/webflow
+image: /images/blog/webflow.svg
 ---
 **T**he digital agency floor circa 2012 smelled of stale cold brew and palpable frustration. A product designer would spend three breathless weeks pushing pixels in static layout files, crafting an exquisite, conversion-obsessed landing page. Then came the high-cost handoff: tossing those static mockups over the fence to a front-end developer team. Weeks of back-and-forth translation errors, broken flexbox alignments, and bloated plugin dependencies followed. The human bottleneck wasn’t creativity; it was the chasm between design intention and production-ready code. 
 

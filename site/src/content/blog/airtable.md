@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Airtable Account ➔
   url: /go/airtable
+image: /images/blog/airtable.svg
 ---
 ## The Human Bottleneck of Modern Data Fragmentation
 

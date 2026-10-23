@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="30%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="cyberGrid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.08" />
+    </linearGradient>
+
+    <!-- Brand Color Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="nodeActive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Advanced Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowIntense" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24" result="blur1" />
+      <feGaussianBlur stdDeviation="8" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Pattern for Isometric Grid -->
+    <pattern id="hexGrid" width="40" height="69.282" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M 40 0 L 20 11.547 L 0 0 L 0 23.094 L 20 34.641 L 40 23.094 Z M 0 34.641 L 20 46.188 L 40 34.641 L 40 57.735 L 20 69.282 L 0 57.735 Z" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#hexGrid)" />
+  
+  <!-- Ambient Background Light Orbs -->
+  <circle cx="950" cy="180" r="220" fill="#8b5cf6" opacity="0.12" filter="url(#glowIntense)" />
+  <circle cx="800" cy="450" r="260" fill="#06b6d4" opacity="0.10" filter="url(#glowIntense)" />
+  <circle cx="200" cy="500" r="180" fill="#d946ef" opacity="0.08" filter="url(#glowIntense)" />
+
+  <!-- Diagonal Geometric Accent Lines -->
+  <g opacity="0.3">
+    <line x1="0" y1="100" x2="1200" y2="700" stroke="url(#cyanBlue)" stroke-width="1" stroke-dasharray="4 8" />
+    <line x1="200" y1="0" x2="1400" y2="600" stroke="url(#violetFuchsia)" stroke-width="1" stroke-dasharray="8 12" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- RIGHT SIDE: 3D VECTOR WORKFLOW & AUTOMATION -->
+  <!-- ========================================== -->
+  <g transform="translate(640, 70)" filter="url(#dropShadow)">
+    
+    <!-- Isometric Platform Base -->
+    <path d="M 260 80 L 480 180 L 260 280 L 40 180 Z" fill="#0b1329" stroke="url(#cardBorder)" stroke-width="1.5" />
+    <path d="M 40 180 L 260 280 L 260 460 L 40 360 Z" fill="#070d1a" stroke="url(#cardBorder)" stroke-width="1" opacity="0.7" />
+    <path d="M 260 280 L 480 180 L 480 360 L 260 460 Z" fill="#091022" stroke="url(#cardBorder)" stroke-width="1" opacity="0.7" />
+
+    <!-- Connecting Workflow Pathways (Neon Splines) -->
+    <path d="M 120 220 Q 200 150 260 180 T 400 240" fill="none" stroke="url(#cyanBlue)" stroke-width="3" filter="url(#glow)" />
+    <path d="M 150 320 Q 250 380 300 280 T 380 160" fill="none" stroke="url(#violetFuchsia)" stroke-width="3" filter="url(#glow)" />
+    <path d="M 80 270 L 420 270" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6" />
+
+    <!-- Workflow Node 1: Trigger (Top-Left) -->
+    <g transform="translate(100, 150)">
+      <polygon points="40,0 80,23 80,69 40,92 0,69 0,23" fill="#0f172a" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <!-- Inner Icon: Webhook / Lightning -->
+      <path d="M 40 25 L 25 50 L 40 50 L 35 68 L 55 42 L 40 42 Z" fill="url(#cyanBlue)" />
+      <!-- Floating data ring -->
+      <circle cx="40" cy="46" r="32" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="3 3" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0 40 46" to="360 40 46" dur="15s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Workflow Node 2: AI Engine / LLM (Center) -->
+    <g transform="translate(220, 220)">
+      <polygon points="50,0 100,28 100,86 50,114 0,86 0,28" fill="#131b36" stroke="url(#nodeActive)" stroke-width="3" filter="url(#glowIntense)" />
+      <!-- Neural Core Graphic -->
+      <circle cx="50" cy="57" r="18" fill="url(#violetFuchsia)" opacity="0.3" />
+      <circle cx="50" cy="57" r="8" fill="#ffffff" filter="url(#glow)" />
+      <path d="M 35 35 L 65 79 M 65 35 L 35 79" stroke="#38bdf8" stroke-width="2" opacity="0.8" />
+    </g>
+
+    <!-- Workflow Node 3: Action / Enterprise API (Right) -->
+    <g transform="translate(340, 140)">
+      <polygon points="40,0 80,23 80,69 40,92 0,69 0,23" fill="#0f172a" stroke="#d946ef" stroke-width="2" filter="url(#glow)" />
+      <!-- Inner Icon: Database / Sync Cube -->
+      <path d="M 25 35 L 40 27 L 55 35 L 55 55 L 40 63 L 25 55 Z" fill="none" stroke="url(#violetFuchsia)" stroke-width="2" />
+      <path d="M 40 27 L 40 63" fill="none" stroke="url(#violetFuchsia)" stroke-width="2" />
+    </g>
+
+    <!-- Floating Holographic Data Cards -->
+    <g transform="translate(180, 50)" filter="url(#dropShadow)">
+      <rect width="180" height="60" rx="8" fill="url(#glassGrad)" stroke="url(#cardBorder)" stroke-width="1" />
+      <circle cx="24" cy="30" r="10" fill="#06b6d4" opacity="0.3" />
+      <circle cx="24" cy="30" r="4" fill="#38bdf8" />
+      <text x="46" y="26" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">EVENT: WEBHOOK</text>
+      <text x="46" y="44" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="500" font-size="11">Latency: 12ms (99.9%)</text>
+    </g>
+
+    <g transform="translate(280, 360)" filter="url(#dropShadow)">
+      <rect width="200" height="65" rx="8" fill="url(#glassGrad)" stroke="url(#cardBorder)" stroke-width="1" />
+      <circle cx="24" cy="32" r="10" fill="#8b5cf6" opacity="0.3" />
+      <circle cx="24" cy="32" r="4" fill="#d946ef" />
+      <text x="46" y="28" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">AI AGENT EXECUTION</text>
+      <text x="46" y="46" fill="#d946ef" font-family="system-ui, sans-serif" font-weight="500" font-size="11">Status: Fully Autonomous</text>
+    </g>
+
+    <!-- Particle Sparkles / Floating Nodes -->
+    <circle cx="160" cy="130" r="3" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="390" cy="110" r="4" fill="#d946ef" filter="url(#glow)" />
+    <circle cx="340" cy="330" r="3.5" fill="#06b6d4" filter="url(#glow)" />
+    <circle cx="100" cy="380" r="2.5" fill="#8b5cf6" filter="url(#glow)" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- LEFT SIDE: TYPOGRAPHY, BADGES & DOSSIER  -->
+  <!-- ========================================== -->
+  <g transform="translate(80, 95)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" stroke="url(#cardBorder)" stroke-width="1.5" />
+      <!-- Glowing dot -->
+      <circle cx="18" cy="16" r="5" fill="#06b6d4" filter="url(#glow)">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="18" cy="16" r="2" fill="#ffffff" />
+      <text x="36" y="21" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="800" font-size="11" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title: ZAPIER -->
+    <text x="0" y="130" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="96" letter-spacing="2" filter="url(#dropShadow)">ZAPIER</text>
+    
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 160)">
+      <text x="0" y="0" fill="url(#cyanBlue)" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="20" letter-spacing="3">AI AUTOMATION &amp; NO-CODE</text>
+    </g>
+
+    <!-- Investigation Headline (Multi-line) -->
+    <g transform="translate(2, 215)">
+      <text x="0" y="0" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="34" letter-spacing="-0.5">
+        <tspan x="0" dy="0">The Genesis of AI Automation</tspan>
+        <tspan x="0" dy="42">and the Masterclass in Enterprise</tspan>
+        <tspan x="0" dy="42" fill="url(#violetFuchsia)">No-Code Velocity</tspan>
+      </text>
+    </g>
+
+    <!-- Technical Metadata Bar / Footer Metrics -->
+    <g transform="translate(0, 390)">
+      <!-- Divider Line -->
+      <line x1="0" y1="0" x2="520" y2="0" stroke="url(#cyanBlue)" stroke-width="1" opacity="0.4" />
+      
+      <!-- Metric 1 -->
+      <g transform="translate(0, 20)">
+        <text x="0" y="0" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="10" letter-spacing="1">ORCHESTRATION</text>
+        <text x="0" y="20" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="800" font-size="18">6,000+ APIs</text>
+      </g>
+
+      <!-- Metric 2 -->
+      <g transform="translate(170, 20)">
+        <text x="0" y="0" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="10" letter-spacing="1">INTELLIGENCE</text>
+        <text x="0" y="20" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="800" font-size="18">Centralized LLMs</text>
+      </g>
+
+      <!-- Metric 3 -->
+      <g transform="translate(360, 20)">
+        <text x="0" y="0" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="10" letter-spacing="1">SCALABILITY</text>
+        <text x="0" y="20" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="800" font-size="18">Enterprise Grade</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Framing / Border Accent (Tech HUD Aesthetic) -->
+  <g opacity="0.5">
+    <path d="M 20 20 L 60 20" stroke="#38bdf8" stroke-width="2" />
+    <path d="M 20 20 L 20 60" stroke="#38bdf8" stroke-width="2" />
+    
+    <path d="M 1180 20 L 1140 20" stroke="#d946ef" stroke-width="2" />
+    <path d="M 1180 20 L 1180 60" stroke="#d946ef" stroke-width="2" />
+    
+    <path d="M 20 610 L 60 610" stroke="#8b5cf6" stroke-width="2" />
+    <path d="M 20 610 L 20 570" stroke="#8b5cf6" stroke-width="2" />
+    
+    <path d="M 1180 610 L 1140 610" stroke="#06b6d4" stroke-width="2" />
+    <path d="M 1180 610 L 1180 570" stroke="#06b6d4" stroke-width="2" />
+  </g>
+</svg>

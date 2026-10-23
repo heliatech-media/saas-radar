@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Grid Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="30%" r="70%" fx="60%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#020408" />
+    </radialGradient>
+    
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- UI / Component Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="glassPanel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowSubtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Pattern for Grid Background -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="url(#gridGrad)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- 1. Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#gridPattern)" />
+
+  <!-- Ambient Orbs -->
+  <circle cx="950" cy="150" r="220" fill="#8b5cf6" opacity="0.15" filter="url(#glow)" />
+  <circle cx="750" cy="450" r="280" fill="#06b6d4" opacity="0.1" filter="url(#glow)" />
+  <circle cx="200" cy="500" r="180" fill="#d946ef" opacity="0.08" filter="url(#glow)" />
+
+  <!-- 2. Decorative Code / Vector Connections (Background of Right Composition) -->
+  <g opacity="0.4">
+    <path d="M 720 180 L 850 180 L 900 230" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4" filter="url(#glowSubtle)" />
+    <path d="M 980 280 L 1050 280 L 1100 330" fill="none" stroke="#8b5cf6" stroke-width="2" filter="url(#glowSubtle)" />
+    <path d="M 760 420 L 880 420 L 930 370 L 1020 370" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="8 4" />
+    <circle cx="850" cy="180" r="4" fill="#38bdf8" />
+    <circle cx="1050" cy="280" r="4" fill="#8b5cf6" />
+    <circle cx="930" cy="370" r="4" fill="#06b6d4" />
+  </g>
+
+  <!-- 3. Right-Side 3D Isomorphic App/Workflow Canvas Metaphor -->
+  <g filter="url(#dropShadow)" transform="translate(620, 80)">
+    <!-- Main IDE / Canvas Window -->
+    <rect x="0" y="0" width="520" height="470" rx="16" fill="url(#glassPanel)" stroke="url(#glassBorder)" stroke-width="1.5" />
+    
+    <!-- Window Titlebar -->
+    <path d="M 0 16 C 0 7.163 7.163 0 16 0 L 504 0 C 512.837 0 520 7.163 520 16 L 520 44 L 0 44 Z" fill="#090d16" fill-opacity="0.9" />
+    <circle cx="24" cy="22" r="6" fill="#ef4444" opacity="0.8" />
+    <circle cx="44" cy="22" r="6" fill="#f59e0b" opacity="0.8" />
+    <circle cx="64" cy="22" r="6" fill="#10b981" opacity="0.8" />
+    <text x="90" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8" font-weight="500" letter-spacing="1">retool-enterprise-app.tsx</text>
+
+    <!-- Canvas Inner UI: Retool Workflow Nodes & Components -->
+    <!-- Component Box 1: AI Trigger -->
+    <g transform="translate(30, 70)">
+      <rect x="0" y="0" width="180" height="90" rx="10" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" />
+      <rect x="12" y="12" width="24" height="24" rx="6" fill="#06b6d4" fill-opacity="0.2" />
+      <!-- Lightning Icon -->
+      <path d="M 24 16 L 19 25 H 23 L 21 32 L 29 22 H 24 L 27 16 Z" fill="#06b6d4" />
+      <text x="46" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">AI Webhook</text>
+      <text x="46" y="42" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Trigger: Active</text>
+      <line x1="12" y1="58" x2="168" y2="58" stroke="#334155" stroke-width="1" />
+      <circle cx="24" cy="74" r="4" fill="#38bdf8" />
+      <text x="36" y="78" font-family="system-ui, sans-serif" font-size="10" fill="#38bdf8">POST /v2/ai-agent</text>
+    </g>
+
+    <!-- Connection Line 1 -->
+    <path d="M 210 115 L 260 115 L 260 195 L 310 195" fill="none" stroke="url(#cyanBlue)" stroke-width="2.5" filter="url(#glowSubtle)" />
+
+    <!-- Component Box 2: Vector Database Query -->
+    <g transform="translate(310, 150)">
+      <rect x="0" y="0" width="180" height="90" rx="10" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5" />
+      <rect x="12" y="12" width="24" height="24" rx="6" fill="#8b5cf6" fill-opacity="0.2" />
+      <!-- Database Cylinder Icon -->
+      <path d="M 18 17 C 18 15 24 15 30 15 C 36 15 42 15 42 17 V 31 C 42 33 36 33 30 33 C 24 33 18 33 18 31 Z M 18 21 C 18 23 24 23 30 23 C 36 23 42 23 42 21" fill="none" stroke="#8b5cf6" stroke-width="1.5" />
+      <text x="46" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Vector Embed</text>
+      <text x="46" y="42" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Pinecone Cluster</text>
+      <line x1="12" y1="58" x2="168" y2="58" stroke="#334155" stroke-width="1" />
+      <circle cx="24" cy="74" r="4" fill="#8b5cf6" />
+      <text x="36" y="78" font-family="system-ui, sans-serif" font-size="10" fill="#c084fc">Match: 98.4%</text>
+    </g>
+
+    <!-- Connection Line 2 -->
+    <path d="M 400 240 L 400 280 L 150 280 L 150 310" fill="none" stroke="url(#violetFuchsia)" stroke-width="2.5" filter="url(#glowSubtle)" />
+
+    <!-- Component Box 3: Enterprise Action UI (Table / Component) -->
+    <g transform="translate(60, 310)">
+      <rect x="0" y="0" width="400" height="120" rx="10" fill="#0f172a" stroke="#d946ef" stroke-width="1.5" />
+      <rect x="16" y="16" width="24" height="24" rx="6" fill="#d946ef" fill-opacity="0.2" />
+      <!-- Table Grid Icon -->
+      <rect x="20" y="20" width="16" height="16" rx="2" fill="none" stroke="#d946ef" stroke-width="1.5" />
+      <line x1="20" y1="25" x2="36" y2="25" stroke="#d946ef" stroke-width="1.5" />
+      <line x1="26" y1="20" x2="26" y2="36" stroke="#d946ef" stroke-width="1.5" />
+      
+      <text x="52" y="25" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Retool Data Grid v3.4</text>
+      <text x="52" y="42" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Real-time Enterprise State Synchronization</text>
+
+      <!-- Mini UI Table Rows inside card -->
+      <rect x="16" y="58" width="368" height="20" rx="4" fill="#1e293b" opacity="0.6" />
+      <circle cx="28" cy="68" r="3" fill="#38bdf8" />
+      <text x="40" y="71" font-family="monospace" font-size="10" fill="#38bdf8">ID-9042: Automated Workflow Node Deployed</text>
+      <text x="330" y="71" font-family="sans-serif" font-size="9" fill="#10b981">SUCCESS</text>
+
+      <rect x="16" y="86" width="368" height="20" rx="4" fill="#1e293b" opacity="0.6" />
+      <circle cx="28" cy="96" r="3" fill="#8b5cf6" />
+      <text x="40" y="99" font-family="monospace" font-size="10" fill="#c084fc">ID-9043: LLM Context Synthesis Complete</text>
+      <text x="330" y="99" font-family="sans-serif" font-size="9" fill="#10b981">SUCCESS</text>
+    </g>
+
+    <!-- Floating Metric Tag -->
+    <g transform="translate(380, 40)" filter="url(#glowSubtle)">
+      <rect x="0" y="0" width="110" height="32" rx="16" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1" />
+      <circle cx="16" cy="16" r="4" fill="#06b6d4" />
+      <text x="28" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">VELOCITY 10x</text>
+    </g>
+  </g>
+
+  <!-- 4. Left-Side Typography & Branding -->
+  <g transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 85)">
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="0.75" />
+      <circle cx="20" cy="17" r="4.5" fill="#06b6d4" filter="url(#glowSubtle)" />
+      <text x="36" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: RETOOL -->
+    <g transform="translate(0, 165)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" fill="#f8fafc" letter-spacing="-1">RETOOL</text>
+      <text x="270" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" fill="url(#cyanBlue)" letter-spacing="-1">.</text>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(0, 210)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#c084fc" letter-spacing="3">AI AUTOMATION &amp; NO-CODE</text>
+    </g>
+
+    <!-- Investigation Headline Paragraph -->
+    <g transform="translate(0, 260)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#e2e8f0" line-height="1.3">
+        <tspan x="0" dy="0">The Genesis of Enterprise Internal Apps</tspan>
+        <tspan x="0" dy="34">and the Hands-on Guide to Workflow</tspan>
+        <tspan x="0" dy="34">Velocity in 2026.</tspan>
+      </text>
+    </g>
+
+    <!-- Metadata Footer / Author / Domain -->
+    <g transform="translate(0, 400)">
+      <line x1="0" y1="0" x2="480" y2="0" stroke="#334155" stroke-width="1" />
+      
+      <!-- Tech Specs / Tags -->
+      <g transform="translate(0, 25)">
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#1e293b" />
+        <text x="12" y="17" font-family="monospace" font-size="11" fill="#38bdf8">v2026.4.2</text>
+
+        <rect x="120" y="0" width="140" height="26" rx="6" fill="#1e293b" />
+        <text x="132" y="17" font-family="monospace" font-size="11" fill="#c084fc">SECURE DEPLOY</text>
+
+        <rect x="275" y="0" width="125" height="26" rx="6" fill="#1e293b" />
+        <text x="287" y="17" font-family="monospace" font-size="11" fill="#10b981">AI-AUGMENTED</text>
+      </g>
+
+      <!-- Brand URL Watermark -->
+      <text x="0" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1.5">HELIATECH.ONLINE</text>
+    </g>
+
+  </g>
+</svg>

@@ -112,6 +112,7 @@ class PublisherAgent:
             "tags": post.tags,
             "readingTime": post.readingTime,
             "tool_slug": post.tool_slug,
+            "image": post.image or f"/images/blog/{post.tool_slug}.svg",
             "tldr": post.tldr,
             "affiliate_cta": post.affiliate_cta.model_dump(),
         }

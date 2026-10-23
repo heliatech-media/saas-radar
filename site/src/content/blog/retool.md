@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Retool Account ➔
   url: /go/retool
+image: /images/blog/retool.svg
 ---
 ## The Bottleneck of Custom Internal Tools
 

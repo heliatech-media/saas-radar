@@ -30,6 +30,7 @@ affiliate_cta:
     power of visual automation.
   button_text: Claim Your Free Make Account ➔
   url: /go/make
+image: /images/blog/make.svg
 ---
 A decade ago, connecting two enterprise software applications meant choosing between two painful compromises. On one side, companies were forced to hire software engineers to develop brittle, custom REST API integrations that broke every time an endpoint changed. On the other, early platforms like Zapier forced a strictly linear paradigm: *“If this happens, do that.”* As soon as an operational workflow required conditional branching, JSON array manipulation, or batch-processing 100 customer records, legacy tools stalled or demanded exorbitant enterprise pricing.
 

@@ -31,6 +31,7 @@ affiliate_cta:
     cloning to power your creative media.
   button_text: Get Started Free with ElevenLabs ➔
   url: /go/elevenlabs
+image: /images/blog/elevenlabs.svg
 ---
 For nearly three decades, synthetic speech—commonly known as Text-to-Speech (TTS)—was characterized by mechanical monotony. Early voices sounded metallic, flat, and entirely incapable of capturing nuance, humor, hesitation, or emotional intensity. Whether on GPS navigation devices or early smartphone assistants, automated voices unmistakably exposed their robotic origins.
 

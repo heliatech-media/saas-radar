@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Brevo Account ➔
   url: /go/brevo
+image: /images/blog/brevo.svg
 ---
 <p><b>F</b>or decades, growing businesses faced a frustrating tax on digital growth: the subscriber penalty. Every time an email list grew, legacy email service providers (ESPs) automatically hiked subscription fees, treating customer databases like digital hostages. Companies were forced to constantly purge inactive leads simply to keep software overhead manageable, sacrificing long-term customer relationships for short-term budget compliance. This human and financial bottleneck plagued SMBs and mid-market enterprises alike—until a platform emerged to flip the economic model of digital marketing completely on its head.</p>
 

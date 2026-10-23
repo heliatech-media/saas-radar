@@ -30,6 +30,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free HeyGen Account ➔
   url: /go/heygen
+image: /images/blog/heygen.svg
 ---
 <p><b>F</b>or decades, corporate video communication suffered from an immovable bottleneck: the human element. Producing a polished, localized product launch or localized sales outreach meant renting sound stages, flying in executives, booking professional voiceover talent, and enduring endless cycles of retakes, editing passes, and translation formatting. If your global sales team needed to deploy personalized pitches across twelve different languages, your marketing budget evaporated before the third quarter even began. The friction was immense, slow, and cripplingly expensive. Then came the generative AI wave, promising synthetic avatars that looked like rubbery, uncanny valley parodies of real human beings—until one platform changed the calculus entirely.</p>
 

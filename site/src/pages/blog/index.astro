@@ -42,42 +42,56 @@ const otherPosts = sortedPosts.slice(1);
         </div>
         <a 
           href={`/blog/${featuredPost.slug}`}
-          class="group block relative rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-8 sm:p-12 transition-all duration-300 shadow-glass-cyber overflow-hidden"
+          class="group block relative rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-10 transition-all duration-300 shadow-glass-cyber overflow-hidden"
         >
           <div class="absolute -right-20 -top-20 w-96 h-96 bg-gradient-to-br from-cyan-500/10 via-fuchsia-500/5 to-transparent rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none"></div>
 
-          <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono">
-            <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold">
-              {featuredPost.data.category}
-            </span>
-            <span class="text-slate-500">•</span>
-            <span class="text-slate-400">{featuredPost.data.readingTime} READ</span>
-            <span class="text-slate-500">•</span>
-            <span class="text-slate-400">{new Date(featuredPost.data.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-          </div>
-
-          <h2 class="text-2xl sm:text-4xl font-black text-white group-hover:text-cyan-300 transition-colors mb-4 max-w-4xl leading-tight">
-            {featuredPost.data.title}
-          </h2>
-
-          <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl mb-8">
-            {featuredPost.data.description}
-          </p>
-
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800/80">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px]">
-                <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-[10px] font-bold text-white">
-                  HT
-                </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7">
+              <div class="flex flex-wrap items-center gap-3 mb-5 text-xs font-mono">
+                <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold">
+                  {featuredPost.data.category}
+                </span>
+                <span class="text-slate-500">•</span>
+                <span class="text-slate-400">{featuredPost.data.readingTime} READ</span>
+                <span class="text-slate-500">•</span>
+                <span class="text-slate-400">{new Date(featuredPost.data.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
               </div>
-              <span class="text-xs font-mono text-slate-300 font-medium">By {featuredPost.data.author}</span>
+
+              <h2 class="text-2xl sm:text-4xl font-black text-white group-hover:text-cyan-300 transition-colors mb-4 leading-tight">
+                {featuredPost.data.title}
+              </h2>
+
+              <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+                {featuredPost.data.description}
+              </p>
+
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800/80">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px]">
+                    <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-[10px] font-bold text-white">
+                      HT
+                    </div>
+                  </div>
+                  <span class="text-xs font-mono text-slate-300 font-medium">By {featuredPost.data.author}</span>
+                </div>
+
+                <span class="inline-flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all">
+                  <span>READ FULL INVESTIGATION</span>
+                  <span>➔</span>
+                </span>
+              </div>
             </div>
 
-            <span class="inline-flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all">
-              <span>READ FULL INVESTIGATION</span>
-              <span>➔</span>
-            </span>
+            <!-- Featured Hero Artwork Preview -->
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950/80 shadow-2xl relative">
+              <img 
+                src={featuredPost.data.image || `/images/blog/${featuredPost.data.tool_slug || featuredPost.slug}.svg`} 
+                alt={`${featuredPost.data.title} hero artwork`}
+                class="w-full h-auto aspect-[1200/630] object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="eager"
+              />
+            </div>
           </div>
         </a>
       </div>
@@ -91,35 +105,48 @@ const otherPosts = sortedPosts.slice(1);
           <span class="h-[1px] flex-grow bg-slate-800"></span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {otherPosts.map((post) => (
             <a 
               href={`/blog/${post.slug}`}
-              class="group flex flex-col justify-between rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-fuchsia-500/40 p-8 transition-all duration-300 hover:-translate-y-1 shadow-glass-cyber"
+              class="group flex flex-col justify-between rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-glass-cyber"
             >
               <div>
-                <div class="flex items-center gap-2 mb-4 text-xs font-mono">
-                  <span class="px-2.5 py-0.5 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/25">
-                    {post.data.category}
-                  </span>
-                  <span class="text-slate-500">•</span>
-                  <span class="text-slate-400 text-[11px]">{post.data.readingTime} READ</span>
+                <!-- Card Hero Visual Thumbnail -->
+                <div class="w-full aspect-[1200/630] bg-slate-950/80 overflow-hidden border-b border-slate-800/80 relative">
+                  <img 
+                    src={post.data.image || `/images/blog/${post.data.tool_slug || post.slug}.svg`} 
+                    alt={`${post.data.title} thumbnail`}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3">
+                    <span class="px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-semibold">
+                      {post.data.category}
+                    </span>
+                  </div>
                 </div>
 
-                <h3 class="text-xl font-bold text-white group-hover:text-fuchsia-300 transition-colors mb-3 leading-snug">
-                  {post.data.title}
-                </h3>
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-3 text-xs font-mono text-slate-400">
+                    <span class="text-[11px]">{post.data.readingTime} READ</span>
+                    <span class="text-slate-600">•</span>
+                    <span class="text-[11px]">{new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  </div>
 
-                <p class="text-slate-400 text-xs sm:text-sm line-clamp-3 leading-relaxed mb-6">
-                  {post.data.description}
-                </p>
+                  <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-3 leading-snug line-clamp-2">
+                    {post.data.title}
+                  </h3>
+
+                  <p class="text-slate-400 text-xs sm:text-sm line-clamp-2 leading-relaxed">
+                    {post.data.description}
+                  </p>
+                </div>
               </div>
 
-              <div class="flex items-center justify-between pt-4 border-t border-slate-800/60 text-xs font-mono">
-                <span class="text-slate-500 text-[11px]">
-                  {new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                </span>
-                <span class="text-fuchsia-400 group-hover:translate-x-1 transition-transform flex items-center gap-1 font-bold">
+              <div class="px-6 pb-6 pt-3 flex items-center justify-between border-t border-slate-800/40 text-xs font-mono">
+                <span class="text-cyan-400/70 text-[11px] font-medium">HELIA INTEL</span>
+                <span class="text-cyan-400 group-hover:translate-x-1 transition-transform flex items-center gap-1 font-bold">
                   <span>Explore</span>
                   <span>➔</span>
                 </span>

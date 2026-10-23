@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Lusha Account ➔
   url: /go/lusha
+image: /images/blog/lusha.svg
 ---
 **T**he modern outbound sales floor is a battlefield of attrition. For decades, ambitious revenue teams fought an exhausting war against stale switchboards, generic info@ company emails, and gatekeepers trained to intercept cold calls. Prospecting used to mean digging through bloated legacy directories that felt more like digital archaeological digs than dynamic sales databases. Conversion rates suffered, reps burned out scrolling through endless tabs, and enterprise pipeline velocity crawled at a glacial pace.
 

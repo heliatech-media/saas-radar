@@ -13,6 +13,7 @@ Helia's Internal Fleet of Specialized Sub-Agents (Stealth / Invisible to Competi
 7. Helia-Reporter: Generates daily executive intelligence digests tracking the 100k visitor goal.
 8. Helia-EdgePublisher: Validates Astro builds and deploys to Cloudflare Pages edge without latency.
 9. Helia-ArticleStylist: Architects luxury layouts, Mermaid diagrams, tables & visual callouts.
+10. Helia-VisualArtist: Generates custom 1200x630 relative visual assets & OpenGraph cards.
 """
 
 import sys
@@ -46,6 +47,7 @@ from agents.email_reporter_agent import EmailReporterAgent
 from agents.social_growth_agent import SocialGrowthAgent
 from agents.visionary_growth_agent import VisionaryGrowthAgent
 from agents.article_layout_agent import ArticleLayoutAgent
+from agents.image_generator_agent import ImageGeneratorAgent
 from agents.models import ToolReview
 
 
@@ -63,6 +65,7 @@ class HeliaAutonomousDirector:
         self.reporter = EmailReporterAgent()
         self.social = SocialGrowthAgent(api_key=api_key)
         self.stylist = ArticleLayoutAgent()
+        self.artist = ImageGeneratorAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -99,6 +102,11 @@ class HeliaAutonomousDirector:
         self.log("Helia-ArticleStylist", "Auditing editorial layouts, Mermaid diagrams & visual callouts...", "🎨")
         layout_res = self.stylist.beautify_all_articles()
         self.log("Helia-ArticleStylist", f"Typesetting verified across {layout_res['formatted_count']} articles.", "📐")
+
+        # Step 2.6: Sub-Agent VisualArtist (Hero & Social OpenGraph Artwork)
+        self.log("Helia-VisualArtist", "Auditing 1200x630 custom hero visuals & OpenGraph social cards...", "🖼️")
+        visual_res = self.artist.process_all_articles()
+        self.log("Helia-VisualArtist", f"Visual assets verified for {visual_res['generated']} articles.", "✨")
 
         # Step 3: Sub-Agent TrendScout
         self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")

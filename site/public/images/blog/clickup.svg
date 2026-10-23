@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    
+    <linearGradient id="grid-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Brand & Accent Gradients -->
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="fuchsia-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="card-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="node-pulse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1"/>
+      <feGaussianBlur stdDeviation="32" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Patterns -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.08"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.2"/>
+    </pattern>
+
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#8b5cf6" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- 1. Background Layer -->
+  <rect width="1200" height="630" fill="url(#bg-glow)"/>
+  <rect width="1200" height="630" fill="url(#cyber-grid)"/>
+  <rect width="1200" height="630" fill="url(#grid-fade)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="180" r="220" fill="#8b5cf6" opacity="0.12" filter="url(#glow-heavy)"/>
+  <circle cx="750" cy="450" r="260" fill="#06b6d4" opacity="0.1" filter="url(#glow-heavy)"/>
+  <circle cx="200" cy="500" r="180" fill="#d946ef" opacity="0.08" filter="url(#glow-heavy)"/>
+
+  <!-- 2. Isometric Workspace OS Engine (Right Side Visual Core) -->
+  <g transform="translate(680, 80)" filter="url(#drop-shadow)">
+    <!-- Central Holographic Platform Base -->
+    <path d="M 0 220 L 220 110 L 440 220 L 220 330 Z" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+    <path d="M 0 260 L 220 370 L 440 260" fill="none" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
+    
+    <!-- Floating Connection Nodes / Workflow Stream -->
+    <path d="M 120 160 Q 220 80 320 180 T 360 280" fill="none" stroke="url(#primary-grad)" stroke-width="3" filter="url(#glow-subtle)" stroke-dasharray="8 4"/>
+    <path d="M 80 240 Q 220 300 340 140" fill="none" stroke="url(#fuchsia-grad)" stroke-width="2" filter="url(#glow-subtle)"/>
+
+    <!-- Node 1: Analytics / Velocity (Back Left) -->
+    <g transform="translate(60, 80)">
+      <rect x="0" y="0" width="110" height="90" rx="12" fill="url(#card-glass)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <path d="M 15 65 L 35 40 L 55 50 L 85 25" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="85" cy="25" r="4" fill="#38bdf8" filter="url(#glow-heavy)"/>
+      <text x="15" y="25" fill="#94a3b8" font-family="monospace" font-size="10" font-weight="bold">VELOCITY</text>
+    </g>
+
+    <!-- Node 2: AI Core / Neural Engine (Top Center) -->
+    <g transform="translate(165, 20)">
+      <rect x="0" y="0" width="110" height="90" rx="12" fill="url(#card-glass)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <circle cx="55" cy="45" r="20" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4 2"/>
+      <circle cx="55" cy="45" r="8" fill="#d946ef" filter="url(#glow-heavy)"/>
+      <text x="22" y="80" fill="#c084fc" font-family="monospace" font-size="10" font-weight="bold">AI MATRIX</text>
+    </g>
+
+    <!-- Node 3: Task Automation (Right) -->
+    <g transform="translate(270, 110)">
+      <rect x="0" y="0" width="120" height="100" rx="12" fill="url(#card-glass)" stroke="#d946ef" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <rect x="15" y="20" width="30" height="8" rx="4" fill="#d946ef" opacity="0.6"/>
+      <rect x="15" y="38" width="50" height="8" rx="4" fill="#38bdf8" opacity="0.6"/>
+      <rect x="15" y="56" width="38" height="8" rx="4" fill="#06b6d4" opacity="0.6"/>
+      <circle cx="95" cy="60" r="10" fill="url(#primary-grad)" filter="url(#glow-heavy)"/>
+      <path d="M 92 60 L 98 60 M 95 57 L 95 63" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Floating Metric Pill -->
+    <g transform="translate(130, 290)" filter="url(#drop-shadow)">
+      <rect x="0" y="0" width="180" height="44" rx="22" fill="#090d16" stroke="#06b6d4" stroke-width="1.5"/>
+      <circle cx="24" cy="22" r="6" fill="#06b6d4" filter="url(#glow-heavy)"/>
+      <text x="40" y="27" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="800" font-size="14" letter-spacing="1">OS v2026.4 ACTIVE</text>
+    </g>
+  </g>
+
+  <!-- 3. Typography & Architectural Dossier (Left Side) -->
+  <g transform="translate(80, 110)">
+    
+    <!-- Top Pill Badge -->
+    <g filter="url(#drop-shadow)">
+      <rect x="0" y="0" width="340" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="18" cy="17" r="5" fill="#38bdf8" filter="url(#glow-heavy)"/>
+      <text x="35" y="22" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: ClickUp -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="0" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="-1" filter="url(#drop-shadow)">
+        CLICK<tspan fill="url(#primary-grad)">UP</tspan>
+      </text>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 115)">
+      <text x="0" y="0" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="20" letter-spacing="0.5">
+        Productivity &amp; Workspace OS
+      </text>
+    </g>
+
+    <!-- Investigation Headline Paragraph -->
+    <g transform="translate(2, 160)">
+      <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="15" line-height="1.5">
+        <tspan x="0" dy="0">The Genesis of the Workspace OS and the Hands-on</tspan>
+        <tspan x="0" dy="24">Guide to Project Velocity in 2026.</tspan>
+      </text>
+    </g>
+
+    <!-- Technical Specs Footer / Metadata -->
+    <g transform="translate(0, 260)">
+      <line x1="0" y1="0" x2="480" y2="0" stroke="#334155" stroke-width="1"/>
+      
+      <!-- Meta Item 1 -->
+      <g transform="translate(0, 20)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" font-weight="700">ARCHITECTURE</text>
+        <text x="0" y="16" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Unified Graph Engine</text>
+      </g>
+
+      <!-- Meta Item 2 -->
+      <g transform="translate(170, 20)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" font-weight="700">PARADIGM</text>
+        <text x="0" y="16" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Autonomous Workflow</text>
+      </g>
+
+      <!-- Meta Item 3 -->
+      <g transform="translate(340, 20)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" font-weight="700">SECURITY</text>
+        <text x="0" y="16" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Enterprise Grade</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- 4. Framing Accents & Border Details -->
+  <!-- Top-left corner accent -->
+  <path d="M 30 50 L 30 30 L 50 30" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+  <!-- Top-right corner accent -->
+  <path d="M 1170 50 L 1170 30 L 1150 30" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6"/>
+  <!-- Bottom-left corner accent -->
+  <path d="M 30 580 L 30 600 L 50 600" fill="none" stroke="#d946ef" stroke-width="2" opacity="0.6"/>
+  <!-- Bottom-right corner accent -->
+  <path d="M 1170 580 L 1170 600 L 1150 600" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+
+  <!-- Subtle bottom branding signature -->
+  <text x="1170" y="605" text-anchor="end" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="2">HELIATECH.ONLINE</text>
+</svg>

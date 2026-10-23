@@ -12,6 +12,7 @@ from google.genai import types
 from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP
 from agents.models import ToolReview, BlogPost, AffiliateCTA
 from agents.article_layout_agent import ArticleLayoutAgent
+from agents.image_generator_agent import ImageGeneratorAgent
 
 
 class BlogAgent:
@@ -104,6 +105,22 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
             data = json.loads(cleaned_text, strict=False)
 
         post = BlogPost(**data)
+        
+        # 1. Generate dedicated relative hero artwork via Helia-VisualArtist
+        try:
+            artist = ImageGeneratorAgent(api_key=self.client.api_key if self.client else "")
+            artist.generate_article_hero_image(
+                tool_name=review.name,
+                tool_slug=review.slug,
+                title=post.title,
+                category=review.category
+            )
+            post.image = f"/images/blog/{review.slug}.svg"
+        except Exception as e:
+            print(f"[Helia-ContentFactory] ⚠️ Artwork generation note: {e}")
+            post.image = f"/images/blog/{review.slug}.svg"
+
+        # 2. Apply layout & visual polish via ArticleLayoutAgent
         stylist = ArticleLayoutAgent()
         post.markdown_content = stylist.beautify_markdown(
             post.markdown_content,

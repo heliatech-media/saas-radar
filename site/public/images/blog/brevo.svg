@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="30%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Metallic & Neon Stroke Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsiaCyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="nodeActive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowSubtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="25" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Pattern for Cyber Grid -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.07" />
+    </pattern>
+    
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#8b5cf6" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#cyberGrid)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="150" cy="100" r="250" fill="#06b6d4" opacity="0.12" filter="url(#intenseGlow)" />
+  <circle cx="950" cy="450" r="300" fill="#8b5cf6" opacity="0.12" filter="url(#intenseGlow)" />
+  <circle cx="700" cy="150" r="200" fill="#d946ef" opacity="0.08" filter="url(#intenseGlow)" />
+
+  <!-- Geometric Accent Lines & HUD Elements -->
+  <g opacity="0.4">
+    <path d="M 0,100 L 300,100 L 350,150 L 1200,150" fill="none" stroke="url(#cyanPurple)" stroke-width="1" />
+    <path d="M 50,630 L 50,400 L 100,350 L 500,350" fill="none" stroke="url(#cyanPurple)" stroke-width="1" />
+    <circle cx="350" cy="150" r="3" fill="#38bdf8" />
+    <circle cx="100" cy="350" r="3" fill="#8b5cf6" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- RIGHT SIDE: 3D CRM & AUTOMATION METAPHOR   -->
+  <!-- ========================================== -->
+  <g transform="translate(640, 75)">
+    <!-- Central Holographic Platform / Isometric Grid Base -->
+    <g transform="translate(240, 220)">
+      <!-- Base Ellipse / Grid Floor -->
+      <ellipse cx="0" cy="60" rx="220" ry="90" fill="none" stroke="url(#cyanPurple)" stroke-width="1.5" opacity="0.4" />
+      <ellipse cx="0" cy="40" rx="160" ry="65" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="6 4" opacity="0.3" />
+      <ellipse cx="0" cy="20" rx="100" ry="40" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.5" />
+    </g>
+
+    <!-- Interconnected Workflow & Data Flow Nodes -->
+    <!-- Connection Lines (Back layer) -->
+    <g filter="url(#glowSubtle)" opacity="0.7">
+      <path d="M 140,150 L 240,240 L 340,170" fill="none" stroke="url(#cyanPurple)" stroke-width="2" />
+      <path d="M 240,240 L 240,360" fill="none" stroke="url(#fuchsiaCyan)" stroke-width="2" />
+      <path d="M 140,150 L 70,250 L 240,360" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+      <path d="M 340,170 L 410,270 L 240,360" fill="none" stroke="#d946ef" stroke-width="1.5" />
+    </g>
+
+    <!-- Floating Data Nodes (Isometric Cards / Hubs) -->
+    
+    <!-- Node 1: Email / Campaign Channel (Top Left) -->
+    <g transform="translate(140, 150)" filter="url(#glowSubtle)">
+      <polygon points="0,-25 35,-10 35,25 0,40 -35,25 -35,-10" fill="url(#cardBg)" stroke="#06b6d4" stroke-width="1.5" />
+      <!-- Icon inside Node: Envelope/Pulse -->
+      <path d="M-12,-5 L0,3 L12,-5 M-12,5 L0,13 L12,5" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+      <circle cx="0" cy="-25" r="4" fill="#06b6d4" />
+      <!-- Pulsing Ring -->
+      <circle cx="0" cy="7" r="30" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.5">
+        <animate attributeName="r" values="25;38;25" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Node 2: Automation Logic / Webhook (Top Right) -->
+    <g transform="translate(340, 170)" filter="url(#glowSubtle)">
+      <polygon points="0,-25 35,-10 35,25 0,40 -35,25 -35,-10" fill="url(#cardBg)" stroke="#8b5cf6" stroke-width="1.5" />
+      <!-- Icon: Branching workflow nodes -->
+      <circle cx="0" cy="5" r="4" fill="#d946ef" />
+      <circle cx="-12" cy="-5" r="3" fill="#38bdf8" />
+      <circle cx="12" cy="-5" r="3" fill="#38bdf8" />
+      <path d="M-10,-3 L0,3 L10,-3" fill="none" stroke="#8b5cf6" stroke-width="1.5" />
+      <circle cx="0" cy="-25" r="4" fill="#8b5cf6" />
+    </g>
+
+    <!-- Node 3: CRM / Contact Data Cube (Far Left) -->
+    <g transform="translate(70, 250)" filter="url(#glowSubtle)">
+      <polygon points="0,-20 30,-10 30,20 0,30 -30,20 -30,-10" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.5" />
+      <!-- Icon: User / Data points -->
+      <circle cx="0" cy="2" r="5" fill="#06b6d4" />
+      <path d="M-10,14 C-10,8 10,8 10,14" fill="none" stroke="#06b6d4" stroke-width="1.5" />
+      <circle cx="0" cy="-20" r="3" fill="#38bdf8" />
+    </g>
+
+    <!-- Node 4: SMS / Multi-Channel (Far Right) -->
+    <g transform="translate(410, 270)" filter="url(#glowSubtle)">
+      <polygon points="0,-20 30,-10 30,20 0,30 -30,20 -30,-10" fill="url(#cardBg)" stroke="#d946ef" stroke-width="1.5" />
+      <!-- Icon: Chat bubble / Signal -->
+      <rect x="-10" y="-4" width="20" height="14" rx="3" fill="none" stroke="#d946ef" stroke-width="1.5" />
+      <path d="M-5,10 L0,15 L5,10" fill="none" stroke="#d946ef" stroke-width="1.5" />
+      <circle cx="0" cy="-20" r="3" fill="#d946ef" />
+    </g>
+
+    <!-- Central Core Hub: BREVO MULTI-CHANNEL ENGINE -->
+    <g transform="translate(240, 260)" filter="url(#glow)">
+      <!-- Outer Hexagon -->
+      <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="url(#cardBg)" stroke="url(#cyanPurple)" stroke-width="2.5" />
+      
+      <!-- Inner Rotating / Pulsing Elements -->
+      <polygon points="0,-35 30,-17 30,17 0,35 -30,17 -30,-17" fill="#030712" stroke="#38bdf8" stroke-width="1" opacity="0.8" />
+      
+      <!-- Core Icon Symbol: Infinity / Multi-Channel Loop -->
+      <path d="M-12,-4 C-12,-10 -4,-10 0,-4 C4,-10 12,-10 12,-4 C12,2 4,8 0,12 C-4,8 -12,2 -12,-4 Z" fill="none" stroke="url(#fuchsiaCyan)" stroke-width="2.5" />
+      <circle cx="0" cy="4" r="2" fill="#38bdf8" />
+    </g>
+
+    <!-- Floating Metric Floating Badge -->
+    <g transform="translate(240, 390)" filter="url(#glowSubtle)">
+      <rect x="-95" y="-18" width="190" height="36" rx="18" fill="#090d16" stroke="#06b6d4" stroke-width="1" />
+      <circle cx="-70" cy="0" r="4" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="-55" y="5" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">VOLUME SYNC: 99.9%</text>
+    </g>
+
+    <!-- Floating Particle Sparkles -->
+    <g fill="#38bdf8">
+      <circle cx="180" cy="200" r="2" opacity="0.8" />
+      <circle cx="300" cy="210" r="1.5" opacity="0.6" />
+      <circle cx="200" cy="320" r="2.5" opacity="0.9" />
+      <circle cx="280" cy="300" r="1" opacity="0.5" />
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- LEFT SIDE: TYPOGRAPHY & DOSSIER METADATA   -->
+  <!-- ========================================== -->
+  <g transform="translate(80, 85)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="315" height="32" rx="16" fill="#0f172a" stroke="url(#cyanPurple)" stroke-width="1.5" />
+      <circle cx="18" cy="16" r="5" fill="#06b6d4" filter="url(#glowSubtle)" />
+      <text x="35" y="21" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title & Category -->
+    <g transform="translate(0, 80)">
+      <!-- Category Subtitle -->
+      <text x="0" y="0" fill="#a855f7" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="4" text-transform="uppercase">Marketing Automation &amp; CRM</text>
+      
+      <!-- Tool Name: BREVO -->
+      <text x="0" y="75" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" letter-spacing="3" filter="url(#glowSubtle)">BREVO</text>
+      
+      <!-- Accent Line under Title -->
+      <path d="M 0,95 L 220,95" stroke="url(#cyanPurple)" stroke-width="4" stroke-linecap="round" />
+    </g>
+
+    <!-- Investigation Title (Multi-line) -->
+    <g transform="translate(0, 225)">
+      <text x="0" y="0" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" letter-spacing="0.5">
+        <tspan x="0" dy="0">The Evolution of Volume-Based</tspan>
+        <tspan x="0" dy="36">Marketing &amp; The Hands-on Guide</tspan>
+        <tspan x="0" dy="36">to Multi-Channel Growth in 2026</tspan>
+      </text>
+    </g>
+
+    <!-- Metadata / Author Footer -->
+    <g transform="translate(0, 395)">
+      <line x1="0" y1="0" x2="450" y2="0" stroke="#334155" stroke-width="1" />
+      
+      <g transform="translate(0, 20)">
+        <!-- Author / Meta Item 1 -->
+        <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5">INVESTIGATION BY</text>
+        <text x="0" y="18" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">HELIA TECH RESEARCH</text>
+
+        <!-- Meta Item 2 -->
+        <g transform="translate(200, 0)">
+          <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5">STACK FOCUS</text>
+          <text x="0" y="18" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Transactional + CRM</text>
+        </g>
+        
+        <!-- Meta Item 3 (Domain verification badge) -->
+        <g transform="translate(385, -2)">
+          <rect x="0" y="0" width="65" height="24" rx="4" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1" />
+          <text x="32" y="16" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">v2026.1</text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Outer Architectural Framing Borders -->
+  <g stroke="#38bdf8" stroke-width="1" opacity="0.3" fill="none">
+    <!-- Top-Left Corner Bracket -->
+    <path d="M 20,40 L 20,20 L 40,20" />
+    <!-- Top-Right Corner Bracket -->
+    <path d="M 1160,20 L 1180,20 L 1180,40" />
+    <!-- Bottom-Left Corner Bracket -->
+    <path d="M 20,590 L 20,610 L 40,610" />
+    <!-- Bottom-Right Corner Bracket -->
+    <path d="M 1160,610 L 1180,610 L 1180,590" />
+  </g>
+</svg>

@@ -46,6 +46,7 @@ const jsonLd = {
   title={`${post.title}`}
   description={post.description}
   jsonLd={jsonLd}
+  image={post.image || `/images/blog/${post.tool_slug || entry.slug}.svg`}
 >
   <!-- Reading Progress Bar (Fixed Top) -->
   <div id="read-progress" class="fixed top-0 left-0 w-0 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-fuchsia-500 z-50 transition-all duration-75"></div>
@@ -123,6 +124,19 @@ const jsonLd = {
         )}
       </div>
     </header>
+
+    <!-- Flagship Hero Artwork (Architected by Helia-VisualArtist) -->
+    {post.image && (
+      <div class="my-10 rounded-3xl overflow-hidden border border-slate-800 shadow-glass-cyber bg-slate-950/60 relative group">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent opacity-30 z-10 pointer-events-none"></div>
+        <img 
+          src={post.image} 
+          alt={`${post.title} — Flagship Architectural Artwork`}
+          class="w-full h-auto aspect-[1200/630] object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+          loading="eager"
+        />
+      </div>
+    )}
 
     <!-- TL;DR Executive Summary Box (TechPulse Cyber Style) -->
     {post.tldr && post.tldr.length > 0 && (

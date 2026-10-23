@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Voiceflow Account ➔
   url: /go/voiceflow
+image: /images/blog/voiceflow.svg
 ---
 <span class="drop-cap">F</span>or decades, building enterprise conversational AI meant navigating a labyrinth of rigid decision trees, brittle codebases, and siloed developer teams. Every minor update to a customer service script required engineering sprints, while support queues ballooned and customer acquisition costs soared. The modern enterprise was caught in a painful bottleneck: trapped between expensive bespoke engineering and clunky, legacy chat builders that failed to understand context, nuance, or workflow automation.
 

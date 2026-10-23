@@ -29,6 +29,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free n8n Account ➔
   url: /go/n8n
+image: /images/blog/n8n.svg
 ---
 ## Introduction
 

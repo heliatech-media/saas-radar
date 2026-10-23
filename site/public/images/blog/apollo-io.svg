@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Ambient Glow Orbs -->
+    <radialGradient id="cyanOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="violetOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="fuchsiaOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Nodes -->
+    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3" />
+    </pattern>
+
+    <pattern id="dotMatrix" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#64748b" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="950" cy="180" r="350" fill="url(#cyanOrb)" />
+  <circle cx="750" cy="450" r="300" fill="url(#violetOrb)" />
+  <circle cx="300" cy="300" r="250" fill="url(#fuchsiaOrb)" filter="url(#glow)" />
+
+  <!-- Geometric Decorative Lines & Frame -->
+  <g opacity="0.4">
+    <path d="M 60 60 L 120 60 L 160 100" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M 1140 570 L 1080 570 L 1040 530" fill="none" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="60" y1="570" x2="120" y2="570" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="1140" y1="60" x2="1080" y2="60" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- ==========================================
+       RIGHT SIDE: 3D VECTOR SALES INTEL & DATA ENGINE
+       ========================================== -->
+  <g transform="translate(620, 70)">
+    <!-- Connecting Infrastructure Lines -->
+    <g opacity="0.6" filter="url(#glow)">
+      <path d="M 100 250 L 220 160 L 380 160" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="2" />
+      <path d="M 220 160 L 300 280 L 460 280" fill="none" stroke="url(#violetFuchsiaGrad)" stroke-width="2" />
+      <path d="M 180 380 L 300 280" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6 4" />
+      <path d="M 380 160 L 480 80" fill="none" stroke="#38bdf8" stroke-width="2" />
+    </g>
+
+    <!-- Floating Node 1: Enriched Contact Graph -->
+    <g transform="translate(40, 200)" filter="url(#glow)">
+      <rect x="0" y="0" width="160" height="90" rx="12" fill="url(#glassGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.5" backdrop-filter="blur(10px)" />
+      <path d="M 15 25 L 145 25" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+      <!-- Mini Avatar & Data Lines -->
+      <circle cx="35" cy="48" r="12" fill="#06b6d4" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5" />
+      <circle cx="35" cy="48" r="4" fill="#38bdf8" />
+      <line x1="58" y1="42" x2="130" y2="42" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8" />
+      <line x1="58" y1="56" x2="105" y2="56" stroke="#64748b" stroke-width="2" stroke-linecap="round" />
+      <circle cx="140" cy="48" r="4" fill="#10b981" filter="url(#glow)" />
+      <text x="15" y="18" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="700" font-size="10" letter-spacing="1">VERIFIED LEAD</text>
+    </g>
+
+    <!-- Floating Node 2: Pipeline Velocity Chart -->
+    <g transform="translate(320, 60)" filter="url(#glow)">
+      <rect x="0" y="0" width="180" height="110" rx="12" fill="url(#glassGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.5" />
+      <text x="15" y="25" fill="#d946ef" font-family="system-ui, sans-serif" font-weight="700" font-size="10" letter-spacing="1">PIPELINE VELOCITY</text>
+      <!-- Mini Bar Graph -->
+      <g transform="translate(15, 40)">
+        <rect x="0" y="30" width="20" height="25" rx="3" fill="#8b5cf6" fill-opacity="0.4" />
+        <rect x="30" y="20" width="20" height="35" rx="3" fill="#8b5cf6" fill-opacity="0.6" />
+        <rect x="60" y="10" width="20" height="45" rx="3" fill="#06b6d4" fill-opacity="0.8" />
+        <rect x="90" y="0" width="20" height="55" rx="3" fill="url(#cyanBlueGrad)" filter="url(#glow)" />
+        <path d="M 10 35 L 40 22 L 70 12 L 100 2" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+        <circle cx="100" cy="2" r="3" fill="#ffffff" />
+      </g>
+    </g>
+
+    <!-- Central Isometric Database / CRM Core Cube -->
+    <g transform="translate(180, 160)">
+      <!-- Outer Hexagon / Platform Base -->
+      <polygon points="120,20 200,65 200,155 120,200 40,155 40,65" fill="#090d16" fill-opacity="0.85" stroke="url(#cyanBlueGrad)" stroke-width="2" filter="url(#intenseGlow)" />
+      
+      <!-- Inner Geometric Layers -->
+      <polygon points="120,45 175,77 175,143 120,175 65,143 65,77" fill="url(#glassGrad)" stroke="#8b5cf6" stroke-width="1.5" />
+      
+      <!-- Central Core Pulse -->
+      <circle cx="120" cy="110" r="32" fill="url(#bgGlow)" stroke="url(#violetFuchsiaGrad)" stroke-width="2" filter="url(#glow)" />
+      <circle cx="120" cy="110" r="16" fill="#06b6d4" fill-opacity="0.4" />
+      <circle cx="120" cy="110" r="6" fill="#38bdf8" filter="url(#glow)" />
+
+      <!-- Orbiting Data Nodes -->
+      <circle cx="120" cy="20" r="5" fill="#38bdf8" filter="url(#glow)" />
+      <circle cx="200" cy="65" r="5" fill="#d946ef" filter="url(#glow)" />
+      <circle cx="40" cy="155" r="5" fill="#8b5cf6" filter="url(#glow)" />
+      
+      <!-- Connecting internal web lines -->
+      <line x1="120" y1="110" x2="120" y2="20" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 3" />
+      <line x1="120" y1="110" x2="200" y2="65" stroke="#d946ef" stroke-width="1" stroke-dasharray="3 3" />
+      <line x1="120" y1="110" x2="40" y2="155" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3 3" />
+    </g>
+
+    <!-- Floating Node 3: Revenue Analytics Metric Badge -->
+    <g transform="translate(260, 310)" filter="url(#glow)">
+      <rect x="0" y="0" width="190" height="75" rx="12" fill="url(#glassGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.5" />
+      <circle cx="25" cy="38" r="15" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.5" />
+      <!-- Upward Trend Icon -->
+      <path d="M 18 42 L 24 34 L 28 38 L 34 28" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="52" y="32" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="11">GTM CONSOLIDATION</text>
+      <text x="52" y="52" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="800" font-size="16">+340% ROI</text>
+    </g>
+  </g>
+
+  <!-- ==========================================
+       LEFT SIDE: TYPOGRAPHY & ARCHITECTURAL DOSSIER
+       ========================================== -->
+  <g transform="translate(80, 95)">
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g filter="url(#glow)">
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" />
+      <circle cx="18" cy="17" r="9" fill="#06b6d4" fill-opacity="0.3" />
+      <text x="35" y="21" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" letter-spacing="2.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title: APOLLO.IO -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="65" fill="url(#textGrad)" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="3" filter="url(#glow)">APOLLO.IO</text>
+      <!-- Decorative underline glow -->
+      <rect x="2" y="78" width="220" height="4" rx="2" fill="url(#cyanBlueGrad)" filter="url(#intenseGlow)" />
+      <rect x="230" y="78" width="60" height="4" rx="2" fill="#8b5cf6" filter="url(#glow)" />
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 175)">
+      <text x="0" y="0" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" letter-spacing="4">MARKETING &amp; SALES INTELLIGENCE</text>
+    </g>
+
+    <!-- Investigation Title (Multi-line) -->
+    <g transform="translate(2, 215)">
+      <text x="0" y="0" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="26" letter-spacing="0.5">
+        <tspan x="0" dy="0">The Blueprint of Go-to-Market</tspan>
+        <tspan x="0" dy="36">Consolidation and the Hands-on</tspan>
+        <tspan x="0" dy="36">Guide to Pipeline Velocity</tspan>
+      </text>
+    </g>
+
+    <!-- Technical Metadata Footer / Author Tag -->
+    <g transform="translate(2, 345)" opacity="0.8">
+      <line x1="0" y1="0" x2="420" y2="0" stroke="#334155" stroke-width="1" />
+      <circle cx="6" cy="18" r="3" fill="#d946ef" />
+      <text x="18" y="22" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="600" font-size="11" letter-spacing="1">SYSTEM ANALYSIS // ENTERPRISE INFRASTRUCTURE</text>
+      <text x="390" y="22" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="700" font-size="11" text-anchor="end">v4.8</text>
+    </g>
+  </g>
+</svg>

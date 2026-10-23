@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Notion AI Account ➔
   url: /go/notion-ai
+image: /images/blog/notion-ai.svg
 ---
 <p><b>T</b>he modern enterprise knowledge worker spends up to 20% of their working week searching for internal information or tracking down colleagues to answer routine questions. Before the advent of native generative intelligence inside document architectures, teams were trapped in a dizzying loop of tool fragmentation. You would draft a strategy brief in one application, jump to a separate browser tab to query an LLM for copy refinements, switch to a chat window to summarize meeting transcripts, and manually paste those disparate fragments back into your project database. This constant context switching shattered deep work states, fragmented corporate memory, and drained countless billable hours from bottom lines worldwide.</p>
 

@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Monday.com Account ➔
   url: /go/monday-com
+image: /images/blog/monday-com.svg
 ---
 ## Introduction
 

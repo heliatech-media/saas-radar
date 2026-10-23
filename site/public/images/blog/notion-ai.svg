@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+
+    <!-- Glowing Orbs -->
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fuchsiaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glassmorphism Surface Gradients -->
+    <linearGradient id="glassPanel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.5"/>
+      <circle cx="40" cy="40" r="1" fill="#334155" fill-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#gridPattern)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="150" r="300" fill="url(#cyanGlow)"/>
+  <circle cx="1000" cy="450" r="350" fill="url(#violetGlow)"/>
+  <circle cx="750" cy="100" r="250" fill="url(#fuchsiaGlow)"/>
+
+  <!-- ==================== BACKGROUND GRAPHICS / 3D METAPHOR ==================== -->
+  <!-- Floating Isometric Workspace / Vector Knowledge Nodes (Right Side) -->
+  <g transform="translate(680, 80)">
+    <!-- Connecting Workflow / Neural Web Lines -->
+    <path d="M 60,180 L 180,100 L 320,160 L 240,300 Z" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6,6"/>
+    <path d="M 180,100 L 280,40 L 400,100 L 320,160" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.4"/>
+    <path d="M 320,160 L 420,240 L 300,340 L 240,300" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-opacity="0.3"/>
+
+    <!-- Database Node 1 (Back Top) -->
+    <g transform="translate(250, 20)">
+      <polygon points="50,0 100,25 50,50 0,25" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <polygon points="0,25 50,50 50,75 0,50" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+      <polygon points="50,50 100,25 100,50 50,75" fill="#090d16" stroke="#38bdf8" stroke-width="1"/>
+      <circle cx="50" cy="37" r="4" fill="#38bdf8" filter="url(#glow)"/>
+    </g>
+
+    <!-- Node 2 (Left Floating Cube) -->
+    <g transform="translate(20, 140)">
+      <polygon points="40,0 80,20 40,40 0,20" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+      <polygon points="0,20 40,40 40,65 0,45" fill="#0f172a" stroke="#06b6d4" stroke-width="1"/>
+      <polygon points="40,40 80,20 80,45 40,65" fill="#090d16" stroke="#06b6d4" stroke-width="1"/>
+      <circle cx="40" cy="32" r="3" fill="#06b6d4" filter="url(#glow)"/>
+    </g>
+
+    <!-- Central Hub UI Card (Context-Aware Engine) -->
+    <g transform="translate(120, 110)" filter="url(#glow)">
+      <rect x="0" y="0" width="220" height="150" rx="12" fill="url(#glassPanel)" stroke="url(#glassBorder)" stroke-width="2"/>
+      <!-- Window Header -->
+      <circle cx="20" cy="20" r="4" fill="#ef4444"/>
+      <circle cx="32" cy="20" r="4" fill="#f59e0b"/>
+      <circle cx="44" cy="20" r="4" fill="#10b981"/>
+      <text x="60" y="24" fill="#94a3b8" font-family="monospace" font-size="10" font-weight="600">NOTION_AI // KNOWLEDGE.SYNAPSE</text>
+      <!-- Simulated AI Code/Content Flow -->
+      <line x1="20" y1="45" x2="140" y2="45" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line x1="20" y1="65" x2="180" y2="65" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+      <line x1="20" y1="85" x2="120" y2="85" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+      
+      <!-- AI Synthesizing Pulse Badge inside Card -->
+      <g transform="translate(20, 105)">
+        <rect x="0" y="0" width="180" height="28" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="1"/>
+        <circle cx="14" cy="14" r="5" fill="#d946ef" filter="url(#glow)"/>
+        <text x="28" y="18" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="500">Vector Embeddings Active</text>
+      </g>
+    </g>
+
+    <!-- Node 3 (Bottom Right Database Core) -->
+    <g transform="translate(260, 260)">
+      <polygon points="60,0 120,30 60,60 0,30" fill="#1e293b" stroke="#d946ef" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <polygon points="0,30 60,60 60,95 0,65" fill="#0f172a" stroke="#d946ef" stroke-width="1"/>
+      <polygon points="60,60 120,30 120,65 60,95" fill="#090d16" stroke="#d946ef" stroke-width="1"/>
+      <circle cx="60" cy="48" r="5" fill="#d946ef" filter="url(#glow)"/>
+    </g>
+
+    <!-- Floating Particles / Data Sparks -->
+    <circle cx="100" cy="80" r="2" fill="#38bdf8" filter="url(#glow)"/>
+    <circle cx="380" cy="80" r="3" fill="#06b6d4" filter="url(#glow)"/>
+    <circle cx="80" cy="280" r="2.5" fill="#8b5cf6" filter="url(#glow)"/>
+    <circle cx="410" cy="200" r="2" fill="#d946ef" filter="url(#glow)"/>
+  </g>
+
+  <!-- ==================== FOREGROUND / TYPOGRAPHY & BRANDING ==================== -->
+  
+  <g transform="translate(80, 90)">
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="315" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow)"/>
+      <text x="36" y="21" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title: NOTION AI -->
+    <text x="0" y="130" fill="url(#titleGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="82" font-weight="900" letter-spacing="-1">NOTION AI</text>
+
+    <!-- Category Subtitle -->
+    <text x="0" y="170" fill="url(#accentGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" letter-spacing="2.5">AI PRODUCTIVITY &amp; WORKSPACE</text>
+
+    <!-- Investigation Headline (Wrapped neatly) -->
+    <g transform="translate(0, 215)">
+      <text x="0" y="0" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.5">The Architecture of Context-Aware Knowledge</text>
+      <text x="0" y="36" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.5">Work and the Masterclass Guide to Workspace Velocity</text>
+    </g>
+
+    <!-- Author / Metadata Footer Bar -->
+    <g transform="translate(0, 340)">
+      <line x1="0" y1="0" x2="520" y2="0" stroke="#1e293b" stroke-width="2"/>
+      
+      <!-- Publisher Tag -->
+      <text x="0" y="30" fill="#64748b" font-family="monospace" font-size="12" font-weight="600">INVESTIGATION REF: HT-2025-NAI</text>
+      
+      <!-- Status Badge -->
+      <g transform="translate(390, 16)">
+        <rect x="0" y="0" width="130" height="24" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4"/>
+        <circle cx="12" cy="12" r="3" fill="#10b981" filter="url(#glow)"/>
+        <text x="24" y="16" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">VERIFIED BUILD</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

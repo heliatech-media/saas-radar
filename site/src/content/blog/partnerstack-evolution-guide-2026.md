@@ -28,6 +28,7 @@ affiliate_cta:
     and streamline global revenue.
   button_text: Claim Your PartnerStack Advantage ➔
   url: /go/partnerstack
+image: /images/blog/partnerstack.svg
 ---
 ## The Architecture of Modern Growth
 

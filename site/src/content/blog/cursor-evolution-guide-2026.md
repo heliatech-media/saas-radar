@@ -28,6 +28,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Cursor Account ➔
   url: /go/cursor
+image: /images/blog/cursor.svg
 ---
 For decades, the standard software development lifecycle has suffered from an invisible, insidious tax: the context-switching penalty. Engineers spent half their cognitive bandwidth not solving complex architectural problems, but wrangling legacy development environments, manually jumping across dozens of files, and copy-pasting code snippets back and forth between standalone browser-based LLM chat interfaces and local IDEs. It was a fragmented workflow that throttled output and introduced human error into repetitive plumbing tasks.
 

@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <radialGradient id="orbCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orbViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Flowlines -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="150" r="300" fill="url(#orbCyan)" />
+  <circle cx="1000" cy="480" r="350" fill="url(#orbViolet)" />
+
+  <!-- Background Connecting Workflow Vectors -->
+  <g opacity="0.3" filter="url(#subtleGlow)">
+    <path d="M 150 450 L 350 350 L 550 420 L 750 250 L 1050 300" fill="none" stroke="url(#cyanBlue)" stroke-width="2" stroke-dasharray="6 6" />
+    <path d="M 100 200 L 300 280 L 500 180 L 800 380 L 1100 150" fill="none" stroke="url(#violetFuchsia)" stroke-width="1.5" />
+  </g>
+
+  <!-- ==================== HERO GRAPHICS: 3D RELATIONAL DATABASE / CANVAS ==================== -->
+  <g transform="translate(620, 90)" filter="url(#dropShadow)">
+    
+    <!-- Isometric Platform Base -->
+    <path d="M 250 80 L 480 180 L 250 280 L 20 180 Z" fill="#090d16" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Connection Lines between Nodes -->
+    <g stroke="url(#cyanBlue)" stroke-width="2" stroke-dasharray="4 4" opacity="0.7">
+      <line x1="130" y1="200" x2="250" y2="150" />
+      <line x1="370" y1="200" x2="250" y2="150" />
+      <line x1="250" y1="280" x2="250" y2="360" />
+    </g>
+
+    <!-- Node 1: AI Automation Trigger (Left) -->
+    <g transform="translate(40, 150)">
+      <rect width="160" height="90" rx="12" fill="url(#cardBg)" stroke="#06b6d4" stroke-width="1.5" filter="url(#subtleGlow)" />
+      <circle cx="25" cy="25" r="10" fill="#06b6d4" />
+      <path d="M 21 25 L 24 28 L 29 22" fill="none" stroke="#030712" stroke-width="2" />
+      <text x="45" y="29" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">AI TRIGGER</text>
+      <line x1="15" y1="48" x2="145" y2="48" stroke="#334155" stroke-width="1" />
+      <rect x="15" y="60" width="80" height="8" rx="4" fill="#38bdf8" opacity="0.8" />
+      <rect x="105" y="60" width="40" height="8" rx="4" fill="#8b5cf6" opacity="0.6" />
+    </g>
+
+    <!-- Node 2: Relational Record Matrix (Right) -->
+    <g transform="translate(300, 110)">
+      <rect width="180" height="110" rx="12" fill="url(#cardBg)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#subtleGlow)" />
+      <circle cx="25" cy="25" r="10" fill="#8b5cf6" />
+      <path d="M 21 25 H 29 M 25 21 V 29" stroke="#030712" stroke-width="2" />
+      <text x="45" y="29" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">DATA CANVAS</text>
+      <!-- Mini Grid Preview inside Node -->
+      <rect x="15" y="45" width="150" height="12" rx="3" fill="#1e293b" />
+      <rect x="20" y="48" width="40" height="6" rx="2" fill="#d946ef" />
+      <rect x="70" y="48" width="85" height="6" rx="2" fill="#334155" />
+      
+      <rect x="15" y="63" width="150" height="12" rx="3" fill="#1e293b" />
+      <rect x="20" y="66" width="60" height="6" rx="2" fill="#38bdf8" />
+      <rect x="90" y="66" width="65" height="6" rx="2" fill="#334155" />
+
+      <rect x="15" y="81" width="150" height="12" rx="3" fill="#1e293b" />
+      <rect x="20" y="84" width="30" height="6" rx="2" fill="#06b6d4" />
+      <rect x="55" y="84" width="100" height="6" rx="2" fill="#334155" />
+    </g>
+
+    <!-- Node 3: Enterprise Velocity / Output (Bottom Center) -->
+    <g transform="translate(170, 320)">
+      <rect width="160" height="85" rx="12" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)" />
+      <circle cx="25" cy="25" r="10" fill="#38bdf8" />
+      <path d="M 22 25 L 25 22 L 28 25 M 25 22 V 28" fill="none" stroke="#030712" stroke-width="2" />
+      <text x="45" y="29" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">SYNC PIPELINE</text>
+      <path d="M 15 55 Q 50 40 85 55 T 145 50" fill="none" stroke="url(#cyanBlue)" stroke-width="3" />
+      <circle cx="85" cy="48" r="5" fill="#d946ef" />
+    </g>
+
+    <!-- Floating Holographic Particles -->
+    <circle cx="120" cy="100" r="4" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="380" cy="80" r="3" fill="#d946ef" filter="url(#glow)" />
+    <circle cx="480" cy="300" r="5" fill="#06b6d4" filter="url(#glow)" />
+    <circle cx="80" cy="350" r="3" fill="#8b5cf6" filter="url(#glow)" />
+
+  </g>
+
+  <!-- ==================== TYPOGRAPHY & BRANDING ==================== -->
+  
+  <g transform="translate(80, 100)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="310" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+      <circle cx="20" cy="17" r="5" fill="#06b6d4" filter="url(#subtleGlow)" />
+      <text x="38" y="22" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="800" font-size="11" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title & Subtitle Group -->
+    <g transform="translate(0, 75)">
+      <!-- Tool Category Subtitle -->
+      <text x="0" y="0" fill="#8b5cf6" font-family="system-ui, sans-serif" font-weight="700" font-size="14" letter-spacing="3" filter="url(#subtleGlow)">AI AUTOMATION &amp; NO-CODE</text>
+      
+      <!-- Main Tool Title: AIRTABLE -->
+      <text x="0" y="65" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="64" letter-spacing="-1">AIRTABLE</text>
+      
+      <!-- Article Headline Line 1 -->
+      <text x="0" y="115" fill="#f1f5f9" font-family="system-ui, sans-serif" font-weight="700" font-size="26">The Genesis of the Relational Database Canvas</text>
+      
+      <!-- Article Headline Line 2 -->
+      <text x="0" y="152" fill="#94a3b8" font-family="system-ui, sans-serif" font-weight="400" font-size="20">and the Blueprint for Enterprise Velocity</text>
+    </g>
+
+    <!-- Decorative Underline Accent -->
+    <g transform="translate(0, 275)">
+      <rect x="0" y="0" width="120" height="4" rx="2" fill="url(#cyanBlue)" filter="url(#glow)" />
+      <rect x="130" y="0" width="40" height="4" rx="2" fill="#8b5cf6" />
+      <rect x="180" y="0" width="15" height="4" rx="2" fill="#334155" />
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER / BRANDING METADATA ==================== -->
+  <g transform="translate(80, 560)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1" />
+    
+    <text x="0" y="30" fill="#64748b" font-family="system-ui, sans-serif" font-weight="600" font-size="12" letter-spacing="2">heliatech.online</text>
+    <text x="1040" y="30" fill="#64748b" font-family="system-ui, sans-serif" font-weight="600" font-size="12" letter-spacing="2" text-anchor="end">SYS.INV // 2024.Q4</text>
+    
+    <!-- Tech Status Indicator -->
+    <circle cx="140" cy="26" r="3" fill="#10b981" />
+    <text x="150" y="30" fill="#475569" font-family="system-ui, sans-serif" font-weight="500" font-size="10">SECURE INVESTIGATION ONLINE</text>
+  </g>
+
+</svg>

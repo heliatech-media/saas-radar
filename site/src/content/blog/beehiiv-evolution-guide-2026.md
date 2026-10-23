@@ -27,6 +27,7 @@ affiliate_cta:
     team velocity.
   button_text: Claim Your Free Beehiiv Account ➔
   url: /go/beehiiv
+image: /images/blog/beehiiv.svg
 ---
 <p>For over a decade, digital marketers and B2B enterprise creators faced a frustrating paradox: while email remained the highest-converting communication channel on the internet, the software built to manage it felt like it was stuck in 2005. Legacy email service providers offered bloated interfaces, punished list growth with archaic pricing tiers, and forced teams to stitch together disjointed plugins just to track a referral or monetize a subscriber base. The human bottleneck was real—creators spent more time wrestling with CSS templates and patchwork integrations than actually writing and distributing high-impact content.</p>
 

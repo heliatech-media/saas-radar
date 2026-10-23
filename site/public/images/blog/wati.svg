@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="75%" cy="30%" r="70%" fx="65%" fy="25%">
+      <stop offset="0%" stop-color="#0e1628" />
+      <stop offset="50%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Brand Color Gradients -->
+    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="nodeActiveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <!-- Glassmorphism Panels -->
+    <linearGradient id="glassPanel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+    
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Glow & Lighting Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur1" />
+      <feGaussianBlur stdDeviation="24" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Geometric Pattern for Grid -->
+    <pattern id="hexGrid" width="40" height="69.282" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M 40 0 L 20 11.547 L 0 0 L 0 23.094 L 20 34.641 L 40 23.094 Z M 0 34.641 L 20 46.188 L 40 34.641 L 40 57.735 L 20 69.282 L 0 57.735 Z" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#hexGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="180" r="220" fill="#06b6d4" opacity="0.12" filter="url(#glow)" />
+  <circle cx="850" cy="450" r="280" fill="#8b5cf6" opacity="0.1" filter="url(#glow)" />
+  <circle cx="200" cy="500" r="180" fill="#38bdf8" opacity="0.08" filter="url(#glow)" />
+
+  <!-- ================= TECHNICAL BACKGROUND GRAPHICS ================= -->
+  <!-- Abstract Data Streams / Circuit lines -->
+  <g opacity="0.4">
+    <path d="M 650,80 L 1050,80 L 1150,180 L 1150,500" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="1.5" stroke-dasharray="6 4" />
+    <path d="M 720,120 L 1020,120 L 1100,200 L 1100,480" fill="none" stroke="url(#violetFuchsiaGrad)" stroke-width="1" />
+    <path d="M 50,450 L 250,450 L 320,520 L 550,520" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3" />
+  </g>
+
+  <!-- ================= RIGHT SIDE: 3D VECTOR AUTOMATION & WORKFLOW METAPHOR ================= -->
+  <!-- Isometric Workflow Node Engine representing WATI's WhatsApp API & Automation -->
+  <g transform="translate(680, 70)">
+    
+    <!-- Outer Holographic Frame / Platform -->
+    <path d="M 220,40 L 400,140 L 220,240 L 40,140 Z" fill="url(#glassPanel)" stroke="url(#glassBorder)" stroke-width="1.5" filter="url(#subtleGlow)" />
+    <path d="M 220,240 L 400,140 L 400,360 L 220,460 Z" fill="#030712" fill-opacity="0.6" stroke="url(#glassBorder)" stroke-width="1" />
+    <path d="M 220,240 L 40,140 L 40,360 L 220,460 Z" fill="#030712" fill-opacity="0.4" stroke="url(#glassBorder)" stroke-width="1" />
+
+    <!-- Connecting Dynamic Flow Pathways (Webhooks / Automation triggers) -->
+    <g filter="url(#glow)">
+      <!-- Path from Node 1 to Central Core -->
+      <path d="M 120,200 Q 220,280 220,320" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="8 4">
+        <animate attributeName="stroke-dashoffset" values="24;0" dur="2s" repeatCount="indefinite" />
+      </path>
+      <!-- Path from Node 2 to Central Core -->
+      <path d="M 320,200 Q 220,280 220,320" fill="none" stroke="#d946ef" stroke-width="3" stroke-dasharray="8 4">
+        <animate attributeName="stroke-dashoffset" values="0;24" dur="2s" repeatCount="indefinite" />
+      </path>
+      <!-- Output stream -->
+      <path d="M 220,320 L 220,410" fill="none" stroke="#06b6d4" stroke-width="4" />
+    </g>
+
+    <!-- Floating Node 1: WhatsApp API Ingestion -->
+    <g transform="translate(70, 150)">
+      <polygon points="50,0 100,28 100,84 50,112 0,84 0,28" fill="#090d16" stroke="#38bdf8" stroke-width="2" filter="url(#subtleGlow)" />
+      <!-- Chat bubble glyph inside node -->
+      <path d="M 35,38 C 35,30 42,24 50,24 C 58,24 65,30 65,38 C 65,46 58,52 50,52 C 47,52 44,51 42,49 L 36,51 L 38,45 C 36,43 35,40 35,38 Z" fill="#38bdf8" />
+    </g>
+
+    <!-- Floating Node 2: AI Bot / Logic Branch -->
+    <g transform="translate(270, 150)">
+      <polygon points="50,0 100,28 100,84 50,112 0,84 0,28" fill="#090d16" stroke="#d946ef" stroke-width="2" filter="url(#subtleGlow)" />
+      <!-- Neural/Cog glyph -->
+      <circle cx="50" cy="56" r="14" fill="none" stroke="#d946ef" stroke-width="3" stroke-dasharray="6 3" />
+      <circle cx="50" cy="56" r="5" fill="#d946ef" />
+    </g>
+
+    <!-- Central Hub / Core Processor (WATI Enterprise Engine) -->
+    <g transform="translate(170, 270)">
+      <polygon points="50,0 100,28 100,84 50,112 0,84 0,28" fill="url(#nodeActiveGrad)" opacity="0.9" filter="url(#glow)" />
+      <polygon points="50,6 94,31 94,81 50,106 6,81 6,31" fill="#030712" />
+      <!-- Multi-channel / Message Streams Icon -->
+      <path d="M 35,45 L 65,45 M 35,56 L 65,56 M 35,67 L 55,67" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+      <circle cx="68" cy="67" r="3" fill="#38bdf8" />
+    </g>
+
+    <!-- Floating Data Metric Badges -->
+    <g transform="translate(-30, 80)" filter="url(#subtleGlow)">
+      <rect width="140" height="42" rx="8" fill="#090d16" fill-opacity="0.85" stroke="#06b6d4" stroke-width="1.5" />
+      <circle cx="20" cy="21" r="5" fill="#06b6d4" />
+      <text x="35" y="26" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">99.9% API UPTIME</text>
+    </g>
+
+    <g transform="translate(330, 290)" filter="url(#subtleGlow)">
+      <rect width="150" height="42" rx="8" fill="#090d16" fill-opacity="0.85" stroke="#8b5cf6" stroke-width="1.5" />
+      <circle cx="20" cy="21" r="5" fill="#d946ef" />
+      <text x="35" y="26" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">AUTO-ROUTING</text>
+    </g>
+  </g>
+
+  <!-- ================= LEFT SIDE: TYPOGRAPHY & DOSSIER CONTENT ================= -->
+  <g transform="translate(80, 80)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="320" height="32" rx="16" fill="url(#glassPanel)" stroke="url(#glassBorder)" stroke-width="1" />
+      <circle cx="18" cy="16" r="4" fill="#06b6d4" filter="url(#glow)" />
+      <text x="36" y="21" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 80)">
+      <text x="0" y="0" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">
+        WATI
+      </text>
+      <text x="145" y="0" fill="url(#cyanBlueGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1" filter="url(#subtleGlow)">
+        .
+      </text>
+      
+      <!-- Subtitle / Focus Area -->
+      <text x="0" y="42" fill="url(#cyanBlueGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="0.5">
+        WhatsApp Business API &amp; Customer Support Automation
+      </text>
+
+      <!-- Investigation Title -->
+      <text x="0" y="95" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" width="560">
+        <tspan x="0" dy="0">The WhatsApp Infrastructure</tspan>
+        <tspan x="0" dy="34">Revolution and Enterprise Scaling</tspan>
+        <tspan x="0" dy="34">Blueprint</tspan>
+      </text>
+    </g>
+
+    <!-- Key Metrics / Architecture Metadata Footer -->
+    <g transform="translate(0, 360)">
+      <line x1="0" y1="0" x2="540" y2="0" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+      
+      <!-- Stat 1 -->
+      <g transform="translate(0, 20)">
+        <text x="0" y="0" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">10M+</text>
+        <text x="0" y="20" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">DAILY MESSAGE VOLUME</text>
+      </g>
+
+      <!-- Stat 2 -->
+      <g transform="translate(190, 20)">
+        <text x="0" y="0" fill="#8b5cf6" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">SUB-SEC</text>
+        <text x="0" y="20" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">WEBHOOK LATENCY</text>
+      </g>
+
+      <!-- Stat 3 -->
+      <g transform="translate(380, 20)">
+        <text x="0" y="0" fill="#d946ef" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800">OMNI-CH</text>
+        <text x="0" y="20" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">SHARED TEAM INBOX</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ================= BRAND WATERMARK / CORNER ACCENTS ================= -->
+  <g transform="translate(80, 580)" opacity="0.6">
+    <text x="0" y="0" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" letter-spacing="2">HELIATECH.ONLINE</text>
+    <circle cx="140" cy="-4" r="3" fill="#06b6d4" />
+  </g>
+
+  <!-- Top-Right Architectural Grid Corner Accent -->
+  <g transform="translate(1120, 30)" opacity="0.4">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#38bdf8" stroke-width="2" />
+    <line x1="40" y1="0" x2="40" y2="40" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="40" cy="0" r="3" fill="#8b5cf6" />
+  </g>
+</svg>

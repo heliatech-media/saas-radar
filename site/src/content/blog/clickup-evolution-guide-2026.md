@@ -30,6 +30,7 @@ affiliate_cta:
     views, and native time-tracking.
   button_text: Explore ClickUp for Free ➔
   url: /go/clickup
+image: /images/blog/clickup.svg
 ---
 Digital cognitive exhaustion is a silent epidemic across modern enterprises. Between flashing Slack notifications, isolated Trello boards, disjointed Google Docs, and sprawling spreadsheets, knowledge workers now spend more time searching for status updates than delivering tangible value. This is the penalty of tool fragmentation—a multi-billion dollar friction layer eating away at team productivity.
 

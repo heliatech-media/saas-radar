@@ -97,6 +97,7 @@ class BlogPost(BaseModel):
     author: str = Field(default="HELIA TECH")
     category: str = Field(description="Category, e.g. 'Productivité & Work OS'")
     tags: List[str] = Field(default_factory=list)
+    image: Optional[str] = Field(default=None, description="Path to flagship hero banner image")
     readingTime: str = Field(default="11 MIN")
     tool_slug: str = Field(description="Target tool slug from reviews, e.g. 'clickup'")
     tldr: List[str] = Field(description="3 essential key points (TL;DR)")
