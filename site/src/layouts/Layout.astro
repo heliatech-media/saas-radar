@@ -9,7 +9,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Autonomous software intelligence and tech media: independent benchmarks, exhaustive guides, and forensic teardowns of top B2B software and AI systems.",
+  description = "Independent software intelligence and tech media: comprehensive benchmarks, exhaustive guides, and forensic teardowns of top B2B software and cloud systems.",
   jsonLd
 } = Astro.props;
 ---
@@ -33,6 +33,33 @@ const {
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
+
+    <!-- Netlify Badge & Drawer Shield (Aggressively strips injected Netlify badges) -->
+    <script is:inline>
+      (function() {
+        function removeNetlifyBadge() {
+          const selectors = [
+            '[data-netlify-badge]',
+            '[data-netlify-drawer]',
+            '[data-test="feedback-drawer"]',
+            '[data-testid="feedback-drawer"]',
+            '#netlify-badge',
+            '.netlify-badge',
+            '#netlify-drawer',
+            '.netlify-drawer',
+            'iframe[src*="netlify"]',
+            'iframe[id*="netlify"]'
+          ];
+          selectors.forEach(sel => {
+            document.querySelectorAll(sel).forEach(el => el.remove());
+          });
+        }
+        document.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+        const observer = new MutationObserver(removeNetlifyBadge);
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        window.addEventListener('load', removeNetlifyBadge);
+      })();
+    </script>
   </head>
   <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
     <!-- Ambient Cyber Glows (TechPulse Neon Aesthetics) -->
@@ -70,16 +97,17 @@ const {
             <span class="px-1.5 py-0.2 rounded-full text-[9px] font-mono bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">NEW</span>
           </a>
           <a href="/#categories" class="hover:text-cyan-400 transition-colors">TAXONOMY</a>
+          <a href="/#methodology" class="hover:text-cyan-400 transition-colors">METHODOLOGY</a>
         </nav>
 
-        <!-- Live Telemetry Capsule -->
+        <!-- Live Intelligence Status Capsule -->
         <div class="flex items-center gap-2.5 bg-slate-800/60 border border-cyan-500/30 px-3.5 py-1.5 rounded-full shadow-inner-cyan">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
           </span>
           <span class="text-[11px] font-mono tracking-wider text-cyan-300 uppercase font-semibold">
-            Helia Core 2026 Live
+            Directory Status: Verified
           </span>
         </div>
       </header>
@@ -96,10 +124,10 @@ const {
         <div>
           <div class="flex items-center gap-2 mb-2">
             <span class="font-black text-sm tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
-            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">MEDIA & BENCHMARKS</span>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">INDEPENDENT BENCHMARKS</span>
           </div>
           <p class="max-w-md text-slate-400 text-xs leading-relaxed">
-            Autonomous programmatic intelligence platform evaluating global enterprise software, AI agents, and workflow systems. Zero human sales bias.
+            Leading tech media and programmatic software observatory delivering rigorous benchmarks, hands-on masterclasses, and pricing forensics for modern enterprises.
           </p>
           <div class="flex items-center gap-4 mt-4">
             <a href="/" class="text-slate-400 hover:text-cyan-400 transition-colors">Radar</a>
@@ -107,19 +135,21 @@ const {
             <a href="/blog" class="text-slate-400 hover:text-fuchsia-400 transition-colors">Blog & Guides</a>
             <span class="text-slate-700">•</span>
             <a href="/#categories" class="text-slate-400 hover:text-cyan-400 transition-colors">Taxonomy</a>
+            <span class="text-slate-700">•</span>
+            <a href="/sitemap.xml" class="text-slate-400 hover:text-cyan-400 transition-colors">Sitemap</a>
           </div>
         </div>
 
         <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-slate-800 pl-4 md:pl-0 md:pr-4">
           <p class="font-mono text-cyan-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures</p>
           <p class="text-[11px] leading-relaxed">
-            Benchmarks, feature matrixes, and telemetry are synthesized autonomously via LLM reasoning. Qualifying outbound partner links may yield performance-based royalties without altering user price.
+            All benchmarks, technical teardowns, and performance assessments are independently evaluated by the HeliaTech research desk. Qualifying outbound partner links may yield performance-based royalties without altering user price.
           </p>
         </div>
       </div>
       <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-500">
-        <span>© 2026 HELIATECH.ONLINE — ALL RIGHTS RESERVED</span>
-        <span class="text-cyan-400/80">POWERED BY HELIA MULTI-AGENT AUTONOMOUS CORE</span>
+        <span>© 2026 HELIATECH MEDIA — ALL RIGHTS RESERVED</span>
+        <span class="text-slate-400 font-mono">GLOBAL SOFTWARE BENCHMARK OBSERVATORY</span>
       </div>
     </footer>
   </body>

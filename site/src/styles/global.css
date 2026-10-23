@@ -225,3 +225,51 @@ body {
 .elite-article tr:hover td {
   background: rgba(255, 255, 255, 0.03);
 }
+
+
+/* ==========================================================================
+   BLOCK & ELIMINATE ANY NETLIFY INJECTED BADGE OR DRAWER
+   ========================================================================== */
+[data-netlify-badge],
+[data-netlify-drawer],
+[data-test="feedback-drawer"],
+[data-testid="feedback-drawer"],
+#netlify-badge,
+.netlify-badge,
+#netlify-drawer,
+.netlify-drawer,
+iframe[src*="netlify"],
+iframe[id*="netlify"],
+div[class*="netlify"],
+div:has(> a[href*="netlify.com"]),
+div:has(> iframe[src*="netlify"]),
+a[href*="netlify.com"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  z-index: -99999 !important;
+}
+
+
+/* Netlify HUD & Badge Complete Elimination */
+script[src*="hud"],
+iframe[src*="hud"],
+iframe[id*="netlify"],
+[data-nf-variant],
+[data-netlify-site-id],
+netlify-feedback-badge,
+netlify-feedback,
+.netlify-feedback-badge,
+#netlify-hud,
+.netlify-hud {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}

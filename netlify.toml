@@ -3,6 +3,10 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  NETLIFY_HUD = "false"
+  NETLIFY_DRAWER = "false"
+
 [[headers]]
   for = "/*"
   [headers.values]

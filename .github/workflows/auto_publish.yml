@@ -1,4 +1,4 @@
-name: Daily Autonomous SaaS Review Publisher
+name: Helia Autonomous Daily Growth Engine
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  run-agents-and-publish:
+  run-helia-autonomous-fleet:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,30 +25,43 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install Python Agent Dependencies
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Site Dependencies
+        run: |
+          cd site
+          npm ci || npm install
+
+      - name: Install Python Agent Fleet Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install google-genai pydantic python-dotenv pyyaml tenacity requests
 
-      - name: Run Autonomous Multi-Agent Pipeline
+      - name: Execute Helia Autonomous Growth Cycle
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: 'gemini-3.5-flash-lite'
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
         run: |
-          # Runs discovery radar, auto-syncs PartnerStack links, and generates 2 fresh in-depth reviews daily
-          python agents/orchestrator.py --discover 2
+          # Helia runs Cybersecurity check, Auto-repair, Market Discovery, Teardowns & Masterclass production
+          python agents/helia_autonomous_director.py --run-once --no-push
 
-      - name: Commit & Push New Reviews to GitHub
+      - name: Commit & Push Autonomous Growth to GitHub
         run: |
-          git config --global user.name "Helia [Autonomous Ops Director]"
+          git config --global user.name "Helia [Autonomous COO]"
           git config --global user.email "helia@heliatech.online"
-          git add site/src/content/reviews/ site/src/data/tools-index.json agents/config.py
+          git add .
           
-          # Only commit if there are changes
           if ! git diff-index --quiet HEAD --; then
-            git commit -m "feat(content): automated daily reviews via Director Helia"
+            git commit -m "feat(auto-growth): Helia autonomous daily expansion & masterclass publishing"
             git push origin main
           else
-            echo "No new reviews were generated today."
+            echo "No new updates generated in this cycle."
           fi
