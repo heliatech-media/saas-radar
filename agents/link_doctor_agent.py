@@ -72,6 +72,7 @@ KNOWN_SAAS_DOMAINS: Dict[str, str] = {
     "workato": "https://www.workato.com",
     "plane": "https://plane.so",
     "vercel": "https://vercel.com",
+    "rewardful": "https://www.rewardful.com/?via=heliatech",
     "railway": "https://railway.app",
     "render": "https://render.com",
     "fly-io": "https://fly.io",

@@ -137,7 +137,7 @@ ClickUp provides both a REST API and an evolving GraphQL layer.
 ### Monday.com’s Developer Experience
 [Monday.com](/reviews/monday-com)’s API is built natively around GraphQL, offering precise data querying without over-fetching.
 *   **Mutations & Subscriptions:** The GraphQL API allows complex mutations—updating multiple item columns and creating subitems in a single transactional payload.
-*   **Apps Framework:** Monday.com features a mature React-based apps framework enabling developers to build custom board views, widget integrations, and seamless in-app widgets hosted directly within the Monday infrastructure.
+*   **Apps Framework:** [Monday.com](/reviews/monday-com) features a mature React-based apps framework enabling developers to build custom board views, widget integrations, and seamless in-app widgets hosted directly within the Monday infrastructure.
 *   **Automations & Integrations:** Native connectors for Jira, Salesforce, GitHub, and Slack are executed with low latency, though heavy polling integrations can hit board-level complexity limits.
 
 ---

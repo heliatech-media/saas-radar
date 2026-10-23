@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-23 22:07:14 UTC",
+  "last_updated": "2026-10-24 00:23:34 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 26,
-    "total_published_investigations": 66,
-    "reviews_audited": 27,
-    "masterclasses_and_duels": 39,
+    "total_monetized_tools": 52,
+    "total_published_investigations": 68,
+    "reviews_audited": 28,
+    "masterclasses_and_duels": 40,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$9,100 USD",
+    "projected_monthly_mrr": "$18,200 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -73,6 +73,11 @@
   ],
   "active_monetized_hops": [
     {
+      "slug": "activepieces",
+      "destination": "https://www.activepieces.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "adcreative-ai",
       "destination": "https://www.adcreative.ai/?fp_ref=heliatech",
       "type": "Commission Partner"
@@ -84,7 +89,7 @@
     },
     {
       "slug": "apollo-io",
-      "destination": "https://apollo.grsm.io/heliatech",
+      "destination": "https://www.apollo.io/?ref=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -94,12 +99,27 @@
     },
     {
       "slug": "brevo",
-      "destination": "https://brevo.partnerlinks.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.brevo.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "clay",
+      "destination": "https://www.clay.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "clickup",
-      "destination": "https://clickup.pxf.io/c/heliatech",
+      "destination": "https://www.clickup.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "cognism",
+      "destination": "https://www.cognism.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "coqui",
+      "destination": "https://github.com/coqui-ai/TTS",
       "type": "Catalog Edge Hop"
     },
     {
@@ -119,8 +139,18 @@
     },
     {
       "slug": "heygen",
-      "destination": "https://heygen.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.heygen.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "kaspr",
+      "destination": "https://www.kaspr.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "leadiq",
+      "destination": "https://leadiq.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "lemlist",
@@ -134,8 +164,8 @@
     },
     {
       "slug": "lusha",
-      "destination": "https://lusha.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.lusha.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "make",
@@ -148,6 +178,16 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "multiplier",
+      "destination": "https://www.usemultiplier.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "murf-ai",
+      "destination": "https://murf.ai",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "n8n",
       "destination": "https://n8n.io/?via=heliatech",
       "type": "Commission Partner"
@@ -158,13 +198,63 @@
       "type": "Catalog Edge Hop"
     },
     {
+      "slug": "openai-tts",
+      "destination": "https://platform.openai.com/docs/guides/text-to-speech",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "oyster",
+      "destination": "https://www.oysterhr.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "papaya-global",
+      "destination": "https://www.papayaglobal.com/?ref=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "partnerstack",
       "destination": "https://partnerstack.com/?via=heliatech",
       "type": "Commission Partner"
     },
     {
+      "slug": "phantombuster",
+      "destination": "https://www.phantombuster.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "plane",
+      "destination": "https://plane.so",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "playht",
+      "destination": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "power-automate",
+      "destination": "https://powerautomate.microsoft.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "printify",
-      "destination": "https://printify.pxf.io/c/heliatech",
+      "destination": "https://www.printify.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "relay",
+      "destination": "https://www.relay.app",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "remote",
+      "destination": "https://remote.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "resemble-ai",
+      "destination": "https://www.resemble.ai",
       "type": "Catalog Edge Hop"
     },
     {
@@ -173,8 +263,38 @@
       "type": "Catalog Edge Hop"
     },
     {
+      "slug": "rewardful",
+      "destination": "https://www.rewardful.com/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "rippling",
+      "destination": "https://www.rippling.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "speechify",
+      "destination": "https://speechify.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "supabase",
       "destination": "https://supabase.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "tray-io",
+      "destination": "https://tray.ai",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "uplead",
+      "destination": "https://www.uplead.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "velocity-global",
+      "destination": "https://velocityglobal.com",
       "type": "Catalog Edge Hop"
     },
     {
@@ -198,8 +318,18 @@
       "type": "Catalog Edge Hop"
     },
     {
+      "slug": "workato",
+      "destination": "https://www.workato.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "zapier",
       "destination": "https://www.zapier.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "zoominfo",
+      "destination": "https://www.zoominfo.com",
       "type": "Catalog Edge Hop"
     }
   ],

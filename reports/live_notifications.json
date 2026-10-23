@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-23 22:11:20",
+    "title": "Cycle Autonome #PhantomBuster",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de PhantomBuster et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-23 22:10:05",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",

@@ -87,7 +87,7 @@ flowchart LR
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `AdCreative.ai` with our verified enterprise trial link at [/go/adcreative-ai](/go/adcreative-ai).
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[AdCreative.ai](/reviews/adcreative-ai)` with our verified enterprise trial link at [/go/adcreative-ai](/go/adcreative-ai).
 
 > [!TIP]
 > [!NOTE]

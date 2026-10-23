@@ -82,7 +82,7 @@ In 2026, engineering leads, CTOs, and product architects are actively migrating 
 * **Interactive Streaming Avatars:** Offers real-time WebRTC streaming SDKs for interactive customer service agents that respond with sub-second latency.
 
 #### Where It Falls Short
-HeyGen is resource-intensive. If your pipeline requires pure, headless, batch-processed text-to-speech audio files for podcasts or background narration, HeyGen's video-centric architecture is overkill and more expensive per character.
+[HeyGen](/reviews/heygen) is resource-intensive. If your pipeline requires pure, headless, batch-processed text-to-speech audio files for podcasts or background narration, HeyGen's video-centric architecture is overkill and more expensive per character.
 
 #### Pricing Model & Economics
 Starts at $29/month for creator tiers, scaling to custom enterprise agreements for API access and streaming SDKs. While more expensive than raw audio APIs, it saves thousands in third-party video production and post-production software licenses.

@@ -80,7 +80,7 @@ The initial learning curve is steeper than Zapier. Understanding how iterators a
 [Make](/reviews/make) operates on operations-based pricing, but its execution consumption is significantly cheaper than Zapier's. For equivalent multi-step logic, [Make](/reviews/make) is routinely 70% cheaper at scale.
 
 ### Migration Feasibility:
-Medium. Rebuilding linear Zaps into [Make](/reviews/make) scenarios is straightforward, though you must redesign linear steps into Make's nodal layout. *(Estimated migration time: 4 to 8 hours)*
+Medium. Rebuilding linear Zaps into [Make](/reviews/make) scenarios is straightforward, though you must redesign linear steps into [Make](/reviews/make)'s nodal layout. *(Estimated migration time: 4 to 8 hours)*
 
 [Test Make With Official Extended Access ↗](/go/make)
 

@@ -93,7 +93,7 @@ pg_dump --no-owner --no-acl -h your-heroku-host.compute-1.amazonaws.com -U your_
 ```
 
 ### ⚡ Step 2: Link your local terminal to your Supabase project**
-Authenticate and link your project using your Supabase project reference ID.
+Authenticate and link your project using your [Supabase](/reviews/supabase) project reference ID.
 
 ```bash
 supabase login
