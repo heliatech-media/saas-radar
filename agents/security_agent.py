@@ -28,23 +28,52 @@ class SecurityAgent:
         # 1. Check for exposed secrets in git-tracked files
         secret_patterns = [
             (r'(AIza[0-9A-Za-z-_]{35})', "Potential Google API Key"),
+            (r'(AQ\.[A-Za-z0-9_-]{30,})', "Potential Google Gemini Key"),
             (r'(sk-[a-zA-Z0-9]{32,})', "Potential OpenAI Secret Key"),
             (r'ghp_[a-zA-Z0-9]{36}', "GitHub Personal Access Token"),
+            (r'(AQU[A-Za-z0-9-_]{100,})', "LinkedIn Access Token"),
+            (r'(AAAA[A-Za-z0-9%_-]{50,})', "Twitter/X Bearer Token"),
+            (r'(zleHK[A-Za-z0-9]{15,})', "Twitter/X Consumer Key"),
+            (r'(SIWY[A-Za-z0-9]{30,})', "PartnerStack Secret Key"),
+            (r'(Hel' + r'iaHelia[0-9]{3}\*{3}Ham' + r'za)', "Plaintext Console Master Password"),
         ]
 
         tracked_files = list(self.root_dir.glob("site/src/**/*.{astro,ts,js,css,md}"))
+        tracked_files += list(self.root_dir.glob("agents/**/*.py"))
+        tracked_files += list(self.root_dir.glob("scripts/**/*.{js,py}"))
+        tracked_files += list(self.root_dir.glob("dist/**/*.{html,js,css}"))
+
         for file in tracked_files:
+            if file.name == ".env":
+                continue
             try:
-                content = file.read_text(encoding="utf-8")
+                content = file.read_text(encoding="utf-8", errors="ignore")
                 for pattern, desc in secret_patterns:
                     if re.search(pattern, content):
                         findings.append({
                             "severity": "CRITICAL",
                             "file": str(file.relative_to(self.root_dir)),
-                            "issue": f"{desc} detected in client-facing or tracked code."
+                            "issue": f"{desc} detected! Hardcoded secrets are strictly forbidden."
                         })
             except Exception:
                 pass
+
+        # 1.1 Verify .env protection in .gitignore
+        gitignore = self.root_dir / ".gitignore"
+        if gitignore.exists():
+            gi_text = gitignore.read_text(encoding="utf-8")
+            if ".env" not in gi_text:
+                findings.append({
+                    "severity": "CRITICAL",
+                    "file": ".gitignore",
+                    "issue": ".env is missing from .gitignore! High risk of credential leak."
+                })
+        else:
+            findings.append({
+                "severity": "CRITICAL",
+                "file": ".gitignore",
+                "issue": ".gitignore file missing from root."
+            })
 
         # 2. Check Cloudflare & Netlify security headers
         headers_file = self.root_dir / "site" / "public" / "_headers"

@@ -85,7 +85,10 @@ class HeliaAutonomousDirector:
         # Step 1: Sub-Agent CyberDefense
         self.log("Helia-CyberDefense", "Auditing repository integrity, security headers & secret protection...", "🛡️")
         sec_audit = self.security.audit_security_posture()
-        self.log("Helia-CyberDefense", f"Status: {sec_audit['status']} (Zero public agent leak, strict headers verified)", "✅")
+        if not sec_audit.get("passed", False):
+            self.log("Helia-CyberDefense", f"🚨 SECURITY SHIELD TRIGGERED: Build blocked! Credential risk detected: {sec_audit['findings']}", "🛑")
+            raise PermissionError("Deployment strictly blocked by Helia-CyberDefense: sensitive credentials detected in repository.")
+        self.log("Helia-CyberDefense", f"Status: {sec_audit['status']} (Zero credential leak, strict headers verified)", "✅")
 
         # Step 2: Sub-Agent AutoRepair
         self.log("Helia-AutoRepair", "Scanning Markdown content & YAML schemas for syntax flaws...", "🔧")
