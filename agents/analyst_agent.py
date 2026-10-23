@@ -4,7 +4,16 @@ Generates comprehensive, authentic, technical SaaS teardowns with schema markup 
 """
 
 import json
+import sys
+import re
 from typing import Optional
+
+# Ensure UTF-8 output on Windows consoles
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 from google import genai
 from google.genai import types
 from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP
@@ -71,7 +80,12 @@ Ensure your evaluation includes:
                 ),
             )
 
-        data = json.loads(response.text)
+        raw_text = (response.text or "").strip()
+        try:
+            data = json.loads(raw_text, strict=False)
+        except Exception:
+            cleaned_text = re.sub(r'\\(?![/"\\bfnrtu])', r'\\\\', raw_text)
+            data = json.loads(cleaned_text, strict=False)
         review = ToolReview(**data)
 
         # Check if an affiliate link exists for this tool; otherwise keep official URL

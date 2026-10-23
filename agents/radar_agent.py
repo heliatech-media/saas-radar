@@ -5,9 +5,17 @@ Identifies high-converting SaaS products, search intents, and recurring affiliat
 
 import json
 import os
+import sys
 import re
 from pathlib import Path
 from typing import List, Optional
+
+# Ensure UTF-8 output on Windows consoles
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 from google import genai
 from google.genai import types
 from agents.config import GEMINI_API_KEY, GEMINI_MODEL, TARGET_NICHES
@@ -100,3 +108,27 @@ Provide the output strictly conforming to the requested JSON schema.
         except Exception as e:
             print(f"[Helia-Radar] ❌ Error parsing radar response: {e}")
             return []
+
+    def scout_trending_software(self) -> RadarKeyword:
+        """Discovers a single high-potential trending tool, prioritizing breakout software."""
+        opps = self.discover_trending_opportunities(count=1)
+        if opps:
+            return opps[0]
+        existing = set(self.get_existing_tool_slugs())
+        for seed in self.get_seed_tools():
+            slug = re.sub(r'[^a-z0-9]+', '-', seed['name'].lower()).strip('-')
+            if slug not in existing:
+                return RadarKeyword(
+                    tool_name=seed["name"],
+                    category=seed["category"],
+                    primary_keyword=f"{seed['name']} review 2026",
+                    intent="Commercial/High-Buying",
+                    average_commission=seed["commission"]
+                )
+        return RadarKeyword(
+            tool_name="Supabase",
+            category="AI & Developer Tools",
+            primary_keyword="Supabase vs Firebase 2026",
+            intent="High Commercial Intent",
+            average_commission="30% recurring"
+        )

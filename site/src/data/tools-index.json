@@ -30,6 +30,16 @@
     "affiliate_url": "https://www.apollo.io"
   },
   {
+    "name": "Beehiiv",
+    "slug": "beehiiv",
+    "tagline": "The newsletter platform built for growth, scaling, and monetization.",
+    "category": "Marketing",
+    "rating": 4.7,
+    "starting_price": "$0/mo",
+    "best_for": "Content creators, media startups, and B2B marketers scaling email subscriber bases.",
+    "affiliate_url": "https://www.beehiiv.com"
+  },
+  {
     "name": "Brevo",
     "slug": "brevo",
     "tagline": "All-in-one digital marketing platform built around transactional email and robust CRM capabilities.",
