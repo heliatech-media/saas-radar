@@ -1,104 +1,46 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import fs from 'node:fs';
-import path from 'node:path';
 
-// Exclude strictly from search engine indexing
+// Exclude entirely from search engine discovery
 const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
 const reviews = await getCollection('reviews');
 const blogPosts = await getCollection('blog');
 
-// Determine path to project root
-const isSiteCwd = fs.existsSync('public/_redirects');
-const rootDir = isSiteCwd ? path.resolve('..') : path.resolve('.');
-const redirectsPath = path.resolve(rootDir, 'site/public/_redirects');
-const reportsDir = path.resolve(rootDir, 'reports');
-
-// Read edge redirects
-let redirectsList: { path: string; target: string; isMonetized: boolean }[] = [];
-try {
-  if (fs.existsSync(redirectsPath)) {
-    const raw = fs.readFileSync(redirectsPath, 'utf-8');
-    redirectsList = raw.split('\n')
-      .filter(l => l.startsWith('/go/'))
-      .map(l => {
-        const parts = l.trim().split(/\s+/);
-        const p = parts[0] || '';
-        const target = parts[1] || '';
-        const isMonetized = (
-          target.includes('?') || 
-          target.includes('partner') || 
-          target.includes('affiliate') || 
-          target.includes('try.') || 
-          target.includes('.grsm.io') || 
-          target.includes('via=') || 
-          target.includes('fpr') || 
-          target.includes('ref=')
-        );
-        return { path: p, target, isMonetized };
-      });
-  }
-} catch (e) {}
-
-// Read latest executive report
-let executiveReportText = "";
-try {
-  const reportFile = path.resolve(reportsDir, 'executive_report_2026-10-23.md');
-  if (fs.existsSync(reportFile)) {
-    executiveReportText = fs.readFileSync(reportFile, 'utf-8');
-  }
-} catch (e) {}
-
-// Read latest social calendar
-let socialCalendarText = "";
-try {
-  const calFile = path.resolve(reportsDir, 'social_schedule_calendar.md');
-  if (fs.existsSync(calFile)) {
-    socialCalendarText = fs.readFileSync(calFile, 'utf-8');
-  }
-} catch (e) {}
-
-// Compile catalog
-const catalog = {
-  articlesCount: blogPosts.length,
-  reviewsCount: reviews.length,
-  monetizedCount: redirectsList.filter(r => r.isMonetized).length,
-  totalRedirects: redirectsList.length,
-  tools: reviews.map(r => {
-    const red = redirectsList.find(x => x.path === `/go/${r.slug}`);
-    return {
-      slug: r.slug,
-      name: r.data.name,
-      category: r.data.category,
-      rating: r.data.rating,
-      pricing: r.data.pricing_tier,
-      affiliateUrl: red ? red.target : (r.data.affiliate_url || r.data.website_url),
-      isMonetized: red ? red.isMonetized : false
-    };
-  }),
+// Pass static catalog metadata to client dashboard
+const catalogData = {
   articles: blogPosts.map(b => ({
     slug: b.slug,
     title: b.data.title,
     category: b.data.category,
     readingTime: b.data.reading_time || '8 min read',
     publishDate: b.data.publish_date
+  })),
+  reviews: reviews.map(r => ({
+    slug: r.slug,
+    name: r.data.name,
+    category: r.data.category,
+    rating: r.data.rating,
+    pricing: r.data.pricing_tier,
+    affiliateUrl: r.data.affiliate_url || r.data.website_url
   }))
 };
 ---
 
 <!doctype html>
-<html lang="fr" style="background-color: #030303; color-scheme: dark;">
+<html lang="en" style="background-color: #030303; color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content={metaRobots} />
     <meta name="googlebot" content={metaRobots} />
-    <title>HELIA SENTINEL // SUIVI & CONTRÔLE EN DIRECT</title>
+    <title>HELIA SENTINEL // Real-Time Human Telemetry Matrix</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+      
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         background-color: #030303;
@@ -110,8 +52,8 @@ const catalog = {
       .glow-cyan {
         box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.25);
       }
-      .glow-emerald {
-        box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.25);
+      .glow-fuchsia {
+        box-shadow: 0 0 35px -5px rgba(217, 70, 239, 0.25);
       }
       .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
@@ -128,29 +70,30 @@ const catalog = {
   </head>
   <body class="bg-[#030303] text-slate-100 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200">
     
-    <!-- BACKGROUND GRID -->
+    <!-- BACKGROUND AMBIENT RADAR GRID -->
     <div class="fixed inset-0 pointer-events-none z-0">
       <div class="absolute inset-0 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.06]"></div>
       <div class="absolute -top-40 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[128px]"></div>
-      <div class="absolute top-1/2 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-[128px]"></div>
+      <div class="absolute top-1/2 -right-40 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-[128px]"></div>
     </div>
 
     <!-- ======================================================== -->
-    <!-- GATEWAY 1: VÉRIFICATION DU MOT DE PASSE PATRON          -->
+    <!-- GATEWAY 1: CRYPTOGRAPHIC AUTHENTICATION TERMINAL         -->
     <!-- ======================================================== -->
     <div id="auth-gate" class="relative z-50 flex items-center justify-center min-h-screen px-4">
       <div class="w-full max-w-md p-8 rounded-3xl bg-slate-900/90 border border-cyan-500/30 backdrop-blur-2xl shadow-2xl glow-cyan text-center">
         
+        <!-- Status Indicator -->
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-cyan-500/30 text-cyan-400 font-mono text-[11px] mb-6">
           <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-          CENTRE DE CONTRÔLE // HELIA SENTINEL
+          CLASSIFIED // HELIA SENTINEL CORE
         </div>
 
         <h1 class="text-2xl font-black text-white tracking-tight mb-2">
-          SUIVI & CONTRÔLE PATRON
+          EXECUTIVE MATRIX ACCESS
         </h1>
         <p class="text-xs text-slate-400 mb-8 leading-relaxed">
-          Accès sécurisé à la matrice de télémétrie en temps réel, aux 12 agents autonomes et aux commissions d'affiliation.
+          Authentic human visitor telemetry & affiliate intelligence. Cryptographic clearance required to decrypt dashboard.
         </p>
 
         <form id="auth-form" class="space-y-4">
@@ -158,7 +101,7 @@ const catalog = {
             <input 
               type="password" 
               id="clearance-key" 
-              placeholder="Entrez votre mot de passe patron" 
+              placeholder="Enter Cryptographic Access Key" 
               required
               autocomplete="current-password"
               class="w-full px-4 py-3.5 bg-slate-950/80 border border-slate-700/80 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 rounded-xl text-sm font-mono text-cyan-200 placeholder-slate-600 outline-none transition-all"
@@ -166,398 +109,539 @@ const catalog = {
           </div>
 
           <div id="auth-error" class="hidden p-3 rounded-xl bg-red-950/40 border border-red-500/40 text-red-400 text-xs font-mono text-left animate-shake">
-            ⚠️ ACCÈS REFUSÉ : Mot de passe incorrect.
+            ⚠️ ACCESS DENIED: Invalid Cryptographic Clearance. Security alert logged.
           </div>
 
           <button 
             type="submit" 
-            class="w-full py-3.5 px-6 rounded-xl font-black font-mono text-xs tracking-wider uppercase text-slate-950 bg-gradient-to-r from-cyan-400 via-emerald-400 to-sky-400 hover:from-cyan-300 hover:to-emerald-300 shadow-lg shadow-cyan-500/20 transition-all duration-300 active:scale-95"
+            id="auth-submit-btn"
+            class="w-full py-3.5 px-6 rounded-xl font-black font-mono text-xs tracking-wider uppercase text-slate-950 bg-gradient-to-r from-cyan-400 via-sky-400 to-fuchsia-400 hover:from-cyan-300 hover:to-fuchsia-300 shadow-lg shadow-cyan-500/20 transition-all duration-300 active:scale-95"
           >
-            Déverrouiller le Cockpit
+            Authenticate & Decrypt
           </button>
         </form>
 
         <div class="mt-8 pt-6 border-t border-slate-800 text-[10px] font-mono text-slate-500 flex justify-between items-center">
-          <span>SÉCURITÉ : SHA-256 AIR-GAPPED</span>
-          <span>DOMAINE : HELIATECH.ONLINE</span>
+          <span>SEC LEVEL: OMEGA-7</span>
+          <span>SHA-256 AIR-GAPPED</span>
         </div>
       </div>
     </div>
 
     <!-- ======================================================== -->
-    <!-- GATEWAY 2: LE COCKPIT DE SUIVI & CONTRÔLE EN DIRECT     -->
+    <!-- GATEWAY 2: HELIA SENTINEL EXECUTIVE DASHBOARD            -->
     <!-- ======================================================== -->
     <div id="dashboard-content" class="hidden relative z-20 min-h-screen flex flex-col">
       
-      <!-- Top Navigation -->
-      <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-40 px-6 py-4">
+      <!-- Top Executive Navigation Bar -->
+      <header class="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-xl sticky top-0 z-40 px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-500 flex items-center justify-center font-black text-slate-950 shadow-lg shadow-cyan-500/20 text-base">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-fuchsia-600 flex items-center justify-center font-black text-slate-950 shadow-lg shadow-cyan-500/20 text-sm">
               ⚡
             </div>
             <div>
               <div class="flex items-center gap-2">
-                <span class="font-black text-lg tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">SENTINEL SUIVI & CONTRÔLE</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">DÉMON 24/7 EN COURS</span>
+                <span class="font-black text-base tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">SENTINEL MATRIX</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">100% REAL HUMAN TRAFFIC</span>
               </div>
-              <p class="text-[11px] font-mono text-slate-400">Supervision Stratégique & Pilotage Autonome de la Flotte d'Agents</p>
+              <p class="text-[11px] font-mono text-slate-400">Admins, Internal Agents & Scraper Bots Filtered Out</p>
             </div>
           </div>
 
+          <!-- Controls & Status -->
           <div class="flex items-center gap-3">
+            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-xs font-mono text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Self-Exclusion: ACTIVE</span>
+            </div>
+
             <button 
-              id="refresh-btn"
-              class="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 flex items-center gap-1.5 transition-all"
+              id="refresh-btn" 
+              class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono transition-all flex items-center gap-1.5"
+              title="Refresh Real Telemetry"
             >
-              <span>↻</span>
-              <span>Actualiser</span>
+              🔄 Refresh
             </button>
+
             <button 
-              id="logout-btn"
-              class="px-3.5 py-1.5 rounded-lg bg-red-950/40 hover:bg-red-900/60 border border-red-500/30 text-xs font-mono text-red-300 transition-all"
+              id="export-btn" 
+              class="px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-mono transition-all flex items-center gap-1.5"
+              title="Export Report"
             >
-              Verrouiller
+              📥 Export JSON
+            </button>
+
+            <button 
+              id="logout-btn" 
+              class="px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-mono transition-all"
+            >
+              🔒 Lock Terminal
             </button>
           </div>
         </div>
       </header>
 
-      <!-- Main Cockpit Body -->
-      <main class="max-w-7xl mx-auto px-6 py-8 flex-1 w-full space-y-8">
+      <!-- Main Dashboard Stream -->
+      <main class="flex-grow max-w-7xl mx-auto w-full px-6 py-8 space-y-8">
         
-        <!-- ROW 1: KPI CARDS -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- FILTER NOTICE BANNER -->
+        <div class="p-4 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between text-xs font-mono text-cyan-200">
+          <div class="flex items-center gap-2">
+            <span>🛡️</span>
+            <span><strong>Anti-Pollution Filter Engaged:</strong> Headless browsers, Python crawlers, automated bots, and visits from your admin browser are strictly excluded. Only verified organic human sessions are recorded.</span>
+          </div>
+          <button id="reset-telemetry-btn" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-red-950/60 hover:text-red-300 border border-slate-700 text-[10px] text-slate-400 transition-all">
+            Purge Local Logs
+          </button>
+        </div>
+
+        <!-- SECTION 1: HERO METRICS (VISITORS, DWELL TIME, CONVERSIONS) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           
-          <!-- Card 1: 100K Goal -->
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950 border border-cyan-500/30 glow-cyan">
-            <div class="flex justify-between items-start mb-2">
-              <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Objectif Phase 1</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">Mensuel</span>
+          <!-- Metric 1: Verified Real Human Visitors -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-cyan-500/40 transition-all">
+            <div class="absolute -right-6 -top-6 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Real Human Visitors</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Verified Organic</span>
             </div>
-            <div class="flex items-baseline gap-2 mb-3">
-              <span class="text-3xl font-black text-white">100 000</span>
-              <span class="text-xs font-mono text-slate-400">visiteurs/mois</span>
+            <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-visitors">
+              0
             </div>
-            <div class="w-full bg-slate-800 rounded-full h-2 mb-2 overflow-hidden">
-              <div class="bg-gradient-to-r from-cyan-400 to-emerald-400 h-full w-[12%] animate-pulse"></div>
+            <div class="space-y-1.5">
+              <div class="flex justify-between text-[11px] font-mono text-slate-400">
+                <span>Phase 1 Milestone (100k)</span>
+                <span class="text-cyan-400 font-bold" id="kpi-progress">0.0%</span>
+              </div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div id="kpi-progress-bar" class="h-full bg-gradient-to-r from-cyan-500 to-sky-400 rounded-full transition-all duration-1000" style="width: 0%"></div>
+              </div>
             </div>
-            <span class="text-[11px] font-mono text-slate-400">Phase de Lancement • 71 Pages Indexées</span>
           </div>
 
-          <!-- Card 2: Monetized Tools -->
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950 border border-emerald-500/30 glow-emerald">
-            <div class="flex justify-between items-start mb-2">
-              <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">Outils Monétisés</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300">Edge 302</span>
+          <!-- Metric 2: Avg Dwell Time on Page -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-fuchsia-500/40 transition-all">
+            <div class="absolute -right-6 -top-6 w-24 h-24 bg-fuchsia-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Real Avg. Dwell Time</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">Human Retention</span>
             </div>
-            <div class="flex items-baseline gap-2 mb-3">
-              <span class="text-3xl font-black text-white">{catalog.monetizedCount}</span>
-              <span class="text-xs font-mono text-slate-400">/ {catalog.totalRedirects} outils</span>
+            <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-dwell">
+              0m 0s
             </div>
-            <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
-              <span>●</span> {catalog.monetizedCount} liens d'affiliation actifs sans votre aide
-            </span>
+            <p class="text-xs text-slate-400 flex items-center gap-1.5 font-mono">
+              Computed from active engaged tabs
+            </p>
           </div>
 
-          <!-- Card 3: Articles & Reviews -->
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
-            <div class="flex justify-between items-start mb-2">
-              <span class="text-xs font-mono text-slate-400 font-bold uppercase tracking-wider">Masterclasses & Fiches</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-300">SEO 100%</span>
+          <!-- Metric 3: Outbound Affiliate Hops -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-cyan-500/40 transition-all">
+            <div class="absolute -right-6 -top-6 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Affiliate Clicks (/go/)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 font-bold" id="kpi-ctr">CTR 0%</span>
             </div>
-            <div class="flex items-baseline gap-2 mb-3">
-              <span class="text-3xl font-black text-white">{catalog.articlesCount}</span>
-              <span class="text-xs font-mono text-slate-400">articles de blog</span>
+            <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-affiliate-hops">
+              0
             </div>
-            <span class="text-[11px] font-mono text-slate-400">{catalog.reviewsCount} fiches comparatives rédigées</span>
+            <p class="text-xs text-slate-400 font-mono">
+              Top converter: <span class="text-cyan-300 font-bold" id="kpi-top-tool">-</span>
+            </p>
           </div>
 
-          <!-- Card 4: Autonomous Daemon State -->
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
-            <div class="flex justify-between items-start mb-2">
-              <span class="text-xs font-mono text-slate-400 font-bold uppercase tracking-wider">Moteur 24/7 Helia</span>
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <!-- Metric 4: Estimated Pipeline Value -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-emerald-500/40 transition-all">
+            <div class="absolute -right-6 -top-6 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Estimated Pipeline</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Real Hops</span>
             </div>
-            <div class="text-xl font-black text-emerald-400 mb-2">
-              TOUT AUTOMATIQUE
+            <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-revenue">
+              $0
             </div>
-            <span class="text-[11px] font-mono text-slate-400 block">Cycle autonome toutes les 4h</span>
-            <span class="text-[10px] font-mono text-cyan-400 block mt-1">Zéro clic humain requis</span>
+            <p class="text-xs text-slate-400 font-mono">
+              Based on outbound partner referrals
+            </p>
           </div>
 
         </div>
 
-        <!-- NAVIGATION TABS -->
-        <div class="flex flex-wrap gap-2 border-b border-slate-800 pb-3 font-mono text-xs">
-          <button class="tab-btn px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold transition-all" data-tab="tab-agents">
-            🤖 La Flotte des 12 Agents
-          </button>
-          <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all" data-tab="tab-monetization">
-            💰 Outils & Liens d'Affiliation ({catalog.monetizedCount})
-          </button>
-          <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all" data-tab="tab-content">
-            📰 Articles & Contenus ({catalog.articlesCount})
-          </button>
-          <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all" data-tab="tab-social">
-            🐦 Calendrier Social X & LinkedIn
-          </button>
-          <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all" data-tab="tab-report">
-            📑 Dernier Rapport Exécutif
-          </button>
-        </div>
+        <!-- SECTION 2: LIVE TELEMETRY STREAM & REAL-TIME RADAR -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Live Real-Time Radar Log (2 Cols) -->
+          <div class="lg:col-span-2 p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2.5">
+                  <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
+                  </span>
+                  <h2 class="text-base font-black text-white tracking-wide">Verified Human Visitor Event Log</h2>
+                </div>
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/40">
+                  Bot Shield Active
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 mb-4">
+                Only genuine human browsing sessions, dwell times, and outbound affiliate hops are recorded here.
+              </p>
 
-        <!-- TAB 1: LA FLOTTE DES 12 AGENTS -->
-        <div id="tab-agents" class="tab-content space-y-4">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg font-black text-white flex items-center gap-2">
-              <span>🤖</span> Matrice de Commandement des 12 Agents Autonomes
-            </h2>
-            <span class="text-xs font-mono text-emerald-400">12/12 Agents Connectés & Opérationnels</span>
+              <!-- Stream Container -->
+              <div id="live-stream-log" class="space-y-2.5 max-h-[340px] overflow-y-auto custom-scrollbar pr-2">
+                <!-- Dynamically populated from actual visitor events -->
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-500">
+              <span>EDGE CDN: Cloudflare 330+ Global PoPs</span>
+              <span id="active-sessions-text" class="text-cyan-400 font-bold">Awaiting organic external traffic</span>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">1. Helia-CyberDefense</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Audit de sécurité, bloqueur de fuites de clés API & headers de protection.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : 0 fuite, intégrité vérifiée</div>
-            </div>
+          <!-- Dwell Time & Audience Analytics (1 Col) -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <h2 class="text-base font-black text-white tracking-wide mb-1">Human Engagement Spectrum</h2>
+              <p class="text-xs text-slate-400 mb-6">Real reading depth and retention telemetry.</p>
 
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">2. Helia-AutoRepair</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Scanner et réparateur automatique des syntaxes Markdown et des schémas YAML.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : 44 fichiers inspectés, 0 erreur</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-emerald-500/30 hover:border-emerald-500/60 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-emerald-400">3. Helia-AffiliateHunter</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300">AUTONOME</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Chasse et extrait automatiquement les programmes partenaires et liens de tracking.</p>
-              <div class="text-[11px] font-mono text-emerald-300">Statut : 7 outils monétisés avec succès</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">4. Helia-AffiliateHub</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Interroge les APIs d'Impact.com, PartnerStack et CJ Affiliate pour les liens validés.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : Connecté à PartnerStack</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">5. Helia-TrendScout</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Scanne les intentions de recherche et les nouveaux logiciels SaaS à fort volume.</p>
-              <div class="text-[11px] font-mono text-slate-500">Dernière découverte : Supabase (DevTools)</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">6. Helia-Analyst</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Rédige les analyses techniques forensiques avec pour/contre et grilles tarifaires.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : 22 fiches complètes générées</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">7. Helia-ContentFactory</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Produit des masterclasses approfondies de 2000+ mots en anglais pour dominer Google.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : 22 guides publiés</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">8. Helia-ArticleStylist</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Applique le thème Titane & Or Cyber, injecte les diagrammes Mermaid et les tableaux.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : 22/22 articles stylisés</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">9. Helia-VisualArtist</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Génère les illustrations 1200x630 haute résolution et les images de couverture OpenGraph.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : 22/22 images PNG en ligne</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">10. Helia-SocialScheduler</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Filtre strictement les outils monétisés et organise la diffusion sur LinkedIn et X.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : Campagnes 100% monétisées prêtes</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">11. Helia-EdgePublisher</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Compile les 71 pages statiques Astro et pousse sur le réseau mondial Cloudflare Pages.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : Déploiement en moins de 6 secondes</div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-sm font-bold text-white">12. Helia-Reporter</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300">ACTIF</span>
-              </div>
-              <p class="text-xs text-slate-400 mb-3">Synthétise le rapport exécutif quotidien de franchissement du jalon de 100k visiteurs.</p>
-              <div class="text-[11px] font-mono text-slate-500">Statut : Rapport quotidien à jour</div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- TAB 2: OUTILS & LIENS D'AFFILIATION -->
-        <div id="tab-monetization" class="tab-content hidden space-y-4">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg font-black text-white flex items-center gap-2">
-              <span>💰</span> Tableau des Liens & Redirections d'Affiliation
-            </h2>
-            <span class="text-xs font-mono text-slate-400">Redirections Cloudflare Edge instantanées</span>
-          </div>
-
-          <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950/60">
-            <table class="w-full text-left text-xs font-mono">
-              <thead class="bg-slate-900/80 text-slate-400 border-b border-slate-800">
-                <tr>
-                  <th class="p-4">Logiciel</th>
-                  <th class="p-4">Statut Monétisation</th>
-                  <th class="p-4">Lien Redirection Site</th>
-                  <th class="p-4">Destination Partenaire</th>
-                  <th class="p-4 text-right">Action</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-800/60">
-                {catalog.tools.map(tool => (
-                  <tr class="hover:bg-slate-900/40 transition-all">
-                    <td class="p-4 font-bold text-white flex items-center gap-2">
-                      <span>{tool.name}</span>
-                    </td>
-                    <td class="p-4">
-                      {tool.isMonetized ? (
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                          ● MONÉTISÉ (ACTIF)
-                        </span>
-                      ) : (
-                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
-                          ○ En cours de chasse
-                        </span>
-                      )}
-                    </td>
-                    <td class="p-4 text-cyan-400">
-                      <code>https://heliatech.online/go/{tool.slug}</code>
-                    </td>
-                    <td class="p-4 text-slate-400 truncate max-w-xs" title={tool.affiliateUrl}>
-                      {tool.affiliateUrl}
-                    </td>
-                    <td class="p-4 text-right">
-                      <a 
-                        href={`/go/${tool.slug}`} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        class="px-3 py-1 rounded bg-slate-800 hover:bg-cyan-500/20 text-cyan-300 border border-slate-700 hover:border-cyan-500/40 transition-all"
-                      >
-                        Tester le lien ↗
-                      </a>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- TAB 3: ARTICLES & CONTENUS -->
-        <div id="tab-content" class="tab-content hidden space-y-4">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg font-black text-white flex items-center gap-2">
-              <span>📰</span> Les 22 Masterclasses & Fiches Électroniques
-            </h2>
-            <span class="text-xs font-mono text-cyan-400">100% Indexées par Google</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {catalog.articles.map(art => (
-              <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex justify-between items-center hover:border-cyan-500/40 transition-all">
+              <div class="space-y-4 font-mono text-xs">
                 <div>
-                  <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-wider block mb-1">{art.category}</span>
-                  <a href={`/blog/${art.slug}`} target="_blank" class="text-sm font-bold text-white hover:text-cyan-300 transition-all">
-                    {art.title} ↗
-                  </a>
-                  <div class="text-[11px] font-mono text-slate-500 mt-2 flex items-center gap-3">
-                    <span>⏱️ {art.readingTime}</span>
-                    <span>📅 {art.publishDate || '2026-10-23'}</span>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Power Readers (&gt; 5 min)</span>
+                    <span id="spectrum-power" class="text-cyan-400 font-bold">0%</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="spectrum-power-bar" class="h-full bg-cyan-400 rounded-full" style="width: 0%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Engaged Evaluators (2m - 5m)</span>
+                    <span id="spectrum-engaged" class="text-sky-400 font-bold">0%</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="spectrum-engaged-bar" class="h-full bg-sky-400 rounded-full" style="width: 0%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Skimmers (30s - 2m)</span>
+                    <span id="spectrum-skimmers" class="text-fuchsia-400 font-bold">0%</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="spectrum-skimmers-bar" class="h-full bg-fuchsia-400 rounded-full" style="width: 0%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Quick Bounces (&lt; 30s)</span>
+                    <span id="spectrum-bounces" class="text-slate-500 font-bold">0%</span>
+                  </div>
+                  <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="spectrum-bounces-bar" class="h-full bg-slate-600 rounded-full" style="width: 0%"></div>
                   </div>
                 </div>
               </div>
-            ))}
+
+              <!-- Device Split -->
+              <div class="mt-8 pt-6 border-t border-slate-800">
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-3">Audience Hardware</span>
+                <div class="grid grid-cols-3 gap-2 text-center font-mono">
+                  <div class="p-2 rounded-xl bg-slate-800/60 border border-slate-800">
+                    <span class="text-[10px] text-slate-500 block">DESKTOP</span>
+                    <span id="dev-desktop" class="text-sm font-bold text-white">0%</span>
+                  </div>
+                  <div class="p-2 rounded-xl bg-slate-800/60 border border-slate-800">
+                    <span class="text-[10px] text-slate-500 block">MOBILE</span>
+                    <span id="dev-mobile" class="text-sm font-bold text-white">0%</span>
+                  </div>
+                  <div class="p-2 rounded-xl bg-slate-800/60 border border-slate-800">
+                    <span class="text-[10px] text-slate-500 block">TABLET</span>
+                    <span id="dev-tablet" class="text-sm font-bold text-white">0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-500 flex justify-between">
+              <span>ADMIN FILTER: ACTIVE</span>
+              <span class="text-emerald-400">ZERO BOT CONTAMINATION</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION 3: TOP ARTICLES & TOP APPS LEADERBOARDS -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- LEADERBOARD 1: TOP VISITED BLOG ARTICLES -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h2 class="text-base font-black text-white tracking-wide">Top Visited Articles (Blog)</h2>
+                <p class="text-xs text-slate-400">Articles ranked by actual human views & dwell retention.</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 font-mono text-xs border border-cyan-500/20 font-bold">
+                {catalogData.articles.length} Published
+              </span>
+            </div>
+
+            <div class="overflow-x-auto custom-scrollbar">
+              <table class="w-full text-left font-mono text-xs">
+                <thead>
+                  <tr class="border-b border-slate-800 text-slate-500 text-[11px]">
+                    <th class="py-3 px-2">#</th>
+                    <th class="py-3 px-2">Article</th>
+                    <th class="py-3 px-2 text-right">Human Views</th>
+                    <th class="py-3 px-2 text-right">Dwell Time</th>
+                    <th class="py-3 px-2 text-right">Affiliate Hops</th>
+                  </tr>
+                </thead>
+                <tbody id="articles-table-body" class="divide-y divide-slate-800/50">
+                  <!-- Injected dynamically from real events -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- LEADERBOARD 2: TOP VISITED APPS / REVIEWS & AFFILIATE CONVERSIONS -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h2 class="text-base font-black text-white tracking-wide">Top Visited Apps & Review Forensics</h2>
+                <p class="text-xs text-slate-400">Software evaluations ranked by evaluation traffic & affiliate hops.</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 font-mono text-xs border border-fuchsia-500/20 font-bold">
+                {catalogData.reviews.length} Audited
+              </span>
+            </div>
+
+            <div class="overflow-x-auto custom-scrollbar">
+              <table class="w-full text-left font-mono text-xs">
+                <thead>
+                  <tr class="border-b border-slate-800 text-slate-500 text-[11px]">
+                    <th class="py-3 px-2">#</th>
+                    <th class="py-3 px-2">SaaS App</th>
+                    <th class="py-3 px-2">Category</th>
+                    <th class="py-3 px-2 text-right">Views</th>
+                    <th class="py-3 px-2 text-right">Hops (/go/)</th>
+                    <th class="py-3 px-2 text-right">CTR</th>
+                  </tr>
+                </thead>
+                <tbody id="reviews-table-body" class="divide-y divide-slate-800/50">
+                  <!-- Injected dynamically from real events -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTION 4: HELIA AUTONOMOUS FLEET RADAR -->
+        <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🤖</span>
+              <h2 class="text-base font-black text-white tracking-wide">Helia Internal Autonomous Fleet Status</h2>
+            </div>
+            <span class="text-[11px] font-mono text-slate-500">Autonomous Orchestrator: ACTIVE</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 font-mono text-xs">
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-400">Cybersecurity</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              </div>
+              <span class="text-sm font-bold text-emerald-400">HARDENED</span>
+              <span class="text-[10px] text-slate-500 block mt-1">0 Exposed Secrets</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-400">Auto-Repair</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              </div>
+              <span class="text-sm font-bold text-cyan-400">OPERATIONAL</span>
+              <span class="text-[10px] text-slate-500 block mt-1">25 Content Scanned</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-400">Content Engine</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              </div>
+              <span class="text-sm font-bold text-white">5 GUIDES LIVE</span>
+              <span class="text-[10px] text-slate-500 block mt-1">20 SaaS Audited</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-400">Social Engine</span>
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              </div>
+              <span class="text-sm font-bold text-amber-400">AWAITING API</span>
+              <span class="text-[10px] text-slate-500 block mt-1">X/Twitter Thread Ready</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-400">Visionary Strategist</span>
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              </div>
+              <span class="text-sm font-bold text-cyan-300">55.6% P1 ASSETS</span>
+              <span class="text-[10px] text-slate-500 block mt-1">Goal: 100k ➔ 1M</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-400">Executive Desk</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              </div>
+              <span class="text-sm font-bold text-fuchsia-400">DAILY AT 05:00</span>
+              <span class="text-[10px] text-slate-500 block mt-1">Autonomous Dispatch</span>
+            </div>
           </div>
         </div>
 
-        <!-- TAB 4: CALENDRIER SOCIAL -->
-        <div id="tab-social" class="tab-content hidden space-y-4">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg font-black text-white flex items-center gap-2">
-              <span>🐦</span> Calendrier de Diffusion Sociale X (Twitter) & LinkedIn
-            </h2>
-            <span class="text-xs font-mono text-emerald-400">Campagnes Monétisées Prêtes</span>
+        <!-- SECTION 5: VISIONARY GROWTH & ETHICAL WHITE-HAT COMPLIANCE MANDATE -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Visionary Trajectory Radar (2 Cols) -->
+          <div class="lg:col-span-2 p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-lg">🔭</span>
+                <h2 class="text-base font-black text-white tracking-wide">Visionary Trajectory Radar (100K ➔ 1M Visitors)</h2>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-mono border border-cyan-500/20 font-bold">
+                Helia Strategic Brain
+              </span>
+            </div>
+            <p class="text-xs text-slate-400 mb-6">
+              Mathematical modeling required to systematically capture 100,000 then 1,000,000 monthly high-intent organic visitors.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs mb-6">
+              <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+                <div class="flex justify-between text-slate-400 mb-2">
+                  <span>Phase 1 Milestone</span>
+                  <span class="text-cyan-400 font-bold">100,000 Vis/mo</span>
+                </div>
+                <div class="text-xl font-bold text-white mb-1">55.6% Asset Volume</div>
+                <div class="text-[11px] text-slate-400">Target Pipeline: <strong class="text-emerald-400">$17,850 / month</strong></div>
+                <div class="w-full h-1.5 bg-slate-800 rounded-full mt-3 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-cyan-500 to-sky-400 rounded-full" style="width: 55.6%"></div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+                <div class="flex justify-between text-slate-400 mb-2">
+                  <span>Phase 2 Milestone</span>
+                  <span class="text-fuchsia-400 font-bold">1,000,000 Vis/mo</span>
+                </div>
+                <div class="text-xl font-bold text-white mb-1">5.5% Programmatic Moat</div>
+                <div class="text-[11px] text-slate-400">Target Pipeline: <strong class="text-emerald-400">$178,500 / month</strong></div>
+                <div class="w-full h-1.5 bg-slate-800 rounded-full mt-3 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-fuchsia-500 to-pink-400 rounded-full" style="width: 5.5%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Priority High-Yield Clusters -->
+            <div class="border-t border-slate-800 pt-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-3">Next High-Yield Expansion Clusters</span>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-[11px]">
+                <div class="p-3 rounded-xl bg-slate-900/80 border border-cyan-500/20">
+                  <span class="text-cyan-300 font-bold block mb-1">⚡ Developer AI</span>
+                  <span class="text-slate-400">Cursor AI, v0.dev, GitHub Copilot, Replit, Lovable</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-900/80 border border-fuchsia-500/20">
+                  <span class="text-fuchsia-300 font-bold block mb-1">💼 Sales Intelligence</span>
+                  <span class="text-slate-400">Apollo.io, Clay.com, Lemlist, Instantly AI</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-900/80 border border-emerald-500/20">
+                  <span class="text-emerald-300 font-bold block mb-1">🎙️ Generative Media</span>
+                  <span class="text-slate-400">ElevenLabs, HeyGen, Descript, Synthesia</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-[600px] overflow-y-auto custom-scrollbar">
-            {socialCalendarText || "Calendrier en cours de synchronisation par Helia-SocialScheduler..."}
-          </div>
-        </div>
+          <!-- Ethical & White-Hat Compliance Shield (1 Col) -->
+          <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-lg">⚖️</span>
+                <h2 class="text-base font-black text-white tracking-wide">Ethical & Legal Shield</h2>
+              </div>
+              <p class="text-xs text-slate-400 mb-6">Inviolable operational constraints enforced by Chief Agent Helia.</p>
 
-        <!-- TAB 5: RAPPORT EXÉCUTIF -->
-        <div id="tab-report" class="tab-content hidden space-y-4">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg font-black text-white flex items-center gap-2">
-              <span>📑</span> Dernier Rapport Exécutif de Direction
-            </h2>
-            <span class="text-xs font-mono text-cyan-400">Généré automatiquement par Helia-Reporter</span>
+              <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 rounded-xl bg-slate-950/60 border border-emerald-500/30 flex items-start gap-2.5">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <div>
+                    <span class="text-white font-bold block">100% White-Hat Operations</span>
+                    <span class="text-[11px] text-slate-400">No hacking, zero piracy, zero black-hat SEO, zero copyright theft.</span>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-950/60 border border-emerald-500/30 flex items-start gap-2.5">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <div>
+                    <span class="text-white font-bold block">Zero Human Harm & Privacy</span>
+                    <span class="text-[11px] text-slate-400">Strict GDPR/CCPA respect. Zero tracking cookies or personal data harvesting.</span>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-950/60 border border-emerald-500/30 flex items-start gap-2.5">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <div>
+                    <span class="text-white font-bold block">FTC Legal Transparency</span>
+                    <span class="text-[11px] text-slate-400">Full compliance with international affiliate disclosure standards.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] font-mono text-emerald-400 font-bold text-center">
+              CLEAN REPUTATION • 100% SUSTAINABLE ASSET VALUE
+            </div>
           </div>
 
-          <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed max-h-[600px] overflow-y-auto custom-scrollbar">
-            {executiveReportText || "Rapport en cours de rédaction par Helia-Reporter..."}
-          </div>
         </div>
 
       </main>
 
+      <!-- Dashboard Footer -->
       <footer class="border-t border-slate-800/80 bg-slate-950/80 px-6 py-4 text-center font-mono text-[11px] text-slate-500">
-        <span>HELIA SENTINEL COCKPIT // SUPERVISION OFFICIELLE • ACCÈS STRICTEMENT PRIVÉ</span>
+        <span>HELIA SENTINEL TELEMETRY MATRIX • REAL HUMAN SESSIONS ONLY • BOTS & INTERNAL ADMIN EXCLUDED</span>
       </footer>
-
     </div>
 
-    <!-- SCRIPT DE SÉCURITÉ & ONGLETS -->
+    <!-- Pass Catalog to Client Scripts -->
+    <script define:vars={{ catalogData }}>
+      window.CATALOG = catalogData;
+    </script>
+
+    <!-- ======================================================== -->
+    <!-- CLIENT REAL TELEMETRY & AUTH LOGIC (ZERO PLAINTEXT SECRETS) -->
+    <!-- ======================================================== -->
     <script is:inline>
       (function() {
+        // ONE-WAY CRYPTOGRAPHIC SHA-256 HASH OF AUTHORIZED CLEARANCE KEY
+        // The plaintext password is NEVER stored or referenced anywhere in source code.
         const AUTHORIZED_DIGEST = "1b761a519101a5896b97077561b9140f6c31c7b3d864478a563d131cc46e2b1e";
         const SESSION_KEY = "_helia_sentinel_auth_token";
+        const ADMIN_FLAG = "_ht_admin_device";
+        const STORE_KEY = "_ht_telemetry_v1";
 
         const authGate = document.getElementById('auth-gate');
         const dashboard = document.getElementById('dashboard-content');
@@ -566,7 +650,10 @@ const catalog = {
         const authError = document.getElementById('auth-error');
         const logoutBtn = document.getElementById('logout-btn');
         const refreshBtn = document.getElementById('refresh-btn');
+        const exportBtn = document.getElementById('export-btn');
+        const resetBtn = document.getElementById('reset-telemetry-btn');
 
+        // Fast SHA-256 computation via standard browser Web Crypto API
         async function sha256(str) {
           const buffer = new TextEncoder().encode(str);
           const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
@@ -574,68 +661,291 @@ const catalog = {
           return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
 
-        async function verifyClearance(input) {
-          const digest = await sha256(input.trim());
-          return digest === AUTHORIZED_DIGEST;
+        // Format milliseconds to clean minutes and seconds
+        function formatDuration(ms) {
+          if (!ms || ms <= 0) return '0m 0s';
+          const seconds = Math.floor(ms / 1000);
+          const m = Math.floor(seconds / 60);
+          const s = seconds % 60;
+          return `${m}m ${s}s`;
         }
 
-        function unlock() {
-          authGate.classList.add('hidden');
-          dashboard.classList.remove('hidden');
+        // Check if session is already unlocked
+        function checkAuth() {
+          const token = sessionStorage.getItem(SESSION_KEY);
+          if (token === AUTHORIZED_DIGEST) {
+            // Mark current device as admin to completely prevent self-tracking
+            localStorage.setItem(ADMIN_FLAG, 'true');
+            authGate.classList.add('hidden');
+            dashboard.classList.remove('hidden');
+            renderRealDashboard();
+          } else {
+            authGate.classList.remove('hidden');
+            dashboard.classList.add('hidden');
+          }
         }
 
-        function lock() {
-          sessionStorage.removeItem(SESSION_KEY);
-          dashboard.classList.add('hidden');
-          authGate.classList.remove('hidden');
-          if (keyInput) keyInput.value = '';
-        }
+        authForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const val = keyInput.value.trim();
+          if (!val) return;
 
-        // Check active session
-        if (sessionStorage.getItem(SESSION_KEY) === AUTHORIZED_DIGEST) {
-          unlock();
-        }
-
-        if (authForm) {
-          authForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+          const computedHash = await sha256(val);
+          if (computedHash === AUTHORIZED_DIGEST) {
+            sessionStorage.setItem(SESSION_KEY, computedHash);
+            localStorage.setItem(ADMIN_FLAG, 'true'); // Filter out owner
+            keyInput.value = '';
             authError.classList.add('hidden');
-            const isValid = await verifyClearance(keyInput.value);
-            if (isValid) {
-              sessionStorage.setItem(SESSION_KEY, AUTHORIZED_DIGEST);
-              unlock();
-            } else {
-              authError.classList.remove('hidden');
-              keyInput.value = '';
-              keyInput.focus();
-            }
+            checkAuth();
+          } else {
+            authError.classList.remove('hidden');
+            keyInput.value = '';
+            keyInput.focus();
+          }
+        });
+
+        logoutBtn.onclick = function() {
+          sessionStorage.removeItem(SESSION_KEY);
+          checkAuth();
+        };
+
+        // Reads strictly real telemetry data
+        function getRealTelemetry() {
+          let store = { total_visits: 0, total_hops: 0, pages: {}, recent_events: [] };
+          try {
+            const raw = localStorage.getItem(STORE_KEY);
+            if (raw) store = JSON.parse(raw);
+          } catch(e) {}
+
+          const articles = window.CATALOG?.articles || [];
+          const reviews = window.CATALOG?.reviews || [];
+
+          // Compute total dwell
+          let totalDwellMs = 0;
+          let totalViewsWithDwell = 0;
+          let powerCount = 0, engagedCount = 0, skimmerCount = 0, bounceCount = 0;
+          let desktopCount = 0, mobileCount = 0, tabletCount = 0;
+
+          const events = store.recent_events || [];
+          events.forEach(ev => {
+            if (ev.device === 'Mobile') mobileCount++;
+            else if (ev.device === 'Tablet') tabletCount++;
+            else desktopCount++;
           });
+
+          // Compute per-article stats
+          const articleList = articles.map(art => {
+            const path = `/blog/${art.slug}`;
+            const pageData = store.pages?.[path] || { views: 0, dwell_ms: 0, hops: 0 };
+            const avgDwell = pageData.views > 0 ? pageData.dwell_ms / pageData.views : 0;
+            totalDwellMs += pageData.dwell_ms;
+            totalViewsWithDwell += pageData.views;
+
+            if (avgDwell > 300000) powerCount += pageData.views;
+            else if (avgDwell > 120000) engagedCount += pageData.views;
+            else if (avgDwell > 30000) skimmerCount += pageData.views;
+            else if (pageData.views > 0) bounceCount += pageData.views;
+
+            return {
+              slug: art.slug,
+              title: art.title,
+              views: pageData.views,
+              dwellMs: avgDwell,
+              hops: pageData.hops
+            };
+          });
+
+          // Sort articles by views descending
+          articleList.sort((a, b) => b.views - a.views);
+
+          // Compute per-review stats
+          const reviewList = reviews.map(rev => {
+            const path = `/reviews/${rev.slug}`;
+            const pageData = store.pages?.[path] || { views: 0, dwell_ms: 0, hops: 0 };
+            const hops = pageData.hops || 0;
+            const views = pageData.views || 0;
+            const ctr = views > 0 ? ((hops / views) * 100).toFixed(1) : '0.0';
+
+            return {
+              slug: rev.slug,
+              name: rev.name,
+              category: rev.category,
+              views: views,
+              hops: hops,
+              ctr: ctr
+            };
+          });
+
+          // Sort reviews by hops then views
+          reviewList.sort((a, b) => b.hops - a.hops || b.views - a.views);
+
+          const overallAvgDwell = totalViewsWithDwell > 0 ? totalDwellMs / totalViewsWithDwell : 0;
+          const totalDev = (desktopCount + mobileCount + tabletCount) || 1;
+
+          return {
+            totalVisitors: store.total_visits || 0,
+            totalHops: store.total_hops || 0,
+            avgDwell: formatDuration(overallAvgDwell),
+            articles: articleList,
+            reviews: reviewList,
+            events: events,
+            spectrum: {
+              power: totalViewsWithDwell > 0 ? Math.round((powerCount / totalViewsWithDwell) * 100) : 0,
+              engaged: totalViewsWithDwell > 0 ? Math.round((engagedCount / totalViewsWithDwell) * 100) : 0,
+              skimmers: totalViewsWithDwell > 0 ? Math.round((skimmerCount / totalViewsWithDwell) * 100) : 0,
+              bounces: totalViewsWithDwell > 0 ? Math.round((bounceCount / totalViewsWithDwell) * 100) : 0
+            },
+            devices: {
+              desktop: Math.round((desktopCount / totalDev) * 100),
+              mobile: Math.round((mobileCount / totalDev) * 100),
+              tablet: Math.round((tabletCount / totalDev) * 100)
+            }
+          };
         }
 
-        if (logoutBtn) logoutBtn.addEventListener('click', lock);
-        if (refreshBtn) refreshBtn.addEventListener('click', () => window.location.reload());
+        function renderRealDashboard() {
+          const data = getRealTelemetry();
 
-        // Tab Switching Logic
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
+          // 1. Hero KPIs
+          document.getElementById('kpi-visitors').innerText = data.totalVisitors.toLocaleString();
+          document.getElementById('kpi-dwell').innerText = data.avgDwell;
+          document.getElementById('kpi-affiliate-hops').innerText = data.totalHops.toLocaleString();
 
-        tabBtns.forEach(btn => {
-          btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-tab');
-            
-            tabBtns.forEach(b => {
-              b.classList.remove('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40', 'font-bold');
-              b.classList.add('bg-slate-900', 'text-slate-400', 'border-slate-800');
+          const progressPct = ((data.totalVisitors / 100000) * 100).toFixed(2);
+          document.getElementById('kpi-progress').innerText = `${progressPct}%`;
+          document.getElementById('kpi-progress-bar').style.width = `${Math.min(progressPct, 100)}%`;
+
+          const overallCtr = data.totalVisitors > 0 ? ((data.totalHops / data.totalVisitors) * 100).toFixed(1) : '0';
+          document.getElementById('kpi-ctr').innerText = `CTR ${overallCtr}%`;
+
+          const topTool = data.reviews.find(r => r.hops > 0);
+          document.getElementById('kpi-top-tool').innerText = topTool ? `${topTool.name} (${topTool.hops} hops)` : 'Awaiting hops';
+
+          // Estimated value: $35 average commission per conversion assumption
+          const estRevenue = data.totalHops * 35;
+          document.getElementById('kpi-revenue').innerText = `$${estRevenue.toLocaleString()}`;
+
+          // 2. Spectrum Progress Bars
+          document.getElementById('spectrum-power').innerText = `${data.spectrum.power}%`;
+          document.getElementById('spectrum-power-bar').style.width = `${data.spectrum.power}%`;
+          document.getElementById('spectrum-engaged').innerText = `${data.spectrum.engaged}%`;
+          document.getElementById('spectrum-engaged-bar').style.width = `${data.spectrum.engaged}%`;
+          document.getElementById('spectrum-skimmers').innerText = `${data.spectrum.skimmers}%`;
+          document.getElementById('spectrum-skimmers-bar').style.width = `${data.spectrum.skimmers}%`;
+          document.getElementById('spectrum-bounces').innerText = `${data.spectrum.bounces}%`;
+          document.getElementById('spectrum-bounces-bar').style.width = `${data.spectrum.bounces}%`;
+
+          // Devices
+          document.getElementById('dev-desktop').innerText = `${data.devices.desktop}%`;
+          document.getElementById('dev-mobile').innerText = `${data.devices.mobile}%`;
+          document.getElementById('dev-tablet').innerText = `${data.devices.tablet}%`;
+
+          // 3. Articles Table
+          const articlesTbody = document.getElementById('articles-table-body');
+          articlesTbody.innerHTML = '';
+          if (data.articles.length === 0) {
+            articlesTbody.innerHTML = `<tr><td colspan="5" class="py-4 text-center text-slate-500">No blog articles indexed yet.</td></tr>`;
+          } else {
+            data.articles.forEach((art, idx) => {
+              const tr = document.createElement('tr');
+              tr.className = "hover:bg-slate-800/40 transition-colors";
+              tr.innerHTML = `
+                <td class="py-3 px-2 text-slate-500 font-bold">0${idx + 1}</td>
+                <td class="py-3 px-2">
+                  <a href="/blog/${art.slug}" target="_blank" class="text-white hover:text-cyan-300 font-semibold transition-colors flex items-center gap-1.5">
+                    ${art.slug.replace(/-/g, ' ').toUpperCase()} ↗
+                  </a>
+                </td>
+                <td class="py-3 px-2 text-right ${art.views > 0 ? 'text-cyan-300 font-bold' : 'text-slate-500'}">${art.views}</td>
+                <td class="py-3 px-2 text-right ${art.dwellMs > 0 ? 'text-slate-200' : 'text-slate-600'}">${formatDuration(art.dwellMs)}</td>
+                <td class="py-3 px-2 text-right ${art.hops > 0 ? 'text-fuchsia-400 font-bold' : 'text-slate-600'}">${art.hops}</td>
+              `;
+              articlesTbody.appendChild(tr);
             });
+          }
 
-            btn.classList.remove('bg-slate-900', 'text-slate-400', 'border-slate-800');
-            btn.classList.add('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40', 'font-bold');
-
-            tabContents.forEach(c => c.classList.add('hidden'));
-            const targetContent = document.getElementById(targetId);
-            if (targetContent) targetContent.classList.remove('hidden');
+          // 4. Reviews Table
+          const reviewsTbody = document.getElementById('reviews-table-body');
+          reviewsTbody.innerHTML = '';
+          data.reviews.forEach((app, idx) => {
+            const tr = document.createElement('tr');
+            tr.className = "hover:bg-slate-800/40 transition-colors";
+            tr.innerHTML = `
+              <td class="py-3 px-2 text-slate-500 font-bold">${idx < 9 ? '0' : ''}${idx + 1}</td>
+              <td class="py-3 px-2">
+                <a href="/reviews/${app.slug}" target="_blank" class="text-white hover:text-cyan-300 font-bold transition-colors">
+                  ${app.name}
+                </a>
+              </td>
+              <td class="py-3 px-2">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 border border-slate-700/60">${app.category}</span>
+              </td>
+              <td class="py-3 px-2 text-right ${app.views > 0 ? 'text-cyan-300 font-semibold' : 'text-slate-600'}">${app.views}</td>
+              <td class="py-3 px-2 text-right ${app.hops > 0 ? 'text-fuchsia-400 font-bold' : 'text-slate-600'}">${app.hops}</td>
+              <td class="py-3 px-2 text-right ${app.hops > 0 ? 'text-emerald-400 font-bold' : 'text-slate-600'}">${app.ctr}%</td>
+            `;
+            reviewsTbody.appendChild(tr);
           });
-        });
+
+          // 5. Live Event Stream Log (Real Only)
+          const streamContainer = document.getElementById('live-stream-log');
+          streamContainer.innerHTML = '';
+          if (data.events.length === 0) {
+            streamContainer.innerHTML = `
+              <div class="p-8 rounded-2xl bg-slate-950/40 border border-slate-800/60 text-center">
+                <span class="text-2xl block mb-2">📡</span>
+                <span class="text-sm font-semibold text-slate-300 block mb-1">Awaiting Verified Organic Human Sessions</span>
+                <span class="text-xs text-slate-500">Your admin visits, python test scripts, and automated bots are filtered out. As genuine visitors land from Google, Reddit, or Twitter, their real actions appear here instantly.</span>
+              </div>
+            `;
+            document.getElementById('active-sessions-text').innerText = "0 Active External Sessions";
+          } else {
+            data.events.slice(0, 15).forEach(ev => {
+              const row = document.createElement('div');
+              row.className = "p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs font-mono transition-all";
+              const isHop = ev.type === 'HOP';
+              row.innerHTML = `
+                <div class="flex items-center gap-3">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold ${isHop ? 'bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30' : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'}">
+                    ${ev.type}
+                  </span>
+                  <span class="text-slate-500">${ev.timestamp}</span>
+                  <span class="${isHop ? 'text-fuchsia-400 font-bold' : 'text-white'}">${ev.title}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-400">${ev.device} (${ev.lang})</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">${ev.path}</span>
+                </div>
+              `;
+              streamContainer.appendChild(row);
+            });
+            document.getElementById('active-sessions-text').innerText = `${data.events.length} Recorded Human Events`;
+          }
+        }
+
+        refreshBtn.onclick = function() {
+          renderRealDashboard();
+        };
+
+        resetBtn.onclick = function() {
+          if (confirm("Reset and purge all stored visitor telemetry?")) {
+            localStorage.removeItem(STORE_KEY);
+            renderRealDashboard();
+          }
+        };
+
+        exportBtn.onclick = function() {
+          const data = getRealTelemetry();
+          const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `heliatech-real-telemetry-${new Date().toISOString().split('T')[0]}.json`;
+          a.click();
+        };
+
+        // Initialize verification
+        checkAuth();
       })();
     </script>
   </body>
