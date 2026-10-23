@@ -304,10 +304,17 @@ We just published our complete architectural teardown and hands-on workshop on t
 
 #SaaS #EnterpriseTech #Automation #Productivity #HeliaTech"""
 
-    def broadcast_post_to_linkedin(self, post_text: str) -> bool:
+    def broadcast_post_to_linkedin(
+        self,
+        post_text: str,
+        article_url: Optional[str] = None,
+        article_title: Optional[str] = None,
+        image_url: Optional[str] = None
+    ) -> bool:
         """
         Publishes a post to LinkedIn via the LinkedIn REST API / v2 API.
         Safety lock: only sends when LINKEDIN_BROADCAST_ENABLED=true.
+        Supports rich ARTICLE cards with custom 1200x630 PNG thumbnail attachments.
         """
         if not self.linkedin_broadcast_enabled:
             print("[SOCIAL AGENT] 🔒 LinkedIn broadcast is on STANDBY (LINKEDIN_BROADCAST_ENABLED=false). Post drafted but not sent.")
@@ -347,16 +354,33 @@ We just published our complete architectural teardown and hands-on workshop on t
                 "X-Restli-Protocol-Version": "2.0.0",
                 "Content-Type": "application/json"
             }
+
+            share_content = {
+                "shareCommentary": {
+                    "text": post_text
+                }
+            }
+
+            # If article URL is provided, attach rich OpenGraph card with PNG thumbnail
+            if article_url:
+                png_url = image_url.replace(".svg", ".png") if image_url else ""
+                media_item = {
+                    "status": "READY",
+                    "originalUrl": article_url,
+                    "title": {"text": article_title or "HeliaTech Dossier"}
+                }
+                if png_url:
+                    media_item["thumbnails"] = [{"url": png_url}]
+                share_content["shareMediaCategory"] = "ARTICLE"
+                share_content["media"] = [media_item]
+            else:
+                share_content["shareMediaCategory"] = "NONE"
+
             payload = {
                 "author": author_urn,
                 "lifecycleState": "PUBLISHED",
                 "specificContent": {
-                    "com.linkedin.ugc.ShareContent": {
-                        "shareCommentary": {
-                            "text": post_text
-                        },
-                        "shareMediaCategory": "NONE"
-                    }
+                    "com.linkedin.ugc.ShareContent": share_content
                 },
                 "visibility": {
                     "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
@@ -365,7 +389,7 @@ We just published our complete architectural teardown and hands-on workshop on t
 
             response = requests.post(url, json=payload, headers=headers, timeout=15)
             if response.status_code in [200, 201]:
-                print("[SOCIAL AGENT] ✅ Successfully published post to LinkedIn!")
+                print(f"[SOCIAL AGENT] ✅ Successfully published post to LinkedIn! Post URN: {response.json().get('id')}")
                 return True
             else:
                 print(f"[SOCIAL AGENT] ⚠️ LinkedIn post error: {response.status_code} - {response.text}")
