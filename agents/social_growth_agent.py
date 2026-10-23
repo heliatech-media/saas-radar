@@ -270,12 +270,33 @@ We just published our complete architectural teardown and hands-on workshop on t
             print("[SOCIAL AGENT] 🔒 LinkedIn broadcast is on STANDBY (LINKEDIN_BROADCAST_ENABLED=false). Post drafted but not sent.")
             return False
 
-        if not (self.linkedin_access_token and self.linkedin_author_urn):
-            print("[SOCIAL AGENT] ℹ️ LinkedIn credentials (access token or author URN) missing in .env.")
+        if not self.linkedin_access_token:
+            print("[SOCIAL AGENT] ℹ️ LinkedIn Access Token missing in .env.")
             return False
 
         try:
             import requests
+
+            # Auto-detect author URN if not explicitly configured in .env
+            author_urn = self.linkedin_author_urn
+            if not author_urn:
+                try:
+                    u_res = requests.get(
+                        "https://api.linkedin.com/v2/userinfo",
+                        headers={"Authorization": f"Bearer {self.linkedin_access_token}"},
+                        timeout=10
+                    )
+                    if u_res.status_code == 200:
+                        sub = u_res.json().get("sub")
+                        if sub:
+                            author_urn = f"urn:li:person:{sub}"
+                            print(f"[SOCIAL AGENT] 👤 Auto-detected LinkedIn author: {author_urn}")
+                except Exception:
+                    pass
+
+            if not author_urn:
+                print("[SOCIAL AGENT] ℹ️ Unable to determine LinkedIn author URN. Please specify LINKEDIN_AUTHOR_URN in .env.")
+                return False
 
             url = "https://api.linkedin.com/v2/ugcPosts"
             headers = {
@@ -284,7 +305,7 @@ We just published our complete architectural teardown and hands-on workshop on t
                 "Content-Type": "application/json"
             }
             payload = {
-                "author": self.linkedin_author_urn,
+                "author": author_urn,
                 "lifecycleState": "PUBLISHED",
                 "specificContent": {
                     "com.linkedin.ugc.ShareContent": {
