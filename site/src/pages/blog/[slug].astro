@@ -1,0 +1,175 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'blog'>;
+}
+
+const { entry } = Astro.props;
+const post = entry.data;
+const { Content } = await entry.render();
+
+// Generate Schema.org JSON-LD for Google Rich Results
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "author": {
+    "@type": "Organization",
+    "name": post.author,
+    "url": "https://heliatech.online"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HeliaTech Media",
+    "url": "https://heliatech.online"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://heliatech.online/blog/${entry.slug}`
+  }
+};
+---
+
+<Layout 
+  title={`${post.title}`}
+  description={post.description}
+  jsonLd={jsonLd}
+>
+  <article class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 mb-10 shadow-sm">
+      <a href="/" class="hover:text-cyan-400 transition-colors">ACCUEIL</a>
+      <span class="text-slate-600">/</span>
+      <a href="/blog" class="hover:text-cyan-400 transition-colors">BLOG</a>
+      <span class="text-slate-600">/</span>
+      <span class="text-cyan-300 font-medium truncate max-w-[200px] sm:max-w-xs">{post.category}</span>
+    </nav>
+
+    <!-- Header Meta & Badges -->
+    <header class="mb-12">
+      <div class="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono">
+        <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold uppercase tracking-wider">
+          {post.category}
+        </span>
+        <span class="text-slate-500">•</span>
+        <span class="text-slate-400 font-mono">{post.readingTime} DE LECTURE</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-slate-400 font-mono">PUBLIÉ LE {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+
+        {post.tool_slug && (
+          <span class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 animate-pulse"></span>
+            <span>Dossier dédié à {post.tool_slug.toUpperCase()}</span>
+          </span>
+        )}
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] mb-8">
+        {post.title}
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8">
+        {post.description}
+      </p>
+
+      <!-- Author Capsule & Affiliate Disclaimer -->
+      <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px] shadow-glow-cyan">
+            <div class="w-full h-full bg-[#030303] rounded-full flex items-center justify-center font-black text-xs text-white">
+              HT
+            </div>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-white block">RÉDACTION HELIATECH</span>
+            <span class="text-[11px] font-mono text-cyan-400">Division Investigation & Benchmarks</span>
+          </div>
+        </div>
+
+        {post.tool_slug && (
+          <div class="flex items-center gap-3">
+            <a 
+              href={`/reviews/${post.tool_slug}`}
+              class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-mono text-slate-300 border border-slate-700 transition-colors flex items-center gap-1"
+            >
+              <span>Fiche Teardown</span>
+              <span>➔</span>
+            </a>
+            <a 
+              href={`/go/${post.tool_slug}`}
+              target="_blank"
+              rel="noopener sponsored"
+              class="px-3.5 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-xs font-mono font-bold text-slate-950 transition-colors shadow-glow-cyan flex items-center gap-1"
+            >
+              <span>Accès Direct</span>
+              <span>↗</span>
+            </a>
+          </div>
+        )}
+      </div>
+    </header>
+
+    <!-- TL;DR Executive Summary Box (TechPulse Cyber Style) -->
+    {post.tldr && post.tldr.length > 0 && (
+      <div class="my-10 p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-cyan-500/30 shadow-glow-cyan relative overflow-hidden">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-cyan-400 font-mono text-sm font-bold tracking-widest uppercase">✦ L'ESSENTIEL EN 3 POINTS (TL;DR)</span>
+        </div>
+        <ul class="space-y-3 m-0 p-0 list-none">
+          {post.tldr.map((item) => (
+            <li class="flex items-start gap-3 text-sm sm:text-base text-slate-200 leading-relaxed m-0">
+              <span class="text-cyan-400 font-bold mt-1 text-base leading-none">▹</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- Main Content Container with Elite Article Typography -->
+    <div class="elite-article mt-12">
+      <Content />
+    </div>
+
+    <!-- Bottom Tool Crosslink & Navigation -->
+    <footer class="mt-20 pt-12 border-t border-slate-800">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a 
+          href="/blog"
+          class="flex items-center gap-3 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-colors group"
+        >
+          <span class="text-cyan-400 group-hover:-translate-x-1 transition-transform font-bold">←</span>
+          <div>
+            <span class="text-[11px] font-mono text-slate-500 block uppercase">Retour au blog</span>
+            <span class="text-sm font-bold text-white group-hover:text-cyan-300">Toutes les enquêtes et guides</span>
+          </div>
+        </a>
+
+        {post.tool_slug && (
+          <a 
+            href={`/reviews/${post.tool_slug}`}
+            class="flex items-center justify-between p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-fuchsia-500/40 transition-colors group text-right"
+          >
+            <div>
+              <span class="text-[11px] font-mono text-slate-500 block uppercase">Benchmark Technique</span>
+              <span class="text-sm font-bold text-white group-hover:text-fuchsia-300">Voir l'audit complet de {post.tool_slug}</span>
+            </div>
+            <span class="text-fuchsia-400 group-hover:translate-x-1 transition-transform font-bold">→</span>
+          </a>
+        )}
+      </div>
+    </footer>
+  </article>
+</Layout>

@@ -47,6 +47,30 @@ const reviewsCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.string(),
+    author: z.string().default('HELIA TECH'),
+    category: z.string().default('Enquête SaaS'),
+    tags: z.array(z.string()).default([]),
+    image: z.string().optional(),
+    readingTime: z.string().default('10 MIN'),
+    tool_slug: z.string().optional(),
+    tldr: z.array(z.string()).optional(),
+    affiliate_cta: z.object({
+      badge: z.string().optional(),
+      title: z.string(),
+      description: z.string(),
+      button_text: z.string(),
+      url: z.string(),
+    }).optional(),
+  }),
+});
+
 export const collections = {
   reviews: reviewsCollection,
+  blog: blogCollection,
 };

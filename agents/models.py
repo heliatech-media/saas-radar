@@ -79,3 +79,26 @@ class RadarKeyword(BaseModel):
     search_intent: str
     primary_affiliate_network: str
     average_commission: str
+
+
+class AffiliateCTA(BaseModel):
+    badge: str = Field(default="OFFRE PARTENAIRE HELIATECH", description="Badge text")
+    title: str = Field(description="CTA Title")
+    description: str = Field(description="CTA Description")
+    button_text: str = Field(description="Button text")
+    url: str = Field(description="Target affiliate URL or redirect")
+
+
+class BlogPost(BaseModel):
+    title: str = Field(description="Catchy journalistic title, e.g. 'ClickUp 3.0 : L'Histoire d'une Révolution...'")
+    slug: str = Field(description="URL slug, e.g. 'clickup-evolution-guide-2026'")
+    description: str = Field(description="Meta description & summary")
+    date: str = Field(description="ISO Date YYYY-MM-DD")
+    author: str = Field(default="HELIA TECH")
+    category: str = Field(description="Category, e.g. 'Productivité & Work OS'")
+    tags: List[str] = Field(default_factory=list)
+    readingTime: str = Field(default="11 MIN")
+    tool_slug: str = Field(description="Target tool slug from reviews, e.g. 'clickup'")
+    tldr: List[str] = Field(description="3 essential key points (TL;DR)")
+    affiliate_cta: AffiliateCTA
+    markdown_content: str = Field(description="Full elite-article markdown content including genesis/evolution, superpowers, practical workshop exercise, pros/cons, and final verdict")

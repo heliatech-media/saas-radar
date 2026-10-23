@@ -1,18 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --background: #030303;
+  --foreground: #f4f4f5;
   color-scheme: dark;
 }
 
 html {
-  background-color: #060608 !important;
-  color: #e2e8f0;
+  background-color: #030303 !important;
+  color: #f4f4f5;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #060608 !important;
-  color: #e2e8f0;
+  background-color: #030303 !important;
+  color: #f4f4f5;
   min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Elite Article & Editorial Markdown Styling (TechPulse Theme) */
+.elite-article {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 640px) {
+  .elite-article {
+    font-size: 1.125rem;
+  }
+}
+
+.elite-article > p:first-of-type::first-letter {
+  font-size: 3.5rem;
+  font-weight: 900;
+  float: left;
+  line-height: 0.85;
+  margin-right: 0.85rem;
+  margin-top: 0.25rem;
+  color: transparent;
+  background: linear-gradient(135deg, #06b6d4, #d946ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (min-width: 640px) {
+  .elite-article > p:first-of-type::first-letter {
+    font-size: 4.5rem;
+    margin-right: 1.25rem;
+  }
+}
+
+.elite-article h1, 
+.elite-article h2, 
+.elite-article h3, 
+.elite-article h4 {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.elite-article h2 {
+  font-size: 1.85rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.elite-article h3 {
+  font-size: 1.45rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #22d3ee;
+}
+
+.elite-article p {
+  margin-bottom: 1.75rem;
+}
+
+.elite-article a {
+  color: #22d3ee;
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #22d3ee, #d946ef);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  transition: all 0.25s ease;
+}
+
+.elite-article a:hover {
+  color: #ffffff;
+  background-size: 100% 100%;
+  border-radius: 4px;
+  padding: 0 4px;
+  margin: 0 -4px;
+}
+
+.elite-article strong {
+  color: #ffffff;
+  font-weight: 700;
+  background: linear-gradient(120deg, rgba(6, 182, 212, 0.15) 0%, rgba(217, 70, 239, 0.15) 100%);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.elite-article blockquote {
+  border-left: 4px solid #d946ef;
+  background: linear-gradient(to right, rgba(217, 70, 239, 0.12), rgba(15, 23, 42, 0.5));
+  padding: 1.25rem 1.75rem;
+  margin: 2.5rem 0;
+  border-radius: 0 16px 16px 0;
+  font-size: 1.15rem;
+  color: #f1f5f9;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.elite-article ul, 
+.elite-article ol {
+  margin: 2rem 0;
+  padding-left: 1.75rem;
+}
+
+.elite-article li {
+  margin-bottom: 0.85rem;
+  position: relative;
+}
+
+.elite-article ul li::marker {
+  color: #22d3ee;
+  font-size: 1.2rem;
+}
+
+/* Inline code badge */
+.elite-article :not(pre) > code {
+  color: #38bdf8;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.375rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* Code block terminal container */
+.elite-article pre {
+  background: #070b12 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem !important;
+  margin: 2.5rem 0;
+  overflow-x: auto;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+.elite-article pre code {
+  color: #e2e8f0;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Luxury Table Styling */
+.table-responsive-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 2.5rem 0;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 15, 26, 0.6);
+}
+
+.elite-article table {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.elite-article th {
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1rem 1.25rem;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.elite-article td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.25rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.elite-article tr:last-child td {
+  border-bottom: none;
+}
+
+.elite-article tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
 }

@@ -9,13 +9,13 @@ interface Props {
 
 const { 
   title, 
-  description = "Autonomous intelligence engine benchmarking the next generation of B2B SaaS and AI tools. Zero bias, real benchmarks.",
+  description = "Moteur d'intelligence et média tech de référence : benchmarks indépendants, guides complets et enquêtes sur les meilleurs logiciels B2B et IA.",
   jsonLd
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth antialiased selection:bg-champagne-400/30 selection:text-champagne-100" style="background-color: #060608; color-scheme: dark;">
+<html lang="fr" class="scroll-smooth antialiased selection:bg-cyan-500/30 selection:text-cyan-100" style="background-color: #030303; color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
     <meta name='impact-site-verification' value='76989799-5f87-4f11-87f0-cd18bcb2da56' />
@@ -23,9 +23,9 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | SaaS Radar Titanium</title>
+    <title>{title} | HeliaTech</title>
     <meta name="description" content={description} />
-    <meta property="og:title" content={`${title} | SaaS Radar Titanium`} />
+    <meta property="og:title" content={`${title} | HeliaTech`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
@@ -34,49 +34,52 @@ const {
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
   </head>
-  <body class="min-h-screen bg-titanium-950 text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #060608;">
-    <!-- Ambient Warm Titanium & Champagne Lighting (Apple Pro Aesthetics) -->
+  <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
+    <!-- Ambient Cyber Glows (TechPulse Neon Aesthetics) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      <!-- Top Warm Champagne Aura -->
-      <div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[950px] h-[600px] bg-gradient-to-b from-amber-500/12 via-champagne-400/8 to-transparent blur-[150px] rounded-full"></div>
-      <!-- Right Warm Gold Flare -->
-      <div class="absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-gold-pure/5 blur-[170px] rounded-full"></div>
-      <!-- Left Titanium Bronze Flare -->
-      <div class="absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-amber-600/5 blur-[170px] rounded-full"></div>
-      <!-- Geometric Titanium Grid Lines -->
+      <!-- Top Ambient Cyan/Fuchsia Aurora -->
+      <div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[650px] bg-gradient-to-b from-cyan-500/12 via-fuchsia-500/8 to-transparent blur-[160px] rounded-full"></div>
+      <!-- Right Violet Flare -->
+      <div class="absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-fuchsia-600/8 blur-[180px] rounded-full"></div>
+      <!-- Left Cyber Cyan Flare -->
+      <div class="absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-cyan-600/8 blur-[180px] rounded-full"></div>
+      <!-- Geometric Cyber Grid Lines -->
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
     </div>
 
-    <!-- Floating Capsule Navbar (Titanium Frosted Glass) -->
+    <!-- Floating Capsule Navbar (Cyber Frosted Glass) -->
     <div class="sticky top-5 z-50 px-4 sm:px-6 max-w-5xl mx-auto">
-      <header class="backdrop-blur-2xl bg-titanium-900/60 border border-white/[0.08] shadow-glass-titanium rounded-full px-5 py-3 flex items-center justify-between transition-all duration-300 hover:border-champagne-300/30">
+      <header class="backdrop-blur-2xl bg-slate-900/75 border border-white/[0.08] shadow-glass-cyber rounded-full px-5 py-3 flex items-center justify-between transition-all duration-300 hover:border-cyan-500/40">
         <!-- Brand -->
         <a href="/" class="flex items-center gap-3 group">
-          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-bronze via-gold-pure to-champagne-200 p-[1px] shadow-glow-gold transition-transform duration-300 group-hover:scale-110">
-            <div class="w-full h-full bg-titanium-950 rounded-full flex items-center justify-center">
-              <span class="text-xs font-black text-transparent bg-clip-text bg-gradient-to-r from-champagne-200 to-gold-pure">✦</span>
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 via-sky-400 to-fuchsia-500 p-[1px] shadow-glow-cyan transition-transform duration-300 group-hover:scale-110">
+            <div class="w-full h-full bg-[#030303] rounded-full flex items-center justify-center">
+              <span class="text-xs font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400">⚡</span>
             </div>
           </div>
-          <span class="font-extrabold text-base tracking-tight text-white group-hover:text-champagne-200 transition-colors">
-            RADAR<span class="text-transparent bg-clip-text bg-gradient-to-r from-champagne-300 to-amber-500">.TITANIUM</span>
+          <span class="font-extrabold text-base tracking-tight text-white group-hover:text-cyan-300 transition-colors">
+            HELIA<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">TECH</span>
           </span>
         </a>
 
         <!-- Links -->
-        <nav class="hidden md:flex items-center gap-8 text-xs font-medium text-slate-400 tracking-wider">
-          <a href="/" class="hover:text-champagne-200 transition-colors">EXPLORER</a>
-          <a href="/#categories" class="hover:text-champagne-200 transition-colors">TAXONOMY</a>
-          <a href="/#engine" class="hover:text-champagne-200 transition-colors">AUTONOMOUS ENGINE</a>
+        <nav class="hidden md:flex items-center gap-8 text-xs font-medium text-slate-300 tracking-wider">
+          <a href="/" class="hover:text-cyan-400 transition-colors">RADAR SAAS</a>
+          <a href="/blog" class="hover:text-fuchsia-400 transition-colors flex items-center gap-1.5">
+            <span>BLOG & ENQUÊTES</span>
+            <span class="px-1.5 py-0.2 rounded-full text-[9px] font-mono bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">NOUVEAU</span>
+          </a>
+          <a href="/#categories" class="hover:text-cyan-400 transition-colors">TAXONOMIE</a>
         </nav>
 
         <!-- Live Telemetry Capsule -->
-        <div class="flex items-center gap-2.5 bg-white/[0.03] border border-champagne-400/20 px-3.5 py-1.5 rounded-full">
+        <div class="flex items-center gap-2.5 bg-slate-800/60 border border-cyan-500/30 px-3.5 py-1.5 rounded-full shadow-inner-cyan">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-champagne-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-champagne-400"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
           </span>
-          <span class="text-[11px] font-mono tracking-wider text-champagne-200 uppercase font-semibold">
-            Helia & Sub-Agents Live
+          <span class="text-[11px] font-mono tracking-wider text-cyan-300 uppercase font-semibold">
+            Helia Core 2026
           </span>
         </div>
       </header>
@@ -87,29 +90,36 @@ const {
       <slot />
     </main>
 
-    <!-- Ultra-Clean Titanium Footer -->
-    <footer class="relative z-10 border-t border-white/[0.06] bg-titanium-950/80 backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
+    <!-- Ultra-Clean Cyber Dark Footer -->
+    <footer class="relative z-10 border-t border-slate-800 bg-[#030303]/90 backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
       <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <span class="font-black text-sm tracking-widest text-white">RADAR.TITANIUM</span>
-            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-champagne-400/10 text-champagne-300 border border-champagne-400/20">EDITION 2026</span>
+            <span class="font-black text-sm tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">MÉDIA & BENCHMARKS</span>
           </div>
           <p class="max-w-md text-slate-400 text-xs leading-relaxed">
-            Autonomous programmatic intelligence platform evaluating global enterprise software, AI agents, and workflow systems. Zero human intervention required.
+            Média d'investigation logicielle et moteur d'intelligence B2B évaluant en continu les outils SaaS, les agents IA et les architectures cloud.
           </p>
+          <div class="flex items-center gap-4 mt-4">
+            <a href="/" class="text-slate-400 hover:text-cyan-400 transition-colors">Radar</a>
+            <span class="text-slate-700">•</span>
+            <a href="/blog" class="text-slate-400 hover:text-fuchsia-400 transition-colors">Blog & Guides</a>
+            <span class="text-slate-700">•</span>
+            <a href="/#categories" class="text-slate-400 hover:text-cyan-400 transition-colors">Catégories</a>
+          </div>
         </div>
 
-        <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-white/[0.08] pl-4 md:pl-0 md:pr-4">
-          <p class="font-mono text-champagne-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures</p>
+        <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-slate-800 pl-4 md:pl-0 md:pr-4">
+          <p class="font-mono text-cyan-300 text-[11px] mb-1 uppercase tracking-wider">Transparence & Indépendance</p>
           <p class="text-[11px] leading-relaxed">
-            Benchmarks, feature matrixes, and telemetry are synthesized autonomously via LLM reasoning. Qualifying outbound links may yield performance-based royalties without altering user price.
+            Nos benchmarks et guides techniques sont rédigés en toute indépendance éditoriale. Certains liens partenaires peuvent générer une commission de parrainage sans aucun surcoût pour l'utilisateur.
           </p>
         </div>
       </div>
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-white/[0.04] flex justify-between items-center text-[11px] font-mono text-slate-400">
-        <span>© 2026 HELIATECH INTELLIGENCE</span>
-        <span class="text-champagne-300/80">OPERATED BY HELIA AUTONOMOUS CORE</span>
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-500">
+        <span>© 2026 HELIATECH.ONLINE — TOUS DROITS RÉSERVÉS</span>
+        <span class="text-cyan-400/80">PROPULSÉ PAR HELIA CORE MULTI-AGENTS</span>
       </div>
     </footer>
   </body>

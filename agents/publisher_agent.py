@@ -8,15 +8,17 @@ import json
 from pathlib import Path
 from typing import List
 import yaml
-from agents.config import CONTENT_DIR, DATA_DIR
-from agents.models import ToolReview
+from agents.config import CONTENT_DIR, BLOG_CONTENT_DIR, DATA_DIR
+from agents.models import ToolReview, BlogPost
 
 
 class PublisherAgent:
-    def __init__(self, content_dir: Path = CONTENT_DIR, data_dir: Path = DATA_DIR):
+    def __init__(self, content_dir: Path = CONTENT_DIR, blog_dir: Path = BLOG_CONTENT_DIR, data_dir: Path = DATA_DIR):
         self.content_dir = content_dir
+        self.blog_dir = blog_dir
         self.data_dir = data_dir
         self.content_dir.mkdir(parents=True, exist_ok=True)
+        self.blog_dir.mkdir(parents=True, exist_ok=True)
         self.data_dir.mkdir(parents=True, exist_ok=True)
 
     def publish_review(self, review: ToolReview) -> Path:
@@ -93,6 +95,36 @@ class PublisherAgent:
 
         # Update the search and directory index
         self._update_index(review)
+
+        return filepath
+
+    def publish_blog_post(self, post: BlogPost) -> Path:
+        """Writes an Astro-compatible Markdown blog post with structured YAML frontmatter."""
+        filename = f"{post.slug}.md"
+        filepath = self.blog_dir / filename
+
+        frontmatter = {
+            "title": post.title,
+            "description": post.description,
+            "date": post.date,
+            "author": post.author,
+            "category": post.category,
+            "tags": post.tags,
+            "readingTime": post.readingTime,
+            "tool_slug": post.tool_slug,
+            "tldr": post.tldr,
+            "affiliate_cta": post.affiliate_cta.model_dump(),
+        }
+
+        yaml_header = yaml.dump(frontmatter, allow_unicode=True, sort_keys=False)
+        full_content = f"""---
+{yaml_header}---
+
+{post.markdown_content}
+"""
+
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(full_content)
 
         return filepath
 

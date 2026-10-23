@@ -21,26 +21,26 @@ const { targetUrl, toolName } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr" style="background-color: #030303; color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex, nofollow" />
     <meta http-equiv="refresh" content={`0;url=${targetUrl}`} />
-    <title>Redirecting to {toolName}...</title>
+    <title>Redirection vers {toolName}...</title>
   </head>
-  <body class="bg-slate-950 text-slate-200 flex items-center justify-center min-h-screen font-sans">
-    <div class="text-center p-8 bg-slate-900 border border-slate-800 rounded-3xl max-w-md mx-4 shadow-2xl">
-      <div class="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-      <h1 class="text-xl font-bold mb-2 text-white">Redirecting to {toolName}</h1>
+  <body class="bg-[#030303] text-slate-200 flex items-center justify-center min-h-screen font-sans">
+    <div class="text-center p-8 bg-slate-900/90 border border-cyan-500/30 rounded-3xl max-w-md mx-4 shadow-2xl backdrop-blur-xl">
+      <div class="w-12 h-12 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+      <h1 class="text-xl font-bold mb-2 text-white">Redirection vers {toolName}</h1>
       <p class="text-sm text-slate-400 mb-6">
-        Taking you to the official site... If you are not redirected automatically, click the link below.
+        Accès au site officiel en cours... Si vous n'êtes pas redirigé automatiquement, cliquez ci-dessous.
       </p>
       <a 
         href={targetUrl} 
         rel="noopener noreferrer sponsored"
-        class="inline-block px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs rounded-xl shadow-md transition-all"
+        class="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-400 hover:to-fuchsia-400 text-slate-950 font-black text-xs rounded-xl shadow-lg transition-all"
       >
-        Click here to continue &rarr;
+        Continuer vers le site officiel ➔
       </a>
     </div>
   </body>

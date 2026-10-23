@@ -11,6 +11,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 AGENTS_DIR = ROOT_DIR / "agents"
 SITE_DIR = ROOT_DIR / "site"
 CONTENT_DIR = SITE_DIR / "src" / "content" / "reviews"
+BLOG_CONTENT_DIR = SITE_DIR / "src" / "content" / "blog"
 DATA_DIR = SITE_DIR / "src" / "data"
 
 # Load environment variables
