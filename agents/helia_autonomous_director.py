@@ -117,12 +117,13 @@ class HeliaAutonomousDirector:
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")
+        self.visionary.generate_growth_blueprint()
         build_success = self._run_build()
 
         if build_success and auto_push:
             self.log("Helia-EdgePublisher", "Build 100% clean. Committing and pushing to origin main...", "🚢")
             self._deploy_git(f"feat(growth): Helia deployed autonomous review & masterclass for {keyword.tool_name}")
-            self.log("Helia-EdgePublisher", "Netlify deployment triggered globally.", "🌐")
+            self.log("Helia-EdgePublisher", "Cloudflare edge deployment triggered globally.", "🌐")
 
         # Step 8: Sub-Agent Reporter
         self.log("Helia-Reporter", "Compiling Daily Executive Intelligence Digest...", "📬")
@@ -176,11 +177,12 @@ class HeliaAutonomousDirector:
                 self.log("Helia-ContentFactory", f"Failed for {review.name}: {e}", "❌")
 
         if count > 0:
+            self.visionary.generate_growth_blueprint()
             self.log("Helia-EdgePublisher", "Rebuilding Astro static pages...", "⚙️")
             if self._run_build() and auto_push:
                 self.log("Helia-EdgePublisher", "Pushing updates to GitHub main branch...", "🚢")
                 self._deploy_git(f"feat(blog-expansion): Helia deployed {count} new B2B masterclasses")
-                self.log("HELIA-CORE", f"🚀 {count} new masterclasses deployed live to Netlify!", "🏆")
+                self.log("HELIA-CORE", f"🚀 {count} new masterclasses deployed live to Cloudflare Edge!", "🏆")
 
     def _run_build(self) -> bool:
         """Executes 'npm run build' inside site/."""
@@ -204,7 +206,7 @@ class HeliaAutonomousDirector:
             subprocess.run(["git", "add", "."], cwd=str(ROOT_DIR), check=True)
             subprocess.run(["git", "commit", "-m", commit_message], cwd=str(ROOT_DIR), check=True)
             subprocess.run(["git", "push", "origin", "main"], cwd=str(ROOT_DIR), check=True)
-            self.log("Helia-EdgePublisher", "Git push successful. Netlify build in progress.", "🌐")
+            self.log("Helia-EdgePublisher", "Git push successful. Cloudflare Pages build in progress.", "🌐")
         except subprocess.CalledProcessError as e:
             self.log("Helia-EdgePublisher", f"Git operation notice: {e}", "⚠️")
 
