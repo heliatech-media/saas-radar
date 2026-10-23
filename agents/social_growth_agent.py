@@ -72,13 +72,43 @@ No markdown fences or commentary.
     def broadcast_thread_to_x(self, tweets: list[str]) -> bool:
         """
         Broadcasts thread to X when API keys are supplied in .env.
-        If keys are absent, logs thread ready for manual publishing or future API activation.
+        Posts a continuous threaded reply sequence via X API v2.
         """
-        if not (self.twitter_api_key and self.twitter_access_token):
+        if not (self.twitter_api_key and self.twitter_api_secret and self.twitter_access_token and self.twitter_access_secret):
             print("[SOCIAL AGENT] ℹ️ Twitter API credentials not detected in .env. Thread drafted and ready for broadcast.")
             return False
 
-        # In production when credentials are provided:
-        # Will initialize tweepy.Client or request OAuth1.0a endpoint:
-        print(f"[SOCIAL AGENT] 🚀 Broadcasting {len(tweets)}-tweet thread to X...")
-        return True
+        try:
+            from requests_oauthlib import OAuth1Session
+            oauth = OAuth1Session(
+                client_key=self.twitter_api_key,
+                client_secret=self.twitter_api_secret,
+                resource_owner_key=self.twitter_access_token,
+                resource_owner_secret=self.twitter_access_secret,
+            )
+
+            print(f"[SOCIAL AGENT] 🚀 Broadcasting {len(tweets)}-tweet thread to X via API v2...")
+            previous_tweet_id = None
+            successful_posts = 0
+
+            for i, tweet_text in enumerate(tweets):
+                payload = {"text": tweet_text}
+                if previous_tweet_id:
+                    payload["reply"] = {"in_reply_to_tweet_id": previous_tweet_id}
+
+                response = oauth.post("https://api.twitter.com/2/tweets", json=payload, timeout=15)
+                if response.status_code in [200, 201]:
+                    data = response.json().get("data", {})
+                    previous_tweet_id = data.get("id")
+                    successful_posts += 1
+                else:
+                    print(f"[SOCIAL AGENT] ⚠️ Failed on tweet {i+1}: {response.status_code} - {response.text}")
+                    break
+
+            if successful_posts > 0:
+                print(f"[SOCIAL AGENT] ✅ Successfully published {successful_posts} tweets to X in sequence!")
+                return True
+            return False
+        except Exception as e:
+            print(f"[SOCIAL AGENT] ❌ Exception during X broadcast: {e}")
+            return False
