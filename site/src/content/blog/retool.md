@@ -50,7 +50,8 @@ Retool secures its position as an enterprise powerhouse through a trio of founda
 
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** "Retool turned what used to be a three-month engineering sprint into an afternoon project. It is the ultimate force multiplier for modern, scaling operations teams."
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Retool turned what used to be a three-month engineering sprint into an afternoon project. It is the ultimate force multiplier for modern, scaling operations teams."
 
 ```mermaid
 flowchart LR
@@ -60,6 +61,11 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Retool` with our verified enterprise trial link at [/go/retool](/go/retool).
 
 > [!TIP]
 > [!NOTE]

@@ -61,5 +61,8 @@ AFFILIATE_MAP = {
     "airtable": "https://airtable.com/?ref=heliatech",
     "apollo-io": "https://apollo.grsm.io/heliatech",
     "beehiiv": "https://www.beehiiv.com/?via=heliatech",
-    "brevo": "https://brevo.partnerlinks.io/heliatech"
+    "brevo": "https://brevo.partnerlinks.io/heliatech",
+    "clickup": "https://clickup.pxf.io/c/heliatech",
+    "cursor": "https://www.cursor.com/?via=heliatech",
+    "heygen": "https://heygen.grsm.io/heliatech"
 }

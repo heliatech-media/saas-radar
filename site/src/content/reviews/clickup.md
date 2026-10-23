@@ -6,7 +6,7 @@ tagline: The one app to replace them all with customizable tasks, docs, goals, a
 category: Productivity & Workspace OS
 rating: 4.3
 website_url: https://clickup.com
-affiliate_url: https://clickup.com
+affiliate_url: "https://clickup.pxf.io/c/heliatech"
 summary: ClickUp is an all-in-one productivity platform designed to consolidate project
   management, doc creation, goal tracking, and team chat into a single interface.
   It aims to eliminate app fatigue by offering extreme customizability across every

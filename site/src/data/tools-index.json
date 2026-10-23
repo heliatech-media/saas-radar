@@ -62,7 +62,8 @@
     "rating": 4.3,
     "starting_price": "$7",
     "best_for": "Fast-growing agencies, operations teams, and project managers who need hyper-customizable workflows.",
-    "affiliate_url": "https://clickup.com"
+    "affiliate_url": "https://clickup.pxf.io/c/heliatech",
+    "commission_rate": "20% recurring commission for up to 12 months"
   },
   {
     "name": "Cursor",
@@ -72,7 +73,8 @@
     "rating": 4.8,
     "starting_price": "$0/mo",
     "best_for": "Software engineers, indie hackers, and technical teams looking to drastically accelerate development and prototyping.",
-    "affiliate_url": "https://www.cursor.com"
+    "affiliate_url": "https://www.cursor.com/?via=heliatech",
+    "commission_rate": "15% recurring"
   },
   {
     "name": "ElevenLabs",
@@ -92,7 +94,18 @@
     "rating": 4.7,
     "starting_price": "$29/mo",
     "best_for": "Sales teams, content creators, global enterprises, and educators scaling localized video output.",
-    "affiliate_url": "https://www.heygen.com"
+    "affiliate_url": "https://heygen.grsm.io/heliatech",
+    "commission_rate": "20% recurring"
+  },
+  {
+    "name": "Linear",
+    "slug": "linear",
+    "tagline": "The issue tracking tool designed for high-performance software engineering teams.",
+    "category": "DevTools",
+    "rating": 4.8,
+    "starting_price": "$10/user/mo",
+    "best_for": "Fast-moving engineering teams, startups, and product-focused tech companies",
+    "affiliate_url": "https://linear.app"
   },
   {
     "name": "Lusha",

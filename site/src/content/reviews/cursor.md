@@ -6,7 +6,7 @@ tagline: The AI-first code editor built for maximum engineering velocity and dee
 category: AI & Developer Tools
 rating: 4.8
 website_url: https://www.cursor.com
-affiliate_url: https://www.cursor.com
+affiliate_url: "https://www.cursor.com/?via=heliatech"
 summary: Cursor is a fork of VS Code engineered natively for AI, providing deep codebase
   indexing, contextual multi-file edits, and intelligent terminal execution. It eliminates
   traditional copy-pasting between external LLMs and your IDE by integrating advanced

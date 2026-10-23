@@ -6,7 +6,7 @@ tagline: AI-powered video generation platform for creating hyper-realistic talki
 category: AI Video & Content Creation
 rating: 4.7
 website_url: https://www.heygen.com
-affiliate_url: https://www.heygen.com
+affiliate_url: "https://heygen.grsm.io/heliatech"
 summary: HeyGen is an advanced generative AI video platform that allows users to create
   studio-quality video content using customizable realistic AI avatars, voice cloning,
   and instantaneous text-to-speech translation. It eliminates the need for cameras,
