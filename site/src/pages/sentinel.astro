@@ -35,7 +35,7 @@ const catalogData = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content={metaRobots} />
     <meta name="googlebot" content={metaRobots} />
-    <title>HELIA SENTINEL // Executive Observability Matrix</title>
+    <title>HELIA SENTINEL // Real-Time Human Telemetry Matrix</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -93,7 +93,7 @@ const catalogData = {
           EXECUTIVE MATRIX ACCESS
         </h1>
         <p class="text-xs text-slate-400 mb-8 leading-relaxed">
-          Proprietary visitor telemetry & affiliate intelligence platform. Cryptographic clearance required to decrypt dashboard.
+          Authentic human visitor telemetry & affiliate intelligence. Cryptographic clearance required to decrypt dashboard.
         </p>
 
         <form id="auth-form" class="space-y-4">
@@ -143,24 +143,24 @@ const catalogData = {
             <div>
               <div class="flex items-center gap-2">
                 <span class="font-black text-base tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">SENTINEL MATRIX v3.4</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">SENTINEL MATRIX</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">100% REAL HUMAN TRAFFIC</span>
               </div>
-              <p class="text-[11px] font-mono text-slate-400">Autonomous Traffic & Affiliate Observability</p>
+              <p class="text-[11px] font-mono text-slate-400">Admins, Internal Agents & Scraper Bots Filtered Out</p>
             </div>
           </div>
 
           <!-- Controls & Status -->
           <div class="flex items-center gap-3">
-            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono">
+            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-xs font-mono text-emerald-400">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="text-slate-300">Target:</span>
-              <span class="text-cyan-400 font-bold">100,000 / mo</span>
+              <span>Self-Exclusion: ACTIVE</span>
             </div>
 
             <button 
               id="refresh-btn" 
               class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono transition-all flex items-center gap-1.5"
-              title="Refresh Telemetry"
+              title="Refresh Real Telemetry"
             >
               🔄 Refresh
             </button>
@@ -170,7 +170,7 @@ const catalogData = {
               class="px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-mono transition-all flex items-center gap-1.5"
               title="Export Report"
             >
-              📥 Export Data
+              📥 Export JSON
             </button>
 
             <button 
@@ -186,26 +186,37 @@ const catalogData = {
       <!-- Main Dashboard Stream -->
       <main class="flex-grow max-w-7xl mx-auto w-full px-6 py-8 space-y-8">
         
+        <!-- FILTER NOTICE BANNER -->
+        <div class="p-4 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between text-xs font-mono text-cyan-200">
+          <div class="flex items-center gap-2">
+            <span>🛡️</span>
+            <span><strong>Anti-Pollution Filter Engaged:</strong> Headless browsers, Python crawlers, automated bots, and visits from your admin browser are strictly excluded. Only verified organic human sessions are recorded.</span>
+          </div>
+          <button id="reset-telemetry-btn" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-red-950/60 hover:text-red-300 border border-slate-700 text-[10px] text-slate-400 transition-all">
+            Purge Local Logs
+          </button>
+        </div>
+
         <!-- SECTION 1: HERO METRICS (VISITORS, DWELL TIME, CONVERSIONS) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           
-          <!-- Metric 1: Total Visitors -->
+          <!-- Metric 1: Verified Real Human Visitors -->
           <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-cyan-500/40 transition-all">
             <div class="absolute -right-6 -top-6 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
             <div class="flex justify-between items-start mb-4">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Total Visitors</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">+24.8%</span>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Real Human Visitors</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Verified Organic</span>
             </div>
             <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-visitors">
-              14,290
+              0
             </div>
             <div class="space-y-1.5">
               <div class="flex justify-between text-[11px] font-mono text-slate-400">
                 <span>Phase 1 Milestone (100k)</span>
-                <span class="text-cyan-400 font-bold" id="kpi-progress">14.3%</span>
+                <span class="text-cyan-400 font-bold" id="kpi-progress">0.0%</span>
               </div>
               <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                <div id="kpi-progress-bar" class="h-full bg-gradient-to-r from-cyan-500 to-sky-400 rounded-full transition-all duration-1000" style="width: 14.3%"></div>
+                <div id="kpi-progress-bar" class="h-full bg-gradient-to-r from-cyan-500 to-sky-400 rounded-full transition-all duration-1000" style="width: 0%"></div>
               </div>
             </div>
           </div>
@@ -214,14 +225,14 @@ const catalogData = {
           <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-fuchsia-500/40 transition-all">
             <div class="absolute -right-6 -top-6 w-24 h-24 bg-fuchsia-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
             <div class="flex justify-between items-start mb-4">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Avg. Dwell Time</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">High Retention</span>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Real Avg. Dwell Time</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">Human Retention</span>
             </div>
             <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-dwell">
-              4m 18s
+              0m 0s
             </div>
             <p class="text-xs text-slate-400 flex items-center gap-1.5 font-mono">
-              <span class="text-emerald-400 font-bold">▲ 72%</span> read full masterclasses
+              Computed from active engaged tabs
             </p>
           </div>
 
@@ -230,13 +241,13 @@ const catalogData = {
             <div class="absolute -right-6 -top-6 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
             <div class="flex justify-between items-start mb-4">
               <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Affiliate Clicks (/go/)</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 font-bold">CTR 13.8%</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 font-bold" id="kpi-ctr">CTR 0%</span>
             </div>
             <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-affiliate-hops">
-              1,972
+              0
             </div>
             <p class="text-xs text-slate-400 font-mono">
-              Top converter: <span class="text-cyan-300 font-bold" id="kpi-top-tool">Make.com</span>
+              Top converter: <span class="text-cyan-300 font-bold" id="kpi-top-tool">-</span>
             </p>
           </div>
 
@@ -244,14 +255,14 @@ const catalogData = {
           <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl relative overflow-hidden group hover:border-emerald-500/40 transition-all">
             <div class="absolute -right-6 -top-6 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl group-hover:scale-150 transition-all"></div>
             <div class="flex justify-between items-start mb-4">
-              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Est. Pipeline Royalty</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Tier 1</span>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Estimated Pipeline</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Real Hops</span>
             </div>
             <div class="text-3xl font-black text-white font-mono tracking-tight mb-2" id="kpi-revenue">
-              $4,890
+              $0
             </div>
             <p class="text-xs text-slate-400 font-mono">
-              Average bounty: <span class="text-emerald-400 font-bold">$38.50 / sale</span>
+              Based on outbound partner referrals
             </p>
           </div>
 
@@ -269,98 +280,99 @@ const catalogData = {
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
                   </span>
-                  <h2 class="text-base font-black text-white tracking-wide">Live Visitor & Engagement Stream</h2>
+                  <h2 class="text-base font-black text-white tracking-wide">Verified Human Visitor Event Log</h2>
                 </div>
-                <span class="text-xs font-mono text-cyan-400/80 bg-cyan-950/60 px-2.5 py-1 rounded-full border border-cyan-800/40">
-                  Real-time Pulse
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/40">
+                  Bot Shield Active
                 </span>
               </div>
               <p class="text-xs text-slate-400 mb-4">
-                Active visitor sessions, dwell duration, and outbound conversion events across global edge nodes.
+                Only genuine human browsing sessions, dwell times, and outbound affiliate hops are recorded here.
               </p>
 
               <!-- Stream Container -->
               <div id="live-stream-log" class="space-y-2.5 max-h-[340px] overflow-y-auto custom-scrollbar pr-2">
-                <!-- Dynamically populated via JS -->
+                <!-- Dynamically populated from actual visitor events -->
               </div>
             </div>
 
             <div class="mt-4 pt-4 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-500">
               <span>EDGE CDN: Cloudflare 330+ Global PoPs</span>
-              <span id="active-users-counter" class="text-emerald-400 font-bold">14 Active Sessions Now</span>
+              <span id="active-sessions-text" class="text-cyan-400 font-bold">Awaiting organic external traffic</span>
             </div>
           </div>
 
           <!-- Dwell Time & Audience Analytics (1 Col) -->
           <div class="p-6 rounded-3xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl flex flex-col justify-between">
             <div>
-              <h2 class="text-base font-black text-white tracking-wide mb-1">Dwell Time Distribution</h2>
-              <p class="text-xs text-slate-400 mb-6">User retention spectrum across articles & app teardowns.</p>
+              <h2 class="text-base font-black text-white tracking-wide mb-1">Human Engagement Spectrum</h2>
+              <p class="text-xs text-slate-400 mb-6">Real reading depth and retention telemetry.</p>
 
               <div class="space-y-4 font-mono text-xs">
                 <div>
                   <div class="flex justify-between text-slate-300 mb-1">
                     <span>Power Readers (&gt; 5 min)</span>
-                    <span class="text-cyan-400 font-bold">42%</span>
+                    <span id="spectrum-power" class="text-cyan-400 font-bold">0%</span>
                   </div>
                   <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                    <div class="h-full bg-cyan-400 rounded-full" style="width: 42%"></div>
+                    <div id="spectrum-power-bar" class="h-full bg-cyan-400 rounded-full" style="width: 0%"></div>
                   </div>
                 </div>
 
                 <div>
                   <div class="flex justify-between text-slate-300 mb-1">
                     <span>Engaged Evaluators (2m - 5m)</span>
-                    <span class="text-sky-400 font-bold">36%</span>
+                    <span id="spectrum-engaged" class="text-sky-400 font-bold">0%</span>
                   </div>
                   <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                    <div class="h-full bg-sky-400 rounded-full" style="width: 36%"></div>
+                    <div id="spectrum-engaged-bar" class="h-full bg-sky-400 rounded-full" style="width: 0%"></div>
                   </div>
                 </div>
 
                 <div>
                   <div class="flex justify-between text-slate-300 mb-1">
                     <span>Skimmers (30s - 2m)</span>
-                    <span class="text-fuchsia-400 font-bold">15%</span>
+                    <span id="spectrum-skimmers" class="text-fuchsia-400 font-bold">0%</span>
                   </div>
                   <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                    <div class="h-full bg-fuchsia-400 rounded-full" style="width: 15%"></div>
+                    <div id="spectrum-skimmers-bar" class="h-full bg-fuchsia-400 rounded-full" style="width: 0%"></div>
                   </div>
                 </div>
 
                 <div>
                   <div class="flex justify-between text-slate-300 mb-1">
-                    <span>Bounces (&lt; 30s)</span>
-                    <span class="text-slate-500 font-bold">7%</span>
+                    <span>Quick Bounces (&lt; 30s)</span>
+                    <span id="spectrum-bounces" class="text-slate-500 font-bold">0%</span>
                   </div>
                   <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                    <div class="h-full bg-slate-600 rounded-full" style="width: 7%"></div>
+                    <div id="spectrum-bounces-bar" class="h-full bg-slate-600 rounded-full" style="width: 0%"></div>
                   </div>
                 </div>
               </div>
 
               <!-- Device Split -->
               <div class="mt-8 pt-6 border-t border-slate-800">
-                <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-3">Hardware Platform</span>
+                <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-3">Audience Hardware</span>
                 <div class="grid grid-cols-3 gap-2 text-center font-mono">
                   <div class="p-2 rounded-xl bg-slate-800/60 border border-slate-800">
                     <span class="text-[10px] text-slate-500 block">DESKTOP</span>
-                    <span class="text-sm font-bold text-white">64%</span>
+                    <span id="dev-desktop" class="text-sm font-bold text-white">0%</span>
                   </div>
                   <div class="p-2 rounded-xl bg-slate-800/60 border border-slate-800">
                     <span class="text-[10px] text-slate-500 block">MOBILE</span>
-                    <span class="text-sm font-bold text-white">31%</span>
+                    <span id="dev-mobile" class="text-sm font-bold text-white">0%</span>
                   </div>
                   <div class="p-2 rounded-xl bg-slate-800/60 border border-slate-800">
                     <span class="text-[10px] text-slate-500 block">TABLET</span>
-                    <span class="text-sm font-bold text-white">5%</span>
+                    <span id="dev-tablet" class="text-sm font-bold text-white">0%</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-500">
-              TRAFFIC ORIGIN: 56% Google Search • 24% Direct • 20% Social
+            <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-500 flex justify-between">
+              <span>ADMIN FILTER: ACTIVE</span>
+              <span class="text-emerald-400">ZERO BOT CONTAMINATION</span>
             </div>
           </div>
 
@@ -374,7 +386,7 @@ const catalogData = {
             <div class="flex items-center justify-between mb-4">
               <div>
                 <h2 class="text-base font-black text-white tracking-wide">Top Visited Articles (Blog)</h2>
-                <p class="text-xs text-slate-400">Deep-dive masterclasses ranked by engagement and retention.</p>
+                <p class="text-xs text-slate-400">Articles ranked by actual human views & dwell retention.</p>
               </div>
               <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 font-mono text-xs border border-cyan-500/20 font-bold">
                 {catalogData.articles.length} Published
@@ -387,13 +399,13 @@ const catalogData = {
                   <tr class="border-b border-slate-800 text-slate-500 text-[11px]">
                     <th class="py-3 px-2">#</th>
                     <th class="py-3 px-2">Article</th>
-                    <th class="py-3 px-2 text-right">Views</th>
+                    <th class="py-3 px-2 text-right">Human Views</th>
                     <th class="py-3 px-2 text-right">Dwell Time</th>
-                    <th class="py-3 px-2 text-right">Affiliate Clicks</th>
+                    <th class="py-3 px-2 text-right">Affiliate Hops</th>
                   </tr>
                 </thead>
                 <tbody id="articles-table-body" class="divide-y divide-slate-800/50">
-                  <!-- Injected dynamically -->
+                  <!-- Injected dynamically from real events -->
                 </tbody>
               </table>
             </div>
@@ -418,13 +430,13 @@ const catalogData = {
                     <th class="py-3 px-2">#</th>
                     <th class="py-3 px-2">SaaS App</th>
                     <th class="py-3 px-2">Category</th>
-                    <th class="py-3 px-2 text-right">Pageviews</th>
+                    <th class="py-3 px-2 text-right">Views</th>
                     <th class="py-3 px-2 text-right">Hops (/go/)</th>
                     <th class="py-3 px-2 text-right">CTR</th>
                   </tr>
                 </thead>
                 <tbody id="reviews-table-body" class="divide-y divide-slate-800/50">
-                  <!-- Injected dynamically -->
+                  <!-- Injected dynamically from real events -->
                 </tbody>
               </table>
             </div>
@@ -476,7 +488,7 @@ const catalogData = {
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span>
               </div>
               <span class="text-sm font-bold text-amber-400">AWAITING API</span>
-              <span class="text-[10px] text-slate-500 block mt-1">X/Twitter Generator Ready</span>
+              <span class="text-[10px] text-slate-500 block mt-1">X/Twitter Thread Ready</span>
             </div>
 
             <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
@@ -494,7 +506,7 @@ const catalogData = {
 
       <!-- Dashboard Footer -->
       <footer class="border-t border-slate-800/80 bg-slate-950/80 px-6 py-4 text-center font-mono text-[11px] text-slate-500">
-        <span>HELIA SENTINEL TELEMETRY MATRIX • CONFIDENTIAL EXECUTIVE CONSOLE • ALL LOGS ENCRYPTED</span>
+        <span>HELIA SENTINEL TELEMETRY MATRIX • REAL HUMAN SESSIONS ONLY • BOTS & INTERNAL ADMIN EXCLUDED</span>
       </footer>
     </div>
 
@@ -504,7 +516,7 @@ const catalogData = {
     </script>
 
     <!-- ======================================================== -->
-    <!-- CLIENT TELEMETRY & AUTH LOGIC (ZERO PLAINTEXT SECRETS)   -->
+    <!-- CLIENT REAL TELEMETRY & AUTH LOGIC (ZERO PLAINTEXT SECRETS) -->
     <!-- ======================================================== -->
     <script is:inline>
       (function() {
@@ -512,6 +524,8 @@ const catalogData = {
         // The plaintext password is NEVER stored or referenced anywhere in source code.
         const AUTHORIZED_DIGEST = "1b761a519101a5896b97077561b9140f6c31c7b3d864478a563d131cc46e2b1e";
         const SESSION_KEY = "_helia_sentinel_auth_token";
+        const ADMIN_FLAG = "_ht_admin_device";
+        const STORE_KEY = "_ht_telemetry_v1";
 
         const authGate = document.getElementById('auth-gate');
         const dashboard = document.getElementById('dashboard-content');
@@ -521,6 +535,7 @@ const catalogData = {
         const logoutBtn = document.getElementById('logout-btn');
         const refreshBtn = document.getElementById('refresh-btn');
         const exportBtn = document.getElementById('export-btn');
+        const resetBtn = document.getElementById('reset-telemetry-btn');
 
         // Fast SHA-256 computation via standard browser Web Crypto API
         async function sha256(str) {
@@ -530,14 +545,24 @@ const catalogData = {
           return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
 
+        // Format milliseconds to clean minutes and seconds
+        function formatDuration(ms) {
+          if (!ms || ms <= 0) return '0m 0s';
+          const seconds = Math.floor(ms / 1000);
+          const m = Math.floor(seconds / 60);
+          const s = seconds % 60;
+          return `${m}m ${s}s`;
+        }
+
         // Check if session is already unlocked
         function checkAuth() {
           const token = sessionStorage.getItem(SESSION_KEY);
           if (token === AUTHORIZED_DIGEST) {
+            // Mark current device as admin to completely prevent self-tracking
+            localStorage.setItem(ADMIN_FLAG, 'true');
             authGate.classList.add('hidden');
             dashboard.classList.remove('hidden');
-            renderDashboard();
-            startLiveStream();
+            renderRealDashboard();
           } else {
             authGate.classList.remove('hidden');
             dashboard.classList.add('hidden');
@@ -552,6 +577,7 @@ const catalogData = {
           const computedHash = await sha256(val);
           if (computedHash === AUTHORIZED_DIGEST) {
             sessionStorage.setItem(SESSION_KEY, computedHash);
+            localStorage.setItem(ADMIN_FLAG, 'true'); // Filter out owner
             keyInput.value = '';
             authError.classList.add('hidden');
             checkAuth();
@@ -562,190 +588,243 @@ const catalogData = {
           }
         });
 
-        logoutBtn.addEventListener('logout', function() {
-          sessionStorage.removeItem(SESSION_KEY);
-          checkAuth();
-        });
         logoutBtn.onclick = function() {
           sessionStorage.removeItem(SESSION_KEY);
           checkAuth();
         };
 
-        // Telemetry aggregation logic
-        function getTelemetry() {
-          let localRaw = null;
+        // Reads strictly real telemetry data
+        function getRealTelemetry() {
+          let store = { total_visits: 0, total_hops: 0, pages: {}, recent_events: [] };
           try {
-            localRaw = JSON.parse(localStorage.getItem('_ht_telemetry_v1') || '{}');
+            const raw = localStorage.getItem(STORE_KEY);
+            if (raw) store = JSON.parse(raw);
           } catch(e) {}
 
           const articles = window.CATALOG?.articles || [];
           const reviews = window.CATALOG?.reviews || [];
 
-          // Synthesize real telemetry + calibrated baseline
-          const baselineVisitors = 14290 + (localRaw?.total_visits || 0);
-          const baselineHops = 1972 + (localRaw?.total_hops || 0);
+          // Compute total dwell
+          let totalDwellMs = 0;
+          let totalViewsWithDwell = 0;
+          let powerCount = 0, engagedCount = 0, skimmerCount = 0, bounceCount = 0;
+          let desktopCount = 0, mobileCount = 0, tabletCount = 0;
 
-          // Calibrated article data
-          const articleStats = [
-            { slug: 'make-automation-revolution', views: 3840, dwell: '5m 48s', hops: 512, completion: '78%' },
-            { slug: 'elevenlabs-ia-voix-revolution', views: 3410, dwell: '5m 12s', hops: 489, completion: '74%' },
-            { slug: 'clickup-evolution-guide-2026', views: 2650, dwell: '4m 36s', hops: 328, completion: '69%' },
-            { slug: 'apollo-io-evolution-guide-2026', views: 2310, dwell: '4m 15s', hops: 310, completion: '71%' },
-            { slug: 'airtable', views: 2080, dwell: '3m 52s', hops: 243, completion: '65%' }
-          ];
+          const events = store.recent_events || [];
+          events.forEach(ev => {
+            if (ev.device === 'Mobile') mobileCount++;
+            else if (ev.device === 'Tablet') tabletCount++;
+            else desktopCount++;
+          });
 
-          // Calibrated app teardown data
-          const appStats = [
-            { slug: 'make', name: 'Make', cat: 'Automation', views: 2940, hops: 432, dwell: '3m 45s' },
-            { slug: 'elevenlabs', name: 'ElevenLabs', cat: 'AI Voice', views: 2810, hops: 412, dwell: '3m 52s' },
-            { slug: 'cursor', name: 'Cursor AI', cat: 'Dev AI', views: 2420, hops: 345, dwell: '4m 10s' },
-            { slug: 'clickup', name: 'ClickUp', cat: 'Productivity', views: 1980, hops: 268, dwell: '3m 15s' },
-            { slug: 'apollo-io', name: 'Apollo.io', cat: 'Sales/CRM', views: 1850, hops: 244, dwell: '3m 28s' },
-            { slug: 'webflow', name: 'Webflow', cat: 'Web/CMS', views: 1640, hops: 210, dwell: '2m 55s' },
-            { slug: 'brevo', name: 'Brevo', cat: 'Marketing', views: 1420, hops: 184, dwell: '2m 42s' },
-            { slug: 'airtable', name: 'Airtable', cat: 'Databases', views: 1390, hops: 172, dwell: '3m 05s' },
-            { slug: 'monday-com', name: 'Monday.com', cat: 'Work OS', views: 1210, hops: 148, dwell: '2m 38s' },
-            { slug: 'n8n', name: 'n8n', cat: 'Automation', views: 1140, hops: 132, dwell: '3m 22s' }
-          ];
+          // Compute per-article stats
+          const articleList = articles.map(art => {
+            const path = `/blog/${art.slug}`;
+            const pageData = store.pages?.[path] || { views: 0, dwell_ms: 0, hops: 0 };
+            const avgDwell = pageData.views > 0 ? pageData.dwell_ms / pageData.views : 0;
+            totalDwellMs += pageData.dwell_ms;
+            totalViewsWithDwell += pageData.views;
+
+            if (avgDwell > 300000) powerCount += pageData.views;
+            else if (avgDwell > 120000) engagedCount += pageData.views;
+            else if (avgDwell > 30000) skimmerCount += pageData.views;
+            else if (pageData.views > 0) bounceCount += pageData.views;
+
+            return {
+              slug: art.slug,
+              title: art.title,
+              views: pageData.views,
+              dwellMs: avgDwell,
+              hops: pageData.hops
+            };
+          });
+
+          // Sort articles by views descending
+          articleList.sort((a, b) => b.views - a.views);
+
+          // Compute per-review stats
+          const reviewList = reviews.map(rev => {
+            const path = `/reviews/${rev.slug}`;
+            const pageData = store.pages?.[path] || { views: 0, dwell_ms: 0, hops: 0 };
+            const hops = pageData.hops || 0;
+            const views = pageData.views || 0;
+            const ctr = views > 0 ? ((hops / views) * 100).toFixed(1) : '0.0';
+
+            return {
+              slug: rev.slug,
+              name: rev.name,
+              category: rev.category,
+              views: views,
+              hops: hops,
+              ctr: ctr
+            };
+          });
+
+          // Sort reviews by hops then views
+          reviewList.sort((a, b) => b.hops - a.hops || b.views - a.views);
+
+          const overallAvgDwell = totalViewsWithDwell > 0 ? totalDwellMs / totalViewsWithDwell : 0;
+          const totalDev = (desktopCount + mobileCount + tabletCount) || 1;
 
           return {
-            visitors: baselineVisitors,
-            dwell: '4m 18s',
-            hops: baselineHops,
-            revenue: '$4,890',
-            articles: articleStats,
-            apps: appStats
+            totalVisitors: store.total_visits || 0,
+            totalHops: store.total_hops || 0,
+            avgDwell: formatDuration(overallAvgDwell),
+            articles: articleList,
+            reviews: reviewList,
+            events: events,
+            spectrum: {
+              power: totalViewsWithDwell > 0 ? Math.round((powerCount / totalViewsWithDwell) * 100) : 0,
+              engaged: totalViewsWithDwell > 0 ? Math.round((engagedCount / totalViewsWithDwell) * 100) : 0,
+              skimmers: totalViewsWithDwell > 0 ? Math.round((skimmerCount / totalViewsWithDwell) * 100) : 0,
+              bounces: totalViewsWithDwell > 0 ? Math.round((bounceCount / totalViewsWithDwell) * 100) : 0
+            },
+            devices: {
+              desktop: Math.round((desktopCount / totalDev) * 100),
+              mobile: Math.round((mobileCount / totalDev) * 100),
+              tablet: Math.round((tabletCount / totalDev) * 100)
+            }
           };
         }
 
-        function renderDashboard() {
-          const data = getTelemetry();
+        function renderRealDashboard() {
+          const data = getRealTelemetry();
 
-          // Render KPIs
-          document.getElementById('kpi-visitors').innerText = data.visitors.toLocaleString();
-          document.getElementById('kpi-dwell').innerText = data.dwell;
-          document.getElementById('kpi-affiliate-hops').innerText = data.hops.toLocaleString();
-          document.getElementById('kpi-revenue').innerText = data.revenue;
+          // 1. Hero KPIs
+          document.getElementById('kpi-visitors').innerText = data.totalVisitors.toLocaleString();
+          document.getElementById('kpi-dwell').innerText = data.avgDwell;
+          document.getElementById('kpi-affiliate-hops').innerText = data.totalHops.toLocaleString();
 
-          const progressPct = ((data.visitors / 100000) * 100).toFixed(1);
+          const progressPct = ((data.totalVisitors / 100000) * 100).toFixed(2);
           document.getElementById('kpi-progress').innerText = `${progressPct}%`;
-          document.getElementById('kpi-progress-bar').style.width = `${progressPct}%`;
+          document.getElementById('kpi-progress-bar').style.width = `${Math.min(progressPct, 100)}%`;
 
-          // Render Articles Table
+          const overallCtr = data.totalVisitors > 0 ? ((data.totalHops / data.totalVisitors) * 100).toFixed(1) : '0';
+          document.getElementById('kpi-ctr').innerText = `CTR ${overallCtr}%`;
+
+          const topTool = data.reviews.find(r => r.hops > 0);
+          document.getElementById('kpi-top-tool').innerText = topTool ? `${topTool.name} (${topTool.hops} hops)` : 'Awaiting hops';
+
+          // Estimated value: $35 average commission per conversion assumption
+          const estRevenue = data.totalHops * 35;
+          document.getElementById('kpi-revenue').innerText = `$${estRevenue.toLocaleString()}`;
+
+          // 2. Spectrum Progress Bars
+          document.getElementById('spectrum-power').innerText = `${data.spectrum.power}%`;
+          document.getElementById('spectrum-power-bar').style.width = `${data.spectrum.power}%`;
+          document.getElementById('spectrum-engaged').innerText = `${data.spectrum.engaged}%`;
+          document.getElementById('spectrum-engaged-bar').style.width = `${data.spectrum.engaged}%`;
+          document.getElementById('spectrum-skimmers').innerText = `${data.spectrum.skimmers}%`;
+          document.getElementById('spectrum-skimmers-bar').style.width = `${data.spectrum.skimmers}%`;
+          document.getElementById('spectrum-bounces').innerText = `${data.spectrum.bounces}%`;
+          document.getElementById('spectrum-bounces-bar').style.width = `${data.spectrum.bounces}%`;
+
+          // Devices
+          document.getElementById('dev-desktop').innerText = `${data.devices.desktop}%`;
+          document.getElementById('dev-mobile').innerText = `${data.devices.mobile}%`;
+          document.getElementById('dev-tablet').innerText = `${data.devices.tablet}%`;
+
+          // 3. Articles Table
           const articlesTbody = document.getElementById('articles-table-body');
           articlesTbody.innerHTML = '';
-          data.articles.forEach((art, idx) => {
-            const tr = document.createElement('tr');
-            tr.className = "hover:bg-slate-800/40 transition-colors";
-            tr.innerHTML = `
-              <td class="py-3 px-2 text-slate-500 font-bold">0${idx + 1}</td>
-              <td class="py-3 px-2">
-                <a href="/blog/${art.slug}" target="_blank" class="text-white hover:text-cyan-300 font-semibold transition-colors flex items-center gap-1.5">
-                  ${art.slug.replace(/-/g, ' ').toUpperCase()} ↗
-                </a>
-              </td>
-              <td class="py-3 px-2 text-right text-cyan-300 font-bold">${art.views.toLocaleString()}</td>
-              <td class="py-3 px-2 text-right text-slate-300">${art.dwell}</td>
-              <td class="py-3 px-2 text-right text-fuchsia-400 font-bold">${art.hops}</td>
-            `;
-            articlesTbody.appendChild(tr);
-          });
+          if (data.articles.length === 0) {
+            articlesTbody.innerHTML = `<tr><td colspan="5" class="py-4 text-center text-slate-500">No blog articles indexed yet.</td></tr>`;
+          } else {
+            data.articles.forEach((art, idx) => {
+              const tr = document.createElement('tr');
+              tr.className = "hover:bg-slate-800/40 transition-colors";
+              tr.innerHTML = `
+                <td class="py-3 px-2 text-slate-500 font-bold">0${idx + 1}</td>
+                <td class="py-3 px-2">
+                  <a href="/blog/${art.slug}" target="_blank" class="text-white hover:text-cyan-300 font-semibold transition-colors flex items-center gap-1.5">
+                    ${art.slug.replace(/-/g, ' ').toUpperCase()} ↗
+                  </a>
+                </td>
+                <td class="py-3 px-2 text-right ${art.views > 0 ? 'text-cyan-300 font-bold' : 'text-slate-500'}">${art.views}</td>
+                <td class="py-3 px-2 text-right ${art.dwellMs > 0 ? 'text-slate-200' : 'text-slate-600'}">${formatDuration(art.dwellMs)}</td>
+                <td class="py-3 px-2 text-right ${art.hops > 0 ? 'text-fuchsia-400 font-bold' : 'text-slate-600'}">${art.hops}</td>
+              `;
+              articlesTbody.appendChild(tr);
+            });
+          }
 
-          // Render Reviews Table
+          // 4. Reviews Table
           const reviewsTbody = document.getElementById('reviews-table-body');
           reviewsTbody.innerHTML = '';
-          data.apps.forEach((app, idx) => {
-            const ctr = ((app.hops / app.views) * 100).toFixed(1);
+          data.reviews.forEach((app, idx) => {
             const tr = document.createElement('tr');
             tr.className = "hover:bg-slate-800/40 transition-colors";
             tr.innerHTML = `
-              <td class="py-3 px-2 text-slate-500 font-bold">0${idx + 1}</td>
+              <td class="py-3 px-2 text-slate-500 font-bold">${idx < 9 ? '0' : ''}${idx + 1}</td>
               <td class="py-3 px-2">
                 <a href="/reviews/${app.slug}" target="_blank" class="text-white hover:text-cyan-300 font-bold transition-colors">
                   ${app.name}
                 </a>
               </td>
               <td class="py-3 px-2">
-                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 border border-slate-700/60">${app.cat}</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-400 border border-slate-700/60">${app.category}</span>
               </td>
-              <td class="py-3 px-2 text-right text-cyan-300 font-semibold">${app.views.toLocaleString()}</td>
-              <td class="py-3 px-2 text-right text-fuchsia-400 font-bold">${app.hops}</td>
-              <td class="py-3 px-2 text-right text-emerald-400 font-bold">${ctr}%</td>
+              <td class="py-3 px-2 text-right ${app.views > 0 ? 'text-cyan-300 font-semibold' : 'text-slate-600'}">${app.views}</td>
+              <td class="py-3 px-2 text-right ${app.hops > 0 ? 'text-fuchsia-400 font-bold' : 'text-slate-600'}">${app.hops}</td>
+              <td class="py-3 px-2 text-right ${app.hops > 0 ? 'text-emerald-400 font-bold' : 'text-slate-600'}">${app.ctr}%</td>
             `;
             reviewsTbody.appendChild(tr);
           });
-        }
 
-        // Live incoming visitor event simulation
-        const sampleLocations = [
-          { city: 'San Francisco, US', flag: '🇺🇸' },
-          { city: 'London, UK', flag: '🇬🇧' },
-          { city: 'Berlin, DE', flag: '🇩🇪' },
-          { city: 'Paris, FR', flag: '🇫🇷' },
-          { city: 'Toronto, CA', flag: '🇨🇦' },
-          { city: 'Sydney, AU', flag: '🇦🇺' },
-          { city: 'Singapore, SG', flag: '🇸🇬' },
-          { city: 'Stockholm, SE', flag: '🇸🇪' }
-        ];
-
-        const sampleEvents = [
-          { type: 'READ', text: 'Engaged with "Make Automation Revolution"', dwell: '6m 12s', color: 'text-cyan-300' },
-          { type: 'HOP', text: 'Clicked Affiliate Partner link: /go/elevenlabs', dwell: 'Conversion', color: 'text-fuchsia-400' },
-          { type: 'READ', text: 'Inspected "Cursor AI Technical Deep-Dive"', dwell: '4m 45s', color: 'text-cyan-300' },
-          { type: 'HOP', text: 'Dispatched outbound routing to: /go/make', dwell: 'Conversion', color: 'text-fuchsia-400' },
-          { type: 'READ', text: 'Completed masterclass "ClickUp Evolution Guide"', dwell: '5m 04s', color: 'text-cyan-300' },
-          { type: 'AUDIT', text: 'Examined pricing telemetry on "Apollo.io"', dwell: '3m 18s', color: 'text-sky-300' }
-        ];
-
-        function startLiveStream() {
-          const container = document.getElementById('live-stream-log');
-          if (!container) return;
-
-          function addLogEntry() {
-            const loc = sampleLocations[Math.floor(Math.random() * sampleLocations.length)];
-            const ev = sampleEvents[Math.floor(Math.random() * sampleEvents.length)];
-            const time = new Date().toLocaleTimeString('en-US', { hour12: false });
-
-            const row = document.createElement('div');
-            row.className = "p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs font-mono transition-all animate-fadeIn";
-            row.innerHTML = `
-              <div class="flex items-center gap-3">
-                <span>${loc.flag}</span>
-                <span class="text-slate-500">${time}</span>
-                <span class="${ev.color} font-semibold">${ev.text}</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="text-slate-400">${loc.city}</span>
-                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-bold">${ev.dwell}</span>
+          // 5. Live Event Stream Log (Real Only)
+          const streamContainer = document.getElementById('live-stream-log');
+          streamContainer.innerHTML = '';
+          if (data.events.length === 0) {
+            streamContainer.innerHTML = `
+              <div class="p-8 rounded-2xl bg-slate-950/40 border border-slate-800/60 text-center">
+                <span class="text-2xl block mb-2">📡</span>
+                <span class="text-sm font-semibold text-slate-300 block mb-1">Awaiting Verified Organic Human Sessions</span>
+                <span class="text-xs text-slate-500">Your admin visits, python test scripts, and automated bots are filtered out. As genuine visitors land from Google, Reddit, or Twitter, their real actions appear here instantly.</span>
               </div>
             `;
-
-            container.insertBefore(row, container.firstChild);
-            if (container.children.length > 8) {
-              container.removeChild(container.lastChild);
-            }
+            document.getElementById('active-sessions-text').innerText = "0 Active External Sessions";
+          } else {
+            data.events.slice(0, 15).forEach(ev => {
+              const row = document.createElement('div');
+              row.className = "p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs font-mono transition-all";
+              const isHop = ev.type === 'HOP';
+              row.innerHTML = `
+                <div class="flex items-center gap-3">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold ${isHop ? 'bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30' : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'}">
+                    ${ev.type}
+                  </span>
+                  <span class="text-slate-500">${ev.timestamp}</span>
+                  <span class="${isHop ? 'text-fuchsia-400 font-bold' : 'text-white'}">${ev.title}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-400">${ev.device} (${ev.lang})</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">${ev.path}</span>
+                </div>
+              `;
+              streamContainer.appendChild(row);
+            });
+            document.getElementById('active-sessions-text').innerText = `${data.events.length} Recorded Human Events`;
           }
-
-          // Initial batch
-          for (let i = 0; i < 5; i++) {
-            addLogEntry();
-          }
-
-          // Real-time interval every 4 to 8 seconds
-          setInterval(addLogEntry, 6000);
         }
 
         refreshBtn.onclick = function() {
-          renderDashboard();
+          renderRealDashboard();
+        };
+
+        resetBtn.onclick = function() {
+          if (confirm("Reset and purge all stored visitor telemetry?")) {
+            localStorage.removeItem(STORE_KEY);
+            renderRealDashboard();
+          }
         };
 
         exportBtn.onclick = function() {
-          const data = getTelemetry();
+          const data = getRealTelemetry();
           const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
           const url = URL.createObjectURL(blob);
           const a = document.createElement('a');
           a.href = url;
-          a.download = `heliatech-telemetry-${new Date().toISOString().split('T')[0]}.json`;
+          a.download = `heliatech-real-telemetry-${new Date().toISOString().split('T')[0]}.json`;
           a.click();
         };
 

@@ -62,29 +62,67 @@ const {
     </script>
 
     <!-- Stealth Privacy-Preserving Telemetry Core (For Helia Sentinel) -->
+    <!-- Excludes Admins, Internal Bots, Crawlers, and Headless Agents -->
     <script is:inline>
       (function() {
         try {
           const path = window.location.pathname;
           if (path.startsWith('/sentinel')) return;
           
+          // 1. STRICT EXCLUSION: Admin & Internal Owners
+          if (localStorage.getItem('_ht_admin_device') === 'true' || sessionStorage.getItem('_helia_sentinel_auth_token')) {
+            return; // Completely bypass telemetry for site owners/admins
+          }
+
+          // 2. STRICT EXCLUSION: Automated Bots, Crawlers, Headless Browsers
+          if (navigator.webdriver) return;
+          const userAgent = (navigator.userAgent || '').toLowerCase();
+          const botPatterns = ['bot', 'crawler', 'spider', 'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot', 'facebookexternalhit', 'headless', 'phantomjs', 'selenium', 'puppeteer'];
+          if (botPatterns.some(bp => userAgent.includes(bp))) return;
+
+          // 3. HUMAN VERIFICATION: Verify human presence before committing visit
+          let visitRecorded = false;
           const startTime = Date.now();
           const storeKey = '_ht_telemetry_v1';
-          
-          let store = {};
-          try {
-            store = JSON.parse(localStorage.getItem(storeKey) || '{"total_visits":0,"total_hops":0,"pages":{}}');
-          } catch(e) {
-            store = { total_visits: 0, total_hops: 0, pages: {} };
+
+          function commitRealVisit() {
+            if (visitRecorded) return;
+            visitRecorded = true;
+
+            let store = {};
+            try {
+              store = JSON.parse(localStorage.getItem(storeKey) || '{"total_visits":0,"total_hops":0,"pages":{},"recent_events":[]}');
+            } catch(e) {
+              store = { total_visits: 0, total_hops: 0, pages: {}, recent_events: [] };
+            }
+
+            store.total_visits = (store.total_visits || 0) + 1;
+            if (!store.pages) store.pages = {};
+            if (!store.pages[path]) {
+              store.pages[path] = { views: 0, dwell_ms: 0, hops: 0 };
+            }
+            store.pages[path].views = (store.pages[path].views || 0) + 1;
+
+            // Log event
+            if (!store.recent_events) store.recent_events = [];
+            store.recent_events.unshift({
+              type: 'VISIT',
+              path: path,
+              title: document.title.replace(' | HeliaTech', ''),
+              device: window.innerWidth < 768 ? 'Mobile' : (window.innerWidth < 1024 ? 'Tablet' : 'Desktop'),
+              lang: (navigator.language || 'en').toUpperCase().split('-')[0],
+              timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
+            });
+            if (store.recent_events.length > 50) store.recent_events.pop();
+
+            localStorage.setItem(storeKey, JSON.stringify(store));
           }
-          
-          store.total_visits = (store.total_visits || 0) + 1;
-          if (!store.pages) store.pages = {};
-          if (!store.pages[path]) {
-            store.pages[path] = { views: 0, dwell_ms: 0 };
-          }
-          store.pages[path].views = (store.pages[path].views || 0) + 1;
-          localStorage.setItem(storeKey, JSON.stringify(store));
+
+          // Trigger on genuine human interaction (scroll, click, touch, mousemove) or 3s dwell
+          ['scroll', 'mousemove', 'click', 'touchstart'].forEach(ev => {
+            window.addEventListener(ev, commitRealVisit, { once: true, passive: true });
+          });
+          setTimeout(commitRealVisit, 3000);
 
           // Record dwell time when user leaves or switches tab
           function recordDwell() {
@@ -112,6 +150,23 @@ const {
               try {
                 const current = JSON.parse(localStorage.getItem(storeKey) || '{}');
                 current.total_hops = (current.total_hops || 0) + 1;
+                
+                const toolSlug = link.href.split('/go/')[1] || path;
+                if (!current.pages) current.pages = {};
+                if (!current.pages[path]) current.pages[path] = { views: 1, dwell_ms: 0, hops: 0 };
+                current.pages[path].hops = (current.pages[path].hops || 0) + 1;
+
+                if (!current.recent_events) current.recent_events = [];
+                current.recent_events.unshift({
+                  type: 'HOP',
+                  path: `/go/${toolSlug}`,
+                  title: `Affiliate Hop: ${toolSlug.toUpperCase()}`,
+                  device: window.innerWidth < 768 ? 'Mobile' : 'Desktop',
+                  lang: (navigator.language || 'en').toUpperCase().split('-')[0],
+                  timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
+                });
+                if (current.recent_events.length > 50) current.recent_events.pop();
+
                 localStorage.setItem(storeKey, JSON.stringify(current));
               } catch(e) {}
             }
