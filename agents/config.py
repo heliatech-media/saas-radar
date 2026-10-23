@@ -65,11 +65,13 @@ AFFILIATE_MAP = {
     "clickup": "https://clickup.pxf.io/c/heliatech",
     "cursor": "https://www.cursor.com/?via=heliatech",
     "heygen": "https://heygen.grsm.io/heliatech",
-    "linear": "https://linear.app",
+    "linear": "https://linear.app/?via=heliatech",
     "lusha": "https://lusha.grsm.io/heliatech",
     "monday-com": "https://monday.com/?ref=heliatech",
     "framer": "https://framer.partnerstack.com/heliatech",
     "n8n": "https://n8n.io/?via=heliatech",
     "lemlist": "https://lemlist.com/?via=heliatech",
-    "notion-ai": "https://affiliates.notion.so/heliatech"
+    "notion-ai": "https://affiliates.notion.so/heliatech",
+    "partnerstack": "https://partnerstack.com/?via=heliatech",
+    "printify": "https://printify.pxf.io/c/heliatech"
 }

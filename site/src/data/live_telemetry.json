@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-23 21:51:13 UTC",
+  "last_updated": "2026-10-23 22:07:14 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 25,
-    "total_published_investigations": 64,
-    "reviews_audited": 26,
-    "masterclasses_and_duels": 38,
+    "total_monetized_tools": 26,
+    "total_published_investigations": 66,
+    "reviews_audited": 27,
+    "masterclasses_and_duels": 39,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$8,750 USD",
+    "projected_monthly_mrr": "$9,100 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -129,8 +129,8 @@
     },
     {
       "slug": "linear",
-      "destination": "https://linear.app",
-      "type": "Catalog Edge Hop"
+      "destination": "https://linear.app/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "lusha",
@@ -159,12 +159,12 @@
     },
     {
       "slug": "partnerstack",
-      "destination": "https://partnerstack.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://partnerstack.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "printify",
-      "destination": "https://printify.com",
+      "destination": "https://printify.pxf.io/c/heliatech",
       "type": "Catalog Edge Hop"
     },
     {
@@ -175,6 +175,11 @@
     {
       "slug": "supabase",
       "destination": "https://supabase.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "vercel",
+      "destination": "https://vercel.com",
       "type": "Catalog Edge Hop"
     },
     {

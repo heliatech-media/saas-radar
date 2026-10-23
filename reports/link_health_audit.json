@@ -1,10 +1,19 @@
 {
-  "timestamp": "2026-10-23 22:02:18",
-  "total_links_audited": 50,
+  "timestamp": "2026-10-23 22:10:05",
+  "total_links_audited": 51,
   "healthy_links": 50,
-  "broken_links_count": 0,
-  "health_rate": "100.0%",
-  "broken_links": [],
+  "broken_links_count": 1,
+  "health_rate": "98.0%",
+  "broken_links": [
+    {
+      "slug": "notion-ai",
+      "target_url": "https://affiliates.notion.so/heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+    }
+  ],
   "audit_details": [
     {
       "slug": "activepieces",
@@ -86,7 +95,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=YVKenrFmYGX1Fq&gsxid=YVKenrFmYGX1Fq&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=lJ8F2wQ7kPaQPM&gsxid=lJ8F2wQ7kPaQPM&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -127,8 +136,8 @@
     },
     {
       "slug": "linear",
-      "target_url": "https://linear.app",
-      "final_url": "https://linear.app/",
+      "target_url": "https://linear.app/?via=heliatech",
+      "final_url": "https://linear.app/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -176,10 +185,11 @@
     },
     {
       "slug": "notion-ai",
-      "target_url": "https://www.notion.so/?ref=heliatech",
-      "final_url": "https://www.notion.com/?ref=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://affiliates.notion.so/heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "openai-tts",
@@ -204,8 +214,15 @@
     },
     {
       "slug": "partnerstack",
-      "target_url": "https://partnerstack.com",
-      "final_url": "https://partnerstack.com/",
+      "target_url": "https://partnerstack.com/?via=heliatech",
+      "final_url": "https://partnerstack.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "phantombuster",
+      "target_url": "https://www.phantombuster.com",
+      "final_url": "https://phantombuster.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -219,7 +236,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=WcVLIus2vYr6Dv&gsxid=WcVLIus2vYr6Dv&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cxivD2fcXceb3Q&gsxid=cxivD2fcXceb3Q&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -232,7 +249,7 @@
     },
     {
       "slug": "printify",
-      "target_url": "https://printify.com",
+      "target_url": "https://www.printify.com",
       "final_url": "https://printify.com/",
       "status_code": 200,
       "healthy": true

@@ -6,7 +6,7 @@ tagline: The issue tracking tool designed for high-performance software engineer
 category: DevTools
 rating: 4.8
 website_url: https://linear.app
-affiliate_url: "https://linear.app"
+affiliate_url: "https://linear.app/?via=heliatech"
 summary: Linear is a streamlined, blazing-fast issue tracking and project management
   tool built specifically for software development teams. By prioritizing keyboard
   shortcuts, minimalist UI, and immediate loading states, it eliminates the administrative

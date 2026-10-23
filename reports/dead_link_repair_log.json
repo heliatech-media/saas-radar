@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-23T21:58:02.587231",
+  "timestamp": "2026-10-23T22:08:40.803861",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 64,
-    "total_redirects_active": 50,
+    "total_content_files_scanned": 66,
+    "total_redirects_active": 51,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 5,
+    "external_targets_repaired": 6,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -78,7 +78,7 @@
     },
     {
       "slug": "playht",
-      "target_url": "https://play.ht/?ref=heliatech",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
       "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "vercel",
-      "target_url": "https://vercel.com",
-      "source_file": "vercel-evolution-guide-2026.md"
+      "slug": "phantombuster",
+      "target_url": "https://www.phantombuster.com",
+      "source_file": "phantombuster-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -142,7 +142,7 @@
     {
       "slug": "apollo-io",
       "dead_target": "https://apollo.grsm.io/heliatech",
-      "healed_target": "https://www.apollo-io.com",
+      "healed_target": "https://www.apollo.io/?ref=heliatech",
       "status_code": 404
     },
     {
@@ -167,6 +167,12 @@
       "slug": "lusha",
       "dead_target": "https://lusha.grsm.io/heliatech",
       "healed_target": "https://www.lusha.com",
+      "status_code": 404
+    },
+    {
+      "slug": "printify",
+      "dead_target": "https://printify.pxf.io/c/heliatech",
+      "healed_target": "https://www.printify.com",
       "status_code": 404
     }
   ]

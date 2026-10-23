@@ -6,7 +6,7 @@ tagline: The complete partnership ecosystem to scale SaaS revenue through affili
 category: B2B Partner Ecosystem
 rating: 4.6
 website_url: https://partnerstack.com
-affiliate_url: https://partnerstack.com
+affiliate_url: "https://partnerstack.com/?via=heliatech"
 summary: PartnerStack is a comprehensive B2B partner management platform designed
   specifically for SaaS companies looking to scale revenue through affiliates, referral
   partners, and resellers. It automates partner discovery, tracking, tiering, and

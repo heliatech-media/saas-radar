@@ -127,8 +127,8 @@
     "rating": 4.8,
     "starting_price": "$10/user/mo",
     "best_for": "Fast-moving engineering teams, startups, and product-focused tech companies",
-    "affiliate_url": "https://linear.app",
-    "commission_rate": "Not publicly disclosed"
+    "affiliate_url": "https://linear.app/?via=heliatech",
+    "commission_rate": "Not publicly disclosed or official affiliate program not currently open"
   },
   {
     "name": "Lusha",
@@ -181,7 +181,18 @@
     "rating": 4.6,
     "starting_price": "Free",
     "best_for": "B2B SaaS companies, agencies, and enterprise software teams looking to manage multiple partnership channels at scale.",
-    "affiliate_url": "https://partnerstack.com"
+    "affiliate_url": "https://partnerstack.com/?via=heliatech",
+    "commission_rate": "Custom tiered rewards based on software programs hosted on PartnerStack"
+  },
+  {
+    "name": "PhantomBuster",
+    "slug": "phantombuster",
+    "tagline": "The code-free automation and data extraction platform to scale your B2B lead generation.",
+    "category": "Automation",
+    "rating": 4.5,
+    "starting_price": "$69/mo",
+    "best_for": "B2B growth marketers, sales development reps (SDRs), and recruiters scaling outbound campaigns.",
+    "affiliate_url": "https://phantombuster.com"
   },
   {
     "name": "Printify",
@@ -191,7 +202,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "E-commerce entrepreneurs, creators, and brands wanting to launch custom merchandise without upfront inventory costs.",
-    "affiliate_url": "https://printify.com"
+    "affiliate_url": "https://printify.pxf.io/c/heliatech",
+    "commission_rate": "10% commission on sales for the first 12 months"
   },
   {
     "name": "Retool",

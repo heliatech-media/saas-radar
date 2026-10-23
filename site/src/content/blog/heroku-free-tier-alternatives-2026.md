@@ -60,6 +60,11 @@ flowchart LR
 
 > [!TIP]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
+
+> [!TIP]
+> [!NOTE]
 > **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
 
 > [!TIP]
@@ -78,7 +83,7 @@ When migrating off Heroku Postgres, spinning up a basic managed database is no l
 
 ### Exact Migration Steps: Heroku Postgres to Supabase in 4 CLI Commands
 
-Migrating your legacy Heroku Postgres database to Supabase takes minutes using standard PostgreSQL utilities. Ensure you have the [Supabase CLI](https://supabase.com/docs/guides/cli) installed.
+Migrating your legacy Heroku Postgres database to [Supabase](/reviews/supabase) takes minutes using standard PostgreSQL utilities. Ensure you have the [Supabase CLI](https://supabase.com/docs/guides/cli) installed.
 
 ### ⚡ Step 1: Dump your Heroku database schema and data**
 Export your remote Heroku instance using standard `pg_dump`. Fetch your connection string from your Heroku dashboard (`heroku config:get DATABASE_URL`).
@@ -111,7 +116,8 @@ supabase db diff
 
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
 
 ---
 

@@ -6,7 +6,7 @@ tagline: A robust print-on-demand platform connecting e-commerce stores with a g
 category: Print on Demand
 rating: 4.6
 website_url: https://printify.com
-affiliate_url: https://printify.com
+affiliate_url: "https://printify.pxf.io/c/heliatech"
 summary: Printify acts as a seamless bridge between online storefronts and a decentralized
   network of print-on-demand manufacturers. It automates inventory, fulfillment, and
   shipping so merchants can focus purely on design and marketing without holding physical
