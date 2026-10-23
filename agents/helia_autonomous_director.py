@@ -14,6 +14,7 @@ Helia's Internal Fleet of Specialized Sub-Agents (Stealth / Invisible to Competi
 8. Helia-EdgePublisher: Validates Astro builds and deploys to Cloudflare Pages edge without latency.
 9. Helia-ArticleStylist: Architects luxury layouts, Mermaid diagrams, tables & visual callouts.
 10. Helia-VisualArtist: Generates custom 1200x630 relative visual assets & OpenGraph cards.
+11. Helia-SocialScheduler: Filters strictly verified monetized tools & coordinates autonomous X and LinkedIn schedules.
 """
 
 import sys
@@ -48,6 +49,7 @@ from agents.social_growth_agent import SocialGrowthAgent
 from agents.visionary_growth_agent import VisionaryGrowthAgent
 from agents.article_layout_agent import ArticleLayoutAgent
 from agents.image_generator_agent import ImageGeneratorAgent
+from agents.social_scheduler_agent import SocialSchedulerAgent
 from agents.models import ToolReview
 
 
@@ -66,6 +68,7 @@ class HeliaAutonomousDirector:
         self.social = SocialGrowthAgent(api_key=api_key)
         self.stylist = ArticleLayoutAgent()
         self.artist = ImageGeneratorAgent(api_key=api_key)
+        self.scheduler = SocialSchedulerAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -133,6 +136,14 @@ class HeliaAutonomousDirector:
             self.log("Helia-SocialGrowth", f"Drafted {len(tweets)}-tweet high-converting thread.", "🚀")
         except Exception as e:
             self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
+
+        # Step 6.5: Sub-Agent SocialScheduler (Monetized Partner Campaign Scheduler)
+        try:
+            self.log("Helia-SocialScheduler", "Synchronizing monetized social queues & scheduling multi-channel calendar...", "📅")
+            sched_res = self.scheduler.plan_monetized_schedule()
+            self.log("Helia-SocialScheduler", f"Monetized calendar locked: {sched_res['total_monetized']} partner campaigns active.", "🎯")
+        except Exception as e:
+            self.log("Helia-SocialScheduler", f"Scheduler notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")
