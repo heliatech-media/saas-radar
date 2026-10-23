@@ -1,0 +1,11 @@
+{
+  "name": "heliatech-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "npm --prefix site run dev",
+    "start": "npm --prefix site start"
+  }
+}
