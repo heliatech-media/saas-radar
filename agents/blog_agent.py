@@ -2,6 +2,7 @@
 Agent 4: Editorial & Affiliate Blog Architect (Helia Tech Elite Content Factory).
 Crafts in-depth, high-converting storytelling articles dedicated to affiliated software:
 evolution/genesis, business superpowers, step-by-step practical workshops, and pros/cons.
+Generates 100% English content.
 """
 
 import json
@@ -19,62 +20,62 @@ class BlogAgent:
 
     def write_tool_masterclass(self, review: ToolReview) -> BlogPost:
         """
-        Generates a comprehensive editorial blog post dedicated to the specified software tool.
+        Generates a comprehensive editorial blog post dedicated to the specified software tool in 100% English.
         """
         affiliate_url = AFFILIATE_MAP.get(review.slug, f"/go/{review.slug}")
         prompt = f"""
-Tu es le rédacteur en chef d'investigation tech et stratège B2B pour le média HELIA TECH (heliatech.online).
-Rédige un article de fond captivant et ultra-complet dédié au logiciel suivant :
+You are the Chief Investigative Tech Editor and Enterprise B2B Strategist for HELIA TECH (heliatech.online).
+Write an in-depth, captivating, high-ranking 100% ENGLISH masterclass article dedicated to the following software:
 
-Nom de l'outil : {review.name}
-Slug : {review.slug}
-Catégorie : {review.category}
-Tagline : {review.tagline}
-Pitch : {review.summary}
-Forces : {', '.join(review.pros)}
-Faiblesses : {', '.join(review.cons)}
-Lien affilié : {affiliate_url}
+Tool Name: {review.name}
+Slug: {review.slug}
+Category: {review.category}
+Tagline: {review.tagline}
+Pitch: {review.summary}
+Strengths: {', '.join(review.pros)}
+Limitations: {', '.join(review.cons)}
+Affiliate Redirect: {affiliate_url}
 
-Consignes éditoriales strictes :
-1. Style journalistique immersif, captivant, d'autorité (style The Verge, Wired, TechCrunch).
-2. PAS de blueprints abstraits ou de pseudo-code serveur. C'est du VRAI BLOGGING d'entreprise et de productivité.
-3. Structure obligatoire de l'article :
-   - Introduction percutante avec drop-cap naturel : raconte la douleur du marché avant ce logiciel.
-   - 1. La Genèse & L'Évolution : qui l'a créé, d'où vient l'idée, comment le logiciel a transformé son marché.
-   - 2. Les Super-Pouvoirs Business : 3 ou 4 fonctionnalités majeures qui changent la vie d'une entreprise.
-   - 3. L'Atelier Pratique (Tutoriel Pas-à-Pas) : un cas concret en 3 ou 4 étapes pour que le lecteur puisse l'appliquer en 15 minutes.
-   - 4. Analyse Critique & Limites : tableau des points forts et des vrais compromis pour rester 100% objectif et crédible.
-   - 5. Verdict & Synthèse HeliaTech : recommandation honnête et appel à l'action.
-4. Intègre une citation inspirante en blockquote (> citation).
-5. Fournis un objet JSON strict correspondant au schéma BlogPost :
+Strict Editorial Directives:
+1. Pure, native, high-impact American English (Wired / The Verge / TechCrunch depth).
+2. NO abstract code sandboxes or server blueprints. This is REAL BUSINESS SOFTWARE BLOGGING.
+3. Mandatory Article Structure:
+   - Punchy opening with a compelling drop-cap: describe the market pain, tool fragmentation, or human bottleneck before this tool existed.
+   - 1. The Genesis & Evolution: the founders, the spark behind the creation, and how it disrupted legacy dinosaurs.
+   - 2. Core Business Superpowers: 3 or 4 high-value capabilities that save companies thousands of dollars/hours.
+   - 3. Hands-on Workshop (15-Minute Blueprint): a practical, step-by-step tutorial the reader can replicate today.
+   - 4. Critical Assessment & Trade-offs: an objective table comparing strengths and real limitations.
+   - 5. HeliaTech Final Verdict & Recommendation: authentic executive recommendation with a call to action.
+4. Include an inspiring pull quote in markdown blockquote format (> Quote).
+5. Output MUST be a valid JSON object strictly matching the following BlogPost schema:
 {{
-  "title": "Titre journalistique captivant (ex: 'ClickUp 3.0 : L'Histoire d'une Révolution et le Guide Pratique pour Dompter Vos Projets en 2026')",
+  "title": "Captivating journalistic title (e.g., 'ClickUp: The Genesis of the Workspace OS and the Hands-on Guide to Project Velocity in 2026')",
   "slug": "{review.slug}-evolution-guide-2026",
-  "description": "Courte description SEO (150-160 caractères) percutante.",
+  "description": "Punchy 150-160 character SEO meta description in English.",
   "date": "{datetime.now().strftime('%Y-%m-%d')}",
   "author": "HELIA TECH",
   "category": "{review.category}",
-  "tags": ["{review.name}", "Productivité", "SaaS", "Guide Pratique", "Automatisation"],
+  "tags": ["{review.name}", "Productivity", "SaaS", "Automation", "B2B Software"],
   "readingTime": "11 MIN",
   "tool_slug": "{review.slug}",
   "tldr": [
-    "Point clé 1 sur l'origine et la rupture du logiciel",
-    "Point clé 2 sur les super-pouvoirs et gains de productivité",
-    "Point clé 3 sur le résultat de l'atelier pratique"
+    "Key takeaway 1 regarding origin and market disruption",
+    "Key takeaway 2 regarding productivity superpowers and ROI",
+    "Key takeaway 3 regarding the hands-on workshop takeaway"
   ],
   "affiliate_cta": {{
-    "badge": "OFFRE OFFICIELLE HELIATECH",
-    "title": "Testez {review.name} gratuitement",
-    "description": "Activez votre compte pour explorer les fonctionnalités avancées et booster votre productivité.",
-    "button_text": "Découvrir {review.name} gratuitement ➔",
+    "badge": "OFFICIAL HELIATECH PARTNERSHIP",
+    "title": "Experience {review.name} Free",
+    "description": "Activate your account to unlock advanced enterprise features and streamline team velocity.",
+    "button_text": "Claim Your Free {review.name} Account ➔",
     "url": "{affiliate_url}"
   }},
-  "markdown_content": "Le corps entier de l'article en pur Markdown avec les titres H2, H3, listes, tableaux, citations et explications détaillées."
+  "markdown_content": "Full markdown body of the article in 100% English with H2, H3, bullet points, markdown tables, quotes, and thorough analysis."
 }}
-Réponds UNIQUEMENT avec le JSON valide, sans texte additionnel ni délimiteurs markdown comme ```json.
+Reply ONLY with the valid JSON object, without any surrounding markdown code fences like ```json.
 """
         if not self.client:
-            raise ValueError("GEMINI_API_KEY non configurée.")
+            raise ValueError("GEMINI_API_KEY is not configured.")
 
         response = self.client.models.generate_content(
             model=self.model,

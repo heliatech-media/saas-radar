@@ -50,7 +50,7 @@ const jsonLd = {
   <article class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
     <!-- Breadcrumb -->
     <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 mb-10 shadow-sm">
-      <a href="/" class="hover:text-cyan-400 transition-colors">ACCUEIL</a>
+      <a href="/" class="hover:text-cyan-400 transition-colors">HOME</a>
       <span class="text-slate-600">/</span>
       <a href="/blog" class="hover:text-cyan-400 transition-colors">BLOG</a>
       <span class="text-slate-600">/</span>
@@ -64,14 +64,14 @@ const jsonLd = {
           {post.category}
         </span>
         <span class="text-slate-500">•</span>
-        <span class="text-slate-400 font-mono">{post.readingTime} DE LECTURE</span>
+        <span class="text-slate-400 font-mono">{post.readingTime} READ</span>
         <span class="text-slate-500">•</span>
-        <span class="text-slate-400 font-mono">PUBLIÉ LE {new Date(post.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+        <span class="text-slate-400 font-mono">PUBLISHED ON {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 
         {post.tool_slug && (
           <span class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30 font-semibold">
             <span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 animate-pulse"></span>
-            <span>Dossier dédié à {post.tool_slug.toUpperCase()}</span>
+            <span>Dedicated to {post.tool_slug.toUpperCase()}</span>
           </span>
         )}
       </div>
@@ -84,7 +84,7 @@ const jsonLd = {
         {post.description}
       </p>
 
-      <!-- Author Capsule & Affiliate Disclaimer -->
+      <!-- Author Capsule & Direct Links -->
       <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px] shadow-glow-cyan">
@@ -93,8 +93,8 @@ const jsonLd = {
             </div>
           </div>
           <div>
-            <span class="text-xs font-bold text-white block">RÉDACTION HELIATECH</span>
-            <span class="text-[11px] font-mono text-cyan-400">Division Investigation & Benchmarks</span>
+            <span class="text-xs font-bold text-white block">HELIATECH EDITORIAL</span>
+            <span class="text-[11px] font-mono text-cyan-400">Forensics & Intelligence Division</span>
           </div>
         </div>
 
@@ -104,16 +104,16 @@ const jsonLd = {
               href={`/reviews/${post.tool_slug}`}
               class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-mono text-slate-300 border border-slate-700 transition-colors flex items-center gap-1"
             >
-              <span>Fiche Teardown</span>
+              <span>Teardown Dossier</span>
               <span>➔</span>
             </a>
             <a 
-              href={`/go/${post.tool_slug}`}
+              href={`/go/${post.tool_slug}`} 
               target="_blank"
               rel="noopener sponsored"
               class="px-3.5 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-xs font-mono font-bold text-slate-950 transition-colors shadow-glow-cyan flex items-center gap-1"
             >
-              <span>Accès Direct</span>
+              <span>Direct Access</span>
               <span>↗</span>
             </a>
           </div>
@@ -125,7 +125,7 @@ const jsonLd = {
     {post.tldr && post.tldr.length > 0 && (
       <div class="my-10 p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-cyan-500/30 shadow-glow-cyan relative overflow-hidden">
         <div class="flex items-center gap-2 mb-4">
-          <span class="text-cyan-400 font-mono text-sm font-bold tracking-widest uppercase">✦ L'ESSENTIEL EN 3 POINTS (TL;DR)</span>
+          <span class="text-cyan-400 font-mono text-sm font-bold tracking-widest uppercase">✦ EXECUTIVE TAKEAWAYS (TL;DR)</span>
         </div>
         <ul class="space-y-3 m-0 p-0 list-none">
           {post.tldr.map((item) => (
@@ -152,8 +152,8 @@ const jsonLd = {
         >
           <span class="text-cyan-400 group-hover:-translate-x-1 transition-transform font-bold">←</span>
           <div>
-            <span class="text-[11px] font-mono text-slate-500 block uppercase">Retour au blog</span>
-            <span class="text-sm font-bold text-white group-hover:text-cyan-300">Toutes les enquêtes et guides</span>
+            <span class="text-[11px] font-mono text-slate-500 block uppercase">Back to Blog</span>
+            <span class="text-sm font-bold text-white group-hover:text-cyan-300">All investigations & masterclasses</span>
           </div>
         </a>
 
@@ -163,8 +163,8 @@ const jsonLd = {
             class="flex items-center justify-between p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-fuchsia-500/40 transition-colors group text-right"
           >
             <div>
-              <span class="text-[11px] font-mono text-slate-500 block uppercase">Benchmark Technique</span>
-              <span class="text-sm font-bold text-white group-hover:text-fuchsia-300">Voir l'audit complet de {post.tool_slug}</span>
+              <span class="text-[11px] font-mono text-slate-500 block uppercase">Technical Benchmark</span>
+              <span class="text-sm font-bold text-white group-hover:text-fuchsia-300">View complete audit for {post.tool_slug}</span>
             </div>
             <span class="text-fuchsia-400 group-hover:translate-x-1 transition-transform font-bold">→</span>
           </a>

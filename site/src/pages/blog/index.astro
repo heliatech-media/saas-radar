@@ -11,26 +11,26 @@ const otherPosts = sortedPosts.slice(1);
 ---
 
 <Layout 
-  title="Blog & Enquêtes SaaS : Analyses, Histoire et Guides Pratiques"
-  description="Dossiers d'investigation, récits d'évolution et tutoriels pas-à-pas sur les meilleurs logiciels B2B et outils d'intelligence artificielle."
+  title="Blog & SaaS Investigations: Evolution, Case Studies & Hands-on Guides"
+  description="Exhaustive teardowns, product evolution stories, and step-by-step masterclasses on top-tier B2B software and autonomous AI engines."
 >
   <div class="max-w-6xl mx-auto px-6 sm:px-8 py-16">
     <!-- Header Hero -->
     <div class="text-center max-w-3xl mx-auto mb-16">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-6 shadow-glow-cyan">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>ÉDITORIAL HELIATECH • ENQUÊTES & CAS CONCRETS</span>
+        <span>HELIATECH EDITORIAL • DEEP DIVES & MASTERCLASSES</span>
       </div>
 
       <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
-        L'Usine à Savoir <br />
+        The Software & AI <br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
-          Logiciels & IA.
+          Intelligence Lab.
         </span>
       </h1>
 
       <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-        Plongez dans l'histoire secrète des plus grands SaaS, découvrez leurs super-pouvoirs cachés et appliquez nos ateliers pratiques pour faire décoller votre business.
+        Uncover the origins of world-class SaaS, master their hidden superpowers, and apply our step-by-step workshops to scale your enterprise velocity.
       </p>
     </div>
 
@@ -38,7 +38,7 @@ const otherPosts = sortedPosts.slice(1);
     {featuredPost && (
       <div class="mb-16">
         <div class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-4 font-bold flex items-center gap-2">
-          <span>✦ DOSSIER PHARE DU MOMENT</span>
+          <span>✦ FEATURED INVESTIGATION</span>
         </div>
         <a 
           href={`/blog/${featuredPost.slug}`}
@@ -51,9 +51,9 @@ const otherPosts = sortedPosts.slice(1);
               {featuredPost.data.category}
             </span>
             <span class="text-slate-500">•</span>
-            <span class="text-slate-400">{featuredPost.data.readingTime} DE LECTURE</span>
+            <span class="text-slate-400">{featuredPost.data.readingTime} READ</span>
             <span class="text-slate-500">•</span>
-            <span class="text-slate-400">{new Date(featuredPost.data.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+            <span class="text-slate-400">{new Date(featuredPost.data.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
           </div>
 
           <h2 class="text-2xl sm:text-4xl font-black text-white group-hover:text-cyan-300 transition-colors mb-4 max-w-4xl leading-tight">
@@ -71,11 +71,11 @@ const otherPosts = sortedPosts.slice(1);
                   HT
                 </div>
               </div>
-              <span class="text-xs font-mono text-slate-300 font-medium">Par {featuredPost.data.author}</span>
+              <span class="text-xs font-mono text-slate-300 font-medium">By {featuredPost.data.author}</span>
             </div>
 
             <span class="inline-flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all">
-              <span>LIRE L'ENQUÊTE COMPLÈTE</span>
+              <span>READ FULL INVESTIGATION</span>
               <span>➔</span>
             </span>
           </div>
@@ -87,7 +87,7 @@ const otherPosts = sortedPosts.slice(1);
     {otherPosts.length > 0 && (
       <div>
         <div class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6 font-bold flex items-center gap-2">
-          <span>TOUTES LES ENQUÊTES & GUIDES</span>
+          <span>ALL INVESTIGATIONS & GUIDES</span>
           <span class="h-[1px] flex-grow bg-slate-800"></span>
         </div>
 
@@ -103,7 +103,7 @@ const otherPosts = sortedPosts.slice(1);
                     {post.data.category}
                   </span>
                   <span class="text-slate-500">•</span>
-                  <span class="text-slate-400 text-[11px]">{post.data.readingTime}</span>
+                  <span class="text-slate-400 text-[11px]">{post.data.readingTime} READ</span>
                 </div>
 
                 <h3 class="text-xl font-bold text-white group-hover:text-fuchsia-300 transition-colors mb-3 leading-snug">
@@ -117,10 +117,10 @@ const otherPosts = sortedPosts.slice(1);
 
               <div class="flex items-center justify-between pt-4 border-t border-slate-800/60 text-xs font-mono">
                 <span class="text-slate-500 text-[11px]">
-                  {new Date(post.data.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  {new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                 </span>
                 <span class="text-fuchsia-400 group-hover:translate-x-1 transition-transform flex items-center gap-1 font-bold">
-                  <span>Explorer</span>
+                  <span>Explore</span>
                   <span>➔</span>
                 </span>
               </div>
@@ -130,18 +130,18 @@ const otherPosts = sortedPosts.slice(1);
       </div>
     )}
 
-    <!-- CTA Section -->
+    <!-- Bottom Radar Link Section -->
     <div class="mt-20 p-8 sm:p-12 rounded-3xl bg-slate-900/70 border border-slate-800 text-center relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-fuchsia-500/5 to-transparent pointer-events-none"></div>
-      <h3 class="text-2xl font-black text-white mb-3">Vous cherchez une analyse comparative rapide ?</h3>
+      <h3 class="text-2xl font-black text-white mb-3">Looking for granular technical benchmarks?</h3>
       <p class="text-slate-400 text-sm max-w-xl mx-auto mb-6">
-        Consultez notre moteur Radar pour inspecter les benchmarks de plus de 20 logiciels B2B passés au crible de notre IA.
+        Access our SaaS Radar directory to inspect real-time performance scores, ROI payback velocity, and pricing architectures for 20+ audited tools.
       </p>
       <a 
         href="/"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300"
       >
-        <span>Accéder au Radar SaaS</span>
+        <span>Access SaaS Radar Engine</span>
         <span>➔</span>
       </a>
     </div>
