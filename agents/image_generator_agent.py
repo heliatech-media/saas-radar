@@ -156,9 +156,49 @@ Visual & Aesthetic Directives:
   <line x1="100" y1="360" x2="1100" y2="360" stroke="#334155" stroke-width="1.5" />
   <text x="100" y="420" fill="#94a3b8" font-family="sans-serif" font-size="20">Enterprise Software Teardown &amp; Hands-on Engineering Masterclass</text>
   <g transform="translate(100, 480)">
-    <text x="0" y="20" fill="#06b6d4" font-family="monospace" font-size="14 font-weight="bold">BENCHMARK GRADE: VERIFIED ✦ 2026 EDITION</text>
+    <text x="0" y="20" fill="#06b6d4" font-family="monospace" font-size="14" font-weight="bold">BENCHMARK GRADE: VERIFIED ✦ 2026 EDITION</text>
   </g>
 </svg>"""
+
+    def rasterize_svg_to_png(self, svg_path: Path, png_path: Path) -> bool:
+        """Renders 1200x630 vector SVG into high-DPI PNG for social platforms (LinkedIn, Twitter)."""
+        try:
+            from playwright.sync_api import sync_playwright
+            svg_content = svg_path.read_text(encoding="utf-8")
+            html = f"""<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body {{
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #030712;
+  }}
+  svg {{
+    width: 1200px;
+    height: 630px;
+    display: block;
+  }}
+</style>
+</head>
+<body>
+{svg_content}
+</body>
+</html>"""
+            with sync_playwright() as p:
+                browser = p.chromium.launch()
+                page = browser.new_page(viewport={"width": 1200, "height": 630}, device_scale_factor=1)
+                page.set_content(html)
+                page.screenshot(path=str(png_path), type="png")
+                browser.close()
+            self.log(f"Rasterized OpenGraph PNG: {png_path.name} ({round(png_path.stat().st_size / 1024, 1)} KB)", "🖼️")
+            return True
+        except Exception as e:
+            self.log(f"Rasterization notice: {e}", "⚠️")
+            return False
 
     def ensure_image_for_article(self, article_path: Path) -> str:
         """
@@ -189,6 +229,11 @@ Visual & Aesthetic Directives:
                     category=category,
                     output_filename=f"{tool_slug}.svg"
                 )
+
+            # Ensure high-res PNG companion exists for LinkedIn and Twitter OpenGraph crawlers
+            png_path = self.images_dir / f"{tool_slug}.png"
+            if not png_path.exists() and local_path.exists():
+                self.rasterize_svg_to_png(local_path, png_path)
 
             # Update frontmatter if 'image' field is missing
             if frontmatter.get("image") != web_path:

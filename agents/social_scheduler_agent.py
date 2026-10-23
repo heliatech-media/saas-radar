@@ -120,7 +120,7 @@ class SocialSchedulerAgent:
             "description_optimal": 100 <= len(desc) <= 170,
             "tldr_bullet_count": len(tldr),
             "has_hero_image": local_svg.exists(),
-            "image_url": f"https://heliatech.online{image}",
+            "image_url": f"https://heliatech.online/images/blog/{tool_slug}.png",
             "affiliate_cta_ready": bool(affiliate_cta.get("url")),
             "article_url": f"https://heliatech.online/blog/{article_path.stem}"
         }
@@ -207,7 +207,7 @@ class SocialSchedulerAgent:
                 "partner_tracking_url": aff_url,
                 "edge_redirect_url": f"https://heliatech.online/go/{tool_slug}",
                 "article_url": f"https://heliatech.online/blog/{post.slug}",
-                "hero_artwork_url": f"https://heliatech.online/images/blog/{tool_slug}.svg",
+                "hero_artwork_url": f"https://heliatech.online/images/blog/{tool_slug}.png",
                 "seo_score": seo_audit["seo_score"],
                 "scheduled_x_time": x_slot,
                 "scheduled_linkedin_time": li_slot,

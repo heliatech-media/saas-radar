@@ -12,9 +12,13 @@ const {
   title, 
   description = "Independent software intelligence and tech media: comprehensive benchmarks, exhaustive guides, and forensic teardowns of top B2B software and cloud systems.",
   jsonLd,
-  image = "/images/blog/cursor.svg"
+  image = "/images/blog/cursor.png"
 } = Astro.props;
-const ogImageUrl = image.startsWith('http') ? image : `https://heliatech.online${image}`;
+
+// Social networks (LinkedIn, Twitter/X) do not support SVG for OpenGraph cards.
+// Automatically route og:image to high-resolution 1200x630 PNG.
+const socialImage = image.replace(/\.svg$/, '.png');
+const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://heliatech.online${socialImage}`;
 ---
 
 <!doctype html>
@@ -32,6 +36,7 @@ const ogImageUrl = image.startsWith('http') ? image : `https://heliatech.online$
     <meta property="og:description" content={description} />
     <meta property="og:type" content="article" />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
