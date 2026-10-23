@@ -1,6 +1,5 @@
 ---
 name: Rewardful
-slug: rewardful
 tagline: The developer-friendly affiliate and referral software built natively for Stripe and Paddle.
 category: Growth & Affiliate Infrastructure
 rating: 4.8

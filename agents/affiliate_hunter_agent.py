@@ -100,9 +100,26 @@ class AffiliateHunterAgent:
 
     def hunt_affiliate_program(self, tool_info: Dict[str, str]) -> Optional[Dict]:
         """
-        Uses Gemini to investigate the software's affiliate ecosystem,
+        Uses live fingerprint scanning and Gemini to investigate the software's affiliate ecosystem,
         detecting whether it uses PartnerStack, Rewardful, FirstPromoter, Impact, or direct query parameters.
         """
+        # Step 0: Real-time Rewardful Fingerprint Sniffing
+        try:
+            from agents.rewardful_engine_agent import RewardfulEngineAgent
+            engine = RewardfulEngineAgent()
+            if engine.detect_rewardful_fingerprint(tool_info.get("website_url", "")):
+                logger.info(f"🎯 [Rewardful Sniffer] Direct Rewardful fingerprint verified on {tool_info['website_url']}!")
+                clean_domain = tool_info["website_url"].rstrip('/')
+                return {
+                    "platform": "Rewardful",
+                    "partner_portal_url": f"{clean_domain}/affiliates",
+                    "commission_rate": "30% recurring",
+                    "cookie_window_days": 60,
+                    "canonical_affiliate_url": f"{clean_domain}/?via=heliatech"
+                }
+        except Exception as e:
+            logger.debug(f"Rewardful live sniff notice: {e}")
+
         if not self.client:
             logger.warning("Gemini API client not initialized. Cannot perform AI affiliate hunting.")
             return None

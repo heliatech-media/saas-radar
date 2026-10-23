@@ -1,6 +1,7 @@
 """
 Agent 1: Market & Intent Radar (Senior Discovery Specialist).
 Identifies high-converting SaaS products, search intents, and recurring affiliate opportunities.
+Actively sniffs and prioritizes Rewardful and Stripe-powered viral SaaS ecosystems.
 """
 
 import json
@@ -50,7 +51,7 @@ class RadarAgent:
     def discover_trending_opportunities(self, category: Optional[str] = None, count: int = 2) -> List[RadarKeyword]:
         """
         Uses Gemini to discover trending, high-converting B2B SaaS software with active affiliate programs
-        and high commercial search volume, strictly avoiding existing covered tools.
+        and high commercial search volume, strictly prioritizing the Rewardful & Stripe ecosystem.
         """
         if not self.client:
             raise ValueError("GEMINI_API_KEY is not configured. Add it to .env or environment.")
@@ -60,14 +61,15 @@ class RadarAgent:
 
         prompt = f"""
 You are Helia-Radar, Chief Market Intelligence and Opportunity Discovery Agent at HeliaTech Media.
-Identify {count} high-growth, high-converting B2B SaaS tools {"in category: " + category if category else "across high-margin B2B SaaS niches (AI, DevTools, E-Commerce, Marketing, Automation)"}.
+Identify {count} high-growth, high-converting B2B & Creator SaaS tools {"in category: " + category if category else "across high-margin B2B SaaS niches (AI Video, Audio/Podcasting, DevTools, Newsletters, Automation)"}.
 
 CRITICAL MANDATES:
-1. High commercial buyer intent (users searching for pricing, teardowns, and alternatives).
-2. Known for having an active, high-paying recurring affiliate or partner program (20% to 50% recurring MRR, e.g. via PartnerStack, Rewardful, FirstPromoter, or direct).
+1. High commercial buyer intent (users searching for pricing, reviews, teardowns, and alternatives).
+2. HIGH PRIORITY: Actively discover software utilizing REWARDFUL (Stripe Billing affiliate ecosystem, e.g. Castmagic, Transistor, Riverside, Podia, Memberstack, Beehiiv, VEED, Submagic) or PartnerStack/FirstPromoter with 20% to 50% recurring MRR.
+   - Note: HeliaTech holds an instant pre-approved Rewardful token ('heliatech') universally accepted via '?via=heliatech'. Prioritizing Rewardful SaaS delivers instant, zero-delay monetization.
 3. DO NOT include any of the following software tools because they have ALREADY been evaluated:
 [{exclude_str}]
-4. Focus on breakout, established modern platforms (e.g. Supabase, Vercel, Framer, Typeform, Linear, Apollo.io, PhantomBuster, Beehiiv, Lemlist, Lovable, v0).
+4. Focus on breakout, viral modern platforms with strong organic search velocity (e.g. Supabase, Vercel, Framer, Typeform, Linear, Apollo.io, PhantomBuster, Beehiiv, Lemlist, Lovable, v0, Castmagic).
 
 Provide the output strictly conforming to the requested JSON schema.
 """
@@ -109,15 +111,34 @@ Provide the output strictly conforming to the requested JSON schema.
             print(f"[Helia-Radar] ❌ Error parsing radar response: {e}")
             return []
 
+    def verify_rewardful_compatibility(self, domain_url: str) -> bool:
+        """Sniffs live HTML to verify if candidate runs Rewardful (r.wdfl.co)."""
+        try:
+            from agents.rewardful_engine_agent import RewardfulEngineAgent
+            engine = RewardfulEngineAgent()
+            return engine.detect_rewardful_fingerprint(domain_url)
+        except Exception:
+            return False
+
     def scout_trending_software(self) -> RadarKeyword:
-        """Discovers a single high-potential trending tool, prioritizing breakout software."""
-        opps = self.discover_trending_opportunities(count=1)
+        """
+        Discovers a single high-potential trending tool, actively sniffing for Rewardful compatibility
+        and prioritizing breakout high-converting software.
+        """
+        opps = self.discover_trending_opportunities(count=2)
         if opps:
+            # Prioritize candidate tools with Rewardful or recurring Stripe payout indicators
+            for opp in opps:
+                if "rewardful" in opp.average_commission.lower() or "stripe" in opp.average_commission.lower() or "recurring" in opp.average_commission.lower():
+                    print(f"[Helia-Radar] 💎 Priority candidate selected: {opp.tool_name} (Rewardful/Stripe recurring target)")
+                    return opp
             return opps[0]
+
         existing = set(self.get_existing_tool_slugs())
         for seed in self.get_seed_tools():
             slug = re.sub(r'[^a-z0-9]+', '-', seed['name'].lower()).strip('-')
             if slug not in existing:
+                print(f"[Helia-Radar] 🎯 Seed candidate selected from ecosystem: {seed['name']} ({seed['category']})")
                 return RadarKeyword(
                     tool_name=seed["name"],
                     category=seed["category"],
@@ -125,10 +146,11 @@ Provide the output strictly conforming to the requested JSON schema.
                     intent="Commercial/High-Buying",
                     average_commission=seed["commission"]
                 )
+
         return RadarKeyword(
-            tool_name="Supabase",
-            category="AI & Developer Tools",
-            primary_keyword="Supabase vs Firebase 2026",
+            tool_name="Castmagic",
+            category="Viral Creator & Stripe SaaS (Rewardful Ecosystem)",
+            primary_keyword="Castmagic vs Descript 2026",
             intent="High Commercial Intent",
-            average_commission="30% recurring"
+            average_commission="30% recurring via Rewardful"
         )

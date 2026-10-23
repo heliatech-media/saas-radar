@@ -1,6 +1,5 @@
 ---
 name: Beehiiv
-slug: beehiiv
 tagline: The newsletter platform built for growth, scaling, and monetization.
 category: Marketing
 rating: 4.7

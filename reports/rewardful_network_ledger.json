@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-24T00:46:10.885376",
+  "timestamp": "2026-10-24T00:54:59.998299",
   "master_token": "heliatech",
   "master_link": "https://www.rewardful.com/?via=heliatech",
-  "total_rewardful_partners": 9,
-  "new_routes_added": 7,
+  "total_rewardful_partners": 10,
+  "new_routes_added": 8,
   "partners": [
     {
       "slug": "rewardful",
@@ -85,6 +85,15 @@
       "payout": "25% recurring",
       "affiliate_url": "https://getimg.ai/?via=heliatech",
       "redirect_path": "/go/getimg-ai"
+    },
+    {
+      "slug": "castmagic",
+      "name": "Castmagic",
+      "domain": "https://castmagic.io",
+      "category": "AI Audio Repurposing & Show Notes",
+      "payout": "30% recurring monthly",
+      "affiliate_url": "https://castmagic.io/?via=heliatech",
+      "redirect_path": "/go/castmagic"
     }
   ]
 }

@@ -105,6 +105,13 @@ CURATED_REWARDFUL_PARTNERS: List[Dict[str, str]] = [
         "domain": "https://getimg.ai",
         "category": "AI Image & Inpainting Suite",
         "payout": "25% recurring"
+    },
+    {
+        "slug": "castmagic",
+        "name": "Castmagic",
+        "domain": "https://castmagic.io",
+        "category": "AI Audio Repurposing & Show Notes",
+        "payout": "30% recurring monthly"
     }
 ]
 

@@ -49,6 +49,12 @@ TARGET_NICHES = [
         "description": "Content rankers, programmatic SEO, keyword tracking",
         "commission_range": "20% - 30% recurring",
         "seed_tools": ["Surfer SEO", "Semrush", "Jasper", "WriteSonic", "Ahrefs", "KoalaWriter"]
+    },
+    {
+        "category": "Viral Creator & Stripe SaaS (Rewardful Ecosystem)",
+        "description": "Viral AI audio/video repurposing, podcast studios, newsletters & memberships natively powered by Rewardful with instant ?via=heliatech tracking",
+        "commission_range": "25% - 50% recurring Stripe MRR",
+        "seed_tools": ["Castmagic", "Transistor-fm", "Riverside-fm", "Podia", "Memberstack", "VEED-IO", "Opus-Clip", "Beehiiv", "Getimg-ai"]
     }
 ]
 
@@ -62,26 +68,27 @@ AFFILIATE_MAP = {
     "apollo-io": "https://apollo.grsm.io/heliatech",
     "beehiiv": "https://www.beehiiv.com/?via=heliatech",
     "brevo": "https://brevo.partnerlinks.io/heliatech",
+    "castmagic": "https://castmagic.io/?via=heliatech",
     "clickup": "https://clickup.pxf.io/c/heliatech",
     "cursor": "https://www.cursor.com/?via=heliatech",
+    "getimg-ai": "https://getimg.ai/?via=heliatech",
     "heygen": "https://heygen.grsm.io/heliatech",
     "linear": "https://linear.app/?via=heliatech",
     "lusha": "https://lusha.grsm.io/heliatech",
+    "memberstack": "https://www.memberstack.com/?via=heliatech",
     "monday-com": "https://monday.com/?ref=heliatech",
     "framer": "https://framer.partnerstack.com/heliatech",
     "n8n": "https://n8n.io/?via=heliatech",
     "lemlist": "https://lemlist.com/?via=heliatech",
-    "notion-ai": "https://affiliates.notion.so/heliatech",
+    "notion-ai": "https://www.notion.so/?ref=heliatech",
+    "opus-clip": "https://www.opus.pro/?via=heliatech",
     "partnerstack": "https://partnerstack.com/?via=heliatech",
-    "printify": "https://printify.pxf.io/c/heliatech",
     "phantombuster": "https://phantombuster.com/?via=heliatech",
+    "podia": "https://www.podia.com/?via=heliatech",
+    "printify": "https://printify.pxf.io/c/heliatech",
     "retool": "https://retool.grsm.io/heliatech",
     "rewardful": "https://www.rewardful.com/?via=heliatech",
-    "transistor-fm": "https://transistor.fm/?via=heliatech",
-    "memberstack": "https://www.memberstack.com/?via=heliatech",
-    "podia": "https://www.podia.com/?via=heliatech",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
-    "veed-io": "https://www.veed.io/?via=heliatech",
-    "opus-clip": "https://www.opus.pro/?via=heliatech",
-    "getimg-ai": "https://getimg.ai/?via=heliatech"
+    "transistor-fm": "https://transistor.fm/?via=heliatech",
+    "veed-io": "https://www.veed.io/?via=heliatech"
 }

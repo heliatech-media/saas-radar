@@ -51,6 +51,7 @@ from agents.article_layout_agent import ArticleLayoutAgent
 from agents.image_generator_agent import ImageGeneratorAgent
 from agents.social_scheduler_agent import SocialSchedulerAgent
 from agents.affiliate_hub_agent import HeliaAffiliateHub
+from agents.rewardful_engine_agent import RewardfulEngineAgent
 from agents.affiliate_hunter_agent import AffiliateHunterAgent
 from agents.versus_agent import VersusAgent
 from agents.alternatives_agent import AlternativesAgent
@@ -87,6 +88,7 @@ class HeliaAutonomousDirector:
         self.artist = ImageGeneratorAgent(api_key=api_key)
         self.scheduler = SocialSchedulerAgent(api_key=api_key)
         self.affiliate_hub = HeliaAffiliateHub()
+        self.rewardful_engine = RewardfulEngineAgent()
         self.hunter = AffiliateHunterAgent(api_key=api_key)
         self.versus = VersusAgent(api_key=api_key)
         self.alternatives = AlternativesAgent(api_key=api_key)
@@ -149,6 +151,11 @@ class HeliaAutonomousDirector:
         self.log("Helia-AffiliateHub", "Querying partner networks (Impact, PartnerStack, CJ) for tracking links...", "🔗")
         hub_res = self.affiliate_hub.sync_into_system()
         self.log("Helia-AffiliateHub", f"Affiliate sync complete: {hub_res['synced_count']} tools monetized.", "💰")
+
+        # Step 2.75: Sub-Agent RewardfulEngine (Universal Stripe/Rewardful Token Synchronization)
+        self.log("Helia-RewardfulEngine", "Synchronizing Rewardful ecosystem & universal '?via=heliatech' fleet...", "💎")
+        rewardful_res = self.rewardful_engine.sync_all_curated_partners()
+        self.log("Helia-RewardfulEngine", f"Rewardful fleet active: {rewardful_res['total_rewardful_partners']} partners locked with token '{rewardful_res['master_token']}'.", "✅")
 
         # Step 2.8: Sub-Agent AffiliateHunter (Autonomous AI Link & Partner Scout)
         self.log("Helia-AffiliateHunter", "Autonomous AI link scout scanning unmonetized tools...", "🏹")
