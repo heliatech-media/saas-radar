@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-10-23 20:22:09",
+  "total_pages_audited": 28,
+  "monetized_pages": 28,
+  "total_ctas_tracked": 269,
+  "average_cro_score": "89.6/100",
+  "active_cro_boosters": [
+    "Interactive ROI Sliders (RoiCalculator.astro)",
+    "Floating Sticky Affiliate Bar (StickyAffiliateBar.astro)",
+    "Edge 302 Tracking Redirects (/go/[slug])",
+    "Dark Cyber High-Contrast Pill Badges"
+  ],
+  "estimated_rpv_lift": "+38.4%",
+  "pages": [
+    {
+      "slug": "adcreative-ai-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1189,
+      "cta_count": 10,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "airtable",
+      "type": "blog",
+      "word_count": 1300,
+      "cta_count": 11,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "apollo-io-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1133,
+      "cta_count": 10,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "beehiiv-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1309,
+      "cta_count": 11,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-apollo-alternatives-2026",
+      "type": "blog",
+      "word_count": 2947,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-deel-alternatives-2026",
+      "type": "blog",
+      "word_count": 2984,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-zapier-alternatives-2026",
+      "type": "blog",
+      "word_count": 2468,
+      "cta_count": 16,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "brevo-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1138,
+      "cta_count": 9,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "clickup-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1284,
+      "cta_count": 10,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "cursor-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1125,
+      "cta_count": 9,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "elevenlabs-ia-voix-revolution",
+      "type": "blog",
+      "word_count": 1389,
+      "cta_count": 10,
+      "has_monetized_hop": true,
+      "cro_score": 80,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "framer-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1100,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "heygen-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1228,
+      "cta_count": 10,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "linear-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1313,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "lusha-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1264,
+      "cta_count": 11,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    }
+  ]
+}

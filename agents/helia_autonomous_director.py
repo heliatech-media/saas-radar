@@ -56,6 +56,10 @@ from agents.versus_agent import VersusAgent
 from agents.alternatives_agent import AlternativesAgent
 from agents.link_weaver_agent import LinkWeaverAgent
 from agents.notifier_agent import NotifierAgent
+from agents.cro_agent import CROAgent
+from agents.data_visualizer_agent import DataVisualizerAgent
+from agents.backlink_agent import BacklinkArchitectAgent
+from agents.localizer_agent import LocalizerAgent
 from agents.models import ToolReview
 
 
@@ -81,6 +85,10 @@ class HeliaAutonomousDirector:
         self.alternatives = AlternativesAgent(api_key=api_key)
         self.weaver = LinkWeaverAgent()
         self.notifier = NotifierAgent()
+        self.cro = CROAgent()
+        self.visualizer = DataVisualizerAgent()
+        self.backlink = BacklinkArchitectAgent()
+        self.localizer = LocalizerAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -189,6 +197,34 @@ class HeliaAutonomousDirector:
             self.log("Helia-SocialScheduler", f"Monetized calendar locked: {sched_res['total_monetized']} partner campaigns active.", "🎯")
         except Exception as e:
             self.log("Helia-SocialScheduler", f"Scheduler notice: {e}", "⚠️")
+
+        # Step 6.6: Sub-Agent CRO (Conversion Rate Optimization Audit)
+        try:
+            self.log("Helia-CRO", "Auditing conversion rate optimization and sticky CTA yield...", "💎")
+            self.cro.audit_all_pages()
+        except Exception as e:
+            self.log("Helia-CRO", f"CRO notice: {e}", "⚠️")
+
+        # Step 6.7: Sub-Agent DataVisualizer (Live Business Intelligence Telemetry)
+        try:
+            self.log("Helia-DataVisualizer", "Refreshing live financial telemetry and Sentinel data streams...", "📊")
+            self.visualizer.generate_live_telemetry()
+        except Exception as e:
+            self.log("Helia-DataVisualizer", f"Visualizer notice: {e}", "⚠️")
+
+        # Step 6.8: Sub-Agent BacklinkArchitect (Digital PR & SEO Authority Playbook)
+        try:
+            self.log("Helia-BacklinkArchitect", "Mapping high-DR syndication targets and authority outreach...", "🔗")
+            self.backlink.generate_authority_playbook()
+        except Exception as e:
+            self.log("Helia-BacklinkArchitect", f"Backlink notice: {e}", "⚠️")
+
+        # Step 6.9: Sub-Agent Localizer (International Growth Audit)
+        try:
+            self.log("Helia-Localizer", "Evaluating global multi-region expansion readiness...", "🌍")
+            self.localizer.audit_international_readiness()
+        except Exception as e:
+            self.log("Helia-Localizer", f"Localizer notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")

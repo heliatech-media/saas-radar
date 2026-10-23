@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-10-23 20:23:30",
+  "target_domain_authority": "DR 65+",
+  "active_link_hubs": [
+    {
+      "platform": "HackerNews / Show HN",
+      "domain_rating": 91,
+      "format": "Technical Teardown / Empirical benchmark release",
+      "target_audience": "Founders, CTOs, Staff Engineers",
+      "primary_hook": "We benchmarked Zapier vs Make across 500,000 tasks: Here is the raw economic math."
+    },
+    {
+      "platform": "Dev.to & Hashnode",
+      "domain_rating": 89,
+      "format": "Architectural Deep Dive & Open Guide",
+      "target_audience": "Full-stack Developers, DevOps & RevOps",
+      "primary_hook": "Self-hosting n8n vs Make Cloud: Total cost of ownership and latency breakdown for 2026."
+    },
+    {
+      "platform": "Reddit (r/SaaS & r/automation)",
+      "domain_rating": 93,
+      "format": "No-BS Case Study / Cost Audit",
+      "target_audience": "Agency Owners, No-Code Builders",
+      "primary_hook": "How we cut $1,200/mo in Zapier task-overages by rebuilding on Make + Webhooks."
+    },
+    {
+      "platform": "Medium / Towards Data Science",
+      "domain_rating": 95,
+      "format": "Thought Leadership Syndicate",
+      "target_audience": "AI Engineers, Tech Executives",
+      "primary_hook": "The 2026 AI Voice Infrastructure Landscape: ElevenLabs vs HeyGen Teardown."
+    },
+    {
+      "platform": "ProductHunt Discussions",
+      "domain_rating": 90,
+      "format": "Community Tool Recommendation",
+      "target_audience": "Early Adopters, Indie Hackers",
+      "primary_hook": "Best Global Payroll and EOR alternatives in 2026: Why Papaya Global and Rippling are dominating."
+    }
+  ],
+  "priority_asset_targets": [
+    {
+      "slug": "best-zapier-alternatives-2026",
+      "target_url": "https://heliatech.online/blog/best-zapier-alternatives-2026",
+      "anchor_texts": [
+        "Zapier alternatives 2026",
+        "cheaper alternative to Zapier",
+        "Make vs Zapier pricing benchmark"
+      ],
+      "syndication_angle": "Empirical analysis showing 70% cost reduction by moving away from linear zaps."
+    },
+    {
+      "slug": "best-deel-alternatives-2026",
+      "target_url": "https://heliatech.online/blog/best-deel-alternatives-2026",
+      "anchor_texts": [
+        "Deel alternatives",
+        "best global payroll software",
+        "Papaya Global payroll benchmark"
+      ],
+      "syndication_angle": "Exposing hidden foreign exchange markups in global contractor platforms."
+    },
+    {
+      "slug": "make-vs-zapier",
+      "target_url": "https://heliatech.online/blog/make-vs-zapier",
+      "anchor_texts": [
+        "Make vs Zapier teardown",
+        "visual automation vs zaps"
+      ],
+      "syndication_angle": "Technical side-by-side architecture teardown."
+    }
+  ],
+  "projected_backlink_velocity": "+15 high-authority referring domains / month"
+}

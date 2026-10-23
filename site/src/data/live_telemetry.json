@@ -1,0 +1,221 @@
+{
+  "last_updated": "2026-10-23 20:22:32 UTC",
+  "director": "Helia (Autonomous Executive Director v4.0)",
+  "mission_status": "OPERATIONAL_OPTIMAL",
+  "kpis": {
+    "total_monetized_tools": 23,
+    "total_published_investigations": 52,
+    "reviews_audited": 24,
+    "masterclasses_and_duels": 28,
+    "target_monthly_visitors": "100,000",
+    "estimated_conversion_rate": "2.8%",
+    "projected_monthly_mrr": "$8,050 USD",
+    "fleet_agents_count": 22
+  },
+  "category_distribution": [
+    {
+      "name": "Automation & No-Code",
+      "share": 32,
+      "color": "#06b6d4"
+    },
+    {
+      "name": "AI Voice & Video",
+      "share": 24,
+      "color": "#10b981"
+    },
+    {
+      "name": "B2B Sales & CRM",
+      "share": 20,
+      "color": "#f59e0b"
+    },
+    {
+      "name": "Global Payroll & HR",
+      "share": 14,
+      "color": "#ec4899"
+    },
+    {
+      "name": "DevTools & Web",
+      "share": 10,
+      "color": "#8b5cf6"
+    }
+  ],
+  "top_earning_assets": [
+    {
+      "tool": "Papaya Global",
+      "payout": "$1,000 - $2,000 / deal",
+      "status": "ACTIVE_RECOMMENDED"
+    },
+    {
+      "tool": "Make",
+      "payout": "30% recurring MRR",
+      "status": "ACTIVE_RECOMMENDED"
+    },
+    {
+      "tool": "ElevenLabs",
+      "payout": "22% recurring MRR",
+      "status": "ACTIVE_RECOMMENDED"
+    },
+    {
+      "tool": "Apollo.io",
+      "payout": "25% recurring",
+      "status": "ACTIVE_RECOMMENDED"
+    },
+    {
+      "tool": "HeyGen",
+      "payout": "25% recurring",
+      "status": "ACTIVE_RECOMMENDED"
+    },
+    {
+      "tool": "Brevo",
+      "payout": "€50 - €100 / sale",
+      "status": "ACTIVE_RECOMMENDED"
+    }
+  ],
+  "active_monetized_hops": [
+    {
+      "slug": "adcreative-ai",
+      "destination": "https://www.adcreative.ai/?fp_ref=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "airtable",
+      "destination": "https://airtable.com/?ref=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "apollo-io",
+      "destination": "https://apollo.grsm.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "beehiiv",
+      "destination": "https://www.beehiiv.com/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "brevo",
+      "destination": "https://brevo.partnerlinks.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "clickup",
+      "destination": "https://clickup.pxf.io/c/heliatech",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "cursor",
+      "destination": "https://www.cursor.com/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "elevenlabs",
+      "destination": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "heygen",
+      "destination": "https://heygen.grsm.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "linear",
+      "destination": "https://linear.app",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "lusha",
+      "destination": "https://lusha.grsm.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "make",
+      "destination": "https://www.make.com/en/register?pc=heliatechmake",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "monday-com",
+      "destination": "https://monday.com/?ref=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "n8n",
+      "destination": "https://www.n8n.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "notion-ai",
+      "destination": "https://www.notion.so/product/ai",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "partnerstack",
+      "destination": "https://partnerstack.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "printify",
+      "destination": "https://printify.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "retool",
+      "destination": "https://www.retool.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "supabase",
+      "destination": "https://supabase.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "voiceflow",
+      "destination": "https://www.voiceflow.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "wati",
+      "destination": "https://www.wati.io",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "webflow",
+      "destination": "https://webflow.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "zapier",
+      "destination": "https://www.zapier.com",
+      "type": "Catalog Edge Hop"
+    }
+  ],
+  "recent_events": [
+    {
+      "timestamp": "2026-10-23 20:15:05",
+      "title": "Cycle Autonome #Framer",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Framer et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-10-23 20:13:12",
+      "title": "MISSION ACCOMPLIE : 3 SURCHARGES STRATÉGIQUES ACTIVÉES",
+      "category": "DEPLOY",
+      "message": "Patron, vos 3 améliorations stratégiques sont désormais 100% actives et déployées en production :\n\n1️⃣ Telegram Commander 2-Way : Je réponds en direct à vos ordres ici même (/statut, /hunt, /versus, /alternatives, /cycle, /cockpit).\n\n2️⃣ Simulateurs de ROI Interactifs : Tous nos articles de blog intègrent désormais le calculateur dynamique (heures gagnées, économies annuelles, sliders interactifs) avec bouton d'accès partenaire officiel.\n\n3️⃣ Moteur d'Autorité 'Top 7 Alternatives' : Deux dossiers de référence publiés (/blog/best-zapier-alternatives-2026 et /blog/best-deel-alternatives-2026), ce dernier positionnant Papaya Global (notre offre à $1,000 / $2,000 de commission) en recommandation #1 !\n\n🌐 Site live : https://heliatech.online\n⚡ Console Sentinel : https://heliatech.online/sentinel/suivicontrol",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-10-23 19:53:08",
+      "title": "💰 NOUVEL OUTIL MONÉTISÉ : PAPAYA GLOBAL",
+      "category": "MONEY",
+      "message": "L'agent Helia-AffiliateHunter a activé la monétisation pour Papaya Global !\n• Taux de commission : ,000 lead / ,000 won\n• Redirection Edge active : https://heliatech.online/go/papaya-global",
+      "link": "https://heliatech.online/go/papaya-global"
+    },
+    {
+      "timestamp": "2026-10-23 19:40:17",
+      "title": "Système Autonome 4.0 Actif",
+      "category": "INFO",
+      "message": "Helia-Notifier est opérationnel et prêt à relayer les alertes stratégiques.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    }
+  ]
+}

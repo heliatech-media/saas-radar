@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import RoiCalculator from '../../components/RoiCalculator.astro';
+import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -210,6 +211,11 @@ const jsonLd = {
       </div>
     </footer>
   </article>
+
+  <!-- Helia-CRO: Sticky Floating Conversion Bar -->
+  {post.tool_slug && (
+    <StickyAffiliateBar toolSlug={post.tool_slug} toolName={post.title.split(/[:—–-]/)[0].trim()} />
+  )}
 
   <!-- Interactive Client Enhancements: Reading Progress, Tables & Code Copy -->
   <script is:inline>

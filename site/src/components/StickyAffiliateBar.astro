@@ -1,0 +1,98 @@
+---
+interface Props {
+  toolSlug?: string;
+  toolName?: string;
+  discountBadge?: string;
+}
+
+const { 
+  toolSlug = 'make', 
+  toolName = 'Partner Software',
+  discountBadge = 'Official Verified Partner'
+} = Astro.props;
+
+const affiliateHop = `/go/${toolSlug}`;
+---
+
+<!-- Helia-CRO: Sticky Floating Conversion Bar -->
+<div 
+  id="sticky-cro-bar"
+  class="fixed bottom-0 left-0 right-0 z-40 transform translate-y-full transition-transform duration-500 ease-out p-3 sm:p-4 bg-slate-950/90 backdrop-blur-xl border-t border-cyan-500/30 shadow-2xl shadow-cyan-950/50"
+>
+  <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
+    
+    <!-- Left: Badge + Tool Info -->
+    <div class="flex items-center gap-3 min-w-0">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500/20 to-emerald-500/20 border border-cyan-500/40 flex-shrink-0 flex items-center justify-center font-black text-cyan-400 text-sm shadow-glow-cyan">
+        ⚡
+      </div>
+      <div class="min-w-0">
+        <div class="flex items-center gap-2">
+          <span class="text-xs sm:text-sm font-black text-white truncate">{toolName}</span>
+          <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-semibold">
+            {discountBadge}
+          </span>
+        </div>
+        <p class="text-[11px] font-mono text-slate-400 truncate hidden xs:block">
+          Direct cloud provisioning • Extended free evaluation tier
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: High-Converting CTA Button & Close -->
+    <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+      <a 
+        href={affiliateHop}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="px-4 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 text-xs font-mono font-black uppercase tracking-wider shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-1.5"
+      >
+        <span>Claim Free Trial</span>
+        <span class="text-sm">↗</span>
+      </a>
+
+      <!-- Dismiss Button -->
+      <button 
+        id="dismiss-cro-bar"
+        aria-label="Fermer la barre"
+        class="w-7 h-7 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xs transition-colors"
+      >
+        ✕
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const bar = document.getElementById('sticky-cro-bar');
+    const dismissBtn = document.getElementById('dismiss-cro-bar');
+    if (!bar) return;
+
+    let isDismissed = false;
+
+    // Show after scrolling 25% of the page
+    function checkScroll() {
+      if (isDismissed) return;
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+
+      if (scrolled > 22) {
+        bar.classList.remove('translate-y-full');
+      } else {
+        bar.classList.add('translate-y-full');
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+
+    if (dismissBtn) {
+      dismissBtn.addEventListener('click', () => {
+        isDismissed = true;
+        bar.classList.add('translate-y-full');
+      });
+    }
+  })();
+</script>
