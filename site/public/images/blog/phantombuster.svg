@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#060b18"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <radialGradient id="ambientCyan" cx="15%" cy="20%" r="50%" fx="15%" fy="20%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ambientFuchsia" cx="85%" cy="80%" r="50%" fx="85%" fy="80%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- UI & Node Gradients -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="cyanToBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="violetToFuchsia" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glowIntense" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur1"/>
+      <feGaussianBlur stdDeviation="5" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glassBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3"/>
+    </pattern>
+
+    <!-- Hexagon Template -->
+    <polygon id="hex" points="30,0 90,0 120,52 90,104 30,104 0,52"/>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#ambientCyan)"/>
+  <rect width="1200" height="630" fill="url(#ambientFuchsia)"/>
+
+  <!-- Decorative Background Flow Lines -->
+  <g fill="none" stroke-width="1.5" opacity="0.35">
+    <path d="M 50 150 C 200 150, 300 80, 450 180 S 600 300, 750 200 S 950 50, 1150 150" stroke="url(#cyanToBlue)" filter="url(#glow)"/>
+    <path d="M 100 450 C 300 450, 400 550, 600 400 S 800 250, 1000 450 S 1100 500, 1200 480" stroke="url(#violetToFuchsia)" filter="url(#glow)"/>
+    <path d="M 200 600 C 350 400, 500 200, 650 350 S 900 600, 1100 300" stroke="#06b6d4" stroke-dasharray="6,6"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3D AUTOMATION & WORKFLOW GRAPHICS (RIGHT)  -->
+  <!-- ========================================== -->
+  <g transform="translate(680, 80)">
+    <!-- Central Processing Cloud Base -->
+    <ellipse cx="220" cy="240" rx="160" ry="80" fill="#090d16" stroke="#1e293b" stroke-width="2" filter="url(#glassBlur)" opacity="0.7"/>
+
+    <!-- Workflow Connection Paths -->
+    <path d="M 50 100 L 150 180 L 220 130 L 320 220" fill="none" stroke="url(#cyanToBlue)" stroke-width="2.5" filter="url(#glow)"/>
+    <path d="M 80 320 L 160 260 L 250 300 L 350 200" fill="none" stroke="url(#violetToFuchsia)" stroke-width="2.5" filter="url(#glow)"/>
+    
+    <!-- Animated Pulse Nodes (Scraping/Automation triggers) -->
+    <!-- Node 1: Trigger / LinkedIn / CRM -->
+    <g transform="translate(30, 80)">
+      <rect width="70" height="70" rx="16" fill="url(#cardBg)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <circle cx="35" cy="35" r="16" fill="#06b6d4" fill-opacity="0.2"/>
+      <!-- Target Icon -->
+      <circle cx="35" cy="35" r="8" fill="none" stroke="#38bdf8" stroke-width="3"/>
+      <circle cx="35" cy="35" r="2" fill="#38bdf8"/>
+      <path d="M 35 15 L 35 21 M 35 49 L 35 55 M 15 35 L 21 35 M 49 35 L 55 35" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Node 2: Phantom Engine (Core) -->
+    <g transform="translate(180, 100)">
+      <polygon points="50,0 100,28 100,85 50,113 0,85 0,28" fill="url(#cardBg)" stroke="#8b5cf6" stroke-width="2.5" filter="url(#glowIntense)"/>
+      <!-- Ghost / Phantom Core Motif -->
+      <path d="M 35 40 C 35 25, 65 25, 65 40 L 65 75 L 57 70 L 50 75 L 43 70 L 35 75 Z" fill="url(#cyanToBlue)" opacity="0.9"/>
+      <circle cx="45" cy="45" r="3" fill="#030712"/>
+      <circle cx="55" cy="45" r="3" fill="#030712"/>
+    </g>
+
+    <!-- Node 3: Cloud Extraction -->
+    <g transform="translate(300, 180)">
+      <rect width="75" height="75" rx="16" fill="url(#cardBg)" stroke="#d946ef" stroke-width="2" filter="url(#glow)"/>
+      <!-- Data Streams Icon -->
+      <rect x="18" y="22" width="39" height="8" rx="3" fill="#d946ef" fill-opacity="0.4"/>
+      <rect x="18" y="34" width="39" height="8" rx="3" fill="#d946ef" fill-opacity="0.7"/>
+      <rect x="18" y="46" width="39" height="8" rx="3" fill="#d946ef"/>
+      <circle cx="24" cy="26" r="2" fill="#fff"/>
+      <circle cx="24" cy="38" r="2" fill="#fff"/>
+      <circle cx="24" cy="50" r="2" fill="#fff"/>
+    </g>
+
+    <!-- Node 4: Webhook / CRM Sync -->
+    <g transform="translate(100, 270)">
+      <rect width="70" height="70" rx="16" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="2"/>
+      <!-- Bolt/Lightning Icon -->
+      <path d="M 38 18 L 22 38 L 34 38 L 32 52 L 48 32 L 36 32 Z" fill="url(#cyanToBlue)" filter="url(#glow)"/>
+    </g>
+
+    <!-- Floating Hex Tech Badges -->
+    <g transform="translate(240, 30) scale(0.55)">
+      <use href="#hex" fill="#0f172a" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+      <text x="60" y="58" fill="#38bdf8" font-family="monospace" font-weight="bold" font-size="28" text-anchor="middle">24/7</text>
+    </g>
+    <g transform="translate(-20, 200) scale(0.5)">
+      <use href="#hex" fill="#0f172a" stroke="#d946ef" stroke-width="3" filter="url(#glow)"/>
+      <text x="60" y="58" fill="#d946ef" font-family="monospace" font-weight="bold" font-size="24" text-anchor="middle">API</text>
+    </g>
+
+    <!-- Data Particle Orbs -->
+    <circle cx="140" cy="140" r="5" fill="#38bdf8" filter="url(#glow)"/>
+    <circle cx="280" cy="160" r="4" fill="#d946ef" filter="url(#glow)"/>
+    <circle cx="220" cy="250" r="6" fill="#06b6d4" filter="url(#glow)"/>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- TYPOGRAPHY & DOSSIER CONTENT (LEFT)        -->
+  <!-- ========================================== -->
+  <g transform="translate(80, 80)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="320" height="34" rx="17" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <!-- Glowing Live Indicator Dot -->
+      <circle cx="20" cy="17" r="5" fill="#06b6d4" filter="url(#glow)"/>
+      <circle cx="20" cy="17" r="3" fill="#38bdf8"/>
+      <!-- Badge Text -->
+      <text x="40" y="22" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" letter-spacing="2.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title: PHANTOMBUSTER -->
+    <g transform="translate(0, 85)">
+      <text x="0" y="0" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="58" letter-spacing="1.5">
+        PHANTOM<tspan fill="url(#cyanToBlue)">BUSTER</tspan>
+      </text>
+    </g>
+
+    <!-- Investigation Title (Multi-line) -->
+    <g transform="translate(0, 155)">
+      <text x="0" y="0" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="28" letter-spacing="0.5">
+        The Rise of Code-Free Cloud Scrapers
+      </text>
+      <text x="0" y="38" fill="url(#violetToFuchsia)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="28" letter-spacing="0.5" filter="url(#glow)">
+        and the 2026 B2B Prospecting Playbook
+      </text>
+    </g>
+
+    <!-- Subtitle / Analytical Briefing -->
+    <g transform="translate(0, 245)">
+      <rect x="0" y="0" width="550" height="2" fill="url(#cyanToBlue)" opacity="0.5"/>
+      <text x="0" y="30" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="15" letter-spacing="0.3">
+        Deep-dive analysis on autonomous cloud execution, multi-channel
+      </text>
+      <text x="0" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="400" font-size="15" letter-spacing="0.3">
+        workflow orchestration, and high-velocity enterprise pipeline scale.
+      </text>
+    </g>
+
+    <!-- Footer Meta: Category & Domain -->
+    <g transform="translate(0, 360)">
+      <!-- Category Tag -->
+      <rect x="0" y="0" width="130" height="30" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#06b6d4" stroke-width="1"/>
+      <text x="65" y="20" fill="#06b6d4" font-family="monospace" font-weight="600" font-size="12" text-anchor="middle" letter-spacing="1">AUTOMATION</text>
+
+      <!-- Security / Clearance Level Tag -->
+      <rect x="145" y="0" width="140" height="30" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="215" y="20" fill="#c084fc" font-family="monospace" font-weight="600" font-size="12" text-anchor="middle" letter-spacing="1">FLAGSHIP 2026</text>
+
+      <!-- Domain Indicator -->
+      <text x="310" y="20" fill="#64748b" font-family="monospace" font-weight="500" font-size="12" letter-spacing="0.5">heliatech.online</text>
+    </g>
+
+  </g>
+
+  <!-- Frame Border / Cyber Accent Lines -->
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#1e293b" stroke-width="1" pointer-events="none"/>
+  <rect x="15" y="15" width="1170" height="600" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.2" pointer-events="none"/>
+  
+  <!-- Corner Accents -->
+  <path d="M 15 35 L 15 15 L 35 15" fill="none" stroke="#06b6d4" stroke-width="2"/>
+  <path d="M 1185 35 L 1185 15 L 1165 15" fill="none" stroke="#06b6d4" stroke-width="2"/>
+  <path d="M 15 595 L 15 615 L 35 615" fill="none" stroke="#06b6d4" stroke-width="2"/>
+  <path d="M 1185 595 L 1185 615 L 1165 615" fill="none" stroke="#06b6d4" stroke-width="2"/>
+</svg>

@@ -131,6 +131,16 @@
     "commission_rate": "Not publicly disclosed or official affiliate program not currently open"
   },
   {
+    "name": "Lovable",
+    "slug": "lovable",
+    "tagline": "Build production-ready web applications by chatting with an AI engineer.",
+    "category": "AI Development",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Founders, product managers, and developers looking to prototype and launch full-stack web applications at unprecedented speeds.",
+    "affiliate_url": "https://lovable.dev"
+  },
+  {
     "name": "Lusha",
     "slug": "lusha",
     "tagline": "B2B sales intelligence and contact enrichment platform for finding direct dials and verified emails.",
@@ -192,7 +202,8 @@
     "rating": 4.5,
     "starting_price": "$69/mo",
     "best_for": "B2B growth marketers, sales development reps (SDRs), and recruiters scaling outbound campaigns.",
-    "affiliate_url": "https://phantombuster.com"
+    "affiliate_url": "https://phantombuster.com/?via=heliatech",
+    "commission_rate": "20% recurring for 12 months"
   },
   {
     "name": "Printify",
@@ -213,7 +224,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.retool.com"
+    "affiliate_url": "https://retool.grsm.io/heliatech",
+    "commission_rate": "Up to $1,500 per customer or 20% recurring"
   },
   {
     "name": "Supabase",

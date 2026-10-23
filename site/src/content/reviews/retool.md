@@ -6,7 +6,7 @@ tagline: Next-generation AI Automation & No-Code platform built for modern scali
 category: AI Automation & No-Code
 rating: 4.8
 website_url: https://www.retool.com
-affiliate_url: https://www.retool.com
+affiliate_url: "https://retool.grsm.io/heliatech"
 summary: Retool is an enterprise-grade platform designed to streamline operations,
   eliminate repetitive manual workflows, and scale revenue.
 best_for: Growth-stage startups, modern remote agencies, and tech-forward teams looking

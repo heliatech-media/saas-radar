@@ -6,7 +6,7 @@ tagline: The code-free automation and data extraction platform to scale your B2B
 category: Automation
 rating: 4.5
 website_url: https://phantombuster.com
-affiliate_url: https://phantombuster.com
+affiliate_url: "https://phantombuster.com/?via=heliatech"
 summary: PhantomBuster provides ready-to-use cloud scrapers and workflow automations—called
   Phantoms—designed to extract data, send outreach, and automate actions across LinkedIn,
   Sales Navigator, Twitter, and the broader web without writing code. It acts as an

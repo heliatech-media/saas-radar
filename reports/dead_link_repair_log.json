@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-23T22:08:40.803861",
+  "timestamp": "2026-10-24T00:30:55.477979",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 66,
-    "total_redirects_active": 51,
+    "total_content_files_scanned": 70,
+    "total_redirects_active": 53,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 6,
+    "external_targets_repaired": 7,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "phantombuster",
-      "target_url": "https://www.phantombuster.com",
-      "source_file": "phantombuster-evolution-guide-2026.md"
+      "slug": "lovable",
+      "target_url": "https://www.lovable.com",
+      "source_file": "lovable-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -173,6 +173,12 @@
       "slug": "printify",
       "dead_target": "https://printify.pxf.io/c/heliatech",
       "healed_target": "https://www.printify.com",
+      "status_code": 404
+    },
+    {
+      "slug": "retool",
+      "dead_target": "https://retool.grsm.io/heliatech",
+      "healed_target": "https://www.retool.com",
       "status_code": 404
     }
   ]

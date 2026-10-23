@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-24 00:32:22",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-24 00:25:31",
+    "title": "Rewardful Intégré & Monétisé à 100% 💰",
+    "category": "MONETIZATION",
+    "message": "Lien officiel Rewardful (https://www.rewardful.com/?via=heliatech) déployé en 302 via /go/rewardful ! Fiche d'évaluation complète + Masterclass de 14 minutes publiées en ligne (129 pages).",
+    "link": "https://heliatech.online/blog/rewardful-evolution-guide-2026"
+  },
+  {
     "timestamp": "2026-10-23 22:11:20",
     "title": "Cycle Autonome #PhantomBuster",
     "category": "CYCLE",

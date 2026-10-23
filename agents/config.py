@@ -73,5 +73,8 @@ AFFILIATE_MAP = {
     "lemlist": "https://lemlist.com/?via=heliatech",
     "notion-ai": "https://affiliates.notion.so/heliatech",
     "partnerstack": "https://partnerstack.com/?via=heliatech",
-    "printify": "https://printify.pxf.io/c/heliatech"
+    "printify": "https://printify.pxf.io/c/heliatech",
+    "phantombuster": "https://phantombuster.com/?via=heliatech",
+    "retool": "https://retool.grsm.io/heliatech",
+    "rewardful": "https://www.rewardful.com/?via=heliatech"
 }

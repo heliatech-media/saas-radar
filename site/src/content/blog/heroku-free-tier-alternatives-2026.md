@@ -61,6 +61,12 @@ flowchart LR
 > [!TIP]
 > [!NOTE]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
 > **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
 
 > [!TIP]
@@ -101,7 +107,7 @@ supabase link --project-ref your-supabase-project-ref
 ```
 
 ### ⚡ Step 3: Restore the dump into your Supabase remote instance**
-Use `pg_restore` pointing to your Supabase connection string (found in your Supabase Project Settings -> Database -> Connection string -> URI).
+Use `pg_restore` pointing to your [Supabase](/reviews/supabase) connection string (found in your Supabase Project Settings -> Database -> Connection string -> URI).
 
 ```bash
 pg_restore --no-owner --no-acl -h db.your-supabase-project-ref.supabase.co -U postgres -d postgres -v heroku_backup.dump
@@ -117,7 +123,8 @@ supabase db diff
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
 
 ---
 
