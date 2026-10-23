@@ -11,6 +11,7 @@ from google import genai
 from google.genai import types
 from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP
 from agents.models import ToolReview, BlogPost, AffiliateCTA
+from agents.article_layout_agent import ArticleLayoutAgent
 
 
 class BlogAgent:
@@ -102,4 +103,12 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
             cleaned_text = re.sub(r'\\(?![/"\\bfnrtu])', r'\\\\', raw_text)
             data = json.loads(cleaned_text, strict=False)
 
-        return BlogPost(**data)
+        post = BlogPost(**data)
+        stylist = ArticleLayoutAgent()
+        post.markdown_content = stylist.beautify_markdown(
+            post.markdown_content,
+            tool_name=review.name,
+            tool_slug=review.slug,
+            category=review.category
+        )
+        return post

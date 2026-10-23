@@ -47,6 +47,9 @@ const jsonLd = {
   description={post.description}
   jsonLd={jsonLd}
 >
+  <!-- Reading Progress Bar (Fixed Top) -->
+  <div id="read-progress" class="fixed top-0 left-0 w-0 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-fuchsia-500 z-50 transition-all duration-75"></div>
+
   <article class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
     <!-- Breadcrumb -->
     <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 mb-10 shadow-sm">
@@ -138,8 +141,23 @@ const jsonLd = {
       </div>
     )}
 
+    <!-- Quick Navigation / Article Map -->
+    <nav class="my-8 p-4 sm:p-5 rounded-2xl bg-slate-900/50 border border-slate-800 text-xs font-mono shadow-inner-cyan">
+      <div class="flex items-center gap-2 mb-3 text-cyan-400 font-bold uppercase tracking-wider text-[11px]">
+        <span>✦</span>
+        <span>INVESTIGATION ROADMAP & SITEMAP</span>
+      </div>
+      <div class="flex flex-wrap gap-2 text-slate-300">
+        <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300">1. Genesis & Disruption</span>
+        <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300">2. Business Superpowers</span>
+        <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300">3. Hands-on Workshop</span>
+        <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300">4. Critical Trade-Offs</span>
+        <span class="px-2.5 py-1 rounded-lg bg-slate-800/90 border border-slate-700/60 text-slate-300">5. Final Verdict & Access</span>
+      </div>
+    </nav>
+
     <!-- Main Content Container with Elite Article Typography -->
-    <div class="elite-article mt-12">
+    <div class="elite-article mt-8">
       <Content />
     </div>
 
@@ -172,4 +190,50 @@ const jsonLd = {
       </div>
     </footer>
   </article>
+
+  <!-- Interactive Client Enhancements: Reading Progress, Tables & Code Copy -->
+  <script is:inline>
+    // 1. Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      const bar = document.getElementById('read-progress');
+      if (bar) bar.style.width = scrolled + '%';
+    }, { passive: true });
+
+    // 2. Wrap all markdown tables inside .table-responsive-container
+    document.querySelectorAll('.elite-article table').forEach((table) => {
+      if (!table.parentElement.classList.contains('table-responsive-container')) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-responsive-container';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+      }
+    });
+
+    // 3. Add Copy Button to Code Blocks
+    document.querySelectorAll('.elite-article pre').forEach((pre) => {
+      if (pre.querySelector('.copy-btn')) return;
+      pre.style.position = 'relative';
+
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-[10px] font-mono text-slate-300 border border-slate-700 transition-colors';
+      btn.textContent = 'Copy';
+
+      btn.addEventListener('click', () => {
+        const code = pre.querySelector('code')?.innerText || pre.innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          btn.textContent = 'Copied!';
+          btn.classList.add('text-cyan-400', 'border-cyan-500/40');
+          setTimeout(() => {
+            btn.textContent = 'Copy';
+            btn.classList.remove('text-cyan-400', 'border-cyan-500/40');
+          }, 2000);
+        });
+      });
+
+      pre.appendChild(btn);
+    });
+  </script>
 </Layout>
