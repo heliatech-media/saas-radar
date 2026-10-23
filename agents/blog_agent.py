@@ -86,5 +86,20 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
             )
         )
 
-        data = json.loads(response.text)
+        raw_text = (response.text or "").strip()
+        if raw_text.startswith("```json"):
+            raw_text = raw_text[7:]
+        if raw_text.startswith("```"):
+            raw_text = raw_text[3:]
+        if raw_text.endswith("```"):
+            raw_text = raw_text[:-3]
+        raw_text = raw_text.strip()
+
+        try:
+            data = json.loads(raw_text, strict=False)
+        except Exception:
+            import re
+            cleaned_text = re.sub(r'\\(?![/"\\bfnrtu])', r'\\\\', raw_text)
+            data = json.loads(cleaned_text, strict=False)
+
         return BlogPost(**data)
