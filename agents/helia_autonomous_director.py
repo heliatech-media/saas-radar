@@ -43,13 +43,15 @@ from agents.security_agent import SecurityAgent
 from agents.auto_repair_agent import AutoRepairAgent
 from agents.email_reporter_agent import EmailReporterAgent
 from agents.social_growth_agent import SocialGrowthAgent
+from agents.visionary_growth_agent import VisionaryGrowthAgent
 from agents.models import ToolReview
 
 
 class HeliaAutonomousDirector:
     def __init__(self, api_key: str = GEMINI_API_KEY):
         self.api_key = api_key
-        # Initialize Helia's 7 sub-agents
+        # Initialize Helia's fleet of specialized autonomous sub-agents
+        self.visionary = VisionaryGrowthAgent()
         self.security = SecurityAgent(root_dir=ROOT_DIR)
         self.repair = AutoRepairAgent()
         self.radar = RadarAgent(api_key=api_key)

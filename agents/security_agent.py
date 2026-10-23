@@ -46,27 +46,21 @@ class SecurityAgent:
             except Exception:
                 pass
 
-        # 2. Check netlify.toml security headers
-        netlify_toml = self.root_dir / "netlify.toml"
-        if netlify_toml.exists():
-            toml_content = netlify_toml.read_text(encoding="utf-8")
-            if "X-Frame-Options" not in toml_content:
+        # 2. Check Cloudflare & Netlify security headers
+        headers_file = self.root_dir / "site" / "public" / "_headers"
+        if headers_file.exists():
+            h_content = headers_file.read_text(encoding="utf-8")
+            if "X-Frame-Options" not in h_content or "X-Content-Type-Options" not in h_content:
                 findings.append({
-                    "severity": "MEDIUM",
-                    "file": "netlify.toml",
-                    "issue": "Missing X-Frame-Options header (Clickjacking risk)."
-                })
-            if "X-Content-Type-Options" not in toml_content:
-                findings.append({
-                    "severity": "MEDIUM",
-                    "file": "netlify.toml",
-                    "issue": "Missing X-Content-Type-Options header (MIME sniffing risk)."
+                    "severity": "HIGH",
+                    "file": "site/public/_headers",
+                    "issue": "Missing security headers in Cloudflare Pages _headers."
                 })
         else:
             findings.append({
                 "severity": "HIGH",
-                "file": "netlify.toml",
-                "issue": "netlify.toml not found. Security headers missing."
+                "file": "site/public/_headers",
+                "issue": "Cloudflare Pages _headers not found."
             })
 
         # 3. Verify public anonymity (Zero agent exposure on client UI)
@@ -82,6 +76,33 @@ class SecurityAgent:
                     })
             except Exception:
                 pass
+
+        # 4. ETHICAL & LEGAL COMPLIANCE AUDIT (100% White-Hat, Zero Piracy, Zero Harm)
+        prohibited_blackhat_terms = ['warez', 'crack', 'keygen', 'pirated', 'torrent', 'nulled', 'hack', 'exploit', 'bypass paywall']
+        content_files = list(self.root_dir.glob("site/src/content/**/*.{md,mdx}"))
+        for c_file in content_files:
+            try:
+                c_text = c_file.read_text(encoding="utf-8").lower()
+                for term in prohibited_blackhat_terms:
+                    if f" {term} " in c_text:
+                        findings.append({
+                            "severity": "CRITICAL",
+                            "file": str(c_file.relative_to(self.root_dir)),
+                            "issue": f"Prohibited black-hat/piracy term detected: '{term}'. Strictly illegal."
+                        })
+            except Exception:
+                pass
+
+        # 5. Verify FTC Legal Affiliate Disclosures
+        layout_file = self.root_dir / "site" / "src" / "layouts" / "Layout.astro"
+        if layout_file.exists():
+            l_text = layout_file.read_text(encoding="utf-8")
+            if "Independent Disclosures" not in l_text and "performance-based royalties" not in l_text:
+                findings.append({
+                    "severity": "HIGH",
+                    "file": "site/src/layouts/Layout.astro",
+                    "issue": "Missing mandatory FTC affiliate transparency disclosure in footer."
+                })
 
         passed = len([f for f in findings if f["severity"] in ("CRITICAL", "HIGH")]) == 0
 
