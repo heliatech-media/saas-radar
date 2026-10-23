@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import RoiCalculator from '../../components/RoiCalculator.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -174,6 +175,11 @@ const jsonLd = {
     <div class="elite-article mt-8">
       <Content />
     </div>
+
+    <!-- Interactive Financial ROI Simulator (Helia-CalculatorEngine) -->
+    {post.tool_slug && (
+      <RoiCalculator toolSlug={post.tool_slug} toolName={post.title.split(/[:—–-]/)[0].trim()} />
+    )}
 
     <!-- Bottom Tool Crosslink & Navigation -->
     <footer class="mt-20 pt-12 border-t border-slate-800">

@@ -95,7 +95,7 @@ faqs:
 | Plan | Price | Billing | Key Highlights |
 | :--- | :--- | :--- | :--- |
 | **Free Trial / Add-on** | $0 | monthly | Limited trial responses across workspace, Basic writing assistant capabilities |
-| **Notion AI Add-on** | $10 | monthly | Unlimited AI writing and editing, Ask Notion Q&A workspace search |
+| **[Notion AI](/reviews/notion-ai) Add-on** | $10 | monthly | Unlimited AI writing and editing, Ask Notion Q&A workspace search |
 | **Annual Billing** | $8 | yearly | All Notion AI Add-on features, Billed annually at $96 per user per year |
 
 

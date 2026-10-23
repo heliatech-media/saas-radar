@@ -43,7 +43,7 @@ This teardown provides an unvarnished, empirical analysis of both platforms. We 
 | **API & Webhooks** | Native HTTP module supporting custom headers, OAuth, and raw payload payloads | Limited native webhooks; relies heavily on predefined app triggers |
 | **Ecosystem & App Count** | 1,500+ apps + universal HTTP/GraphQL connectors | 6,000+ pre-built native applications |
 | **Data Transformation** | Advanced built-in functions, regex, array mapping, and JSON parsing | Basic text parsing, formatters, and limited line-item handling |
-| **Error Handling & Retry** | Granular error-routing paths, automated rollbacks, and pause-on-fail options | Linear error emails, auto-disable after consecutive failures |
+| **Error Handling & Retry** | Granular error-routing paths, automated rollbacks, and pause-on-fail options | [Linear](/reviews/linear) error emails, auto-disable after consecutive failures |
 | **Security & Compliance** | SOC 2 Type II, GDPR, ISO 27001, data residency controls | SOC 2 Type II, Enterprise-grade SAML SSO, advanced admin controls |
 | **Best For** | Complex data manipulation, high-volume workloads, multi-branch logic | Rapid app integration, non-technical teams, out-of-the-box SaaS syncing |
 

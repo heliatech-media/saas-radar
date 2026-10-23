@@ -43,7 +43,7 @@ image: /images/blog/monday-com.svg
 
 ## 1. The Genesis & Evolution: From Startup Canvas to Enterprise Work OS
 
-Founded in Tel Aviv as dapulse, Monday.com was born out of a visceral frustration with the tools available to modern teams in the early 2010s. The founders realized that traditional project management software was built for project managers, not for the actual humans doing the work. Legacy dinosaurs like Microsoft Project and early enterprise tools imposed a rigid, bureaucratic structure that forced teams to adapt to the software, rather than the other way around.
+Founded in Tel Aviv as dapulse, [Monday.com](/reviews/monday-com) was born out of a visceral frustration with the tools available to modern teams in the early 2010s. The founders realized that traditional project management software was built for project managers, not for the actual humans doing the work. Legacy dinosaurs like Microsoft Project and early enterprise tools imposed a rigid, bureaucratic structure that forced teams to adapt to the software, rather than the other way around.
 
 The spark of disruption was radical simplicity paired with radical flexibility. By introducing a color-coded, visual grid system powered by customizable columns, dapulse—which later rebranded to Monday.com—transformed dry databases into interactive command centers. As the platform matured, it quietly expanded its aperture. It evolved from a visual task tracker into a comprehensive Work OS capable of hosting CRM pipelines, software development sprints, marketing calendars, and custom internal tools.
 

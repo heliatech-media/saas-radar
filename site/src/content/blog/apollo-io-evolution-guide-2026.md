@@ -36,7 +36,7 @@ image: /images/blog/apollo-io.svg
 
 ## 1. The Genesis & Evolution: Slaying the Legacy Dinosaurs
 
-Founded with the mission to democratize access to B2B data and make go-to-market execution frictionless, Apollo.io entered a market dominated by entrenched, legacy database dinosaurs that charged exorbitant enterprise fees for static contact lists. Early sales tech was built on a simple premise: sell the data, and let the customer figure out how to contact the leads.
+Founded with the mission to democratize access to B2B data and make go-to-market execution frictionless, [Apollo.io](/reviews/apollo-io) entered a market dominated by entrenched, legacy database dinosaurs that charged exorbitant enterprise fees for static contact lists. Early sales tech was built on a simple premise: sell the data, and let the customer figure out how to contact the leads.
 
 Apollo's founders recognized that data in a vacuum is worthless. The true value lies in the immediate velocity of action. By integrating a massive, dynamically updated contact repository directly with enterprise-grade engagement workflows, email sequencing, and dialer capabilities, Apollo bypassed the traditional friction points of outbound sales. They didn't just build a better database; they built a closed-loop execution engine that quickly outpaced legacy competitors by offering a generous freemium model and radical workflow consolidation.
 

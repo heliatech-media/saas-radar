@@ -1,0 +1,143 @@
+---
+interface Props {
+  toolSlug?: string;
+  toolName?: string;
+}
+
+const { toolSlug = 'make', toolName = 'Software' } = Astro.props;
+const affiliateHop = `/go/${toolSlug}`;
+---
+
+<div class="my-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border border-emerald-500/30 shadow-2xl relative overflow-hidden">
+  
+  <!-- Subtle Ambient Glow -->
+  <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Header -->
+  <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-black text-lg">
+        🧮
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white tracking-tight flex items-center gap-2">
+          <span>Calculateur de ROI & Économies Estimées</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">INTERACTIF</span>
+        </h3>
+        <p class="text-xs text-slate-400 font-mono">Modélisation financière en temps réel pour l'adoption de {toolName}</p>
+      </div>
+    </div>
+    <span class="text-xs font-mono text-slate-500 hidden sm:inline-block">Simulation Entreprise 2026</span>
+  </div>
+
+  <!-- Interactive Controls Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    
+    <!-- Left: Sliders -->
+    <div class="space-y-6">
+      <div>
+        <div class="flex justify-between items-center text-xs font-mono mb-2">
+          <span class="text-slate-300">Volume d'opérations / Tâches mensuelles</span>
+          <span id="volume-val" class="text-emerald-400 font-bold">25,000 ops</span>
+        </div>
+        <input 
+          type="range" 
+          id="volume-slider" 
+          min="1000" 
+          max="200000" 
+          step="1000" 
+          value="25000"
+          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+        />
+        <div class="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
+          <span>1,000</span>
+          <span>100,000</span>
+          <span>200,000+</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center text-xs font-mono mb-2">
+          <span class="text-slate-300">Taille de l'équipe (Collaborateurs)</span>
+          <span id="team-val" class="text-cyan-400 font-bold">5 personnes</span>
+        </div>
+        <input 
+          type="range" 
+          id="team-slider" 
+          min="1" 
+          max="50" 
+          step="1" 
+          value="5"
+          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+        />
+        <div class="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
+          <span>1 solo</span>
+          <span>25 équipe</span>
+          <span>50+ PME</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Big ROI Counter & High-Converting CTA -->
+    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 text-center flex flex-col justify-between h-full">
+      <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-1">Économies Nettes Annuelles Estimées</span>
+      
+      <div class="my-4">
+        <span id="roi-savings" class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-300">
+          $3,600
+        </span>
+        <span class="text-xs font-mono text-slate-500 block mt-1">/ an (temps de travail + coût logiciel optimisé)</span>
+      </div>
+
+      <div class="text-[11px] font-mono text-slate-400 mb-4 flex items-center justify-center gap-3">
+        <span>⏱️ <strong id="hours-saved" class="text-white">45h</strong> sauvées/mois</span>
+        <span>•</span>
+        <span>⚡ ROI : <strong class="text-emerald-400">+420%</strong></span>
+      </div>
+
+      <a 
+        href={affiliateHop}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full py-3.5 px-6 rounded-xl font-black font-mono text-xs uppercase tracking-wider text-slate-950 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-300 hover:from-emerald-300 hover:to-cyan-300 shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+      >
+        <span>Activer l'offre officielle sur {toolName}</span>
+        <span>↗</span>
+      </a>
+      <span class="text-[10px] font-mono text-slate-500 mt-2 block">Essai gratuit disponible sans engagement</span>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const volSlider = document.getElementById('volume-slider');
+    const teamSlider = document.getElementById('team-slider');
+    const volVal = document.getElementById('volume-val');
+    const teamVal = document.getElementById('team-val');
+    const roiSavings = document.getElementById('roi-savings');
+    const hoursSaved = document.getElementById('hours-saved');
+
+    function calculate() {
+      if (!volSlider || !teamSlider) return;
+      const vol = parseInt(volSlider.value, 10);
+      const team = parseInt(teamSlider.value, 10);
+
+      if (volVal) volVal.textContent = vol.toLocaleString() + ' ops';
+      if (teamVal) teamVal.textContent = team + (team > 1 ? ' personnes' : ' personne');
+
+      // Formula: ops save 0.002h each + team efficiency
+      const hours = Math.round((vol * 0.0018) + (team * 4));
+      // Hourly ops value: $45/hr average
+      const rawSavings = Math.round(hours * 45 * 12 * 0.65);
+
+      if (hoursSaved) hoursSaved.textContent = hours + 'h';
+      if (roiSavings) roiSavings.textContent = '$' + rawSavings.toLocaleString();
+    }
+
+    if (volSlider) volSlider.addEventListener('input', calculate);
+    if (teamSlider) teamSlider.addEventListener('input', calculate);
+    calculate();
+  })();
+</script>

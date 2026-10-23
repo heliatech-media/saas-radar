@@ -28,7 +28,9 @@ ROOT_DIR = Path(__file__).resolve().parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+import threading
 from agents.helia_autonomous_director import HeliaAutonomousDirector
+from agents.telegram_commander_agent import TelegramCommander
 
 logging.basicConfig(
     level=logging.INFO,
@@ -53,6 +55,13 @@ def main():
     print("Mission: Scale heliatech.online to 100,000 monthly visitors & maximize affiliate MRR.")
     print(f"Cycle Interval: Every {args.interval_hours} hours | Auto-Deploy: {auto_push}")
     print("=" * 70)
+
+    # Start Telegram Commander two-way listener thread
+    commander = TelegramCommander()
+    if commander.is_configured():
+        logger.info("📡 Starting Telegram Commander two-way listener in background...")
+        telegram_thread = threading.Thread(target=commander.start_polling_loop, daemon=True)
+        telegram_thread.start()
 
     cycle_count = 1
     while True:

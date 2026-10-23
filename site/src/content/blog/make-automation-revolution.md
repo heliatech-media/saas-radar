@@ -42,7 +42,7 @@ Here is the origin story of this transformation, the forensic breakdown of its a
 
 ## 1. The Genesis: Why Integromat Rebuilt Automation from Scratch
 
-To understand Make's dominance today, we must look at how Integromat started in 2012. At that time, market incumbent Zapier treated every automation like a straight line. But in the real world of business operations, information flows are non-linear networks.
+To understand Make's dominance today, we must look at how Integromat started in 2012. At that time, market incumbent [Zapier](/reviews/zapier) treated every automation like a straight line. But in the real world of business operations, information flows are non-linear networks.
 
 A single e-commerce checkout is never merely a notification email:
 * It carries an array of purchased line items that must be broken down to reconcile inventory.

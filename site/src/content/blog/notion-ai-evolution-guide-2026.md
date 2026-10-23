@@ -49,7 +49,7 @@ By embedding LLM capabilities natively into every page and block, Notion bypasse
 
 ## 2. Core Business Superpowers
 
-For enterprise teams and high-growth startups, Notion AI delivers quantifiable operational leverage through four high-value capabilities:
+For enterprise teams and high-growth startups, [Notion AI](/reviews/notion-ai) delivers quantifiable operational leverage through four high-value capabilities:
 
 * **Zero Context Switching:** Because the AI assistant lives directly inside every page and block, users can draft, summarize, translate, and reformat copy without ever leaving their current document or opening an external browser tab.
 * **Workspace-Wide Q&A Engine:** The search and query feature indexes your entire Notion workspace knowledge base. Instead of hunting through endless folders, employees can ask complex questions—such as "What was our Q3 marketing budget allocation for EMEA?"—and receive synthesized, source-cited answers instantly.

@@ -53,6 +53,7 @@ from agents.social_scheduler_agent import SocialSchedulerAgent
 from agents.affiliate_hub_agent import HeliaAffiliateHub
 from agents.affiliate_hunter_agent import AffiliateHunterAgent
 from agents.versus_agent import VersusAgent
+from agents.alternatives_agent import AlternativesAgent
 from agents.link_weaver_agent import LinkWeaverAgent
 from agents.notifier_agent import NotifierAgent
 from agents.models import ToolReview
@@ -77,6 +78,7 @@ class HeliaAutonomousDirector:
         self.affiliate_hub = HeliaAffiliateHub()
         self.hunter = AffiliateHunterAgent(api_key=api_key)
         self.versus = VersusAgent(api_key=api_key)
+        self.alternatives = AlternativesAgent(api_key=api_key)
         self.weaver = LinkWeaverAgent()
         self.notifier = NotifierAgent()
 
@@ -170,6 +172,15 @@ class HeliaAutonomousDirector:
                 self.log("Helia-VersusEngine", f"Published head-to-head showdown: {versus_res[0].name}", "🏆")
         except Exception as e:
             self.log("Helia-VersusEngine", f"Versus engine notice: {e}", "⚠️")
+
+        # Step 5.6: Sub-Agent AlternativesEngine ("Top 7 Alternatives" Authority Roundups)
+        try:
+            self.log("Helia-AlternativesEngine", "Evaluating candidate replacement searches...", "🔄")
+            alt_res = self.alternatives.execute_alternatives_sweep(limit=1)
+            if alt_res:
+                self.log("Helia-AlternativesEngine", f"Published Top 7 Alternatives masterclass: {alt_res[0].name}", "🌟")
+        except Exception as e:
+            self.log("Helia-AlternativesEngine", f"Alternatives engine notice: {e}", "⚠️")
 
         # Step 6.5: Sub-Agent SocialScheduler (Monetized Partner Campaign Scheduler)
         try:
