@@ -126,10 +126,11 @@ class TelegramCommander:
             self.send_message(chat_id, msg)
 
         elif cmd in ("/cockpit", "/sentinel"):
+            master_pw = os.getenv("SENTINEL_PASSWORD", "Helia-Protected")
             msg = (
                 "⚡ *[COCKPIT SENTINEL SUIVI & CONTRÔLE]*\n\n"
                 "👉 [Accéder à votre console en direct](https://heliatech.online/sentinel/suivicontrol)\n\n"
-                "Mot de passe patron : `HeliaHeliaHelia333***HamzaHamzaHamza`"
+                f"Mot de passe patron : `{master_pw}`"
             )
             self.send_message(chat_id, msg)
 

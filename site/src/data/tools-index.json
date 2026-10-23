@@ -87,6 +87,16 @@
     "affiliate_url": "https://try.elevenlabs.io/ajhd6t7k04dh"
   },
   {
+    "name": "Framer",
+    "slug": "framer",
+    "tagline": "Design and publish stunning, production-ready responsive websites with the power of a canvas and React under the hood.",
+    "category": "Design and Web Development",
+    "rating": 4.7,
+    "starting_price": "$15/mo",
+    "best_for": "UI/UX designers, marketing agencies, and high-growth startups seeking custom, lightning-fast web experiences.",
+    "affiliate_url": "https://www.framer.com"
+  },
+  {
     "name": "HeyGen",
     "slug": "heygen",
     "tagline": "AI-powered video generation platform for creating hyper-realistic talking avatar videos at scale.",
@@ -105,7 +115,8 @@
     "rating": 4.8,
     "starting_price": "$10/user/mo",
     "best_for": "Fast-moving engineering teams, startups, and product-focused tech companies",
-    "affiliate_url": "https://linear.app"
+    "affiliate_url": "https://linear.app",
+    "commission_rate": "Not publicly disclosed (Linear primarily operates a referral/word-of-mouth model without a public traditional affiliate network)"
   },
   {
     "name": "Lusha",
@@ -115,7 +126,8 @@
     "rating": 4.3,
     "starting_price": "$39/mo",
     "best_for": "Outbound sales development reps, account executives, and tech recruiters looking for high-accuracy contact data.",
-    "affiliate_url": "https://www.lusha.com"
+    "affiliate_url": "https://lusha.grsm.io/heliatech",
+    "commission_rate": "Up to 50% for the first year or tiered recurring"
   },
   {
     "name": "Make",
@@ -135,7 +147,8 @@
     "rating": 4.6,
     "starting_price": "$9/seat/mo",
     "best_for": "Cross-functional teams, agency operations, and project managers seeking visual, highly automatable workflows.",
-    "affiliate_url": "https://monday.com"
+    "affiliate_url": "https://monday.com/?ref=heliatech",
+    "commission_rate": "22% recurring for the first year"
   },
   {
     "name": "Notion AI",

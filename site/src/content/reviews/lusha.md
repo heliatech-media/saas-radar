@@ -6,7 +6,7 @@ tagline: B2B sales intelligence and contact enrichment platform for finding dire
 category: B2B Sales Intelligence
 rating: 4.3
 website_url: https://www.lusha.com
-affiliate_url: https://www.lusha.com
+affiliate_url: "https://lusha.grsm.io/heliatech"
 summary: Lusha is a premier B2B prospecting tool designed to help sales reps, recruiters,
   and marketers uncover direct phone numbers and verified email addresses. Leveraging
   a vast, compliant database and a powerful browser extension, it streamlines outbound

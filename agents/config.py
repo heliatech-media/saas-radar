@@ -64,5 +64,8 @@ AFFILIATE_MAP = {
     "brevo": "https://brevo.partnerlinks.io/heliatech",
     "clickup": "https://clickup.pxf.io/c/heliatech",
     "cursor": "https://www.cursor.com/?via=heliatech",
-    "heygen": "https://heygen.grsm.io/heliatech"
+    "heygen": "https://heygen.grsm.io/heliatech",
+    "linear": "https://linear.app",
+    "lusha": "https://lusha.grsm.io/heliatech",
+    "monday-com": "https://monday.com/?ref=heliatech"
 }

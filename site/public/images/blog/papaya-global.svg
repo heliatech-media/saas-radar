@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="cyberGrid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.08" />
+    </linearGradient>
+
+    <!-- UI & Node Gradients -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsiaViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowSubtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Global Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.06" />
+    </pattern>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#gridPattern)" />
+  <rect width="1200" height="630" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="150" r="220" fill="#8b5cf6" opacity="0.12" filter="url(#glow)" />
+  <circle cx="850" cy="450" r="250" fill="#06b6d4" opacity="0.1" filter="url(#glow)" />
+  <circle cx="200" cy="500" r="180" fill="#d946ef" opacity="0.08" filter="url(#glow)" />
+
+  <!-- ================= PERSPECTIVE GLOBE / NETWORK BACKGROUND ================= -->
+  <g transform="translate(850, 320)" opacity="0.45" filter="url(#glowSubtle)">
+    <!-- Global Payroll / EOR Network Nodes -->
+    <ellipse cx="0" cy="0" rx="260" ry="110" fill="none" stroke="url(#cyanPurple)" stroke-width="1.5" stroke-dasharray="6 6" />
+    <ellipse cx="0" cy="0" rx="200" ry="180" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.4" />
+    <line x1="-260" y1="0" x2="260" y2="0" stroke="#38bdf8" stroke-width="1" opacity="0.3" />
+    <line x1="0" y1="-180" x2="0" y2="180" stroke="#38bdf8" stroke-width="1" opacity="0.3" />
+    
+    <!-- Orbiting Nodes -->
+    <circle cx="180" cy="-60" r="8" fill="#06b6d4" filter="url(#glow)" />
+    <circle cx="-140" cy="80" r="6" fill="#d946ef" filter="url(#glow)" />
+    <circle cx="-210" cy="-30" r="5" fill="#38bdf8" />
+    <circle cx="90" cy="130" r="7" fill="#8b5cf6" filter="url(#glow)" />
+    
+    <!-- Connection Arcs -->
+    <path d="M 180 -60 Q 50 -120 -140 80" fill="none" stroke="url(#cyanPurple)" stroke-width="1.5" opacity="0.6" />
+    <path d="M -210 -30 Q 0 -60 90 130" fill="none" stroke="#d946ef" stroke-width="1.5" opacity="0.5" />
+  </g>
+
+  <!-- ================= FOREGROUND: ARCHITECTURAL DOSSIER (LEFT) ================= -->
+  <g transform="translate(80, 80)">
+    <!-- Top Pill Badge -->
+    <g filter="url(#dropShadow)">
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="url(#badgeGrad)" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow)" />
+      <text x="35" y="22" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="1.8">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title & Subtitle -->
+    <text x="0" y="110" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" letter-spacing="-1">
+      Top 7 <tspan fill="url(#cyanPurple)">Deel</tspan> Alternatives
+    </text>
+    
+    <text x="0" y="155" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.3">
+      Global Payroll, EOR &amp; Contractor Management in 2026
+    </text>
+
+    <!-- Metadata HUD Box -->
+    <g transform="translate(0, 205)" filter="url(#dropShadow)">
+      <rect width="490" height="150" rx="12" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2" />
+      
+      <!-- Accent top bar -->
+      <path d="M 12 0 L 120 0" stroke="url(#cyanPurple)" stroke-width="3" stroke-linecap="round" />
+
+      <!-- HUD Metrics -->
+      <g transform="translate(24, 30)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.2">SYSTEM SCOPE</text>
+        <text x="0" y="22" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">Enterprise Compliance &amp; Multi-Currency Payouts</text>
+      </g>
+
+      <g transform="translate(24, 85)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.2">ANALYSIS VECTORS</text>
+        <text x="0" y="22" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">EOR Latency, Tax Automation, API Security</text>
+      </g>
+
+      <!-- Vertical HUD Separator -->
+      <line x1="380" y1="20" x2="380" y2="130" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+      
+      <!-- Status Badge inside HUD -->
+      <g transform="translate(400, 35)">
+        <rect width="66" height="24" rx="6" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1" />
+        <text x="33" y="16" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="11" font-weight="bold">LIVE</text>
+      </g>
+      <text x="400" y="85" fill="#10b981" font-family="monospace" font-size="11" font-weight="bold">VERIFIED</text>
+      <text x="400" y="105" fill="#64748b" font-family="monospace" font-size="10">2026-Q1</text>
+    </g>
+  </g>
+
+  <!-- ================= ISOMETRIC DEEL & ALTERNATIVE ENGINE (RIGHT) ================= -->
+  <g transform="translate(680, 110)" filter="url(#dropShadow)">
+    
+    <!-- Central Diagnostic Panel (Deel Core Node) -->
+    <g transform="translate(50, 0)">
+      <!-- Panel Backdrop -->
+      <polygon points="160,0 320,90 160,180 0,90" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4" />
+      
+      <!-- Isometric Inner Grid Line Art -->
+      <polygon points="160,30 280,96 160,162 40,96" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Core Icon / Symbol (Deel Stylized Nexus) -->
+      <g transform="translate(160, 90)">
+        <circle cx="0" cy="0" r="30" fill="#090d16" stroke="url(#cyanPurple)" stroke-width="2" filter="url(#glow)" />
+        <path d="M -12 -6 L 0 -16 L 12 -6 M 0 -16 L 0 16" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="0" cy="0" r="5" fill="#d946ef" />
+      </g>
+      
+      <!-- Floating Holographic Tag -->
+      <g transform="translate(160, -45)" filter="url(#dropShadow)">
+        <rect x="-65" y="-14" width="130" height="28" rx="6" fill="#090d16" stroke="#06b6d4" stroke-width="1.5" />
+        <text x="0" y="4" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1">DEEL CORE</text>
+      </g>
+    </g>
+
+    <!-- Satellite Alternative Nodes (Floating in Isometric Space) -->
+    
+    <!-- Node 1: Top Left (EOR Engine) -->
+    <g transform="translate(-40, 160)">
+      <polygon points="80,0 160,45 80,90 0,45" fill="url(#cardBg)" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.6" />
+      <circle cx="80" cy="45" r="16" fill="#0f172a" stroke="#8b5cf6" stroke-width="2" />
+      <text x="80" y="49" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="11" font-weight="bold">01</text>
+      <text x="80" y="115" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="0.5">EOR ENGINE</text>
+    </g>
+
+    <!-- Node 2: Bottom Center (Payroll Stream) -->
+    <g transform="translate(140, 240)">
+      <polygon points="80,0 160,45 80,90 0,45" fill="url(#cardBg)" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.6" />
+      <circle cx="80" cy="45" r="16" fill="#0f172a" stroke="#06b6d4" stroke-width="2" />
+      <text x="80" y="49" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="11" font-weight="bold">02</text>
+      <text x="80" y="115" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="0.5">PAYROLL API</text>
+    </g>
+
+    <!-- Node 3: Right (Compliance Vector) -->
+    <g transform="translate(320, 160)">
+      <polygon points="80,0 160,45 80,90 0,45" fill="url(#cardBg)" stroke="#d946ef" stroke-width="1.5" stroke-opacity="0.6" />
+      <circle cx="80" cy="45" r="16" fill="#0f172a" stroke="#d946ef" stroke-width="2" />
+      <text x="80" y="49" text-anchor="middle" fill="#f472b6" font-family="monospace" font-size="11" font-weight="bold">03</text>
+      <text x="80" y="115" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="0.5">COMPLIANCE</text>
+    </g>
+
+    <!-- Dynamic Inter-Node Connection Lines (Beziers) -->
+    <!-- Core to Node 1 -->
+    <path d="M 170 120 Q 100 140 45 185" fill="none" stroke="url(#cyanPurple)" stroke-width="2" stroke-dasharray="4 4" />
+    <!-- Core to Node 2 -->
+    <path d="M 210 160 Q 240 220 220 260" fill="none" stroke="url(#fuchsiaViolet)" stroke-width="2" />
+    <!-- Core to Node 3 -->
+    <path d="M 250 120 Q 320 140 375 185" fill="none" stroke="url(#cyanPurple)" stroke-width="2" stroke-dasharray="4 4" />
+    
+    <!-- Pulse Data Pointers -->
+    <circle cx="107" cy="152" r="4" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="222" cy="210" r="4" fill="#d946ef" filter="url(#glow)" />
+    <circle cx="313" cy="152" r="4" fill="#06b6d4" filter="url(#glow)" />
+  </g>
+
+  <!-- ================= FOOTER / BRANDING WATERMARK ================= -->
+  <g transform="translate(80, 570)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#334155" stroke-width="1" stroke-opacity="0.5" />
+    
+    <!-- Brand Signature -->
+    <text x="0" y="25" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="2">
+      HELIA TECH <tspan fill="#38bdf8" font-weight="400">|</tspan> <tspan fill="#94a3b8" font-weight="400">heliatech.online</tspan>
+    </text>
+
+    <!-- Security/Tech Hash Tag -->
+    <text x="1040" y="25" text-anchor="end" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1">
+      SEC_REF: DL-2026-X7
+    </text>
+  </g>
+</svg>
