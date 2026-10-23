@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-23 21:25:50",
-  "total_links_audited": 24,
+  "timestamp": "2026-10-23 21:51:51",
+  "total_links_audited": 25,
   "healthy_links": 19,
-  "broken_links_count": 5,
-  "health_rate": "79.2%",
+  "broken_links_count": 6,
+  "health_rate": "76.0%",
   "broken_links": [
     {
       "slug": "apollo-io",
@@ -39,6 +39,14 @@
       "final_url": "https://lusha.grsm.io/heliatech",
       "status_code": 404,
       "healthy": false
+    },
+    {
+      "slug": "notion-ai",
+      "target_url": "https://affiliates.notion.so/heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     }
   ],
   "audit_details": [
@@ -94,7 +102,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=KR37uOppFUqcGU&gsxid=KR37uOppFUqcGU&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=t3fbMXonbUfLkO&gsxid=t3fbMXonbUfLkO&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -111,6 +119,13 @@
       "final_url": "https://heygen.grsm.io/heliatech",
       "status_code": 404,
       "healthy": false
+    },
+    {
+      "slug": "lemlist",
+      "target_url": "https://lemlist.com/?via=heliatech",
+      "final_url": "https://www.lemlist.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "linear",
@@ -149,10 +164,11 @@
     },
     {
       "slug": "notion-ai",
-      "target_url": "https://www.notion.so/product/ai",
-      "final_url": "https://www.notion.com/product/ai",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://affiliates.notion.so/heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "partnerstack",

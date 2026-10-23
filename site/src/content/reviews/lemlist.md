@@ -6,7 +6,7 @@ tagline: Personalized cold email software with custom image and video automation
 category: Marketing
 rating: 4.6
 website_url: https://www.lemlist.com
-affiliate_url: https://www.lemlist.com
+affiliate_url: "https://lemlist.com/?via=heliatech"
 summary: Lemlist is a B2B outbound marketing and cold email automation platform built
   specifically to increase deliverability and response rates through advanced personalization
   at scale. It combines multi-channel outreach, warm-up pools, and dynamic visual

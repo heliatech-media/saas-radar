@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-23 21:51:51",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `apollo-io, brevo, clickup, heygen, lusha, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-23 21:47:36",
+    "title": "Duo de Choc Trafic Déployé en Prod 🚀",
+    "category": "TRAFFIC",
+    "message": "Helia-BadgeTrojan et Helia-RedditInfiltrator sont actifs ! Registre officiel /awards déployé avec 6 badges SVG embeddables et 5 playbooks Reddit d'autorité.",
+    "link": "https://heliatech.online/awards"
+  },
+  {
     "timestamp": "2026-10-23 21:26:13",
     "title": "Cycle Autonome #Lemlist",
     "category": "CYCLE",

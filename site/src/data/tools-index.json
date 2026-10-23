@@ -116,7 +116,8 @@
     "rating": 4.6,
     "starting_price": "$39/mo",
     "best_for": "B2B sales teams, growth agencies, and founders looking to scale personalized cold outreach without hitting spam filters.",
-    "affiliate_url": "https://www.lemlist.com"
+    "affiliate_url": "https://lemlist.com/?via=heliatech",
+    "commission_rate": "25% recurring for up to 12 months"
   },
   {
     "name": "Linear",
@@ -127,7 +128,7 @@
     "starting_price": "$10/user/mo",
     "best_for": "Fast-moving engineering teams, startups, and product-focused tech companies",
     "affiliate_url": "https://linear.app",
-    "commission_rate": "Not publicly disclosed or currently unavailable as Linear does not feature a public affiliate program."
+    "commission_rate": "Not publicly disclosed"
   },
   {
     "name": "Lusha",
@@ -169,7 +170,8 @@
     "rating": 4.6,
     "starting_price": "$10",
     "best_for": "Teams and individuals already heavily invested in the Notion ecosystem who manage vast amounts of internal documentation.",
-    "affiliate_url": "https://www.notion.so/product/ai"
+    "affiliate_url": "https://affiliates.notion.so/heliatech",
+    "commission_rate": "50% for the first year of Plus and Business plans"
   },
   {
     "name": "PartnerStack",
@@ -210,6 +212,16 @@
     "starting_price": "$25/mo",
     "best_for": "Full-stack developers, indie hackers, and engineering teams scaling web and mobile applications.",
     "affiliate_url": "https://supabase.com"
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "tagline": "The frontend cloud for high-performance developer workflows, instant preview deployments, and scalable Jamstack web applications.",
+    "category": "DevTools",
+    "rating": 4.8,
+    "starting_price": "$0/mo",
+    "best_for": "Frontend engineers, full-stack development agencies, and modern engineering teams scaling high-performance web applications.",
+    "affiliate_url": "https://vercel.com"
   },
   {
     "name": "Voiceflow",

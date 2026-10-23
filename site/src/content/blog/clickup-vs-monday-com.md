@@ -118,7 +118,8 @@ Enterprise software budgeting extends far beyond baseline sticker prices. We mus
 *   **Year 1 Total TCO:** **$1,620,000**
 
 > [!NOTE]
-> **Executive Takeaway:** **TCO Insight:** While Monday.com carries a higher baseline seat cost at scale, ClickUp’s architectural complexity demands significantly higher internal administrative overhead to maintain operational integrity.
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **TCO Insight:** While [Monday.com](/reviews/monday-com) carries a higher baseline seat cost at scale, ClickUp’s architectural complexity demands significantly higher internal administrative overhead to maintain operational integrity.
 
 ---
 

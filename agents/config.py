@@ -69,5 +69,7 @@ AFFILIATE_MAP = {
     "lusha": "https://lusha.grsm.io/heliatech",
     "monday-com": "https://monday.com/?ref=heliatech",
     "framer": "https://framer.partnerstack.com/heliatech",
-    "n8n": "https://n8n.io/?via=heliatech"
+    "n8n": "https://n8n.io/?via=heliatech",
+    "lemlist": "https://lemlist.com/?via=heliatech",
+    "notion-ai": "https://affiliates.notion.so/heliatech"
 }

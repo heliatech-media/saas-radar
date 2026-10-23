@@ -59,13 +59,17 @@ flowchart LR
 ```
 
 > [!TIP]
+> [!NOTE]
+> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
+
+> [!TIP]
 > **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
 
 ## 3. Granular Teardown of Supabase as the Ultimate Heroku Postgres Replacement
 
 When migrating off Heroku Postgres, spinning up a basic managed database is no longer enough. Modern applications demand instant APIs, real-time sync, fine-grained access control, and edge computing capabilities without writing boilerplate CRUD controllers.
 
-**Supabase** has emerged as the definitive choice to replace Heroku Postgres by wrapping PostgreSQL in a high-performance ecosystem:
+**[Supabase](/reviews/supabase)** has emerged as the definitive choice to replace Heroku Postgres by wrapping PostgreSQL in a high-performance ecosystem:
 
 *   **Row-Level Security (RLS):** Enforces data access policies directly at the database engine level using native Postgres security primitives, securing multi-tenant architectures natively.
 *   **Instant Auto-Generated APIs:** Automatically exposes your entire database schema via secure REST and GraphQL endpoints (via PostgREST) the moment you run your migrations.
@@ -106,7 +110,8 @@ supabase db diff
 ```
 
 > [!NOTE]
-> **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
 
 ---
 

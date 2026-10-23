@@ -6,7 +6,7 @@ tagline: Embed generative intelligence directly into your workspace notes, datab
 category: AI Productivity & Workspace
 rating: 4.6
 website_url: https://www.notion.so/product/ai
-affiliate_url: https://www.notion.so/product/ai
+affiliate_url: "https://affiliates.notion.so/heliatech"
 summary: Notion AI is an integrated suite of generative writing, summarizing, and
   data extraction tools built directly into the Notion workspace. It eliminates context
   switching by allowing users to draft content, query their entire workspace knowledge

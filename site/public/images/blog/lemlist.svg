@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Grid Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#070913"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+
+    <radialGradient id="cyanOrbs" cx="80%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="violetOrbs" cx="20%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#d946ef" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- UI/Mesh Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95"/>
+    </linearGradient>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+
+    <!-- Geometric Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3"/>
+    </pattern>
+
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#64748b" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGlow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Ambient Lighting / Orbs -->
+  <circle cx="950" cy="150" r="300" fill="url(#cyanOrbs)" filter="url(#softGlow)"/>
+  <circle cx="250" cy="500" r="350" fill="url(#violetOrbs)" filter="url(#softGlow)"/>
+
+  <!-- HELIA TECH Brand Header / Pill Badge -->
+  <g transform="translate(80, 60)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="310" height="36" rx="18" fill="#090d16" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle cx="20" cy="18" r="4" fill="#06b6d4" filter="url(#glow)"/>
+    <text x="36" y="23" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="2.5" fill="#38bdf8">HELIATECH DOSSIER</text>
+  </g>
+
+  <!-- Typography: Title & Subtitle -->
+  <g transform="translate(80, 140)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="4" fill="#8b5cf6">ENTERPRISE MARKETING &amp; SALES ENGINE</text>
+    
+    <!-- Main Tool Title -->
+    <text x="0" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" letter-spacing="1" fill="#ffffff">
+      LEMLIST<tspan fill="#06b6d4" font-size="52">.</tspan>
+    </text>
+
+    <!-- Investigation Headline -->
+    <text x="0" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+      The Genesis of <tspan fill="#38bdf8" font-weight="600">Hyper-Personalized Outbound</tspan>
+    </text>
+    <text x="0" y="122" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+      and the Masterclass in B2B <tspan fill="#d946ef" font-weight="600">Reply Rates</tspan>
+    </text>
+  </g>
+
+  <!-- Domain Metaphor: 3D Enriched Contact Graph & CRM Nodes (Right Side) -->
+  <g transform="translate(620, 60)" filter="url(#cardShadow)">
+    
+    <!-- Background Glass Panel for Visualizing Dashboard -->
+    <rect x="0" y="0" width="500" height="510" rx="20" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="2"/>
+    
+    <!-- Inner Accent Line -->
+    <path d="M 20 0 L 480 0" stroke="url(#cyanBlue)" stroke-width="2" filter="url(#glow)"/>
+
+    <!-- Network Connection Lines (Connecting Central Hub to Data Nodes) -->
+    <g stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 4">
+      <line x1="250" y1="230" x2="130" y2="120" />
+      <line x1="250" y1="230" x2="380" y2="140" />
+      <line x1="250" y1="230" x2="110" y2="340" />
+      <line x1="250" y1="230" x2="390" y2="360" />
+      <line x1="130" y1="120" x2="50" y2="200" />
+      <line x1="380" y1="140" x2="440" y2="240" />
+      <line x1="390" y1="360" x2="450" y2="320" />
+    </g>
+
+    <!-- Data Pathway Glow Vectors -->
+    <path d="M 130 120 Q 190 170 250 230" fill="none" stroke="url(#cyanBlue)" stroke-width="2" filter="url(#glow)"/>
+    <path d="M 250 230 Q 320 185 380 140" fill="none" stroke="url(#violetFuchsia)" stroke-width="2" filter="url(#glow)"/>
+    <path d="M 250 230 Q 320 295 390 360" fill="none" stroke="url(#cyanBlue)" stroke-width="2" filter="url(#glow)"/>
+
+    <!-- Central Hub Node (Lemlist Engine Core) -->
+    <g transform="translate(250, 230)">
+      <circle cx="0" cy="0" r="55" fill="#090d16" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="40" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="6 3"/>
+      <circle cx="0" cy="0" r="15" fill="url(#cyanBlue)"/>
+      <!-- Core Icon Symbol (Spark/Target) -->
+      <path d="M -6 -2 L 0 -10 L 6 -2 L 3 -2 L 3 6 L -3 6 L -3 -2 Z" fill="#ffffff"/>
+    </g>
+
+    <!-- Outer Contact Node 1 (Enriched Lead: CEO) -->
+    <g transform="translate(130, 120)" filter="url(#cardShadow)">
+      <rect x="-60" y="-35" width="120" height="70" rx="12" fill="#0b1329" stroke="#38bdf8" stroke-width="1.5"/>
+      <circle cx="-35" cy="0" r="14" fill="#06b6d4" fill-opacity="0.2"/>
+      <text x="-35" y="4" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">CEO</text>
+      <text x="-12" y="-6" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Alex M.</text>
+      <text x="-12" y="12" font-family="system-ui, sans-serif" font-size="8" fill="#10b981">● Verified 98%</text>
+    </g>
+
+    <!-- Outer Contact Node 2 (Dynamic Image Personalization) -->
+    <g transform="translate(380, 140)" filter="url(#cardShadow)">
+      <rect x="-65" y="-35" width="130" height="70" rx="12" fill="#0b1329" stroke="#d946ef" stroke-width="1.5"/>
+      <circle cx="-38" cy="0" r="14" fill="#8b5cf6" fill-opacity="0.2"/>
+      <text x="-38" y="4" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#d946ef" text-anchor="middle">IMG</text>
+      <text x="-16" y="-6" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Custom Asset</text>
+      <text x="-16" y="12" font-family="system-ui, sans-serif" font-size="8" fill="#38bdf8">Dynamic Liquid</text>
+    </g>
+
+    <!-- Outer Contact Node 3 (Omnichannel Multi-Step) -->
+    <g transform="translate(110, 340)" filter="url(#cardShadow)">
+      <rect x="-65" y="-35" width="130" height="70" rx="12" fill="#0b1329" stroke="#06b6d4" stroke-width="1.5"/>
+      <circle cx="-38" cy="0" r="14" fill="#06b6d4" fill-opacity="0.2"/>
+      <text x="-38" y="4" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#06b6d4" text-anchor="middle">SEQ</text>
+      <text x="-16" y="-6" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Email + LinkedIn</text>
+      <text x="-16" y="12" font-family="system-ui, sans-serif" font-size="8" fill="#a78bfa">Automated Flow</text>
+    </g>
+
+    <!-- Outer Contact Node 4 (Reply Rate Analytics) -->
+    <g transform="translate(390, 360)" filter="url(#cardShadow)">
+      <rect x="-65" y="-35" width="130" height="70" rx="12" fill="#0b1329" stroke="#10b981" stroke-width="1.5"/>
+      <circle cx="-38" cy="0" r="14" fill="#10b981" fill-opacity="0.2"/>
+      <text x="-38" y="4" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#10b981" text-anchor="middle">ROI</text>
+      <text x="-16" y="-6" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff">54% Reply</text>
+      <text x="-16" y="12" font-family="system-ui, sans-serif" font-size="8" fill="#10b981">▲ Record High</text>
+    </g>
+
+    <!-- Floating UI Badge: Masterclass Metric -->
+    <g transform="translate(250, 440)" filter="url(#cardShadow)">
+      <rect x="-175" y="-25" width="350" height="42" rx="21" fill="#030712" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">
+        HYPER-PERSONALIZATION <tspan fill="#38bdf8">MATRIX ACTIVE</tspan>
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Bottom Interactive / Stats Metrics Bar (Left Side Integration) -->
+  <g transform="translate(80, 455)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="500" height="115" rx="16" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.5"/>
+    
+    <!-- Stat 1 -->
+    <g transform="translate(40, 30)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#38bdf8">54.2%</text>
+      <text x="0" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">AVG REPLY RATE</text>
+    </g>
+
+    <!-- Vertical Divider -->
+    <line x1="175" y1="20" x2="175" y2="95" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Stat 2 -->
+    <g transform="translate(210, 30)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#d946ef">3.8x</text>
+      <text x="0" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">PIPELINE BOOST</text>
+    </g>
+
+    <!-- Vertical Divider -->
+    <line x1="335" y1="20" x2="335" y2="95" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Stat 3 -->
+    <g transform="translate(370, 30)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#06b6d4">100%</text>
+      <text x="0" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">WARMTH ENGINES</text>
+    </g>
+  </g>
+
+  <!-- Decorative Vector Corner Accents -->
+  <path d="M 30 30 L 50 30 M 30 30 L 30 50" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M 1170 30 L 1150 30 M 1170 30 L 1170 50" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M 30 600 L 50 600 M 30 600 L 30 580" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M 1170 600 L 1150 600 M 1170 600 L 1170 580" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Subtle Watermark Domain Tag -->
+  <text x="1140" y="605" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="2" text-anchor="end">HELIATECH.ONLINE</text>
+</svg>
