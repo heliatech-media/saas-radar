@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-23 20:56:04",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 7 lien(s) d'affiliation en anomalie :\n• `airtable, apollo-io, brevo, clickup, heygen, lusha, n8n`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-23 20:46:26",
+    "title": "OFFENSIVE ÉCLAIR : VERSUS ARENA & LEAD MAGNET DÉPLOYÉS",
+    "category": "EXPANSION",
+    "message": "L'empire passe à la vitesse supérieure, Patron ! 😈⚔️\n\nVoici les renforts massifs tout juste déployés en production :\n\n1️⃣ La Versus Arena est Ouverte : https://heliatech.online/versus\n6 duels de titans 1v1 publiés avec infographies Dark Cyber :\n• Make vs Zapier\n• ElevenLabs vs HeyGen\n• Apollo.io vs Lusha\n• ClickUp vs Monday.com\n• Beehiiv vs Brevo\n• Supabase vs Retool\n\n2️⃣ Nouveau Pilier : Top 7 ElevenLabs Alternatives (recommandant HeyGen #1)\n\n3️⃣ B2B Executive Lead Magnet : Boîtier de capture newsletter privé ('The HeliaTech Confidential') injecté sur la homepage et tous les articles pour bâtir notre liste d'acheteurs B2B.\n\n📊 Total catalogue : 90 pages statiques pré-générées à la vitesse de l'éclair.\nDirectrice : Helia Tech Media",
+    "link": "https://heliatech.online/versus"
+  },
+  {
     "timestamp": "2026-10-23 20:27:23",
     "title": "AUTONOMIE TOTALE : FLOTTE ÉTENDUE À 22 AGENTS",
     "category": "EXPANSION",

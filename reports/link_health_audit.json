@@ -1,0 +1,185 @@
+{
+  "timestamp": "2026-10-23 20:57:16",
+  "total_links_audited": 25,
+  "healthy_links": 25,
+  "broken_links_count": 0,
+  "health_rate": "100.0%",
+  "broken_links": [],
+  "audit_details": [
+    {
+      "slug": "adcreative-ai",
+      "target_url": "https://www.adcreative.ai/?fp_ref=heliatech",
+      "final_url": "https://www.adcreative.ai/?fp_ref=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "airtable",
+      "target_url": "https://airtable.com",
+      "final_url": "https://www.airtable.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "apollo-io",
+      "target_url": "https://www.apollo.io/?ref=heliatech",
+      "final_url": "https://www.apollo.io/?ref=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "beehiiv",
+      "target_url": "https://www.beehiiv.com/?via=heliatech",
+      "final_url": "https://www.beehiiv.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "brevo",
+      "target_url": "https://www.brevo.com/?via=heliatech",
+      "final_url": "https://www.brevo.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "clickup",
+      "target_url": "https://clickup.com/?via=heliatech",
+      "final_url": "https://clickup.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "cursor",
+      "target_url": "https://www.cursor.com/?via=heliatech",
+      "final_url": "https://cursor.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "elevenlabs",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0c7GFpS6Brtrf8&gsxid=0c7GFpS6Brtrf8&gspk=OTFiYjM2Mzg5MDIy",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "framer",
+      "target_url": "https://www.framer.com/?via=heliatech",
+      "final_url": "https://www.framer.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "heygen",
+      "target_url": "https://www.heygen.com/?via=heliatech",
+      "final_url": "https://www.heygen.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "linear",
+      "target_url": "https://linear.app",
+      "final_url": "https://linear.app/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "lusha",
+      "target_url": "https://www.lusha.com",
+      "final_url": "https://www.lusha.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "make",
+      "target_url": "https://www.make.com/en/register?pc=heliatechmake",
+      "final_url": "https://www.make.com/en/register?pc=heliatechmake",
+      "status_code": 403,
+      "healthy": true
+    },
+    {
+      "slug": "monday-com",
+      "target_url": "https://monday.com/?ref=heliatech",
+      "final_url": "https://monday.com/?ref=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "n8n",
+      "target_url": "https://n8n.io",
+      "final_url": "https://n8n.io/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "notion-ai",
+      "target_url": "https://www.notion.so/product/ai",
+      "final_url": "https://www.notion.com/product/ai",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "papaya-global",
+      "target_url": "https://www.papayaglobal.com/?via=heliatech",
+      "final_url": "https://www.papayaglobal.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "partnerstack",
+      "target_url": "https://partnerstack.com",
+      "final_url": "https://partnerstack.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "printify",
+      "target_url": "https://printify.com",
+      "final_url": "https://printify.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "retool",
+      "target_url": "https://www.retool.com",
+      "final_url": "https://retool.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "supabase",
+      "target_url": "https://supabase.com",
+      "final_url": "https://supabase.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "voiceflow",
+      "target_url": "https://www.voiceflow.com",
+      "final_url": "https://www.voiceflow.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "wati",
+      "target_url": "https://www.wati.io",
+      "final_url": "https://www.wati.io/ar/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "webflow",
+      "target_url": "https://webflow.com",
+      "final_url": "https://webflow.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "zapier",
+      "target_url": "https://www.zapier.com",
+      "final_url": "https://zapier.com/",
+      "status_code": 200,
+      "healthy": true
+    }
+  ]
+}

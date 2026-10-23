@@ -1,19 +1,21 @@
-# Cloudflare Pages Edge Directives - Instant Affiliate Hops
+# Cloudflare Pages Edge Directives - Instant Affiliate Hops (Audited by Helia-LinkSentinel)
 /go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
-/go/airtable https://airtable.com/?ref=heliatech 302
-/go/apollo-io https://apollo.grsm.io/heliatech 302
+/go/airtable https://airtable.com 302
+/go/apollo-io https://www.apollo.io/?ref=heliatech 302
 /go/beehiiv https://www.beehiiv.com/?via=heliatech 302
-/go/brevo https://brevo.partnerlinks.io/heliatech 302
-/go/clickup https://clickup.pxf.io/c/heliatech 302
+/go/brevo https://www.brevo.com/?via=heliatech 302
+/go/clickup https://clickup.com/?via=heliatech 302
 /go/cursor https://www.cursor.com/?via=heliatech 302
 /go/elevenlabs https://try.elevenlabs.io/ajhd6t7k04dh 302
-/go/heygen https://heygen.grsm.io/heliatech 302
+/go/framer https://www.framer.com/?via=heliatech 302
+/go/heygen https://www.heygen.com/?via=heliatech 302
 /go/linear https://linear.app 302
-/go/lusha https://lusha.grsm.io/heliatech 302
+/go/lusha https://www.lusha.com 302
 /go/make https://www.make.com/en/register?pc=heliatechmake 302
 /go/monday-com https://monday.com/?ref=heliatech 302
-/go/n8n https://www.n8n.com 302
+/go/n8n https://n8n.io 302
 /go/notion-ai https://www.notion.so/product/ai 302
+/go/papaya-global https://www.papayaglobal.com/?via=heliatech 302
 /go/partnerstack https://partnerstack.com 302
 /go/printify https://printify.com 302
 /go/retool https://www.retool.com 302

@@ -60,6 +60,9 @@ from agents.cro_agent import CROAgent
 from agents.data_visualizer_agent import DataVisualizerAgent
 from agents.backlink_agent import BacklinkArchitectAgent
 from agents.localizer_agent import LocalizerAgent
+from agents.link_sentinel_agent import LinkSentinelAgent
+from agents.quality_enforcer_agent import QualityEnforcerAgent
+from agents.budget_sentinel_agent import BudgetSentinelAgent
 from agents.models import ToolReview
 
 
@@ -89,6 +92,9 @@ class HeliaAutonomousDirector:
         self.visualizer = DataVisualizerAgent()
         self.backlink = BacklinkArchitectAgent()
         self.localizer = LocalizerAgent(api_key=api_key)
+        self.link_sentinel = LinkSentinelAgent()
+        self.quality = QualityEnforcerAgent()
+        self.budget = BudgetSentinelAgent()
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -225,6 +231,27 @@ class HeliaAutonomousDirector:
             self.localizer.audit_international_readiness()
         except Exception as e:
             self.log("Helia-Localizer", f"Localizer notice: {e}", "⚠️")
+
+        # Step 6.10: Sub-Agent LinkSentinel (Dead Affiliate Link & Redirect Health Guardian)
+        try:
+            self.log("Helia-LinkSentinel", "Auditing affiliate edge endpoints & validating 100% link health...", "🛡️")
+            self.link_sentinel.audit_all_redirects()
+        except Exception as e:
+            self.log("Helia-LinkSentinel", f"Link sentinel notice: {e}", "⚠️")
+
+        # Step 6.11: Sub-Agent QualityEnforcer (Anti-AI Slop & Editorial Balance Audit)
+        try:
+            self.log("Helia-QualityEnforcer", "Auditing editorial authenticity & enforcing mandatory trade-offs...", "🔍")
+            self.quality.audit_all_content()
+        except Exception as e:
+            self.log("Helia-QualityEnforcer", f"Quality enforcer notice: {e}", "⚠️")
+
+        # Step 6.12: Sub-Agent BudgetSentinel (AI Token Burn Rate & Spend Cap Audit)
+        try:
+            self.log("Helia-BudgetSentinel", "Auditing AI token burn rate & verifying zero-cost run-rate...", "💰")
+            self.budget.compute_daily_burn_rate()
+        except Exception as e:
+            self.log("Helia-BudgetSentinel", f"Budget sentinel notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")
