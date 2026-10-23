@@ -76,7 +76,7 @@ faqs:
 
 ## Executive Summary
 
-Notion AI is an integrated suite of generative writing, summarizing, and data extraction tools built directly into the Notion workspace. It eliminates context switching by allowing users to draft content, query their entire workspace knowledge base, and automate data extraction without leaving their current document.
+[Notion AI](/reviews/notion-ai) is an integrated suite of generative writing, summarizing, and data extraction tools built directly into the Notion workspace. It eliminates context switching by allowing users to draft content, query their entire workspace knowledge base, and automate data extraction without leaving their current document.
 
 ### Who is Notion AI Best For?
 **Target Audience:** Teams and individuals already heavily invested in the Notion ecosystem who manage vast amounts of internal documentation.

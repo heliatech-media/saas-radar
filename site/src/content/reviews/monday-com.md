@@ -107,7 +107,7 @@ competitor_matches:
 
 ## Executive Summary
 
-Monday.com is a flexible Work OS that combines project management, CRM, and custom internal tool building into a single visual interface. It scales from simple task trackers to complex enterprise resource planning systems using no-code automations and rich dashboards.
+[Monday.com](/reviews/monday-com) is a flexible Work OS that combines project management, CRM, and custom internal tool building into a single visual interface. It scales from simple task trackers to complex enterprise resource planning systems using no-code automations and rich dashboards.
 
 ### Who is Monday.com Best For?
 **Target Audience:** Cross-functional teams, agency operations, and project managers seeking visual, highly automatable workflows.

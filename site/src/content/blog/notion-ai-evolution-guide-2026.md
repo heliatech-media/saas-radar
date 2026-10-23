@@ -32,7 +32,7 @@ image: /images/blog/notion-ai.svg
 ---
 <p><b>T</b>he modern enterprise knowledge worker spends up to 20% of their working week searching for internal information or tracking down colleagues to answer routine questions. Before the advent of native generative intelligence inside document architectures, teams were trapped in a dizzying loop of tool fragmentation. You would draft a strategy brief in one application, jump to a separate browser tab to query an LLM for copy refinements, switch to a chat window to summarize meeting transcripts, and manually paste those disparate fragments back into your project database. This constant context switching shattered deep work states, fragmented corporate memory, and drained countless billable hours from bottom lines worldwide.</p>
 
-Notion AI dismantled this friction by embedding generative intelligence directly into the connective tissue of your workspace notes, databases, and documents. By bringing the AI to where the data already lives, it redefined how modern teams capture, refine, and retrieve institutional knowledge.
+[Notion AI](/reviews/notion-ai) dismantled this friction by embedding generative intelligence directly into the connective tissue of your workspace notes, databases, and documents. By bringing the AI to where the data already lives, it redefined how modern teams capture, refine, and retrieve institutional knowledge.
 
 ## 1. The Genesis & Evolution: How Native AI Reshaped the Workspace
 

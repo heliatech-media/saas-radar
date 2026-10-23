@@ -126,7 +126,7 @@ Yes, Voiceflow provides a permanent free plan with generous initial allowances s
 
 ### How does Voiceflow compare to legacy alternatives?
 
-Compared to older tools like Zapier, Voiceflow offers up to 5x more operations per dollar spent, making it dramatically more cost-effective as your automation volume scales.
+Compared to older tools like [Zapier](/reviews/zapier), Voiceflow offers up to 5x more operations per dollar spent, making it dramatically more cost-effective as your automation volume scales.
 
 ### Can I integrate custom AI models and webhooks?
 

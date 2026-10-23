@@ -121,7 +121,7 @@ WATI is a comprehensive WhatsApp Business API solution that empowers sales, mark
 - Official Meta WhatsApp Business API partner ensuring high reliability and compliance
 - Intuitive no-code chatbot builder for handling tier-1 support queries automatically
 - Shared team inbox with agent assignment, tags, and broadcast analytics
-- Robust integration ecosystem including Shopify, WooCommerce, Zapier, and HubSpot
+- Robust integration ecosystem including Shopify, WooCommerce, [Zapier](/reviews/zapier), and HubSpot
 - Competitive pricing structure compared to enterprise-heavy alternatives
 
 

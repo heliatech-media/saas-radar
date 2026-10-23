@@ -118,7 +118,7 @@ competitor_matches:
 
 ## Executive Summary
 
-AdCreative.ai leverages custom-trained machine learning models to generate high-converting ad banners, social media creatives, and text copy tailored to specific target audiences. It scores your creative assets based on historical performance data before you ever launch a campaign, minimizing wasted ad spend.
+[AdCreative.ai](/reviews/adcreative-ai) leverages custom-trained machine learning models to generate high-converting ad banners, social media creatives, and text copy tailored to specific target audiences. It scores your creative assets based on historical performance data before you ever launch a campaign, minimizing wasted ad spend.
 
 ### Who is AdCreative.ai Best For?
 **Target Audience:** Growth marketers, e-commerce brands, and agency owners scaling multi-channel paid social campaigns

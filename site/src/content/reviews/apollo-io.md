@@ -116,7 +116,7 @@ competitor_matches:
 
 ## Executive Summary
 
-Apollo.io is a powerful, data-driven go-to-market platform that combines a massive B2B contact database with robust email sequencing, CRM capabilities, and dialer functions. It streamlines prospecting workflows by centralizing lead generation and outreach into a single, unified workspace.
+[Apollo.io](/reviews/apollo-io) is a powerful, data-driven go-to-market platform that combines a massive B2B contact database with robust email sequencing, CRM capabilities, and dialer functions. It streamlines prospecting workflows by centralizing lead generation and outreach into a single, unified workspace.
 
 ### Who is Apollo.io Best For?
 **Target Audience:** B2B sales teams, growth marketers, founders, and outbound agencies seeking an all-in-one prospecting engine.

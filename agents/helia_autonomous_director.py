@@ -52,6 +52,9 @@ from agents.image_generator_agent import ImageGeneratorAgent
 from agents.social_scheduler_agent import SocialSchedulerAgent
 from agents.affiliate_hub_agent import HeliaAffiliateHub
 from agents.affiliate_hunter_agent import AffiliateHunterAgent
+from agents.versus_agent import VersusAgent
+from agents.link_weaver_agent import LinkWeaverAgent
+from agents.notifier_agent import NotifierAgent
 from agents.models import ToolReview
 
 
@@ -73,6 +76,9 @@ class HeliaAutonomousDirector:
         self.scheduler = SocialSchedulerAgent(api_key=api_key)
         self.affiliate_hub = HeliaAffiliateHub()
         self.hunter = AffiliateHunterAgent(api_key=api_key)
+        self.versus = VersusAgent(api_key=api_key)
+        self.weaver = LinkWeaverAgent()
+        self.notifier = NotifierAgent()
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -125,6 +131,11 @@ class HeliaAutonomousDirector:
         hunt_res = self.hunter.execute_hunt_cycle(max_tools=3)
         self.log("Helia-AffiliateHunter", f"Affiliate hunt complete: {hunt_res['hunted']} tools monetized independently.", "🎯")
 
+        # Step 2.9: Sub-Agent LinkWeaver (Topical Mesh & Internal Linking)
+        self.log("Helia-LinkWeaver", "Executing semantic internal link weaving across topic cluster...", "🕸️")
+        weaver_res = self.weaver.weave_all()
+        self.log("Helia-LinkWeaver", f"Internal mesh strengthened: {weaver_res['total_links_added']} hyperlinks active.", "✨")
+
         # Step 3: Sub-Agent TrendScout
         self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")
         keyword = self.radar.scout_trending_software()
@@ -151,6 +162,15 @@ class HeliaAutonomousDirector:
         except Exception as e:
             self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
 
+        # Step 5.5: Sub-Agent VersusEngine (Dual Head-to-Head Duel Showdowns)
+        try:
+            self.log("Helia-VersusEngine", "Evaluating candidate B2B rivalry showdowns...", "⚔️")
+            versus_res = self.versus.execute_versus_sweep(limit=1)
+            if versus_res:
+                self.log("Helia-VersusEngine", f"Published head-to-head showdown: {versus_res[0].name}", "🏆")
+        except Exception as e:
+            self.log("Helia-VersusEngine", f"Versus engine notice: {e}", "⚠️")
+
         # Step 6.5: Sub-Agent SocialScheduler (Monetized Partner Campaign Scheduler)
         try:
             self.log("Helia-SocialScheduler", "Synchronizing monetized social queues & scheduling multi-channel calendar...", "📅")
@@ -176,6 +196,18 @@ class HeliaAutonomousDirector:
             auto_repair_status=repair_res['status']
         )
         self.log("Helia-Reporter", f"Executive report recorded at: {report_path.name}", "📊")
+        
+        # Step 9: Sub-Agent Notifier (Founder Push Notifications)
+        try:
+            self.notifier.send_notification(
+                title=f"Cycle Autonome #{keyword.tool_name}",
+                message=f"Helia a audité le site, renforcé le maillage interne, publié l'analyse de {keyword.tool_name} et mis à jour le calendrier social.",
+                category="CYCLE",
+                link="https://heliatech.online/sentinel/suivicontrol"
+            )
+        except Exception as e:
+            self.log("Helia-Notifier", f"Notification notice: {e}", "⚠️")
+
         self.log("HELIA-CORE", f"🎉 Autonomous Growth Cycle successfully concluded for {keyword.tool_name}!", "🏆")
 
     def expand_blog_for_existing_tools(self, limit: int = 2, auto_push: bool = True):

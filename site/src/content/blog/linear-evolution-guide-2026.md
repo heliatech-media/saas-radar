@@ -47,7 +47,7 @@ Linear entered the market with a radical hypothesis: what if an issue tracker wa
 
 ## 2. Core Business Superpowers: Why High-Growth Teams Are Migrating
 
-Transitioning an engineering organization to a new tool is no small feat. Yet, high-growth startups and elite engineering teams at companies like Vercel, Retool, and Ramp have made the switch en masse. Here are the core business superpowers that drive this migration:
+Transitioning an engineering organization to a new tool is no small feat. Yet, high-growth startups and elite engineering teams at companies like Vercel, [Retool](/reviews/retool), and Ramp have made the switch en masse. Here are the core business superpowers that drive this migration:
 
 * **Unmatched UI Performance & Local Caching:** Linear utilizes an advanced client-side architecture that eliminates loading spinners. Every action—moving a ticket, updating a milestone, or filtering a view—happens instantaneously. This preservation of 'flow state' saves engineering teams countless hours of cognitive fragmentation.
 * **Lightning-Fast Keyboard-First Navigation:** Modeled after power-user editors like VS Code and Vim, Linear allows users to manage their entire workflow without touching a mouse. Pressing `C` creates an issue, `G` then `I` takes you to your inbox, and command menus let you execute complex multi-step queries in milliseconds.
