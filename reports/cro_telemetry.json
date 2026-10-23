@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-23 21:20:30",
-  "total_pages_audited": 36,
-  "monetized_pages": 36,
-  "total_ctas_tracked": 307,
-  "average_cro_score": "89.2/100",
+  "timestamp": "2026-10-23 21:25:13",
+  "total_pages_audited": 37,
+  "monetized_pages": 37,
+  "total_ctas_tracked": 358,
+  "average_cro_score": "89.5/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
     "Floating Sticky Affiliate Bar (StickyAffiliateBar.astro)",
@@ -15,8 +15,8 @@
     {
       "slug": "adcreative-ai-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1189,
-      "cta_count": 10,
+      "word_count": 1225,
+      "cta_count": 12,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -24,8 +24,8 @@
     {
       "slug": "airtable",
       "type": "blog",
-      "word_count": 1300,
-      "cta_count": 11,
+      "word_count": 1336,
+      "cta_count": 13,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -33,8 +33,8 @@
     {
       "slug": "apollo-io-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1133,
-      "cta_count": 10,
+      "word_count": 1169,
+      "cta_count": 12,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -42,7 +42,7 @@
     {
       "slug": "apollo-io-vs-lusha",
       "type": "blog",
-      "word_count": 1875,
+      "word_count": 1877,
       "cta_count": 6,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -51,8 +51,8 @@
     {
       "slug": "beehiiv-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1309,
-      "cta_count": 11,
+      "word_count": 1345,
+      "cta_count": 13,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -60,7 +60,7 @@
     {
       "slug": "beehiiv-vs-brevo",
       "type": "blog",
-      "word_count": 1967,
+      "word_count": 1977,
       "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -96,8 +96,8 @@
     {
       "slug": "best-zapier-alternatives-2026",
       "type": "blog",
-      "word_count": 2468,
-      "cta_count": 16,
+      "word_count": 2488,
+      "cta_count": 18,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -105,8 +105,8 @@
     {
       "slug": "brevo-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1138,
-      "cta_count": 9,
+      "word_count": 1174,
+      "cta_count": 11,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -114,8 +114,8 @@
     {
       "slug": "clickup-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1284,
-      "cta_count": 10,
+      "word_count": 1320,
+      "cta_count": 12,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -123,7 +123,7 @@
     {
       "slug": "clickup-vs-monday-com",
       "type": "blog",
-      "word_count": 1818,
+      "word_count": 1824,
       "cta_count": 8,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -132,8 +132,8 @@
     {
       "slug": "cursor-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1125,
-      "cta_count": 9,
+      "word_count": 1161,
+      "cta_count": 11,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -141,8 +141,8 @@
     {
       "slug": "elevenlabs-ia-voix-revolution",
       "type": "blog",
-      "word_count": 1389,
-      "cta_count": 10,
+      "word_count": 1421,
+      "cta_count": 12,
       "has_monetized_hop": true,
       "cro_score": 80,
       "status": "OPTIMIZED"

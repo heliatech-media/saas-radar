@@ -67,5 +67,7 @@ AFFILIATE_MAP = {
     "heygen": "https://heygen.grsm.io/heliatech",
     "linear": "https://linear.app",
     "lusha": "https://lusha.grsm.io/heliatech",
-    "monday-com": "https://monday.com/?ref=heliatech"
+    "monday-com": "https://monday.com/?ref=heliatech",
+    "framer": "https://framer.partnerstack.com/heliatech",
+    "n8n": "https://n8n.io/?via=heliatech"
 }

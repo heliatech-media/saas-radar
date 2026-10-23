@@ -89,6 +89,13 @@ For global content creators and enterprise marketing teams, the Dubbing Studio i
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `ElevenLabs` with our verified enterprise trial link at [/go/elevenlabs](/go/elevenlabs).
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
 > **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `ElevenLabs` with our verified enterprise trial link at [/go/elevenlabs](/go/elevenlabs).
 
 > [!TIP]

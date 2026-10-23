@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-23 21:25:50",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `apollo-io, brevo, clickup, heygen, lusha`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-10-23 21:20:39",
     "title": "Helia-Lupin Déployé & Opérationnel 😈",
     "category": "LUPIN",

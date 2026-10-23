@@ -1,23 +1,30 @@
 ---
-title: "Supabase vs Retool: Open-Source Backend vs Rapid Internal App Builder"
-description: "Comprehensive head-to-head teardown of Supabase vs Retool. Empirical comparison matrix, pricing scaling math, architectural benchmarks, and executive recommendations."
-date: "2026-10-23"
-author: "HELIA TECH"
-category: "DevTools & Internal Tooling"
+title: 'Supabase vs Retool: Open-Source Backend vs Rapid Internal App Builder'
+description: Comprehensive head-to-head teardown of Supabase vs Retool. Empirical
+  comparison matrix, pricing scaling math, architectural benchmarks, and executive
+  recommendations.
+date: '2026-10-23'
+author: HELIA TECH
+category: DevTools & Internal Tooling
 tags:
-  - Supabase
-  - Retool
-  - "Supabase vs Retool"
-  - Comparison
-  - B2B Software
-readingTime: "12 MIN"
-tool_slug: "supabase"
+- Supabase
+- Retool
+- Supabase vs Retool
+- Comparison
+- B2B Software
+readingTime: 9 MIN
+tool_slug: supabase
 tldr:
-  - "Supabase excels at providing an open-source, Postgres-native backend-as-a-service with granular Row Level Security, delivering unmatched architectural leverage for data-centric systems."
-  - "Retool remains superior for high-velocity front-end internal app assembly, providing an unmatched edge when operational teams need pre-built UI primitives over disparate APIs."
-  - "Economic scaling breakdown reveals up to 70% cost variation between both platforms at scale depending on seat count versus database storage throughput."
+- Supabase excels at providing an open-source, Postgres-native backend-as-a-service
+  with granular Row Level Security, delivering unmatched architectural leverage for
+  data-centric systems.
+- Retool remains superior for high-velocity front-end internal app assembly, providing
+  an unmatched edge when operational teams need pre-built UI primitives over disparate
+  APIs.
+- Economic scaling breakdown reveals up to 70% cost variation between both platforms
+  at scale depending on seat count versus database storage throughput.
+image: /images/blog/supabase.svg
 ---
-
 # Supabase vs Retool: Open-Source Backend vs Rapid Internal App Builder
 
 As engineering leaders, we are constantly forced to choose between building primitives from the metal up or buying opinionated abstractions that accelerate time-to-market. When deploying internal tools, operational dashboards, and client-facing micro-apps, this architectural tension concentrates around two distinct paradigms: 

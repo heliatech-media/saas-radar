@@ -1,10 +1,46 @@
 {
-  "timestamp": "2026-10-23 21:20:12",
-  "total_links_audited": 25,
-  "healthy_links": 25,
-  "broken_links_count": 0,
-  "health_rate": "100.0%",
-  "broken_links": [],
+  "timestamp": "2026-10-23 21:25:50",
+  "total_links_audited": 24,
+  "healthy_links": 19,
+  "broken_links_count": 5,
+  "health_rate": "79.2%",
+  "broken_links": [
+    {
+      "slug": "apollo-io",
+      "target_url": "https://apollo.grsm.io/heliatech",
+      "final_url": "https://apollo.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "brevo",
+      "target_url": "https://brevo.partnerlinks.io/heliatech",
+      "final_url": "https://brevo.partnerlinks.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "clickup",
+      "target_url": "https://clickup.pxf.io/c/heliatech",
+      "final_url": "https://clickup.pxf.io/c/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "heygen",
+      "target_url": "https://heygen.grsm.io/heliatech",
+      "final_url": "https://heygen.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "lusha",
+      "target_url": "https://lusha.grsm.io/heliatech",
+      "final_url": "https://lusha.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    }
+  ],
   "audit_details": [
     {
       "slug": "adcreative-ai",
@@ -15,17 +51,17 @@
     },
     {
       "slug": "airtable",
-      "target_url": "https://airtable.com",
-      "final_url": "https://www.airtable.com/",
+      "target_url": "https://airtable.com/?ref=heliatech",
+      "final_url": "https://www.airtable.com/?ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "apollo-io",
-      "target_url": "https://www.apollo.io/?ref=heliatech",
-      "final_url": "https://www.apollo.io/?ref=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://apollo.grsm.io/heliatech",
+      "final_url": "https://apollo.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "beehiiv",
@@ -36,17 +72,17 @@
     },
     {
       "slug": "brevo",
-      "target_url": "https://www.brevo.com/?via=heliatech",
-      "final_url": "https://www.brevo.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://brevo.partnerlinks.io/heliatech",
+      "final_url": "https://brevo.partnerlinks.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "clickup",
-      "target_url": "https://clickup.com/?via=heliatech",
-      "final_url": "https://clickup.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://clickup.pxf.io/c/heliatech",
+      "final_url": "https://clickup.pxf.io/c/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "cursor",
@@ -58,23 +94,23 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=vfqDlfsYG5criC&gsxid=vfqDlfsYG5criC&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=KR37uOppFUqcGU&gsxid=KR37uOppFUqcGU&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "framer",
-      "target_url": "https://www.framer.com/?via=heliatech",
-      "final_url": "https://www.framer.com/?via=heliatech",
+      "target_url": "https://framer.partnerstack.com/heliatech",
+      "final_url": "https://framer.partnerstack.com/heliatech",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "heygen",
-      "target_url": "https://www.heygen.com/?via=heliatech",
-      "final_url": "https://www.heygen.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://heygen.grsm.io/heliatech",
+      "final_url": "https://heygen.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "linear",
@@ -85,10 +121,10 @@
     },
     {
       "slug": "lusha",
-      "target_url": "https://www.lusha.com",
-      "final_url": "https://www.lusha.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://lusha.grsm.io/heliatech",
+      "final_url": "https://lusha.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "make",
@@ -106,8 +142,8 @@
     },
     {
       "slug": "n8n",
-      "target_url": "https://n8n.io",
-      "final_url": "https://n8n.io/",
+      "target_url": "https://n8n.io/?via=heliatech",
+      "final_url": "https://n8n.io/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -115,13 +151,6 @@
       "slug": "notion-ai",
       "target_url": "https://www.notion.so/product/ai",
       "final_url": "https://www.notion.com/product/ai",
-      "status_code": 200,
-      "healthy": true
-    },
-    {
-      "slug": "papaya-global",
-      "target_url": "https://www.papayaglobal.com/?via=heliatech",
-      "final_url": "https://www.papayaglobal.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

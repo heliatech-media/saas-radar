@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-10-23 21:20:25 UTC",
+  "last_updated": "2026-10-23 21:25:13 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 24,
-    "total_published_investigations": 60,
-    "reviews_audited": 24,
-    "masterclasses_and_duels": 36,
+    "total_published_investigations": 62,
+    "reviews_audited": 25,
+    "masterclasses_and_duels": 37,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$8,400 USD",
@@ -114,7 +114,7 @@
     },
     {
       "slug": "framer",
-      "destination": "https://www.framer.com",
+      "destination": "https://framer.partnerstack.com/heliatech",
       "type": "Catalog Edge Hop"
     },
     {
@@ -144,8 +144,8 @@
     },
     {
       "slug": "n8n",
-      "destination": "https://www.n8n.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://n8n.io/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "notion-ai",

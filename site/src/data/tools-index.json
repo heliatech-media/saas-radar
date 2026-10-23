@@ -94,7 +94,8 @@
     "rating": 4.7,
     "starting_price": "$15/mo",
     "best_for": "UI/UX designers, marketing agencies, and high-growth startups seeking custom, lightning-fast web experiences.",
-    "affiliate_url": "https://www.framer.com"
+    "affiliate_url": "https://framer.partnerstack.com/heliatech",
+    "commission_rate": "Up to 50% for the first year or 20% recurring depending on the plan"
   },
   {
     "name": "HeyGen",
@@ -108,6 +109,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "Lemlist",
+    "slug": "lemlist",
+    "tagline": "Personalized cold email software with custom image and video automation to boost reply rates.",
+    "category": "Marketing",
+    "rating": 4.6,
+    "starting_price": "$39/mo",
+    "best_for": "B2B sales teams, growth agencies, and founders looking to scale personalized cold outreach without hitting spam filters.",
+    "affiliate_url": "https://www.lemlist.com"
+  },
+  {
     "name": "Linear",
     "slug": "linear",
     "tagline": "The issue tracking tool designed for high-performance software engineering teams.",
@@ -116,7 +127,7 @@
     "starting_price": "$10/user/mo",
     "best_for": "Fast-moving engineering teams, startups, and product-focused tech companies",
     "affiliate_url": "https://linear.app",
-    "commission_rate": "Not publicly disclosed (Linear primarily operates a referral/word-of-mouth model without a public traditional affiliate network)"
+    "commission_rate": "Not publicly disclosed or currently unavailable as Linear does not feature a public affiliate program."
   },
   {
     "name": "Lusha",
@@ -248,6 +259,7 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.n8n.com"
+    "affiliate_url": "https://n8n.io/?via=heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
   }
 ]

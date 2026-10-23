@@ -6,7 +6,7 @@ tagline: Design and publish stunning, production-ready responsive websites with 
 category: Design and Web Development
 rating: 4.7
 website_url: https://www.framer.com
-affiliate_url: https://www.framer.com
+affiliate_url: "https://framer.partnerstack.com/heliatech"
 summary: Framer is a powerful design-to-publish platform that allows creative teams
   to build high-converting, visually rich websites without writing complex code. By
   combining a Figma-like layout engine with robust content management and hosting

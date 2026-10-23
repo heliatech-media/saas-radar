@@ -172,7 +172,7 @@ Ultimately, if you are a resource-constrained B2B team needing to replace dispar
 
 ### Can I integrate Apollo.io with my existing CRM?
 
-Yes, Apollo.io offers deep, native integrations with major CRMs including HubSpot, Salesforce, and Pipedrive, allowing for seamless synchronization of contacts, emails, and call activities.
+Yes, [Apollo.io](/reviews/apollo-io) offers deep, native integrations with major CRMs including HubSpot, Salesforce, and Pipedrive, allowing for seamless synchronization of contacts, emails, and call activities.
 
 ### Does Apollo.io offer a free plan?
 
