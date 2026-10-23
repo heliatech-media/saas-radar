@@ -61,6 +61,7 @@ from agents.data_visualizer_agent import DataVisualizerAgent
 from agents.backlink_agent import BacklinkArchitectAgent
 from agents.localizer_agent import LocalizerAgent
 from agents.link_sentinel_agent import LinkSentinelAgent
+from agents.link_doctor_agent import LinkDoctorAgent
 from agents.quality_enforcer_agent import QualityEnforcerAgent
 from agents.budget_sentinel_agent import BudgetSentinelAgent
 from agents.lupin_agent import LupinAgent
@@ -96,6 +97,7 @@ class HeliaAutonomousDirector:
         self.backlink = BacklinkArchitectAgent()
         self.localizer = LocalizerAgent(api_key=api_key)
         self.link_sentinel = LinkSentinelAgent()
+        self.link_doctor = LinkDoctorAgent()
         self.quality = QualityEnforcerAgent()
         self.budget = BudgetSentinelAgent()
         self.lupin = LupinAgent(api_key=api_key)
@@ -237,6 +239,14 @@ class HeliaAutonomousDirector:
             self.localizer.audit_international_readiness()
         except Exception as e:
             self.log("Helia-Localizer", f"Localizer notice: {e}", "⚠️")
+
+        # Step 6.95: Sub-Agent LinkDoctor (Autonomous Dead Link Detection & Self-Healing Surgeon)
+        try:
+            self.log("Helia-LinkDoctor", "Scanning platform for dead links, missing redirects & auto-healing...", "🩺")
+            doctor_res = self.link_doctor.heal_all_dead_links()
+            self.log("Helia-LinkDoctor", f"Sweep complete: {doctor_res['stats']['new_redirects_healed']} redirects healed | {doctor_res['stats']['internal_links_repaired']} internal links repaired.", "✅")
+        except Exception as e:
+            self.log("Helia-LinkDoctor", f"Link Doctor notice: {e}", "⚠️")
 
         # Step 6.10: Sub-Agent LinkSentinel (Dead Affiliate Link & Redirect Health Guardian)
         try:

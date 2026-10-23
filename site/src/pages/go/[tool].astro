@@ -1,13 +1,51 @@
 ---
 import { getCollection } from 'astro:content';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export async function getStaticPaths() {
   const reviews = await getCollection('reviews');
-  return reviews.map((entry) => ({
-    params: { tool: entry.slug },
-    props: { 
+  const pathMap = new Map<string, { targetUrl: string; toolName: string }>();
+
+  // 1. Load from reviews collection
+  reviews.forEach((entry) => {
+    pathMap.set(entry.slug, {
       targetUrl: entry.data.affiliate_url || entry.data.website_url,
       toolName: entry.data.name
+    });
+  });
+
+  // 2. Load and merge from _redirects file
+  try {
+    const redirectsPath = path.resolve(process.cwd(), 'public/_redirects');
+    if (fs.existsSync(redirectsPath)) {
+      const lines = fs.readFileSync(redirectsPath, 'utf-8').split('\n');
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (trimmed.startsWith('/go/') && trimmed.includes('http')) {
+          const parts = trimmed.split(/\s+/);
+          const slug = parts[0].replace('/go/', '').replace('/', '').trim();
+          const url = parts[1]?.trim();
+          if (slug && url && !pathMap.has(slug)) {
+            const prettyName = slug
+              .split('-')
+              .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+              .join(' ');
+            pathMap.set(slug, {
+              targetUrl: url,
+              toolName: prettyName
+            });
+          }
+        }
+      }
+    }
+  } catch(e) {}
+
+  return Array.from(pathMap.entries()).map(([slug, data]) => ({
+    params: { tool: slug },
+    props: { 
+      targetUrl: data.targetUrl,
+      toolName: data.toolName
     },
   }));
 }

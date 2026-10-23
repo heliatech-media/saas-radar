@@ -1,0 +1,173 @@
+{
+  "timestamp": "2026-10-23T21:58:02.587231",
+  "agent": "Helia-LinkDoctor",
+  "status": "PLATFORM_HEALTHY_100",
+  "stats": {
+    "total_content_files_scanned": 64,
+    "total_redirects_active": 50,
+    "new_redirects_healed": 25,
+    "internal_links_repaired": 0,
+    "external_targets_repaired": 5,
+    "content_files_modified": 0
+  },
+  "healed_redirects": [
+    {
+      "slug": "zoominfo",
+      "target_url": "https://www.zoominfo.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "cognism",
+      "target_url": "https://www.cognism.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "kaspr",
+      "target_url": "https://www.kaspr.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "leadiq",
+      "target_url": "https://leadiq.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "uplead",
+      "target_url": "https://www.uplead.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "clay",
+      "target_url": "https://www.clay.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "papaya-global",
+      "target_url": "https://www.papayaglobal.com/?ref=heliatech",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "rippling",
+      "target_url": "https://www.rippling.com",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "remote",
+      "target_url": "https://remote.com",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "oyster",
+      "target_url": "https://www.oysterhr.com",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "multiplier",
+      "target_url": "https://www.usemultiplier.com",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "plane",
+      "target_url": "https://plane.so",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "velocity-global",
+      "target_url": "https://velocityglobal.com",
+      "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "playht",
+      "target_url": "https://play.ht/?ref=heliatech",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "murf-ai",
+      "target_url": "https://murf.ai",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "resemble-ai",
+      "target_url": "https://www.resemble.ai",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "openai-tts",
+      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "speechify",
+      "target_url": "https://speechify.com",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "coqui",
+      "target_url": "https://github.com/coqui-ai/TTS",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "relay",
+      "target_url": "https://www.relay.app",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "workato",
+      "target_url": "https://www.workato.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "activepieces",
+      "target_url": "https://www.activepieces.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "tray-io",
+      "target_url": "https://tray.ai",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "power-automate",
+      "target_url": "https://powerautomate.microsoft.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "vercel",
+      "target_url": "https://vercel.com",
+      "source_file": "vercel-evolution-guide-2026.md"
+    }
+  ],
+  "healed_internal_links": [],
+  "healed_targets": [
+    {
+      "slug": "apollo-io",
+      "dead_target": "https://apollo.grsm.io/heliatech",
+      "healed_target": "https://www.apollo-io.com",
+      "status_code": 404
+    },
+    {
+      "slug": "brevo",
+      "dead_target": "https://brevo.partnerlinks.io/heliatech",
+      "healed_target": "https://www.brevo.com",
+      "status_code": 404
+    },
+    {
+      "slug": "clickup",
+      "dead_target": "https://clickup.pxf.io/c/heliatech",
+      "healed_target": "https://www.clickup.com",
+      "status_code": 404
+    },
+    {
+      "slug": "heygen",
+      "dead_target": "https://heygen.grsm.io/heliatech",
+      "healed_target": "https://www.heygen.com",
+      "status_code": 404
+    },
+    {
+      "slug": "lusha",
+      "dead_target": "https://lusha.grsm.io/heliatech",
+      "healed_target": "https://www.lusha.com",
+      "status_code": 404
+    }
+  ]
+}

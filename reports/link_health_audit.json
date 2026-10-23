@@ -1,55 +1,18 @@
 {
-  "timestamp": "2026-10-23 21:51:51",
-  "total_links_audited": 25,
-  "healthy_links": 19,
-  "broken_links_count": 6,
-  "health_rate": "76.0%",
-  "broken_links": [
-    {
-      "slug": "apollo-io",
-      "target_url": "https://apollo.grsm.io/heliatech",
-      "final_url": "https://apollo.grsm.io/heliatech",
-      "status_code": 404,
-      "healthy": false
-    },
-    {
-      "slug": "brevo",
-      "target_url": "https://brevo.partnerlinks.io/heliatech",
-      "final_url": "https://brevo.partnerlinks.io/heliatech",
-      "status_code": 404,
-      "healthy": false
-    },
-    {
-      "slug": "clickup",
-      "target_url": "https://clickup.pxf.io/c/heliatech",
-      "final_url": "https://clickup.pxf.io/c/heliatech",
-      "status_code": 404,
-      "healthy": false
-    },
-    {
-      "slug": "heygen",
-      "target_url": "https://heygen.grsm.io/heliatech",
-      "final_url": "https://heygen.grsm.io/heliatech",
-      "status_code": 404,
-      "healthy": false
-    },
-    {
-      "slug": "lusha",
-      "target_url": "https://lusha.grsm.io/heliatech",
-      "final_url": "https://lusha.grsm.io/heliatech",
-      "status_code": 404,
-      "healthy": false
-    },
-    {
-      "slug": "notion-ai",
-      "target_url": "https://affiliates.notion.so/heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
-    }
-  ],
+  "timestamp": "2026-10-23 22:02:18",
+  "total_links_audited": 50,
+  "healthy_links": 50,
+  "broken_links_count": 0,
+  "health_rate": "100.0%",
+  "broken_links": [],
   "audit_details": [
+    {
+      "slug": "activepieces",
+      "target_url": "https://www.activepieces.com",
+      "final_url": "https://www.activepieces.com/",
+      "status_code": 200,
+      "healthy": true
+    },
     {
       "slug": "adcreative-ai",
       "target_url": "https://www.adcreative.ai/?fp_ref=heliatech",
@@ -66,10 +29,10 @@
     },
     {
       "slug": "apollo-io",
-      "target_url": "https://apollo.grsm.io/heliatech",
-      "final_url": "https://apollo.grsm.io/heliatech",
-      "status_code": 404,
-      "healthy": false
+      "target_url": "https://www.apollo.io/?ref=heliatech",
+      "final_url": "https://www.apollo.io/?ref=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "beehiiv",
@@ -80,17 +43,38 @@
     },
     {
       "slug": "brevo",
-      "target_url": "https://brevo.partnerlinks.io/heliatech",
-      "final_url": "https://brevo.partnerlinks.io/heliatech",
-      "status_code": 404,
-      "healthy": false
+      "target_url": "https://www.brevo.com",
+      "final_url": "https://www.brevo.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "clay",
+      "target_url": "https://www.clay.com",
+      "final_url": "https://www.clay.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "clickup",
-      "target_url": "https://clickup.pxf.io/c/heliatech",
-      "final_url": "https://clickup.pxf.io/c/heliatech",
-      "status_code": 404,
-      "healthy": false
+      "target_url": "https://www.clickup.com",
+      "final_url": "https://clickup.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "cognism",
+      "target_url": "https://www.cognism.com",
+      "final_url": "https://www.cognism.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "coqui",
+      "target_url": "https://github.com/coqui-ai/TTS",
+      "final_url": "https://github.com/coqui-ai/TTS",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "cursor",
@@ -102,7 +86,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=t3fbMXonbUfLkO&gsxid=t3fbMXonbUfLkO&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=YVKenrFmYGX1Fq&gsxid=YVKenrFmYGX1Fq&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -115,10 +99,24 @@
     },
     {
       "slug": "heygen",
-      "target_url": "https://heygen.grsm.io/heliatech",
-      "final_url": "https://heygen.grsm.io/heliatech",
-      "status_code": 404,
-      "healthy": false
+      "target_url": "https://www.heygen.com",
+      "final_url": "https://www.heygen.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "kaspr",
+      "target_url": "https://www.kaspr.com",
+      "final_url": "https://www.kaspr.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "leadiq",
+      "target_url": "https://leadiq.com",
+      "final_url": "https://leadiq.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "lemlist",
@@ -136,10 +134,10 @@
     },
     {
       "slug": "lusha",
-      "target_url": "https://lusha.grsm.io/heliatech",
-      "final_url": "https://lusha.grsm.io/heliatech",
-      "status_code": 404,
-      "healthy": false
+      "target_url": "https://www.lusha.com",
+      "final_url": "https://www.lusha.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "make",
@@ -156,6 +154,20 @@
       "healthy": true
     },
     {
+      "slug": "multiplier",
+      "target_url": "https://www.usemultiplier.com",
+      "final_url": "https://www.usemultiplier.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "murf-ai",
+      "target_url": "https://murf.ai",
+      "final_url": "https://murf.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "n8n",
       "target_url": "https://n8n.io/?via=heliatech",
       "final_url": "https://n8n.io/?via=heliatech",
@@ -164,16 +176,57 @@
     },
     {
       "slug": "notion-ai",
-      "target_url": "https://affiliates.notion.so/heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+      "target_url": "https://www.notion.so/?ref=heliatech",
+      "final_url": "https://www.notion.com/?ref=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "openai-tts",
+      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
+      "final_url": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "oyster",
+      "target_url": "https://www.oysterhr.com",
+      "final_url": "https://www.oysterhr.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "papaya-global",
+      "target_url": "https://www.papayaglobal.com/?ref=heliatech",
+      "final_url": "https://www.papayaglobal.com/?ref=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "partnerstack",
       "target_url": "https://partnerstack.com",
       "final_url": "https://partnerstack.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "plane",
+      "target_url": "https://plane.so",
+      "final_url": "https://plane.so/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "playht",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=WcVLIus2vYr6Dv&gsxid=WcVLIus2vYr6Dv&gspk=OTFiYjM2Mzg5MDIy",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "power-automate",
+      "target_url": "https://powerautomate.microsoft.com",
+      "final_url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/",
       "status_code": 200,
       "healthy": true
     },
@@ -185,6 +238,27 @@
       "healthy": true
     },
     {
+      "slug": "relay",
+      "target_url": "https://www.relay.app",
+      "final_url": "https://relay.app/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "remote",
+      "target_url": "https://remote.com",
+      "final_url": "https://remote.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "resemble-ai",
+      "target_url": "https://www.resemble.ai",
+      "final_url": "https://www.resemble.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "retool",
       "target_url": "https://www.retool.com",
       "final_url": "https://retool.com/",
@@ -192,9 +266,51 @@
       "healthy": true
     },
     {
+      "slug": "rippling",
+      "target_url": "https://www.rippling.com",
+      "final_url": "https://www.rippling.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "speechify",
+      "target_url": "https://speechify.com",
+      "final_url": "https://speechify.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "supabase",
       "target_url": "https://supabase.com",
       "final_url": "https://supabase.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "tray-io",
+      "target_url": "https://tray.ai",
+      "final_url": "https://tray.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "uplead",
+      "target_url": "https://www.uplead.com",
+      "final_url": "https://www.uplead.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "velocity-global",
+      "target_url": "https://velocityglobal.com",
+      "final_url": "https://hellopebl.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "vercel",
+      "target_url": "https://vercel.com",
+      "final_url": "https://vercel.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -220,9 +336,23 @@
       "healthy": true
     },
     {
+      "slug": "workato",
+      "target_url": "https://www.workato.com",
+      "final_url": "https://www.workato.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "zapier",
       "target_url": "https://www.zapier.com",
       "final_url": "https://zapier.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "zoominfo",
+      "target_url": "https://www.zoominfo.com",
+      "final_url": "https://www.zoominfo.com/",
       "status_code": 200,
       "healthy": true
     }
