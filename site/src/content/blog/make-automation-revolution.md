@@ -25,10 +25,9 @@ tldr:
   and CRM enrichment engine in under 15 minutes.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
-  title: Test Make Pro with Extended Operation Credits
-  description: Join over 500,000 forward-thinking enterprises and unleash the full
-    power of visual automation.
-  button_text: Claim Your Free Make Account ➔
+  title: Claim 1 Month Free on Make Pro (10,000 Operations)
+  description: Every new user who registers for Make through our link automatically receives their first month on the Pro plan with 10,000 free operations.
+  button_text: Claim 1 Month Free Pro Plan on Make ➔
   url: /go/make
 image: /images/blog/make.svg
 ---
