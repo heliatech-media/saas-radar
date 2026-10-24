@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-24 16:13:55",
-  "total_links_audited": 57,
-  "healthy_links": 56,
+  "timestamp": "2026-10-24 20:23:09",
+  "total_links_audited": 58,
+  "healthy_links": 57,
   "broken_links_count": 1,
-  "health_rate": "98.2%",
+  "health_rate": "98.3%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -102,7 +102,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=rBbpQcAVkUONbC&gsxid=rBbpQcAVkUONbC&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ASgLmK0kJJYq7a&gsxid=ASgLmK0kJJYq7a&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -257,7 +257,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=BxDmoMIADfgx2q&gsxid=BxDmoMIADfgx2q&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IirfmNkPDjchwx&gsxid=IirfmNkPDjchwx&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -319,8 +319,8 @@
     },
     {
       "slug": "riverside",
-      "target_url": "https://www.riverside.com",
-      "final_url": "https://riverside.com/",
+      "target_url": "https://riverside.fm/?via=heliatech",
+      "final_url": "https://riverside.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -328,6 +328,13 @@
       "slug": "speechify",
       "target_url": "https://speechify.com",
       "final_url": "https://speechify.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "submagic",
+      "target_url": "https://www.submagic.com",
+      "final_url": "https://www.submagic.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -403,8 +410,8 @@
     },
     {
       "slug": "zapier",
-      "target_url": "https://www.zapier.com",
-      "final_url": "https://zapier.com/",
+      "target_url": "https://zapier.com/app/register?via=heliatech",
+      "final_url": "https://zapier.com/app/register?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

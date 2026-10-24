@@ -14,7 +14,7 @@ tags:
 - Voice Cloning
 - Audio Production
 - Multilingual Dubbing
-readingTime: 8 MIN
+readingTime: 6 MIN
 tool_slug: elevenlabs
 tldr:
 - Founded by Mati Staniszewski and Piotr Dabkowski, ElevenLabs solved the complex
@@ -86,7 +86,11 @@ For global content creators and enterprise marketing teams, the Dubbing Studio i
 ---
 
 > [!TIP]
-> **HeliaTech Benchmark Access:** Test ElevenLabs with our verified enterprise trial link at [/go/elevenlabs](/go/elevenlabs).
+> [!NOTE]
+> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test ElevenLabs with our verified enterprise trial link at [/go/elevenlabs](/go/elevenlabs).
+
+> [!TIP]
+> **HeliaTech Benchmark Access:** Test `ElevenLabs` with our verified enterprise trial link at [/go/elevenlabs](/go/elevenlabs).
 
 ## 3. Practical Masterclass: Globalize Your Media in 3 Steps
 

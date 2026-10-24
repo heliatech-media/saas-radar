@@ -260,6 +260,16 @@
     "affiliate_url": "https://riverside.fm"
   },
   {
+    "name": "Submagic",
+    "slug": "submagic",
+    "tagline": "AI-powered video captioning and editing tool that transforms raw footage into viral short-form clips in minutes.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Short-form video creators, digital agencies, and social media managers looking to scale output on TikTok, Reels, and YouTube Shorts.",
+    "affiliate_url": "https://submagic.co"
+  },
+  {
     "name": "Supabase",
     "slug": "supabase",
     "tagline": "The open source Firebase alternative providing all the backend features you need to build a product.",
@@ -333,7 +343,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.zapier.com"
+    "affiliate_url": "https://zapier.com/app/register?via=heliatech",
+    "commission_rate": "15% to 30% recurring for the first year depending on tier"
   },
   {
     "name": "n8n",

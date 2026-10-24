@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-24T16:12:34.859112",
+  "timestamp": "2026-10-24T20:21:47.773122",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 78,
-    "total_redirects_active": 57,
+    "total_content_files_scanned": 81,
+    "total_redirects_active": 58,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
     "external_targets_repaired": 11,
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "riverside",
-      "target_url": "https://www.riverside.com",
-      "source_file": "riverside.md"
+      "slug": "submagic",
+      "target_url": "https://www.submagic.com",
+      "source_file": "submagic-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-24 20:23:09",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-24 16:15:40",
+    "title": "Cycle Autonome #Riverside",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Riverside et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-24 16:13:55",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",

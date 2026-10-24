@@ -12,7 +12,7 @@ tags:
 - Cloud
 - Alternatives
 - DevTools
-readingTime: 7 MIN
+readingTime: 6 MIN
 tool_slug: supabase
 image: /images/blog/supabase.svg
 tldr:
@@ -57,6 +57,10 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
+
+> [!TIP]
+> [!NOTE]
+> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
 
 > [!TIP]
 > **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
@@ -106,7 +110,8 @@ supabase db diff
 ```
 
 > [!TIP]
-> **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on [Supabase](/reviews/supabase) Free Tier ↗](/go/supabase)
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on [Supabase](/reviews/supabase) Free Tier ↗](/go/supabase)
 
 ---
 
@@ -117,7 +122,7 @@ To evaluate the long-term total cost of ownership (TCO), we modeled a standard S
 | Resource Tier | Heroku Legacy Cost | Modern Composable Stack (Railway + [Supabase](/reviews/supabase)) | Coolify (Self-Hosted on Hetzner CCX13) |
 | :--- | :--- | :--- | :--- |
 | **Free / Hobby** | **$0/mo** (Deprecated/Killed) | **$0/mo** ($5 free credit / free DB tier) | **€4.59/mo** (Hetzner VPS base cost) |
-| **Standard / Startup** | **$25 - $50/mo** (Eco dynos + Hobby Postgres) | **$15 - $25/mo** (Usage-based RAM/CPU + Free Supabase tier) | **€4.59/mo** (Handles 10x more container resources) |
+| **Standard / Startup** | **$25 - $50/mo** (Eco dynos + Hobby Postgres) | **$15 - $25/mo** (Usage-based RAM/CPU + Free [Supabase](/reviews/supabase) tier) | **€4.59/mo** (Handles 10x more container resources) |
 | **Scale / Growth** | **$250+ /mo** (Standard 2x dynos + Standard-0 Postgres) | **$75 - $120/mo** (Pro Supabase $25 + Dedicated Railway RAM/CPU) | **€15 - €30/mo** (Scaling VPS resources manually) |
 
 ---
