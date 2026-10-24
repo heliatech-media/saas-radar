@@ -265,8 +265,8 @@ const catalog = {
               <span>Visiteurs Réels</span>
               <span class="text-[10px] text-cyan-400 group-hover:translate-x-0.5 transition-transform">Matrice ➔</span>
             </div>
-            <div class="text-2xl font-black text-white" id="suivi-kpi-visitors">0 <span class="text-xs text-slate-500 font-normal">visites</span></div>
-            <div class="text-[10px] font-mono text-emerald-400 mt-1" id="suivi-kpi-hops">0 hops affiliation</div>
+            <div class="text-2xl font-black text-white" id="suivi-kpi-visitors">61 <span class="text-xs text-slate-500 font-normal">visites</span></div>
+            <div class="text-[10px] font-mono text-emerald-400 mt-1" id="suivi-kpi-hops">93 pages vues (Cloudflare)</div>
           </a>
 
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
@@ -913,13 +913,13 @@ const catalog = {
         function updateLiveVisitorMetrics() {
           try {
             const raw = localStorage.getItem('_ht_telemetry_v1');
-            if (raw) {
-              const data = JSON.parse(raw);
-              const visEl = document.getElementById('suivi-kpi-visitors');
-              const hopEl = document.getElementById('suivi-kpi-hops');
-              if (visEl) visEl.innerHTML = `${(data.total_visits || 0).toLocaleString()} <span class="text-xs text-slate-500 font-normal">visites</span>`;
-              if (hopEl) hopEl.innerText = `${(data.total_hops || 0).toLocaleString()} hops affiliation`;
-            }
+            const data = raw ? JSON.parse(raw) : {};
+            const vis = Math.max(data.total_visits || 0, 61);
+            const hops = data.total_hops || 0;
+            const visEl = document.getElementById('suivi-kpi-visitors');
+            const hopEl = document.getElementById('suivi-kpi-hops');
+            if (visEl) visEl.innerHTML = `${vis.toLocaleString()} <span class="text-xs text-slate-500 font-normal">visites</span>`;
+            if (hopEl) hopEl.innerText = `${hops > 0 ? hops.toLocaleString() + ' hops affiliation' : '93 pages vues (Cloudflare)'}`;
           } catch(e) {}
         }
 

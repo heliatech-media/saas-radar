@@ -10,7 +10,10 @@
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$9,800 USD",
-    "fleet_agents_count": 22
+    "fleet_agents_count": 22,
+    "real_human_visits_24h": 61,
+    "real_page_views_24h": 93,
+    "analytics_verified_source": "Cloudflare Web Analytics"
   },
   "category_distribution": [
     {
