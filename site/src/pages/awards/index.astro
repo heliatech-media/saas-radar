@@ -142,8 +142,17 @@ const jsonLd = {
               <!-- Embed Snippet Box -->
               <div class="w-full">
                 <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1.5">
-                  <span>EMBED OFFICIAL BADGE</span>
-                  <span class="text-slate-500">HTML Snippet</span>
+                  <span class="flex items-center gap-1.5 font-bold text-slate-300">
+                    <span>⚡</span>
+                    <span>EMBED OFFICIAL BADGE</span>
+                  </span>
+                  <button 
+                    type="button"
+                    class="copy-badge-btn inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500/20 text-cyan-400 border border-slate-700 hover:border-cyan-500/40 text-[10px] font-mono font-bold transition-all active:scale-95 cursor-pointer"
+                    data-code={award.embedSnippet}
+                  >
+                    <span>📋 Copier HTML</span>
+                  </button>
                 </div>
                 <div class="p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-[11px] font-mono text-slate-300 break-all select-all hover:border-cyan-500/40 transition-colors">
                   <code>{award.embedSnippet}</code>
@@ -216,3 +225,26 @@ const jsonLd = {
 
   </div>
 </Layout>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-badge-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const code = btn.getAttribute('data-code');
+      if (!code) return;
+      try {
+        await navigator.clipboard.writeText(code);
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<span>✓ Copié !</span>';
+        btn.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/40');
+        btn.classList.remove('bg-slate-800', 'text-cyan-400');
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+          btn.classList.remove('bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/40');
+          btn.classList.add('bg-slate-800', 'text-cyan-400');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy', err);
+      }
+    });
+  });
+</script>
