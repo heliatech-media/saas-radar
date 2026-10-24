@@ -1,0 +1,67 @@
+{
+  "brand": "ElevenLabs",
+  "affiliate_partner_id": "ajhd6t7k04dh",
+  "tracking_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+  "redirect_route": "/go/elevenlabs",
+  "commission_rate": "30% Boosted (Active)",
+  "payout_method": "Airwallex / PartnerStack Local Bank Transfer",
+  "disclosure_tags": ["#ad", "#ElevenLabsPartner", "#ElevenCreativePartner", "#ElevenAgentsPartner", "#ElevenAPIPartner"],
+  "product_pillars": {
+    "eleven_creative": {
+      "title": "ElevenCreative",
+      "target_audience": "Individual creators, YouTubers, podcasters, marketing agencies, video producers",
+      "core_features": [
+        "Studio timeline editor for video, narration, music, and captions",
+        "Flows node-based visual pipeline on infinite canvas (A/B testing, multi-lingual batch generation)",
+        "Text to Speech v3 with Expressive Mode & Audio Tags ([laughs], [whispers], [sighs])",
+        "Commercial Music Generation (cleared for broad commercial use across multiple genres)",
+        "Sound Effects & Foley from text descriptions",
+        "AI Dubbing in 100+ languages preserving original speaker timbre and cadence",
+        "GenFM AI-generated podcasts and direct audiobook production"
+      ]
+    },
+    "eleven_agents": {
+      "title": "ElevenAgents",
+      "target_audience": "Small businesses, solo operators, clinics, legal firms, real estate, customer support teams",
+      "core_features": [
+        "24/7 AI Receptionist answering inbound calls and booking appointments directly",
+        "No-code configuration in under 15 minutes using company knowledge base (PDF, URLs, FAQs)",
+        "Integrations with Google Calendar, Outlook, Calendly, WhatsApp, Make, Zapier, Salesforce, Zendesk",
+        "Expressive Mode allowing de-escalation of difficult callers with empathetic tone",
+        "Multi-lingual support across 70+ languages without human agent fatigue"
+      ]
+    },
+    "eleven_api": {
+      "title": "ElevenAPI",
+      "target_audience": "Developers, AI startups, vibe-coders (Cursor, Lovable, Replit, v0), enterprise engineering",
+      "core_features": [
+        "Sub-500ms streaming responses for real-time conversational applications",
+        "Native SDKs for Python, TypeScript, Flutter, Swift, and Kotlin",
+        "Scribe Speech-to-Text with 20-50x real-time transcription across 99 languages",
+        "SOC 2, HIPAA, GDPR compliant with zero-retention mode"
+      ]
+    }
+  },
+  "compliance_guardrails": {
+    "prohibited_terms": [
+      "ultra-realistic",
+      "copyright free",
+      "in seconds",
+      "instantly (for audiobook/cloning)",
+      "each word / unmatched precision across 99 languages"
+    ],
+    "approved_terms": [
+      "human-like / lifelike voices",
+      "most expressive text to speech model (v3)",
+      "cleared for broad commercial use",
+      "studio-grade audio",
+      "in minutes / quick turnaround"
+    ],
+    "mandatory_rules": [
+      "Must include affiliate disclosure (#ad, #ElevenLabsPartner) above the fold",
+      "No bidding on ElevenLabs branded keywords on search engines",
+      "Do not represent as an ElevenLabs employee or official spokesperson",
+      "Always reference current pricing at elevenlabs.io/pricing"
+    ]
+  }
+}

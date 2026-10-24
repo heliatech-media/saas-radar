@@ -6,7 +6,7 @@ tagline: AI-powered video captioning and editing tool that transforms raw footag
 category: AI Video
 rating: 4.6
 website_url: https://submagic.co
-affiliate_url: https://submagic.co
+affiliate_url: https://submagic.co/?via=heliatech
 summary: Submagic is an advanced AI video editing suite designed specifically for
   short-form content creators, agencies, and marketers. It automates tedious video
   workflows by generating high-accuracy engaging captions, B-rolls, transitions, and

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg-agents" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#0a1128"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="glow-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <radialGradient id="phone-glow" cx="80%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg-agents)"/>
+  <rect width="1200" height="630" fill="url(#phone-glow)"/>
+
+  <!-- Subtle Cyber Grid -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Right Visual Dashboard Card: 24/7 Phone Receptionist -->
+  <g transform="translate(720, 140)">
+    <rect x="0" y="0" width="380" height="280" rx="20" fill="#0f172a" stroke="#1e293b" stroke-width="1.8"/>
+    
+    <!-- Top Card Header -->
+    <circle cx="35" cy="35" r="10" fill="#10b981"/>
+    <text x="55" y="40" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#ffffff">ELEVENAGENTS ACTIVE</text>
+    <text x="345" y="40" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#10b981" text-anchor="end">24/7 LIVE</text>
+    <line x1="20" y1="65" x2="360" y2="65" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Simulated Phone Call Flow -->
+    <g transform="translate(25, 85)">
+      <rect x="0" y="0" width="330" height="48" rx="10" fill="#020617" stroke="#334155" stroke-width="1"/>
+      <text x="15" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Incoming Customer Call</text>
+      <text x="15" y="38" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">Answered in 1.2s • Zero Latency</text>
+
+      <rect x="0" y="60" width="330" height="48" rx="10" fill="#020617" stroke="#334155" stroke-width="1"/>
+      <text x="15" y="82" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Knowledge Base Inquiry</text>
+      <text x="15" y="98" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">FAQ &amp; Pricing Verified • 70+ Lang</text>
+
+      <rect x="0" y="120" width="330" height="48" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="1.2"/>
+      <text x="15" y="142" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff">Automated Action Executed</text>
+      <text x="15" y="158" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#34d399">✓ Appointment Booked in Calendar</text>
+    </g>
+  </g>
+
+  <!-- Left Content -->
+  <g transform="translate(90, 110)">
+    <!-- Top Category Pill -->
+    <rect x="0" y="0" width="220" height="32" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+    <text x="110" y="21" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="1">B2B VOICE AUTOMATION</text>
+
+    <!-- Main Title -->
+    <text x="0" y="95" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="-1">
+      ELEVENAGENTS
+    </text>
+    <text x="0" y="155" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="900" fill="url(#glow-emerald)" letter-spacing="-1">
+      24/7 AI RECEPTIONIST
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="215" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="500" fill="#94a3b8">
+      Never Miss a Client Call • No-Code Phone Answering &amp; Booking
+    </text>
+
+    <!-- Value Badges -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="170" height="44" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="20" y="27" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#10b981">📞 100% Pick Up</text>
+
+      <rect x="185" y="0" width="185" height="44" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="205" y="27" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#38bdf8">📅 Live Calendar Sync</text>
+
+      <rect x="385" y="0" width="170" height="44" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="405" y="27" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#a855f7">💬 WhatsApp Ready</text>
+    </g>
+
+    <!-- Footer -->
+    <g transform="translate(0, 360)">
+      <line x1="0" y1="0" x2="1020" y2="0" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="8" cy="30" r="4" fill="#10b981"/>
+      <text x="24" y="34" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1.5">
+        HELIATECH.ONLINE • COMPLETE ENTERPRISE BLUEPRINT &amp; VERIFIED COMPLIANCE
+      </text>
+      <text x="1020" y="34" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#10b981" text-anchor="end">
+        ROI: 8.4x
+      </text>
+    </g>
+  </g>
+</svg>
