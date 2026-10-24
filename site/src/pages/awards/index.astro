@@ -126,12 +126,17 @@ const jsonLd = {
             <!-- Left: Badge Preview & Embed Code -->
             <div class="lg:col-span-5 flex flex-col items-center sm:items-start text-center sm:text-left">
               <div class="mb-6 p-2 rounded-2xl bg-slate-950/90 border border-slate-800 shadow-xl max-w-[340px]">
-                <img 
-                  src={award.badgeFile} 
-                  alt={`${award.toolName} 2026 HeliaTech Award Badge`}
-                  class="w-full h-auto rounded-xl"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcset={`${award.badgeFile}?v=20261024b`} type="image/svg+xml" />
+                  <img 
+                    src={`${award.badgeFile.replace('.svg', '.png')}?v=20261024b`} 
+                    alt={`${award.toolName} 2026 HeliaTech Award Badge`}
+                    class="w-full h-auto rounded-xl"
+                    width="320"
+                    height="120"
+                    loading="eager"
+                  />
+                </picture>
               </div>
 
               <!-- Embed Snippet Box -->

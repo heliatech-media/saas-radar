@@ -133,12 +133,15 @@ const jsonLd = {
     {post.image && (
       <div class="my-10 rounded-3xl overflow-hidden border border-slate-800 shadow-glass-cyber bg-slate-950/60 relative group">
         <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent opacity-30 z-10 pointer-events-none"></div>
-        <img 
-          src={post.image} 
-          alt={`${post.title} — Flagship Architectural Artwork`}
-          class="w-full h-auto aspect-[1200/630] object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-          loading="eager"
-        />
+        <picture>
+          <source srcset={`${post.image}?v=20261024b`} type="image/svg+xml" />
+          <img 
+            src={`${post.image.replace('.svg', '.png')}?v=20261024b`} 
+            alt={`${post.title} — Flagship Architectural Artwork`}
+            class="w-full h-auto aspect-[1200/630] object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+            loading="eager"
+          />
+        </picture>
       </div>
     )}
 
