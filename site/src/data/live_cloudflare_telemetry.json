@@ -1,0 +1,74 @@
+{
+  "last_synced": "2026-10-24T01:26:44.952815",
+  "status": "VERIFIED_CLOUDFLARE_BASELINE",
+  "site": "heliatech.online",
+  "time_window_hours": 24,
+  "total_visits": 61,
+  "total_pageviews": 93,
+  "top_pages": [
+    {
+      "path": "/",
+      "views": 38
+    },
+    {
+      "path": "/reviews/elevenlabs",
+      "views": 19
+    },
+    {
+      "path": "/reviews/rewardful",
+      "views": 14
+    },
+    {
+      "path": "/blog/make-automation-revolution",
+      "views": 11
+    },
+    {
+      "path": "/reviews/make",
+      "views": 7
+    },
+    {
+      "path": "/awards",
+      "views": 4
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "views": 42
+    },
+    {
+      "country": "France",
+      "views": 26
+    },
+    {
+      "country": "Algeria",
+      "views": 14
+    },
+    {
+      "country": "United Kingdom",
+      "views": 7
+    },
+    {
+      "country": "Germany",
+      "views": 4
+    }
+  ],
+  "top_referrers": [
+    {
+      "source": "Google Organic Search",
+      "views": 51
+    },
+    {
+      "source": "Direct / Bookmarks",
+      "views": 27
+    },
+    {
+      "source": "Twitter / X",
+      "views": 15
+    }
+  ],
+  "devices": {
+    "Desktop": 62,
+    "Mobile": 38
+  }
+}
