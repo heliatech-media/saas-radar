@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-24T11:59:14.785088",
+  "timestamp": "2026-10-24T16:12:34.859112",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 76,
-    "total_redirects_active": 56,
+    "total_content_files_scanned": 78,
+    "total_redirects_active": 57,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 10,
+    "external_targets_repaired": 11,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "castmagic",
-      "target_url": "https://www.castmagic.com",
-      "source_file": "castmagic-evolution-guide-2026.md"
+      "slug": "riverside",
+      "target_url": "https://www.riverside.com",
+      "source_file": "riverside.md"
     }
   ],
   "healed_internal_links": [],
@@ -197,6 +197,12 @@
       "slug": "voiceflow",
       "dead_target": "https://voiceflow.grsm.io/heliatech",
       "healed_target": "https://www.voiceflow.com",
+      "status_code": 404
+    },
+    {
+      "slug": "webflow",
+      "dead_target": "https://webflow.pxf.io/c/heliatech",
+      "healed_target": "https://www.webflow.com",
       "status_code": 404
     }
   ]

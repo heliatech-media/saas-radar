@@ -6,7 +6,7 @@ tagline: The official WhatsApp Business API platform built for customer support,
 category: WhatsApp Business API & Customer Support Automation
 rating: 4.5
 website_url: https://www.wati.io
-affiliate_url: https://www.wati.io
+affiliate_url: "https://www.wati.io/?fp_ref=heliatech"
 summary: WATI is a comprehensive WhatsApp Business API solution that empowers sales,
   marketing, and support teams with shared team inboxes, broadcast messaging, and
   a no-code chatbot builder. It bridges the gap between raw API complexity and accessible

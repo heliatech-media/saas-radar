@@ -250,6 +250,16 @@
     "commission_rate": "Up to $1,500 per customer or 20% recurring"
   },
   {
+    "name": "Riverside",
+    "slug": "riverside",
+    "tagline": "Studio-quality remote video and audio recording platform with local multi-track isolation.",
+    "category": "Audio/Podcasting",
+    "rating": 4.6,
+    "starting_price": "$15/mo",
+    "best_for": "Professional podcasters, remote interviewers, content agencies, and marketing teams needing pristine recording fidelity.",
+    "affiliate_url": "https://riverside.fm"
+  },
+  {
     "name": "Supabase",
     "slug": "supabase",
     "tagline": "The open source Firebase alternative providing all the backend features you need to build a product.",
@@ -301,7 +311,8 @@
     "rating": 4.5,
     "starting_price": "$49/mo",
     "best_for": "E-commerce brands, growing SMBs, and remote customer support teams scaling their WhatsApp channels.",
-    "affiliate_url": "https://www.wati.io"
+    "affiliate_url": "https://www.wati.io/?fp_ref=heliatech",
+    "commission_rate": "20% recurring commission for 1 year"
   },
   {
     "name": "Webflow",
@@ -311,7 +322,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "UI/UX designers, marketing agencies, and scaling tech companies needing bespoke web experiences",
-    "affiliate_url": "https://webflow.com"
+    "affiliate_url": "https://webflow.pxf.io/c/heliatech",
+    "commission_rate": "50% recurring for the first year"
   },
   {
     "name": "Zapier",

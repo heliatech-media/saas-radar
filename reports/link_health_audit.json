@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-10-24 12:00:32",
-  "total_links_audited": 56,
-  "healthy_links": 55,
+  "timestamp": "2026-10-24 16:13:55",
+  "total_links_audited": 57,
+  "healthy_links": 56,
   "broken_links_count": 1,
   "health_rate": "98.2%",
   "broken_links": [
@@ -59,9 +59,9 @@
     },
     {
       "slug": "castmagic",
-      "target_url": "https://www.castmagic.com",
-      "final_url": "https://www.godaddy.com/domainsearch/find?domainToCheck=castmagic.com",
-      "status_code": 403,
+      "target_url": "https://castmagic.io/?via=heliatech",
+      "final_url": "https://www.castmagic.io/?via=heliatech",
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -102,7 +102,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Djw2VX2rjpmCcP&gsxid=Djw2VX2rjpmCcP&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=rBbpQcAVkUONbC&gsxid=rBbpQcAVkUONbC&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -257,7 +257,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=gmV65rcvgA1qvD&gsxid=gmV65rcvgA1qvD&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=BxDmoMIADfgx2q&gsxid=BxDmoMIADfgx2q&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -314,6 +314,13 @@
       "slug": "rippling",
       "target_url": "https://www.rippling.com",
       "final_url": "https://www.rippling.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "riverside",
+      "target_url": "https://www.riverside.com",
+      "final_url": "https://riverside.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -375,14 +382,14 @@
     },
     {
       "slug": "wati",
-      "target_url": "https://www.wati.io",
-      "final_url": "https://www.wati.io/ar/",
+      "target_url": "https://www.wati.io/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "webflow",
-      "target_url": "https://webflow.com",
+      "target_url": "https://www.webflow.com",
       "final_url": "https://webflow.com/",
       "status_code": 200,
       "healthy": true

@@ -65,6 +65,16 @@ flowchart LR
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
 > **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
 
 > [!TIP]
@@ -151,7 +161,8 @@ supabase db diff
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on [Supabase](/reviews/supabase) Free Tier ↗](/go/supabase)
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on [Supabase](/reviews/supabase) Free Tier ↗](/go/supabase)
 
 ---
 
@@ -159,7 +170,7 @@ supabase db diff
 
 To evaluate the long-term total cost of ownership (TCO), we modeled a standard SaaS application: 2 web dynos, 1 worker dyno, and 1 Postgres database with 10GB of storage.
 
-| Resource Tier | Heroku Legacy Cost | Modern Composable Stack (Railway + Supabase) | Coolify (Self-Hosted on Hetzner CCX13) |
+| Resource Tier | Heroku Legacy Cost | Modern Composable Stack (Railway + [Supabase](/reviews/supabase)) | Coolify (Self-Hosted on Hetzner CCX13) |
 | :--- | :--- | :--- | :--- |
 | **Free / Hobby** | **$0/mo** (Deprecated/Killed) | **$0/mo** ($5 free credit / free DB tier) | **€4.59/mo** (Hetzner VPS base cost) |
 | **Standard / Startup** | **$25 - $50/mo** (Eco dynos + Hobby Postgres) | **$15 - $25/mo** (Usage-based RAM/CPU + Free Supabase tier) | **€4.59/mo** (Handles 10x more container resources) |

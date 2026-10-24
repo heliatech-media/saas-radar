@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-24 11:57:54 UTC",
+  "last_updated": "2026-10-24 16:11:13 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 31,
-    "total_published_investigations": 76,
-    "reviews_audited": 32,
-    "masterclasses_and_duels": 44,
+    "total_monetized_tools": 32,
+    "total_published_investigations": 78,
+    "reviews_audited": 33,
+    "masterclasses_and_duels": 45,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$10,850 USD",
+    "projected_monthly_mrr": "$11,200 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -95,6 +95,11 @@
     {
       "slug": "brevo",
       "destination": "https://brevo.partnerlinks.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "castmagic",
+      "destination": "https://castmagic.io/?via=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -214,12 +219,12 @@
     },
     {
       "slug": "wati",
-      "destination": "https://www.wati.io",
-      "type": "Catalog Edge Hop"
+      "destination": "https://www.wati.io/?fp_ref=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "webflow",
-      "destination": "https://webflow.com",
+      "destination": "https://webflow.pxf.io/c/heliatech",
       "type": "Catalog Edge Hop"
     },
     {

@@ -96,5 +96,7 @@ AFFILIATE_MAP = {
     "typeform": "https://typeform.grsm.io/heliatech",
     "vercel": "https://vercel.com/?via=heliatech",
     "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
-    "voiceflow": "https://voiceflow.grsm.io/heliatech"
+    "voiceflow": "https://voiceflow.grsm.io/heliatech",
+    "wati": "https://www.wati.io/?fp_ref=heliatech",
+    "webflow": "https://webflow.pxf.io/c/heliatech"
 }
