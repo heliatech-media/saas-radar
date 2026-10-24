@@ -259,7 +259,16 @@ const catalog = {
       <main class="max-w-7xl mx-auto px-6 py-8 flex-1 w-full space-y-8">
         
         <!-- TOP EXECUTIVE METRICS -->
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <a href="/sentinel" class="p-4 rounded-2xl bg-slate-900/60 border border-cyan-500/40 hover:border-cyan-400 backdrop-blur-xl glow-cyan block group transition-all" title="Ouvrir la Matrice Visiteurs Réels (/sentinel)">
+            <div class="text-[11px] font-mono text-cyan-300 uppercase tracking-wider mb-1 flex items-center justify-between">
+              <span>Visiteurs Réels</span>
+              <span class="text-[10px] text-cyan-400 group-hover:translate-x-0.5 transition-transform">Matrice ➔</span>
+            </div>
+            <div class="text-2xl font-black text-white" id="suivi-kpi-visitors">0 <span class="text-xs text-slate-500 font-normal">visites</span></div>
+            <div class="text-[10px] font-mono text-emerald-400 mt-1" id="suivi-kpi-hops">0 hops affiliation</div>
+          </a>
+
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
             <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-1">Masterclasses</div>
             <div class="text-2xl font-black text-white">{catalog.articlesCount} <span class="text-xs text-slate-500 font-normal">articles</span></div>
@@ -901,9 +910,23 @@ const catalog = {
           return digest === AUTHORIZED_DIGEST;
         }
 
+        function updateLiveVisitorMetrics() {
+          try {
+            const raw = localStorage.getItem('_ht_telemetry_v1');
+            if (raw) {
+              const data = JSON.parse(raw);
+              const visEl = document.getElementById('suivi-kpi-visitors');
+              const hopEl = document.getElementById('suivi-kpi-hops');
+              if (visEl) visEl.innerHTML = `${(data.total_visits || 0).toLocaleString()} <span class="text-xs text-slate-500 font-normal">visites</span>`;
+              if (hopEl) hopEl.innerText = `${(data.total_hops || 0).toLocaleString()} hops affiliation`;
+            }
+          } catch(e) {}
+        }
+
         function unlock() {
           authGate.classList.add('hidden');
           dashboard.classList.remove('hidden');
+          updateLiveVisitorMetrics();
         }
 
         function lock() {
