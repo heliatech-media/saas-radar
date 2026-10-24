@@ -123,6 +123,14 @@ flowchart LR
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
 > **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
 
 > [!TIP]
@@ -154,7 +162,7 @@ Relay.app is built specifically for workflows that require human intervention, r
 * **Sleek, Modern UX:** The interface is built for modern product and RevOps teams, eliminating the dated UI tropes of legacy automation tools.
 
 ### Where It Falls Short:
-It has a smaller pre-built integration library compared to Zapier or Make, meaning niche custom APIs require manual webhook integrations.
+It has a smaller pre-built integration library compared to Zapier or [Make](/reviews/make), meaning niche custom APIs require manual webhook integrations.
 
 ### Pricing Model & Economics:
 Freemium tier available; paid tiers start around $15/user/month, offering predictable seat-based pricing rather than unpredictable execution spikes.

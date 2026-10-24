@@ -90,5 +90,7 @@ AFFILIATE_MAP = {
     "rewardful": "https://www.rewardful.com/?via=heliatech",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
     "transistor-fm": "https://transistor.fm/?via=heliatech",
-    "veed-io": "https://www.veed.io/?via=heliatech"
+    "veed-io": "https://www.veed.io/?via=heliatech",
+    "lovable": "https://lovable.dev/?via=heliatech",
+    "supabase": "https://supabase.com/?via=heliatech"
 }

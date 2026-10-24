@@ -5,7 +5,7 @@ tagline: Build production-ready web applications by chatting with an AI engineer
 category: AI Development
 rating: 4.6
 website_url: https://lovable.dev
-affiliate_url: https://lovable.dev
+affiliate_url: "https://lovable.dev/?via=heliatech"
 summary: Lovable is an advanced generative AI development platform that allows users
   to prompt, iterate, and deploy fully functional React and Tailwind CSS applications.
   It bridges the gap between design mockups and actual source code, empowering both
@@ -110,7 +110,7 @@ Lovable is an advanced generative AI development platform that allows users to p
 - **Natural language to full-stack code generation**
 - **Live visual editor with side-by-side code inspection**
 - **One-click GitHub repository sync**
-- **Built-in Supabase backend provisioning**
+- **Built-in [Supabase](/reviews/supabase) backend provisioning**
 - **Component library integration with Tailwind and Shadcn UI**
 
 

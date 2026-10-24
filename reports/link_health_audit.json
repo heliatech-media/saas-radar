@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-10-24 00:32:22",
-  "total_links_audited": 53,
-  "healthy_links": 52,
+  "timestamp": "2026-10-24 04:38:40",
+  "total_links_audited": 54,
+  "healthy_links": 53,
   "broken_links_count": 1,
   "health_rate": "98.1%",
   "broken_links": [
@@ -95,7 +95,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=7LWxoeKzI8VIs7&gsxid=7LWxoeKzI8VIs7&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=YTe5IpYahmxFcZ&gsxid=YTe5IpYahmxFcZ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -143,8 +143,8 @@
     },
     {
       "slug": "lovable",
-      "target_url": "https://www.lovable.com",
-      "final_url": "https://lovable.dev/",
+      "target_url": "https://lovable.dev/?via=heliatech",
+      "final_url": "https://lovable.dev/?via=heliatech",
       "status_code": 403,
       "healthy": true
     },
@@ -243,7 +243,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=PsXLjx7atj0Jzp&gsxid=PsXLjx7atj0Jzp&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=30EUIetXHy8zMJ&gsxid=30EUIetXHy8zMJ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -312,8 +312,8 @@
     },
     {
       "slug": "supabase",
-      "target_url": "https://supabase.com",
-      "final_url": "https://supabase.com/",
+      "target_url": "https://supabase.com/?via=heliatech",
+      "final_url": "https://supabase.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -321,6 +321,13 @@
       "slug": "tray-io",
       "target_url": "https://tray.ai",
       "final_url": "https://tray.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "typeform",
+      "target_url": "https://www.typeform.com",
+      "final_url": "https://www.typeform.com/",
       "status_code": 200,
       "healthy": true
     },

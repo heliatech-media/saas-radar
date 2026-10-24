@@ -89,7 +89,7 @@ Starts at $29/month for creator tiers, scaling to custom enterprise agreements f
 
 #### Migration Feasibility
 **Estimated Migration Time:** 4 to 8 hours. 
-Transitioning requires swapping ElevenLabs API endpoints for HeyGen's video generation endpoints and updating payload schemas to handle avatar configuration parameters.
+Transitioning requires swapping ElevenLabs API endpoints for [HeyGen](/reviews/heygen)'s video generation endpoints and updating payload schemas to handle avatar configuration parameters.
 
 [Test HeyGen With Official Extended Access ↗](/go/heygen)
 

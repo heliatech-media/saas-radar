@@ -4,7 +4,7 @@ tagline: The developer-friendly affiliate and referral software built natively f
 category: Growth & Affiliate Infrastructure
 rating: 4.8
 website_url: https://www.rewardful.com/?via=heliatech
-affiliate_url: https://www.rewardful.com/?via=heliatech
+affiliate_url: "https://www.rewardful.com/?via=heliatech"
 summary: Rewardful is the premier affiliate and referral management infrastructure designed specifically for subscription businesses and SaaS companies powered by Stripe and Paddle. It automatically synchronizes customer lifecycles, refunds, plan upgrades, and recurring payouts with zero webhook reconciliation headaches.
 best_for: SaaS founders, subscription software companies, and developer teams looking to launch a high-converting affiliate or partner program in under 15 minutes.
 pros:

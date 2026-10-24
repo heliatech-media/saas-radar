@@ -138,7 +138,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "Founders, product managers, and developers looking to prototype and launch full-stack web applications at unprecedented speeds.",
-    "affiliate_url": "https://lovable.dev"
+    "affiliate_url": "https://lovable.dev/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Lusha",
@@ -235,7 +236,18 @@
     "rating": 4.8,
     "starting_price": "$25/mo",
     "best_for": "Full-stack developers, indie hackers, and engineering teams scaling web and mobile applications.",
-    "affiliate_url": "https://supabase.com"
+    "affiliate_url": "https://supabase.com/?via=heliatech",
+    "commission_rate": "Not publicly disclosed (Custom/Deal-based or In-house referral program)"
+  },
+  {
+    "name": "Typeform",
+    "slug": "typeform",
+    "tagline": "Transform digital data collection with human-centric, conversational forms and surveys.",
+    "category": "Marketing",
+    "rating": 4.5,
+    "starting_price": "$25/mo",
+    "best_for": "Marketers, HR professionals, and growth teams focused on high-conversion lead capture and user research.",
+    "affiliate_url": "https://www.typeform.com"
   },
   {
     "name": "Vercel",

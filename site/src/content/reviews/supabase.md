@@ -6,7 +6,7 @@ tagline: The open source Firebase alternative providing all the backend features
 category: DevTools
 rating: 4.8
 website_url: https://supabase.com
-affiliate_url: https://supabase.com
+affiliate_url: "https://supabase.com/?via=heliatech"
 summary: Supabase provides an open-source, Postgres-based backend-as-a-service (BaaS)
   that accelerates full-stack application development. It bundles authentication,
   instant auto-generated APIs, real-time subscriptions, and scalable vector database

@@ -1,19 +1,16 @@
 {
-  "last_updated": "2026-10-24 00:29:40 UTC",
+  "last_updated": "2026-10-24 04:36:07 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 28,
-    "total_published_investigations": 70,
-    "reviews_audited": 29,
-    "masterclasses_and_duels": 41,
+    "total_monetized_tools": 29,
+    "total_published_investigations": 72,
+    "reviews_audited": 30,
+    "masterclasses_and_duels": 42,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$9,800 USD",
-    "fleet_agents_count": 22,
-    "real_human_visits_24h": 61,
-    "real_page_views_24h": 93,
-    "analytics_verified_source": "Cloudflare Web Analytics"
+    "projected_monthly_mrr": "$10,150 USD",
+    "fleet_agents_count": 22
   },
   "category_distribution": [
     {
@@ -136,6 +133,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "lovable",
+      "destination": "https://lovable.dev/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "lusha",
       "destination": "https://lusha.grsm.io/heliatech",
       "type": "Commission Partner"
@@ -187,8 +189,8 @@
     },
     {
       "slug": "supabase",
-      "destination": "https://supabase.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://supabase.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "vercel",

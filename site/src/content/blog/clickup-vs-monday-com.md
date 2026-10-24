@@ -121,7 +121,8 @@ Enterprise software budgeting extends far beyond baseline sticker prices. We mus
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **TCO Insight:** While [Monday.com](/reviews/monday-com) carries a higher baseline seat cost at scale, ClickUp’s architectural complexity demands significantly higher internal administrative overhead to maintain operational integrity.
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **TCO Insight:** While [Monday.com](/reviews/monday-com) carries a higher baseline seat cost at scale, ClickUp’s architectural complexity demands significantly higher internal administrative overhead to maintain operational integrity.
 
 ---
 
@@ -155,7 +156,7 @@ No enterprise tool is without fault. Understanding where platforms break down un
 ### Where Monday.com Fails
 1.  **Rigidity in Complex Dependencies:** Cross-board dependencies can become brittle. If you need to map multi-tiered dependencies that cross five different boards with bi-directional subtask rollups, [Monday.com](/reviews/monday-com)’s flat structure requires intricate formula columns that break easily.
 2.  **Automation Complexity Walls:** While Monday’s visual automation builder is exceptional for simple "When X then Y" logic, building multi-threaded conditional loops requires custom integrations or third-party middleware like [Make](/reviews/make) or [Zapier](/reviews/zapier).
-3.  **Cost Escalation via Subitems:** Subitems in Monday.com consume considerable column and automation quotas. Scaling subitem-heavy workflows across thousands of items quickly exhausts plan thresholds.
+3.  **Cost Escalation via Subitems:** Subitems in [Monday.com](/reviews/monday-com) consume considerable column and automation quotas. Scaling subitem-heavy workflows across thousands of items quickly exhausts plan thresholds.
 
 ---
 
