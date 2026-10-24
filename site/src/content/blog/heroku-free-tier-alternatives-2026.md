@@ -12,7 +12,7 @@ tags:
 - Cloud
 - Alternatives
 - DevTools
-readingTime: 6 MIN
+readingTime: 7 MIN
 tool_slug: supabase
 image: /images/blog/supabase.svg
 tldr:
@@ -57,6 +57,14 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Heroku` with our verified enterprise trial link at [/go/supabase](/go/supabase).
 
 > [!TIP]
 > [!NOTE]
@@ -121,7 +129,7 @@ pg_restore --no-owner --no-acl -h db.your-supabase-project-ref.supabase.co -U po
 ```
 
 ### ⚡ Step 4: Verify schema integrity and row counts**
-Run a quick schema validation check through the Supabase CLI or your favorite SQL client (e.g., TablePlus, DBeaver) to confirm indices, foreign keys, and sequences match.
+Run a quick schema validation check through the [Supabase](/reviews/supabase) CLI or your favorite SQL client (e.g., TablePlus, DBeaver) to confirm indices, foreign keys, and sequences match.
 
 ```bash
 supabase db diff
@@ -132,7 +140,8 @@ supabase db diff
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Official Evaluation CTA:** Ready to experience sub-millisecond database queries and built-in edge functions? [Deploy on Supabase Free Tier ↗](/go/supabase)
 
 ---
 

@@ -129,7 +129,7 @@ Lovable is an advanced generative AI development platform that allows users to p
 - Generates clean, production-ready React, TypeScript, and Tailwind CSS code.
 - Real-time visual preview updates instantly alongside prompt modifications.
 - Seamless GitHub integration for direct code export and version control.
-- Supabase integration for instant database, auth, and backend capabilities.
+- [Supabase](/reviews/supabase) integration for instant database, auth, and backend capabilities.
 - Handles complex state management and responsive design remarkably well.
 
 

@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-24T04:37:23.754586",
+  "timestamp": "2026-10-24T08:44:35.720808",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 72,
-    "total_redirects_active": 54,
+    "total_content_files_scanned": 74,
+    "total_redirects_active": 55,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 7,
+    "external_targets_repaired": 8,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "typeform",
-      "target_url": "https://www.typeform.com",
-      "source_file": "typeform-evolution-guide-2026.md"
+      "slug": "jasper-ai",
+      "target_url": "https://www.jasper-ai.com",
+      "source_file": "jasper-ai-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -179,6 +179,12 @@
       "slug": "retool",
       "dead_target": "https://retool.grsm.io/heliatech",
       "healed_target": "https://www.retool.com",
+      "status_code": 404
+    },
+    {
+      "slug": "typeform",
+      "dead_target": "https://typeform.grsm.io/heliatech",
+      "healed_target": "https://www.typeform.com",
       "status_code": 404
     }
   ]

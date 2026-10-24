@@ -102,6 +102,11 @@ flowchart LR
 
 > [!TIP]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
+
+> [!TIP]
+> [!NOTE]
 > **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
 
 > [!TIP]

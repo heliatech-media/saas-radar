@@ -109,6 +109,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "Jasper AI",
+    "slug": "jasper-ai",
+    "tagline": "An AI-powered content creation platform built specifically for enterprise marketing teams to scale campaigns.",
+    "category": "AI Writing",
+    "rating": 4.5,
+    "starting_price": "$39/mo",
+    "best_for": "Mid-market to enterprise marketing teams, content agencies, and corporate brand managers.",
+    "affiliate_url": "https://www.jasper.ai"
+  },
+  {
     "name": "Lemlist",
     "slug": "lemlist",
     "tagline": "Personalized cold email software with custom image and video automation to boost reply rates.",
@@ -247,7 +257,8 @@
     "rating": 4.5,
     "starting_price": "$25/mo",
     "best_for": "Marketers, HR professionals, and growth teams focused on high-conversion lead capture and user research.",
-    "affiliate_url": "https://www.typeform.com"
+    "affiliate_url": "https://typeform.grsm.io/heliatech",
+    "commission_rate": "20% to 30% recurring"
   },
   {
     "name": "Vercel",
@@ -257,7 +268,8 @@
     "rating": 4.8,
     "starting_price": "$0/mo",
     "best_for": "Frontend engineers, full-stack development agencies, and modern engineering teams scaling high-performance web applications.",
-    "affiliate_url": "https://vercel.com"
+    "affiliate_url": "https://vercel.com/?via=heliatech",
+    "commission_rate": "Custom / Contact for details"
   },
   {
     "name": "Voiceflow",

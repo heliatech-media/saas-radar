@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-24 04:38:40",
-  "total_links_audited": 54,
-  "healthy_links": 53,
+  "timestamp": "2026-10-24 08:45:51",
+  "total_links_audited": 55,
+  "healthy_links": 54,
   "broken_links_count": 1,
-  "health_rate": "98.1%",
+  "health_rate": "98.2%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -95,7 +95,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=YTe5IpYahmxFcZ&gsxid=YTe5IpYahmxFcZ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=I1frA1JAkb418j&gsxid=I1frA1JAkb418j&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -110,6 +110,13 @@
       "slug": "heygen",
       "target_url": "https://www.heygen.com",
       "final_url": "https://www.heygen.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "jasper-ai",
+      "target_url": "https://www.jasper-ai.com",
+      "final_url": "https://www.jasper-ai.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -243,7 +250,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=30EUIetXHy8zMJ&gsxid=30EUIetXHy8zMJ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TqqmADGNknxyMO&gsxid=TqqmADGNknxyMO&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -347,8 +354,8 @@
     },
     {
       "slug": "vercel",
-      "target_url": "https://vercel.com",
-      "final_url": "https://vercel.com/",
+      "target_url": "https://vercel.com/?via=heliatech",
+      "final_url": "https://vercel.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

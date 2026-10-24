@@ -6,7 +6,7 @@ tagline: The frontend cloud for high-performance developer workflows, instant pr
 category: DevTools
 rating: 4.8
 website_url: https://vercel.com
-affiliate_url: https://vercel.com
+affiliate_url: "https://vercel.com/?via=heliatech"
 summary: Vercel is a comprehensive frontend cloud platform designed to streamline
   deployment and hosting for modern frameworks like Next.js, React, and Vue. It bridges
   the gap between developers and production with instant preview environments, edge
