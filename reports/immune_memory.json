@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-24T11:47:58.003099",
+  "defects_neutralized": [
+    {
+      "id": "DEF-001",
+      "type": "XML_SYNTAX_AMPERSAND",
+      "description": "Bare '&' in SVG text nodes aborts Chromium/WebKit XML parser rendering.",
+      "rule": "All '&' in SVGs must strictly be '&amp;' or replaced with '+'/'and'.",
+      "status": "IMMUNIZED"
+    },
+    {
+      "id": "DEF-002",
+      "type": "ASTRO_DUPLICATE_SLUG",
+      "description": "Explicit 'slug:' in markdown frontmatter conflicting with content collection filenames.",
+      "rule": "Avoid redundant 'slug:' key in blog frontmatter under Astro 5 glob-loader.",
+      "status": "IMMUNIZED"
+    },
+    {
+      "id": "DEF-003",
+      "type": "BROWSER_CACHE_CORRUPTION",
+      "description": "Browser caches failed 404 or corrupted XML images indefinitely.",
+      "rule": "Employ <picture> tag with dual SVG/PNG fallback and query string cache-busting.",
+      "status": "IMMUNIZED"
+    },
+    {
+      "id": "DEF-004",
+      "type": "ORPHAN_AFFILIATE_ENDPOINT",
+      "description": "Outbound /go/* redirects pointing to nonexistent review slugs.",
+      "rule": "Enforce 100% parity between _redirects routes and reviewed software.",
+      "status": "IMMUNIZED"
+    }
+  ]
+}

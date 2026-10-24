@@ -68,6 +68,7 @@ from agents.budget_sentinel_agent import BudgetSentinelAgent
 from agents.lupin_agent import LupinAgent
 from agents.badge_trojan_agent import BadgeTrojanAgent
 from agents.reddit_infiltrator_agent import RedditInfiltratorAgent
+from agents.auto_evolution_agent import HeliaAutoEvolutionAgent
 from agents.models import ToolReview
 
 
@@ -105,6 +106,7 @@ class HeliaAutonomousDirector:
         self.lupin = LupinAgent(api_key=api_key)
         self.badge_trojan = BadgeTrojanAgent()
         self.reddit_infiltrator = RedditInfiltratorAgent(api_key=api_key)
+        self.auto_evolution = HeliaAutoEvolutionAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -299,6 +301,14 @@ class HeliaAutonomousDirector:
             self.log("Helia-RedditInfiltrator", f"Reddit playbook updated: {reddit_res['total_targets']} high-intent briefs live.", "🎯")
         except Exception as e:
             self.log("Helia-RedditInfiltrator", f"Reddit Infiltrator notice: {e}", "⚠️")
+
+        # Step 6.16: Sub-Agent AutoEvolution (Continuous Self-Improvement & Meta-Learning Engine)
+        try:
+            self.log("Helia-AutoEvolution", "Executing genetic fitness evaluation, immune memory & self-evolution...", "🧬")
+            evo_res = self.auto_evolution.run_evolution_cycle()
+            self.log("Helia-AutoEvolution", f"Platform advanced to {evo_res['generation']} (Fitness: {evo_res['fitness_score']} | Mutations: {evo_res['total_mutations_executed']}).", "✨")
+        except Exception as e:
+            self.log("Helia-AutoEvolution", f"Auto-Evolution notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")
