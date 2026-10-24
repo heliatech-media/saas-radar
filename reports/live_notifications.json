@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-24 12:01:14",
+    "title": "Cycle Autonome #Castmagic",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Castmagic et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-24 12:00:32",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
