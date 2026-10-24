@@ -49,11 +49,8 @@ For modern B2B enterprises, Typeform acts as a force multiplier across marketing
 *   **Extensive Ecosystem Integrations:** Native, zero-friction integrations with platforms like HubSpot, Salesforce, Slack, [Zapier](/reviews/zapier), and Mailchimp mean collected data doesn’t sit in a silo; it triggers automated email sequences and team alerts instantly.
 *   **Modular, Block-Based Flexibility:** From NPS surveys and interactive quizzes to job applications and payment-enabled checkout flows, the modular builder adapts to any business use case without requiring a single line of code.
 
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Typeform proved that software doesn't have to feel like work. By treating the respondent like a guest in a conversation rather than a data point in a spreadsheet, conversion rates naturally follow."
+> [!TIP]
+> **Executive Takeaway:** "Typeform proved that software doesn't have to feel like work. By treating the respondent like a guest in a conversation rather than a data point in a spreadsheet, conversion rates naturally follow."
 
 ```mermaid
 flowchart LR
@@ -63,21 +60,6 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Typeform` with our verified enterprise trial link at [/go/typeform](/go/typeform).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Typeform` with our verified enterprise trial link at [/go/typeform](/go/typeform).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Typeform` with our verified enterprise trial link at [/go/typeform](/go/typeform).
 
 > [!TIP]
 > **HeliaTech Benchmark Access:** Test `Typeform` with our verified enterprise trial link at [/go/typeform](/go/typeform).

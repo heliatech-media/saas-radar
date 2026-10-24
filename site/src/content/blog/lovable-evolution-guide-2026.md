@@ -47,12 +47,8 @@ Modern B2B organizations operate under relentless pressure to ship, test, and it
 * **Seamless GitHub Integration:** Code isn't trapped in a walled garden. Direct GitHub synchronization enables continuous version control, pull requests, and standard enterprise code reviews from day one.
 * **Instant [Supabase](/reviews/supabase) Backend Connectivity:** Complex database schemas, user authentication, and secure backend integrations are spun up via chat commands, eliminating weeks of initial infrastructure setup.
 
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Lovable doesn't just write code; it eliminates the translation tax between product vision and technical execution, allowing enterprises to validate markets in days instead of quarters." — HELIA TECH Editorial Board
+> [!TIP]
+> **Executive Takeaway:** "Lovable doesn't just write code; it eliminates the translation tax between product vision and technical execution, allowing enterprises to validate markets in days instead of quarters." — HELIA TECH Editorial Board
 
 ```mermaid
 flowchart LR
@@ -64,28 +60,6 @@ flowchart LR
 ```
 
 > [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Lovable` with our verified enterprise trial link at [/go/lovable](/go/lovable).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Lovable` with our verified enterprise trial link at [/go/lovable](/go/lovable).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Lovable` with our verified enterprise trial link at [/go/lovable](/go/lovable).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Lovable` with our verified enterprise trial link at [/go/lovable](/go/lovable).
-
-> [!TIP]
 > **HeliaTech Benchmark Access:** Test `Lovable` with our verified enterprise trial link at [/go/lovable](/go/lovable).
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
@@ -94,30 +68,18 @@ To understand the true velocity of Lovable, let's walk through an actionable, 15
 
 ### Step 1: Define the Core Prompt
 Navigate to Lovable and initiate a new project. Instead of sketching wireframes, input a comprehensive architectural prompt:
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Create a modern B2B client dashboard for a marketing agency. Include a sidebar navigation, a metric overview grid showing monthly recurring revenue, an interactive project status table with filtering, and a dark mode toggle built with Tailwind CSS."
+> [!TIP]
+> **Executive Takeaway:** "Create a modern B2B client dashboard for a marketing agency. Include a sidebar navigation, a metric overview grid showing monthly recurring revenue, an interactive project status table with filtering, and a dark mode toggle built with Tailwind CSS."
 
 ### Step 2: Iterate and Refine Visual State
 Review the real-time visual preview generated within seconds. Use conversational follow-ups to handle edge cases:
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Add hover states to the table rows, include a modal form for adding new clients with validation fields for name and email, and ensure the layout is fully responsive on mobile viewports."
+> [!TIP]
+> **Executive Takeaway:** "Add hover states to the table rows, include a modal form for adding new clients with validation fields for name and email, and ensure the layout is fully responsive on mobile viewports."
 
 ### Step 3: Connect the Backend
 Prompt the AI to integrate database capabilities:
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Connect this dashboard to a [Supabase](/reviews/supabase) backend to persist client records and handle user authentication states."
+> [!TIP]
+> **Executive Takeaway:** "Connect this dashboard to a [Supabase](/reviews/supabase) backend to persist client records and handle user authentication states."
 
 ### Step 4: Export and Deploy
 Link your GitHub repository via the settings panel, review the clean TypeScript code, and push the project directly to your production hosting pipeline.

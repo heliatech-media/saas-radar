@@ -39,19 +39,8 @@ When Tyler Denk and the core technical team behind *Morning Brew* looked at the 
 
 Beehiiv was born out of a singular mandate: build the publishing platform that the Morning Brew team wished they had from day one. Instead of treating email as a mere broadcast utility, Beehiiv reimagined it as a complete ecosystem. By combining enterprise-grade delivery infrastructure with native viral loops—such as built-in recommendation networks and automated referral programs—Beehiiv effectively bypassed the traditional, expensive paid acquisition funnel that drains corporate marketing budgets.
 
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "We didn’t set out to build another email client. We set out to build an end-to-end growth engine where the software does the heavy lifting of audience acquisition so creators can focus entirely on craft." — Tyler Denk, Co-Founder & CEO
+> [!TIP]
+> **Executive Takeaway:** "We didn’t set out to build another email client. We set out to build an end-to-end growth engine where the software does the heavy lifting of audience acquisition so creators can focus entirely on craft." — Tyler Denk, Co-Founder & CEO
 
 ## 2. Core Business Superpowers
 
@@ -70,105 +59,6 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).
 
 > [!TIP]
 > **HeliaTech Benchmark Access:** Test `Beehiiv` with our verified enterprise trial link at [/go/beehiiv](/go/beehiiv).

@@ -41,7 +41,7 @@ Founded by Nir and Gideon Algranati, Riverside was born out of a frustrating, hi
 
 Riverside flipped the script by pioneering a browser-based local recording architecture. Instead of relying on a fragile live internet stream to capture the final product, Riverside records uncompressed audio and video tracks directly on each participant’s device in real-time. Simultaneously, it uploads a low-resolution track to the cloud for live monitoring and producer controls. Once the session wraps, the pristine local files automatically upload and sync seamlessly. This simple yet revolutionary architectural pivot made choppy Zoom recordings look and sound amateur by comparison, rapidly turning Riverside into the go-to studio for industry giants, media networks, and elite B2B marketing teams.
 
-> [!NOTE]
+> [!TIP]
 > **Executive Takeaway:** "In the world of high-end media production, compromise is the enemy of engagement. Local isolation isn't a luxury feature—it is the baseline requirement for professional trust."
 
 ## 2. Core Business Superpowers

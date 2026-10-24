@@ -119,66 +119,6 @@ flowchart LR
 ```
 
 > [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
-
-> [!TIP]
 > **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
 
 ## 3. Relay.app — The Human-in-the-Loop Collaboration Engine

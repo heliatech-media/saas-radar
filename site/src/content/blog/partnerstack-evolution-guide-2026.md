@@ -36,19 +36,8 @@ For a decade, the playbook for scaling a B2B SaaS company relied on a straightfo
 
 The real growth engine was hiding in plain sight: partner ecosystems. Affiliates, tech-savvy referral partners, and value-added resellers (VARs) held the trust of prospective buyers. Yet, operating a multi-channel partner program was an administrative nightmare. Growth teams juggled fragmented spreadsheets, manually tracked referral links, wrestled with localized tax compliance in foreign jurisdictions, and spent countless hours calculating custom payouts.
 
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "In an era where customer acquisition costs are at an all-time high, your best growth lever isn't another ad campaign—it's the army of partners already trusted by your market." — HELIA TECH Enterprise Strategy Group
+> [!TIP]
+> **Executive Takeaway:** "In an era where customer acquisition costs are at an all-time high, your best growth lever isn't another ad campaign—it's the army of partners already trusted by your market." — HELIA TECH Enterprise Strategy Group
 
 Enter PartnerStack. Built from the ground up to solve the operational chaos of B2B partnership management, it unified affiliates, referrals, and resellers into a single, automated command center. This is the definitive inside look at how PartnerStack rewrote the rules of software distribution.
 
@@ -77,105 +66,6 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).
 
 > [!TIP]
 > **HeliaTech Benchmark Access:** Test `PartnerStack` with our verified enterprise trial link at [/go/partnerstack](/go/partnerstack).

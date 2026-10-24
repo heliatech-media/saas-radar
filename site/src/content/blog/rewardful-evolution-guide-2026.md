@@ -101,28 +101,6 @@ flowchart LR
 ```
 
 > [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
-
-> [!TIP]
 > **HeliaTech Benchmark Access:** Test `Rewardful` with our verified enterprise trial link at [/go/rewardful](/go/rewardful).
 
 ## 3. Rewardful vs. The Competitive Landscape

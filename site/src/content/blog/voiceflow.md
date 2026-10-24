@@ -49,19 +49,8 @@ To understand why hyper-growth companies are migrating their conversational infr
 *   **Enterprise-Grade Performance and Uptime:** Built for high-volume scaling teams, Voiceflow delivers high execution speed with minimal latency, ensuring that customer touchpoints remain lightning-fast even during peak traffic surges.
 *   **Granular Knowledge Base Grounding:** Enterprises can ingest thousands of pages of internal documentation, PDFs, and product wikis into Voiceflow’s vector store, empowering AI agents to answer hyper-specific customer queries accurately while avoiding costly hallucinations.
 
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "Voiceflow didn't just build another chat builder; they engineered the connective tissue between modern large language models and enterprise operational databases." — *HELIA TECH Enterprise Intelligence Group*
+> [!TIP]
+> **Executive Takeaway:** "Voiceflow didn't just build another chat builder; they engineered the connective tissue between modern large language models and enterprise operational databases." — *HELIA TECH Enterprise Intelligence Group*
 
 ```mermaid
 flowchart LR
@@ -71,105 +60,6 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
-
-> [!TIP]
-> [!NOTE]
-> **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
 
 > [!TIP]
 > **HeliaTech Benchmark Access:** Test `Voiceflow` with our verified enterprise trial link at [/go/voiceflow](/go/voiceflow).
@@ -187,19 +77,8 @@ Click on the Knowledge Base tab in the left sidebar. Upload your core company do
 ### Step 3: Design the Conversational Flow
 On the visual canvas, drag out a **Start** block connected to an **AI Response** block. In the prompt editor, instruct the LLM: 
 
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** *"Greet the user professionally, identify their primary business challenge, and reference our knowledge base to answer their initial questions accurately."*
+> [!TIP]
+> **Executive Takeaway:** *"Greet the user professionally, identify their primary business challenge, and reference our knowledge base to answer their initial questions accurately."*
 
 ### Step 4: Implement Lead Capture Logic
 Chain a **Capture** block after the initial greeting to collect the user’s corporate email address. Use a **Set Variable** block to store this value securely within your session state.

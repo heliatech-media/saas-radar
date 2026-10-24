@@ -48,24 +48,33 @@ class ArticleLayoutAgent:
         has_mermaid = "```mermaid" in markdown_body
         in_code_block = False
         inserted_diagram = has_mermaid
-        inserted_mid_cta = False
+        inserted_mid_cta = ("Benchmark Access:" in markdown_body or f"/go/{tool_slug}" in markdown_body)
 
+        in_blockquote = False
         for i, line in enumerate(lines):
             # Track code block fences
             if line.strip().startswith("```"):
                 in_code_block = not in_code_block
                 formatted_lines.append(line)
+                in_blockquote = False
                 continue
 
             if in_code_block:
                 formatted_lines.append(line)
                 continue
 
-            # 1. Transform blockquotes into luxury cyber callouts
+            # 1. Handle blockquotes idempotently
             if line.startswith("> "):
                 quote_text = line[2:].strip()
-                # If it's already an alert style, keep it
-                if quote_text.startswith("[!"):
+                # If already formatted or continuing an alert block, keep as-is
+                if (
+                    quote_text.startswith("[!") or
+                    "executive takeaway" in quote_text.lower() or
+                    "benchmark access" in quote_text.lower() or
+                    "pro-tip" in quote_text.lower() or
+                    "trade-off" in quote_text.lower() or
+                    in_blockquote
+                ):
                     formatted_lines.append(line)
                 elif "pro tip" in quote_text.lower() or "tip:" in quote_text.lower():
                     clean = re.sub(r'^(pro tip:?|tip:?)\s*', '', quote_text, flags=re.IGNORECASE)
@@ -75,7 +84,10 @@ class ArticleLayoutAgent:
                     formatted_lines.append(f"> [!WARNING]\n> **Critical Trade-Off:** {clean}")
                 else:
                     formatted_lines.append(f"> [!NOTE]\n> **Executive Takeaway:** {quote_text}")
+                in_blockquote = True
                 continue
+            else:
+                in_blockquote = False
 
             # 2. Inject Mermaid workflow diagram right before Workshop section if not present
             if not inserted_diagram and re.search(r'^##\s+(3\.|.*Hands-on.*|.*Workshop.*)', line, re.IGNORECASE):
@@ -95,7 +107,7 @@ flowchart LR
 
             # 3. Enhance Step titles with visual badges (e.g., Step 1, Step 2)
             step_match = re.match(r'^(###|\*\*|\b)(Step\s+[0-9]+:?)(.*)', line, re.IGNORECASE)
-            if step_match and not in_code_block:
+            if step_match and not in_code_block and not line.startswith("### ⚡"):
                 step_num = step_match.group(2).strip().rstrip(':')
                 step_title = step_match.group(3).strip().lstrip(':-* ')
                 formatted_lines.append(f"### ⚡ {step_num}: {step_title}")
