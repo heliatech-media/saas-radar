@@ -69,7 +69,7 @@ class BadgeTrojanAgent:
                 "slug": "winner-2026-supabase",
                 "tool_name": "SUPABASE",
                 "category": "CLOUD DATABASE & AUTH",
-                "award": "#1 HEROKU REPLACEMENT & SERVERLESS PG",
+                "award": "#1 HEROKU REPLACEMENT &amp; SERVERLESS PG",
                 "score": "9.9 / 10",
                 "accent_color": "#10b981" # Emerald
             },
@@ -93,7 +93,7 @@ class BadgeTrojanAgent:
                 "slug": "verified-enterprise-2026",
                 "tool_name": "HELIATECH",
                 "category": "INDEPENDENT ACCREDITATION",
-                "award": "VERIFIED ARCHITECTURE & BENCHMARK 2026",
+                "award": "VERIFIED ARCHITECTURE &amp; BENCHMARK 2026",
                 "score": "EMPIRICAL",
                 "accent_color": "#ec4899" # Pink
             }
@@ -111,6 +111,7 @@ class BadgeTrojanAgent:
 
     def _render_badge_svg(self, badge_data: Dict) -> str:
         color = badge_data["accent_color"]
+        award_clean = badge_data['award'].replace('&', '&amp;') if '&amp;' not in badge_data['award'] else badge_data['award']
         return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
   <defs>
     <linearGradient id="bg-{badge_data['slug']}" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -135,7 +136,7 @@ class BadgeTrojanAgent:
   <!-- Text Hierarchy -->
   <text x="70" y="32" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1.5">HELIATECH INDEPENDENT BENCHMARK</text>
   <text x="70" y="55" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="900" fill="#ffffff">{badge_data['tool_name']}</text>
-  <text x="70" y="75" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="{color}">{badge_data['award']}</text>
+  <text x="70" y="75" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="{color}">{award_clean}</text>
 
   <!-- Bottom Meta Pill -->
   <rect x="70" y="86" width="135" height="18" rx="9" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>

@@ -6,7 +6,7 @@ tagline: Studio-quality remote video and audio recording platform with local mul
 category: Audio/Podcasting
 rating: 4.6
 website_url: https://riverside.fm
-affiliate_url: https://riverside.fm
+affiliate_url: https://riverside.fm/?via=heliatech
 summary: Riverside is a browser-based recording studio that captures separate uncompressed
   audio and video tracks locally on each participant's device, eliminating internet
   connection artifacts. It provides automated transcription, AI-powered show notes,
