@@ -23,7 +23,7 @@
       <stop offset="100%" stop-color="#d946ef" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Linear Gradients for UI & Nodes -->
+    <!-- Linear Gradients for UI &amp; Nodes -->
     <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#06b6d4" />
       <stop offset="100%" stop-color="#38bdf8" />
@@ -89,7 +89,7 @@
   <circle cx="750" cy="450" r="300" fill="url(#violetOrb)" />
   <circle cx="300" cy="300" r="250" fill="url(#fuchsiaOrb)" filter="url(#glow)" />
 
-  <!-- Geometric Decorative Lines & Frame -->
+  <!-- Geometric Decorative Lines &amp; Frame -->
   <g opacity="0.4">
     <path d="M 60 60 L 120 60 L 160 100" fill="none" stroke="#38bdf8" stroke-width="1.5" />
     <path d="M 1140 570 L 1080 570 L 1040 530" fill="none" stroke="#8b5cf6" stroke-width="1.5" />
@@ -98,7 +98,7 @@
   </g>
 
   <!-- ==========================================
-       RIGHT SIDE: 3D VECTOR SALES INTEL & DATA ENGINE
+       RIGHT SIDE: 3D VECTOR SALES INTEL &amp; DATA ENGINE
        ========================================== -->
   <g transform="translate(620, 70)">
     <!-- Connecting Infrastructure Lines -->
@@ -113,7 +113,7 @@
     <g transform="translate(40, 200)" filter="url(#glow)">
       <rect x="0" y="0" width="160" height="90" rx="12" fill="url(#glassGrad)" stroke="url(#cardBorderGrad)" stroke-width="1.5" backdrop-filter="blur(10px)" />
       <path d="M 15 25 L 145 25" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
-      <!-- Mini Avatar & Data Lines -->
+      <!-- Mini Avatar &amp; Data Lines -->
       <circle cx="35" cy="48" r="12" fill="#06b6d4" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5" />
       <circle cx="35" cy="48" r="4" fill="#38bdf8" />
       <line x1="58" y1="42" x2="130" y2="42" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8" />
@@ -173,7 +173,7 @@
   </g>
 
   <!-- ==========================================
-       LEFT SIDE: TYPOGRAPHY & ARCHITECTURAL DOSSIER
+       LEFT SIDE: TYPOGRAPHY &amp; ARCHITECTURAL DOSSIER
        ========================================== -->
   <g transform="translate(80, 95)">
     <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->

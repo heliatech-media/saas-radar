@@ -31,7 +31,7 @@
       <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
-    <!-- Glow & Blur Filters -->
+    <!-- Glow &amp; Blur Filters -->
     <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="25" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
@@ -125,7 +125,7 @@
       <line x1="0" y1="130" x2="150" y2="130" stroke="#1e293b" stroke-width="1" />
     </g>
 
-    <!-- Code Content & Syntax Highlighting -->
+    <!-- Code Content &amp; Syntax Highlighting -->
     <g transform="translate(180, 60)" font-family="monospace" font-size="13">
       <!-- Line Numbers -->
       <g fill="#475569" font-size="11" opacity="0.5">
@@ -174,7 +174,7 @@
     </g>
   </g>
 
-  <!-- 4. Typography & Branding (Left Side) -->
+  <!-- 4. Typography &amp; Branding (Left Side) -->
   <g transform="translate(80, 0)">
     
     <!-- Enterprise Badge -->
@@ -224,7 +224,7 @@
 
   </g>
 
-  <!-- 5. Futuristic UI Decorative Accents & Borders -->
+  <!-- 5. Futuristic UI Decorative Accents &amp; Borders -->
   <!-- Top Left Corner Mark -->
   <path d="M 20 40 L 20 20 L 40 20" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6" />
   <!-- Bottom Right Corner Mark -->

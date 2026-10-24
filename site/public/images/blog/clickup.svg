@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="50%" stop-color="#070b14"/>
@@ -13,7 +13,7 @@
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Brand & Accent Gradients -->
+    <!-- Brand &amp; Accent Gradients -->
     <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#06b6d4"/>
       <stop offset="50%" stop-color="#38bdf8"/>
@@ -35,7 +35,7 @@
       <stop offset="100%" stop-color="#d946ef"/>
     </linearGradient>
 
-    <!-- Glow & Shadow Filters -->
+    <!-- Glow &amp; Shadow Filters -->
     <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="16" result="blur1"/>
       <feGaussianBlur stdDeviation="32" result="blur2"/>
@@ -123,7 +123,7 @@
     </g>
   </g>
 
-  <!-- 3. Typography & Architectural Dossier (Left Side) -->
+  <!-- 3. Typography &amp; Architectural Dossier (Left Side) -->
   <g transform="translate(80, 110)">
     
     <!-- Top Pill Badge -->
@@ -180,7 +180,7 @@
 
   </g>
 
-  <!-- 4. Framing Accents & Border Details -->
+  <!-- 4. Framing Accents &amp; Border Details -->
   <!-- Top-left corner accent -->
   <path d="M 30 50 L 30 30 L 50 30" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
   <!-- Top-right corner accent -->

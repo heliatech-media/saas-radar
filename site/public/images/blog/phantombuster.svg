@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
       <stop offset="50%" stop-color="#060b18"/>
@@ -17,7 +17,7 @@
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- UI & Node Gradients -->
+    <!-- UI &amp; Node Gradients -->
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#090d16" stop-opacity="0.95"/>
@@ -77,7 +77,7 @@
   </g>
 
   <!-- ========================================== -->
-  <!-- 3D AUTOMATION & WORKFLOW GRAPHICS (RIGHT)  -->
+  <!-- 3D AUTOMATION &amp; WORKFLOW GRAPHICS (RIGHT)  -->
   <!-- ========================================== -->
   <g transform="translate(680, 80)">
     <!-- Central Processing Cloud Base -->
@@ -144,7 +144,7 @@
 
 
   <!-- ========================================== -->
-  <!-- TYPOGRAPHY & DOSSIER CONTENT (LEFT)        -->
+  <!-- TYPOGRAPHY &amp; DOSSIER CONTENT (LEFT)        -->
   <!-- ========================================== -->
   <g transform="translate(80, 80)">
     
@@ -186,7 +186,7 @@
       </text>
     </g>
 
-    <!-- Footer Meta: Category & Domain -->
+    <!-- Footer Meta: Category &amp; Domain -->
     <g transform="translate(0, 360)">
       <!-- Category Tag -->
       <rect x="0" y="0" width="130" height="30" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#06b6d4" stroke-width="1"/>

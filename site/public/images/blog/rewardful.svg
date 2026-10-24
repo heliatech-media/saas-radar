@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
       <stop offset="50%" stop-color="#070b19"/>
       <stop offset="100%" stop-color="#0f0c1b"/>
     </linearGradient>
 
-    <!-- Glowing Orbs & Ambient Lighting -->
+    <!-- Glowing Orbs &amp; Ambient Lighting -->
     <radialGradient id="ambientCyan" cx="20%" cy="30%" r="60%">
       <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
@@ -21,7 +21,7 @@
       <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Metallic & Glass Gradients -->
+    <!-- Metallic &amp; Glass Gradients -->
     <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.09"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
@@ -73,7 +73,7 @@
   <rect width="1200" height="630" fill="url(#dots)"/>
 
   <!-- ==========================================
-       TOP BADGE & BRANDING
+       TOP BADGE &amp; BRANDING
        ========================================== -->
   <g transform="translate(80, 60)">
     <!-- Pill Background -->
@@ -86,10 +86,10 @@
   </g>
 
   <!-- ==========================================
-       TYPOGRAPHY & HEADINGS (Left Column)
+       TYPOGRAPHY &amp; HEADINGS (Left Column)
        ========================================== -->
   <g transform="translate(80, 130)">
-    <!-- Category & Tool Title -->
+    <!-- Category &amp; Tool Title -->
     <text x="0" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#a855f7" letter-spacing="3">SAAS INFRASTRUCTURE &amp; GROWTH</text>
     
     <!-- Main Title -->
@@ -127,7 +127,7 @@
   <!-- ==========================================
        ISOMETRIC VECTOR WORKFLOW ILLUSTRATION (Right)
        Domain Metaphor: Interconnected Workflow Logic, 
-       Stripe API Pipelines & Real-time Revenue Streams
+       Stripe API Pipelines &amp; Real-time Revenue Streams
        ========================================== -->
   <g transform="translate(680, 80)" filter="url(#shadow)">
     

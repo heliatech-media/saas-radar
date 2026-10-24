@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0e1628" />
       <stop offset="50%" stop-color="#060913" />
@@ -29,7 +29,7 @@
       <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Glow & Shadow Filters -->
+    <!-- Glow &amp; Shadow Filters -->
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
       <feMerge>
@@ -71,7 +71,7 @@
   <circle cx="200" cy="500" r="200" fill="#38bdf8" opacity="0.06" filter="url(#glow)" />
 
   <!-- ==================== BACKGROUND GRAPHICS / 3D METAPHORS ==================== -->
-  <!-- Abstract Conversational AI & Neural Flow Networks (Right Side) -->
+  <!-- Abstract Conversational AI &amp; Neural Flow Networks (Right Side) -->
   <g opacity="0.85" filter="url(#panelShadow)">
     <!-- Connecting Workflow Paths / Bézier Curves -->
     <path d="M 680,240 C 750,240 760,150 840,150" fill="none" stroke="url(#cyanBlue)" stroke-width="2" stroke-dasharray="6,4" />
@@ -127,7 +127,7 @@
   </g>
 
 
-  <!-- ==================== FOREGROUND / TYPOGRAPHY & BRANDING ==================== -->
+  <!-- ==================== FOREGROUND / TYPOGRAPHY &amp; BRANDING ==================== -->
   
   <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
   <g transform="translate(80, 80)">
@@ -136,7 +136,7 @@
     <text x="36" y="23" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="700" font-size="11" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
   </g>
 
-  <!-- Main Title & Subtitle Section -->
+  <!-- Main Title &amp; Subtitle Section -->
   <g transform="translate(80, 160)">
     <!-- Category Subtitle -->
     <text x="0" y="0" fill="url(#cyanBlue)" font-family="system-ui, sans-serif" font-weight="700" font-size="14" letter-spacing="4">AI AUTOMATION &amp; NO-CODE INFRASTRUCTURE</text>

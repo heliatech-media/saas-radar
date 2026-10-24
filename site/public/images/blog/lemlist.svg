@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Grid Gradients -->
+    <!-- Background &amp; Grid Gradients -->
     <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="50%" stop-color="#070913"/>
@@ -83,7 +83,7 @@
     <text x="36" y="23" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="2.5" fill="#38bdf8">HELIATECH DOSSIER</text>
   </g>
 
-  <!-- Typography: Title & Subtitle -->
+  <!-- Typography: Title &amp; Subtitle -->
   <g transform="translate(80, 140)">
     <!-- Category Subtitle -->
     <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="4" fill="#8b5cf6">ENTERPRISE MARKETING &amp; SALES ENGINE</text>
@@ -102,7 +102,7 @@
     </text>
   </g>
 
-  <!-- Domain Metaphor: 3D Enriched Contact Graph & CRM Nodes (Right Side) -->
+  <!-- Domain Metaphor: 3D Enriched Contact Graph &amp; CRM Nodes (Right Side) -->
   <g transform="translate(620, 60)" filter="url(#cardShadow)">
     
     <!-- Background Glass Panel for Visualizing Dashboard -->

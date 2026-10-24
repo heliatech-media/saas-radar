@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bgGlow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a" />
       <stop offset="50%" stop-color="#070913" />
@@ -123,7 +123,7 @@
     </g>
   </g>
 
-  <!-- ==================== TYPOGRAPHY & BRANDING ==================== -->
+  <!-- ==================== TYPOGRAPHY &amp; BRANDING ==================== -->
   
   <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
   <g transform="translate(80, 80)">
@@ -132,7 +132,7 @@
     <text x="36" y="22" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH DOSSIER</text>
   </g>
 
-  <!-- Main Title & Category -->
+  <!-- Main Title &amp; Category -->
   <g transform="translate(80, 160)">
     <!-- Category Subtitle -->
     <text x="0" y="0" fill="url(#cyanPurple)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" letter-spacing="3.5">B2B SALES INTELLIGENCE</text>

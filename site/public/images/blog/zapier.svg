@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bgGlow" cx="60%" cy="30%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a" />
       <stop offset="50%" stop-color="#070b14" />
@@ -83,7 +83,7 @@
   </g>
 
   <!-- ========================================== -->
-  <!-- RIGHT SIDE: 3D VECTOR WORKFLOW & AUTOMATION -->
+  <!-- RIGHT SIDE: 3D VECTOR WORKFLOW &amp; AUTOMATION -->
   <!-- ========================================== -->
   <g transform="translate(640, 70)" filter="url(#dropShadow)">
     
@@ -150,7 +150,7 @@
   </g>
 
   <!-- ========================================== -->
-  <!-- LEFT SIDE: TYPOGRAPHY, BADGES & DOSSIER  -->
+  <!-- LEFT SIDE: TYPOGRAPHY, BADGES &amp; DOSSIER  -->
   <!-- ========================================== -->
   <g transform="translate(80, 95)">
     

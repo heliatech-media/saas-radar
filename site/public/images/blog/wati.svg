@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bgGlow" cx="75%" cy="30%" r="70%" fx="65%" fy="25%">
       <stop offset="0%" stop-color="#0e1628" />
       <stop offset="50%" stop-color="#060913" />
@@ -42,7 +42,7 @@
       <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05" />
     </linearGradient>
 
-    <!-- Glow & Lighting Filters -->
+    <!-- Glow &amp; Lighting Filters -->
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="12" result="blur1" />
       <feGaussianBlur stdDeviation="24" result="blur2" />
@@ -84,8 +84,8 @@
     <path d="M 50,450 L 250,450 L 320,520 L 550,520" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3" />
   </g>
 
-  <!-- ================= RIGHT SIDE: 3D VECTOR AUTOMATION & WORKFLOW METAPHOR ================= -->
-  <!-- Isometric Workflow Node Engine representing WATI's WhatsApp API & Automation -->
+  <!-- ================= RIGHT SIDE: 3D VECTOR AUTOMATION &amp; WORKFLOW METAPHOR ================= -->
+  <!-- Isometric Workflow Node Engine representing WATI's WhatsApp API &amp; Automation -->
   <g transform="translate(680, 70)">
     
     <!-- Outer Holographic Frame / Platform -->
@@ -145,7 +145,7 @@
     </g>
   </g>
 
-  <!-- ================= LEFT SIDE: TYPOGRAPHY & DOSSIER CONTENT ================= -->
+  <!-- ================= LEFT SIDE: TYPOGRAPHY &amp; DOSSIER CONTENT ================= -->
   <g transform="translate(80, 80)">
     
     <!-- Top Pill Badge -->

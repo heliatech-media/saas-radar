@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
       <stop offset="50%" stop-color="#070b19"/>
@@ -35,7 +35,7 @@
       <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Glow & Blur Filters -->
+    <!-- Glow &amp; Blur Filters -->
     <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="24" result="blur1"/>
       <feGaussianBlur stdDeviation="12" result="blur2"/>
@@ -78,7 +78,7 @@
   <circle cx="750" cy="450" r="250" fill="#06b6d4" opacity="0.10" filter="url(#glow-heavy)"/>
   <circle cx="200" cy="300" r="200" fill="#38bdf8" opacity="0.08" filter="url(#glow-heavy)"/>
 
-  <!-- ================= TECHNICAL DECORATIONS & AXIS ================= -->
+  <!-- ================= TECHNICAL DECORATIONS &amp; AXIS ================= -->
   <g opacity="0.4">
     <!-- Vertical coordinate markers -->
     <line x1="60" y1="80" x2="60" y2="550" stroke="url(#axis-grad)" stroke-width="1"/>
@@ -161,7 +161,7 @@
     </g>
   </g>
 
-  <!-- ================= TYPOGRAPHY & HEADER SECTION (LEFT SIDE) ================= -->
+  <!-- ================= TYPOGRAPHY &amp; HEADER SECTION (LEFT SIDE) ================= -->
   <g transform="translate(80, 0)">
     
     <!-- Top Pill Badge -->

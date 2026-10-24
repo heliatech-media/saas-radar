@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bgGlow" cx="60%" cy="30%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="40%" stop-color="#070b14"/>
@@ -34,7 +34,7 @@
       <stop offset="100%" stop-color="#d946ef" stop-opacity="0.6"/>
     </linearGradient>
 
-    <!-- Glow & Shadow Filters -->
+    <!-- Glow &amp; Shadow Filters -->
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="12" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
@@ -90,7 +90,7 @@
     <text x="36" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#38bdf8">HELIATECH ARCHITECTURAL</text>
   </g>
 
-  <!-- ================= TYPOGRAPHY & TITLES ================= -->
+  <!-- ================= TYPOGRAPHY &amp; TITLES ================= -->
   <!-- Category Subtitle -->
   <g transform="translate(80, 130)">
     <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="4" fill="#d946ef">AI ADVERTISING INTELLIGENCE</text>
@@ -107,7 +107,7 @@
   </g>
 
   <!-- ================= 3D VECTOR ILLUSTRATION (RIGHT SIDE) ================= -->
-  <!-- Central Analytics & Neural Ad Node Composition -->
+  <!-- Central Analytics &amp; Neural Ad Node Composition -->
   <g transform="translate(680, 130)" filter="url(#dropShadow)">
     
     <!-- Outer Holographic Ring -->

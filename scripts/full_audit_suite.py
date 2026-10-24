@@ -160,4 +160,21 @@ print(f"  Broken internal links found: {len(broken_internal)}")
 for b in broken_internal:
     print(f"     • In {b[0]}: broken link '{b[1]}'")
 
+# 5. Audit SVG & Badges XML Well-Formedness
+print(f"\n[5/5] AUDITING ALL SVGs & BADGES FOR XML VALIDITY")
+import xml.etree.ElementTree as ET
+svg_files = list(public_dir.glob('**/*.svg'))
+svg_errors = []
+
+for svg_path in svg_files:
+    try:
+        ET.parse(svg_path)
+    except Exception as err:
+        svg_errors.append((str(svg_path.relative_to(public_dir)), str(err)))
+
+print(f"  ✅ Total SVGs verified: {len(svg_files)}")
+print(f"  ❌ Invalid/Malformed SVGs: {len(svg_errors)}")
+for path, err in svg_errors:
+    print(f"     • {path}: {err}")
+
 print("\n--- Audit Script Completed Successfully ---")

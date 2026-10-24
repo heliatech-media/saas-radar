@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bg-glow" cx="50%" cy="30%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a" />
       <stop offset="50%" stop-color="#070b14" />
@@ -34,7 +34,7 @@
       <stop offset="100%" stop-color="#0f172a" stop-opacity="0.4" />
     </linearGradient>
 
-    <!-- Glow & Lighting Filters -->
+    <!-- Glow &amp; Lighting Filters -->
     <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="16" result="blur1" />
       <feGaussianBlur stdDeviation="32" result="blur2" />
@@ -142,7 +142,7 @@
       <circle cx="0" cy="0" r="8" fill="#38bdf8" />
     </g>
 
-    <!-- Floating Metric Particle Nodes (Growth & Scaling indicators) -->
+    <!-- Floating Metric Particle Nodes (Growth &amp; Scaling indicators) -->
     <g transform="translate(0, 0)">
       <!-- Pulsing Data rings radiating outwards -->
       <circle cx="0" cy="0" r="160" fill="none" stroke="#38bdf8" stroke-width="0.75" opacity="0.3">
@@ -168,7 +168,7 @@
   </g>
 
   <!-- ==========================================
-       LEFT SIDE: TYPOGRAPHY & ARCHITECTURAL DOSSIER
+       LEFT SIDE: TYPOGRAPHY &amp; ARCHITECTURAL DOSSIER
        ========================================== -->
   <g transform="translate(80, 0)">
     

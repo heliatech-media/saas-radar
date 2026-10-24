@@ -27,7 +27,7 @@
   <!-- Top Pill -->
   <g transform="translate(600, 100)">
     <rect x="-180" y="-18" width="360" height="36" rx="18" fill="#0f172a" stroke="#ec4899" stroke-width="1.5"/>
-    <text x="0" y="5" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#f472b6" text-anchor="middle" letter-spacing="3">SAAS GROWTH & STRIPE INFRASTRUCTURE</text>
+    <text x="0" y="5" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#f472b6" text-anchor="middle" letter-spacing="3">SAAS GROWTH &amp; STRIPE INFRASTRUCTURE</text>
   </g>
 
   <!-- Headline Card -->

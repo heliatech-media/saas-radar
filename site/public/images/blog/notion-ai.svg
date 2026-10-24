@@ -129,7 +129,7 @@
     <circle cx="410" cy="200" r="2" fill="#d946ef" filter="url(#glow)"/>
   </g>
 
-  <!-- ==================== FOREGROUND / TYPOGRAPHY & BRANDING ==================== -->
+  <!-- ==================== FOREGROUND / TYPOGRAPHY &amp; BRANDING ==================== -->
   
   <g transform="translate(80, 90)">
     <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->

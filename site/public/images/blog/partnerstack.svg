@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
       <stop offset="50%" stop-color="#090d16"/>
@@ -21,7 +21,7 @@
       <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Linear Gradients for UI & Vectors -->
+    <!-- Linear Gradients for UI &amp; Vectors -->
     <linearGradient id="line-cyan-blue" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#06b6d4"/>
       <stop offset="100%" stop-color="#38bdf8"/>
@@ -75,7 +75,7 @@
   <circle cx="950" cy="500" r="350" fill="url(#glow-violet)"/>
   <circle cx="650" cy="200" r="250" fill="url(#glow-fuchsia)"/>
 
-  <!-- Geometric Accent Lines & Overlay -->
+  <!-- Geometric Accent Lines &amp; Overlay -->
   <g opacity="0.3">
     <line x1="0" y1="150" x2="1200" y2="150" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="4 8"/>
     <line x1="0" y1="480" x2="1200" y2="480" stroke="#8b5cf6" stroke-width="0.5" stroke-dasharray="4 8"/>
@@ -169,7 +169,7 @@
   </g>
 
 
-  <!-- ================= LEFT SIDE: TYPOGRAPHY & DOSSIER ================= -->
+  <!-- ================= LEFT SIDE: TYPOGRAPHY &amp; DOSSIER ================= -->
 
   <!-- Top Pill Badge -->
   <g transform="translate(80, 75)">
@@ -180,7 +180,7 @@
     <text x="38" y="21" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">HELIATECH ARCHITECTURAL DOSSIER</text>
   </g>
 
-  <!-- Main Title & Subtitle Group -->
+  <!-- Main Title &amp; Subtitle Group -->
   <g transform="translate(80, 150)">
     <!-- Tool Category Subtitle -->
     <text x="0" y="20" fill="#a855f7" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4" filter="url(#glow-subtle)">B2B PARTNER ECOSYSTEM</text>

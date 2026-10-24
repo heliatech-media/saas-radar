@@ -23,7 +23,7 @@
   <polygon points="200,80 290,132 290,268 200,320 110,268 110,132" 
            fill="#0f172a" stroke="url(#cyan-glow)" stroke-width="4"/>
 
-  <!-- Modern Monogram H & T -->
+  <!-- Modern Monogram H &amp; T -->
   <path d="M 160 145 L 160 255 M 160 200 L 210 200 M 210 145 L 210 255" 
         stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
   

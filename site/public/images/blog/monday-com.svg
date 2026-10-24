@@ -79,7 +79,7 @@
   <circle cx="850" cy="480" r="250" fill="url(#glowFuchsia)"/>
   <circle cx="200" cy="500" r="300" fill="url(#glowViolet)"/>
 
-  <!-- Background Technical Wireframes & Vectors -->
+  <!-- Background Technical Wireframes &amp; Vectors -->
   <g opacity="0.4">
     <!-- Connecting network lines in the background -->
     <path d="M 650 180 L 850 120 L 1000 250 L 900 400 L 700 350 Z" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4"/>
@@ -98,7 +98,7 @@
     <!-- Isometric Board Container Backplate -->
     <polygon points="50,40 500,90 500,450 50,400" fill="#0b0f19" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2"/>
 
-    <!-- Workflow Automation Nodes & Flow Lines -->
+    <!-- Workflow Automation Nodes &amp; Flow Lines -->
     <g transform="translate(80, 70)">
       <!-- Flow connection pathways -->
       <path d="M 30 60 L 140 60 L 220 160 L 320 160" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="3" filter="url(#glow)"/>
@@ -159,7 +159,7 @@
   </g>
 
   <!-- ==================================================== -->
-  <!-- LEFT SIDE: TYPOGRAPHY, BADGE & ARCHITECTURAL DOSSIER -->
+  <!-- LEFT SIDE: TYPOGRAPHY, BADGE &amp; ARCHITECTURAL DOSSIER -->
   <!-- ==================================================== -->
   <g transform="translate(80, 80)">
     
@@ -177,7 +177,7 @@
       MONDAY<tspan fill="#d946ef">.</tspan><tspan fill="url(#cyanBlueGrad)">COM</tspan>
     </text>
 
-    <!-- Subtitle Category: Work OS & Project Management -->
+    <!-- Subtitle Category: Work OS &amp; Project Management -->
     <g transform="translate(2, 165)">
       <rect x="0" y="0" width="280" height="28" rx="6" fill="#ffffff" fill-opacity="0.05"/>
       <text x="14" y="18" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="3">WORK OS &amp; PROJECT MANAGEMENT</text>

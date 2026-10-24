@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a" />
       <stop offset="50%" stop-color="#070b14" />
@@ -72,7 +72,7 @@
     <path d="M300 100 L 450 250 L 550 400 L 800 150" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
   </g>
 
-  <!-- RIGHT SIDE: 3D Isometric AI Code & AST Architecture Engine -->
+  <!-- RIGHT SIDE: 3D Isometric AI Code &amp; AST Architecture Engine -->
   <g transform="translate(620, 70)">
     <!-- Main Floating IDE Hologram Frame -->
     <g filter="url(#glow)">
@@ -90,7 +90,7 @@
       <line x1="80" y1="380" x2="440" y2="100" />
     </g>
 
-    <!-- Floating Neural Nodes & Code AST Elements -->
+    <!-- Floating Neural Nodes &amp; Code AST Elements -->
     <g transform="translate(60, 80)">
       <!-- Code Window Header Bar -->
       <rect x="0" y="0" width="390" height="30" rx="6" fill="#030712" stroke="#1e293b" />
@@ -140,7 +140,7 @@
     </g>
   </g>
 
-  <!-- LEFT SIDE: Typography, Dossier Pill & Architectural Hierarchy -->
+  <!-- LEFT SIDE: Typography, Dossier Pill &amp; Architectural Hierarchy -->
   <g transform="translate(80, 80)">
     
     <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->

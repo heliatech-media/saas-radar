@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background &amp; Base Gradients -->
     <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="50%" stop-color="#070a14"/>
@@ -28,7 +28,7 @@
       <stop offset="100%" stop-color="#d946ef" stop-opacity="0.1"/>
     </linearGradient>
 
-    <!-- Glow & Lighting Filters -->
+    <!-- Glow &amp; Lighting Filters -->
     <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="20" result="blur1"/>
       <feGaussianBlur stdDeviation="10" result="blur2"/>
@@ -127,7 +127,7 @@
       <circle cx="40" cy="15" r="8" fill="#38bdf8" opacity="0.5"/>
     </g>
 
-    <!-- Satellite Node 3: Interactions & Logic -->
+    <!-- Satellite Node 3: Interactions &amp; Logic -->
     <g transform="translate(80, 340)">
       <rect x="-65" y="-35" width="130" height="70" rx="10" fill="#090d16" stroke="#d946ef" stroke-width="1.5" opacity="0.95"/>
       <rect x="-65" y="-35" width="130" height="70" rx="10" fill="url(#glass-grad)"/>
@@ -136,7 +136,7 @@
       <circle cx="45" cy="0" r="5" fill="#06b6d4"/>
     </g>
 
-    <!-- Satellite Node 4: Enterprise Hosting & Scale -->
+    <!-- Satellite Node 4: Enterprise Hosting &amp; Scale -->
     <g transform="translate(350, 320)">
       <rect x="-60" y="-35" width="120" height="70" rx="10" fill="#090d16" stroke="#06b6d4" stroke-width="1.5" opacity="0.95"/>
       <rect x="-60" y="-35" width="120" height="70" rx="10" fill="url(#glass-grad)"/>
@@ -160,7 +160,7 @@
 
 
   <!-- ========================================== -->
-  <!-- LEFT SIDE: TYPOGRAPHY & BRANDING           -->
+  <!-- LEFT SIDE: TYPOGRAPHY &amp; BRANDING           -->
   <!-- ========================================== -->
   <g transform="translate(80, 80)">
     
