@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradient" cx="60%" cy="30%" r="80%" fx="60%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Glowing Effects -->
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-fuchsia" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-violet" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Ambient Gradients -->
+    <radialGradient id="orb-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="orb-fuchsia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Vectors -->
+    <linearGradient id="grad-cyan-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="grad-fuchsia-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    
+    <linearGradient id="panelBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5"/>
+    </pattern>
+
+    <!-- Dot Pattern -->
+    <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-grid)" />
+
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="950" cy="150" r="300" fill="url(#orb-fuchsia)" />
+  <circle cx="750" cy="450" r="350" fill="url(#orb-cyan)" />
+
+  <!-- Abstract Background Vector Waves / Neural Flows -->
+  <g opacity="0.4" filter="url(#glow-cyan)">
+    <path d="M-100 500 C 200 600, 400 300, 600 450 C 800 600, 1000 200, 1300 350" fill="none" stroke="url(#grad-cyan-sky)" stroke-width="2" />
+    <path d="M-100 450 C 250 550, 450 250, 650 400 C 850 550, 1050 150, 1300 300" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- RIGHT SIDE: 3D Isometric AI Architecture & Vector Embeddings (Jasper AI Domain) -->
+  <g transform="translate(640, 70)">
+    <!-- Ambient glow behind IDE -->
+    <rect x="30" y="30" width="450" height="420" rx="16" fill="#8b5cf6" opacity="0.1" filter="url(#glow-fuchsia)"/>
+
+    <!-- Isometric IDE / Neural Dashboard Frame -->
+    <g transform="rotate(-8) skewX(12) scale(0.95)">
+      <!-- Base Window Backdrop -->
+      <rect x="0" y="0" width="460" height="430" rx="12" fill="#030712" fill-opacity="0.85" stroke="url(#panelBorder)" stroke-width="2" filter="drop-shadow(0px 25px 35px rgba(0,0,0,0.7))"/>
+      
+      <!-- Top Window Bar -->
+      <path d="M 0 12 C 0 5.372 5.372 0 12 0 L 448 0 C 454.628 0 460 5.372 460 12 L 460 36 L 0 36 Z" fill="#0f172a" fill-opacity="0.9"/>
+      <circle cx="20" cy="18" r="5" fill="#ef4444" opacity="0.8"/>
+      <circle cx="38" cy="18" r="5" fill="#f59e0b" opacity="0.8"/>
+      <circle cx="56" cy="18" r="5" fill="#10b981" opacity="0.8"/>
+      
+      <text x="80" y="23" font-family="monospace" font-size="11" fill="#94a3b8" letter-spacing="1">JASPER_CORE_ENGINE_v4.2.tsx</text>
+      <rect x="330" y="10" width="100" height="16" rx="4" fill="#06b6d4" fill-opacity="0.15"/>
+      <text x="380" y="21" font-family="monospace" font-size="9" fill="#38bdf8" text-anchor="middle">ACTIVE VECTOR</text>
+
+      <!-- Code & AST Syntax Nodes (Content Generation / Brand Velocity Metaphor) -->
+      <g transform="translate(25, 55)" font-family="monospace" font-size="12">
+        <!-- Line numbers -->
+        <text x="0" y="20" fill="#334155">01</text>
+        <text x="0" y="45" fill="#334155">02</text>
+        <text x="0" y="70" fill="#334155">03</text>
+        <text x="0" y="95" fill="#334155">04</text>
+        <text x="0" y="120" fill="#334155">05</text>
+        <text x="0" y="145" fill="#334155">06</text>
+        <text x="0" y="170" fill="#334155">07</text>
+        <text x="0" y="195" fill="#334155">08</text>
+        <text x="0" y="220" fill="#334155">09</text>
+        <text x="0" y="245" fill="#334155">10</text>
+
+        <!-- Syntax Highlighting Code -->
+        <text x="35" y="20" fill="#f43f5e">import<tspan fill="#f8fafc"> {</tspan><tspan fill="#38bdf8"> EnterpriseContext</tspan><tspan fill="#f8fafc">, </tspan><tspan fill="#38bdf8">BrandVoice</tspan><tspan fill="#f8fafc"> } </tspan><tspan fill="#f43f5e">from</tspan><tspan fill="#d946ef"> '@jasper/ai'</tspan><tspan fill="#f8fafc">;</tspan></text>
+        
+        <text x="35" y="45" fill="#f43f5e">const<tspan fill="#38bdf8"> velocityConfig</tspan><tspan fill="#f8fafc"> = {</tspan></text>
+        <text x="55" y="70" fill="#a78bfa">  scaleFactor<tspan fill="#f8fafc">: </tspan><tspan fill="#34d399">10.4</tspan><tspan fill="#f8fafc">,</tspan></text>
+        <text x="55" y="95" fill="#a78bfa">  memoryBank<tspan fill="#f8fafc">: </tspan><tspan fill="#d946ef">'Omnichannel_Global'</tspan><tspan fill="#f8fafc">,</tspan></text>
+        <text x="55" y="120" fill="#a78bfa">  guardrails<tspan fill="#f8fafc">: [</tspan><tspan fill="#d946ef">'Tone_Strict'</tspan><tspan fill="#f8fafc">, </tspan><tspan fill="#d946ef">'SEO_Optimized'</tspan><tspan fill="#f8fafc">]</tspan></text>
+        <text x="35" y="145" fill="#f8fafc">};</text>
+
+        <text x="35" y="170" fill="#64748b">// Executing high-speed enterprise content generation</text>
+        <text x="35" y="195" fill="#38bdf8">async function<tspan fill="#f8fafc"> synthesizeScale() {</tspan></text>
+        <text x="55" y="220" fill="#f43f5e">  return<tspan fill="#f8fafc"> iva.</tspan><tspan fill="#38bdf8">deployCampaign</tspan><tspan fill="#f8fafc">(velocityConfig);</tspan></text>
+        <text x="35" y="245" fill="#f8fafc">}</text>
+      </g>
+
+      <!-- Floating Holographic Data Widget inside IDE -->
+      <g transform="translate(35, 330)">
+        <rect x="0" y="0" width="390" height="65" rx="8" fill="url(#glassGrad)" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 2"/>
+        <circle cx="25" cy="32" r="14" fill="#06b6d4" fill-opacity="0.2"/>
+        <path d="M 18 32 L 23 37 L 32 27" fill="none" stroke="#06b6d4" stroke-width="2" filter="url(#glow-cyan)"/>
+        <text x="55" y="28" font-family="sans-serif" font-weight="bold" font-size="13" fill="#f8fafc">Brand Velocity Index: 99.8%</text>
+        <text x="55" y="47" font-family="sans-serif" font-size="11" fill="#38bdf8">Real-time enterprise memory sync operational</text>
+      </g>
+    </g>
+
+    <!-- Floating Vector Nodes / Connected Orbs outside IDE -->
+    <g transform="translate(-40, 200)">
+      <rect x="0" y="0" width="130" height="45" rx="22.5" fill="#090d16" stroke="#d946ef" stroke-width="1.5" filter="url(#glow-fuchsia)"/>
+      <circle cx="22" cy="22.5" r="6" fill="#d946ef"/>
+      <text x="38" y="26" font-family="sans-serif" font-weight="bold" font-size="11" fill="#f8fafc">AI WRITING</text>
+    </g>
+
+    <g transform="translate(380, 400)">
+      <rect x="0" y="0" width="150" height="45" rx="22.5" fill="#090d16" stroke="#06b6d4" stroke-width="1.5" filter="url(#glow-cyan)"/>
+      <circle cx="22" cy="22.5" r="6" fill="#06b6d4"/>
+      <text x="38" y="26" font-family="sans-serif" font-weight="bold" font-size="11" fill="#f8fafc">GENESIS 2026</text>
+    </g>
+
+    <!-- Connecting curved glowing lines -->
+    <path d="M 85 245 C 50 300, 10 350, 60 380" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.7"/>
+    <path d="M 360 380 C 400 350, 430 380, 450 410" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+  </g>
+
+  <!-- LEFT SIDE: Typography, Dossier Badge, Article Title & Metadata -->
+  <g transform="translate(80, 85)">
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="315" height="32" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="18" cy="16" r="4" fill="#06b6d4" filter="url(#glow-cyan)" />
+      <text x="35" y="21" font-family="sans-serif" font-weight="700" font-size="11" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Tool Title & Category -->
+    <g transform="translate(0, 65)">
+      <!-- Category Subtitle -->
+      <text x="0" y="0" font-family="sans-serif" font-weight="700" font-size="14" fill="#d946ef" letter-spacing="3" filter="url(#glow-fuchsia)">ENTERPRISE AI WRITING &amp; SCALING</text>
+      
+      <!-- Main Tool Name: JASPER AI -->
+      <text x="0" y="65" font-family="sans-serif" font-weight="900" font-size="64" fill="#f8fafc" letter-spacing="1">
+        JASPER <tspan fill="url(#grad-cyan-sky)" filter="url(#glow-cyan)">AI</tspan>
+      </text>
+    </g>
+
+    <!-- Investigation Title (Multiline) -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="0" font-family="sans-serif" font-weight="800" font-size="28" fill="#f1f5f9" letter-spacing="-0.5" line-height="1.2">
+        The Genesis of Enterprise Content
+      </text>
+      <text x="0" y="38" font-family="sans-serif" font-weight="800" font-size="28" fill="#f1f5f9" letter-spacing="-0.5">
+        Scaling and the Hands-on Guide
+      </text>
+      <text x="0" y="76" font-family="sans-serif" font-weight="800" font-size="28" fill="url(#grad-fuchsia-violet)" letter-spacing="-0.5">
+        to Brand Velocity in 2026
+      </text>
+    </g>
+
+    <!-- Metadata Footer / Author & Metrics -->
+    <g transform="translate(0, 335)">
+      <line x1="0" y1="0" x2="480" y2="0" stroke="#334155" stroke-width="1" stroke-opacity="0.6"/>
+      
+      <g transform="translate(0, 20)">
+        <!-- Author / Brand -->
+        <circle cx="16" cy="16" r="16" fill="#1e293b" stroke="#06b6d4" stroke-width="1"/>
+        <text x="16" y="21" font-family="sans-serif" font-weight="bold" font-size="12" fill="#06b6d4" text-anchor="middle">HT</text>
+        <text x="44" y="14" font-family="sans-serif" font-weight="700" font-size="12" fill="#f8fafc">HELIA TECH RESEARCH</text>
+        <text x="44" y="30" font-family="sans-serif" font-size="11" fill="#64748b">heliatech.online • Published Q1 2026</text>
+
+        <!-- Read Time / Security Badge -->
+        <g transform="translate(370, 0)">
+          <rect x="0" y="4" width="110" height="24" rx="12" fill="#0f172a" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.5"/>
+          <text x="55" y="19" font-family="sans-serif" font-weight="600" font-size="10" fill="#a78bfa" text-anchor="middle">14 MIN READ</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Decorative Corner Framing Elements -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 20 40 L 20 20 L 40 20" />
+    <path d="M 1180 40 L 1180 20 L 1160 20" />
+    <path d="M 20 590 L 20 610 L 40 610" />
+    <path d="M 1180 590 L 1180 610 L 1160 610" />
+  </g>
+</svg>

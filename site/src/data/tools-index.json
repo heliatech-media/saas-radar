@@ -55,6 +55,16 @@
     "commission_rate": "€5 per free account signup + up to €500 per paid plan subscription"
   },
   {
+    "name": "Castmagic",
+    "slug": "castmagic",
+    "tagline": "Turn long-form audio and video recordings into show notes, blog posts, and social clips instantly with AI.",
+    "category": "Audio/Podcasting",
+    "rating": 4.7,
+    "starting_price": "$39/mo",
+    "best_for": "Podcasters, content agencies, and digital marketers producing long-form audio or video content weekly.",
+    "affiliate_url": "https://castmagic.io/?via=heliatech"
+  },
+  {
     "name": "ClickUp",
     "slug": "clickup",
     "tagline": "The one app to replace them all with customizable tasks, docs, goals, and chat.",
@@ -116,7 +126,8 @@
     "rating": 4.5,
     "starting_price": "$39/mo",
     "best_for": "Mid-market to enterprise marketing teams, content agencies, and corporate brand managers.",
-    "affiliate_url": "https://www.jasper.ai"
+    "affiliate_url": "https://partnerstack.com/jasper?via=heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
   },
   {
     "name": "Lemlist",
@@ -279,7 +290,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.voiceflow.com"
+    "affiliate_url": "https://voiceflow.grsm.io/heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "WATI",

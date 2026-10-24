@@ -6,7 +6,7 @@ tagline: An AI-powered content creation platform built specifically for enterpri
 category: AI Writing
 rating: 4.5
 website_url: https://www.jasper.ai
-affiliate_url: https://www.jasper.ai
+affiliate_url: "https://partnerstack.com/jasper?via=heliatech"
 summary: Jasper AI is an enterprise-grade generative AI content platform that helps
   marketing teams scale their output by maintaining consistent brand voice across
   campaigns. It combines multi-model AI capabilities, SEO optimization tools, and

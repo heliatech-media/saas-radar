@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-24 08:43:18 UTC",
+  "last_updated": "2026-10-24 11:57:54 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 30,
-    "total_published_investigations": 74,
-    "reviews_audited": 31,
-    "masterclasses_and_duels": 43,
+    "total_monetized_tools": 31,
+    "total_published_investigations": 76,
+    "reviews_audited": 32,
+    "masterclasses_and_duels": 44,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$10,500 USD",
+    "projected_monthly_mrr": "$10,850 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -123,6 +123,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "jasper-ai",
+      "destination": "https://partnerstack.com/jasper?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "lemlist",
       "destination": "https://lemlist.com/?via=heliatech",
       "type": "Commission Partner"
@@ -184,7 +189,7 @@
     },
     {
       "slug": "rewardful",
-      "destination": "https://www.rewardful.com/?via=heliatech",
+      "destination": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -204,8 +209,8 @@
     },
     {
       "slug": "voiceflow",
-      "destination": "https://www.voiceflow.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://voiceflow.grsm.io/heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "wati",

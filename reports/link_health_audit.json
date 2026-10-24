@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-10-24 08:45:51",
-  "total_links_audited": 55,
-  "healthy_links": 54,
+  "timestamp": "2026-10-24 12:00:32",
+  "total_links_audited": 56,
+  "healthy_links": 55,
   "broken_links_count": 1,
   "health_rate": "98.2%",
   "broken_links": [
@@ -58,6 +58,13 @@
       "healthy": true
     },
     {
+      "slug": "castmagic",
+      "target_url": "https://www.castmagic.com",
+      "final_url": "https://www.godaddy.com/domainsearch/find?domainToCheck=castmagic.com",
+      "status_code": 403,
+      "healthy": true
+    },
+    {
       "slug": "clay",
       "target_url": "https://www.clay.com",
       "final_url": "https://www.clay.com/",
@@ -95,7 +102,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=I1frA1JAkb418j&gsxid=I1frA1JAkb418j&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Djw2VX2rjpmCcP&gsxid=Djw2VX2rjpmCcP&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -250,7 +257,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TqqmADGNknxyMO&gsxid=TqqmADGNknxyMO&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=gmV65rcvgA1qvD&gsxid=gmV65rcvgA1qvD&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -298,8 +305,8 @@
     },
     {
       "slug": "rewardful",
-      "target_url": "https://www.rewardful.com/?via=heliatech",
-      "final_url": "https://www.rewardful.com/?via=heliatech",
+      "target_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
+      "final_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

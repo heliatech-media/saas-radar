@@ -87,12 +87,14 @@ AFFILIATE_MAP = {
     "podia": "https://www.podia.com/?via=heliatech",
     "printify": "https://printify.pxf.io/c/heliatech",
     "retool": "https://retool.grsm.io/heliatech",
-    "rewardful": "https://www.rewardful.com/?via=heliatech",
+    "rewardful": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
     "transistor-fm": "https://transistor.fm/?via=heliatech",
     "veed-io": "https://www.veed.io/?via=heliatech",
     "lovable": "https://lovable.dev/?via=heliatech",
     "supabase": "https://supabase.com/?via=heliatech",
     "typeform": "https://typeform.grsm.io/heliatech",
-    "vercel": "https://vercel.com/?via=heliatech"
+    "vercel": "https://vercel.com/?via=heliatech",
+    "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
+    "voiceflow": "https://voiceflow.grsm.io/heliatech"
 }

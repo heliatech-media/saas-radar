@@ -125,6 +125,16 @@ flowchart LR
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
 > **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Zapier` with our verified enterprise trial link at [/go/make](/go/make).
 
 > [!TIP]
@@ -279,7 +289,7 @@ Medium. Straightforward if migrating from Microsoft-heavy workflows; complex if 
 
 To select the ideal replacement for your specific organizational footprint, evaluate your archetype below:
 
-* **Solo Creator / Bootstrapped Founder:** Choose **Activepieces** (for open-source cost control) or **Make** (for rapid visual building with a generous free tier). Both eliminate Zapier’s harsh task penalties at low-to-mid volumes.
+* **Solo Creator / Bootstrapped Founder:** Choose **Activepieces** (for open-source cost control) or **[Make](/reviews/make)** (for rapid visual building with a generous free tier). Both eliminate Zapier’s harsh task penalties at low-to-mid volumes.
 * **High-Growth Mid-Market Scale-Up:** Choose **Make** (for complex logic, branching, and unmatched visual debugging) or **n8n** (if you have internal engineering talent to self-host and want zero per-execution fees).
 * **Enterprise with Strict Compliance (SOC2 / GDPR):** Choose **Workato** (for robust enterprise governance, role-based access control, and audit logs) or **n8n Enterprise Self-Hosted** (to maintain complete data sovereignty inside your own private cloud infrastructure).
 

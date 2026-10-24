@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Brand Color Gradients -->
+    <linearGradient id="cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-cyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.1" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#d946ef" stop-opacity="1" />
+      <stop offset="75%" stop-color="#8b5cf6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Geometric Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.07" />
+    </pattern>
+    
+    <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#8b5cf6" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bg-glow)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-grid)" mask="url(#fade-mask)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="1000" cy="150" r="250" fill="#8b5cf6" opacity="0.15" filter="url(#glow-heavy)" />
+  <circle cx="200" cy="500" r="220" fill="#06b6d4" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="700" cy="350" r="180" fill="#d946ef" opacity="0.1" filter="url(#glow-heavy)" />
+
+  <!-- 3D Vector Illustrator / Audio-to-Content Metaphor (Right Side) -->
+  <g transform="translate(640, 100)" filter="url(#drop-shadow)">
+    
+    <!-- Holographic Platform Base -->
+    <g transform="translate(50, 320)">
+      <ellipse cx="220" cy="40" rx="220" ry="60" fill="none" stroke="url(#cyan-violet)" stroke-width="2" opacity="0.4" />
+      <ellipse cx="220" cy="40" rx="170" ry="45" fill="#090d16" opacity="0.8" />
+      <ellipse cx="220" cy="40" rx="170" ry="45" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3" stroke-dasharray="8 4" />
+    </g>
+
+    <!-- Central Audio Core / Neural Waveform Pillars -->
+    <g transform="translate(180, 80)">
+      <!-- Vertical Energy Streams -->
+      <path d="M40 80 L40 280" stroke="url(#cyan-violet)" stroke-width="3" opacity="0.4" />
+      <path d="M120 40 L120 300" stroke="url(#fuchsia-cyan)" stroke-width="4" opacity="0.6" filter="url(#glow-subtle)" />
+      <path d="M200 90 L200 270" stroke="url(#cyan-violet)" stroke-width="3" opacity="0.4" />
+
+      <!-- Floating 3D Nodes / Content Fragments -->
+      <g transform="translate(0, 20)">
+        <polygon points="40,20 80,0 120,20 80,40" fill="#06b6d4" opacity="0.8" filter="url(#glow-subtle)" />
+        <polygon points="40,20 80,40 80,80 40,60" fill="#0891b2" opacity="0.6" />
+        <polygon points="120,20 80,40 80,80 120,60" fill="#22d3ee" opacity="0.7" />
+      </g>
+
+      <g transform="translate(80, -20)">
+        <polygon points="40,20 80,0 120,20 80,40" fill="#d946ef" opacity="0.9" filter="url(#glow-heavy)" />
+        <polygon points="40,20 80,40 80,80 40,60" fill="#a21caf" opacity="0.7" />
+        <polygon points="120,20 80,40 80,80 120,60" fill="#e879f9" opacity="0.8" />
+      </g>
+
+      <g transform="translate(40, 140)">
+        <polygon points="40,20 80,0 120,20 80,40" fill="#8b5cf6" opacity="0.8" filter="url(#glow-subtle)" />
+        <polygon points="40,20 80,40 80,80 40,60" fill="#6d28d9" opacity="0.6" />
+        <polygon points="120,20 80,40 80,80 120,60" fill="#a78bfa" opacity="0.7" />
+      </g>
+    </g>
+
+    <!-- Intersecting 3D Audio Frequency Waves -->
+    <path d="M 30 250 Q 140 130, 270 230 T 510 190" fill="none" stroke="url(#wave-grad)" stroke-width="4" filter="url(#glow-heavy)" />
+    <path d="M 30 270 Q 150 170, 270 250 T 510 210" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.7" />
+
+    <!-- Floating Repurposed Content Artifact Cards (Isometric Glassmorphism) -->
+    <!-- Card 1: Blog / Summary -->
+    <g transform="translate(20, 60)" filter="url(#drop-shadow)">
+      <rect width="140" height="90" rx="12" fill="url(#glass-grad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" backdrop-filter="blur(10px)" />
+      <circle cx="25" cy="25" r="8" fill="#06b6d4" />
+      <rect x="45" y="21" width="70" height="6" rx="3" fill="#ffffff" fill-opacity="0.8" />
+      <rect x="25" y="45" width="90" height="4" rx="2" fill="#38bdf8" fill-opacity="0.5" />
+      <rect x="25" y="57" width="70" height="4" rx="2" fill="#38bdf8" fill-opacity="0.3" />
+      <rect x="25" y="69" width="50" height="4" rx="2" fill="#38bdf8" fill-opacity="0.3" />
+    </g>
+
+    <!-- Card 2: Social / Viral Clips -->
+    <g transform="translate(360, 40)" filter="url(#drop-shadow)">
+      <rect width="150" height="100" rx="12" fill="url(#glass-grad)" stroke="#d946ef" stroke-width="1" stroke-opacity="0.5" />
+      <circle cx="25" cy="25" r="8" fill="#d946ef" />
+      <rect x="45" y="21" width="80" height="6" rx="3" fill="#ffffff" fill-opacity="0.9" />
+      <path d="M 25 50 L 50 75 L 85 45 L 125 85" fill="none" stroke="#e879f9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="85" cy="45" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+    </g>
+
+    <!-- Card 3: Newsletter / Output -->
+    <g transform="translate(330, 230)" filter="url(#drop-shadow)">
+      <rect width="160" height="90" rx="12" fill="url(#glass-grad)" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="25" cy="25" r="8" fill="#8b5cf6" />
+      <rect x="45" y="21" width="85" height="6" rx="3" fill="#ffffff" fill-opacity="0.8" />
+      <rect x="25" y="45" width="110" height="4" rx="2" fill="#a78bfa" fill-opacity="0.5" />
+      <rect x="25" y="57" width="90" height="4" rx="2" fill="#a78bfa" fill-opacity="0.3" />
+    </g>
+
+    <!-- Data Velocity Particle Connections -->
+    <path d="M 90 150 Q 120 200, 180 200" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6" />
+    <path d="M 410 140 Q 380 200, 310 200" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6" />
+    <path d="M 360 275 Q 280 280, 220 220" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6" />
+  </g>
+
+  <!-- Left Content & Typography Area -->
+  <g transform="translate(80, 90)">
+    
+    <!-- Top Pill Badge -->
+    <g filter="url(#drop-shadow)">
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="url(#badge-grad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="18" cy="17" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+      <text x="35" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: CASTMAGIC -->
+    <text x="0" y="145" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="82" font-weight="900" fill="#ffffff" letter-spacing="3" filter="url(#drop-shadow)">
+      CAST<tspan fill="url(#cyan-violet)">MAGIC</tspan>
+    </text>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 175)">
+      <rect x="0" y="0" width="190" height="26" rx="6" fill="#8b5cf6" fill-opacity="0.2" />
+      <text x="12" y="17" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#c084fc" letter-spacing="1.5">AUDIO / PODCASTING</text>
+    </g>
+
+    <!-- Headline Paragraph / Investigation Title -->
+    <text x="0" y="240" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="#f8fafc" letter-spacing="0.5">
+      The AI Repurposing Engine and the
+    </text>
+    <text x="0" y="278" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="url(#cyan-violet)" letter-spacing="0.5" filter="url(#glow-subtle)">
+      Masterclass in Audio-to-Content Velocity
+    </text>
+
+    <!-- Descriptive Metadata -->
+    <text x="0" y="340" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400" fill="#94a3b8" line-height="1.5">
+      Deconstructing neural transcription pipelines, automated shownotes,
+    </text>
+    <text x="0" y="365" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">
+      and multi-channel asset generation at enterprise scale.
+    </text>
+
+    <!-- Footer Brand Indicator -->
+    <g transform="translate(0, 435)">
+      <line x1="0" y1="0" x2="480" y2="0" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1" />
+      <circle cx="6" cy="0" r="2" fill="#06b6d4" />
+      <text x="20" y="18" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.5">FLAGSHIP SOFTWARE INVESTIGATION &bull; HELIATECH.ONLINE</text>
+    </g>
+  </g>
+
+</svg>

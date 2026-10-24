@@ -45,7 +45,8 @@ By pivoting aggressively toward a web-native, canvas-first platform backed by Re
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "The future of software is not about choosing between visual creativity and programmatic power; it is about building interfaces where the canvas and the code are the exact same thing." — HELIA TECH Enterprise Insights
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "The future of software is not about choosing between visual creativity and programmatic power; it is about building interfaces where the canvas and the code are the exact same thing." — HELIA TECH Enterprise Insights
 
 ## 2. Core Business Superpowers
 
@@ -64,6 +65,16 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Framer` with our verified enterprise trial link at [/go/framer](/go/framer).
 
 > [!TIP]
 > [!NOTE]

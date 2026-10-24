@@ -159,6 +159,6 @@ No coding experience is strictly required to build initial layouts and interacti
 
 ### What tech stack does Lovable use under the hood?
 
-Applications generated on Lovable typically run on React, Vite, TypeScript, and Tailwind CSS, utilizing Supabase for backend database and authentication requirements.
+Applications generated on Lovable typically run on React, Vite, TypeScript, and Tailwind CSS, utilizing [Supabase](/reviews/supabase) for backend database and authentication requirements.
 
 

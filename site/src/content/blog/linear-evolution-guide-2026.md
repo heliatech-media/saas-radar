@@ -41,7 +41,8 @@ Then came Linear. Built by engineers who refused to accept sluggish software as 
 > [!NOTE]
 > [!NOTE]
 > [!NOTE]
-> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "We didn’t set out to build another project management tool. We set out to build the tool we wished existed—something so fast and frictionless that it gets entirely out of your way."
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** "We didn’t set out to build another project management tool. We set out to build the tool we wished existed—something so fast and frictionless that it gets entirely out of your way."
 
 ## 1. The Genesis & Evolution: Dethroning the Legacy Dinosaurs
 
@@ -68,6 +69,17 @@ flowchart LR
     style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
     style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
 ```
+
+> [!TIP]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> [!NOTE]
+> **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `Linear` with our verified enterprise trial link at [/go/linear](/go/linear).
 
 > [!TIP]
 > [!NOTE]
