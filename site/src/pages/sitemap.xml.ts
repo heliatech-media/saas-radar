@@ -11,7 +11,6 @@ export async function GET() {
     '/awards',
     '/versus',
     '/calculator',
-    '/blueprint',
     '/partner',
     '/blog',
   ];
