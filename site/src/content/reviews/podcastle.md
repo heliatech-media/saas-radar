@@ -6,7 +6,7 @@ tagline: An AI-powered podcast and audio creation platform designed for studio-q
 category: Audio/Podcasting
 rating: 4.5
 website_url: https://podcastle.ai
-affiliate_url: https://podcastle.ai
+affiliate_url: https://podcastle.ai/?via=heliatech
 summary: Podcastle is an all-in-one AI-driven audio creation suite that simplifies
   remote interviewing, studio-quality recording, and automated editing. It allows
   users to record multi-track audio and video in high fidelity, remove background

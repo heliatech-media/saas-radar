@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ToolIcon from '../components/ToolIcon.astro';
 import toolsData from '../data/tools-index.json';
 import { getCollection } from 'astro:content';
 import NewsletterCapture from '../components/NewsletterCapture.astro';
@@ -191,9 +192,12 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
               </span>
               <span class="text-xs font-mono text-cyan-300 font-bold">★ {tool.rating.toFixed(1)}</span>
             </div>
-            <h3 class="text-2xl font-black text-white mb-2 group-hover:text-cyan-300 transition-colors">
-              {tool.name}
-            </h3>
+            <div class="flex items-center gap-3 mb-3">
+              <ToolIcon name={tool.name} slug={tool.slug} size="md" />
+              <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors">
+                {tool.name}
+              </h3>
+            </div>
             <p class="text-xs text-slate-300 leading-relaxed mb-6 font-light line-clamp-2">
               {tool.tagline}
             </p>
@@ -282,9 +286,12 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
             </div>
 
             <!-- Title & Tagline -->
-            <h3 class="text-2xl font-black text-white mb-3 group-hover:text-cyan-300 transition-colors tracking-tight">
-              {tool.name}
-            </h3>
+            <div class="flex items-center gap-3 mb-3">
+              <ToolIcon name={tool.name} slug={tool.slug} size="md" />
+              <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors tracking-tight">
+                {tool.name}
+              </h3>
+            </div>
 
             <p class="text-slate-400 text-xs sm:text-sm line-clamp-2 mb-6 font-normal leading-relaxed">
               {tool.tagline}

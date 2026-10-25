@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ToolIcon from '../../components/ToolIcon.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import RoiCalculator from '../../components/RoiCalculator.astro';
 import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
@@ -77,16 +78,21 @@ const jsonLd = {
         <span class="text-slate-400 font-mono">PUBLISHED ON {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 
         {post.tool_slug && (
-          <span class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30 font-semibold">
-            <span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 animate-pulse"></span>
+          <span class="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30 font-semibold">
+            <ToolIcon slug={post.tool_slug} size="xs" />
             <span>Dedicated to {post.tool_slug.toUpperCase()}</span>
           </span>
         )}
       </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] mb-8">
-        {post.title}
-      </h1>
+      <div class="flex items-start gap-4 mb-8">
+        {post.tool_slug && (
+          <ToolIcon slug={post.tool_slug} size="lg" className="mt-1 hidden sm:inline-flex" />
+        )}
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+          {post.title}
+        </h1>
+      </div>
 
       <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8">
         {post.description}
@@ -119,8 +125,9 @@ const jsonLd = {
               href={`/go/${post.tool_slug}`} 
               target="_blank"
               rel="noopener sponsored"
-              class="px-3.5 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-xs font-mono font-bold text-slate-950 transition-colors shadow-glow-cyan flex items-center gap-1"
+              class="px-3.5 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-xs font-mono font-bold text-slate-950 transition-colors shadow-glow-cyan flex items-center gap-1.5"
             >
+              <ToolIcon slug={post.tool_slug} size="xs" />
               <span>Direct Access</span>
               <span>↗</span>
             </a>

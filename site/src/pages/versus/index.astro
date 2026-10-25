@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ToolIcon from '../../components/ToolIcon.astro';
 import { getCollection } from 'astro:content';
 import PricingShockCalculator from '../../components/PricingShockCalculator.astro';
 
@@ -43,13 +44,30 @@ const jsonLd = {
       {duelPosts.map((post) => (
         <article class="p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between backdrop-blur-xl">
           <div>
-            <!-- Header Badges -->
+            <!-- Header Badges & Contenders -->
             <div class="flex items-center justify-between gap-2 mb-4 text-xs font-mono">
               <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-semibold uppercase tracking-wider text-[10px]">
                 {post.data.category}
               </span>
               <span class="text-slate-500">{post.data.readingTime || '12 MIN READ'}</span>
             </div>
+
+            {post.slug.includes('-vs-') && (() => {
+              const [toolA, toolB] = post.slug.split('-vs-');
+              return (
+                <div class="flex items-center gap-2 mb-4 p-2 px-3 rounded-2xl bg-slate-950/80 border border-slate-800 w-fit">
+                  <div class="flex items-center gap-2">
+                    <ToolIcon slug={toolA} size="sm" />
+                    <span class="text-xs font-mono font-bold text-white capitalize">{toolA.replace('-', '.')}</span>
+                  </div>
+                  <span class="text-[10px] font-mono font-black text-amber-400 px-1.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">VS</span>
+                  <div class="flex items-center gap-2">
+                    <ToolIcon slug={toolB} size="sm" />
+                    <span class="text-xs font-mono font-bold text-slate-300 capitalize">{toolB.replace('-', '.')}</span>
+                  </div>
+                </div>
+              );
+            })()}
 
             <!-- Artwork Preview -->
             {post.data.image && (

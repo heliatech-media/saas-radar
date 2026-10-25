@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ToolIcon from '../../components/ToolIcon.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
@@ -49,6 +50,9 @@ const otherPosts = sortedPosts.slice(1);
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-7">
               <div class="flex flex-wrap items-center gap-3 mb-5 text-xs font-mono">
+                {featuredPost.data.tool_slug && (
+                  <ToolIcon slug={featuredPost.data.tool_slug} size="sm" />
+                )}
                 <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-semibold">
                   {featuredPost.data.category}
                 </span>
@@ -120,10 +124,13 @@ const otherPosts = sortedPosts.slice(1);
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div class="absolute top-3 left-3">
+                  <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
                     <span class="px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-semibold">
                       {post.data.category}
                     </span>
+                    {post.data.tool_slug && (
+                      <ToolIcon slug={post.data.tool_slug} size="xs" />
+                    )}
                   </div>
                 </div>
 
