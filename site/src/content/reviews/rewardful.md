@@ -5,7 +5,7 @@ tagline: The all-in-one affiliate and referral management software built nativel
 category: Growth & Affiliate Infrastructure
 rating: 4.9
 website_url: https://www.rewardful.com/?via=heliatech
-affiliate_url: https://www.rewardful.com/?via=heliatech
+affiliate_url: "https://www.rewardful.com/?via=heliatech/?via=heliatech"
 summary: Rewardful is the premier affiliate and referral management software designed specifically for subscription businesses and SaaS companies powered by Stripe. Setting up takes under 15 minutes, automatically synchronizing customer subscriptions, upgrades, refunds, and recurring monthly payouts with 0% transaction fees.
 best_for: SaaS solopreneurs, bootstrapped founders, and tech marketers looking to launch a high-converting affiliate or customer referral program in under 15 minutes.
 pros:
@@ -112,7 +112,7 @@ Based on empirical data from hundreds of scaling software businesses, here is wh
 
 1. **15-Minute Installation Process:** Connect Stripe, install a two-line JavaScript snippet, and launch in under a quarter of an hour.
 2. **Transparent & Scalable Pricing:** Flat monthly tiers with **0% commission cuts** on your affiliate-driven sales.
-3. **No-Code Integrations:** Native 1-click connectors for Stripe, Webflow, Squarespace, WordPress, and 30+ platforms.
+3. **No-Code Integrations:** Native 1-click connectors for Stripe, [Webflow](/reviews/webflow), Squarespace, WordPress, and 30+ platforms.
 4. **Tailored for SaaS:** Built specifically around subscription lifecycles, MRR tracking, and churn dynamics.
 5. **Combined Referral & Affiliate Programs:** Manage creators seeking cash commissions alongside existing users seeking product credits in one single portal.
 6. **Automated Refund & Proration Sync:** When a customer requests a refund or changes tiers, Rewardful instantly adjusts or claws back the commission on Stripe.

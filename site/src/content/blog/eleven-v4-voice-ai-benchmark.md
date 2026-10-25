@@ -41,7 +41,7 @@ For years, speech synthesis suffered from an unavoidable trilemma: **acoustic fi
 With **Eleven v4**, the engineering team at [ElevenLabs](/reviews/elevenlabs) has unified these paradigms into a production-ready generative audio engine. Whether you are building autonomous phone receptionists, interactive gaming NPCs, or localized global media pipelines, here is the empirical benchmark, architectural breakdown, and hands-on implementation guide.
 
 > [!NOTE]
-> **Executive Takeaway:** **Direct Partner Access:** You can deploy and experiment with Eleven v4 models directly through our verified partner portal: [Access ElevenLabs v4 Platform](https://try.elevenlabs.io/ajhd6t7k04dh) or via our direct redirect at [/go/elevenlabs](/go/elevenlabs).
+> **Executive Takeaway:** **Direct Partner Access:** You can deploy and experiment with Eleven v4 models directly through our verified partner portal: [Access [ElevenLabs](/reviews/elevenlabs) v4 Platform](https://try.elevenlabs.io/ajhd6t7k04dh) or via our direct redirect at [/go/elevenlabs](/go/elevenlabs).
 
 ---
 

@@ -73,7 +73,7 @@ flowchart LR
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
 
-Deploying AI across a team requires structure. Follow this 15-minute blueprint to configure and test Notion AI's capabilities for your organization today.
+Deploying AI across a team requires structure. Follow this 15-minute blueprint to configure and test [Notion AI](/reviews/notion-ai)'s capabilities for your organization today.
 
 1. **Open Your Target Workspace:** Navigate to an active project page or create a new database in your Notion account containing recent meeting notes or product requirements.
 2. **Invoke the Assistant:** Type the command `/ai` anywhere on the page or highlight a block of text and select **Ask AI** from the floating toolbar.

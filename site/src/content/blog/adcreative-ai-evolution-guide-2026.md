@@ -69,7 +69,7 @@ flowchart LR
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
 
-Deploying your first high-converting campaign cluster using AdCreative.ai requires zero design experience. Follow this structured 15-minute blueprint to generate your first asset batch:
+Deploying your first high-converting campaign cluster using [AdCreative.ai](/reviews/adcreative-ai) requires zero design experience. Follow this structured 15-minute blueprint to generate your first asset batch:
 
 1.  **Brand Profile Setup (Minutes 0–3):** Log into your dashboard, upload your high-resolution logo, input your brand hex codes, and connect your Meta or Google ad accounts to let the system pull historical audience data.
 2.  **Asset Ingestion & Target Audience Definition (Minutes 3–7):** Upload clean, high-contrast product cutouts with transparent backgrounds. Input your primary value proposition, target audience pain points, and select the desired campaign objective (e.g., e-commerce conversions, lead generation).

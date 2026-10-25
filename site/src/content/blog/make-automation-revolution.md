@@ -26,7 +26,8 @@ tldr:
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Claim 1 Month Free on Make Pro (10,000 Operations)
-  description: Every new user who registers for Make through our link automatically receives their first month on the Pro plan with 10,000 free operations.
+  description: Every new user who registers for Make through our link automatically
+    receives their first month on the Pro plan with 10,000 free operations.
   button_text: Claim 1 Month Free Pro Plan on Make ➔
   url: /go/make
 image: /images/blog/make.svg

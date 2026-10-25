@@ -63,7 +63,7 @@ flowchart TD
 
 Unlike older interactive voice response (IVR) phone menus that frustrate callers with robotic prompts (*"Press 1 for sales, press 2 for billing"*), ElevenAgents conducts fluid, low-latency, two-way conversations.
 
-1. **Human-Sounding Acoustic Quality:** Built on ElevenLabs' conversational speech synthesis engine, the agent uses natural pacing, realistic breathing pauses, and contextual intonation across 70+ languages.
+1. **Human-Sounding Acoustic Quality:** Built on [ElevenLabs](/reviews/elevenlabs)' conversational speech synthesis engine, the agent uses natural pacing, realistic breathing pauses, and contextual intonation across 70+ languages.
 2. **Expressive Mode & Emotional Tone Control:** Using advanced tone guidance, the agent can de-escalate frustrated callers, remain empathetic, and sound reassuring rather than transactional.
 3. **Domain Knowledge Integration:** The agent does not hallucinate. It derives answers strictly from your uploaded company documentation, pricing sheets, standard operating procedures (SOPs), and website pages.
 4. **Action-Oriented Integrations:** Beyond talking, ElevenAgents takes action: checking appointment availability, booking calendar slots, logging support tickets, or routing calls to team members.

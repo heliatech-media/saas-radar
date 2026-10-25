@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-25T00:00:55.424240",
+  "timestamp": "2026-10-25T02:58:21.856928",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 83,
-    "total_redirects_active": 58,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 85,
+    "total_redirects_active": 60,
+    "new_redirects_healed": 25,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 11,
+    "external_targets_repaired": 12,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -130,6 +130,11 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "transistor",
+      "target_url": "https://www.transistor.com",
+      "source_file": "transistor-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -150,6 +155,12 @@
       "slug": "clickup",
       "dead_target": "https://clickup.pxf.io/c/heliatech",
       "healed_target": "https://www.clickup.com",
+      "status_code": 404
+    },
+    {
+      "slug": "descript",
+      "dead_target": "https://get.descript.com/?via=heliatech",
+      "healed_target": "https://www.descript.com",
       "status_code": 404
     },
     {

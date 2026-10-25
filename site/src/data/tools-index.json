@@ -291,6 +291,16 @@
     "commission_rate": "Not publicly disclosed (Custom/Deal-based or In-house referral program)"
   },
   {
+    "name": "Transistor",
+    "slug": "transistor",
+    "tagline": "Professional podcast hosting, analytics, and distribution platform built for serious creators and businesses.",
+    "category": "Audio/Podcasting",
+    "rating": 4.7,
+    "starting_price": "$19/mo",
+    "best_for": "B2B marketers, multi-show creators, and growing podcast networks needing advanced analytics and private feeds.",
+    "affiliate_url": "https://transistor.fm"
+  },
+  {
     "name": "Typeform",
     "slug": "typeform",
     "tagline": "Transform digital data collection with human-centric, conversational forms and surveys.",

@@ -71,7 +71,7 @@ flowchart LR
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
 
-Ready to transform your outbound workflow? Follow this rapid implementation blueprint to spin up your first high-converting campaign inside Apollo.io today:
+Ready to transform your outbound workflow? Follow this rapid implementation blueprint to spin up your first high-converting campaign inside [Apollo.io](/reviews/apollo-io) today:
 
 1. **Define Your Ideal Customer Profile (ICP):** Navigate to the Search module. Apply filters for industry (e.g., SaaS), company size (50-200 employees), and geography. Add technographic filters to target accounts using specific competitor software.
 2. **Isolate Buying Triggers:** Layer on recent funding events or job changes to pinpoint accounts undergoing rapid operational scaling.

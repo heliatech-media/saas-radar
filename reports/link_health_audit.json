@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-25 00:02:29",
-  "total_links_audited": 58,
-  "healthy_links": 57,
-  "broken_links_count": 1,
-  "health_rate": "98.3%",
+  "timestamp": "2026-10-25 03:00:16",
+  "total_links_audited": 60,
+  "healthy_links": 58,
+  "broken_links_count": 2,
+  "health_rate": "96.7%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -12,6 +12,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "transistor",
+      "target_url": "https://www.transistor.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.transistor.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1081)')))"
     }
   ],
   "audit_details": [
@@ -100,9 +108,16 @@
       "healthy": true
     },
     {
+      "slug": "descript",
+      "target_url": "https://www.descript.com",
+      "final_url": "https://www.descript.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=lLbEEeOM9YWslh&gsxid=lLbEEeOM9YWslh&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=QMu9shXcP29LCb&gsxid=QMu9shXcP29LCb&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -257,7 +272,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=5EC6gSyXXUeug9&gsxid=5EC6gSyXXUeug9&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TaOnstRE6zdTmW&gsxid=TaOnstRE6zdTmW&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -344,6 +359,14 @@
       "final_url": "https://supabase.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "transistor",
+      "target_url": "https://www.transistor.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.transistor.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1081)')))"
     },
     {
       "slug": "tray-io",

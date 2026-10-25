@@ -13,12 +13,13 @@ tags:
 - Affiliate Marketing
 - SaaS Growth
 - Paddle
-readingTime: 6 MIN
+readingTime: 7 MIN
 tool_slug: rewardful
 affiliate_cta:
   badge: OFFICIAL REWARDFUL PARTNER ACCESS
   title: Launch Your SaaS Affiliate Engine in 15 Minutes
-  description: Connect Stripe in 1 click with 0% transaction fees and scale your partner MRR like HeadshotPro and OpusClip. Start your free trial.
+  description: Connect Stripe in 1 click with 0% transaction fees and scale your partner
+    MRR like HeadshotPro and OpusClip. Start your free trial.
   button_text: Start Free 14-Day Trial on Rewardful ➔
   url: /go/rewardful
 image: /images/blog/rewardful.svg

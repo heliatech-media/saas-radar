@@ -106,7 +106,7 @@ Click the **Automations** button in the top right corner of your board and build
 
 ## 4. Critical Assessment & Trade-offs
 
-Every enterprise tool involves architectural compromises. Here is an objective breakdown of Monday.com’s strengths alongside its notable limitations:
+Every enterprise tool involves architectural compromises. Here is an objective breakdown of [Monday.com](/reviews/monday-com)’s strengths alongside its notable limitations:
 
 | Feature Domain | Strengths | Limitations | Strategic Impact |
 | :--- | :--- | :--- | :--- |

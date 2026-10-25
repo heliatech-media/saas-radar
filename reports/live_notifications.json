@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-25 03:00:16",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `notion-ai, transistor`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-10-25 00:03:25",
     "title": "Cycle Autonome #Descript",
     "category": "CYCLE",

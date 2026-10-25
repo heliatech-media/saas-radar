@@ -131,7 +131,7 @@ To evaluate the long-term total cost of ownership (TCO), we modeled a standard S
 
 Moving production traffic away from Heroku requires a bulletproof deployment strategy to prevent data loss or service interruption. Follow this zero-downtime migration sequence:
 
-1.  **Establish Dual-Write Phase (Optional/Enterprise):** If your application cannot tolerate downtime, configure your application layer temporarily to write critical transactional data to both Heroku Postgres and your new Supabase database.
+1.  **Establish Dual-Write Phase (Optional/Enterprise):** If your application cannot tolerate downtime, configure your application layer temporarily to write critical transactional data to both Heroku Postgres and your new [Supabase](/reviews/supabase) database.
 2.  **Read-Only Maintenance Window:** Set your Heroku application to read-only mode by updating environment variables or returning a custom maintenance header via your Heroku router.
 3.  **Final Delta Sync:** Run an incremental `pg_dump` and `pg_restore` to capture any final state modifications made during the maintenance window.
 4.  **DNS Cutover:** Update your CNAME/A records at your DNS registrar (Cloudflare, AWS Route53) to point traffic away from Heroku's routing mesh (`*.herokuapp.com`) to your new modern provider (e.g., Railway, Render, or Vercel edge endpoints).

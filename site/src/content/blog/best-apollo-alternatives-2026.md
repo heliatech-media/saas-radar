@@ -294,7 +294,7 @@ To ensure optimal capital allocation, select your [Apollo.io](/reviews/apollo-io
 Migrating your outbound sales infrastructure away from [Apollo.io](/reviews/apollo-io) requires a structured, zero-downtime protocol to prevent lead loss and CRM corruption. Execute this 5-step operational checklist:
 
 1. **Audit & Export Historical Data:** 
-   Export all active sequences, custom contact fields, past email templates, and historical disposition logs from Apollo.io into secure CSV/JSON backups.
+   Export all active sequences, custom contact fields, past email templates, and historical disposition logs from [Apollo.io](/reviews/apollo-io) into secure CSV/JSON backups.
 2. **Sanitize & Verify Contact Lists:** 
    Run your exported contact databases through a dedicated verification engine (such as UpLead or Cognism) to purge dead emails and invalid phone numbers before importing them into your new platform.
 3. **Configure CRM Field Mappings:** 
