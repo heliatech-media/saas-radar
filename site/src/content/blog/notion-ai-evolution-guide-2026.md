@@ -85,7 +85,7 @@ Deploying AI across a team requires structure. Follow this 15-minute blueprint t
 
 To help enterprise buyers make informed infrastructure decisions, here is an objective breakdown of [Notion AI](/reviews/notion-ai)'s strengths and limitations:
 
-| Evaluation Metric | Notion AI Performance | Enterprise Impact | Verdict |
+| Evaluation Metric | [Notion AI](/reviews/notion-ai) Performance | Enterprise Impact | Verdict |
 | :--- | :--- | :--- | :--- |
 | **Context Switching** | Native inline integration | Zero tab-switching; maximum deep-work preservation | **Industry Leading** |
 | **Knowledge Retrieval** | Workspace-wide Q&A indexing | Quick onboarding and instant answers to legacy queries | **High Value** |
@@ -95,7 +95,7 @@ To help enterprise buyers make informed infrastructure decisions, here is an obj
 
 ## 5. HeliaTech Final Verdict & Recommendation
 
-Notion AI represents a masterclass in product-led AI integration. By resisting the temptation to build yet another standalone chatbot and instead weaving generative intelligence directly into the fabric of everyday documents and databases, Notion has solved one of modern knowledge work's greatest inefficiencies: fragmentation.
+[Notion AI](/reviews/notion-ai) represents a masterclass in product-led AI integration. By resisting the temptation to build yet another standalone chatbot and instead weaving generative intelligence directly into the fabric of everyday documents and databases, Notion has solved one of modern knowledge work's greatest inefficiencies: fragmentation.
 
 For organizations already anchored in the Notion ecosystem—or those struggling with information silos, unread wikis, and sluggish document creation—Notion AI is an essential enterprise investment. While it is not designed to replace specialized software engineering environments, its ability to surface internal institutional knowledge and streamline writing workflows makes it an indispensable asset.
 

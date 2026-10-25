@@ -6,7 +6,7 @@ tagline: Autonomous AI video generation and cinematic synthetic production for e
 category: AI Video
 rating: 4.6
 website_url: https://www.peripety.ai
-affiliate_url: https://www.peripety.ai
+affiliate_url: "https://www.peripety.ai/?via=heliatech"
 summary: Peripety is an advanced AI video production suite that automates synthetic
   avatar generation, multi-lingual dubbing, and dynamic B-roll stitching directly
   from text prompts. Built specifically for B2B marketers and localized training operations,
@@ -114,7 +114,7 @@ Peripety is an advanced AI video production suite that automates synthetic avata
 - **Instant automated localization with localized lip and tongue synchronization**
 - **Generative B-roll director that auto-selects context-aware visual assets**
 - **Collaborative asset workspace with enterprise-grade role-based access control**
-- **Native webhook and Zapier triggers for automated video distribution**
+- **Native webhook and [Zapier](/reviews/zapier) triggers for automated video distribution**
 
 
 ## Pricing Overview

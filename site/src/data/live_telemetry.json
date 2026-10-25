@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-25 12:10:40 UTC",
+  "last_updated": "2026-10-25 15:11:11 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 37,
-    "total_published_investigations": 89,
-    "reviews_audited": 38,
-    "masterclasses_and_duels": 51,
+    "total_monetized_tools": 39,
+    "total_published_investigations": 93,
+    "reviews_audited": 40,
+    "masterclasses_and_duels": 53,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$12,950 USD",
+    "projected_monthly_mrr": "$13,650 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -183,6 +183,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "peripety",
+      "destination": "https://www.peripety.ai/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "phantombuster",
       "destination": "https://phantombuster.com/?via=heliatech",
       "type": "Commission Partner"
@@ -196,6 +201,11 @@
       "slug": "printify",
       "destination": "https://printify.pxf.io/c/heliatech",
       "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "resend",
+      "destination": "https://resend.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "retool",

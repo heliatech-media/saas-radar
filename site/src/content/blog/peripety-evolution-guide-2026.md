@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Enterprise Marketing
 - Automation
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: peripety
 image: /images/blog/peripety.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Peripety Account ➔
   url: /go/peripety
 ---
-
 The modern enterprise marketing machine is perpetually starved of one resource: high-fidelity visual context. For decades, scaling localized video production meant booking sound stages, wrangling voice talent across six time zones, coordinating multi-week editing cycles, and burning through thousands of dollars per finished minute. The human bottleneck has always been the enemy of velocity. Then came the generative leap, sweeping away traditional workflows and forcing CMOs to rethink how visual assets are born. Enter Peripety—an advanced AI video production suite that automates synthetic avatar generation, multi-lingual dubbing, and dynamic B-roll stitching directly from text prompts. It is not merely an editor; it is an autonomous engine designed to re-engineer corporate media pipelines.
 
 ## 1. The Genesis & Evolution

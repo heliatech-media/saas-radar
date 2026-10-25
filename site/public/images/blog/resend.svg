@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradient" cx="60%" cy="30%" r="80%" fx="60%" fy="30%">
+      <stop offset="0%" stop-color="#0c162d" />
+      <stop offset="50%" stop-color="#060b17" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(56, 189, 248, 0.04)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(6, 182, 212, 0.15)" />
+    </pattern>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow-fuchsia" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="blur1" />
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Linear Gradients -->
+    <linearGradient id="cyanToBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="fuchsiaToViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.07)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.01)" />
+    </linearGradient>
+    
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(6, 182, 212, 0.4)" />
+      <stop offset="50%" stop-color="rgba(139, 92, 246, 0.2)" />
+      <stop offset="100%" stop-color="rgba(217, 70, 239, 0.4)" />
+    </linearGradient>
+
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  <rect width="1200" height="630" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="150" r="250" fill="#8b5cf6" opacity="0.12" filter="url(#glow-intense)" />
+  <circle cx="200" cy="500" r="220" fill="#06b6d4" opacity="0.1" filter="url(#glow-intense)" />
+  <circle cx="700" cy="400" r="180" fill="#d946ef" opacity="0.08" filter="url(#glow-intense)" />
+
+  <!-- Decorative Background Vector Waves / Architectural Lines -->
+  <g opacity="0.25">
+    <path d="M-100 100 C 300 150, 400 50, 700 200 C 1000 350, 1100 100, 1300 250" fill="none" stroke="url(#cyanToBlue)" stroke-width="2" />
+    <path d="M-100 180 C 250 220, 500 120, 800 280 C 1100 440, 1150 200, 1300 320" fill="none" stroke="url(#fuchsiaToViolet)" stroke-width="1.5" stroke-dasharray="6 6" />
+  </g>
+
+  <!-- ==================== HEADER / TOP PILL BADGE ==================== -->
+  <g transform="translate(80, 60)">
+    <!-- Pill Background -->
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1" />
+    <!-- Glowing Dot -->
+    <circle cx="20" cy="16" r="4" fill="#06b6d4" filter="url(#glow-cyan)" />
+    <circle cx="20" cy="16" r="2" fill="#ffffff" />
+    <!-- Pill Text -->
+    <text x="36" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- ==================== MAIN TYPOGRAPHY ==================== -->
+  <!-- Category Subtitle -->
+  <g transform="translate(80, 125)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#d946ef" letter-spacing="4">DEVTOOLS // INFRASTRUCTURE INVESTIGATION</text>
+  </g>
+
+  <!-- Tool Title: RESEND -->
+  <g transform="translate(80, 185)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="58" font-weight="900" fill="#ffffff" letter-spacing="-1">RESEND</text>
+    <!-- Accent underline/bar -->
+    <rect x="0" y="15" width="220" height="3" rx="1.5" fill="url(#cyanToBlue)" filter="url(#glow-cyan)" />
+  </g>
+
+  <!-- Article Headline (Wrapped) -->
+  <g transform="translate(80, 235)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">The Genesis of Modern Transactional Email</text>
+    <text x="0" y="28" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#94a3b8">Infrastructure &amp; the Developer’s Blueprint</text>
+  </g>
+
+  <!-- Key Metrics / Meta Strip -->
+  <g transform="translate(80, 310)">
+    <!-- Metric 1 -->
+    <rect x="0" y="0" width="130" height="40" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" />
+    <text x="12" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">STACK</text>
+    <text x="12" y="30" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#38bdf8">TypeScript / API</text>
+
+    <!-- Metric 2 -->
+    <rect x="145" y="0" width="130" height="40" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" />
+    <text x="157" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">DELIVERABILITY</text>
+    <text x="157" y="30" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#d946ef">99.98% SLA</text>
+  </g>
+
+
+  <!-- ==================== RIGHT SIDE: 3D VECTOR IDE / ARCHITECTURE METAPHOR ==================== -->
+  <g transform="translate(560, 80)" filter="url(#cardShadow)">
+    
+    <!-- Outer Glass Frame / IDE Window -->
+    <rect x="0" y="0" width="560" height="470" rx="14" fill="url(#glassGradient)" stroke="url(#cardBorder)" stroke-width="1.5" backdrop-filter="blur(20px)" />
+
+    <!-- Window Header / Controls -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="560" height="40" rx="14" fill="rgba(3, 7, 18, 0.6)" />
+      <!-- Traffic lights -->
+      <circle cx="24" cy="20" r="6" fill="#ef4444" opacity="0.8" />
+      <circle cx="44" cy="20" r="6" fill="#f59e0b" opacity="0.8" />
+      <circle cx="64" cy="20" r="6" fill="#10b981" opacity="0.8" />
+      
+      <!-- File title / path -->
+      <text x="280" y="24" text-anchor="middle" font-family="monospace" font-size="12" fill="#94a3b8">api/v1/emails/dispatch.ts</text>
+      
+      <!-- Status Badge inside IDE header -->
+      <rect x="450" y="10" width="85" height="20" rx="10" fill="rgba(6, 182, 212, 0.15)" stroke="rgba(6, 182, 212, 0.4)" />
+      <circle cx="462" cy="20" r="3" fill="#06b6d4" />
+      <text x="475" y="24" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#06b6d4">SECURE</text>
+    </g>
+
+    <!-- IDE Code Content -->
+    <g transform="translate(30, 70)" font-family="monospace" font-size="13">
+      <!-- Line numbers & Code -->
+      <text x="0" y="0" fill="#475569">01</text>
+      <text x="35" y="0" fill="#8b5cf6">import</text>
+      <text x="90" y="0" fill="#f8fafc">{</text>
+      <text x="105" y="0" fill="#38bdf8">Resend</text>
+      <text x="160" y="0" fill="#f8fafc">}</text>
+      <text x="180" y="0" fill="#8b5cf6">from</text>
+      <text x="220" y="0" fill="#10b981">'resend'</text>
+
+      <text x="0" y="25" fill="#475569">02</text>
+      <text x="35" y="25" fill="#f8fafc"></text>
+
+      <text x="0" y="50" fill="#475569">03</text>
+      <text x="35" y="50" fill="#8b5cf6">const</text>
+      <text x="80" y="50" fill="#38bdf8">resend</text>
+      <text x="130" y="50" fill="#f8fafc">=</text>
+      <text x="150" y="50" fill="#8b5cf6">new</text>
+      <text x="185" y="50" fill="#38bdf8">Resend</text>
+      <text x="235" y="50" fill="#f8fafc">(</text>
+      <text x="245" y="50" fill="#d946ef">process.env.RESEND_API_KEY</text>
+      <text x="460" y="50" fill="#f8fafc">);</text>
+
+      <text x="0" y="75" fill="#475569">04</text>
+      <text x="35" y="75" fill="#f8fafc"></text>
+
+      <text x="0" y="100" fill="#475569">05</text>
+      <text x="35" y="100" fill="#8b5cf6">async function</text>
+      <text x="150" y="100" fill="#facc15">sendInfrastructureAlert</text>
+      <text x="325" y="100" fill="#f8fafc">() {</text>
+
+      <text x="0" y="125" fill="#475569">06</text>
+      <text x="55" y="125" fill="#8b5cf6">const</text>
+      <text x="95" y="125" fill="#f8fafc">{</text>
+      <text x="110" y="125" fill="#38bdf8">data</text>
+      <text x="145" y="125" fill="#f8fafc">, </text>
+      <text x="155" y="125" fill="#38bdf8">error</text>
+      <text x="195" y="125" fill="#f8fafc">} =</text>
+      <text x="230" y="125" fill="#8b5cf6">await</text>
+      <text x="275" y="125" fill="#38bdf8">resend.emails.send</text>
+      <text x="420" y="125" fill="#f8fafc">({</text>
+
+      <text x="0" y="150" fill="#475569">07</text>
+      <text x="75" y="150" fill="#f8fafc">from: </text>
+      <text x="120" y="150" fill="#10b981">'Helia &lt;sys@heliatech.online&gt;'</text>
+      <text x="365" y="150" fill="#f8fafc">,</text>
+
+      <text x="0" y="175" fill="#475569">08</text>
+      <text x="75" y="175" fill="#f8fafc">to: </text>
+      <text x="105" y="175" fill="#10b981">'architect@heliatech.online'</text>
+      <text x="325" y="175" fill="#f8fafc">,</text>
+
+      <text x="0" y="200" fill="#475569">09</text>
+      <text x="75" y="200" fill="#f8fafc">subject: </text>
+      <text x="140" y="200" fill="#10b981">'Vector Protocol Deployed'</text>
+      <text x="355" y="200" fill="#f8fafc">,</text>
+
+      <text x="0" y="225" fill="#475569">10</text>
+      <text x="75" y="225" fill="#f8fafc">react: </text>
+      <text x="125" y="225" fill="#38bdf8">EmailTemplate</text>
+      <text x="225" y="225" fill="#f8fafc">({</text>
+      <text x="240" y="225" fill="#d946ef">token: '0x3F8...9A'</text>
+      <text x="375" y="225" fill="#f8fafc">}),</text>
+
+      <text x="0" y="250" fill="#475569">11</text>
+      <text x="55" y="250" fill="#f8fafc">});</text>
+
+      <text x="0" y="275" fill="#475569">12</text>
+      <text x="35" y="275" fill="#f8fafc">}</text>
+    </g>
+
+    <!-- Floating Holographic Infrastructure Node Overlay -->
+    <g transform="translate(320, 310)" filter="url(#glow-cyan)">
+      <!-- Node Background Card -->
+      <rect x="0" y="0" width="205" height="110" rx="10" fill="rgba(9, 13, 22, 0.9)" stroke="#06b6d4" stroke-width="1.5" />
+      
+      <!-- Glowing circuit accents -->
+      <path d="M 0 20 L 15 20 L 25 30" fill="none" stroke="#06b6d4" stroke-width="1.5" />
+      <circle cx="15" cy="20" r="3" fill="#06b6d4" />
+
+      <!-- Success payload visualization -->
+      <text x="20" y="32" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8">WEBHOOK DISPATCH</text>
+      <text x="20" y="55" font-family="monospace" font-size="10" fill="#10b981">status: 200 OK</text>
+      <text x="20" y="72" font-family="monospace" font-size="10" fill="#94a3b8">latency: 42ms</text>
+      <text x="20" y="89" font-family="monospace" font-size="10" fill="#d946ef">id: msg_98fa71bc</text>
+
+      <!-- Pulsing indicator -->
+      <circle cx="180" cy="32" r="4" fill="#10b981" />
+      <circle cx="180" cy="32" r="8" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6">
+        <animate attributeName="r" values="4;12;4" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Connecting Beam from Code to Node Overlay -->
+    <path d="M 370 320 L 370 310" fill="none" stroke="url(#beamGrad)" stroke-width="2" />
+  </g>
+
+  <!-- ==================== FOOTER BRANDING ==================== -->
+  <g transform="translate(80, 580)">
+    <!-- Brand / URL -->
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#ffffff" letter-spacing="3">HELIA TECH</text>
+    <text x="115" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#64748b" letter-spacing="1">/// heliatech.online</text>
+    
+    <!-- Divider Line -->
+    <line x1="280" y1="-4" x2="1120" y2="-4" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    
+    <!-- Security / Copyright tag -->
+    <text x="1120" y="0" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#475569" letter-spacing="1">ENTERPRISE RESEARCH</text>
+  </g>
+</svg>

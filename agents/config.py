@@ -103,5 +103,7 @@ AFFILIATE_MAP = {
     "webflow": "https://webflow.pxf.io/c/heliatech",
     "zapier": "https://zapier.com/app/register?via=heliatech",
     "transistor": "https://transistor.fm/?via=heliatech",
-    "podcastle": "https://podcastle.grrow.co/?via=heliatech"
+    "podcastle": "https://podcastle.grrow.co/?via=heliatech",
+    "peripety": "https://www.peripety.ai/?via=heliatech",
+    "resend": "https://resend.com/?via=heliatech"
 }

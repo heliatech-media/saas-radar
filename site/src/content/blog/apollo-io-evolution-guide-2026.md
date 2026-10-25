@@ -95,4 +95,4 @@ To maintain journalistic integrity, we must evaluate both the brilliance and the
 
 While the platform's sheer depth introduces a minor learning curve, the operational efficiencies gained by eliminating tool-switching far outweigh the initial friction. For startups, mid-market challengers, and enterprise outbound teams alike, [Apollo.io](/reviews/apollo-io) is a mandatory inclusion in the modern revenue stack.
 
-Ready to accelerate your pipeline? [Claim Your Free Apollo.io Account ➔](/go/apollo-io)
+Ready to accelerate your pipeline? [Claim Your Free [Apollo.io](/reviews/apollo-io) Account ➔](/go/apollo-io)

@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-25T12:12:12.660260",
+  "timestamp": "2026-10-25T15:12:28.343744",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 89,
-    "total_redirects_active": 62,
+    "total_content_files_scanned": 93,
+    "total_redirects_active": 64,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "peripety",
-      "target_url": "https://www.peripety.com",
-      "source_file": "peripety-evolution-guide-2026.md"
+      "slug": "podia",
+      "target_url": "https://www.podia.com",
+      "source_file": "podia-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

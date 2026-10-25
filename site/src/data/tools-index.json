@@ -234,7 +234,8 @@
     "rating": 4.6,
     "starting_price": "$49/mo",
     "best_for": "B2B growth marketers, global product teams, and enterprise learning and development departments.",
-    "affiliate_url": "https://www.peripety.ai"
+    "affiliate_url": "https://www.peripety.ai/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "PhantomBuster",
@@ -259,6 +260,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Podia",
+    "slug": "podia",
+    "tagline": "All-in-one digital storefront to sell online courses, downloads, webinars, and memberships.",
+    "category": "Creator Economy & Digital Products",
+    "rating": 4.5,
+    "starting_price": "$39/mo",
+    "best_for": "Solopreneurs, coaches, and independent creators selling digital courses, communities, and downloadable assets.",
+    "affiliate_url": "https://www.podia.com/?via=heliatech"
+  },
+  {
     "name": "Printify",
     "slug": "printify",
     "tagline": "A robust print-on-demand platform connecting e-commerce stores with a global network of print providers.",
@@ -268,6 +279,17 @@
     "best_for": "E-commerce entrepreneurs, creators, and brands wanting to launch custom merchandise without upfront inventory costs.",
     "affiliate_url": "https://printify.pxf.io/c/heliatech",
     "commission_rate": "10% commission on sales for the first 12 months"
+  },
+  {
+    "name": "Resend",
+    "slug": "resend",
+    "tagline": "Email for developers, designed to build, test, and deliver transactional emails with code that scales.",
+    "category": "DevTools",
+    "rating": 4.8,
+    "starting_price": "$20/mo",
+    "best_for": "Full-stack developers, SaaS startups, and engineering teams modernizing their tech stack",
+    "affiliate_url": "https://resend.com/?via=heliatech",
+    "commission_rate": "20% recurring for 12 months"
   },
   {
     "name": "Retool",

@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-25 12:13:45",
-  "total_links_audited": 62,
-  "healthy_links": 60,
-  "broken_links_count": 2,
-  "health_rate": "96.8%",
+  "timestamp": "2026-10-25 15:13:42",
+  "total_links_audited": 64,
+  "healthy_links": 61,
+  "broken_links_count": 3,
+  "health_rate": "95.3%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -12,6 +12,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "peripety",
+      "target_url": "https://www.peripety.ai/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.peripety.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='www.peripety.ai', port=443): Failed to resolve 'www.peripety.ai' ([Errno 11002] getaddrinfo failed)\"))"
     },
     {
       "slug": "podcastle",
@@ -117,7 +125,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=mCDuVi4X3XgMZY&gsxid=mCDuVi4X3XgMZY&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=1dFjFQScmlT93v&gsxid=1dFjFQScmlT93v&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -257,10 +265,11 @@
     },
     {
       "slug": "peripety",
-      "target_url": "https://www.peripety.com",
-      "final_url": "https://www.peripety.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://www.peripety.ai/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.peripety.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='www.peripety.ai', port=443): Failed to resolve 'www.peripety.ai' ([Errno 11002] getaddrinfo failed)\"))"
     },
     {
       "slug": "phantombuster",
@@ -279,7 +288,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Kn31tmpIldyD7l&gsxid=Kn31tmpIldyD7l&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3eApCmW4bQQ17x&gsxid=3eApCmW4bQQ17x&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -290,6 +299,13 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "podia",
+      "target_url": "https://www.podia.com",
+      "final_url": "https://www.podia.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "power-automate",
@@ -323,6 +339,13 @@
       "slug": "resemble-ai",
       "target_url": "https://www.resemble.ai",
       "final_url": "https://www.resemble.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "resend",
+      "target_url": "https://resend.com/?via=heliatech",
+      "final_url": "https://resend.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
