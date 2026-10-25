@@ -1,48 +1,17 @@
 {
-  "last_scan": "2026-10-25T03:00:37.277871",
-  "total_events_detected": 10,
-  "breaking_opportunities": [
-    {
-      "partner": "OpenAI / Voice Tech",
-      "tool_slug": "elevenlabs",
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
-      "link": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-      "pub_date": "Fri, 23 Oct 2026 17:00:00 GMT",
-      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
-      "is_breaking": true,
-      "relevance_score": 1
-    },
-    {
-      "partner": "OpenAI / Voice Tech",
-      "tool_slug": "elevenlabs",
-      "title": "Securing our frontier model training environment",
-      "link": "https://openai.com/index/securing-our-frontier-model-training-environment",
-      "pub_date": "Fri, 23 Oct 2026 10:00:00 GMT",
-      "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
-      "is_breaking": true,
-      "relevance_score": 1
-    },
-    {
-      "partner": "OpenAI / Voice Tech",
-      "tool_slug": "elevenlabs",
-      "title": "Build more responsive apps with the Decisions API",
-      "link": "https://openai.com/index/decisions-api",
-      "pub_date": "Thu, 22 Oct 2026 19:00:00 GMT",
-      "summary": "Fast, focused, low-cost decisions for any application.",
-      "is_breaking": true,
-      "relevance_score": 1
-    }
-  ],
+  "last_scan": "2026-10-25T03:32:14.619509",
+  "total_events_detected": 0,
+  "breaking_opportunities": [],
   "processed_urls": [
-    "https://openai.com/index/securing-our-frontier-model-training-environment",
-    "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server",
-    "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions",
-    "https://supabase.com/blog/introducing-the-unified-supabase-net-sdk",
-    "https://openai.com/index/openai-nask-ai-safety-security-partnership",
     "https://supabase.com/blog/getting-started-with-the-supabase-dotnet-sdk",
-    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "https://openai.com/index/forward-deployed-engineering-means",
     "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent",
     "https://openai.com/index/decisions-api",
-    "https://openai.com/index/forward-deployed-engineering-means"
+    "https://supabase.com/blog/introducing-the-unified-supabase-net-sdk",
+    "https://openai.com/index/securing-our-frontier-model-training-environment",
+    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server",
+    "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions",
+    "https://openai.com/index/openai-nask-ai-safety-security-partnership"
   ]
 }

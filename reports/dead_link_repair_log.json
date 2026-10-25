@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-25T02:58:21.856928",
+  "timestamp": "2026-10-25T03:29:23.047293",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 85,
+    "total_content_files_scanned": 86,
     "total_redirects_active": 60,
-    "new_redirects_healed": 25,
+    "new_redirects_healed": 24,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
@@ -130,11 +130,6 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "transistor",
-      "target_url": "https://www.transistor.com",
-      "source_file": "transistor-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
