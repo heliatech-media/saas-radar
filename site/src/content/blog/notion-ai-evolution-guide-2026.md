@@ -104,5 +104,5 @@ For organizations already anchored in the Notion ecosystem—or those struggling
 <div style="background: #111; color: #fff; padding: 24px; border-radius: 8px; margin-top: 32px; text-align: center;">
   <h3>Ready to Transform Your Workspace?</h3>
   <p>Eliminate knowledge silos and supercharge your team's output with native generative intelligence.</p>
-  <a href="/go/notion-ai" style="display: inline-block; background: #2563eb; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 12px;">Claim Your Free Notion AI Account ➔</a>
+  <a href="/go/notion-ai" style="display: inline-block; background: #2563eb; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 12px;">Claim Your Free [Notion AI](/reviews/notion-ai) Account ➔</a>
 </div>

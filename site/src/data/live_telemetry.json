@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-25 19:20:20 UTC",
+  "last_updated": "2026-10-25 23:29:17 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 40,
-    "total_published_investigations": 95,
+    "total_monetized_tools": 41,
+    "total_published_investigations": 96,
     "reviews_audited": 41,
-    "masterclasses_and_duels": 54,
+    "masterclasses_and_duels": 55,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$14,000 USD",
+    "projected_monthly_mrr": "$14,350 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -176,6 +176,11 @@
       "slug": "notion-ai",
       "destination": "https://affiliates.notion.so/heliatech",
       "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "opus-clip",
+      "destination": "https://www.opus.pro/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "partnerstack",

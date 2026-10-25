@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-25 19:22:55",
+  "timestamp": "2026-10-25 23:31:55",
   "total_links_audited": 65,
   "healthy_links": 62,
   "broken_links_count": 3,
@@ -125,7 +125,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=53KoJJNXl35v7g&gsxid=53KoJJNXl35v7g&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=mGEG4dVfDynWLC&gsxid=mGEG4dVfDynWLC&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -244,8 +244,8 @@
     },
     {
       "slug": "opus-clip",
-      "target_url": "https://www.opus-clip.com",
-      "final_url": "https://opus-clip.com/",
+      "target_url": "https://www.opus.pro/?via=heliatech",
+      "final_url": "https://www.opus.pro/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -295,7 +295,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=m26TS6I37WSTHW&gsxid=m26TS6I37WSTHW&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ZT0YXWH18CFRer&gsxid=ZT0YXWH18CFRer&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-25 23:31:55",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-25 19:23:35",
+    "title": "Cycle Autonome #Opus Clip",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Opus Clip et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-25 19:22:55",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
