@@ -97,7 +97,7 @@ To help enterprise buyers make informed infrastructure decisions, here is an obj
 
 [Notion AI](/reviews/notion-ai) represents a masterclass in product-led AI integration. By resisting the temptation to build yet another standalone chatbot and instead weaving generative intelligence directly into the fabric of everyday documents and databases, Notion has solved one of modern knowledge work's greatest inefficiencies: fragmentation.
 
-For organizations already anchored in the Notion ecosystem—or those struggling with information silos, unread wikis, and sluggish document creation—Notion AI is an essential enterprise investment. While it is not designed to replace specialized software engineering environments, its ability to surface internal institutional knowledge and streamline writing workflows makes it an indispensable asset.
+For organizations already anchored in the Notion ecosystem—or those struggling with information silos, unread wikis, and sluggish document creation—[Notion AI](/reviews/notion-ai) is an essential enterprise investment. While it is not designed to replace specialized software engineering environments, its ability to surface internal institutional knowledge and streamline writing workflows makes it an indispensable asset.
 
 **HELIA TECH RATING:** 4.8 / 5 — *Essential Enterprise Standard*
 
