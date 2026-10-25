@@ -6,7 +6,7 @@ tagline: Professional podcast hosting, analytics, and distribution platform buil
 category: Audio/Podcasting
 rating: 4.7
 website_url: https://transistor.fm
-affiliate_url: https://transistor.fm
+affiliate_url: "https://transistor.fm/?via=heliatech"
 summary: Transistor is a robust podcast hosting and analytics platform tailored for
   professional creators, internal company podcasts, and multi-show networks. It streamlines
   distribution to major directories while offering built-in private podcast feeds

@@ -238,6 +238,16 @@
     "commission_rate": "20% recurring for 12 months"
   },
   {
+    "name": "Podcastle",
+    "slug": "podcastle",
+    "tagline": "An AI-powered podcast and audio creation platform designed for studio-quality recording, editing, and publishing.",
+    "category": "Audio/Podcasting",
+    "rating": 4.5,
+    "starting_price": "$11.99/mo",
+    "best_for": "Content creators, remote interviewers, and marketing teams producing audio shows or video podcasts.",
+    "affiliate_url": "https://podcastle.ai"
+  },
+  {
     "name": "Printify",
     "slug": "printify",
     "tagline": "A robust print-on-demand platform connecting e-commerce stores with a global network of print providers.",
@@ -298,7 +308,8 @@
     "rating": 4.7,
     "starting_price": "$19/mo",
     "best_for": "B2B marketers, multi-show creators, and growing podcast networks needing advanced analytics and private feeds.",
-    "affiliate_url": "https://transistor.fm"
+    "affiliate_url": "https://transistor.fm/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Typeform",

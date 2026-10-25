@@ -104,7 +104,7 @@ For media companies and YouTube creators publishing internationally, Eleven v4 i
 
 ## 4. Hands-On: How to Implement Eleven v4 in Python
 
-Deploying Eleven v4 in production requires minimal boilerplate using the official ElevenLabs SDK. Here is a production-ready snippet for low-latency streaming:
+Deploying Eleven v4 in production requires minimal boilerplate using the official [ElevenLabs](/reviews/elevenlabs) SDK. Here is a production-ready snippet for low-latency streaming:
 
 ```python
 import os

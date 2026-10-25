@@ -78,7 +78,7 @@ Deploying AI across a team requires structure. Follow this 15-minute blueprint t
 1. **Open Your Target Workspace:** Navigate to an active project page or create a new database in your Notion account containing recent meeting notes or product requirements.
 2. **Invoke the Assistant:** Type the command `/ai` anywhere on the page or highlight a block of text and select **Ask AI** from the floating toolbar.
 3. **Run a Contextual Extraction:** Prompt the AI with: *"Extract all action items, assignees, and deadlines from these notes and format them into a clean database table."* Observe how it automatically parses unstructured text into structured properties.
-4. **Test the Knowledge Base Q&A:** Open the Notion AI sidebar and query across your workspace: *"Summarize the key architectural decisions made in our engineering docs this month."* Review how it pulls citations directly from source pages.
+4. **Test the Knowledge Base Q&A:** Open the [Notion AI](/reviews/notion-ai) sidebar and query across your workspace: *"Summarize the key architectural decisions made in our engineering docs this month."* Review how it pulls citations directly from source pages.
 5. **Refine and Automate:** Save your most effective prompts as reusable Notion AI database templates to standardize workflows across your entire department.
 
 ## 4. Critical Assessment & Trade-offs

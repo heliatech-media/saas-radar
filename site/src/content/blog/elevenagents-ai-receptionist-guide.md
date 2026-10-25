@@ -110,7 +110,7 @@ Configure how you want specific scenarios handled:
 * Urgent inquiries or VIP clients: The agent automatically transfers the call to your personal mobile number with a summarized text brief.
 
 ### Step 5: Assign Your Phone Number & Go Live
-ElevenLabs assigns a dedicated local or toll-free telephone number. You can either use it as your primary advertised business line or set up call forwarding from your existing carrier (Twilio, Vodafone, AT&T, Orange).
+[ElevenLabs](/reviews/elevenlabs) assigns a dedicated local or toll-free telephone number. You can either use it as your primary advertised business line or set up call forwarding from your existing carrier (Twilio, Vodafone, AT&T, Orange).
 
 ---
 

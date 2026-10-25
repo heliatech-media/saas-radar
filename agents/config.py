@@ -101,5 +101,6 @@ AFFILIATE_MAP = {
     "voiceflow": "https://voiceflow.grsm.io/heliatech",
     "wati": "https://www.wati.io/?fp_ref=heliatech",
     "webflow": "https://webflow.pxf.io/c/heliatech",
-    "zapier": "https://zapier.com/app/register?via=heliatech"
+    "zapier": "https://zapier.com/app/register?via=heliatech",
+    "transistor": "https://transistor.fm/?via=heliatech"
 }

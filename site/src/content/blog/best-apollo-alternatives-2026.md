@@ -301,5 +301,5 @@ Migrating your outbound sales infrastructure away from [Apollo.io](/reviews/apol
    Establish strict field mapping protocols in Salesforce or HubSpot to ensure the new tool (e.g., LeadIQ, [Lusha](/reviews/lusha), or Clay) syncs custom properties (job titles, mobile numbers, intent scores) without creating duplicate records.
 4. **Provision User Seats & Test Webhooks:** 
    Set up pilot user accounts for senior SDRs. Test bi-directional CRM syncs and outbound webhook triggers with a small batch of 50 accounts before rolling out organization-wide.
-5. **Deprecate Apollo.io & Monitor Deliverability:** 
+5. **Deprecate [Apollo.io](/reviews/apollo-io) & Monitor Deliverability:** 
    Cancel your Apollo subscription *only after* verifying that your new tool's email sending domains are properly authenticated (SPF, DKIM, DMARC) and bounce rates stabilize below 3%.

@@ -81,7 +81,7 @@ Ready to transform your outbound workflow? Follow this rapid implementation blue
 
 ## 4. Critical Assessment & Trade-offs
 
-To maintain journalistic integrity, we must evaluate both the brilliance and the friction points of the platform. Here is how Apollo.io stacks up:
+To maintain journalistic integrity, we must evaluate both the brilliance and the friction points of the platform. Here is how [Apollo.io](/reviews/apollo-io) stacks up:
 
 | Strengths | Limitations | Strategic Verdict |
 | :--- | :--- | :--- |
