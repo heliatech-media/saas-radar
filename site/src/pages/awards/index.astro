@@ -238,7 +238,7 @@ const jsonLd = {
       try {
         await navigator.clipboard.writeText(code);
         const originalHtml = btn.innerHTML;
-        btn.innerHTML = '<span>✓ Copié !</span>';
+        btn.innerHTML = '<span>✓ Copied!</span>';
         btn.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border-emerald-500/40');
         btn.classList.remove('bg-slate-800', 'text-cyan-400');
         setTimeout(() => {

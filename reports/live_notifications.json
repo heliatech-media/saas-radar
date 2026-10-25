@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-25 15:14:33",
+    "title": "Cycle Autonome #Podia",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Podia et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-25 15:13:42",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
