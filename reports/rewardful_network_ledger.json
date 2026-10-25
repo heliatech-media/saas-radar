@@ -2,7 +2,7 @@
   "timestamp": "2026-10-25T02:51:30.895308",
   "master_token": "heliatech",
   "master_link": "https://www.rewardful.com/?via=heliatech",
-  "total_rewardful_partners": 10,
+  "total_rewardful_partners": 11,
   "new_routes_added": 7,
   "partners": [
     {
@@ -94,6 +94,18 @@
       "payout": "30% recurring monthly",
       "affiliate_url": "https://castmagic.io/?via=heliatech",
       "redirect_path": "/go/castmagic"
+    },
+    {
+      "slug": "headshotpro",
+      "name": "HeadshotPro",
+      "domain": "https://www.headshotpro.com",
+      "category": "AI Media & Photography",
+      "payout": "25% recurring / $50k+ mo creator pool",
+      "affiliate_url": "https://www.headshotpro.com/?via=heliatech",
+      "redirect_path": "/go/headshotpro",
+      "discovered_at": "2026-10-25T03:19:37.340502",
+      "fingerprint_verified": false
     }
-  ]
+  ],
+  "last_discovery": "2026-10-25T03:19:37.341055"
 }

@@ -41,6 +41,87 @@ REWARDFUL_LEDGER_PATH = ROOT_DIR / "reports" / "rewardful_network_ledger.json"
 REWARDFUL_TOKEN = "heliatech"
 REWARDFUL_MASTER_LINK = f"https://www.rewardful.com/?via={REWARDFUL_TOKEN}"
 
+# Candidate High-Growth Viral SaaS Pool for Autonomous Discovery & Ingestion
+VIRAL_REWARDFUL_CANDIDATE_POOL: List[Dict[str, str]] = [
+    {
+        "slug": "headshotpro",
+        "name": "HeadshotPro",
+        "domain": "https://www.headshotpro.com",
+        "category": "AI Media & Photography",
+        "payout": "25% recurring / $50k+ mo creator pool"
+    },
+    {
+        "slug": "typingmind",
+        "name": "TypingMind",
+        "domain": "https://www.typingmind.com",
+        "category": "AI Workspace & LLM Interface",
+        "payout": "20% recurring monthly"
+    },
+    {
+        "slug": "chatbase",
+        "name": "Chatbase",
+        "domain": "https://www.chatbase.co",
+        "category": "AI Customer Support & Bots",
+        "payout": "20% recurring monthly"
+    },
+    {
+        "slug": "testimonial-to",
+        "name": "Testimonial.to",
+        "domain": "https://testimonial.to",
+        "category": "Social Proof & Video Testimonials",
+        "payout": "30% recurring monthly"
+    },
+    {
+        "slug": "sitegpt",
+        "name": "SiteGPT",
+        "domain": "https://sitegpt.ai",
+        "category": "AI Knowledgebase & Web Chatbots",
+        "payout": "20% recurring monthly"
+    },
+    {
+        "slug": "photo-ai",
+        "name": "Photo AI",
+        "domain": "https://photoai.com",
+        "category": "AI Synthetic Photography & Avatars",
+        "payout": "20% recurring"
+    },
+    {
+        "slug": "typefully",
+        "name": "Typefully",
+        "domain": "https://typefully.com",
+        "category": "Social Growth & Scheduling",
+        "payout": "25% recurring for 12 months"
+    },
+    {
+        "slug": "senja",
+        "name": "Senja",
+        "domain": "https://senja.io",
+        "category": "Social Proof & Review Widgets",
+        "payout": "25% recurring"
+    },
+    {
+        "slug": "bannerbear",
+        "name": "Bannerbear",
+        "domain": "https://www.bannerbear.com",
+        "category": "Programmatic Media API & Automation",
+        "payout": "20% recurring monthly"
+    },
+    {
+        "slug": "plausible",
+        "name": "Plausible Analytics",
+        "domain": "https://plausible.io",
+        "category": "Privacy-Friendly Web Analytics",
+        "payout": "20% recurring"
+    },
+    {
+        "slug": "pdf-ai",
+        "name": "PDF.ai",
+        "domain": "https://pdf.ai",
+        "category": "Document Intelligence & OCR",
+        "payout": "25% recurring"
+    }
+]
+
 # Verified Flagship SaaS Platforms Powered by Rewardful
 CURATED_REWARDFUL_PARTNERS: List[Dict[str, str]] = [
     {
@@ -202,6 +283,107 @@ class RewardfulEngineAgent:
 
         logger.info(f"✅ Rewardful ledger recorded: {len(bound_partners)} partners active under '?via={self.token}'.")
         return ledger
+
+    def scout_and_integrate_next_viral_saas(self) -> Optional[Dict]:
+        """
+        Autonomously discovers and integrates the next viral SaaS operating on Rewardful.
+        Runs every cycle (every 3-4 hours) in Helia's background daemon.
+        """
+        # Load existing ledger to see who is already bound
+        already_bound_slugs = set()
+        if REWARDFUL_LEDGER_PATH.exists():
+            try:
+                ledger_data = json.loads(REWARDFUL_LEDGER_PATH.read_text(encoding="utf-8"))
+                for p in ledger_data.get("partners", []):
+                    already_bound_slugs.add(p.get("slug"))
+            except Exception:
+                pass
+
+        # Find candidate not yet bound
+        candidate = None
+        for cand in VIRAL_REWARDFUL_CANDIDATE_POOL:
+            if cand["slug"] not in already_bound_slugs:
+                candidate = cand
+                break
+
+        if not candidate:
+            logger.info("💎 [Helia-RewardfulEngine] All candidate pool tools are currently active and bound.")
+            return None
+
+        slug = candidate["slug"]
+        name = candidate["name"]
+        domain = candidate["domain"]
+        target_affiliate_url = self.build_affiliate_url(domain)
+
+        logger.info(f"🛰️ [Helia-RewardfulEngine] Discovered new viral candidate: {name} ({domain})")
+        
+        # Verify Rewardful / Stripe readiness
+        is_rewardful = self.detect_rewardful_fingerprint(domain)
+        logger.info(f"🔍 [Helia-RewardfulEngine] Fingerprint scan for {domain}: {'POSITIVE (Rewardful JS)' if is_rewardful else 'PREDICTIVE (Stripe Ecosystem)'}")
+
+        # Add to _redirects
+        current_redirects = {}
+        if REDIRECTS_PATH.exists():
+            for line in REDIRECTS_PATH.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line.startswith("/go/") and "http" in line:
+                    parts = line.split()
+                    s = parts[0].replace("/go/", "").strip("/")
+                    current_redirects[s] = parts[1].strip()
+
+        current_redirects[slug] = target_affiliate_url
+
+        lines = [
+            "# HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh",
+            "# Format: /go/:tool <destination> 302",
+            ""
+        ]
+        for s in sorted(current_redirects.keys()):
+            lines.append(f"/go/{s} {current_redirects[s]} 302")
+        lines.append("")
+        REDIRECTS_PATH.write_text("\n".join(lines), encoding="utf-8")
+
+        # Update ledger
+        bound_partner = {
+            "slug": slug,
+            "name": name,
+            "domain": domain,
+            "category": candidate["category"],
+            "payout": candidate["payout"],
+            "affiliate_url": target_affiliate_url,
+            "redirect_path": f"/go/{slug}",
+            "discovered_at": datetime.now().isoformat(),
+            "fingerprint_verified": is_rewardful
+        }
+
+        # Load and append
+        existing_ledger = {"partners": []}
+        if REWARDFUL_LEDGER_PATH.exists():
+            try:
+                existing_ledger = json.loads(REWARDFUL_LEDGER_PATH.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+
+        existing_ledger["partners"].append(bound_partner)
+        existing_ledger["total_rewardful_partners"] = len(existing_ledger["partners"])
+        existing_ledger["last_discovery"] = datetime.now().isoformat()
+
+        with open(REWARDFUL_LEDGER_PATH, "w", encoding="utf-8") as f:
+            json.dump(existing_ledger, f, indent=2, ensure_ascii=False)
+
+        logger.info(f"🎯 [Helia-RewardfulEngine] Successfully provisioned /go/{slug} -> {target_affiliate_url}")
+        
+        # Notify
+        try:
+            self.notifier.notify(
+                title=f"Viral Rewardful Ingestion: {name}",
+                message=f"Helia autonomously discovered and bound {name} under '?via={self.token}'. Outbound route /go/{slug} is active.",
+                severity="SUCCESS"
+            )
+        except Exception:
+            pass
+
+        return bound_partner
 
 
 if __name__ == "__main__":

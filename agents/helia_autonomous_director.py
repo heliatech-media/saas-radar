@@ -162,6 +162,15 @@ class HeliaAutonomousDirector:
         rewardful_res = self.rewardful_engine.sync_all_curated_partners()
         self.log("Helia-RewardfulEngine", f"Rewardful fleet active: {rewardful_res['total_rewardful_partners']} partners locked with token '{rewardful_res['master_token']}'.", "✅")
 
+        # Autonomous Viral Rewardful Scout: Unearths and auto-provisions a new viral SaaS every cycle
+        try:
+            self.log("Helia-RewardfulEngine", "Scouting for next trending viral SaaS powered by Rewardful...", "🛰️")
+            scouted = self.rewardful_engine.scout_and_integrate_next_viral_saas()
+            if scouted:
+                self.log("Helia-RewardfulEngine", f"Ingested viral SaaS: {scouted['name']} -> /go/{scouted['slug']}", "🎯")
+        except Exception as e:
+            self.log("Helia-RewardfulEngine", f"Rewardful scout notice: {e}", "⚠️")
+
         # Step 2.8: Sub-Agent AffiliateHunter (Autonomous AI Link & Partner Scout)
         self.log("Helia-AffiliateHunter", "Autonomous AI link scout scanning unmonetized tools...", "🏹")
         hunt_res = self.hunter.execute_hunt_cycle(max_tools=3)
