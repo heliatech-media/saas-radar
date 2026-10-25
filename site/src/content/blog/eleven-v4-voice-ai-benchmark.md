@@ -150,7 +150,7 @@ Whether you are testing a single prototype or building a multi-million-call infr
 4. Test voice generation with the 10,000 monthly free tier credits or scale into enterprise dedicated concurrency.
 
 > [!NOTE]
-> **Executive Takeaway:** **Verified Partner Link:** [Click here to unlock ElevenLabs v4 with full partner benefits](https://try.elevenlabs.io/ajhd6t7k04dh).
+> **Executive Takeaway:** **Verified Partner Link:** [Click here to unlock [ElevenLabs](/reviews/elevenlabs) v4 with full partner benefits](https://try.elevenlabs.io/ajhd6t7k04dh).
 
 ---
 

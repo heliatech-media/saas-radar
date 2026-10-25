@@ -240,11 +240,11 @@
   {
     "name": "Podcastle",
     "slug": "podcastle",
-    "tagline": "An AI-powered podcast and audio creation platform designed for studio-quality recording, editing, and publishing.",
+    "tagline": "AI-powered creation suite for studio-quality podcasting, recording, and editing.",
     "category": "Audio/Podcasting",
     "rating": 4.5,
     "starting_price": "$11.99/mo",
-    "best_for": "Content creators, remote interviewers, and marketing teams producing audio shows or video podcasts.",
+    "best_for": "Content creators, remote interviewers, and marketing teams producing audio or video podcasts.",
     "affiliate_url": "https://podcastle.ai"
   },
   {

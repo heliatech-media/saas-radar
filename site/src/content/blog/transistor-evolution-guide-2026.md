@@ -78,7 +78,7 @@ Go to the **"Distribution"** tab of your new show. Transistor provides automated
 Click **"New Episode"**. Upload your finalized MP3 file (processed via external tools like Descript or Adobe Audition). Fill out the episode title, show notes, and season/episode numbers. Toggle the publishing status between *Draft*, *Schedule*, or *Publish Now*.
 
 ### Step 4: Embedding the Player on Your Tech Stack
-Navigate to **"Embed"** on your published episode or show dashboard. Copy the responsive HTML snippet and paste it directly into your CMS (e.g., WordPress or Webflow) to give visitors an instant, lightning-fast listening experience.
+Navigate to **"Embed"** on your published episode or show dashboard. Copy the responsive HTML snippet and paste it directly into your CMS (e.g., WordPress or [Webflow](/reviews/webflow)) to give visitors an instant, lightning-fast listening experience.
 
 ## 4. Critical Assessment & Trade-offs
 

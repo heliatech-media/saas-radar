@@ -133,7 +133,7 @@ For plumbers, electricians, and HVAC specialists on active job sites, stopping w
 A voicemail service simply records a message and requires you to manually call the customer back hours later—often after they have booked with a competitor. ElevenAgents conducts a full conversation in real time, answers questions, checks your schedule, and books appointments on the spot.
 
 ### Can ElevenAgents de-escalate difficult customer conversations?
-Yes. Thanks to ElevenLabs' Expressive Mode, the agent monitors conversational context and adapts its vocal tone, speaking more calmly, empathetically, and reassuringly when dealing with stressed or frustrated customers.
+Yes. Thanks to [ElevenLabs](/reviews/elevenlabs)' Expressive Mode, the agent monitors conversational context and adapts its vocal tone, speaking more calmly, empathetically, and reassuringly when dealing with stressed or frustrated customers.
 
 ### How quickly can a business get up and running?
 Most businesses complete setup and testing in 30 to 45 minutes. The intuitive visual builder allows uploading documents and connecting calendars in minutes with no developers required.
