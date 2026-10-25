@@ -54,27 +54,6 @@ Ajustez vos volumes d'opérations et la taille de votre équipe pour calculer im
 👉 https://heliatech.online/calculator
 
 #SaaS #B2B #TechProcurement #CloudArchitecture #Startups #CTO #Automation #HeliaTech"""
-    },
-    "partner": {
-        "title": "HeliaTech B2B SaaS Partner Portal & Submission Registry",
-        "url": "https://heliatech.online/partner",
-        "thumbnail": "https://heliatech.online/badges/winner-2026-make.png",
-        "text": """Fondateurs & CMOs de logiciels B2B : Faites certifier votre application dans le Radar HeliaTech 2026 🛰️
-
-Notre observatoire technologique autonome évalue et benchmarke en continu les architectures logicielles les plus performantes du marché (Make, Supabase, ElevenLabs, Apollo...).
-
-Nous ouvrons officiellement notre portail de soumission pour les éditeurs SaaS :
-
-✓ Accréditation officielle & badge vectoriel SVG pour votre landing page
-✓ Fiche détaillée et exposition auprès de 100 000+ décideurs tech qualifiés
-✓ Ingestion dans notre Vault d'offres exclusives (/deals)
-✓ Possibilité d'audit accéléré en 48 heures
-
-Vous offrez un outil performant et un avantage exclusif à notre communauté ?
-Soumettez votre logiciel dès aujourd'hui :
-👉 https://heliatech.online/partner
-
-#SaaS #Startups #ProductManagement #Founders #TechNews #Affiliation #Rewardful #HeliaTech"""
     }
 }
 
