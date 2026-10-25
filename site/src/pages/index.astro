@@ -3,635 +3,470 @@ import Layout from '../layouts/Layout.astro';
 import ToolIcon from '../components/ToolIcon.astro';
 import toolsData from '../data/tools-index.json';
 import { getCollection } from 'astro:content';
-import NewsletterCapture from '../components/NewsletterCapture.astro';
 
-// Grouping into clean macro-categories for the filter pills
-const macroCategories = [
-  "All Systems",
-  "Automation & No-Code",
-  "AI Voice & Media",
-  "Productivity & OS",
-  "Sales, CRM & Outreach",
-  "Web & E-Commerce"
-];
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "HeliaTech | Observatoire Indépendant des Logiciels SaaS & IA 2026",
+  "url": "https://heliatech.online",
+  "description": "L'Observatoire indépendant de référence pour évaluer, benchmarker et sélectionner les meilleures architectures logicielles SaaS et IA du marché mondial.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://heliatech.online/radar?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
 
-// Helper to map each tool to a macro category for easy filtering
-function getMacroCategory(cat: string): string {
-  const c = cat.toLowerCase();
-  if (c.includes("voice") || c.includes("video") || c.includes("advertising")) return "AI Voice & Media";
-  if (c.includes("productivity") || c.includes("work os") || c.includes("workspace")) return "Productivity & OS";
-  if (c.includes("crm") || c.includes("sales") || c.includes("whatsapp") || c.includes("partner")) return "Sales, CRM & Outreach";
-  if (c.includes("web") || c.includes("print") || c.includes("commerce")) return "Web & E-Commerce";
-  return "Automation & No-Code";
-}
+// Curated Showcase Selection (Top 6 Premier Accredited Platforms)
+const showcaseSlugs = ["make", "apollo-io", "elevenlabs", "supabase", "clickup", "beehiiv"];
+const showcaseTools = toolsData.filter((t: any) => showcaseSlugs.includes(t.slug));
 
-// Spotlight Featured Tools for 2026
-const featuredSlugs = ["make", "elevenlabs", "clickup"];
-const featuredTools = toolsData.filter((t: any) => featuredSlugs.includes(t.slug));
-
-// Latest Blog Articles
+// Latest Blog Articles for Intelligence Feed
 const blogPosts = await getCollection('blog');
-const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()).slice(0, 2);
+const latestArticles = blogPosts
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
 ---
 
-<Layout title="Next-Gen Autonomous Software Intelligence & Editorial">
-  <!-- Hero Section (Spacious Cyber Dark / TechPulse Aesthetic) -->
-  <section class="relative pt-24 pb-16 px-6 sm:px-8 max-w-6xl mx-auto text-center">
-    <!-- Cyber Neon Pill Badge -->
-    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-cyan-500/30 backdrop-blur-xl mb-8 shadow-glow-cyan hover:border-cyan-400/50 transition-all duration-300">
-      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-      <span class="text-xs font-mono font-medium tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-fuchsia-400">
-        INDEPENDENT B2B SOFTWARE BENCHMARKS • 2026 EDITION
-      </span>
-    </div>
+<Layout 
+  title="HeliaTech | Observatoire Indépendant des Logiciels SaaS & IA 2026"
+  description="L'Observatoire indépendant de référence : découvrez les meilleures architectures SaaS, réduisez vos coûts d'abonnements jusqu'à 65% et accédez aux benchmarks sans concession."
+  jsonLd={jsonLd}
+>
+  <!-- Atmospheric Gradient Lighting -->
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-cyan-600/10 via-sky-500/10 to-fuchsia-600/10 blur-[150px] pointer-events-none -z-10"></div>
+  <div class="absolute top-[800px] right-10 w-[500px] h-[350px] bg-gradient-to-br from-indigo-600/10 to-transparent blur-[140px] pointer-events-none -z-10"></div>
 
-    <!-- Monumental Typography -->
-    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white mb-8 leading-[1.08]">
-      The Software <br class="hidden sm:inline" />
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
-        Intelligence Layer.
-      </span>
-    </h1>
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 pt-12 sm:pt-20 pb-24">
 
-    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-      Continuous, unbiased technical teardowns, in-depth software investigations and pricing forensics. Curated for high-growth enterprises.
-    </p>
-
-    <!-- Spatial Floating Search Console with Cyber Neon Aura -->
-    <div class="max-w-2xl mx-auto relative mb-10 group">
-      <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-sky-500/20 to-fuchsia-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none"></div>
+    <!-- Hero Section: High-Converting Flagship Value Proposition -->
+    <section class="text-center max-w-4xl mx-auto mb-20 sm:mb-28">
       
-      <div class="relative flex items-center backdrop-blur-2xl bg-slate-900/80 border border-white/[0.12] rounded-2xl shadow-2xl overflow-hidden p-2 group-hover:border-cyan-400/40 transition-all">
-        <div class="pl-4 pr-3 text-cyan-400">
-          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+      <!-- Trust Accreditation Pill -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-8 shadow-glow-cyan">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>L'OBSERVATOIRE INDÉPENDANT DES LOGICIELS SAAS & IA • ÉDITION 2026</span>
+      </div>
+
+      <!-- Main Catchphrase -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] mb-8">
+        Ne Surpayez Plus Vos Logiciels. <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
+          L'Observatoire Indépendant des Meilleures Architectures SaaS.
+        </span>
+      </h1>
+
+      <!-- Subtitle Description -->
+      <p class="text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-3xl mx-auto mb-10">
+        HeliaTech audite, benchmarke et certifie en continu les logiciels les plus performants du marché mondial. Éliminez jusqu'à <strong class="text-white font-medium">65% de dépenses superflues</strong>, remplacez les outils obsolètes et accélérez votre rentabilité.
+      </p>
+
+      <!-- Institutional Proof Metrics Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10 text-left">
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl">
+          <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono">35+</div>
+          <div class="text-xs text-slate-400 mt-1">Logiciels Accrédités</div>
         </div>
-        <input 
-          type="text" 
-          id="search-input"
-          placeholder="Search across 20 audited SaaS ecosystems (Make, ElevenLabs, ClickUp, Webflow...)" 
-          class="w-full py-3 bg-transparent text-white placeholder-slate-500 text-sm focus:outline-none font-normal"
-        />
-        <div class="hidden sm:flex items-center gap-1 bg-slate-800 border border-cyan-500/30 px-2.5 py-1 rounded-lg mr-2">
-          <span class="text-[10px] font-mono text-cyan-300">⌘K</span>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">-$14.8k</div>
+          <div class="text-xs text-slate-400 mt-1">Économie Moyenne/an</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl">
+          <div class="text-2xl sm:text-3xl font-black text-fuchsia-400 font-mono">Sub-150ms</div>
+          <div class="text-xs text-slate-400 mt-1">Latence Synthétique</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-xl">
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono">100%</div>
+          <div class="text-xs text-slate-400 mt-1">Audits Impartiaux</div>
         </div>
       </div>
-    </div>
 
-    <!-- Spatial Category Pills -->
-    <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto mb-14" id="category-filters">
-      {macroCategories.map((cat, idx) => (
-        <button 
-          data-category={cat}
-          class={`filter-btn px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 ${
-            idx === 0 
-              ? 'bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-slate-950 font-bold shadow-glow-cyan scale-105 active' 
-              : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
-          }`}
+      <!-- Hero Call-To-Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="/radar"
+          class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-400 hover:to-fuchsia-400 text-slate-950 font-black text-sm tracking-wide shadow-xl shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300 hover:scale-[1.03] flex items-center justify-center gap-2"
         >
-          {cat}
-        </button>
-      ))}
-    </div>
+          <span>Explorer le Radar 2026 ➔</span>
+        </a>
+        <a 
+          href="/calculator"
+          class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-mono text-sm border border-slate-700 transition-all flex items-center justify-center gap-2"
+        >
+          <span>Calculer Vos Économies 🧮</span>
+        </a>
+      </div>
 
-    <!-- Live Telemetry Matrix -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto p-4 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md shadow-glass-cyber">
-      <div class="p-3 text-center">
-        <span class="block text-2xl font-black text-white font-mono">{toolsData.length} Systems</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Independently Audited</span>
-      </div>
-      <div class="p-3 text-center border-l border-slate-800">
-        <span class="block text-2xl font-black text-cyan-400 font-mono">100%</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Editorial Independence</span>
-      </div>
-      <div class="p-3 text-center border-l border-slate-800">
-        <span class="block text-2xl font-black text-fuchsia-400 font-mono">35% MRR</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Top Partner Tier</span>
-      </div>
-      <div class="p-3 text-center border-l border-slate-800">
-        <span class="block text-2xl font-black text-sky-400 font-mono">05:00 UTC</span>
-        <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Daily Benchmark Updates</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Section: Featured Blog Articles & In-Depth Guides -->
-  {latestArticles.length > 0 && (
-    <section class="max-w-6xl mx-auto px-6 lg:px-8 py-10 mb-8">
-      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
-        <div class="flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
-          <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">EDITORIAL & IN-DEPTH INVESTIGATIONS</span>
+    <!-- The 4 Core Pillars Bento Grid Section -->
+    <section class="mb-24">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-2">LES OUTILS DE DÉCISION HELIATECH</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          Un Écosystème Dédié aux Décideurs Tech
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">
+          Tout ce dont vous avez besoin pour auditer, comparer et déployer vos logiciels d'entreprise sans risquer un centime.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Pillar 1: Le Radar -->
+        <a 
+          href="/radar"
+          class="p-8 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 group backdrop-blur-xl relative overflow-hidden flex flex-col justify-between"
+        >
+          <div class="absolute top-0 right-0 w-48 h-48 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-500/10 transition-colors"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl font-bold">
+                🛰️
+              </span>
+              <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
+                ANNUAIRE INTERACTIF
+              </span>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-3 group-hover:text-cyan-300 transition-colors">
+              Le Radar des Logiciels 2026
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+              Accédez à la matrice complète des plus de 35 logiciels accrédités. Filtrez par catégorie, comparez les prix réels et consultez nos dossiers médico-légaux d'architecture.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-cyan-400 font-bold group-hover:translate-x-1 transition-transform">
+            <span>Explorer la Matrice Active</span>
+            <span>→</span>
+          </div>
+        </a>
+
+        <!-- Pillar 2: Le Calculateur TCO -->
+        <a 
+          href="/calculator"
+          class="p-8 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 group backdrop-blur-xl relative overflow-hidden flex flex-col justify-between"
+        >
+          <div class="absolute top-0 right-0 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-500/10 transition-colors"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl font-bold">
+                🧮
+              </span>
+              <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                SIMULATEUR TEMPS RÉEL
+              </span>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-3 group-hover:text-emerald-300 transition-colors">
+              Détecteur de Gaspillage SaaS
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+              Ajustez vos volumes d'opérations et la taille de vos effectifs pour quantifier instantanément le capital récupérable en migrant de suites legacy vers des alternatives modernes.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 font-bold group-hover:translate-x-1 transition-transform">
+            <span>Lancer la Simulation de TCO</span>
+            <span>→</span>
+          </div>
+        </a>
+
+        <!-- Pillar 3: Versus Arena -->
+        <a 
+          href="/versus"
+          class="p-8 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 group backdrop-blur-xl relative overflow-hidden flex flex-col justify-between"
+        >
+          <div class="absolute top-0 right-0 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-500/10 transition-colors"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl font-bold">
+                ⚔️
+              </span>
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
+                DUELS 1 CONTRE 1
+              </span>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-3 group-hover:text-amber-300 transition-colors">
+              La Versus Arena Comparative
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+              Make vs Zapier, ClickUp vs Monday, Apollo vs Lusha, ElevenLabs vs HeyGen. Des confrontations techniques directes basées sur la latence réelle et les coûts de montée en charge.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-amber-400 font-bold group-hover:translate-x-1 transition-transform">
+            <span>Consulter les Duels Vérifiés</span>
+            <span>→</span>
+          </div>
+        </a>
+
+        <!-- Pillar 4: Deals & Perks -->
+        <a 
+          href="/deals"
+          class="p-8 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-pink-500/50 transition-all duration-300 group backdrop-blur-xl relative overflow-hidden flex flex-col justify-between"
+        >
+          <div class="absolute top-0 right-0 w-48 h-48 bg-pink-500/5 rounded-full blur-3xl pointer-events-none group-hover:bg-pink-500/10 transition-colors"></div>
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl font-bold">
+                🎁
+              </span>
+              <span class="text-xs font-mono font-bold text-pink-400 uppercase tracking-wider">
+                RÉDUCTIONS & PERKS
+              </span>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-3 group-hover:text-pink-300 transition-colors">
+              Le Vault d'Avantages Membres
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+              Bénéficiez d'accords partenariaux exclusifs avec les plus grands éditeurs tech : jusqu'à 10 000 opérations offertes, remises pluriannuelles et paliers d'accès réservés.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-mono text-pink-400 font-bold group-hover:translate-x-1 transition-transform">
+            <span>Accéder au Coffre-Fort de Deals</span>
+            <span>→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Curated Showcase: 6 Premier Accredited Platforms -->
+    <section class="mb-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-800">
+        <div>
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-1">ÉLITE DU RADAR</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            Plateformes Accréditées d'Excellence
+          </h2>
         </div>
-        <a href="/blog" class="text-xs font-mono text-slate-400 hover:text-cyan-300 transition-colors flex items-center gap-1 font-semibold">
-          <span>All Guides</span>
+        <a href="/radar" class="text-xs font-mono text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1">
+          <span>Voir les 35+ outils audités</span>
           <span>→</span>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {latestArticles.map((article) => (
-          <a 
-            href={`/blog/${article.slug}`}
-            class="group relative rounded-3xl p-8 bg-slate-900/70 border border-slate-800 hover:border-cyan-500/50 backdrop-blur-2xl transition-all duration-300 hover:-translate-y-1 shadow-glass-cyber flex flex-col justify-between overflow-hidden"
-          >
-            <div class="absolute -right-12 -top-12 w-40 h-40 bg-cyan-500/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
-
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {showcaseTools.map((tool: any) => (
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between group backdrop-blur-xl">
             <div>
-              <div class="flex items-center gap-2 mb-4 text-xs font-mono">
-                <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/25 font-semibold">
-                  {article.data.category}
-                </span>
-                <span class="text-slate-500">•</span>
-                <span class="text-slate-400 text-[11px]">{article.data.readingTime} READ</span>
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <ToolIcon slug={tool.slug} name={tool.name} size="md" className="group-hover:scale-105 transition-transform" />
+                  <div>
+                    <h3 class="font-bold text-white text-base group-hover:text-cyan-300 transition-colors">
+                      {tool.name}
+                    </h3>
+                    <span class="text-[11px] font-mono text-slate-400">{tool.category}</span>
+                  </div>
+                </div>
+                <div class="px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 font-mono text-[10px] font-bold">
+                  ★ {tool.rating}
+                </div>
               </div>
 
-              <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors mb-3 leading-snug">
-                {article.data.title}
-              </h3>
-
-              <p class="text-slate-400 text-xs sm:text-sm line-clamp-2 leading-relaxed mb-6 font-normal">
-                {article.data.description}
+              <p class="text-xs text-slate-300 leading-relaxed font-light mb-6 line-clamp-3">
+                {tool.tagline}
               </p>
             </div>
 
-            <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs font-mono">
-              <span class="text-slate-500 text-[11px]">
-                {new Date(article.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-              </span>
-              <span class="text-cyan-400 group-hover:translate-x-1 transition-transform flex items-center gap-1 font-bold">
-                <span>Read Investigation</span>
-                <span>➔</span>
-              </span>
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-400 pb-4 mb-4 border-t border-slate-800/80">
+                <span>Tarif d'entrée :</span>
+                <span class="text-white font-bold">{tool.starting_price}</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2">
+                <a 
+                  href={`/reviews/${tool.slug}`}
+                  class="py-2.5 px-3 rounded-xl bg-slate-800/70 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium text-center border border-slate-700 transition-all"
+                >
+                  Audit
+                </a>
+                <a 
+                  href={`/go/${tool.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-400 hover:to-fuchsia-400 text-slate-950 text-xs font-black font-mono text-center shadow-md transition-all flex items-center justify-center gap-1 hover:scale-[1.02]"
+                >
+                  Accéder ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Why Trust HeliaTech: Institutional Standards (Stealth Mode) -->
+    <section class="mb-24 p-8 sm:p-14 rounded-3xl bg-slate-900/40 border border-slate-800 backdrop-blur-2xl">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-2">CHARTE MÉTHODOLOGIQUE</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          L'Impartialité comme Unique Boussole.
+        </h2>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          Dans un écosystème pollué par les comparateurs affiliés complaisants et les faux classements sponsorisés, HeliaTech garantit une rigueur technique absolue.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800">
+          <div class="text-2xl mb-3">🧪</div>
+          <h3 class="text-base font-bold text-white mb-2">Bancs d'Essai Synthétiques</h3>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            Chaque plateforme est soumise à des tests de charge continus mesurant les temps de réponse API, les latences de routage et le comportement en cas de pic de trafic.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800">
+          <div class="text-2xl mb-3">⚖️</div>
+          <h3 class="text-base font-bold text-white mb-2">Zéro Position Achetée</h3>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            Aucun éditeur de logiciel ne peut acheter son rang ou modifier les verdicts de nos teardowns. Seule la supériorité technique et le ratio valeur/coût déterminent notre sélection.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950/70 border border-slate-800">
+          <div class="text-2xl mb-3">💼</div>
+          <h3 class="text-base font-bold text-white mb-2">TCO Forensic</h3>
+          <p class="text-xs text-slate-400 leading-relaxed font-light">
+            Nous disséquons les grilles tarifaires cachées, les surcoûts par palier d'opérations et les coûts réels de migration pour éliminer tout risque financier lors de vos choix.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Intelligence & Teardowns Feed -->
+    <section class="mb-24">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-800">
+        <div>
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-1">ANALYSES RÉCENTES</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            Derniers Dossiers & Masterclasses
+          </h2>
+        </div>
+        <a href="/blog" class="text-xs font-mono text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1">
+          <span>Consulter toutes les publications ({blogPosts.length})</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {latestArticles.map((article: any) => (
+          <a 
+            href={`/blog/${article.slug}`}
+            class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 group flex flex-col justify-between backdrop-blur-xl"
+          >
+            <div>
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-3">
+                <span>{new Date(article.data.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                <span class="text-cyan-400 uppercase font-bold">{article.data.category || 'Tech Guide'}</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors line-clamp-2">
+                {article.data.title}
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light line-clamp-3 mb-6">
+                {article.data.excerpt || article.data.description}
+              </p>
+            </div>
+            <div class="text-xs font-mono text-cyan-400 font-bold flex items-center gap-1">
+              <span>Lire le teardown</span>
+              <span>→</span>
             </div>
           </a>
         ))}
       </div>
     </section>
-  )}
 
-  <!-- Spotlight Bento: Helia Editor Choice 2026 -->
-  <section class="max-w-6xl mx-auto px-6 lg:px-8 py-8 mb-6">
-    <div class="flex items-center justify-between mb-6">
-      <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-fuchsia-400 animate-ping"></span>
-        <span class="text-xs font-mono text-fuchsia-300 uppercase tracking-widest font-bold">HELIA SPOTLIGHT 2026</span>
-      </div>
-      <span class="text-xs font-mono text-slate-500 uppercase tracking-wider">Top Tier Evaluated</span>
-    </div>
+    <!-- Lead Capture Section: The Confidential Intelligence Dispatch -->
+    <section class="p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-indigo-950/40 via-slate-900/90 to-slate-950 border border-cyan-500/40 text-center relative overflow-hidden shadow-2xl mb-24">
+      <div class="max-w-2xl mx-auto">
+        <span class="text-xs font-mono text-cyan-300 uppercase tracking-widest block mb-3">DISPATCH EXÉCUTIF HEBDOMADAIRE</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+          Recevez les Rapports Confidentiels HeliaTech
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-8 font-light">
+          Chaque mardi matin, rejoignez plus de <strong class="text-white">4 200 CTOs et fondateurs</strong> qui reçoivent nos benchmarks de latence réels, les fuites tarifaires d'éditeurs et les alertes de nouveaux outils accrédités.
+        </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {featuredTools.map((tool: any) => (
-        <div class="relative rounded-3xl p-7 bg-slate-900/80 border-2 border-cyan-500/40 backdrop-blur-2xl shadow-glow-cyan flex flex-col justify-between overflow-hidden group hover:scale-[1.02] transition-all duration-300">
-          <div class="absolute -top-12 -right-12 w-28 h-28 bg-cyan-500/20 rounded-full blur-2xl pointer-events-none"></div>
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-slate-950 uppercase tracking-wider">
-                EDITOR'S CHOICE
-              </span>
-              <span class="text-xs font-mono text-cyan-300 font-bold">★ {tool.rating.toFixed(1)}</span>
-            </div>
-            <div class="flex items-center gap-3 mb-3">
-              <ToolIcon name={tool.name} slug={tool.slug} size="md" />
-              <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors">
-                {tool.name}
-              </h3>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed mb-6 font-light line-clamp-2">
-              {tool.tagline}
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-            <a href={`/reviews/${tool.slug}`} class="text-xs text-slate-300 hover:text-cyan-400 font-mono transition-colors">
-              Audit Dossier →
-            </a>
-            <a 
-              href={`/go/${tool.slug}`} 
-              target="_blank" 
-              rel="noopener noreferrer sponsored"
-              class="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-slate-950 text-xs font-black shadow-md hover:brightness-110 transition-all"
-            >
-              Access Tool ↗
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <!-- Software Teardown Matrix Section -->
-  <section class="max-w-6xl mx-auto px-6 lg:px-8 py-10" id="categories">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-6 border-b border-slate-800">
-      <div>
-        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-1">LIVE REPOSITORY</span>
-        <h2 class="text-3xl font-black text-white tracking-tight">Active Software Matrix</h2>
-      </div>
-      <div class="flex items-center gap-4">
-        <!-- Sort Control -->
-        <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
-          <span>SORT:</span>
-          <button id="sort-rating" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold transition-all">
-            ★ Highest Rating
+        <!-- Newsletter Form -->
+        <form id="home-newsletter-form" class="flex flex-col sm:flex-row items-center gap-3 max-w-lg mx-auto">
+          <input 
+            type="email" 
+            id="home-lead-email"
+            required
+            placeholder="votre.email.pro@entreprise.com" 
+            class="w-full px-5 py-4 rounded-2xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 transition-colors"
+          />
+          <button 
+            type="submit" 
+            id="home-lead-btn"
+            class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 text-slate-950 font-black text-xs font-mono uppercase tracking-wider shadow-lg shadow-cyan-500/20 transition-all hover:scale-[1.02] cursor-pointer whitespace-nowrap"
+          >
+            S'abonner Gratuitement ➔
           </button>
-          <button id="sort-name" class="px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 transition-all">
-            A-Z
-          </button>
+        </form>
+
+        <div id="home-success-msg" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono text-xs">
+          ✓ Inscription confirmée. Bienvenue parmi les décideurs tech accrédités !
         </div>
-        <div class="text-xs font-mono text-slate-400 border-l border-slate-800 pl-4 whitespace-nowrap">
-          SHOWING: <span id="tool-count" class="text-cyan-300 font-bold">1–20</span> OF <span id="tool-total">{toolsData.length}</span>
+
+        <div class="mt-4 flex items-center justify-center gap-4 text-[11px] font-mono text-slate-500">
+          <span>🔒 Respect strict des données</span>
+          <span>•</span>
+          <span>Désinscription 1-clic</span>
+          <span>•</span>
+          <span>0% spam</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Empty Search State -->
-    <div id="empty-state" class="hidden text-center py-16 px-6 rounded-3xl bg-slate-900/40 border border-slate-800 backdrop-blur-xl mb-12">
-      <div class="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 flex items-center justify-center mx-auto mb-4 text-xl">
-        🔍
-      </div>
-      <h3 class="text-xl font-bold text-white mb-2">No Matching Software Systems</h3>
-      <p class="text-xs text-slate-400 max-w-md mx-auto mb-6">
-        Our research desk continuously evaluates new platforms daily. Try adjusting your query or reset the filter.
-      </p>
-      <button id="reset-filters" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono transition-all">
-        Reset All Filters
-      </button>
-    </div>
-
-    <!-- Spatial Glass Bento Grid with Cyber Accents -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tools-grid">
-      {toolsData.map((tool: any) => (
-        <div 
-          class="tool-card group relative rounded-3xl p-7 bg-slate-900/50 hover:bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between hover:shadow-glow-cyan hover:-translate-y-1.5 overflow-hidden"
-          data-name={tool.name.toLowerCase()}
-          data-category={tool.category}
-          data-macro={getMacroCategory(tool.category)}
-          data-tagline={tool.tagline.toLowerCase()}
-          data-rating={tool.rating}
-        >
-          <!-- Subtle Top Cyan Shine -->
-          <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500 pointer-events-none"></div>
-
-          <div>
-            <!-- Header Row -->
-            <div class="flex items-start justify-between gap-3 mb-5">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-mono font-medium bg-slate-800/80 text-cyan-300 border border-slate-700">
-                {tool.category}
-              </span>
-
-              <div class="flex items-center gap-1.5 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full text-xs font-mono font-bold">
-                <span>★</span>
-                <span>{tool.rating.toFixed(1)}</span>
-              </div>
-            </div>
-
-            <!-- Title & Tagline -->
-            <div class="flex items-center gap-3 mb-3">
-              <ToolIcon name={tool.name} slug={tool.slug} size="md" />
-              <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors tracking-tight">
-                {tool.name}
-              </h3>
-            </div>
-
-            <p class="text-slate-400 text-xs sm:text-sm line-clamp-2 mb-6 font-normal leading-relaxed">
-              {tool.tagline}
-            </p>
-
-            <!-- Specs / Pricing Tag -->
-            <div class="bg-slate-950/80 rounded-2xl p-3.5 mb-6 border border-slate-800 flex items-center justify-between">
-              <span class="text-slate-500 text-[11px] font-mono uppercase tracking-wider">Entry Tier:</span>
-              <span class="text-emerald-400 font-mono font-bold text-xs">{tool.starting_price}</span>
-            </div>
-          </div>
-
-          <!-- Bottom Action Buttons -->
-          <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800">
-            <a 
-              href={`/reviews/${tool.slug}`} 
-              class="text-center py-3 px-3 rounded-xl bg-slate-800/70 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs transition-all border border-slate-700"
-            >
-              Teardown
-            </a>
-            <a 
-              href={`/go/${tool.slug}`} 
-              target="_blank" 
-              rel="noopener noreferrer sponsored"
-              class="text-center py-3 px-3 rounded-xl bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-400 hover:to-fuchsia-400 text-slate-950 font-black text-xs shadow-md shadow-cyan-500/10 transition-all flex items-center justify-center gap-1 hover:scale-[1.02]"
-            >
-              Access Tool ↗
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Pagination Controls (20 Software per page) -->
-    <div id="pagination-controls" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
-      <div class="text-xs font-mono text-slate-400">
-        Page <span id="current-page-display" class="text-white font-bold">1</span> sur <span id="total-pages-display" class="text-white font-bold">2</span>
-        <span class="text-slate-600 mx-2">•</span>
-        <span class="text-slate-400 font-medium">20 logiciels par page</span>
-      </div>
-
-      <div class="flex items-center gap-2">
-        <button 
-          id="prev-page-btn"
-          type="button"
-          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
-        >
-          <span>←</span>
-          <span>Précédent</span>
-        </button>
-
-        <div id="page-numbers-container" class="flex items-center gap-1.5">
-          <!-- Dynamically populated page buttons -->
-        </div>
-
-        <button 
-          id="next-page-btn"
-          type="button"
-          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
-        >
-          <span>Suivant</span>
-          <span>→</span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Editorial Methodology & Standards Section (Stealth Mode: No Bot/Agent disclosure) -->
-  <section class="max-w-6xl mx-auto px-6 lg:px-8 py-24" id="methodology">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-2">INTELLIGENCE STANDARD</span>
-      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-        Our Evaluation Methodology. <br />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
-          Rigorous. Independent. Quantifiable.
-        </span>
-      </h2>
-      <p class="text-slate-400 text-sm leading-relaxed">
-        How HeliaTech audits and benchmarks global enterprise software with uncompromising technical precision.
-      </p>
-    </div>
-
-    <!-- 3-Column Bento Methodology -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Pillar 01 -->
-      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl relative overflow-hidden">
-        <div class="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 flex items-center justify-center font-mono font-bold mb-6">
-          01
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Market Discovery & Signals</h3>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-          Continuous monitoring of developer sentiment, real enterprise adoption velocity, API changelogs, and high-impact category disruptors.
+    <!-- Partner Ingestion Portal Callout Banner -->
+    <section class="p-8 sm:p-10 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="max-w-xl">
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest block mb-1">PROGRAMME ÉDITEURS</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+          Vous développez une application logicielle B2B ?
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
+          Soumettez votre plateforme pour un audit d'accréditation. Rejoignez le Radar HeliaTech et présentez votre solution auprès de notre audience d'acheteurs tech qualifiés.
         </p>
-        <span class="text-[10px] font-mono text-cyan-300 bg-cyan-500/10 px-2.5 py-1 rounded-full">
-          Signal Detection
-        </span>
       </div>
+      <a 
+        href="/partner"
+        class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-mono text-xs font-bold text-center bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition-all hover:scale-105 whitespace-nowrap"
+      >
+        Soumettre Votre Logiciel ➔
+      </a>
+    </section>
 
-      <!-- Pillar 02 -->
-      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl relative overflow-hidden">
-        <div class="w-10 h-10 rounded-2xl bg-fuchsia-500/10 border border-fuchsia-500/20 text-fuchsia-300 flex items-center justify-center font-mono font-bold mb-6">
-          02
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Architectural Forensics</h3>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-          In-depth testing of execution latency, user onboarding friction, hidden commercial limits, and actual payback velocity calculation.
-        </p>
-        <span class="text-[10px] font-mono text-fuchsia-300 bg-fuchsia-500/10 px-2.5 py-1 rounded-full">
-          Technical Teardowns
-        </span>
-      </div>
+  </div>
 
-      <!-- Pillar 03 -->
-      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl relative overflow-hidden">
-        <div class="w-10 h-10 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-300 flex items-center justify-center font-mono font-bold mb-6">
-          03
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Continuous Edge Verification</h3>
-        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-          Dynamic daily verification of pricing tiers, plan inclusions, and alternative tool comparisons to ensure readers receive actionable truth.
-        </p>
-        <span class="text-[10px] font-mono text-sky-300 bg-sky-500/10 px-2.5 py-1 rounded-full">
-          Continuous Audit
-        </span>
-      </div>
-    </div>
-
-    <!-- HeliaTech B2B Executive Lead Magnet -->
-    <div class="mt-16">
-      <NewsletterCapture />
-    </div>
-  </section>
-
-  <!-- Interactive Search / Filter / Pagination Controller (20 Per Page) -->
   <script is:inline>
-    const searchInput = document.getElementById('search-input');
-    const filterButtons = document.querySelectorAll('#category-filters button');
-    const cards = Array.from(document.querySelectorAll('.tool-card'));
-    const countSpan = document.getElementById('tool-count');
-    const totalSpan = document.getElementById('tool-total');
-    const emptyState = document.getElementById('empty-state');
-    const resetBtn = document.getElementById('reset-filters');
-    const toolsGrid = document.getElementById('tools-grid');
-    const sortRatingBtn = document.getElementById('sort-rating');
-    const sortNameBtn = document.getElementById('sort-name');
+    (function() {
+      const form = document.getElementById('home-newsletter-form');
+      const btn = document.getElementById('home-lead-btn');
+      const success = document.getElementById('home-success-msg');
 
-    const paginationWrapper = document.getElementById('pagination-controls');
-    const pageNumbersContainer = document.getElementById('page-numbers-container');
-    const prevBtn = document.getElementById('prev-page-btn');
-    const nextBtn = document.getElementById('next-page-btn');
-    const curDisplay = document.getElementById('current-page-display');
-    const totalDisplay = document.getElementById('total-pages-display');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('home-lead-email')?.value || '';
+          
+          try {
+            const list = JSON.parse(localStorage.getItem('_ht_home_subscribers') || '[]');
+            list.push({ email, timestamp: new Date().toISOString() });
+            localStorage.setItem('_ht_home_subscribers', JSON.stringify(list));
+          } catch(err) {}
 
-    const PAGE_SIZE = 20;
-    let currentPage = 1;
-    let activeCategory = 'All Systems';
-    let currentFilteredCards = [...cards];
-
-    function renderPagination(totalFiltered) {
-      const totalPages = Math.ceil(totalFiltered / PAGE_SIZE) || 1;
-      if (currentPage > totalPages) currentPage = 1;
-
-      if (!paginationWrapper) return;
-
-      if (totalFiltered <= PAGE_SIZE) {
-        paginationWrapper.style.display = totalFiltered === 0 ? 'none' : 'flex';
-      } else {
-        paginationWrapper.style.display = 'flex';
-      }
-
-      if (curDisplay) curDisplay.textContent = currentPage.toString();
-      if (totalDisplay) totalDisplay.textContent = totalPages.toString();
-
-      if (prevBtn) {
-        prevBtn.disabled = currentPage === 1;
-      }
-      if (nextBtn) {
-        nextBtn.disabled = currentPage === totalPages;
-      }
-
-      if (pageNumbersContainer) {
-        pageNumbersContainer.innerHTML = '';
-        for (let p = 1; p <= totalPages; p++) {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.textContent = p.toString();
-          btn.className = p === currentPage
-            ? 'w-8 h-8 rounded-xl text-xs font-mono font-bold bg-cyan-500 text-slate-950 shadow-glow-cyan'
-            : 'w-8 h-8 rounded-xl text-xs font-mono font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors cursor-pointer';
-          btn.addEventListener('click', () => {
-            currentPage = p;
-            applyDisplayAndPagination(true);
-          });
-          pageNumbersContainer.appendChild(btn);
-        }
-      }
-    }
-
-    function applyDisplayAndPagination(shouldScroll = false) {
-      const totalFiltered = currentFilteredCards.length;
-      const totalPages = Math.ceil(totalFiltered / PAGE_SIZE) || 1;
-      if (currentPage > totalPages) currentPage = 1;
-
-      const startIndex = (currentPage - 1) * PAGE_SIZE;
-      const endIndex = Math.min(startIndex + PAGE_SIZE, totalFiltered);
-
-      // Hide all cards first
-      cards.forEach(card => card.style.display = 'none');
-
-      // Show only cards for the active page
-      for (let i = startIndex; i < endIndex; i++) {
-        if (currentFilteredCards[i]) {
-          currentFilteredCards[i].style.display = 'flex';
-        }
-      }
-
-      // Update header telemetry counter
-      if (countSpan) {
-        if (totalFiltered === 0) {
-          countSpan.textContent = '0';
-        } else {
-          countSpan.textContent = `${startIndex + 1}–${endIndex}`;
-        }
-      }
-      if (totalSpan) {
-        totalSpan.textContent = totalFiltered.toString();
-      }
-
-      if (emptyState) {
-        emptyState.style.display = totalFiltered === 0 ? 'block' : 'none';
-      }
-
-      renderPagination(totalFiltered);
-
-      if (shouldScroll) {
-        const matrixSection = document.getElementById('categories');
-        if (matrixSection) {
-          matrixSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    }
-
-    function filterTools() {
-      const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
-      currentFilteredCards = [];
-
-      cards.forEach(card => {
-        const name = card.dataset.name || '';
-        const category = card.dataset.category || '';
-        const macro = card.dataset.macro || '';
-        const tagline = card.dataset.tagline || '';
-
-        const matchesSearch = !query || name.includes(query) || tagline.includes(query) || category.toLowerCase().includes(query) || macro.toLowerCase().includes(query);
-        const matchesCategory = activeCategory === 'All Systems' || macro === activeCategory || category === activeCategory;
-
-        if (matchesSearch && matchesCategory) {
-          currentFilteredCards.push(card);
-        }
-      });
-
-      currentPage = 1;
-      applyDisplayAndPagination(false);
-    }
-
-    if (searchInput) {
-      searchInput.addEventListener('input', filterTools);
-    }
-
-    // Keyboard shortcut (Cmd+K / Ctrl+K)
-    window.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        if (searchInput) searchInput.focus();
-      }
-    });
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => {
-          b.className = 'filter-btn px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800';
+          if (btn) {
+            btn.textContent = '✓ Inscrit';
+            btn.classList.add('opacity-50', 'pointer-events-none');
+          }
+          if (success) {
+            success.classList.remove('hidden');
+          }
+          form.reset();
         });
-        btn.className = 'filter-btn px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all duration-300 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-slate-950 shadow-glow-cyan scale-105 active';
-        activeCategory = btn.getAttribute('data-category') || 'All Systems';
-        filterTools();
-      });
-    });
-
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        if (searchInput) searchInput.value = '';
-        if (filterButtons.length > 0) {
-          filterButtons[0].click();
-        } else {
-          filterTools();
-        }
-      });
-    }
-
-    // Prev / Next pagination click handlers
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        if (currentPage > 1) {
-          currentPage--;
-          applyDisplayAndPagination(true);
-        }
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        const totalPages = Math.ceil(currentFilteredCards.length / PAGE_SIZE) || 1;
-        if (currentPage < totalPages) {
-          currentPage++;
-          applyDisplayAndPagination(true);
-        }
-      });
-    }
-
-    // Sorting handlers
-    if (sortRatingBtn && toolsGrid) {
-      sortRatingBtn.addEventListener('click', () => {
-        cards.sort((a, b) => parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0));
-        cards.forEach(card => toolsGrid.appendChild(card));
-        sortRatingBtn.className = 'px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold transition-all';
-        if (sortNameBtn) sortNameBtn.className = 'px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 transition-all';
-        filterTools();
-      });
-    }
-
-    if (sortNameBtn && toolsGrid) {
-      sortNameBtn.addEventListener('click', () => {
-        cards.sort((a, b) => (a.dataset.name || '').localeCompare(b.dataset.name || ''));
-        cards.forEach(card => toolsGrid.appendChild(card));
-        sortNameBtn.className = 'px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold transition-all';
-        if (sortRatingBtn) sortRatingBtn.className = 'px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 transition-all';
-        filterTools();
-      });
-    }
-
-    // Initial pagination execution on page load
-    filterTools();
+      }
+    })();
   </script>
 </Layout>
