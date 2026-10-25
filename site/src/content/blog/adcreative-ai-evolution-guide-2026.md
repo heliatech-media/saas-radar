@@ -65,7 +65,7 @@ flowchart LR
 > **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[AdCreative.ai](/reviews/adcreative-ai)` with our verified enterprise trial link at [/go/adcreative-ai](/go/adcreative-ai).
 
 > [!TIP]
-> **HeliaTech Benchmark Access:** Test `AdCreative.ai` with our verified enterprise trial link at [/go/adcreative-ai](/go/adcreative-ai).
+> **HeliaTech Benchmark Access:** Test `[AdCreative.ai](/reviews/adcreative-ai)` with our verified enterprise trial link at [/go/adcreative-ai](/go/adcreative-ai).
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
 

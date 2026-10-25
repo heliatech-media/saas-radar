@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-24 20:20:24 UTC",
+  "last_updated": "2026-10-24 23:59:23 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 33,
-    "total_published_investigations": 81,
-    "reviews_audited": 34,
-    "masterclasses_and_duels": 47,
+    "total_monetized_tools": 34,
+    "total_published_investigations": 83,
+    "reviews_audited": 35,
+    "masterclasses_and_duels": 48,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$11,550 USD",
+    "projected_monthly_mrr": "$11,900 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -200,6 +200,11 @@
     {
       "slug": "riverside",
       "destination": "https://riverside.fm/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "submagic",
+      "destination": "https://submagic.co/?via=heliatech",
       "type": "Commission Partner"
     },
     {

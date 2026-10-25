@@ -1,0 +1,53 @@
+{
+  "brand": "Rewardful",
+  "affiliate_token": "heliatech",
+  "tracking_url": "https://www.rewardful.com/?via=heliatech",
+  "redirect_route": "/go/rewardful",
+  "commission_rate": "25% recurring for 12 months",
+  "cookie_duration_days": 30,
+  "payout_threshold_usd": 50,
+  "payout_frequency": "Monthly on the 1st day",
+  "payout_method": "PayPal",
+  "self_referral_allowed": false,
+  "target_personas": {
+    "saas_solopreneurs": {
+      "profile": "Self-sufficient bootstrapped SaaS founders and indie hackers",
+      "pain_point": "Need to grow MRR with minimal complexity and affordable, transparent pricing",
+      "hook": "Launch a high-converting affiliate program on Stripe in under 15 minutes"
+    },
+    "saas_marketers": {
+      "profile": "Growth marketers at tech companies and VC-backed SaaS scaleups",
+      "pain_point": "Need an automated, hands-off affiliate management system that scales without engineering bottlenecks",
+      "hook": "Scale your partner channel with automated refund reconciliation and 0% revenue cut"
+    }
+  },
+  "proven_case_studies": [
+    {
+      "company": "HeadshotPro",
+      "metric": "$50,000+ monthly affiliate marketing revenue",
+      "story": "Scaled to the top of the AI headshot market by leveraging thousands of affiliates via Rewardful"
+    },
+    {
+      "company": "OpusClip",
+      "metric": "From $0 to six figures in affiliate revenue",
+      "story": "Turned video creators into an army of active promoters using Rewardful's frictionless onboarding"
+    },
+    {
+      "company": "Pallyy",
+      "metric": "+22% MRR growth",
+      "story": "Accelerated social media management SaaS growth by combining customer referral and affiliate marketing"
+    }
+  ],
+  "ten_core_selling_points": [
+    "Transparent & Scalable Pricing (no hidden percentage fees)",
+    "No-Code Integrations (1-click with 30+ platforms and Stripe)",
+    "Exceptional Customer Support (24/7 dedicated assistance)",
+    "15-Minute Installation Process (5-step frictionless setup)",
+    "Loved by Affiliates (intuitive portal, live click tracking)",
+    "Tailored for SaaS (designed natively for subscription lifecycles)",
+    "Customizable Features (tiered commissions, custom cookie lengths)",
+    "All-in-One Affiliate Tool (tracking, management, and payouts)",
+    "Combine with Referral Programs (affiliates + customer referral in one dashboard)",
+    "Proven Successful Track Record (up to $700,000 generated in referral sales)"
+  ]
+}

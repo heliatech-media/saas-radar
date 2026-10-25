@@ -67,7 +67,7 @@ flowchart LR
 > **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[Apollo.io](/reviews/apollo-io)` with our verified enterprise trial link at [/go/apollo-io](/go/apollo-io).
 
 > [!TIP]
-> **HeliaTech Benchmark Access:** Test `Apollo.io` with our verified enterprise trial link at [/go/apollo-io](/go/apollo-io).
+> **HeliaTech Benchmark Access:** Test `[Apollo.io](/reviews/apollo-io)` with our verified enterprise trial link at [/go/apollo-io](/go/apollo-io).
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
 

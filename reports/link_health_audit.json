@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24 20:23:09",
+  "timestamp": "2026-10-25 00:02:29",
   "total_links_audited": 58,
   "healthy_links": 57,
   "broken_links_count": 1,
@@ -102,7 +102,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ASgLmK0kJJYq7a&gsxid=ASgLmK0kJJYq7a&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=lLbEEeOM9YWslh&gsxid=lLbEEeOM9YWslh&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -257,7 +257,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IirfmNkPDjchwx&gsxid=IirfmNkPDjchwx&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=5EC6gSyXXUeug9&gsxid=5EC6gSyXXUeug9&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -333,8 +333,8 @@
     },
     {
       "slug": "submagic",
-      "target_url": "https://www.submagic.com",
-      "final_url": "https://www.submagic.com/",
+      "target_url": "https://submagic.co/?via=heliatech",
+      "final_url": "https://www.submagic.co/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

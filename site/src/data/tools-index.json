@@ -87,6 +87,16 @@
     "commission_rate": "15% recurring"
   },
   {
+    "name": "Descript",
+    "slug": "descript",
+    "tagline": "The all-in-one audio and video editor that works like a word processor",
+    "category": "Audio/Podcasting",
+    "rating": 4.6,
+    "starting_price": "$12/mo",
+    "best_for": "Podcasters, content creators, internal communications teams, and video editors looking to speed up rough cuts.",
+    "affiliate_url": "https://www.descript.com"
+  },
+  {
     "name": "ElevenLabs",
     "slug": "elevenlabs",
     "tagline": "Industry-leading generative AI voice platform delivering hyper-realistic text-to-speech and dynamic voice cloning.",

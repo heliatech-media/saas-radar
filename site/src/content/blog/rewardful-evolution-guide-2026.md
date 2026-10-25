@@ -15,6 +15,12 @@ tags:
 - Paddle
 readingTime: 6 MIN
 tool_slug: rewardful
+affiliate_cta:
+  badge: OFFICIAL REWARDFUL PARTNER ACCESS
+  title: Launch Your SaaS Affiliate Engine in 15 Minutes
+  description: Connect Stripe in 1 click with 0% transaction fees and scale your partner MRR like HeadshotPro and OpusClip. Start your free trial.
+  button_text: Start Free 14-Day Trial on Rewardful ➔
+  url: /go/rewardful
 image: /images/blog/rewardful.svg
 tldr:
 - Building in-house affiliate tracking on top of Stripe Billing leads to catastrophic
@@ -125,6 +131,18 @@ While **PartnerStack** is built for enterprise co-selling (and comes with enterp
 
 ---
 
+
+---
+
+## 3. Proven Enterprise Case Studies: How Top SaaS Scale with Rewardful
+
+Rewardful's architecture is validated by some of the fastest-growing software products in the creator and AI ecosystem:
+
+* **HeadshotPro (,000+ Monthly Affiliate Revenue):** Scaled to market leadership in the generative AI photography niche by deploying thousands of affiliates without hiring a dedicated affiliate manager.
+* **OpusClip (From  to Six Figures in Affiliate ARR):** Transformed video editors and content creators into an active promotion army using Rewardful's frictionless instant onboarding.
+* **Pallyy (+22% MRR Growth):** Accelerated growth for its social media management platform by unifying customer referral rewards and creator affiliate commissions inside a single dashboard.
+
+---
 ## 4. Hands-on Workshop: Launching Your SaaS Affiliate Program in 3 Steps
 
 Deploying a fully automated partner channel with Rewardful requires zero backend database migrations.

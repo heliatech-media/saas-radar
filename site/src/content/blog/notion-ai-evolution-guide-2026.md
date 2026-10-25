@@ -69,7 +69,7 @@ flowchart LR
 > **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[Notion AI](/reviews/notion-ai)` with our verified enterprise trial link at [/go/notion-ai](/go/notion-ai).
 
 > [!TIP]
-> **HeliaTech Benchmark Access:** Test `Notion AI` with our verified enterprise trial link at [/go/notion-ai](/go/notion-ai).
+> **HeliaTech Benchmark Access:** Test `[Notion AI](/reviews/notion-ai)` with our verified enterprise trial link at [/go/notion-ai](/go/notion-ai).
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)
 

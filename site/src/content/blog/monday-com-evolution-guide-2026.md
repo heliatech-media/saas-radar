@@ -75,7 +75,7 @@ flowchart LR
 > **Executive Takeaway:** **HeliaTech Benchmark Access:** Test `[Monday.com](/reviews/monday-com)` with our verified enterprise trial link at [/go/monday-com](/go/monday-com).
 
 > [!TIP]
-> **HeliaTech Benchmark Access:** Test `Monday.com` with our verified enterprise trial link at [/go/monday-com](/go/monday-com).
+> **HeliaTech Benchmark Access:** Test `[Monday.com](/reviews/monday-com)` with our verified enterprise trial link at [/go/monday-com](/go/monday-com).
 
 ## 3. Hands-on Workshop: The 15-Minute Enterprise Blueprint
 

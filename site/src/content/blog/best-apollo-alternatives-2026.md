@@ -291,14 +291,14 @@ To ensure optimal capital allocation, select your [Apollo.io](/reviews/apollo-io
 
 ## Step-by-Step Migration Checklist from Apollo.io
 
-Migrating your outbound sales infrastructure away from Apollo.io requires a structured, zero-downtime protocol to prevent lead loss and CRM corruption. Execute this 5-step operational checklist:
+Migrating your outbound sales infrastructure away from [Apollo.io](/reviews/apollo-io) requires a structured, zero-downtime protocol to prevent lead loss and CRM corruption. Execute this 5-step operational checklist:
 
 1. **Audit & Export Historical Data:** 
    Export all active sequences, custom contact fields, past email templates, and historical disposition logs from Apollo.io into secure CSV/JSON backups.
 2. **Sanitize & Verify Contact Lists:** 
    Run your exported contact databases through a dedicated verification engine (such as UpLead or Cognism) to purge dead emails and invalid phone numbers before importing them into your new platform.
 3. **Configure CRM Field Mappings:** 
-   Establish strict field mapping protocols in Salesforce or HubSpot to ensure the new tool (e.g., LeadIQ, Lusha, or Clay) syncs custom properties (job titles, mobile numbers, intent scores) without creating duplicate records.
+   Establish strict field mapping protocols in Salesforce or HubSpot to ensure the new tool (e.g., LeadIQ, [Lusha](/reviews/lusha), or Clay) syncs custom properties (job titles, mobile numbers, intent scores) without creating duplicate records.
 4. **Provision User Seats & Test Webhooks:** 
    Set up pilot user accounts for senior SDRs. Test bi-directional CRM syncs and outbound webhook triggers with a small batch of 50 accounts before rolling out organization-wide.
 5. **Deprecate Apollo.io & Monitor Deliverability:** 

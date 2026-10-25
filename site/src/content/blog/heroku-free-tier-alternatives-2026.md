@@ -123,7 +123,7 @@ To evaluate the long-term total cost of ownership (TCO), we modeled a standard S
 | :--- | :--- | :--- | :--- |
 | **Free / Hobby** | **$0/mo** (Deprecated/Killed) | **$0/mo** ($5 free credit / free DB tier) | **€4.59/mo** (Hetzner VPS base cost) |
 | **Standard / Startup** | **$25 - $50/mo** (Eco dynos + Hobby Postgres) | **$15 - $25/mo** (Usage-based RAM/CPU + Free [Supabase](/reviews/supabase) tier) | **€4.59/mo** (Handles 10x more container resources) |
-| **Scale / Growth** | **$250+ /mo** (Standard 2x dynos + Standard-0 Postgres) | **$75 - $120/mo** (Pro Supabase $25 + Dedicated Railway RAM/CPU) | **€15 - €30/mo** (Scaling VPS resources manually) |
+| **Scale / Growth** | **$250+ /mo** (Standard 2x dynos + Standard-0 Postgres) | **$75 - $120/mo** (Pro [Supabase](/reviews/supabase) $25 + Dedicated Railway RAM/CPU) | **€15 - €30/mo** (Scaling VPS resources manually) |
 
 ---
 

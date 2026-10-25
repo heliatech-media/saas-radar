@@ -6,7 +6,7 @@ category: AI Voice & Audio Generation
 rating: 4.9
 website_url: https://elevenlabs.io
 affiliate_url: https://try.elevenlabs.io/ajhd6t7k04dh
-summary: ElevenLabs is the industry-leading generative audio platform, uniting three powerful product engines: ElevenCreative for end-to-end media and video production, ElevenAgents for 24/7 autonomous voice receptionists, and ElevenAPI for low-latency developer infrastructure.
+summary: "ElevenLabs is the industry-leading generative audio platform, uniting three powerful product engines: ElevenCreative for end-to-end media and video production, ElevenAgents for 24/7 autonomous voice receptionists, and ElevenAPI for low-latency developer infrastructure."
 best_for: Content creators, marketing teams, small business operators needing 24/7 phone receptionists, and developers building voice-enabled applications.
 pros:
   - Most expressive text-to-speech engine (v3) featuring Audio Tags ([laughs], [whispers], [sighs])
@@ -163,7 +163,7 @@ For small businesses, healthcare practices, real estate brokers, and agencies, *
 For technical teams, ElevenAPI delivers production-grade audio infrastructure:
 * **Sub-500ms Streaming:** Low-latency chunked audio streaming for responsive voice interfaces.
 * **Scribe Speech-to-Text:** Transcribes audio across 99 languages at 20-50x real-time speed with speaker diarization and word-level timestamps.
-* **Vibe-Coding Compatibility:** Seamlessly integrates with tools like Cursor, Lovable, Replit, and v0.
+* **Vibe-Coding Compatibility:** Seamlessly integrates with tools like [Cursor](/reviews/cursor), Lovable, Replit, and v0.
 * **Enterprise Compliance:** SOC 2 Type II, HIPAA, GDPR, EU and India data residency options, and Zero Retention mode.
 
 ---
