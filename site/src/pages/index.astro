@@ -218,39 +218,6 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
         </div>
       ))}
     </div>
-
-    <!-- Pagination Controls (20 Software per page) -->
-    <div id="pagination-controls" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
-      <div class="text-xs font-mono text-slate-400">
-        Page <span id="current-page-display" class="text-white font-bold">1</span> sur <span id="total-pages-display" class="text-white font-bold">2</span>
-        <span class="text-slate-600 mx-2">•</span>
-        <span class="text-slate-400 font-medium">20 logiciels par page</span>
-      </div>
-
-      <div class="flex items-center gap-2">
-        <button 
-          id="prev-page-btn"
-          type="button"
-          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
-        >
-          <span>←</span>
-          <span>Précédent</span>
-        </button>
-
-        <div id="page-numbers-container" class="flex items-center gap-1.5">
-          <!-- Dynamically populated page buttons -->
-        </div>
-
-        <button 
-          id="next-page-btn"
-          type="button"
-          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
-        >
-          <span>Suivant</span>
-          <span>→</span>
-        </button>
-      </div>
-    </div>
   </section>
 
   <!-- Software Teardown Matrix Section -->
