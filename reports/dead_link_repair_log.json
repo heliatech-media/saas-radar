@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-25T08:03:26.947445",
+  "timestamp": "2026-10-25T12:12:12.660260",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 87,
-    "total_redirects_active": 61,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 89,
+    "total_redirects_active": 62,
+    "new_redirects_healed": 25,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
@@ -130,6 +130,11 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "peripety",
+      "target_url": "https://www.peripety.com",
+      "source_file": "peripety-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

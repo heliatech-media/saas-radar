@@ -227,6 +227,16 @@
     "commission_rate": "Custom tiered rewards based on software programs hosted on PartnerStack"
   },
   {
+    "name": "Peripety",
+    "slug": "peripety",
+    "tagline": "Autonomous AI video generation and cinematic synthetic production for enterprise marketing teams.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$49/mo",
+    "best_for": "B2B growth marketers, global product teams, and enterprise learning and development departments.",
+    "affiliate_url": "https://www.peripety.ai"
+  },
+  {
     "name": "PhantomBuster",
     "slug": "phantombuster",
     "tagline": "The code-free automation and data extraction platform to scale your B2B lead generation.",
@@ -245,7 +255,8 @@
     "rating": 4.5,
     "starting_price": "$11.99/mo",
     "best_for": "Content creators, remote interviewers, and marketing teams producing audio or video podcasts.",
-    "affiliate_url": "https://podcastle.ai"
+    "affiliate_url": "https://podcastle.grrow.co/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Printify",

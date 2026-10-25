@@ -102,5 +102,6 @@ AFFILIATE_MAP = {
     "wati": "https://www.wati.io/?fp_ref=heliatech",
     "webflow": "https://webflow.pxf.io/c/heliatech",
     "zapier": "https://zapier.com/app/register?via=heliatech",
-    "transistor": "https://transistor.fm/?via=heliatech"
+    "transistor": "https://transistor.fm/?via=heliatech",
+    "podcastle": "https://podcastle.grrow.co/?via=heliatech"
 }

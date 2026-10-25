@@ -83,7 +83,7 @@ Deploying AI across a team requires structure. Follow this 15-minute blueprint t
 
 ## 4. Critical Assessment & Trade-offs
 
-To help enterprise buyers make informed infrastructure decisions, here is an objective breakdown of Notion AI's strengths and limitations:
+To help enterprise buyers make informed infrastructure decisions, here is an objective breakdown of [Notion AI](/reviews/notion-ai)'s strengths and limitations:
 
 | Evaluation Metric | Notion AI Performance | Enterprise Impact | Verdict |
 | :--- | :--- | :--- | :--- |

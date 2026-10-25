@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-10-25 08:01:54 UTC",
+  "last_updated": "2026-10-25 12:10:40 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 37,
-    "total_published_investigations": 87,
-    "reviews_audited": 37,
-    "masterclasses_and_duels": 50,
+    "total_published_investigations": 89,
+    "reviews_audited": 38,
+    "masterclasses_and_duels": 51,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$12,950 USD",
@@ -189,7 +189,7 @@
     },
     {
       "slug": "podcastle",
-      "destination": "https://podcastle.ai/?via=heliatech",
+      "destination": "https://podcastle.grrow.co/?via=heliatech",
       "type": "Commission Partner"
     },
     {

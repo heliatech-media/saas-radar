@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-25 08:04:57",
-  "total_links_audited": 61,
+  "timestamp": "2026-10-25 12:13:45",
+  "total_links_audited": 62,
   "healthy_links": 60,
-  "broken_links_count": 1,
-  "health_rate": "98.4%",
+  "broken_links_count": 2,
+  "health_rate": "96.8%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -12,6 +12,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "podcastle",
+      "target_url": "https://podcastle.grrow.co/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno 11001] getaddrinfo failed)\"))"
     }
   ],
   "audit_details": [
@@ -109,7 +117,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=KWMSdwiREP6ncW&gsxid=KWMSdwiREP6ncW&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=mCDuVi4X3XgMZY&gsxid=mCDuVi4X3XgMZY&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -248,6 +256,13 @@
       "healthy": true
     },
     {
+      "slug": "peripety",
+      "target_url": "https://www.peripety.com",
+      "final_url": "https://www.peripety.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "phantombuster",
       "target_url": "https://phantombuster.com/?via=heliatech",
       "final_url": "https://phantombuster.com/?via=heliatech",
@@ -264,16 +279,17 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=sthFvGhemKX5lJ&gsxid=sthFvGhemKX5lJ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Kn31tmpIldyD7l&gsxid=Kn31tmpIldyD7l&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "podcastle",
-      "target_url": "https://podcastle.ai/?via=heliatech",
-      "final_url": "https://async.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://podcastle.grrow.co/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "power-automate",
