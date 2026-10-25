@@ -218,6 +218,39 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
         </div>
       ))}
     </div>
+
+    <!-- Pagination Controls (20 Software per page) -->
+    <div id="pagination-controls" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
+      <div class="text-xs font-mono text-slate-400">
+        Page <span id="current-page-display" class="text-white font-bold">1</span> sur <span id="total-pages-display" class="text-white font-bold">2</span>
+        <span class="text-slate-600 mx-2">•</span>
+        <span class="text-slate-400 font-medium">20 logiciels par page</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button 
+          id="prev-page-btn"
+          type="button"
+          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
+        >
+          <span>←</span>
+          <span>Précédent</span>
+        </button>
+
+        <div id="page-numbers-container" class="flex items-center gap-1.5">
+          <!-- Dynamically populated page buttons -->
+        </div>
+
+        <button 
+          id="next-page-btn"
+          type="button"
+          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
+        >
+          <span>Suivant</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
   </section>
 
   <!-- Software Teardown Matrix Section -->
@@ -238,8 +271,8 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
             A-Z
           </button>
         </div>
-        <div class="text-xs font-mono text-slate-400 border-l border-slate-800 pl-4">
-          SHOWING: <span id="tool-count" class="text-cyan-300 font-bold">{toolsData.length}</span> OF {toolsData.length}
+        <div class="text-xs font-mono text-slate-400 border-l border-slate-800 pl-4 whitespace-nowrap">
+          SHOWING: <span id="tool-count" class="text-cyan-300 font-bold">1–20</span> OF <span id="tool-total">{toolsData.length}</span>
         </div>
       </div>
     </div>
@@ -324,6 +357,39 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
         </div>
       ))}
     </div>
+
+    <!-- Pagination Controls (20 Software per page) -->
+    <div id="pagination-controls" class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
+      <div class="text-xs font-mono text-slate-400">
+        Page <span id="current-page-display" class="text-white font-bold">1</span> sur <span id="total-pages-display" class="text-white font-bold">2</span>
+        <span class="text-slate-600 mx-2">•</span>
+        <span class="text-slate-400 font-medium">20 logiciels par page</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button 
+          id="prev-page-btn"
+          type="button"
+          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
+        >
+          <span>←</span>
+          <span>Précédent</span>
+        </button>
+
+        <div id="page-numbers-container" class="flex items-center gap-1.5">
+          <!-- Dynamically populated page buttons -->
+        </div>
+
+        <button 
+          id="next-page-btn"
+          type="button"
+          class="px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700 disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 cursor-pointer"
+        >
+          <span>Suivant</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
   </section>
 
   <!-- Editorial Methodology & Standards Section (Stealth Mode: No Bot/Agent disclosure) -->
@@ -392,23 +458,118 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
     </div>
   </section>
 
-  <!-- Interactive Search / Filter Controller -->
+  <!-- Interactive Search / Filter / Pagination Controller (20 Per Page) -->
   <script is:inline>
     const searchInput = document.getElementById('search-input');
     const filterButtons = document.querySelectorAll('#category-filters button');
     const cards = Array.from(document.querySelectorAll('.tool-card'));
     const countSpan = document.getElementById('tool-count');
+    const totalSpan = document.getElementById('tool-total');
     const emptyState = document.getElementById('empty-state');
     const resetBtn = document.getElementById('reset-filters');
     const toolsGrid = document.getElementById('tools-grid');
     const sortRatingBtn = document.getElementById('sort-rating');
     const sortNameBtn = document.getElementById('sort-name');
 
+    const paginationWrapper = document.getElementById('pagination-controls');
+    const pageNumbersContainer = document.getElementById('page-numbers-container');
+    const prevBtn = document.getElementById('prev-page-btn');
+    const nextBtn = document.getElementById('next-page-btn');
+    const curDisplay = document.getElementById('current-page-display');
+    const totalDisplay = document.getElementById('total-pages-display');
+
+    const PAGE_SIZE = 20;
+    let currentPage = 1;
     let activeCategory = 'All Systems';
+    let currentFilteredCards = [...cards];
+
+    function renderPagination(totalFiltered) {
+      const totalPages = Math.ceil(totalFiltered / PAGE_SIZE) || 1;
+      if (currentPage > totalPages) currentPage = 1;
+
+      if (!paginationWrapper) return;
+
+      if (totalFiltered <= PAGE_SIZE) {
+        paginationWrapper.style.display = totalFiltered === 0 ? 'none' : 'flex';
+      } else {
+        paginationWrapper.style.display = 'flex';
+      }
+
+      if (curDisplay) curDisplay.textContent = currentPage.toString();
+      if (totalDisplay) totalDisplay.textContent = totalPages.toString();
+
+      if (prevBtn) {
+        prevBtn.disabled = currentPage === 1;
+      }
+      if (nextBtn) {
+        nextBtn.disabled = currentPage === totalPages;
+      }
+
+      if (pageNumbersContainer) {
+        pageNumbersContainer.innerHTML = '';
+        for (let p = 1; p <= totalPages; p++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = p.toString();
+          btn.className = p === currentPage
+            ? 'w-8 h-8 rounded-xl text-xs font-mono font-bold bg-cyan-500 text-slate-950 shadow-glow-cyan'
+            : 'w-8 h-8 rounded-xl text-xs font-mono font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors cursor-pointer';
+          btn.addEventListener('click', () => {
+            currentPage = p;
+            applyDisplayAndPagination(true);
+          });
+          pageNumbersContainer.appendChild(btn);
+        }
+      }
+    }
+
+    function applyDisplayAndPagination(shouldScroll = false) {
+      const totalFiltered = currentFilteredCards.length;
+      const totalPages = Math.ceil(totalFiltered / PAGE_SIZE) || 1;
+      if (currentPage > totalPages) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const endIndex = Math.min(startIndex + PAGE_SIZE, totalFiltered);
+
+      // Hide all cards first
+      cards.forEach(card => card.style.display = 'none');
+
+      // Show only cards for the active page
+      for (let i = startIndex; i < endIndex; i++) {
+        if (currentFilteredCards[i]) {
+          currentFilteredCards[i].style.display = 'flex';
+        }
+      }
+
+      // Update header telemetry counter
+      if (countSpan) {
+        if (totalFiltered === 0) {
+          countSpan.textContent = '0';
+        } else {
+          countSpan.textContent = `${startIndex + 1}–${endIndex}`;
+        }
+      }
+      if (totalSpan) {
+        totalSpan.textContent = totalFiltered.toString();
+      }
+
+      if (emptyState) {
+        emptyState.style.display = totalFiltered === 0 ? 'block' : 'none';
+      }
+
+      renderPagination(totalFiltered);
+
+      if (shouldScroll) {
+        const matrixSection = document.getElementById('categories');
+        if (matrixSection) {
+          matrixSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
 
     function filterTools() {
       const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
-      let visibleCount = 0;
+      currentFilteredCards = [];
 
       cards.forEach(card => {
         const name = card.dataset.name || '';
@@ -420,17 +581,12 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
         const matchesCategory = activeCategory === 'All Systems' || macro === activeCategory || category === activeCategory;
 
         if (matchesSearch && matchesCategory) {
-          card.style.display = 'flex';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
+          currentFilteredCards.push(card);
         }
       });
 
-      if (countSpan) countSpan.textContent = visibleCount.toString();
-      if (emptyState) {
-        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-      }
+      currentPage = 1;
+      applyDisplayAndPagination(false);
     }
 
     if (searchInput) {
@@ -467,6 +623,26 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
       });
     }
 
+    // Prev / Next pagination click handlers
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          applyDisplayAndPagination(true);
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const totalPages = Math.ceil(currentFilteredCards.length / PAGE_SIZE) || 1;
+        if (currentPage < totalPages) {
+          currentPage++;
+          applyDisplayAndPagination(true);
+        }
+      });
+    }
+
     // Sorting handlers
     if (sortRatingBtn && toolsGrid) {
       sortRatingBtn.addEventListener('click', () => {
@@ -474,6 +650,7 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
         cards.forEach(card => toolsGrid.appendChild(card));
         sortRatingBtn.className = 'px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold transition-all';
         if (sortNameBtn) sortNameBtn.className = 'px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 transition-all';
+        filterTools();
       });
     }
 
@@ -483,7 +660,11 @@ const latestArticles = blogPosts.sort((a, b) => new Date(b.data.date).getTime() 
         cards.forEach(card => toolsGrid.appendChild(card));
         sortNameBtn.className = 'px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold transition-all';
         if (sortRatingBtn) sortRatingBtn.className = 'px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 transition-all';
+        filterTools();
       });
     }
+
+    // Initial pagination execution on page load
+    filterTools();
   </script>
 </Layout>
