@@ -20,6 +20,7 @@ load_dotenv()
 
 # Gemini API Key (Can be set via .env or system environment)
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+DEVTO_API_KEY = os.getenv("DEVTO_API_KEY", "")
 
 # Default Model as per Google GenAI SDK standards
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")

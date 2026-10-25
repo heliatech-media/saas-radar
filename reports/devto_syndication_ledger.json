@@ -1,0 +1,31 @@
+{
+  "syndicated_articles": {
+    "eleven-v4-voice-ai-benchmark": {
+      "id": 4912911,
+      "url": "https://dev.to/heliatech/elevenlabs-eleven-v4-architecture-the-benchmark-test-latency-breakdown-and-enterprise-3ph1",
+      "title": "ElevenLabs Eleven v4 Architecture: The Benchmark Test, Latency Breakdown, and Enterprise Implementation (2026)",
+      "canonical_url": "https://heliatech.online/blog/eleven-v4-voice-ai-benchmark",
+      "published": true,
+      "tags": [
+        "ai",
+        "technology",
+        "audio",
+        "machinelearning"
+      ]
+    },
+    "make-automation-revolution": {
+      "id": 4912912,
+      "url": "https://dev.to/heliatech/from-integromat-to-make-the-evolution-of-visual-automation-and-the-hands-on-guide-for-2026-ajm",
+      "title": "From Integromat to Make: The Evolution of Visual Automation and the Hands-on Guide for 2026",
+      "canonical_url": "https://heliatech.online/blog/make-automation-revolution",
+      "published": true,
+      "tags": [
+        "make",
+        "automation",
+        "nocode",
+        "productivity"
+      ]
+    }
+  },
+  "last_sync": null
+}
