@@ -1,0 +1,19 @@
+{
+  "published_posts": {
+    "eleven-v4-voice-ai-benchmark": {
+      "published_at": "2026-10-25T15:03:32.897779",
+      "share_urn": "urn:li:share:7520122882438447104",
+      "title": "ElevenLabs Eleven v4 Architecture: The Benchmark Test, Latency Breakdown, and Enterprise Implementation (2026)",
+      "tool_slug": "elevenlabs",
+      "canonical_url": "https://heliatech.online/blog/eleven-v4-voice-ai-benchmark"
+    },
+    "make-vs-zapier": {
+      "published_at": "2026-10-25T15:04:32.335908",
+      "share_urn": "urn:li:share:7520123131580145664",
+      "title": "Make vs Zapier: The 2026 Enterprise Automation Teardown",
+      "tool_slug": "make",
+      "canonical_url": "https://heliatech.online/blog/make-vs-zapier"
+    }
+  },
+  "last_publish": "2026-10-25T15:04:32.335917"
+}

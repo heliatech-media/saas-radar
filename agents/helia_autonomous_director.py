@@ -71,6 +71,7 @@ from agents.reddit_infiltrator_agent import RedditInfiltratorAgent
 from agents.auto_evolution_agent import HeliaAutoEvolutionAgent
 from agents.breaking_news_sniffer_agent import BreakingNewsSnifferAgent
 from agents.devto_syndication_agent import syndicate_next_monetized_article
+from agents.linkedin_syndication_agent import LinkedInSyndicator
 from agents.models import ToolReview
 
 
@@ -110,6 +111,7 @@ class HeliaAutonomousDirector:
         self.reddit_infiltrator = RedditInfiltratorAgent(api_key=api_key)
         self.auto_evolution = HeliaAutoEvolutionAgent(api_key=api_key)
         self.news_sniffer = BreakingNewsSnifferAgent(api_key=api_key)
+        self.linkedin_syndicator = LinkedInSyndicator()
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -340,6 +342,17 @@ class HeliaAutonomousDirector:
                 self.log("Helia-DEVToSyndicator", f"Syndicator status: {devto_res.get('message', 'Standby')}", "📋")
         except Exception as e:
             self.log("Helia-DEVToSyndicator", f"DEV.to syndicator notice: {e}", "⚠️")
+
+        # Step 6.19: Sub-Agent LinkedInSyndicator (Automated 2-3 Posts/Day on LinkedIn)
+        try:
+            self.log("Helia-LinkedInSyndicator", "Broadcasting next monetized 'Standard Emblème' breakdown to LinkedIn...", "💼")
+            li_res = self.linkedin_syndicator.syndicate_next_article()
+            if li_res.get("status") == "SUCCESS":
+                self.log("Helia-LinkedInSyndicator", f"Published live to LinkedIn: {li_res['slug']} | URN: {li_res['share_urn']}", "🌟")
+            else:
+                self.log("Helia-LinkedInSyndicator", f"LinkedIn syndicator status: {li_res.get('status', 'Standby')}", "📋")
+        except Exception as e:
+            self.log("Helia-LinkedInSyndicator", f"LinkedIn syndicator notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")
