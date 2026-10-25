@@ -59,7 +59,51 @@ def parse_frontmatter(content: str) -> tuple[dict, str]:
     return frontmatter, body
 
 
-def sanitize_tags(raw_tags: list[str]) -> list[str]:
+def get_monetized_queue() -> list[str]:
+    """Returns a list of blog slugs that have active monetization in AFFILIATE_MAP."""
+    from agents.config import AFFILIATE_MAP
+    monetized_slugs = []
+
+    for md_file in BLOG_CONTENT_DIR.glob("*.md"):
+        slug = md_file.stem
+        try:
+            content = md_file.read_text(encoding="utf-8")
+            fm, _ = parse_frontmatter(content)
+            tool_slug = fm.get("tool_slug", "")
+            # If tool_slug matches a key in AFFILIATE_MAP or slug contains an affiliate partner name
+            is_monetized = False
+            if tool_slug and tool_slug in AFFILIATE_MAP:
+                is_monetized = True
+            else:
+                for k in AFFILIATE_MAP.keys():
+                    if k in slug:
+                        is_monetized = True
+                        break
+
+            if is_monetized:
+                monetized_slugs.append(slug)
+        except Exception:
+            continue
+
+    return sorted(monetized_slugs)
+
+
+def syndicate_next_monetized_article() -> dict:
+    """Finds and syndicates the next available monetized blog article not yet published to DEV.to."""
+    ledger = load_ledger()
+    already_published = set(ledger.get("syndicated_articles", {}).keys())
+    queue = get_monetized_queue()
+
+    remaining = [slug for slug in queue if slug not in already_published]
+
+    if not remaining:
+        print("[DEV.to Syndicator] All monetized articles have already been syndicated!")
+        return {"status": "complete", "message": "Queue exhausted"}
+
+    next_slug = remaining[0]
+    print(f"[DEV.to Syndicator] Next candidate for publication: {next_slug} ({len(remaining)} remaining)")
+    res = publish_article(next_slug, publish_live=True)
+    return {"status": "syndicated", "slug": next_slug, "result": res}
     """DEV.to allows up to 4 tags, alphanumeric lowercase only."""
     clean = []
     default_tags = ["ai", "saas", "webdev", "productivity"]

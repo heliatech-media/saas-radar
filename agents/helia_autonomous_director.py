@@ -69,6 +69,8 @@ from agents.lupin_agent import LupinAgent
 from agents.badge_trojan_agent import BadgeTrojanAgent
 from agents.reddit_infiltrator_agent import RedditInfiltratorAgent
 from agents.auto_evolution_agent import HeliaAutoEvolutionAgent
+from agents.breaking_news_sniffer_agent import BreakingNewsSnifferAgent
+from agents.devto_syndication_agent import syndicate_next_monetized_article
 from agents.models import ToolReview
 
 
@@ -107,6 +109,7 @@ class HeliaAutonomousDirector:
         self.badge_trojan = BadgeTrojanAgent()
         self.reddit_infiltrator = RedditInfiltratorAgent(api_key=api_key)
         self.auto_evolution = HeliaAutoEvolutionAgent(api_key=api_key)
+        self.news_sniffer = BreakingNewsSnifferAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -309,6 +312,25 @@ class HeliaAutonomousDirector:
             self.log("Helia-AutoEvolution", f"Platform advanced to {evo_res['generation']} (Fitness: {evo_res['fitness_score']} | Mutations: {evo_res['total_mutations_executed']}).", "✨")
         except Exception as e:
             self.log("Helia-AutoEvolution", f"Auto-Evolution notice: {e}", "⚠️")
+
+        # Step 6.17: Sub-Agent BreakingNewsSniffer (Monetized Partner Changelog & Trend Sniffer)
+        try:
+            self.log("Helia-NewsSniffer", "Sniffing partner changelogs and breaking developer feeds...", "🛰️")
+            sniff_res = self.news_sniffer.sniff_all_partners()
+            self.log("Helia-NewsSniffer", f"Scan complete: {sniff_res['total_events_detected']} new updates scanned | {len(sniff_res['breaking_opportunities'])} breaking opportunities identified.", "⚡")
+        except Exception as e:
+            self.log("Helia-NewsSniffer", f"News sniffer notice: {e}", "⚠️")
+
+        # Step 6.18: Sub-Agent DEVToSyndicator (Automated High-DR Syndication Queue - 3-4 Articles/Day)
+        try:
+            self.log("Helia-DEVToSyndicator", "Evaluating monetized blog queue for DEV.to authority syndication...", "🚀")
+            devto_res = syndicate_next_monetized_article()
+            if devto_res.get("status") == "syndicated":
+                self.log("Helia-DEVToSyndicator", f"Syndicated monetized article: {devto_res['slug']}", "🌟")
+            else:
+                self.log("Helia-DEVToSyndicator", f"Syndicator status: {devto_res.get('message', 'Standby')}", "📋")
+        except Exception as e:
+            self.log("Helia-DEVToSyndicator", f"DEV.to syndicator notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")

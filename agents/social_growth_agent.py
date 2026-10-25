@@ -238,8 +238,8 @@ No markdown fences or commentary.
         import time
 
         prompt = f"""
-You are the Chief B2B Growth Strategist and Media Director for HELIA TECH (heliatech.online).
-Write an elite, high-retention LinkedIn thought-leadership post based on this software investigation:
+You are the Chief B2B Growth Strategist & Master Media Director for HELIA TECH (heliatech.online).
+Write an ELITE, EMBLEMATIC, high-authority LinkedIn thought-leadership post based on this software investigation:
 
 Article Title: {post.title}
 Software Tool: {post.tool_slug.capitalize()}
@@ -247,13 +247,13 @@ Category: {post.category}
 Key Insights: {', '.join(post.tldr)}
 Article URL: https://heliatech.online/blog/{post.slug}
 
-Formatting & Tone Directives:
-1. Short, punchy sentences with ample white space (1-2 lines per paragraph for mobile readability).
-2. Start with an arresting executive question or counter-intuitive industry fact.
-3. Include 3 bullet points using symbols (→, ▹, or ⚡) breaking down the ROI or velocity impact.
-4. Conclude with an invitation to read the full benchmark dossier at the article URL.
-5. Add 3 to 5 targeted B2B hashtags (e.g. #SaaS #Productivity #AI #Automation #TechStrategy).
-6. 100% native professional American English.
+💎 THE HELIATECH "EMBLÈME" COPYWRITING STANDARD:
+1. THE COLD OPENING (Anti-Fluff): Start with an arresting executive reality, a contrarian engineering thesis, or an expensive architectural mistake. ZERO generic platitudes ("In today's fast-paced world...", "AI is changing everything...").
+2. HIGH DATA DENSITY: Replace vague claims with hard metrics (latency in ms, TCO cost deltas in $/month, error-rate thresholds, scaling breakpoints).
+3. RADICAL HONESTY (The Trust Paradox): Explicitly cite 1 concrete engineering limitation or trade-off (e.g. learning curve, API rate limits, lack of enterprise SSO). True authority admits drawbacks.
+4. TROJAN CALL-TO-ACTION: Position the article URL not as a sales link, but as an indispensable engineering benchmark, interactive calculator, or architectural dossier.
+5. TYPOGRAPHY & CADENCE: Punchy 1-2 sentence paragraphs with clean line breaks. Use bullet markers (→ or ⚡) for empirical findings. Add 3 to 5 high-intent B2B hashtags (#SaaS #EnterpriseTech #Automation #Engineering #ROI).
+6. 100% native, razor-sharp American English.
 
 Reply ONLY with the text of the LinkedIn post. No commentary.
 """
