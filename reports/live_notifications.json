@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-25 03:01:05",
+    "title": "Cycle Autonome #Transistor",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Transistor et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-25 03:00:16",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",

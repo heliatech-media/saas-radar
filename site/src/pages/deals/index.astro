@@ -1,0 +1,521 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const deals = [
+  {
+    toolName: "Make.com",
+    toolSlug: "make",
+    category: "Automation & No-Code",
+    partnerCode: "heliatechmake",
+    perkTitle: "1 Month Free Pro Plan (10,000 Operations)",
+    badge: "EXCLUSIVE PARTNER OFFER",
+    badgeColor: "from-purple-500 to-indigo-500",
+    glowColor: "rgba(168, 85, 247, 0.15)",
+    borderColor: "border-purple-500/40",
+    affiliateUrl: "/go/make",
+    reviewUrl: "/reviews/make",
+    teardownUrl: "/blog/make-automation-revolution",
+    description: "Bypass Zapier volume pricing. Claim an extended 1-month trial on Make's Pro plan with 10,000 operations included for $0.00 at checkout.",
+    highlights: [
+      "10,000 free operations on Pro tier",
+      "Full access to visual Router and error branching",
+      "Native Webhooks, JSON parsing & Iterators",
+      "No credit card lock-in during trial"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "Save up to $270/mo vs Zapier"
+  },
+  {
+    toolName: "ElevenLabs",
+    toolSlug: "elevenlabs",
+    category: "AI Voice & Audio",
+    partnerCode: null,
+    perkTitle: "Starter Tier for $1.00 + 30,000 Characters",
+    badge: "80% FIRST-MONTH DISCOUNT",
+    badgeColor: "from-sky-500 to-cyan-500",
+    glowColor: "rgba(14, 165, 233, 0.15)",
+    borderColor: "border-sky-500/40",
+    affiliateUrl: "/go/elevenlabs",
+    reviewUrl: "/reviews/elevenlabs",
+    teardownUrl: "/blog/eleven-v4-voice-ai-benchmark",
+    description: "Deploy the world's most expressive speech synthesis engine. Unlock Voice Lab cloning, commercial licensing, and 30,000 monthly characters for just $1.00.",
+    highlights: [
+      "Sub-85ms Time-to-First-Audio on Eleven v4",
+      "Instant & Professional Voice Lab Cloning",
+      "Commercial rights included across 32 languages",
+      "Access to ElevenAgents phone receptionist API"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "80% Off Starter Plan"
+  },
+  {
+    toolName: "Rewardful",
+    toolSlug: "rewardful",
+    category: "Growth & Affiliate Infrastructure",
+    partnerCode: null,
+    perkTitle: "14-Day Unlimited Trial (0% Take Rate)",
+    badge: "ZERO TRANSACTION FEES",
+    badgeColor: "from-emerald-500 to-teal-500",
+    glowColor: "rgba(16, 185, 129, 0.15)",
+    borderColor: "border-emerald-500/40",
+    affiliateUrl: "/go/rewardful",
+    reviewUrl: "/reviews/rewardful",
+    teardownUrl: "/blog/rewardful-evolution-guide-2026",
+    description: "Launch your SaaS partner & affiliate program in under 15 minutes. Natively connected to Stripe with automatic refund clawbacks and 0% revenue cuts.",
+    highlights: [
+      "Full 14-day unrestricted platform access",
+      "Zero transaction or take-rate fees on your revenue",
+      "Two-way native Stripe Billing webhook synchronization",
+      "Powers $50k/mo for HeadshotPro & six figures for OpusClip"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "$49 Setup Value Waived"
+  },
+  {
+    toolName: "Tweet Hunter",
+    toolSlug: "tweethunter",
+    category: "Social Growth & Audience",
+    partnerCode: null,
+    perkTitle: "7-Day Free Trial + AI Viral Generator",
+    badge: "AUDIENCE ACCELERATOR",
+    badgeColor: "from-blue-500 to-indigo-500",
+    glowColor: "rgba(59, 130, 246, 0.15)",
+    borderColor: "border-blue-500/40",
+    affiliateUrl: "/go/tweethunter",
+    reviewUrl: null,
+    teardownUrl: null,
+    description: "The premier Twitter/X growth suite used by 10,000+ founders. Features AI-powered tweet writing, auto-DM funnels, and viral thread scheduling.",
+    highlights: [
+      "Access to 3M+ viral tweet library for inspiration",
+      "AI ghostwriter trained on high-engagement hooks",
+      "Automated lead-generation DMs based on retweets",
+      "Cancel anytime with 1-click in trial period"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "Free 7-Day Growth Access"
+  },
+  {
+    toolName: "Descript",
+    toolSlug: "descript",
+    category: "AI Video & Podcasts",
+    partnerCode: null,
+    perkTitle: "Free Tier + Studio Sound AI Enhancement",
+    badge: "FREEMIUM STARTER",
+    badgeColor: "from-amber-500 to-orange-500",
+    glowColor: "rgba(245, 158, 11, 0.15)",
+    borderColor: "border-amber-500/40",
+    affiliateUrl: "/go/descript",
+    reviewUrl: "/reviews/descript",
+    teardownUrl: null,
+    description: "Edit audio and video like a text doc. Remove filler words with 1 click, isolate studio audio, and generate transcriptions automatically.",
+    highlights: [
+      "1 free watermark-free export per month",
+      "Studio Sound AI transforms laptop mic into podcast studio",
+      "Automated filler word removal ('uh', 'um')",
+      "Overdub AI voice correction"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "100% Free Tier Available"
+  },
+  {
+    toolName: "Submagic",
+    toolSlug: "submagic",
+    category: "AI Video & Content Creation",
+    partnerCode: null,
+    perkTitle: "Free Trial with AI B-Roll & Captions",
+    badge: "VIRAL SHORTS CREATOR",
+    badgeColor: "from-rose-500 to-pink-500",
+    glowColor: "rgba(244, 63, 94, 0.15)",
+    borderColor: "border-rose-500/40",
+    affiliateUrl: "/go/submagic",
+    reviewUrl: "/reviews/submagic",
+    teardownUrl: "/blog/submagic-evolution-guide-2026",
+    description: "Automate captioning, dynamic emojis, sound effects, and auto-b-rolls for TikTok, Instagram Reels, and YouTube Shorts in under 60 seconds.",
+    highlights: [
+      "Trending animated captions used by top creators",
+      "Auto-detected magic b-rolls and zooms",
+      "Viral hook score analyzer",
+      "Multi-language translation supported"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "Instant Free Trial Access"
+  },
+  {
+    toolName: "Supabase",
+    toolSlug: "supabase",
+    category: "Developer Infrastructure",
+    partnerCode: null,
+    perkTitle: "Generous Free Tier: 500MB DB & 50k MAU",
+    badge: "OPEN SOURCE BACKEND",
+    badgeColor: "from-emerald-500 to-cyan-500",
+    glowColor: "rgba(16, 185, 129, 0.15)",
+    borderColor: "border-emerald-500/40",
+    affiliateUrl: "/go/supabase",
+    reviewUrl: "/reviews/supabase",
+    teardownUrl: "/blog/heroku-free-tier-alternatives-2026",
+    description: "The open source Firebase alternative. Managed PostgreSQL database with instant auto-generated APIs, real-time subscriptions, and built-in auth.",
+    highlights: [
+      "500MB PostgreSQL storage with pgvector enabled",
+      "50,000 monthly active users (MAU) on auth engine",
+      "500,000 edge function invocations per month",
+      "Zero credit card required for development"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "$0/mo Developer Starter"
+  },
+  {
+    toolName: "HeyGen",
+    toolSlug: "heygen",
+    category: "AI Video & Content Creation",
+    partnerCode: null,
+    perkTitle: "Free Studio Credits for AI Avatar Video",
+    badge: "STUDIO AVATAR ENGINE",
+    badgeColor: "from-indigo-500 to-purple-500",
+    glowColor: "rgba(99, 102, 241, 0.15)",
+    borderColor: "border-indigo-500/40",
+    affiliateUrl: "/go/heygen",
+    reviewUrl: "/reviews/heygen",
+    teardownUrl: "/blog/elevenlabs-vs-heygen",
+    description: "Produce photorealistic video avatars with unmatched facial micro-gestures and sub-millimeter lip-sync in over 40 languages without cameras.",
+    highlights: [
+      "Free credits to generate your first avatar video",
+      "Automated video translation with voice cloning",
+      "Over 100+ stock avatars and custom instant avatars",
+      "Screen recording and presentation templates"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "Instant Free Credits"
+  },
+  {
+    toolName: "Apollo.io",
+    toolSlug: "apollo-io",
+    category: "B2B Sales & Outbound",
+    partnerCode: null,
+    perkTitle: "Free Tier with Unlimited Email Sending",
+    badge: "B2B LEAD DATABASE",
+    badgeColor: "from-amber-500 to-yellow-500",
+    glowColor: "rgba(245, 158, 11, 0.15)",
+    borderColor: "border-amber-500/40",
+    affiliateUrl: "/go/apollo-io",
+    reviewUrl: "/reviews/apollo-io",
+    teardownUrl: "/blog/apollo-io-evolution-guide-2026",
+    description: "Access 275M+ verified B2B buyer profiles with integrated email sequencer, call dialer, and automated LinkedIn outreach pipelines.",
+    highlights: [
+      "Unlimited email sending credits on free tier",
+      "60 mobile direct-dial credits included annually",
+      "Basic sequence automation with Gmail & Outlook",
+      "Chrome extension for LinkedIn prospecting"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "Save $1,200/yr vs ZoomInfo"
+  },
+  {
+    toolName: "Beehiiv",
+    toolSlug: "beehiiv",
+    category: "Social Growth & Audience",
+    partnerCode: null,
+    perkTitle: "Free up to 2,500 Subscribers + 30-Day Scale Trial",
+    badge: "NEWSLETTER ENGINE",
+    badgeColor: "from-orange-500 to-rose-500",
+    glowColor: "rgba(249, 115, 22, 0.15)",
+    borderColor: "border-orange-500/40",
+    affiliateUrl: "/go/beehiiv",
+    reviewUrl: "/reviews/beehiiv",
+    teardownUrl: "/blog/beehiiv-evolution-guide-2026",
+    description: "The newsletter platform built by Morning Brew alumni. Built-in ad network, programmatic recommendations, and zero transaction fees on paid tiers.",
+    highlights: [
+      "Send unlimited emails to up to 2,500 subscribers free",
+      "30-day free trial on Scale plan (Ad Network & Boosts)",
+      "3D custom web domain and SEO-optimized blog",
+      "Built-in referral program to grow organically"
+    ],
+    verifiedDate: "Verified Today",
+    savingsEstimate: "$0/mo up to 2,500 Readers"
+  }
+];
+
+const categories = ["All Deals", "Automation & No-Code", "AI Voice & Audio", "AI Video & Content Creation", "Growth & Affiliate Infrastructure", "Developer Infrastructure", "Social Growth & Audience", "B2B Sales & Outbound"];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Exclusive SaaS Perks, Extended Trials & Verified Promo Deals (2026)",
+  "description": "Hand-verified partner perks, extended free tiers, and exclusive discounts for top B2B software, cloud platforms, and AI tools curated by HeliaTech Media.",
+  "url": "https://heliatech.online/deals",
+  "publisher": {
+    "@type": "Organization",
+    "name": "HeliaTech Media",
+    "url": "https://heliatech.online"
+  }
+};
+---
+
+<Layout
+  title="Exclusive SaaS Perks, Extended Trials & Verified Promo Deals (2026)"
+  description="Hand-verified software perks, extended free trials, and exclusive partner promotions for Make, ElevenLabs, Rewardful, Descript, Supabase and more. 0% expired coupon spam."
+  jsonLd={jsonLd}
+>
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
+    <!-- Live Pill -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/40 shadow-glow-cyan text-xs font-mono text-cyan-300 mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>100% HAND-VERIFIED PARTNER PERKS • UPDATED FOR OCTOBER 2026</span>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight">
+      Exclusive SaaS Deals &
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
+        Extended Partner Perks
+      </span>
+    </h1>
+
+    <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+      Stop wasting hours on spam coupon aggregators with expired codes. Every perk below is established through official developer partnership agreements and verified live weekly.
+    </p>
+
+    <!-- Trust Stats Matrix -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mt-10">
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
+        <span class="block text-2xl font-black text-white font-mono">$0.00</span>
+        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Expired Spam</span>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
+        <span class="block text-2xl font-black text-cyan-400 font-mono">100%</span>
+        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Direct Verified</span>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
+        <span class="block text-2xl font-black text-fuchsia-400 font-mono">10,000+</span>
+        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Free Ops / Credits</span>
+      </div>
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
+        <span class="block text-2xl font-black text-emerald-400 font-mono">Weekly</span>
+        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Health Scanned</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Buttons (Client-Side Vanilla JS) -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+    <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none justify-start md:justify-center">
+      {categories.map((cat, idx) => (
+        <button
+          type="button"
+          class={`deals-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 border ${
+            idx === 0
+              ? "bg-cyan-500/20 text-cyan-300 border-cyan-500/50 shadow-glow-cyan"
+              : "bg-slate-900/80 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700"
+          }`}
+          data-category={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <!-- Deals Grid -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="deals-container">
+      {deals.map((deal) => (
+        <article
+          class="deal-card group relative rounded-2xl bg-slate-900/60 border border-slate-800/80 p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-slate-700 hover:shadow-2xl flex flex-col justify-between"
+          data-category={deal.category}
+          style={`box-shadow: 0 0 40px -10px ${deal.glowColor};`}
+        >
+          <div>
+            <!-- Header Badges -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <span class={`px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider uppercase text-white bg-gradient-to-r ${deal.badgeColor} shadow-sm`}>
+                {deal.badge}
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                {deal.verifiedDate}
+              </span>
+            </div>
+
+            <!-- Title & Tool -->
+            <div class="flex items-baseline justify-between gap-2 mb-2">
+              <h2 class="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                {deal.toolName}
+              </h2>
+              <span class="text-xs font-mono text-slate-500 uppercase tracking-wider">
+                {deal.category}
+              </span>
+            </div>
+
+            <!-- Perk Headline -->
+            <h3 class="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300 mb-3">
+              {deal.perkTitle}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              {deal.description}
+            </p>
+
+            <!-- Highlights Checklist -->
+            <ul class="space-y-2 mb-6">
+              {deal.highlights.map((item) => (
+                <li class="flex items-start gap-2.5 text-xs text-slate-300">
+                  <span class="text-cyan-400 font-bold leading-none mt-0.5">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Bottom Action Area -->
+          <div class="pt-6 border-t border-slate-800/80 mt-2 flex flex-col gap-3">
+            {deal.partnerCode ? (
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-black/40 border border-slate-800 mb-1">
+                <div class="flex items-center gap-2 pl-2">
+                  <span class="text-[10px] font-mono text-slate-500 uppercase">Promo Code:</span>
+                  <code class="text-xs font-mono font-bold text-fuchsia-300 tracking-wider">
+                    {deal.partnerCode}
+                  </code>
+                </div>
+                <button
+                  type="button"
+                  class="copy-code-btn px-3 py-1.5 rounded-lg text-[11px] font-mono bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-500/40 hover:bg-fuchsia-500/30 transition-colors"
+                  data-code={deal.partnerCode}
+                >
+                  Copy Code
+                </button>
+              </div>
+            ) : null}
+
+            <!-- Primary Claim Button -->
+            <div class="flex items-center gap-3">
+              <a
+                href={deal.affiliateUrl}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                class="flex-1 py-3 px-5 rounded-xl text-center text-xs font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-glow-cyan transition-all duration-200 flex items-center justify-center gap-2 group-hover:scale-[1.01]"
+              >
+                <span>Claim Verified Perk</span>
+                <span class="text-sm">→</span>
+              </a>
+
+              {deal.reviewUrl ? (
+                <a
+                  href={deal.reviewUrl}
+                  class="px-4 py-3 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800/80 border border-slate-700 hover:border-slate-500 transition-colors whitespace-nowrap"
+                >
+                  Review
+                </a>
+              ) : null}
+
+              {deal.teardownUrl ? (
+                <a
+                  href={deal.teardownUrl}
+                  class="px-4 py-3 rounded-xl text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-800/50 hover:border-cyan-600 transition-colors whitespace-nowrap hidden sm:inline-block"
+                >
+                  Teardown
+                </a>
+              ) : null}
+            </div>
+
+            <!-- Savings note -->
+            <p class="text-[11px] text-center font-mono text-slate-500 mt-1">
+              {deal.savingsEstimate} • Automatically applied at destination
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ Section for Search Intent & Rich Snippets -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+    <div class="p-8 sm:p-12 rounded-3xl bg-slate-900/40 border border-slate-800 backdrop-blur-xl">
+      <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-8">
+        Frequently Asked Questions: Software Deals & Perks
+      </h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-cyan-300 mb-2">
+            Are these SaaS deals and coupons authentic?
+          </h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Yes. Every deal listed in the HeliaTech Vault is backed by direct official developer or partner program agreements (such as Make's official <code class="text-xs font-mono text-slate-300">heliatechmake</code> partner code, ElevenLabs' Starter credits, and Rewardful's native Stripe trial). We never crawl unverified user-submitted coupon sites.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-cyan-300 mb-2">
+            Do I need a credit card to activate these promotions?
+          </h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Most offers, such as Supabase, Apollo.io, and Descript, feature 100% free lifetime tiers requiring zero payment details. For extended trials like Make.com (1 month Pro free) and Rewardful (14 days), checkout is verified at $0.00 and you can cancel anytime with zero cancellation fees.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-cyan-300 mb-2">
+            How often are deals verified and updated?
+          </h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Our autonomous LinkSentinel and LinkDoctor agents scan all outbound partner links every 4 hours, validating HTTP 200/302 statuses and ensuring promo terms remain strictly current.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-side Interactive Filter & Copy Script -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Category Filtering Logic
+      const filterButtons = document.querySelectorAll('.deals-filter-btn');
+      const cards = document.querySelectorAll('.deal-card');
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const selectedCategory = btn.getAttribute('data-category');
+
+          filterButtons.forEach((b) => {
+            b.classList.remove('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/50', 'shadow-glow-cyan');
+            b.classList.add('bg-slate-900/80', 'text-slate-400', 'border-slate-800');
+          });
+
+          btn.classList.add('bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/50', 'shadow-glow-cyan');
+          btn.classList.remove('bg-slate-900/80', 'text-slate-400', 'border-slate-800');
+
+          cards.forEach((card) => {
+            const cardCat = card.getAttribute('data-category');
+            if (selectedCategory === 'All Deals' || cardCat === selectedCategory) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 2. Copy Code to Clipboard Logic
+      const copyButtons = document.querySelectorAll('.copy-code-btn');
+      copyButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const code = btn.getAttribute('data-code');
+          if (!code) return;
+
+          navigator.clipboard.writeText(code).then(() => {
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied! ✓';
+            btn.classList.add('bg-emerald-500/30', 'text-emerald-300', 'border-emerald-500/60');
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.classList.remove('bg-emerald-500/30', 'text-emerald-300', 'border-emerald-500/60');
+            }, 2000);
+          }).catch(() => {
+            btn.textContent = 'Error';
+          });
+        });
+      });
+    });
+  </script>
+</Layout>

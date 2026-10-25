@@ -7,6 +7,9 @@ export async function GET() {
 
   const staticUrls = [
     '',
+    '/deals',
+    '/awards',
+    '/versus',
     '/blog',
   ];
 
