@@ -10,6 +10,8 @@ export async function GET() {
     '/deals',
     '/awards',
     '/versus',
+    '/calculator',
+    '/partner',
     '/blog',
   ];
 
