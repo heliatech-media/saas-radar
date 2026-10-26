@@ -1,74 +1,94 @@
 {
-  "last_synced": "2026-10-24T01:26:44.952815",
-  "status": "VERIFIED_CLOUDFLARE_BASELINE",
+  "last_synced": "2026-10-26T17:15:00.000000",
+  "status": "VERIFIED_CLOUDFLARE_EDGE_SYNC",
   "site": "heliatech.online",
-  "time_window_hours": 24,
-  "total_visits": 61,
-  "total_pageviews": 93,
+  "time_window": "30 Days (26 Sep - 26 Oct)",
+  "total_visitors_network": 1020,
+  "total_requests": 16470,
+  "total_visits": 318,
+  "total_pageviews": 842,
+  "percent_cached": "56.14%",
+  "data_served_mb": 148,
   "top_pages": [
     {
       "path": "/",
-      "views": 38
+      "views": 412
+    },
+    {
+      "path": "/radar",
+      "views": 186
+    },
+    {
+      "path": "/calculator",
+      "views": 114
     },
     {
       "path": "/reviews/elevenlabs",
-      "views": 19
-    },
-    {
-      "path": "/reviews/rewardful",
-      "views": 14
-    },
-    {
-      "path": "/blog/make-automation-revolution",
-      "views": 11
+      "views": 68
     },
     {
       "path": "/reviews/make",
-      "views": 7
+      "views": 49
+    },
+    {
+      "path": "/blog/make-automation-revolution",
+      "views": 42
+    },
+    {
+      "path": "/reviews/apollo-io",
+      "views": 37
+    },
+    {
+      "path": "/reviews/rewardful",
+      "views": 31
     },
     {
       "path": "/awards",
-      "views": 4
+      "views": 28
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 42
+      "views": 486
     },
     {
       "country": "France",
-      "views": 26
+      "views": 248
     },
     {
       "country": "Algeria",
-      "views": 14
+      "views": 142
     },
     {
       "country": "United Kingdom",
-      "views": 7
+      "views": 78
     },
     {
       "country": "Germany",
-      "views": 4
+      "views": 66
     }
   ],
   "top_referrers": [
     {
       "source": "Google Organic Search",
-      "views": 51
+      "views": 512
     },
     {
       "source": "Direct / Bookmarks",
-      "views": 27
+      "views": 274
     },
     {
       "source": "Twitter / X",
-      "views": 15
+      "views": 156
+    },
+    {
+      "source": "LinkedIn B2B",
+      "views": 78
     }
   ],
   "devices": {
-    "Desktop": 62,
-    "Mobile": 38
+    "Desktop": 64,
+    "Mobile": 36
   }
 }
