@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Podcasting
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: riverside
 image: /images/blog/riverside.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Riverside Account ➔
   url: /go/riverside
 ---
-
 <p><b>F</b>or years, the dirty secret of high-end corporate podcasting and remote interviewing was the "double-ender." Producers would ship expensive external microphones and digital recorders to high-profile guests, cross their fingers, and pray the guest pressed record locally while simultaneously maintaining a stable Skype or Zoom connection for conversation. When the internet blinked—as it inevitably did—the resulting audio sounded like a teleconference from a subterranean bunker, laced with compression artifacts and digital jitter. The modern enterprise content engine demanded broadcast-grade media, yet the infrastructure remained anchored to brittle, lag-prone consumer tools.</p>
 
 > [!NOTE]

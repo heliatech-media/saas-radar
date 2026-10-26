@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-25 23:31:55",
-  "total_links_audited": 65,
+  "timestamp": "2026-10-26 03:41:08",
+  "total_links_audited": 66,
   "healthy_links": 62,
-  "broken_links_count": 3,
-  "health_rate": "95.4%",
+  "broken_links_count": 4,
+  "health_rate": "93.9%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -28,6 +28,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "tally",
+      "target_url": "https://www.tally.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.tally.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tally.com'. (_ssl.c:1081)\")))"
     }
   ],
   "audit_details": [
@@ -125,7 +133,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=mGEG4dVfDynWLC&gsxid=mGEG4dVfDynWLC&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ZwCcB50UnqFmPc&gsxid=ZwCcB50UnqFmPc&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -295,7 +303,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ZT0YXWH18CFRer&gsxid=ZT0YXWH18CFRer&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9cPkhpUVfpINYe&gsxid=9cPkhpUVfpINYe&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -404,6 +412,14 @@
       "final_url": "https://supabase.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "tally",
+      "target_url": "https://www.tally.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.tally.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tally.com'. (_ssl.c:1081)\")))"
     },
     {
       "slug": "transistor",
