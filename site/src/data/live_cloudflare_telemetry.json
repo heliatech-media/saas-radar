@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-26T23:19:31.769020",
+  "last_synced": "2026-10-27T00:29:56.246609",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-28 - 2026-10-26)",
-  "total_visitors_network": 1567,
-  "total_requests": 20085,
-  "total_visits": 485,
-  "total_pageviews": 3992,
+  "total_visitors_network": 1577,
+  "total_requests": 20151,
+  "total_visits": 488,
+  "total_pageviews": 4010,
   "percent_cached": "56.14%",
-  "data_served_mb": 179.7,
+  "data_served_mb": 180.3,
   "top_pages": [
     {
       "path": "/",
@@ -19,7 +19,7 @@
       "views": 90
     },
     {
-      "path": "/awards/",
+      "path": "/versus/",
       "views": 70
     },
     {
@@ -27,11 +27,11 @@
       "views": 70
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/retool/",
       "views": 70
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/awards/",
       "views": 70
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 2980
+      "views": 3000
     },
     {
       "country": "Morocco",
