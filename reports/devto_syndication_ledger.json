@@ -25,6 +25,32 @@
         "nocode",
         "productivity"
       ]
+    },
+    "adcreative-ai-evolution-guide-2026": {
+      "id": 4922966,
+      "url": "https://dev.to/heliatech/adcreativeai-the-rise-of-predictive-ad-generation-and-the-blueprint-to-maximizing-roas-dak",
+      "title": "AdCreative.ai: The Rise of Predictive Ad Generation and the Blueprint to Maximizing ROAS",
+      "canonical_url": "https://heliatech.online/blog/adcreative-ai-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "adcreativeai",
+        "aiadvertising",
+        "roas",
+        "saas"
+      ]
+    },
+    "airtable": {
+      "id": 4922968,
+      "url": "https://dev.to/heliatech/airtable-the-genesis-of-the-relational-database-canvas-and-the-blueprint-for-enterprise-velocity-n87",
+      "title": "Airtable: The Genesis of the Relational Database Canvas and the Blueprint for Enterprise Velocity",
+      "canonical_url": "https://heliatech.online/blog/airtable",
+      "published": true,
+      "tags": [
+        "airtable",
+        "aiautomation",
+        "nocode",
+        "b2bsoftware"
+      ]
     }
   },
   "last_sync": null

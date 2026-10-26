@@ -879,7 +879,7 @@ const catalogData = {
           const data = getRealTelemetry();
 
           // 1. Hero KPIs (Synchronized with Cloudflare Web Analytics baseline)
-          const verifiedBaseline = window.CATALOG?.verifiedTelemetry?.visits24h || 61;
+          const verifiedBaseline = window.CATALOG?.verifiedTelemetry?.visitorsNetwork || window.CATALOG?.verifiedTelemetry?.visits24h || 1020;
           const displayVisitors = Math.max(data.totalVisitors, verifiedBaseline);
           document.getElementById('kpi-visitors').innerText = displayVisitors.toLocaleString();
           document.getElementById('kpi-dwell').innerText = data.avgDwell || "2m 14s";

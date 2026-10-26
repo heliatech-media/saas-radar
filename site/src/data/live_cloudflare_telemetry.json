@@ -1,72 +1,116 @@
 {
-  "last_synced": "2026-10-26T17:15:00.000000",
-  "status": "VERIFIED_CLOUDFLARE_EDGE_SYNC",
+  "last_synced": "2026-10-26T17:28:55.867956",
+  "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "30 Days (26 Sep - 26 Oct)",
-  "total_visitors_network": 1020,
-  "total_requests": 16470,
-  "total_visits": 318,
-  "total_pageviews": 842,
+  "time_window": "28 Days (2026-09-28 - 2026-10-26)",
+  "total_visitors_network": 1432,
+  "total_requests": 18984,
+  "total_visits": 443,
+  "total_pageviews": 3727,
   "percent_cached": "56.14%",
-  "data_served_mb": 148,
+  "data_served_mb": 157.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 412
+      "views": 1172
     },
     {
-      "path": "/radar",
-      "views": 186
+      "path": "/blog/",
+      "views": 86
     },
     {
-      "path": "/calculator",
-      "views": 114
+      "path": "/awards/",
+      "views": 67
     },
     {
-      "path": "/reviews/elevenlabs",
-      "views": 68
+      "path": "/blog/make-automation-revolution/",
+      "views": 66
     },
     {
-      "path": "/reviews/make",
-      "views": 49
+      "path": "/sentinel/",
+      "views": 62
     },
     {
-      "path": "/blog/make-automation-revolution",
-      "views": 42
+      "path": "/versus/",
+      "views": 56
     },
     {
-      "path": "/reviews/apollo-io",
-      "views": 37
+      "path": "/deals/",
+      "views": 51
     },
     {
-      "path": "/reviews/rewardful",
-      "views": 31
+      "path": "/reviews/elevenlabs/",
+      "views": 48
     },
     {
-      "path": "/awards",
-      "views": 28
+      "path": "/terms/",
+      "views": 48
+    },
+    {
+      "path": "/reviews/airtable/",
+      "views": 43
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 43
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 41
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
+      "views": 40
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 39
+    },
+    {
+      "path": "/media-kit/",
+      "views": 39
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 486
+      "views": 2762
     },
     {
-      "country": "France",
-      "views": 248
+      "country": "Morocco",
+      "views": 577
     },
     {
-      "country": "Algeria",
-      "views": 142
-    },
-    {
-      "country": "United Kingdom",
-      "views": 78
+      "country": "Belgium",
+      "views": 573
     },
     {
       "country": "Germany",
-      "views": 66
+      "views": 317
+    },
+    {
+      "country": "Canada",
+      "views": 197
+    },
+    {
+      "country": "India",
+      "views": 169
+    },
+    {
+      "country": "United Kingdom",
+      "views": 156
+    },
+    {
+      "country": "Netherlands",
+      "views": 130
+    },
+    {
+      "country": "Singapore",
+      "views": 108
+    },
+    {
+      "country": "France",
+      "views": 88
     }
   ],
   "top_referrers": [
@@ -77,6 +121,10 @@
     {
       "source": "Direct / Bookmarks",
       "views": 274
+    },
+    {
+      "source": "DEV.to Syndication",
+      "views": 182
     },
     {
       "source": "Twitter / X",

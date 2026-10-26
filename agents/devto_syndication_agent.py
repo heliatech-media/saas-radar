@@ -104,6 +104,9 @@ def syndicate_next_monetized_article() -> dict:
     print(f"[DEV.to Syndicator] Next candidate for publication: {next_slug} ({len(remaining)} remaining)")
     res = publish_article(next_slug, publish_live=True)
     return {"status": "syndicated", "slug": next_slug, "result": res}
+
+
+def sanitize_tags(raw_tags: list[str]) -> list[str]:
     """DEV.to allows up to 4 tags, alphanumeric lowercase only."""
     clean = []
     default_tags = ["ai", "saas", "webdev", "productivity"]
