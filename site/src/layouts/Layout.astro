@@ -31,6 +31,20 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 <html lang="en" class="scroll-smooth antialiased selection:bg-cyan-500/30 selection:text-cyan-100" style="background-color: #030303; color-scheme: dark;">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    
+    <!-- Strict HTTPS & Apex Domain Client Enforcement Guard -->
+    <script is:inline>
+      (function() {
+        if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+          if (location.protocol === 'http:') {
+            location.replace('https://' + location.hostname + location.pathname + location.search + location.hash);
+          } else if (location.hostname.startsWith('www.')) {
+            location.replace('https://' + location.hostname.replace(/^www\./, '') + location.pathname + location.search + location.hash);
+          }
+        }
+      })();
+    </script>
     <meta name='impact-site-verification' value='76989799-5f87-4f11-87f0-cd18bcb2da56' />
     <meta name="impact-site-verification" content="76989799-5f87-4f11-87f0-cd18bcb2da56" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
