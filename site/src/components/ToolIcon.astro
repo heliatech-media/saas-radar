@@ -194,6 +194,8 @@ const sizeClasses = {
     alt={`${name || slug || domain} brand icon`}
     class="w-full h-full object-contain rounded-md"
     loading="lazy"
+    decoding="async"
+    fetchpriority="low"
     width="64"
     height="64"
     onerror="this.style.opacity='0.6'"

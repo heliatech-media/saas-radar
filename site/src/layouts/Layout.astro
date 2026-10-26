@@ -36,6 +36,11 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Ultra-Fast Typography: Preconnect & Non-Blocking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | HeliaTech</title>
     <meta name="description" content={description} />
@@ -57,32 +62,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
 
-    <!-- Netlify Badge & Drawer Shield (Aggressively strips injected Netlify badges) -->
-    <script is:inline>
-      (function() {
-        function removeNetlifyBadge() {
-          const selectors = [
-            '[data-netlify-badge]',
-            '[data-netlify-drawer]',
-            '[data-test="feedback-drawer"]',
-            '[data-testid="feedback-drawer"]',
-            '#netlify-badge',
-            '.netlify-badge',
-            '#netlify-drawer',
-            '.netlify-drawer',
-            'iframe[src*="netlify"]',
-            'iframe[id*="netlify"]'
-          ];
-          selectors.forEach(sel => {
-            document.querySelectorAll(sel).forEach(el => el.remove());
-          });
-        }
-        document.addEventListener('DOMContentLoaded', removeNetlifyBadge);
-        const observer = new MutationObserver(removeNetlifyBadge);
-        observer.observe(document.documentElement, { childList: true, subtree: true });
-        window.addEventListener('load', removeNetlifyBadge);
-      })();
-    </script>
+
 
     <!-- Stealth Privacy-Preserving Telemetry Core (For Helia Sentinel) -->
     <!-- Excludes Admins, Internal Bots, Crawlers, and Headless Agents -->
@@ -199,14 +179,14 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     </script>
   </head>
   <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
-    <!-- Ambient Cyber Glows (TechPulse Neon Aesthetics) -->
+    <!-- Ambient Cyber Glows (Mobile-GPU Optimized: Lightweight on phones, rich on desktop) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <!-- Top Ambient Cyan/Fuchsia Aurora -->
-      <div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[650px] bg-gradient-to-b from-cyan-500/12 via-fuchsia-500/8 to-transparent blur-[160px] rounded-full"></div>
-      <!-- Right Violet Flare -->
-      <div class="absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-fuchsia-600/8 blur-[180px] rounded-full"></div>
-      <!-- Left Cyber Cyan Flare -->
-      <div class="absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-cyan-600/8 blur-[180px] rounded-full"></div>
+      <div class="hidden sm:block absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[650px] bg-gradient-to-b from-cyan-500/12 via-fuchsia-500/8 to-transparent blur-[120px] rounded-full"></div>
+      <div class="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-full h-[320px] bg-gradient-to-b from-cyan-500/10 via-fuchsia-500/5 to-transparent"></div>
+      <!-- Side Flares: Desktop only to prevent mobile frame drops & GPU drain -->
+      <div class="hidden md:block absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-fuchsia-600/8 blur-[130px] rounded-full"></div>
+      <div class="hidden md:block absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-cyan-600/8 blur-[130px] rounded-full"></div>
       <!-- Geometric Cyber Grid Lines -->
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
     </div>

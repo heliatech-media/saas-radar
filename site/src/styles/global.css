@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Modern Web Performance: Defer offscreen rendering calculations */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto none auto 400px;
+}
 
 :root {
   --background: #030303;
