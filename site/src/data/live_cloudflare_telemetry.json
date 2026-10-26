@@ -1,5 +1,5 @@
 {
-  "last_synced": "2026-10-26T17:28:55.867956",
+  "last_synced": "2026-10-26T17:32:28.938855",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-28 - 2026-10-26)",
@@ -23,12 +23,12 @@
       "views": 67
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/sentinel/",
       "views": 66
     },
     {
-      "path": "/sentinel/",
-      "views": 62
+      "path": "/blog/make-automation-revolution/",
+      "views": 66
     },
     {
       "path": "/versus/",
@@ -39,19 +39,19 @@
       "views": 51
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 48
-    },
-    {
       "path": "/terms/",
       "views": 48
     },
     {
-      "path": "/reviews/airtable/",
-      "views": 43
+      "path": "/reviews/elevenlabs/",
+      "views": 48
     },
     {
       "path": "/reviews/make/",
+      "views": 43
+    },
+    {
+      "path": "/reviews/airtable/",
       "views": 43
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 2762
+      "views": 2768
     },
     {
       "country": "Morocco",
-      "views": 577
+      "views": 586
     },
     {
       "country": "Belgium",

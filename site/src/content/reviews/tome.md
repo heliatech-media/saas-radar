@@ -6,7 +6,7 @@ tagline: AI-powered storytelling and presentation format that builds narrative d
 category: AI Video & Presentation
 rating: 4.5
 website_url: https://tome.app
-affiliate_url: https://tome.app
+affiliate_url: "https://tome.app/?via=heliatech"
 summary: Tome leverages generative AI to transform text prompts into fully designed,
   beautifully formatted presentations, pitches, and landing pages. It acts as an interactive
   canvas designed to streamline deck creation for founders, sales teams, and marketers.

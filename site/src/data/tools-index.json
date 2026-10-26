@@ -363,7 +363,8 @@
     "rating": 4.5,
     "starting_price": "$16/mo",
     "best_for": "Startups, sales teams, and marketers needing rapid, highly polished pitch decks and presentations.",
-    "affiliate_url": "https://tome.app"
+    "affiliate_url": "https://tome.app/?via=heliatech",
+    "commission_rate": "Undisclosed / Custom"
   },
   {
     "name": "Transistor",
@@ -386,6 +387,16 @@
     "best_for": "Marketers, HR professionals, and growth teams focused on high-conversion lead capture and user research.",
     "affiliate_url": "https://typeform.grsm.io/heliatech",
     "commission_rate": "20% to 30% recurring"
+  },
+  {
+    "name": "VEED",
+    "slug": "veed",
+    "tagline": "The browser-based AI video suite built for fast-moving marketing teams and creators",
+    "category": "AI Video",
+    "rating": 4.5,
+    "starting_price": "$18/mo",
+    "best_for": "Content creators, digital marketers, and localized growth teams needing fast video turnaround",
+    "affiliate_url": "https://www.veed.io"
   },
   {
     "name": "Vercel",

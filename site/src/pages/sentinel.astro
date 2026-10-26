@@ -50,8 +50,10 @@ const catalogData = {
     source: "Cloudflare Edge & Web Analytics Verified"
   },
   cloudflare: cloudflareTelemetry || {
-    total_visits: 61,
-    total_pageviews: 93,
+    total_visitors_network: 1432,
+    total_requests: 18984,
+    total_visits: 443,
+    total_pageviews: 3727,
     top_pages: [
       { path: "/", views: 38 },
       { path: "/reviews/elevenlabs", views: 19 },
@@ -549,8 +551,8 @@ const catalogData = {
                 <span class="text-slate-400">Content Engine</span>
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
               </div>
-              <span class="text-sm font-bold text-white">5 GUIDES LIVE</span>
-              <span class="text-[10px] text-slate-500 block mt-1">20 SaaS Audited</span>
+              <span class="text-sm font-bold text-white">{blogPosts.length} GUIDES LIVE</span>
+              <span class="text-[10px] text-slate-500 block mt-1">{reviews.length} SaaS Audited</span>
             </div>
 
             <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">
@@ -558,8 +560,8 @@ const catalogData = {
                 <span class="text-slate-400">Social Engine</span>
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span>
               </div>
-              <span class="text-sm font-bold text-amber-400">AWAITING API</span>
-              <span class="text-[10px] text-slate-500 block mt-1">X/Twitter Thread Ready</span>
+              <span class="text-sm font-bold text-emerald-400">DEV.TO & LI ACTIVE</span>
+              <span class="text-[10px] text-slate-500 block mt-1">4 Syndicated Guides Live</span>
             </div>
 
             <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80">

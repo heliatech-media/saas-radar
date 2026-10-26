@@ -107,5 +107,6 @@ AFFILIATE_MAP = {
     "peripety": "https://www.peripety.ai/?via=heliatech",
     "resend": "https://resend.com/?via=heliatech",
     "riverside": "https://riverside.fm/?via=heliatech",
-    "tally": "https://tally.so/?via=heliatech"
+    "tally": "https://tally.so/?via=heliatech",
+    "tome": "https://tome.app/?via=heliatech"
 }
