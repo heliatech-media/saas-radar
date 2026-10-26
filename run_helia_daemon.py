@@ -63,6 +63,33 @@ def main():
         telegram_thread = threading.Thread(target=commander.start_polling_loop, daemon=True)
         telegram_thread.start()
 
+    # Start Cloudflare high-frequency real-time visitor synchronizer (every 10 minutes)
+    from agents.cloudflare_analytics_agent import CloudflareAnalyticsAgent
+    cf_agent = CloudflareAnalyticsAgent()
+    if cf_agent.is_configured():
+        def cf_sync_loop():
+            logger.info("☁️ Starting Cloudflare Edge Telemetry High-Frequency Sync loop (every 10m)...")
+            last_pushed_visitors = 0
+            while True:
+                try:
+                    tel = cf_agent.fetch_web_analytics(days=28)
+                    uniques = tel.get("total_visitors_network", 0)
+                    if last_pushed_visitors == 0:
+                        last_pushed_visitors = uniques
+                    elif uniques >= last_pushed_visitors + 10 and auto_push:
+                        logger.info(f"📈 Cloudflare visitor threshold reached (+{uniques - last_pushed_visitors} new visitors). Auto-committing live telemetry...")
+                        last_pushed_visitors = uniques
+                        import subprocess
+                        subprocess.run("git add site/src/data/live_cloudflare_telemetry.json site/public/data/live_cloudflare_telemetry.json", shell=True)
+                        subprocess.run(f'git commit -m "chore(telemetry): auto-sync Cloudflare visitors ({uniques})"', shell=True)
+                        subprocess.run("git push origin main", shell=True)
+                except Exception as ex:
+                    logger.warning(f"Cloudflare sync loop notice: {ex}")
+                time.sleep(600)
+
+        cf_thread = threading.Thread(target=cf_sync_loop, daemon=True)
+        cf_thread.start()
+
     cycle_count = 1
     while True:
         cycle_start = datetime.now()

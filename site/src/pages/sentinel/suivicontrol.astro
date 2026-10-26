@@ -63,9 +63,17 @@ try {
 // Read live Cloudflare Edge Telemetry
 let cloudflareTelemetry: any = null;
 try {
-  const cfFile = path.resolve(rootDir, 'site/src/data/live_cloudflare_telemetry.json');
-  if (fs.existsSync(cfFile)) {
-    cloudflareTelemetry = JSON.parse(fs.readFileSync(cfFile, 'utf-8'));
+  const candidates = [
+    path.resolve(rootDir, 'site/src/data/live_cloudflare_telemetry.json'),
+    path.resolve(rootDir, 'site/public/data/live_cloudflare_telemetry.json'),
+    path.resolve('src/data/live_cloudflare_telemetry.json'),
+    path.resolve('public/data/live_cloudflare_telemetry.json')
+  ];
+  for (const cand of candidates) {
+    if (fs.existsSync(cand)) {
+      cloudflareTelemetry = JSON.parse(fs.readFileSync(cand, 'utf-8'));
+      break;
+    }
   }
 } catch (e) {}
 
@@ -112,9 +120,9 @@ const catalog = {
   monetizedCount: redirectsList.filter(r => r.isMonetized).length,
   totalRedirects: redirectsList.length,
   cloudflare: cloudflareTelemetry || {
-    total_visitors_network: 1432,
-    total_requests: 18984,
-    total_pageviews: 3727
+    total_visitors_network: 1516,
+    total_requests: 19717,
+    total_pageviews: 3918
   },
   devto: devtoLedger || {},
   tools: reviews.map(r => {
@@ -299,8 +307,8 @@ const catalog = {
               <span>Visiteurs Réels</span>
               <span class="text-[10px] text-cyan-400 group-hover:translate-x-0.5 transition-transform">Matrice ➔</span>
             </div>
-            <div class="text-2xl font-black text-white" id="suivi-kpi-visitors">{(cloudflareTelemetry?.total_visitors_network || 1432).toLocaleString()} <span class="text-xs text-slate-500 font-normal">visiteurs</span></div>
-            <div class="text-[10px] font-mono text-emerald-400 mt-1" id="suivi-kpi-hops">{(cloudflareTelemetry?.total_requests || 18984).toLocaleString()} requêtes Edge (Cloudflare)</div>
+            <div class="text-2xl font-black text-white" id="suivi-kpi-visitors">{(cloudflareTelemetry?.total_visitors_network || 1516).toLocaleString()} <span class="text-xs text-slate-500 font-normal">visiteurs</span></div>
+            <div class="text-[10px] font-mono text-emerald-400 mt-1" id="suivi-kpi-hops">{(cloudflareTelemetry?.total_requests || 19717).toLocaleString()} requêtes Edge (Cloudflare)</div>
           </a>
 
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
@@ -1092,8 +1100,8 @@ const catalog = {
         function updateLiveVisitorMetrics() {
           try {
             const cf = window.CATALOG?.cloudflare || {};
-            const vis = cf.total_visitors_network || 1432;
-            const reqs = cf.total_requests || 18984;
+            const vis = cf.total_visitors_network || 1516;
+            const reqs = cf.total_requests || 19717;
             const visEl = document.getElementById('suivi-kpi-visitors');
             const hopEl = document.getElementById('suivi-kpi-hops');
             if (visEl) visEl.innerHTML = `${vis.toLocaleString()} <span class="text-xs text-slate-500 font-normal">visiteurs</span>`;
@@ -1101,10 +1109,33 @@ const catalog = {
           } catch(e) {}
         }
 
+        async function fetchLatestCloudflareTelemetry() {
+          try {
+            const res = await fetch('/data/live_cloudflare_telemetry.json?t=' + Date.now());
+            if (res.ok) {
+              const live = await res.json();
+              if (live && live.total_visitors_network) {
+                if (window.CATALOG) {
+                  window.CATALOG.cloudflare = live;
+                }
+                updateLiveVisitorMetrics();
+              }
+            }
+          } catch(e) {}
+        }
+
+        refreshBtn.onclick = async function() {
+          refreshBtn.classList.add('animate-spin');
+          await fetchLatestCloudflareTelemetry();
+          updateLiveVisitorMetrics();
+          setTimeout(() => refreshBtn.classList.remove('animate-spin'), 600);
+        };
+
         function unlock() {
           authGate.classList.add('hidden');
           dashboard.classList.remove('hidden');
           updateLiveVisitorMetrics();
+          fetchLatestCloudflareTelemetry();
         }
 
         function lock() {

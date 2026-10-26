@@ -7,14 +7,22 @@ import path from 'node:path';
 // Read Cloudflare Live Telemetry JSON
 let cloudflareTelemetry = null;
 try {
-  const cfPath = path.resolve('src/data/live_cloudflare_telemetry.json');
-  if (fs.existsSync(cfPath)) {
-    cloudflareTelemetry = JSON.parse(fs.readFileSync(cfPath, 'utf-8'));
+  const candidates = [
+    path.resolve('src/data/live_cloudflare_telemetry.json'),
+    path.resolve('site/src/data/live_cloudflare_telemetry.json'),
+    path.resolve('public/data/live_cloudflare_telemetry.json'),
+    path.resolve('site/public/data/live_cloudflare_telemetry.json')
+  ];
+  for (const p of candidates) {
+    if (fs.existsSync(p)) {
+      cloudflareTelemetry = JSON.parse(fs.readFileSync(p, 'utf-8'));
+      break;
+    }
   }
 } catch (e) {}
 
 const cfData = cloudflareTelemetry || {};
-const totalEdgeVisitors = cfData.total_visitors_network || 1020;
+const totalEdgeVisitors = cfData.total_visitors_network || 1516;
 const totalRumVisits = cfData.total_visits || 318;
 const totalRumPageviews = cfData.total_pageviews || 842;
 
@@ -752,6 +760,7 @@ const catalogData = {
             authGate.classList.add('hidden');
             dashboard.classList.remove('hidden');
             renderRealDashboard();
+            fetchLatestCloudflareTelemetry();
           } else {
             authGate.classList.remove('hidden');
             dashboard.classList.add('hidden');
@@ -999,8 +1008,31 @@ const catalogData = {
           }
         }
 
-        refreshBtn.onclick = function() {
+        async function fetchLatestCloudflareTelemetry() {
+          try {
+            const res = await fetch('/data/live_cloudflare_telemetry.json?t=' + Date.now());
+            if (res.ok) {
+              const live = await res.json();
+              if (live && live.total_visitors_network) {
+                if (window.CATALOG) {
+                  if (window.CATALOG.verifiedTelemetry) {
+                    window.CATALOG.verifiedTelemetry.visitorsNetwork = live.total_visitors_network;
+                    window.CATALOG.verifiedTelemetry.visits24h = live.total_visits;
+                    window.CATALOG.verifiedTelemetry.pageviews24h = live.total_pageviews;
+                  }
+                  window.CATALOG.cloudflare = live;
+                }
+                renderRealDashboard();
+              }
+            }
+          } catch(e) {}
+        }
+
+        refreshBtn.onclick = async function() {
+          refreshBtn.classList.add('animate-spin');
+          await fetchLatestCloudflareTelemetry();
           renderRealDashboard();
+          setTimeout(() => refreshBtn.classList.remove('animate-spin'), 600);
         };
 
         resetBtn.onclick = function() {

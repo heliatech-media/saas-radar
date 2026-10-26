@@ -31,6 +31,7 @@ if str(ROOT_DIR) not in sys.path:
 load_dotenv(ROOT_DIR / ".env")
 
 CLOUDFLARE_TELEMETRY_PATH = ROOT_DIR / "site" / "src" / "data" / "live_cloudflare_telemetry.json"
+CLOUDFLARE_PUBLIC_PATH = ROOT_DIR / "site" / "public" / "data" / "live_cloudflare_telemetry.json"
 GRAPHQL_ENDPOINT = "https://api.cloudflare.com/client/v4/graphql"
 
 COUNTRY_CODE_MAP = {
@@ -297,8 +298,10 @@ class CloudflareAnalyticsAgent:
         return default_data
 
     def _save_telemetry(self, data: Dict):
-        with open(CLOUDFLARE_TELEMETRY_PATH, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+        for p in [CLOUDFLARE_TELEMETRY_PATH, CLOUDFLARE_PUBLIC_PATH]:
+            p.parent.mkdir(parents=True, exist_ok=True)
+            with open(p, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

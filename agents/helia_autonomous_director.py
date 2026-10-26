@@ -72,6 +72,7 @@ from agents.auto_evolution_agent import HeliaAutoEvolutionAgent
 from agents.breaking_news_sniffer_agent import BreakingNewsSnifferAgent
 from agents.devto_syndication_agent import syndicate_next_monetized_article
 from agents.linkedin_syndication_agent import LinkedInSyndicator
+from agents.cloudflare_analytics_agent import CloudflareAnalyticsAgent
 from agents.models import ToolReview
 
 
@@ -112,6 +113,7 @@ class HeliaAutonomousDirector:
         self.auto_evolution = HeliaAutoEvolutionAgent(api_key=api_key)
         self.news_sniffer = BreakingNewsSnifferAgent(api_key=api_key)
         self.linkedin_syndicator = LinkedInSyndicator()
+        self.cloudflare_analytics = CloudflareAnalyticsAgent()
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -248,6 +250,13 @@ class HeliaAutonomousDirector:
             self.visualizer.generate_live_telemetry()
         except Exception as e:
             self.log("Helia-DataVisualizer", f"Visualizer notice: {e}", "⚠️")
+
+        # Step 6.75: Sub-Agent CloudflareAnalytics (Live Edge & GraphQL Visitor Sync)
+        try:
+            self.log("Helia-CloudflareAnalytics", "Synchronizing live Edge visitors and GraphQL network telemetry...", "☁️")
+            self.cloudflare_analytics.fetch_web_analytics(days=28)
+        except Exception as e:
+            self.log("Helia-CloudflareAnalytics", f"Cloudflare analytics notice: {e}", "⚠️")
 
         # Step 6.8: Sub-Agent BacklinkArchitect (Digital PR & SEO Authority Playbook)
         try:

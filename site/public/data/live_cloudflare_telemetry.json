@@ -1,0 +1,142 @@
+{
+  "last_synced": "2026-10-26T22:04:24.151993",
+  "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
+  "site": "heliatech.online",
+  "time_window": "28 Days (2026-09-28 - 2026-10-26)",
+  "total_visitors_network": 1516,
+  "total_requests": 19717,
+  "total_visits": 469,
+  "total_pageviews": 3918,
+  "percent_cached": "56.14%",
+  "data_served_mb": 167.1,
+  "top_pages": [
+    {
+      "path": "/",
+      "views": 1070
+    },
+    {
+      "path": "/sentinel/",
+      "views": 80
+    },
+    {
+      "path": "/reviews/retool/",
+      "views": 70
+    },
+    {
+      "path": "/versus/",
+      "views": 70
+    },
+    {
+      "path": "/awards/",
+      "views": 70
+    },
+    {
+      "path": "/blog/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/heygen/",
+      "views": 50
+    },
+    {
+      "path": "/reviews/typeform/",
+      "views": 50
+    },
+    {
+      "path": "/deals/",
+      "views": 50
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
+      "views": 50
+    },
+    {
+      "path": "/blog/airtable/",
+      "views": 50
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
+      "views": 50
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 50
+    },
+    {
+      "path": "/reviews/linear/",
+      "views": 40
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 40
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "views": 2830
+    },
+    {
+      "country": "Morocco",
+      "views": 570
+    },
+    {
+      "country": "Belgium",
+      "views": 450
+    },
+    {
+      "country": "Germany",
+      "views": 280
+    },
+    {
+      "country": "Netherlands",
+      "views": 240
+    },
+    {
+      "country": "Canada",
+      "views": 190
+    },
+    {
+      "country": "India",
+      "views": 170
+    },
+    {
+      "country": "United Kingdom",
+      "views": 170
+    },
+    {
+      "country": "Singapore",
+      "views": 150
+    },
+    {
+      "country": "France",
+      "views": 90
+    }
+  ],
+  "top_referrers": [
+    {
+      "source": "Google Organic Search",
+      "views": 512
+    },
+    {
+      "source": "Direct / Bookmarks",
+      "views": 274
+    },
+    {
+      "source": "DEV.to Syndication",
+      "views": 182
+    },
+    {
+      "source": "Twitter / X",
+      "views": 156
+    },
+    {
+      "source": "LinkedIn B2B",
+      "views": 78
+    }
+  ],
+  "devices": {
+    "Desktop": 64,
+    "Mobile": 36
+  }
+}
