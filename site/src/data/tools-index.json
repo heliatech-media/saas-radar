@@ -320,7 +320,8 @@
     "rating": 4.6,
     "starting_price": "$15/mo",
     "best_for": "Professional podcasters, remote interviewers, media production agencies, and content marketing teams",
-    "affiliate_url": "https://riverside.fm"
+    "affiliate_url": "https://riverside.fm/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Submagic",
@@ -353,6 +354,16 @@
     "best_for": "Bootstrapped founders, indie hackers, agencies, and operations teams looking for a robust Typeform alternative without paywalls per submission.",
     "affiliate_url": "https://tally.so/?via=heliatech",
     "commission_rate": "25% recurring for 1 year"
+  },
+  {
+    "name": "Tome",
+    "slug": "tome",
+    "tagline": "AI-powered storytelling and presentation format that builds narrative decks in seconds.",
+    "category": "AI Video & Presentation",
+    "rating": 4.5,
+    "starting_price": "$16/mo",
+    "best_for": "Startups, sales teams, and marketers needing rapid, highly polished pitch decks and presentations.",
+    "affiliate_url": "https://tome.app"
   },
   {
     "name": "Transistor",

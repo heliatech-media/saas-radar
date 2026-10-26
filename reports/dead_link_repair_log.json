@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-26T11:49:47.403499",
+  "timestamp": "2026-10-26T16:32:23.830005",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 98,
-    "total_redirects_active": 66,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 100,
+    "total_redirects_active": 67,
+    "new_redirects_healed": 25,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
@@ -130,6 +130,11 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "tome",
+      "target_url": "https://www.tome.com",
+      "source_file": "tome-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

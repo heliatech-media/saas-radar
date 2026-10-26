@@ -90,7 +90,7 @@ Select the budget dropdown block. Click the settings icon to add **Conditional L
 Type `/Stripe` into the document. Connect your Stripe account with a single OAuth click, set the fixed fee amount to `$250` for the strategy session, and toggle the setting to require payment completion before form submission.
 
 ### Step 5: Connect Your Data Stack
-Navigate to the **Integrations** tab in your Tally dashboard. Link your Airtable account, map your form fields to your master CRM table, and test a live submission. Total elapsed time: under 12 minutes.
+Navigate to the **Integrations** tab in your Tally dashboard. Link your [Airtable](/reviews/airtable) account, map your form fields to your master CRM table, and test a live submission. Total elapsed time: under 12 minutes.
 
 ## 4. Critical Assessment & Trade-offs
 

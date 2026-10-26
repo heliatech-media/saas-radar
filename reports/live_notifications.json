@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-26 16:33:37",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-26 11:51:42",
+    "title": "Cycle Autonome #Riverside",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Riverside et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-26 11:50:59",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
@@ -334,19 +348,5 @@
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Framer et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-23 20:13:12",
-    "title": "MISSION ACCOMPLIE : 3 SURCHARGES STRATÉGIQUES ACTIVÉES",
-    "category": "DEPLOY",
-    "message": "Patron, vos 3 améliorations stratégiques sont désormais 100% actives et déployées en production :\n\n1️⃣ Telegram Commander 2-Way : Je réponds en direct à vos ordres ici même (/statut, /hunt, /versus, /alternatives, /cycle, /cockpit).\n\n2️⃣ Simulateurs de ROI Interactifs : Tous nos articles de blog intègrent désormais le calculateur dynamique (heures gagnées, économies annuelles, sliders interactifs) avec bouton d'accès partenaire officiel.\n\n3️⃣ Moteur d'Autorité 'Top 7 Alternatives' : Deux dossiers de référence publiés (/blog/best-zapier-alternatives-2026 et /blog/best-deel-alternatives-2026), ce dernier positionnant Papaya Global (notre offre à $1,000 / $2,000 de commission) en recommandation #1 !\n\n🌐 Site live : https://heliatech.online\n⚡ Console Sentinel : https://heliatech.online/sentinel/suivicontrol",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-23 19:53:08",
-    "title": "💰 NOUVEL OUTIL MONÉTISÉ : PAPAYA GLOBAL",
-    "category": "MONEY",
-    "message": "L'agent Helia-AffiliateHunter a activé la monétisation pour Papaya Global !\n• Taux de commission : ,000 lead / ,000 won\n• Redirection Edge active : https://heliatech.online/go/papaya-global",
-    "link": "https://heliatech.online/go/papaya-global"
   }
 ]
