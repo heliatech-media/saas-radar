@@ -64,6 +64,19 @@
         "saas",
         "automation"
       ]
+    },
+    "apollo-io-vs-lusha": {
+      "id": 4924228,
+      "url": "https://dev.to/heliatech/apolloio-vs-lusha-direct-phone-email-enrichment-battle-1lj",
+      "title": "Apollo.io vs Lusha: Direct Phone & Email Enrichment Battle",
+      "canonical_url": "https://heliatech.online/blog/apollo-io-vs-lusha",
+      "published": true,
+      "tags": [
+        "apolloio",
+        "lusha",
+        "apolloiovslusha",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

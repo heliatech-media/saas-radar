@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-10-26 18:07:16",
+  "timestamp": "2026-10-26 22:20:37",
   "total_links_audited": 68,
-  "healthy_links": 64,
-  "broken_links_count": 4,
-  "health_rate": "94.1%",
+  "healthy_links": 63,
+  "broken_links_count": 5,
+  "health_rate": "92.6%",
   "broken_links": [
+    {
+      "slug": "jasper-ai",
+      "target_url": "https://www.jasper-ai.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.jasper-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.jasper-ai.com', port=443): Failed to resolve 'www.jasper-ai.com' ([Errno 11001] getaddrinfo failed)\"))"
+    },
     {
       "slug": "notion-ai",
       "target_url": "https://affiliates.notion.so/heliatech",
@@ -133,7 +141,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cjg9i6ME5O94iS&gsxid=cjg9i6ME5O94iS&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=oPnKCgTLCsbwnU&gsxid=oPnKCgTLCsbwnU&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -154,9 +162,10 @@
     {
       "slug": "jasper-ai",
       "target_url": "https://www.jasper-ai.com",
-      "final_url": "https://www.jasper-ai.com/",
-      "status_code": 200,
-      "healthy": true
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.jasper-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.jasper-ai.com', port=443): Failed to resolve 'www.jasper-ai.com' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "kaspr",
@@ -303,7 +312,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=e4K2DQP6ttMaV4&gsxid=e4K2DQP6ttMaV4&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=P7EUIVWDggwquW&gsxid=P7EUIVWDggwquW&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -458,8 +467,8 @@
     },
     {
       "slug": "veed",
-      "target_url": "https://www.veed.com",
-      "final_url": "https://www.veed.io/",
+      "target_url": "https://www.veed.io/?via=heliatech",
+      "final_url": "https://www.veed.io/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

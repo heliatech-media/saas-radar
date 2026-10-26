@@ -48,7 +48,14 @@
       "title": "ClickUp vs Monday.com: The Definitive Enterprise Project OS Shootout",
       "tool_slug": "clickup",
       "canonical_url": "https://heliatech.online/blog/clickup-vs-monday-com"
+    },
+    "supabase-vs-retool": {
+      "published_at": "2026-10-26T22:21:06.601187",
+      "share_urn": "urn:li:share:7520595379835371520",
+      "title": "Supabase vs Retool: Open-Source Backend vs Rapid Internal App Builder",
+      "tool_slug": "supabase",
+      "canonical_url": "https://heliatech.online/blog/supabase-vs-retool"
     }
   },
-  "last_publish": "2026-10-26T18:09:34.282023"
+  "last_publish": "2026-10-26T22:21:06.601202"
 }

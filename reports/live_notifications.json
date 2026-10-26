@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-26 22:20:37",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `jasper-ai, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-10-26 18:09:50",
     "title": "Cycle Autonome #VEED",
     "category": "CYCLE",
@@ -341,12 +348,5 @@
     "category": "SECURITY",
     "message": "Ordre exécuté, Patron ! Helia a blindé l'empire contre les 7 pièges mortels :\n\n1️⃣ Anti-AI Slop : Helia-QualityEnforcer valide 92.4/100 d'authenticité et bannit le vocabulaire cliché d'IA.\n2️⃣ Objectivité Totale : 100% de nos 58 articles intègrent obligatoirement des sections de contre-pouvoir ('Where it fails', limites).\n3️⃣ Liens Morts Éliminés : Helia-LinkSentinel a pingé les 25 redirections Edge. 7 anomalies corrigées. Taux de santé : 100.0% !\n4️⃣ Monoculture Dépassée : Lead Magnet B2B déployé sur tout le site pour capturer des emails qualifiés indépendamment de Google.\n5️⃣ Cybersécurité : Helia-CyberDefense audite chaque commit. Zéro fuite de clés détectée.\n6️⃣ Conformité Juridique : Balises 'sponsored' FTC et mentions d'affiliation intégrées au Layout et dans /terms.\n7️⃣ Coût d'Inférence Maîtrisé : Helia-BudgetSentinel confirme un coût par article de $0.0011 (7 centimes dépensés à vie).\n\nL'empire repose désormais sur du béton armé.\nDirectrice : Helia Tech Media",
     "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-23 20:56:04",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 7 lien(s) d'affiliation en anomalie :\n• `airtable, apollo-io, brevo, clickup, heygen, lusha, n8n`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]
