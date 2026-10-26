@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-26T16:32:23.830005",
+  "timestamp": "2026-10-26T18:05:41.977875",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 100,
-    "total_redirects_active": 67,
+    "total_content_files_scanned": 102,
+    "total_redirects_active": 68,
     "new_redirects_healed": 25,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 12,
+    "external_targets_repaired": 13,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -132,9 +132,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "tome",
-      "target_url": "https://www.tome.com",
-      "source_file": "tome-evolution-guide-2026.md"
+      "slug": "veed",
+      "target_url": "https://www.veed.com",
+      "source_file": "veed-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -191,6 +191,12 @@
       "slug": "retool",
       "dead_target": "https://retool.grsm.io/heliatech",
       "healed_target": "https://www.retool.com",
+      "status_code": 404
+    },
+    {
+      "slug": "tome",
+      "dead_target": "https://tome.app/?via=heliatech",
+      "healed_target": "https://www.tome.com",
       "status_code": 404
     },
     {

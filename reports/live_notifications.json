@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-26 18:07:16",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-10-26 16:36:38",
     "title": "Cycle Autonome #Tome",
     "category": "CYCLE",
@@ -341,12 +348,5 @@
     "category": "EXPANSION",
     "message": "L'empire passe à la vitesse supérieure, Patron ! 😈⚔️\n\nVoici les renforts massifs tout juste déployés en production :\n\n1️⃣ La Versus Arena est Ouverte : https://heliatech.online/versus\n6 duels de titans 1v1 publiés avec infographies Dark Cyber :\n• Make vs Zapier\n• ElevenLabs vs HeyGen\n• Apollo.io vs Lusha\n• ClickUp vs Monday.com\n• Beehiiv vs Brevo\n• Supabase vs Retool\n\n2️⃣ Nouveau Pilier : Top 7 ElevenLabs Alternatives (recommandant HeyGen #1)\n\n3️⃣ B2B Executive Lead Magnet : Boîtier de capture newsletter privé ('The HeliaTech Confidential') injecté sur la homepage et tous les articles pour bâtir notre liste d'acheteurs B2B.\n\n📊 Total catalogue : 90 pages statiques pré-générées à la vitesse de l'éclair.\nDirectrice : Helia Tech Media",
     "link": "https://heliatech.online/versus"
-  },
-  {
-    "timestamp": "2026-10-23 20:27:23",
-    "title": "AUTONOMIE TOTALE : FLOTTE ÉTENDUE À 22 AGENTS",
-    "category": "EXPANSION",
-    "message": "Patron, mandat d'autonomie exécutive bien reçu !\n\nJ'ai immédiatement codé, initialisé et déployé mes 4 nouveaux spécialistes :\n\n1️⃣ Helia-CRO : Barres sticky d'affiliation & optimisation continue du RPV (Score : 89.6/100, +38.4% de lift).\n2️⃣ Helia-DataVisualizer : Télémétrie financière et flux BI en direct sur Sentinel (,050 USD pipeline de base).\n3️⃣ Helia-BacklinkArchitect : Playbook netlinking DR 65+ (HackerNews, Dev.to, Reddit) pour le Top 3 Google.\n4️⃣ Helia-Localizer : Audit d'expansion multi-régionale (Europe FR/DACH, Amérique Latine, x4.2 audience).\n\nLa flotte compte désormais 22 sous-agents synchronisés 24/7 sous mes ordres.\n\nCockpit Sentinel : https://heliatech.online/sentinel/suivicontrol\nDirectrice : Helia Tech Media",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

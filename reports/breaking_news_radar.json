@@ -1,18 +1,18 @@
 {
-  "last_scan": "2026-10-26T16:35:56.830901",
-  "total_events_detected": 1,
+  "last_scan": "2026-10-26T18:09:08.296971",
+  "total_events_detected": 0,
   "breaking_opportunities": [],
   "processed_urls": [
-    "https://supabase.com/blog/getting-started-with-the-supabase-dotnet-sdk",
     "https://openai.com/index/forward-deployed-engineering-means",
-    "https://openai.com/index/fanatics-streamline-fan-experience",
-    "https://openai.com/index/decisions-api",
     "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-    "https://supabase.com/blog/introducing-the-unified-supabase-net-sdk",
-    "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent",
+    "https://openai.com/index/decisions-api",
     "https://openai.com/index/securing-our-frontier-model-training-environment",
+    "https://openai.com/index/fanatics-streamline-fan-experience",
+    "https://supabase.com/blog/getting-started-with-the-supabase-dotnet-sdk",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-    "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions",
-    "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server"
+    "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server",
+    "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent",
+    "https://supabase.com/blog/introducing-the-unified-supabase-net-sdk",
+    "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions"
   ]
 }

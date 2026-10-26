@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-26 16:33:37",
-  "total_links_audited": 67,
-  "healthy_links": 63,
+  "timestamp": "2026-10-26 18:07:16",
+  "total_links_audited": 68,
+  "healthy_links": 64,
   "broken_links_count": 4,
-  "health_rate": "94.0%",
+  "health_rate": "94.1%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -133,7 +133,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2tgGkphfF9sEEx&gsxid=2tgGkphfF9sEEx&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cjg9i6ME5O94iS&gsxid=cjg9i6ME5O94iS&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -303,7 +303,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=qqYaOeGgNeGeTB&gsxid=qqYaOeGgNeGeTB&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=e4K2DQP6ttMaV4&gsxid=e4K2DQP6ttMaV4&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -453,6 +453,13 @@
       "slug": "uplead",
       "target_url": "https://www.uplead.com",
       "final_url": "https://www.uplead.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "veed",
+      "target_url": "https://www.veed.com",
+      "final_url": "https://www.veed.io/",
       "status_code": 200,
       "healthy": true
     },
