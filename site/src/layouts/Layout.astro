@@ -6,14 +6,20 @@ interface Props {
   description?: string;
   jsonLd?: Record<string, any>;
   image?: string;
+  canonical?: string;
 }
 
 const { 
   title, 
   description = "Independent software intelligence and tech media: comprehensive benchmarks, exhaustive guides, and forensic teardowns of top B2B software and cloud systems.",
   jsonLd,
-  image = "/images/blog/cursor.png"
+  image = "/images/blog/cursor.png",
+  canonical
 } = Astro.props;
+
+// Determine clean canonical URL with trailing slash normalized
+const currentPath = Astro.url.pathname.replace(/\/+$/, '');
+const canonicalUrl = canonical || (currentPath === '' ? 'https://heliatech.online/' : `https://heliatech.online${currentPath}/`);
 
 // Social networks (LinkedIn, Twitter/X) do not support SVG for OpenGraph cards.
 // Automatically route og:image to high-resolution 1200x630 PNG.
@@ -29,11 +35,13 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <meta name="impact-site-verification" content="76989799-5f87-4f11-87f0-cd18bcb2da56" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | HeliaTech</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={`${title} | HeliaTech`} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="article" />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:type" content="image/png" />

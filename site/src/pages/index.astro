@@ -6,15 +6,25 @@ import { getCollection } from 'astro:content';
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "HeliaTech | Independent SaaS & AI Benchmark Observatory 2026",
-  "url": "https://heliatech.online",
-  "description": "The definitive independent software observatory. Auditing, benchmarking, and curating the world's most performant SaaS and AI architectures.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://heliatech.online/radar?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "HeliaTech | Independent SaaS & AI Benchmark Observatory 2026",
+      "url": "https://heliatech.online/",
+      "description": "The definitive independent software observatory. Auditing, benchmarking, and curating the world's most performant SaaS and AI architectures.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://heliatech.online/radar/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "HeliaTech",
+      "url": "https://heliatech.online/",
+      "logo": "https://heliatech.online/favicon.svg"
+    }
+  ]
 };
 
 // Curated Showcase Selection (Top 6 Premier Accredited Platforms)

@@ -5,5 +5,6 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
-  site: 'https://heliatech.online'
+  site: 'https://heliatech.online',
+  trailingSlash: 'always'
 });

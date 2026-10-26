@@ -6,17 +6,17 @@ export async function GET() {
   const baseUrl = 'https://heliatech.online';
 
   const staticUrls = [
-    '',
-    '/deals',
-    '/radar',
-    '/awards',
-    '/versus',
-    '/calculator',
-    '/blog',
+    '/',
+    '/deals/',
+    '/radar/',
+    '/awards/',
+    '/versus/',
+    '/calculator/',
+    '/blog/',
   ];
 
-  const reviewUrls = reviews.map((r) => `/reviews/${r.slug}`);
-  const blogUrls = blogPosts.map((b) => `/blog/${b.slug}`);
+  const reviewUrls = reviews.map((r) => `/reviews/${r.slug}/`);
+  const blogUrls = blogPosts.map((b) => `/blog/${b.slug}/`);
   const allUrls = [...staticUrls, ...reviewUrls, ...blogUrls];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -24,10 +24,10 @@ export async function GET() {
 ${allUrls
   .map(
     (url) => `  <url>
-    <loc>${baseUrl}${url}</loc>
+    <loc>${baseUrl}${url === '/' ? '/' : url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${url === '' || url === '/blog' ? 'daily' : 'weekly'}</changefreq>
-    <priority>${url === '' ? '1.0' : url.startsWith('/blog') ? '0.9' : '0.8'}</priority>
+    <changefreq>${url === '/' || url === '/blog/' ? 'daily' : 'weekly'}</changefreq>
+    <priority>${url === '/' ? '1.0' : url.startsWith('/blog/') ? '0.9' : '0.8'}</priority>
   </url>`
   )
   .join('\n')}
