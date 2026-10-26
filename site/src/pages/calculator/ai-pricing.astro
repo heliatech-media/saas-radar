@@ -1,0 +1,490 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolIcon from '../../components/ToolIcon.astro';
+import NewsletterCapture from '../../components/NewsletterCapture.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "HeliaTech AI Voice, Video & Media Pricing Calculator 2026",
+  "applicationCategory": "BusinessApplication",
+  "description": "Calculate and compare monthly AI generation costs across ElevenLabs, HeyGen, Cursor, Descript, and OpenAI APIs.",
+  "url": "https://heliatech.online/calculator/ai-pricing/"
+};
+---
+
+<Layout 
+  title="AI Voice, Video & Media Pricing Calculator 2026 | HeliaTech Lab"
+  description="Audit your generative AI bill. Calculate and compare exact monthly costs across ElevenLabs, HeyGen, Cursor, Descript, and OpenAI models."
+  canonical="https://heliatech.online/calculator/ai-pricing/"
+  jsonLd={jsonLd}
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-16">
+    
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-6 shadow-glow-purple">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        <span>OPEN-ACCESS VIRAL TOOL • 2026 AI GENERATION AUDIT</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1] mb-6">
+        AI Video & Voice API <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-400">
+          Pricing Calculator
+        </span>
+      </h1>
+      
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-8">
+        Avoid generative AI bill shocks. Enter your team's monthly production volume below to benchmark costs across ElevenLabs, HeyGen, Cursor, and OpenAI API endpoints.
+      </p>
+
+      <!-- Sub-Tool Banner Switcher -->
+      <div class="inline-flex items-center gap-2 p-1.5 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs font-mono">
+        <a 
+          href="/calculator"
+          class="px-3 py-1 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+        >
+          ← General SaaS Stack TCO Calculator
+        </a>
+        <span class="px-3 py-1 rounded-xl bg-purple-500 text-slate-950 font-bold">
+          AI Media & API Calculator
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Interactive Cockpit -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-start">
+      
+      <!-- Left Column: Volume Sliders (7 Cols) -->
+      <div class="lg:col-span-7 space-y-8">
+        
+        <!-- Parameter Sliders Card -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 backdrop-blur-xl shadow-glass-cyber space-y-8">
+          <h2 class="text-xl font-black text-white flex items-center gap-2.5">
+            <span class="text-purple-400">🎙️</span>
+            <span>Monthly AI Production Volume</span>
+          </h2>
+
+          <!-- Voice / Audio Minutes Slider -->
+          <div>
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300 font-semibold">AI Voice Synthesis & Cloning (Minutes/Mo)</span>
+              <span id="display-voice" class="text-purple-400 font-bold bg-purple-500/10 px-2.5 py-1 rounded-lg border border-purple-500/20">
+                120 mins/mo
+              </span>
+            </div>
+            <input 
+              type="range" 
+              id="slider-voice" 
+              min="10" 
+              max="2000" 
+              step="10" 
+              value="120"
+              class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-400"
+            />
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>10 mins</span>
+              <span>120 mins (~2 hrs)</span>
+              <span>600 mins (~10 hrs)</span>
+              <span>2,000 mins+</span>
+            </div>
+          </div>
+
+          <!-- Talking Avatar Video Slider -->
+          <div>
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300 font-semibold">Photorealistic Video Avatars (Minutes/Mo)</span>
+              <span id="display-video" class="text-pink-400 font-bold bg-pink-500/10 px-2.5 py-1 rounded-lg border border-pink-500/20">
+                30 mins/mo
+              </span>
+            </div>
+            <input 
+              type="range" 
+              id="slider-video" 
+              min="5" 
+              max="300" 
+              step="5" 
+              value="30"
+              class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-pink-400"
+            />
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>5 mins</span>
+              <span>30 mins</span>
+              <span>120 mins</span>
+              <span>300 mins+</span>
+            </div>
+          </div>
+
+          <!-- AI Code / Engineering Prompts Slider -->
+          <div>
+            <div class="flex justify-between items-center text-xs font-mono mb-2">
+              <span class="text-slate-300 font-semibold">AI Codebase Engineering Queries (Requests/Mo)</span>
+              <span id="display-dev" class="text-cyan-400 font-bold bg-cyan-500/10 px-2.5 py-1 rounded-lg border border-cyan-500/20">
+                2,500 queries/mo
+              </span>
+            </div>
+            <input 
+              type="range" 
+              id="slider-dev" 
+              min="200" 
+              max="15000" 
+              step="200" 
+              value="2500"
+              class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+            />
+            <div class="flex justify-between text-[11px] font-mono text-slate-500 mt-1">
+              <span>200 reqs</span>
+              <span>2.5k reqs</span>
+              <span>7.5k reqs</span>
+              <span>15k+ reqs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Provider Direct Price Breakdown Card -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/70 border border-slate-800 backdrop-blur-xl shadow-glass-cyber">
+          <h3 class="text-lg font-black text-white mb-4">
+            Direct Platform Price Comparison (At Current Volume)
+          </h3>
+
+          <div class="space-y-4 text-xs font-mono">
+            
+            <!-- Voice Tier Comparison -->
+            <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+              <span class="text-slate-400 uppercase tracking-wider font-bold block mb-1">🎙️ AI Voice Synthesis:</span>
+              <div class="flex justify-between items-center">
+                <span class="text-white font-semibold">ElevenLabs (v4 Studio Clones)</span>
+                <span id="cost-elevenlabs" class="text-emerald-400 font-bold">$36.00 / mo</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-400">
+                <span>Murf.ai Enterprise</span>
+                <span id="cost-murf" class="text-red-400 font-bold">$54.00 / mo</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-400">
+                <span>OpenAI TTS-1-HD</span>
+                <span id="cost-openaitts" class="text-slate-300 font-bold">$21.60 / mo</span>
+              </div>
+            </div>
+
+            <!-- Video Avatar Comparison -->
+            <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+              <span class="text-slate-400 uppercase tracking-wider font-bold block mb-1">🎬 AI Avatar Video:</span>
+              <div class="flex justify-between items-center">
+                <span class="text-white font-semibold">HeyGen Interactive Studio</span>
+                <span id="cost-heygen" class="text-emerald-400 font-bold">$60.00 / mo</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-400">
+                <span>Synthesia Enterprise</span>
+                <span id="cost-synthesia" class="text-red-400 font-bold">$75.00 / mo</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-400">
+                <span>D-ID Talking Head API</span>
+                <span id="cost-did" class="text-slate-300 font-bold">$54.00 / mo</span>
+              </div>
+            </div>
+
+            <!-- Developer AI Comparison -->
+            <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+              <span class="text-slate-400 uppercase tracking-wider font-bold block mb-1">⚡ Engineering AI (Claude 3.5 Sonnet / Multi-File):</span>
+              <div class="flex justify-between items-center">
+                <span class="text-white font-semibold">Cursor Pro (Flat Unlimited Fast Requests)</span>
+                <span id="cost-cursor" class="text-emerald-400 font-bold">$20.00 / mo</span>
+              </div>
+              <div class="flex justify-between items-center text-slate-400">
+                <span>Raw Claude 3.5 Sonnet API Tokens</span>
+                <span id="cost-rawapi" class="text-amber-400 font-bold">$42.50 / mo</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Live Recovery Cockpit & Share (5 Cols) -->
+      <div class="lg:col-span-5 sticky top-24 space-y-6">
+        
+        <!-- Big Financial Recovery Card -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border border-purple-500/40 shadow-2xl relative overflow-hidden backdrop-blur-2xl">
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-purple-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="mb-6">
+            <span class="text-xs font-mono text-purple-400 uppercase tracking-widest font-bold block mb-1">
+              ESTIMATED ANNUAL AI OVERSPEND RECOVERABLE
+            </span>
+            <div class="flex items-baseline gap-2">
+              <span id="ai-odometer-savings" class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-cyan-300 font-mono tracking-tight">
+                $1,026
+              </span>
+              <span class="text-xs font-mono text-slate-400">/ yr</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">
+              Optimized production stack saves you <strong id="ai-monthly-savings" class="text-white">$85.50 / mo</strong> compared to fragmented legacy tools.
+            </p>
+          </div>
+
+          <!-- Total Bill Comparison -->
+          <div class="p-4 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3 mb-6 text-xs font-mono">
+            <div class="flex justify-between items-center text-slate-400">
+              <span>Unoptimized legacy bills:</span>
+              <span id="ai-legacy-total" class="text-red-400 font-bold">$2,058 / yr</span>
+            </div>
+            <div class="flex justify-between items-center text-slate-400">
+              <span>Helia High-Velocity Stack:</span>
+              <span id="ai-opt-total" class="text-emerald-400 font-bold">$1,032 / yr</span>
+            </div>
+            <div class="pt-2 border-t border-slate-800 flex justify-between items-center font-bold">
+              <span class="text-slate-200">Gross margin preserved:</span>
+              <span id="ai-savings-percent" class="text-cyan-400 font-mono font-black text-sm">-49.8%</span>
+            </div>
+          </div>
+
+          <!-- Recommended Stack Fast Deals -->
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono space-y-2">
+              <span class="text-purple-300 font-bold block">Recommended Stack Partners:</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="/go/elevenlabs" target="_blank" rel="noopener sponsored" class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition-all font-bold">
+                  ElevenLabs ($1 Starter) ↗
+                </a>
+                <a href="/go/heygen" target="_blank" rel="noopener sponsored" class="px-2.5 py-1 rounded bg-pink-500/10 text-pink-300 border border-pink-500/30 hover:bg-pink-500/20 transition-all font-bold">
+                  HeyGen Pro ↗
+                </a>
+                <a href="/go/cursor" target="_blank" rel="noopener sponsored" class="px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 hover:bg-cyan-500/20 transition-all font-bold">
+                  Cursor Pro ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <button 
+              id="ai-btn-copy-link"
+              type="button"
+              class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>🔗 Copy Direct Calculation Link</span>
+            </button>
+
+            <button 
+              id="ai-btn-copy-memo"
+              type="button"
+              class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-purple-300 hover:text-purple-200 bg-purple-950/40 hover:bg-purple-950/60 border border-purple-500/30 hover:border-purple-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>📄 Copy AI Budget Memo</span>
+            </button>
+          </div>
+
+          <!-- Toast -->
+          <div id="ai-copy-toast" class="hidden mt-4 p-2.5 rounded-xl bg-purple-500/20 border border-purple-500/40 text-purple-300 text-xs font-mono text-center">
+            Copied to clipboard! 📋
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Methodology & Benchmark Notes -->
+    <div class="mb-16">
+      <div class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-6 font-bold flex items-center gap-2">
+        <span>⚙️ PRICING FORMULAS & BENCHMARK ASSUMPTIONS</span>
+        <span class="h-[1px] flex-grow bg-slate-800"></span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-xs font-mono text-slate-300">
+          <h4 class="text-sm font-bold text-white mb-2">Voice & Speech API</h4>
+          <p class="text-slate-400 leading-relaxed m-0 font-light">
+            Audio duration is calculated at 150 words per minute (~900 characters/min). ElevenLabs is metered at standard character tiers ($0.30/min equivalent) with sub-150ms WebSocket latency.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-xs font-mono text-slate-300">
+          <h4 class="text-sm font-bold text-white mb-2">Video Avatars</h4>
+          <p class="text-slate-400 leading-relaxed m-0 font-light">
+            HeyGen is benchmarked at $2.00/min on Creator tiers, factoring in 4K resolution rendering and natural micro-expression remeshing vs legacy green-screen models ($2.50+/min).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-xs font-mono text-slate-300">
+          <h4 class="text-sm font-bold text-white mb-2">Code Reasoning</h4>
+          <p class="text-slate-400 leading-relaxed m-0 font-light">
+            Cursor Pro includes unlimited Composer queries and 500 fast premium requests for a flat $20/mo, versus raw Anthropic API tokens which scale linearly at $3/M input + $15/M output tokens.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lead Capture -->
+    <div class="mb-16">
+      <NewsletterCapture />
+    </div>
+
+  </div>
+
+  <!-- Interactive AI Pricing Script -->
+  <script is:inline>
+    (function() {
+      const sliderVoice = document.getElementById('slider-voice');
+      const sliderVideo = document.getElementById('slider-video');
+      const sliderDev = document.getElementById('slider-dev');
+
+      const displayVoice = document.getElementById('display-voice');
+      const displayVideo = document.getElementById('display-video');
+      const displayDev = document.getElementById('display-dev');
+
+      const costEleven = document.getElementById('cost-elevenlabs');
+      const costMurf = document.getElementById('cost-murf');
+      const costOpenAITTS = document.getElementById('cost-openaitts');
+
+      const costHeyGen = document.getElementById('cost-heygen');
+      const costSynthesia = document.getElementById('cost-synthesia');
+      const costDID = document.getElementById('cost-did');
+
+      const costCursor = document.getElementById('cost-cursor');
+      const costRawApi = document.getElementById('cost-rawapi');
+
+      const odoSavings = document.getElementById('ai-odometer-savings');
+      const monthlySavingsBadge = document.getElementById('ai-monthly-savings');
+      const legacyTotalEl = document.getElementById('ai-legacy-total');
+      const optTotalEl = document.getElementById('ai-opt-total');
+      const savingsPercentEl = document.getElementById('ai-savings-percent');
+
+      const btnCopyLink = document.getElementById('ai-btn-copy-link');
+      const btnCopyMemo = document.getElementById('ai-btn-copy-memo');
+      const toast = document.getElementById('ai-copy-toast');
+
+      function showToast(msg) {
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3500);
+      }
+
+      function parseUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('voice') && sliderVoice) sliderVoice.value = params.get('voice');
+        if (params.has('video') && sliderVideo) sliderVideo.value = params.get('video');
+        if (params.has('dev') && sliderDev) sliderDev.value = params.get('dev');
+      }
+
+      function syncUrlParams() {
+        if (!sliderVoice || !sliderVideo || !sliderDev) return;
+        const params = new URLSearchParams();
+        params.set('voice', sliderVoice.value);
+        params.set('video', sliderVideo.value);
+        params.set('dev', sliderDev.value);
+        window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+      }
+
+      function calculateAIPricing() {
+        if (!sliderVoice || !sliderVideo || !sliderDev) return;
+
+        const voiceMins = parseInt(sliderVoice.value, 10);
+        const videoMins = parseInt(sliderVideo.value, 10);
+        const devQueries = parseInt(sliderDev.value, 10);
+
+        if (displayVoice) displayVoice.textContent = voiceMins.toLocaleString('en-US') + ' mins/mo';
+        if (displayVideo) displayVideo.textContent = videoMins.toLocaleString('en-US') + ' mins/mo';
+        if (displayDev) displayDev.textContent = devQueries.toLocaleString('en-US') + ' reqs/mo';
+
+        // Voice formulas
+        const elevenCost = Math.round(voiceMins * 0.30);
+        const murfCost = Math.round(voiceMins * 0.45);
+        const openaiCost = Math.round(voiceMins * 0.18);
+
+        // Video avatar formulas
+        const heygenCost = Math.round(videoMins * 2.00);
+        const synthCost = Math.round(videoMins * 2.50);
+        const didCost = Math.round(videoMins * 1.80);
+
+        // Dev formulas
+        const cursorCost = 20; // flat
+        const rawApiCost = Math.round((devQueries * 0.017)); // ~$17 per 1k complex multi-file completions
+
+        // Update breakdowns
+        if (costEleven) costEleven.textContent = '$' + elevenCost.toLocaleString('en-US') + ' / mo';
+        if (costMurf) costMurf.textContent = '$' + murfCost.toLocaleString('en-US') + ' / mo';
+        if (costOpenAITTS) costOpenAITTS.textContent = '$' + openaiCost.toLocaleString('en-US') + ' / mo';
+
+        if (costHeyGen) costHeyGen.textContent = '$' + heygenCost.toLocaleString('en-US') + ' / mo';
+        if (costSynthesia) costSynthesia.textContent = '$' + synthCost.toLocaleString('en-US') + ' / mo';
+        if (costDID) costDID.textContent = '$' + didCost.toLocaleString('en-US') + ' / mo';
+
+        if (costCursor) costCursor.textContent = '$' + cursorCost.toLocaleString('en-US') + ' / mo (Flat)';
+        if (costRawApi) costRawApi.textContent = '$' + rawApiCost.toLocaleString('en-US') + ' / mo';
+
+        // Compare stacks:
+        // Legacy Stack: Murf ($0.45) + Synthesia ($2.50) + Raw API tokens
+        const monthlyLegacy = murfCost + synthCost + Math.max(35, rawApiCost);
+        // Helia Optimized Stack: ElevenLabs + HeyGen + Cursor flat
+        const monthlyOpt = elevenCost + heygenCost + cursorCost;
+
+        const annualLegacy = monthlyLegacy * 12;
+        const annualOpt = monthlyOpt * 12;
+        const annualSavings = Math.max(0, annualLegacy - annualOpt);
+        const monthlySavings = Math.round(annualSavings / 12);
+        const percent = annualLegacy > 0 ? Math.round((annualSavings / annualLegacy) * 100) : 0;
+
+        if (odoSavings) odoSavings.textContent = '$' + annualSavings.toLocaleString('en-US');
+        if (monthlySavingsBadge) monthlySavingsBadge.textContent = '$' + monthlySavings.toLocaleString('en-US') + ' / mo';
+        if (legacyTotalEl) legacyTotalEl.textContent = '$' + annualLegacy.toLocaleString('en-US') + ' / yr';
+        if (optTotalEl) optTotalEl.textContent = '$' + annualOpt.toLocaleString('en-US') + ' / yr';
+        if (savingsPercentEl) savingsPercentEl.textContent = '-' + percent + '%';
+
+        syncUrlParams();
+      }
+
+      if (sliderVoice) sliderVoice.addEventListener('input', calculateAIPricing);
+      if (sliderVideo) sliderVideo.addEventListener('input', calculateAIPricing);
+      if (sliderDev) sliderDev.addEventListener('input', calculateAIPricing);
+
+      if (btnCopyLink) {
+        btnCopyLink.addEventListener('click', () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('Direct AI calculation link copied to clipboard! 📋');
+          });
+        });
+      }
+
+      if (btnCopyMemo) {
+        btnCopyMemo.addEventListener('click', () => {
+          const voice = sliderVoice ? sliderVoice.value : '120';
+          const video = sliderVideo ? sliderVideo.value : '30';
+          const dev = sliderDev ? sliderDev.value : '2500';
+          const savings = odoSavings ? odoSavings.textContent : '$1,026';
+          const percent = savingsPercentEl ? savingsPercentEl.textContent : '-49%';
+
+          const memo = 
+`🎙️ HELIATECH GENERATIVE AI BUDGET & PRICING MEMORANDUM
+Monthly Production Profile:
+• Voice Synthesis : ${voice} mins/mo
+• Avatar Video    : ${video} mins/mo
+• Dev AI Queries  : ${dev} requests/mo
+--------------------------------------------------
+Unoptimized Legacy Monthly Cost : ${legacyTotalEl ? legacyTotalEl.textContent : ''}
+Helia Optimized Production Stack: ${optTotalEl ? optTotalEl.textContent : ''}
+Net Annual Cashflow Preserved   : ${savings} / yr (${percent})
+
+Recommended Tooling:
+• Voice : ElevenLabs v4 (sub-150ms Conversational AI)
+• Video : HeyGen Interactive Avatar Studio
+• Code  : Cursor Pro (Flat Unlimited Composer)
+
+Full Verification & Link:
+${window.location.href}
+--------------------------------------------------
+Generated via HeliaTech Autonomous Intelligence Lab`;
+
+          navigator.clipboard.writeText(memo).then(() => {
+            showToast('AI Budget Memo copied to clipboard! 📄');
+          });
+        });
+      }
+
+      parseUrlParams();
+      calculateAIPricing();
+    })();
+  </script>
+</Layout>

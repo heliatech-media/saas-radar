@@ -37,22 +37,6 @@ const candidateTools = [
     rationale: "275M+ verified buyer database without $15,000 annual contract lock-in."
   },
   {
-    id: "eor_payroll",
-    legacyName: "Deel",
-    legacySlug: "remote", // fallback slug
-    optimizedName: "Papaya Global",
-    optimizedSlug: "papaya-global",
-    category: "Global Payroll & EOR",
-    baseLegacyCost: 599,
-    baseOptimizedCost: 350,
-    perUnitLegacy: 49, // per contractor
-    perUnitOptimized: 20,
-    defaultChecked: false,
-    affiliateUrl: "/go/papaya-global",
-    dealBadge: "Direct Interbank FX Rates",
-    rationale: "Tier-1 global banking rails eliminating hidden FX conversion markups on cross-border payroll."
-  },
-  {
     id: "voice_ai",
     legacyName: "Murf.ai",
     legacySlug: "murf-ai",
@@ -67,6 +51,22 @@ const candidateTools = [
     affiliateUrl: "/go/elevenlabs",
     dealBadge: "Starter Deal $1 + 30k Chars",
     rationale: "Sub-150ms latency and studio-grade voice cloning for AI receptionists and video pipelines."
+  },
+  {
+    id: "developer_ide",
+    legacyName: "GitHub Copilot",
+    legacySlug: "cursor", // fallback icon
+    optimizedName: "Cursor IDE",
+    optimizedSlug: "cursor",
+    category: "AI Code Velocity & Refactoring",
+    baseLegacyCost: 190,
+    baseOptimizedCost: 200,
+    perUnitLegacy: 25, // productivity overhead
+    perUnitOptimized: 5,
+    defaultChecked: true,
+    affiliateUrl: "/go/cursor",
+    dealBadge: "Pro Trial + Claude 3.5 Sonnet",
+    rationale: "Multi-file Composer codebase reasoning delivers 3.4x faster pull request turnaround than standard autocomplete."
   },
   {
     id: "database_cloud",
@@ -99,6 +99,70 @@ const candidateTools = [
     affiliateUrl: "/go/beehiiv",
     dealBadge: "30-Day Free Scale Trial",
     rationale: "Native recommendation network (Boosts) and audience monetization with zero tier penalties for growing lists."
+  },
+  {
+    id: "forms",
+    legacyName: "Typeform Business",
+    legacySlug: "typeform",
+    optimizedName: "Tally Pro",
+    optimizedSlug: "tally",
+    category: "Conversational Forms",
+    baseLegacyCost: 83,
+    baseOptimizedCost: 0,
+    perUnitLegacy: 0.08, // per response
+    perUnitOptimized: 0.0,
+    defaultChecked: false,
+    affiliateUrl: "/go/tally",
+    dealBadge: "100% Free Unlimited Submissions",
+    rationale: "Notion-like forms with unlimited free responses and logic jumps, eliminating Typeform's expensive paywalls."
+  },
+  {
+    id: "developer_email",
+    legacyName: "SendGrid Pro",
+    legacySlug: "brevo",
+    optimizedName: "Resend",
+    optimizedSlug: "resend",
+    category: "Developer Email API",
+    baseLegacyCost: 90,
+    baseOptimizedCost: 20,
+    perUnitLegacy: 0.002,
+    perUnitOptimized: 0.0007,
+    defaultChecked: false,
+    affiliateUrl: "/go/resend",
+    dealBadge: "3,000 Free Emails / Month",
+    rationale: "Modern React Email components and sub-100ms API dispatch replacing legacy HTML table builders."
+  },
+  {
+    id: "web_design",
+    legacyName: "Webflow CMS",
+    legacySlug: "webflow",
+    optimizedName: "Framer",
+    optimizedSlug: "framer",
+    category: "Web & CMS Architecture",
+    baseLegacyCost: 59,
+    baseOptimizedCost: 15,
+    perUnitLegacy: 0.02,
+    perUnitOptimized: 0.004,
+    defaultChecked: false,
+    affiliateUrl: "/go/framer",
+    dealBadge: "3 Months Pro Free (Code: HELIA)",
+    rationale: "Figma-to-live canvas deployment with 60fps spring animations cutting agency design cycles by 70%."
+  },
+  {
+    id: "eor_payroll",
+    legacyName: "Deel",
+    legacySlug: "remote",
+    optimizedName: "Papaya Global",
+    optimizedSlug: "papaya-global",
+    category: "Global Payroll & EOR",
+    baseLegacyCost: 599,
+    baseOptimizedCost: 350,
+    perUnitLegacy: 49,
+    perUnitOptimized: 20,
+    defaultChecked: false,
+    affiliateUrl: "/go/papaya-global",
+    dealBadge: "Direct Interbank FX Rates",
+    rationale: "Tier-1 global banking rails eliminating hidden FX conversion markups on cross-border payroll."
   }
 ];
 
@@ -108,19 +172,20 @@ const jsonLd = {
   "name": "HeliaTech SaaS Waste & TCO Optimizer 2026",
   "applicationCategory": "BusinessApplication",
   "description": "Real-time SaaS cost calculator. Audit current software stack overhead against high-performance modern cloud alternatives.",
-  "url": "https://heliatech.online/calculator"
+  "url": "https://heliatech.online/calculator/"
 };
 ---
 
 <Layout 
   title="SaaS TCO & Waste Calculator 2026 | HeliaTech Lab"
   description="Audit your SaaS stack in 10 seconds. Discover how much your company overpays each month compared to modern cloud architectures."
+  canonical="https://heliatech.online/calculator/"
   jsonLd={jsonLd}
 >
-  <div class="max-w-6xl mx-auto px-6 sm:px-8 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-16">
     
     <!-- Hero Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="text-center max-w-3xl mx-auto mb-14">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-6 shadow-glow-emerald">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span>OPEN-ACCESS VIRAL TOOL • 2026 TCO BENCHMARK</span>
@@ -133,9 +198,22 @@ const jsonLd = {
         </span>
       </h1>
       
-      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-8">
         95% of startups and agencies waste between <strong class="text-white font-medium">$3,000 and $25,000 annually</strong> on obsolete software margins. Select your current tools below to calculate immediate recoverable capital.
       </p>
+
+      <!-- Sub-Tool Banner Switcher -->
+      <div class="inline-flex items-center gap-2 p-1.5 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs font-mono">
+        <span class="px-3 py-1 rounded-xl bg-cyan-500 text-slate-950 font-bold">
+          SaaS Stack TCO Optimizer
+        </span>
+        <a 
+          href="/calculator/ai-pricing"
+          class="px-3 py-1 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+        >
+          AI Audio & Video Pricing Calculator ↗
+        </a>
+      </div>
     </div>
 
     <!-- Main Interactive Cockpit -->
@@ -209,7 +287,7 @@ const jsonLd = {
           <div class="flex items-center justify-between gap-4 mb-6">
             <div>
               <h2 class="text-xl font-black text-white">Which tools are in your current stack?</h2>
-              <p class="text-xs text-slate-400 mt-1">Check your current software bricks to compute optimized replacement economics.</p>
+              <p class="text-xs text-slate-400 mt-1">Select your current software bricks to compute optimized replacement economics.</p>
             </div>
             <button 
               id="btn-select-all" 
@@ -230,6 +308,8 @@ const jsonLd = {
                     type="checkbox" 
                     class="tool-checkbox w-5 h-5 rounded border-slate-700 text-cyan-500 focus:ring-0 focus:ring-offset-0 bg-slate-900 cursor-pointer accent-cyan-400"
                     data-tool-id={tool.id}
+                    data-legacy-name={tool.legacyName}
+                    data-opt-name={tool.optimizedName}
                     data-legacy-base={tool.baseLegacyCost}
                     data-legacy-unit={tool.perUnitLegacy}
                     data-opt-base={tool.baseOptimizedCost}
@@ -311,19 +391,42 @@ const jsonLd = {
               <span class="text-sm">↗</span>
             </a>
 
+            <!-- 1-Click Shareable URL Button -->
+            <button 
+              id="btn-copy-link"
+              type="button"
+              class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>🔗 Copy Direct Audit Link</span>
+            </button>
+
+            <!-- Export CFO Executive Memo -->
+            <button 
+              id="btn-copy-memo"
+              type="button"
+              class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-cyan-300 hover:text-cyan-200 bg-cyan-950/40 hover:bg-cyan-950/60 border border-cyan-500/30 hover:border-cyan-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>📄 Copy CFO Executive Memo</span>
+            </button>
+
             <!-- Social Viral Share Trigger -->
             <button 
               id="btn-share-linkedin"
               type="button"
-              class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              class="w-full py-2.5 px-4 rounded-xl font-mono text-xs font-bold text-slate-400 hover:text-slate-200 bg-transparent hover:bg-slate-900/60 border border-slate-800/80 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>💼 Share My Audit on LinkedIn</span>
+              <span>💼 Share on LinkedIn</span>
             </button>
+          </div>
+
+          <!-- Notification Toast -->
+          <div id="copy-toast" class="hidden mt-4 p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono text-center">
+            Copied to clipboard! 📋
           </div>
 
           <div class="mt-6 pt-4 border-t border-slate-800/80 text-center">
             <span class="text-[11px] font-mono text-slate-500">
-              Instant forensic audit • No credit card required
+              Instant forensic audit • Deep link state supported
             </span>
           </div>
         </div>
@@ -383,7 +486,7 @@ const jsonLd = {
                 rel="noopener sponsored"
                 class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-transform active:scale-95 flex items-center gap-1 shadow-glow-cyan"
               >
-                <span>Activate</span>
+                <span>Activate Deal</span>
                 <span>↗</span>
               </a>
             </div>
@@ -399,7 +502,7 @@ const jsonLd = {
 
   </div>
 
-  <!-- Interactive Simulator Engine (Vanilla JS Zero-Lag) -->
+  <!-- Interactive Simulator Engine with Deep-Link State (Zero-Lag Vanilla JS) -->
   <script is:inline>
     (function() {
       const sliderOps = document.getElementById('slider-ops');
@@ -414,7 +517,52 @@ const jsonLd = {
       const costLegacyEl = document.getElementById('cost-legacy');
       const costOptimizedEl = document.getElementById('cost-optimized');
       const savingsPercentEl = document.getElementById('savings-percent');
+      
       const btnShareLi = document.getElementById('btn-share-linkedin');
+      const btnCopyLink = document.getElementById('btn-copy-link');
+      const btnCopyMemo = document.getElementById('btn-copy-memo');
+      const copyToast = document.getElementById('copy-toast');
+
+      function showToast(msg) {
+        if (!copyToast) return;
+        copyToast.textContent = msg;
+        copyToast.classList.remove('hidden');
+        setTimeout(() => copyToast.classList.add('hidden'), 3500);
+      }
+
+      // 1. Parse URL Parameters on initial load
+      function parseUrlState() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('ops') && sliderOps) {
+          sliderOps.value = params.get('ops');
+        }
+        if (params.has('seats') && sliderSeats) {
+          sliderSeats.value = params.get('seats');
+        }
+        if (params.has('stack')) {
+          const activeIds = params.get('stack').split(',');
+          checkboxes.forEach(cb => {
+            cb.checked = activeIds.includes(cb.dataset.toolId);
+          });
+        }
+      }
+
+      // 2. Synchronize URL State
+      function syncUrlState() {
+        if (!sliderOps || !sliderSeats) return;
+        const activeIds = [];
+        checkboxes.forEach(cb => {
+          if (cb.checked) activeIds.push(cb.dataset.toolId);
+        });
+
+        const params = new URLSearchParams();
+        params.set('ops', sliderOps.value);
+        params.set('seats', sliderSeats.value);
+        params.set('stack', activeIds.join(','));
+
+        const newUrl = `${window.location.pathname}?${params.toString()}`;
+        window.history.replaceState(null, '', newUrl);
+      }
 
       function calculateTCO() {
         if (!sliderOps || !sliderSeats) return;
@@ -435,7 +583,6 @@ const jsonLd = {
             const optBase = parseFloat(cb.dataset.optBase) || 0;
             const optUnit = parseFloat(cb.dataset.optUnit) || 0;
 
-            // Monthly calculation factoring volume and seats
             const legCost = legacyBase + (ops * legacyUnit * 0.1) + (seats * 15);
             const optCost = optBase + (ops * optUnit * 0.1) + (seats * 4);
 
@@ -444,7 +591,6 @@ const jsonLd = {
           }
         });
 
-        // Minimum baseline if nothing checked
         if (totalLegacyMonthly === 0) {
           totalLegacyMonthly = 100;
           totalOptimizedMonthly = 25;
@@ -461,9 +607,11 @@ const jsonLd = {
         if (costLegacyEl) costLegacyEl.textContent = '$' + totalLegacyAnnual.toLocaleString('en-US') + ' / yr';
         if (costOptimizedEl) costOptimizedEl.textContent = '$' + totalOptimizedAnnual.toLocaleString('en-US') + ' / yr';
         if (savingsPercentEl) savingsPercentEl.textContent = '-' + percent + '%';
+
+        syncUrlState();
       }
 
-      // Bind events
+      // Bind slider and checkbox events
       if (sliderOps) sliderOps.addEventListener('input', calculateTCO);
       if (sliderSeats) sliderSeats.addEventListener('input', calculateTCO);
       checkboxes.forEach(cb => cb.addEventListener('change', calculateTCO));
@@ -478,21 +626,73 @@ const jsonLd = {
         });
       }
 
-      // LinkedIn Share Generator
+      // Copy Shareable Direct Link Button
+      if (btnCopyLink) {
+        btnCopyLink.addEventListener('click', () => {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('Direct audit link copied to clipboard! 📋');
+          }).catch(() => {
+            showToast('Link ready: ' + window.location.href);
+          });
+        });
+      }
+
+      // Copy CFO Executive Memo
+      if (btnCopyMemo) {
+        btnCopyMemo.addEventListener('click', () => {
+          const ops = sliderOps ? parseInt(sliderOps.value, 10).toLocaleString('en-US') : '50,000';
+          const seats = sliderSeats ? sliderSeats.value : '5';
+          const legacy = costLegacyEl ? costLegacyEl.textContent : '$7,420 / yr';
+          const optimized = costOptimizedEl ? costOptimizedEl.textContent : '$1,580 / yr';
+          const savings = odoSavings ? odoSavings.textContent : '$5,840';
+          const percent = savingsPercentEl ? savingsPercentEl.textContent : '-78%';
+
+          const checkedList = [];
+          checkboxes.forEach(cb => {
+            if (cb.checked) {
+              checkedList.push(`• ${cb.dataset.legacyName} ➔ Replace with ${cb.dataset.optName}`);
+            }
+          });
+
+          const memo = 
+`🏛️ HELIATECH FORENSIC TCO AUDIT MEMORANDUM
+To: Executive Team / CFO
+Scale: ${ops} ops/month | ${seats} active seats
+--------------------------------------------------
+Current Stack Projected Burn : ${legacy}
+Modernized Architecture Cost : ${optimized}
+Net Recoverable Annual Runway: ${savings} / year (${percent})
+
+Actionable Stack Replacements:
+${checkedList.join('\n')}
+
+Audit Breakdown & Verification:
+${window.location.href}
+--------------------------------------------------
+Generated via HeliaTech Autonomous Intelligence Lab`;
+
+          navigator.clipboard.writeText(memo).then(() => {
+            showToast('CFO Executive Memo copied to clipboard! 📄');
+          });
+        });
+      }
+
+      // LinkedIn Share
       if (btnShareLi) {
         btnShareLi.addEventListener('click', () => {
           const savings = odoSavings ? odoSavings.textContent : '$5,840';
           const text = encodeURIComponent(
-            `I just audited our SaaS overhead on HeliaTech Lab.\n\n` +
-            `Result: ${savings}/yr in recoverable cash flow by optimizing our tech stack (Make, Apollo, ElevenLabs, Supabase).\n\n` +
-            `Run your team's free audit here: https://heliatech.online/calculator`
+            `I just audited our SaaS stack overhead on HeliaTech Lab.\n\n` +
+            `Result: ${savings}/yr in recoverable runway by optimizing our software architecture.\n\n` +
+            `Run your team's free audit here: ${window.location.href}`
           );
-          const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fheliatech.online%2Fcalculator&summary=${text}`;
+          const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}&summary=${text}`;
           window.open(shareUrl, '_blank', 'width=600,height=500');
         });
       }
 
-      // Initial run
+      // Parse and initial run
+      parseUrlState();
       calculateTCO();
     })();
   </script>

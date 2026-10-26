@@ -260,6 +260,11 @@ class RewardfulEngineAgent:
 
         # Save back to _redirects
         lines = [
+            "# Strict Permanent HTTPS & Apex Domain Enforcement (Cloudflare Pages)",
+            "http://heliatech.online/* https://heliatech.online/:splat 301!",
+            "http://www.heliatech.online/* https://heliatech.online/:splat 301!",
+            "https://www.heliatech.online/* https://heliatech.online/:splat 301!",
+            "",
             "# HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh",
             "# Format: /go/:tool <destination> 302",
             ""
@@ -334,6 +339,11 @@ class RewardfulEngineAgent:
         current_redirects[slug] = target_affiliate_url
 
         lines = [
+            "# Strict Permanent HTTPS & Apex Domain Enforcement (Cloudflare Pages)",
+            "http://heliatech.online/* https://heliatech.online/:splat 301!",
+            "http://www.heliatech.online/* https://heliatech.online/:splat 301!",
+            "https://www.heliatech.online/* https://heliatech.online/:splat 301!",
+            "",
             "# HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh",
             "# Format: /go/:tool <destination> 302",
             ""

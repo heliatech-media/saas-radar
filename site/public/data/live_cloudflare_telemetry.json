@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-26T22:39:16.804998",
+  "last_synced": "2026-10-26T22:49:25.410520",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-28 - 2026-10-26)",
-  "total_visitors_network": 1548,
-  "total_requests": 19967,
-  "total_visits": 479,
-  "total_pageviews": 3965,
+  "total_visitors_network": 1552,
+  "total_requests": 19980,
+  "total_visits": 481,
+  "total_pageviews": 3969,
   "percent_cached": "56.14%",
-  "data_served_mb": 177.9,
+  "data_served_mb": 178.3,
   "top_pages": [
     {
       "path": "/",
@@ -19,14 +19,6 @@
       "views": 90
     },
     {
-      "path": "/awards/",
-      "views": 70
-    },
-    {
-      "path": "/blog/",
-      "views": 70
-    },
-    {
       "path": "/versus/",
       "views": 70
     },
@@ -35,12 +27,16 @@
       "views": 70
     },
     {
-      "path": "/deals/",
-      "views": 60
+      "path": "/blog/",
+      "views": 70
     },
     {
-      "path": "/blog/airtable/",
-      "views": 50
+      "path": "/awards/",
+      "views": 70
+    },
+    {
+      "path": "/deals/",
+      "views": 60
     },
     {
       "path": "/reviews/typeform/",
@@ -55,6 +51,10 @@
       "views": 50
     },
     {
+      "path": "/blog/airtable/",
+      "views": 50
+    },
+    {
       "path": "/reviews/adcreative-ai/",
       "views": 50
     },
@@ -63,11 +63,11 @@
       "views": 50
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/clickup/",
       "views": 40
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/reviews/beehiiv/",
       "views": 40
     }
   ],
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 280
+      "views": 290
     },
     {
       "country": "Netherlands",
