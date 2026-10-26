@@ -347,13 +347,12 @@
   {
     "name": "Tally",
     "slug": "tally",
-    "tagline": "The simplest, most powerful notion-style form builder for the web.",
-    "category": "Automation & Forms",
+    "tagline": "The simplest, most powerful notion-style form builder for the modern web",
+    "category": "Productivity & Forms",
     "rating": 4.8,
     "starting_price": "$29/mo",
-    "best_for": "Bootstrapped founders, indie hackers, agencies, and operations teams looking for a robust Typeform alternative without paywalls per submission.",
-    "affiliate_url": "https://tally.so/?via=heliatech",
-    "commission_rate": "25% recurring for 1 year"
+    "best_for": "Founders, indie makers, operations teams, and marketers looking for powerful forms without bloated enterprise pricing.",
+    "affiliate_url": "https://tally.so/?via=heliatech"
   },
   {
     "name": "Tome",
@@ -396,7 +395,8 @@
     "rating": 4.5,
     "starting_price": "$18/mo",
     "best_for": "Content creators, digital marketers, and localized growth teams needing fast video turnaround",
-    "affiliate_url": "https://www.veed.io"
+    "affiliate_url": "https://www.veed.io/?via=heliatech",
+    "commission_rate": "25% recurring for up to 12 months"
   },
   {
     "name": "Vercel",

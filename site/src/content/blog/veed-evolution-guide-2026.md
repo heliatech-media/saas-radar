@@ -14,7 +14,7 @@ tags:
 - Automation
 - B2B Software
 - AI Video
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: veed
 image: /images/blog/veed.svg
 tldr:
@@ -32,7 +32,6 @@ affiliate_cta:
   button_text: Claim Your Free VEED Account ➔
   url: /go/veed
 ---
-
 For years, the modern enterprise marketing team faced an absurd bottleneck: creating a simple, polished 60-second promotional clip or localized social video required firing up a bloated desktop application, waiting an eternity for proxy generation, rendering immense files, and navigating steep learning curves meant for Hollywood post-production houses. Video production was isolated to specialized editors, slowing down agile marketing squads who needed to ship campaigns in hours, not weeks. Then came the browser-native paradigm shift, led by a platform that re-engineered how the web handles motion graphics and AI automation.
 
 > [!NOTE]
@@ -72,7 +71,7 @@ Navigate to VEED via our [exclusive partnership link](/go/veed) and create your 
 ### Step 2: AI Subtitle Generation & Styling
 1. Click on the **Subtitles** tab on the left navigation menu.
 2. Select **Auto Transcript** and choose the primary spoken language. 
-3. Within seconds, review the generated transcript. Make quick inline edits if technical jargon was misspelled.
+3. Within seconds, review the generated transcript. [Make](/reviews/make) quick inline edits if technical jargon was misspelled.
 4. Apply a dynamic animation style (such as karaoke-highlight or pop-up captioning) from the style selector, matching your brand’s aesthetic guidelines.
 
 ### Step 3: Cleanup & AI Enhancement

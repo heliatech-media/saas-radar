@@ -6,7 +6,7 @@ tagline: The browser-based AI video suite built for fast-moving marketing teams 
 category: AI Video
 rating: 4.5
 website_url: https://www.veed.io
-affiliate_url: https://www.veed.io
+affiliate_url: "https://www.veed.io/?via=heliatech"
 summary: VEED is a robust, browser-based video editing platform that leverages generative
   AI to automate tedious workflows like subtitle generation, background removal, translation,
   and text-to-video editing. It eliminates the need for heavy desktop software like

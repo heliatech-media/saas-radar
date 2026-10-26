@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-26T22:04:24.151993",
+  "last_synced": "2026-10-26T22:15:31.141508",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-28 - 2026-10-26)",
-  "total_visitors_network": 1516,
-  "total_requests": 19717,
-  "total_visits": 469,
-  "total_pageviews": 3918,
+  "total_visitors_network": 1520,
+  "total_requests": 19747,
+  "total_visits": 471,
+  "total_pageviews": 3927,
   "percent_cached": "56.14%",
-  "data_served_mb": 167.1,
+  "data_served_mb": 167.3,
   "top_pages": [
     {
       "path": "/",
@@ -16,14 +16,10 @@
     },
     {
       "path": "/sentinel/",
-      "views": 80
+      "views": 90
     },
     {
       "path": "/reviews/retool/",
-      "views": 70
-    },
-    {
-      "path": "/versus/",
       "views": 70
     },
     {
@@ -32,6 +28,10 @@
     },
     {
       "path": "/blog/",
+      "views": 70
+    },
+    {
+      "path": "/versus/",
       "views": 70
     },
     {
@@ -55,30 +55,30 @@
       "views": 50
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 50
-    },
-    {
       "path": "/reviews/make/",
       "views": 50
     },
     {
-      "path": "/reviews/linear/",
-      "views": 40
+      "path": "/reviews/adcreative-ai/",
+      "views": 50
     },
     {
       "path": "/reviews/beehiiv/",
+      "views": 40
+    },
+    {
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 40
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 2830
+      "views": 2850
     },
     {
       "country": "Morocco",
-      "views": 570
+      "views": 580
     },
     {
       "country": "Belgium",
