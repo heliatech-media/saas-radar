@@ -106,5 +106,6 @@ AFFILIATE_MAP = {
     "podcastle": "https://podcastle.grrow.co/?via=heliatech",
     "peripety": "https://www.peripety.ai/?via=heliatech",
     "resend": "https://resend.com/?via=heliatech",
-    "riverside": "https://riverside.fm/?via=heliatech"
+    "riverside": "https://riverside.fm/?via=heliatech",
+    "tally": "https://tally.so/?via=heliatech"
 }

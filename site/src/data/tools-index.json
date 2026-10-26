@@ -315,13 +315,12 @@
   {
     "name": "Riverside",
     "slug": "riverside",
-    "tagline": "Studio-quality remote video and audio recording made effortless.",
+    "tagline": "Studio-quality remote video and audio recording from anywhere in the world.",
     "category": "Audio/Podcasting",
     "rating": 4.6,
     "starting_price": "$15/mo",
-    "best_for": "Professional podcasters, remote content creators, and marketing teams producing high-end video interviews.",
-    "affiliate_url": "https://riverside.fm/?via=heliatech",
-    "commission_rate": "30% recurring"
+    "best_for": "Professional podcasters, remote interviewers, media production agencies, and content marketing teams",
+    "affiliate_url": "https://riverside.fm"
   },
   {
     "name": "Submagic",
@@ -352,7 +351,8 @@
     "rating": 4.8,
     "starting_price": "$29/mo",
     "best_for": "Bootstrapped founders, indie hackers, agencies, and operations teams looking for a robust Typeform alternative without paywalls per submission.",
-    "affiliate_url": "https://tally.so"
+    "affiliate_url": "https://tally.so/?via=heliatech",
+    "commission_rate": "25% recurring for 1 year"
   },
   {
     "name": "Transistor",

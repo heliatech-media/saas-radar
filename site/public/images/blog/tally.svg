@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070a14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-cyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feGaussianBlur stdDeviation="32" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Geometric Patterns -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.03" />
+    </pattern>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1200" height="630" fill="url(#bg-glow)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="150" cy="100" r="250" fill="#06b6d4" opacity="0.1" filter="url(#glow-heavy)" />
+  <circle cx="1050" cy="500" r="300" fill="#8b5cf6" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="650" cy="300" r="200" fill="#d946ef" opacity="0.06" filter="url(#glow-heavy)" />
+
+  <!-- ================= HELIATECH HEADER & BRANDING ================= -->
+  <g transform="translate(80, 70)">
+    <!-- Top Pill Badge -->
+    <rect x="0" y="0" width="280" height="32" rx="16" fill="#0b1329" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="18" cy="16" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+    <text x="36" y="21" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- ================= TYPOGRAPHY & TITLES ================= -->
+  <g transform="translate(80, 150)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" fill="#d946ef" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" letter-spacing="3" filter="url(#glow-subtle)">AUTOMATION &amp; FORMS</text>
+    
+    <!-- Main Title -->
+    <text x="0" y="55" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="900" letter-spacing="-1">
+      Tally: <tspan fill="url(#cyan-violet)">The Notion-Style</tspan>
+    </text>
+    <text x="0" y="110" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.5">
+      Form Revolution
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="155" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      Hands-on architectural guide to zero-cost data collection &amp; workflow logic.
+    </text>
+  </g>
+
+  <!-- ================= 3D VECTOR ILLUSTRATION (AUTOMATION & FORMS DOMAIN) ================= -->
+  <g transform="translate(640, 95)" filter="url(#card-shadow)">
+    
+    <!-- Background Workflow Glass Canvas -->
+    <rect x="0" y="0" width="480" height="460" rx="24" fill="url(#glass-grad)" stroke="url(#card-border)" stroke-width="1.5" backdrop-filter="blur(20px)" />
+    <rect x="0" y="0" width="480" height="460" rx="24" fill="url(#dots)" opacity="0.4" />
+
+    <!-- Connection Flow Lines (Behind Nodes) -->
+    <g fill="none" stroke-width="2">
+      <!-- Path from Node 1 to Node 2 -->
+      <path d="M 110 135 C 160 135, 180 230, 240 230" stroke="url(#cyan-violet)" stroke-dasharray="6 4" filter="url(#glow-subtle)" />
+      <!-- Path from Node 2 to Node 3 -->
+      <path d="M 320 230 C 370 230, 390 120, 410 120" stroke="url(#fuchsia-cyan)" stroke-dasharray="6 4" filter="url(#glow-subtle)" />
+      <!-- Path down to analytics node -->
+      <path d="M 280 270 C 280 320, 200 340, 200 370" stroke="#38bdf8" stroke-opacity="0.5" />
+    </g>
+
+    <!-- Flow Pulses / Animated Data Packets -->
+    <circle cx="175" cy="175" r="4" fill="#38bdf8" filter="url(#glow-heavy)" />
+    <circle cx="365" cy="170" r="4" fill="#d946ef" filter="url(#glow-heavy)" />
+
+    <!-- NODE 1: Trigger / Notion Block -->
+    <g transform="translate(40, 85)">
+      <rect x="0" y="0" width="140" height="100" rx="14" fill="#0f172a" fill-opacity="0.9" stroke="#38bdf8" stroke-width="1.5" filter="url(#card-shadow)" />
+      <!-- Icon/Header -->
+      <circle cx="24" cy="24" r="10" fill="#38bdf8" fill-opacity="0.2" />
+      <path d="M 20 24 L 28 24 M 24 20 L 24 28" stroke="#38bdf8" stroke-width="2" />
+      <text x="44" y="28" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Trigger Block</text>
+      <!-- Mini form elements inside -->
+      <rect x="16" y="48" width="108" height="12" rx="4" fill="#1e293b" />
+      <rect x="16" y="68" width="70" height="12" rx="4" fill="#1e293b" />
+      <circle cx="102" cy="74" r="4" fill="#06b6d4" />
+    </g>
+
+    <!-- NODE 2: Central Tally Engine (Core Feature) -->
+    <g transform="translate(200, 160)">
+      <rect x="0" y="0" width="160" height="140" rx="16" fill="#090d16" fill-opacity="0.95" stroke="url(#cyan-violet)" stroke-width="2" filter="url(#card-shadow)" />
+      
+      <!-- Glowing Header Accent -->
+      <path d="M 16 0 L 144 0 C 152 0, 160 8, 160 16 L 160 36 L 0 36 L 0 16 C 0 8, 8 0, 16 0 Z" fill="url(#cyan-violet)" opacity="0.2" />
+      <text x="20" y="24" fill="#06b6d4" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" letter-spacing="1">TALLY CORE ENGINE</text>
+
+      <!-- Interactive Formula UI Elements -->
+      <rect x="16" y="52" width="128" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="26" y="68" fill="#e2e8f0" font-family="monospace" font-size="11">/question &gt; logic</text>
+
+      <rect x="16" y="88" width="80" height="24" rx="6" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="1" />
+      <text x="26" y="104" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Zero-Cost API</text>
+      
+      <circle cx="130" cy="100" r="6" fill="#10b981" filter="url(#glow-subtle)" />
+    </g>
+
+    <!-- NODE 3: Webhook & Data Sink -->
+    <g transform="translate(330, 70)">
+      <rect x="0" y="0" width="120" height="100" rx="14" fill="#0f172a" fill-opacity="0.9" stroke="#d946ef" stroke-width="1.5" filter="url(#card-shadow)" />
+      <circle cx="24" cy="24" r="10" fill="#d946ef" fill-opacity="0.2" />
+      <path d="M 20 24 L 28 24" stroke="#d946ef" stroke-width="2" />
+      <text x="44" y="28" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Webhook</text>
+      
+      <!-- Mini Graph Bars -->
+      <rect x="20" y="50" width="12" height="30" rx="3" fill="#d946ef" opacity="0.6" />
+      <rect x="40" y="40" width="12" height="40" rx="3" fill="#38bdf8" opacity="0.8" />
+      <rect x="60" y="58" width="12" height="22" rx="3" fill="#8b5cf6" opacity="0.7" />
+      <rect x="80" y="46" width="12" height="34" rx="3" fill="#06b6d4" opacity="0.9" />
+    </g>
+
+    <!-- NODE 4: Analytics / Data Stream Output -->
+    <g transform="translate(130, 330)">
+      <rect x="0" y="0" width="220" height="90" rx="14" fill="#0f172a" fill-opacity="0.9" stroke="#8b5cf6" stroke-width="1.5" filter="url(#card-shadow)" />
+      
+      <!-- Icon & Title -->
+      <circle cx="24" cy="26" r="10" fill="#8b5cf6" fill-opacity="0.2" />
+      <path d="M 20 26 L 24 22 L 28 30" stroke="#8b5cf6" stroke-width="2" fill="none" />
+      <text x="44" y="30" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Real-Time Data Sync</text>
+
+      <!-- Status Pill -->
+      <rect x="16" y="50" width="188" height="24" rx="6" fill="#1e293b" />
+      <circle cx="30" cy="62" r="4" fill="#06b6d4" />
+      <text x="44" y="66" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">Status: 200 OK (Active)</text>
+    </g>
+
+    <!-- Floating Security / Encryption Badge -->
+    <g transform="translate(370, 360)" filter="url(#glow-subtle)">
+      <circle cx="30" cy="30" r="30" fill="#090d16" stroke="#38bdf8" stroke-width="1.5" />
+      <!-- Lock Icon -->
+      <path d="M 22 30 L 22 26 C 22 22, 38 22, 38 26 L 38 30 M 20 30 L 40 30 L 40 40 L 20 40 Z" fill="none" stroke="#38bdf8" stroke-width="2" />
+      <circle cx="30" cy="34" r="2" fill="#38bdf8" />
+    </g>
+
+  </g>
+
+  <!-- ================= FOOTER METADATA / TECH SPECS ================= -->
+  <g transform="translate(80, 560)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1" />
+    <text x="0" y="25" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">
+      SYSTEM: HELIA TECH ENTERPRISE RESEARCH
+    </text>
+    <text x="1040" y="25" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="end" letter-spacing="1">
+      SEC. 04 // 202X EDITION
+    </text>
+  </g>
+</svg>

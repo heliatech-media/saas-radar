@@ -5,7 +5,7 @@ tagline: The simplest, most powerful notion-style form builder for the web.
 category: Automation & Forms
 rating: 4.8
 website_url: https://tally.so
-affiliate_url: https://tally.so
+affiliate_url: "https://tally.so/?via=heliatech"
 summary: Tally is a radically different form builder that operates like a text document.
   It lets creators, developers, and businesses build unlimited forms for free with
   powerful conditional logic, payment collection, and direct integrations.
@@ -124,7 +124,7 @@ Tally is a radically different form builder that operates like a text document. 
 - Notion-style text editor makes form building exceptionally fast
 - Built-in payments via Stripe and advanced conditional logic on the free plan
 - Clean, highly customizable embeds and transparent branding removal on low-cost tiers
-- Robust webhook support and native integrations with Notion, Airtable, and Google Sheets
+- Robust webhook support and native integrations with Notion, [Airtable](/reviews/airtable), and Google Sheets
 
 
 ### Cons
@@ -137,7 +137,7 @@ Tally is a radically different form builder that operates like a text document. 
 
 Tally disrupts the traditional SaaS form-builder monopoly by solving the biggest pain point in the industry: artificial limits on responses and features behind expensive paywalls. By offering a Notion-style interface, Tally reduces the friction of form creation to zero. You simply type '/' to add questions, images, or Stripe checkouts. It turns data collection from an administrative chore into a streamlined documentation process.
 
-From an architectural standpoint, Tally is built for speed and flexibility. Its conditional logic engine rivals tools that charge hundreds of dollars a month, and its native integrations with workspace tools like Notion and Airtable make it a core node in modern no-code stacks. While enterprise teams needing dedicated HIPAA compliance or complex multi-language translations might still lean toward legacy players, Tally is practically unmatched for 90% of use cases.
+From an architectural standpoint, Tally is built for speed and flexibility. Its conditional logic engine rivals tools that charge hundreds of dollars a month, and its native integrations with workspace tools like Notion and [Airtable](/reviews/airtable) make it a core node in modern no-code stacks. While enterprise teams needing dedicated HIPAA compliance or complex multi-language translations might still lean toward legacy players, Tally is practically unmatched for 90% of use cases.
 
 Ultimately, if you are currently paying $30 to $80 a month for Typeform just to collect basic leads, client feedback, or onboarding info, migrating to Tally is a no-brainer. The financial ROI is immediate, and the workflow efficiency gains will compound across your entire team from day one.
 
