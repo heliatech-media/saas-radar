@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-10-27T10:35:10.405837",
+  "last_synced": "2026-10-27T11:15:22.974684",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2258,
-  "total_requests": 23065,
-  "total_visits": 699,
-  "total_pageviews": 4827,
+  "total_visitors_network": 2276,
+  "total_requests": 23242,
+  "total_visits": 705,
+  "total_pageviews": 4876,
   "percent_cached": "56.14%",
-  "data_served_mb": 202.3,
+  "data_served_mb": 203.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 1329
+      "views": 1344
     },
     {
       "path": "/blog/",
-      "views": 112
+      "views": 115
     },
     {
       "path": "/sentinel/",
@@ -32,19 +32,19 @@
     },
     {
       "path": "/deals/",
-      "views": 66
+      "views": 69
     },
     {
       "path": "/versus/",
-      "views": 65
+      "views": 68
     },
     {
       "path": "/terms/",
-      "views": 61
+      "views": 64
     },
     {
       "path": "/reviews/elevenlabs/",
-      "views": 61
+      "views": 62
     },
     {
       "path": "/reviews/airtable/",
@@ -52,6 +52,10 @@
     },
     {
       "path": "/reviews/make/",
+      "views": 52
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
       "views": 52
     },
     {
@@ -65,16 +69,12 @@
     {
       "path": "/reviews/apollo-io/",
       "views": 50
-    },
-    {
-      "path": "/reviews/adcreative-ai/",
-      "views": 49
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3797
+      "views": 3875
     },
     {
       "country": "Morocco",
