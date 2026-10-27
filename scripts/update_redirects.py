@@ -4,10 +4,6 @@ import glob
 def generate():
     redirects_path = os.path.join('site', 'public', '_redirects')
     lines = [
-        '# Strict Permanent HTTPS & Apex Domain Enforcement (Cloudflare Pages)\n',
-        'http://heliatech.online/* https://heliatech.online/:splat 301!\n',
-        'http://www.heliatech.online/* https://heliatech.online/:splat 301!\n',
-        'https://www.heliatech.online/* https://heliatech.online/:splat 301!\n\n',
         '# Cloudflare Pages Edge Directives - Instant Affiliate Hops\n'
     ]
     

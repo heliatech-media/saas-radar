@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-10-27T11:55:34.987822",
+  "last_synced": "2026-10-27T12:18:53.728127",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2291,
-  "total_requests": 23321,
-  "total_visits": 710,
-  "total_pageviews": 4909,
+  "total_visitors_network": 2297,
+  "total_requests": 23362,
+  "total_visits": 712,
+  "total_pageviews": 4927,
   "percent_cached": "56.14%",
-  "data_served_mb": 204.0,
+  "data_served_mb": 204.3,
   "top_pages": [
     {
       "path": "/",
-      "views": 1348
-    },
-    {
-      "path": "/blog/",
-      "views": 115
+      "views": 1180
     },
     {
       "path": "/sentinel/",
-      "views": 83
+      "views": 110
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 81
+      "views": 90
     },
     {
-      "path": "/awards/",
-      "views": 76
-    },
-    {
-      "path": "/deals/",
-      "views": 69
+      "path": "/blog/",
+      "views": 80
     },
     {
       "path": "/versus/",
-      "views": 68
+      "views": 80
     },
     {
-      "path": "/terms/",
-      "views": 64
+      "path": "/reviews/heygen/",
+      "views": 70
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 62
-    },
-    {
-      "path": "/reviews/airtable/",
-      "views": 57
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 52
+      "path": "/awards/",
+      "views": 70
     },
     {
       "path": "/reviews/adcreative-ai/",
-      "views": 52
+      "views": 70
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 52
+      "path": "/reviews/retool/",
+      "views": 70
     },
     {
-      "path": "/calculator/",
-      "views": 51
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 60
     },
     {
-      "path": "/media-kit/",
+      "path": "/reviews/typeform/",
+      "views": 60
+    },
+    {
+      "path": "/deals/",
+      "views": 60
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 60
+    },
+    {
+      "path": "/radar/",
+      "views": 60
+    },
+    {
+      "path": "/reviews/tome/",
       "views": 50
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3920
+      "views": 3870
     },
     {
       "country": "Morocco",
-      "views": 657
+      "views": 660
     },
     {
       "country": "Belgium",
-      "views": 573
-    },
-    {
-      "country": "Germany",
-      "views": 369
+      "views": 450
     },
     {
       "country": "Canada",
-      "views": 287
+      "views": 320
     },
     {
-      "country": "India",
-      "views": 210
-    },
-    {
-      "country": "United Kingdom",
-      "views": 177
+      "country": "Germany",
+      "views": 300
     },
     {
       "country": "Netherlands",
-      "views": 150
+      "views": 270
     },
     {
-      "country": "France",
-      "views": 119
+      "country": "India",
+      "views": 170
+    },
+    {
+      "country": "United Kingdom",
+      "views": 170
     },
     {
       "country": "Singapore",
-      "views": 117
+      "views": 160
+    },
+    {
+      "country": "France",
+      "views": 110
     }
   ],
   "top_referrers": [

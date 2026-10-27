@@ -226,11 +226,6 @@ class LinkDoctorAgent:
     def _save_redirects(self, mapping: Dict[str, str]):
         """Rewrites site/public/_redirects with clean, alphabetical 302 rules."""
         lines = [
-            "# Strict Permanent HTTPS & Apex Domain Enforcement (Cloudflare Pages)",
-            "http://heliatech.online/* https://heliatech.online/:splat 301!",
-            "http://www.heliatech.online/* https://heliatech.online/:splat 301!",
-            "https://www.heliatech.online/* https://heliatech.online/:splat 301!",
-            "",
             "# HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh",
             "# Format: /go/:tool <destination> 302",
             ""

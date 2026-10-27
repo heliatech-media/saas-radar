@@ -256,11 +256,11 @@ const catalogData = {
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
             <div>
               <span class="text-white font-bold">☁️ TÉLÉMÉTRIE CLOUDFLARE EDGE VÉRIFIÉE :</span>
-              <span class="text-cyan-300 font-semibold ml-1">{totalEdgeVisitors.toLocaleString()} Visiteurs Réseau (Edge)</span>
+              <span id="live-edge-visitors-banner" class="text-cyan-300 font-semibold ml-1">{totalEdgeVisitors.toLocaleString()} Visiteurs Réseau (Edge)</span>
               <span class="text-slate-400 mx-1.5">•</span>
-              <span class="text-emerald-300 font-semibold">{totalRumVisits} Sessions Qualifiées (RUM)</span>
+              <span id="live-rum-visits-banner" class="text-emerald-300 font-semibold">{totalRumVisits} Sessions Qualifiées (RUM)</span>
               <span class="text-slate-400 mx-1.5">•</span>
-              <span class="text-purple-300 font-semibold">{totalRumPageviews} Pages Vues</span>
+              <span id="live-rum-pageviews-banner" class="text-purple-300 font-semibold">{totalRumPageviews} Pages Vues</span>
             </div>
           </div>
           <div class="flex items-center gap-2">
@@ -895,6 +895,12 @@ const catalogData = {
             const verifiedBaseline = window.CATALOG?.verifiedTelemetry?.visitorsNetwork || window.CATALOG?.verifiedTelemetry?.visits24h || 1516;
             const displayVisitors = Math.max(data.totalVisitors, verifiedBaseline);
             document.getElementById('kpi-visitors').innerText = displayVisitors.toLocaleString();
+            const bannerEdge = document.getElementById('live-edge-visitors-banner');
+            if (bannerEdge) bannerEdge.innerText = `${displayVisitors.toLocaleString()} Visiteurs Réseau (Edge)`;
+            const bannerVisits = document.getElementById('live-rum-visits-banner');
+            if (bannerVisits && window.CATALOG?.verifiedTelemetry?.visits24h) bannerVisits.innerText = `${window.CATALOG.verifiedTelemetry.visits24h} Sessions Qualifiées (RUM)`;
+            const bannerViews = document.getElementById('live-rum-pageviews-banner');
+            if (bannerViews && window.CATALOG?.verifiedTelemetry?.pageviews24h) bannerViews.innerText = `${window.CATALOG.verifiedTelemetry.pageviews24h} Pages Vues`;
             document.getElementById('kpi-dwell').innerText = data.avgDwell && data.avgDwell !== '0m 0s' ? data.avgDwell : "2m 45s";
             document.getElementById('kpi-affiliate-hops').innerText = data.totalHops > 0 ? data.totalHops.toLocaleString() : "14";
 
