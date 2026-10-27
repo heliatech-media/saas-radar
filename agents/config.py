@@ -110,5 +110,6 @@ AFFILIATE_MAP = {
     "tally": "https://tally.so/?via=heliatech",
     "tome": "https://tome.app/?via=heliatech",
     "veed": "https://www.veed.io/?via=heliatech",
-    "klap": "https://klap.app/?via=heliatech"
+    "klap": "https://klap.app/?via=heliatech",
+    "v0": "https://v0.dev"
 }

@@ -1,4 +1,3 @@
-
 # HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh
 # Format: /go/:tool <destination> 302
 
@@ -62,7 +61,7 @@
 /go/tray-io https://tray.ai 302
 /go/typeform https://www.typeform.com 302
 /go/uplead https://www.uplead.com 302
-/go/v0 https://www.v0.com 302
+/go/v0 https://v0.dev 302
 /go/veed https://www.veed.io/?via=heliatech 302
 /go/velocity-global https://velocityglobal.com 302
 /go/vercel https://vercel.com/?via=heliatech 302

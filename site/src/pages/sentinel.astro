@@ -1045,7 +1045,10 @@ const catalogData = {
 
         async function fetchLatestCloudflareTelemetry() {
           try {
-            const res = await fetch('/data/live_cloudflare_telemetry.json?t=' + Date.now());
+            let res = await fetch('/api/telemetry?t=' + Date.now());
+            if (!res.ok) {
+              res = await fetch('/data/live_cloudflare_telemetry.json?t=' + Date.now());
+            }
             if (res.ok) {
               const live = await res.json();
               if (live && live.total_visitors_network) {

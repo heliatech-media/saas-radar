@@ -1,17 +1,22 @@
-name: Helia Autonomous Daily Growth Engine
+name: Helia Autonomous 24/7 Cloud Growth Fleet
 
 on:
   schedule:
-    # Runs everyday at 05:00 UTC (100% autonomous, 0 human intervention)
-    - cron: '0 5 * * *'
-  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+    # Runs every 3 hours 24/7 in GitHub Cloud (100% autonomous, PC off)
+    - cron: '0 */3 * * *'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub UI
 
 permissions:
   contents: write
 
+concurrency:
+  group: helia-autonomous-fleet
+  cancel-in-progress: false
+
 jobs:
   run-helia-autonomous-fleet:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Checkout Code Repository
@@ -38,30 +43,48 @@ jobs:
       - name: Install Python Agent Fleet Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install google-genai pydantic python-dotenv pyyaml tenacity requests
+          pip install -r requirements.txt
 
-      - name: Execute Helia Autonomous Growth Cycle
+      - name: Execute Helia Autonomous Growth Cycle in Cloud
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: 'gemini-3.5-flash-lite'
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_WEB_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          LINKEDIN_BROADCAST_ENABLED: ${{ secrets.LINKEDIN_BROADCAST_ENABLED }}
           PARTNERSTACK_API_KEY: ${{ secrets.PARTNERSTACK_API_KEY }}
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          TWITTER_CLIENT_ID: ${{ secrets.TWITTER_CLIENT_ID }}
+          TWITTER_CLIENT_SECRET: ${{ secrets.TWITTER_CLIENT_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          TWITTER_REFRESH_TOKEN: ${{ secrets.TWITTER_REFRESH_TOKEN }}
+          SENTINEL_PASSWORD: ${{ secrets.SENTINEL_PASSWORD }}
         run: |
           # Helia runs Cybersecurity check, Auto-repair, Market Discovery, Teardowns & Masterclass production
           python agents/helia_autonomous_director.py --run-once --no-push
 
       - name: Commit & Push Autonomous Growth to GitHub
         run: |
-          git config --global user.name "Helia [Autonomous COO]"
+          git config --global user.name "Helia [Autonomous Cloud Fleet]"
           git config --global user.email "helia@heliatech.online"
           git add .
           
           if ! git diff-index --quiet HEAD --; then
-            git commit -m "feat(auto-growth): Helia autonomous daily expansion & masterclass publishing"
+            git pull --rebase origin main || true
+            git commit -m "feat(auto-growth): Helia autonomous cloud cycle & masterclass deployment [cloud-cron]"
             git push origin main
+            echo "✓ Deployed changes to main. Cloudflare Pages build triggered."
           else
             echo "No new updates generated in this cycle."
           fi

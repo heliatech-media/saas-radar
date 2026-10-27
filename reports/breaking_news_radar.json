@@ -1,25 +1,25 @@
 {
-  "last_scan": "2026-10-27T12:55:27.738119",
+  "last_scan": "2026-10-27T15:44:08.627629",
   "total_events_detected": 0,
   "breaking_opportunities": [],
   "processed_urls": [
     "https://supabase.com/blog/introducing-the-unified-supabase-net-sdk",
-    "https://openai.com/index/introducing-gpt-6-1-terra",
     "https://supabase.com/blog/getting-started-with-the-supabase-dotnet-sdk",
-    "https://supabase.com/blog/scope-your-personal-access-tokens",
-    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-    "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions",
-    "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
     "https://openai.com/index/openai-cut-incident-investigation",
-    "https://openai.com/index/forward-deployed-engineering-means",
+    "https://openai.com/index/introducing-gpt-6-1-terra",
     "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent",
-    "https://openai.com/index/fanatics-streamline-fan-experience",
     "https://openai.com/index/decisions-api",
-    "https://openai.com/index/securing-our-frontier-model-training-environment",
+    "https://supabase.com/blog/scope-your-personal-access-tokens",
     "https://openai.com/index/greptile-code-review-codex-astra",
-    "https://openai.com/index/chatgpt-expanding-world-of-work",
     "https://supabase.com/blog/give-your-supabase-app-its-own-mcp-server",
-    "https://openai.com/index/building-scientific-understanding-with-academic-communities"
+    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+    "https://openai.com/index/forward-deployed-engineering-means",
+    "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions",
+    "https://openai.com/index/fanatics-streamline-fan-experience",
+    "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+    "https://openai.com/index/chatgpt-expanding-world-of-work",
+    "https://openai.com/index/securing-our-frontier-model-training-environment"
   ]
 }

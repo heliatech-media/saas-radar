@@ -304,11 +304,11 @@
   {
     "name": "Resend",
     "slug": "resend",
-    "tagline": "Email for developers with a modern API, React support, and high deliverability.",
+    "tagline": "Email for developers, built with modern APIs and designed for flawless developer experience.",
     "category": "DevTools",
     "rating": 4.8,
     "starting_price": "$20/mo",
-    "best_for": "Software engineers, indie hackers, and product teams building modern web applications.",
+    "best_for": "Full-stack developers, engineering teams, and modern SaaS startups scaling their application emails.",
     "affiliate_url": "https://resend.com/?via=heliatech"
   },
   {
@@ -482,6 +482,7 @@
     "rating": 4.7,
     "starting_price": "$20/mo",
     "best_for": "Frontend engineers, full-stack developers, and rapid-prototyping product teams.",
-    "affiliate_url": "https://v0.dev"
+    "affiliate_url": "https://v0.dev",
+    "commission_rate": "Not publicly disclosed or program not currently active"
   }
 ]
