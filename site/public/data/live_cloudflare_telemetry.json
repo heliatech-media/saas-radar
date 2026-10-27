@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-27T21:48:38.261251",
+  "last_synced": "2026-10-27T23:18:59.512064",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2507,
-  "total_requests": 26390,
-  "total_visits": 777,
-  "total_pageviews": 5427,
+  "total_visitors_network": 2520,
+  "total_requests": 26445,
+  "total_visits": 781,
+  "total_pageviews": 5449,
   "percent_cached": "56.14%",
-  "data_served_mb": 232.8,
+  "data_served_mb": 233.6,
   "top_pages": [
     {
       "path": "/",
-      "views": 1260
+      "views": 1270
     },
     {
       "path": "/sentinel/",
@@ -31,11 +31,11 @@
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/versus/",
       "views": 80
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/adcreative-ai/",
       "views": 80
     },
     {
@@ -51,7 +51,7 @@
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/deals/",
       "views": 60
     },
     {
@@ -59,22 +59,22 @@
       "views": 60
     },
     {
-      "path": "/deals/",
-      "views": 60
-    },
-    {
       "path": "/reviews/typeform/",
       "views": 60
     },
     {
-      "path": "/blog/vercel-evolution-guide-2026/",
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 60
+    },
+    {
+      "path": "/blog/linear-evolution-guide-2026/",
       "views": 50
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 4700
+      "views": 4730
     },
     {
       "country": "Morocco",
