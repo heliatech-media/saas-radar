@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-27T12:18:53.728127",
+  "last_synced": "2026-10-27T12:25:45.147752",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2297,
-  "total_requests": 23362,
-  "total_visits": 712,
-  "total_pageviews": 4927,
+  "total_visitors_network": 2311,
+  "total_requests": 23392,
+  "total_visits": 716,
+  "total_pageviews": 4945,
   "percent_cached": "56.14%",
-  "data_served_mb": 204.3,
+  "data_served_mb": 204.8,
   "top_pages": [
     {
       "path": "/",
@@ -35,11 +35,11 @@
       "views": 70
     },
     {
-      "path": "/awards/",
+      "path": "/reviews/adcreative-ai/",
       "views": 70
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/awards/",
       "views": 70
     },
     {
@@ -67,14 +67,14 @@
       "views": 60
     },
     {
-      "path": "/reviews/tome/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 50
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3870
+      "views": 3890
     },
     {
       "country": "Morocco",
