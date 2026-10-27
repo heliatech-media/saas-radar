@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Email API
 - React
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: resend
 image: /images/blog/resend.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Resend Account ➔
   url: https://resend.com/?via=heliatech
 ---
-
 For over two decades, sending a simple password reset link or invoice notification meant wrestling with legacy infrastructure designed in the era of monolithic servers. Developers were forced to interface with clunky XML endpoints, convoluted SMTP relays, and archaic HTML template engines that broke across modern email clients. The human bottleneck was unmistakable: engineering teams spent hundreds of cumulative hours debugging why pristine code produced mangled, unreadable layouts in corporate inboxes, all while navigating labyrinthine enterprise pricing models.
 
 > [!NOTE]

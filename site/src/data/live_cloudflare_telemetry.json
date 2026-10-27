@@ -1,5 +1,5 @@
 {
-  "last_synced": "2026-10-27T12:45:52.968779",
+  "last_synced": "2026-10-27T12:52:05.482430",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
@@ -24,19 +24,11 @@
     },
     {
       "path": "/blog/",
-      "views": 80
+      "views": 90
     },
     {
       "path": "/versus/",
       "views": 80
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/adcreative-ai/",
-      "views": 70
     },
     {
       "path": "/awards/",
@@ -44,6 +36,14 @@
     },
     {
       "path": "/reviews/retool/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/heygen/",
       "views": 70
     },
     {
@@ -67,14 +67,14 @@
       "views": 60
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/blog/airtable/",
       "views": 50
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3900
+      "views": 3990
     },
     {
       "country": "Morocco",

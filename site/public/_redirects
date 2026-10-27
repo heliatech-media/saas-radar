@@ -1,3 +1,7 @@
+# Strict Permanent HTTPS & Apex Domain Enforcement (Cloudflare Pages)
+http://heliatech.online/* https://heliatech.online/:splat 301!
+http://www.heliatech.online/* https://heliatech.online/:splat 301!
+https://www.heliatech.online/* https://heliatech.online/:splat 301!
 
 # HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh
 # Format: /go/:tool <destination> 302
@@ -20,7 +24,7 @@
 /go/heygen https://www.heygen.com 302
 /go/jasper-ai https://www.jasper-ai.com 302
 /go/kaspr https://www.kaspr.com 302
-/go/klap https://klap.app 302
+/go/klap https://klap.app/?via=heliatech 302
 /go/leadiq https://leadiq.com 302
 /go/lemlist https://lemlist.com/?via=heliatech 302
 /go/linear https://linear.app/?via=heliatech 302
@@ -62,6 +66,7 @@
 /go/tray-io https://tray.ai 302
 /go/typeform https://www.typeform.com 302
 /go/uplead https://www.uplead.com 302
+/go/v0 https://www.v0.com 302
 /go/veed https://www.veed.io/?via=heliatech 302
 /go/velocity-global https://velocityglobal.com 302
 /go/vercel https://vercel.com/?via=heliatech 302

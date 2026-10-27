@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-27 08:43:35",
-  "total_links_audited": 69,
+  "timestamp": "2026-10-27 12:54:58",
+  "total_links_audited": 70,
   "healthy_links": 65,
-  "broken_links_count": 4,
-  "health_rate": "94.2%",
+  "broken_links_count": 5,
+  "health_rate": "92.9%",
   "broken_links": [
     {
       "slug": "notion-ai",
@@ -36,6 +36,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno 11002] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "v0",
+      "target_url": "https://www.v0.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.v0.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.v0.com', port=443): Failed to resolve 'www.v0.com' ([Errno 11001] getaddrinfo failed)\"))"
     }
   ],
   "audit_details": [
@@ -133,7 +141,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=kRiUjxG4OQuWdM&gsxid=kRiUjxG4OQuWdM&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=iyAy4yrnOpwazx&gsxid=iyAy4yrnOpwazx&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -167,8 +175,8 @@
     },
     {
       "slug": "klap",
-      "target_url": "https://klap.app",
-      "final_url": "https://klap.app/",
+      "target_url": "https://klap.app/?via=heliatech",
+      "final_url": "https://klap.app/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -310,7 +318,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bLQcESEaKzpkXs&gsxid=bLQcESEaKzpkXs&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=QGqJR0jlD2tYKf&gsxid=QGqJR0jlD2tYKf&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -464,6 +472,14 @@
       "healthy": true
     },
     {
+      "slug": "v0",
+      "target_url": "https://www.v0.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.v0.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.v0.com', port=443): Failed to resolve 'www.v0.com' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
       "slug": "veed",
       "target_url": "https://www.veed.io/?via=heliatech",
       "final_url": "https://www.veed.io/?via=heliatech",
@@ -494,7 +510,7 @@
     {
       "slug": "wati",
       "target_url": "https://www.wati.io/?fp_ref=heliatech",
-      "final_url": "https://www.wati.io/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/ar/",
       "status_code": 200,
       "healthy": true
     },
