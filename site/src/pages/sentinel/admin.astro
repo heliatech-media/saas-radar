@@ -1145,6 +1145,9 @@ const catalog = {
           if (keyInput) keyInput.value = '';
         }
 
+        // Auto-refresh telemetry every 20s while page is active
+        setInterval(fetchLatestCloudflareTelemetry, 20000);
+
         // Check active session
         const existingToken = sessionStorage.getItem(SESSION_KEY);
         if (existingToken === AUTHORIZED_DIGEST || existingToken === "unlocked") {

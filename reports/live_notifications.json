@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-10-27 12:55:52",
+    "title": "Cycle Autonome #v0",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de v0 et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-27 12:54:58",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
@@ -341,12 +348,5 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `notion-ai, playht`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-10-23 21:52:34",
-    "title": "Cycle Autonome #Vercel",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Vercel et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

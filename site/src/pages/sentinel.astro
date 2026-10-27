@@ -1089,6 +1089,9 @@ const catalogData = {
 
         // Initialize verification
         checkAuth();
+
+        // High-frequency telemetry background auto-sync (every 20s while viewing)
+        setInterval(fetchLatestCloudflareTelemetry, 20000);
       })();
     </script>
   </body>

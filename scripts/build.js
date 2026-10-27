@@ -40,9 +40,22 @@ if (fs.existsSync(headersSource)) {
 }
 
 if (fs.existsSync(redirectsSource)) {
-  fs.copyFileSync(redirectsSource, path.join(rootDist, '_redirects'));
-  fs.copyFileSync(redirectsSource, path.join(siteDist, '_redirects'));
-  console.log('✓ Verified _redirects in dist');
+  const rawRedirects = fs.readFileSync(redirectsSource, 'utf-8');
+  // Cloudflare Pages requires all redirect source paths to be relative (start with '/')
+  const cleanedLines = rawRedirects.split('\n').filter(line => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) return true;
+    if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+      console.warn(`⚠️ [Cloudflare Build Bridge] Removed invalid absolute redirect: "${trimmed}"`);
+      return false;
+    }
+    return true;
+  });
+  const sanitized = cleanedLines.join('\n');
+  fs.writeFileSync(path.join(rootDist, '_redirects'), sanitized, 'utf-8');
+  fs.writeFileSync(path.join(siteDist, '_redirects'), sanitized, 'utf-8');
+  fs.writeFileSync(redirectsSource, sanitized, 'utf-8');
+  console.log('✓ Sanitized and verified _redirects in dist and public');
 }
 
 console.log('✨ [Cloudflare Build Bridge] Build completed successfully!');
