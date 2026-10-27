@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-27T12:25:45.147752",
+  "last_synced": "2026-10-27T12:45:52.968779",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2311,
-  "total_requests": 23392,
-  "total_visits": 716,
-  "total_pageviews": 4945,
+  "total_visitors_network": 2323,
+  "total_requests": 23425,
+  "total_visits": 720,
+  "total_pageviews": 4957,
   "percent_cached": "56.14%",
-  "data_served_mb": 204.8,
+  "data_served_mb": 205.4,
   "top_pages": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 90
+      "views": 100
     },
     {
       "path": "/blog/",
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 3890
+      "views": 3900
     },
     {
       "country": "Morocco",
