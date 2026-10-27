@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-27T08:40:52.746619",
+  "last_synced": "2026-10-27T09:14:44.178190",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2228,
-  "total_requests": 22840,
-  "total_visits": 690,
-  "total_pageviews": 4767,
+  "total_visitors_network": 2235,
+  "total_requests": 22918,
+  "total_visits": 692,
+  "total_pageviews": 4789,
   "percent_cached": "56.14%",
-  "data_served_mb": 199.4,
+  "data_served_mb": 201.6,
   "top_pages": [
     {
       "path": "/",
-      "views": 1315
+      "views": 1323
     },
     {
       "path": "/blog/",
@@ -23,16 +23,16 @@
       "views": 83
     },
     {
-      "path": "/awards/",
-      "views": 76
-    },
-    {
       "path": "/blog/make-automation-revolution/",
       "views": 76
     },
     {
+      "path": "/awards/",
+      "views": 76
+    },
+    {
       "path": "/deals/",
-      "views": 65
+      "views": 66
     },
     {
       "path": "/versus/",
@@ -44,7 +44,7 @@
     },
     {
       "path": "/reviews/airtable/",
-      "views": 56
+      "views": 57
     },
     {
       "path": "/reviews/elevenlabs/",
@@ -55,15 +55,15 @@
       "views": 52
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 50
-    },
-    {
       "path": "/calculator/",
-      "views": 50
+      "views": 51
     },
     {
       "path": "/reviews/clickup/",
+      "views": 50
+    },
+    {
+      "path": "/reviews/apollo-io/",
       "views": 50
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 3712
+      "views": 3746
     },
     {
       "country": "Morocco",
-      "views": 656
+      "views": 657
     },
     {
       "country": "Belgium",
@@ -105,12 +105,12 @@
       "views": 150
     },
     {
-      "country": "Singapore",
+      "country": "France",
       "views": 117
     },
     {
-      "country": "France",
-      "views": 116
+      "country": "Singapore",
+      "views": 117
     }
   ],
   "top_referrers": [
