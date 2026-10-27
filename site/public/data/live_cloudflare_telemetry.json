@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-27T02:31:27.160046",
+  "last_synced": "2026-10-27T02:41:38.168312",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 1804,
-  "total_requests": 21170,
-  "total_visits": 559,
-  "total_pageviews": 4180,
+  "total_visitors_network": 1822,
+  "total_requests": 21229,
+  "total_visits": 564,
+  "total_pageviews": 4199,
   "percent_cached": "56.14%",
-  "data_served_mb": 184.6,
+  "data_served_mb": 186.3,
   "top_pages": [
     {
       "path": "/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "/awards/",
-      "views": 71
+      "views": 72
     },
     {
       "path": "/blog/make-automation-revolution/",
@@ -32,11 +32,11 @@
     },
     {
       "path": "/versus/",
-      "views": 58
+      "views": 60
     },
     {
       "path": "/deals/",
-      "views": 58
+      "views": 60
     },
     {
       "path": "/terms/",
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 3220
+      "views": 3255
     },
     {
       "country": "Morocco",
@@ -94,7 +94,7 @@
     },
     {
       "country": "India",
-      "views": 195
+      "views": 196
     },
     {
       "country": "United Kingdom",
