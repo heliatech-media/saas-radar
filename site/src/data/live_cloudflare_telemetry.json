@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-27T02:21:17.605240",
+  "last_synced": "2026-10-27T02:31:27.160046",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 1793,
-  "total_requests": 21144,
-  "total_visits": 555,
-  "total_pageviews": 4169,
+  "total_visitors_network": 1804,
+  "total_requests": 21170,
+  "total_visits": 559,
+  "total_pageviews": 4180,
   "percent_cached": "56.14%",
-  "data_served_mb": 184.4,
+  "data_served_mb": 184.6,
   "top_pages": [
     {
       "path": "/",
@@ -31,11 +31,11 @@
       "views": 69
     },
     {
-      "path": "/deals/",
+      "path": "/versus/",
       "views": 58
     },
     {
-      "path": "/versus/",
+      "path": "/deals/",
       "views": 58
     },
     {
@@ -56,25 +56,25 @@
     },
     {
       "path": "/reviews/apollo-io/",
-      "views": 46
+      "views": 47
     },
     {
       "path": "/reviews/clickup/",
       "views": 46
     },
     {
-      "path": "/calculator/",
+      "path": "/reviews/zapier/",
       "views": 42
     },
     {
-      "path": "/blog/adcreative-ai-evolution-guide-2026/",
-      "views": 41
+      "path": "/calculator/",
+      "views": 42
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3215
+      "views": 3220
     },
     {
       "country": "Morocco",
@@ -90,7 +90,7 @@
     },
     {
       "country": "Canada",
-      "views": 200
+      "views": 201
     },
     {
       "country": "India",
