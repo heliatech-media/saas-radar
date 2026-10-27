@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-27T15:57:31.147887",
+  "last_synced": "2026-10-27T16:37:04.351029",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2382,
-  "total_requests": 24114,
-  "total_visits": 738,
-  "total_pageviews": 5141,
+  "total_visitors_network": 2417,
+  "total_requests": 24391,
+  "total_visits": 749,
+  "total_pageviews": 5241,
   "percent_cached": "56.14%",
-  "data_served_mb": 212.1,
+  "data_served_mb": 219.6,
   "top_pages": [
     {
       "path": "/",
@@ -27,11 +27,11 @@
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 80
+      "path": "/awards/",
+      "views": 90
     },
     {
-      "path": "/awards/",
+      "path": "/reviews/adcreative-ai/",
       "views": 80
     },
     {
@@ -39,19 +39,19 @@
       "views": 80
     },
     {
-      "path": "/reviews/retool/",
-      "views": 70
-    },
-    {
       "path": "/reviews/heygen/",
       "views": 70
     },
     {
-      "path": "/radar/",
-      "views": 60
+      "path": "/reviews/retool/",
+      "views": 70
     },
     {
       "path": "/reviews/beehiiv/",
+      "views": 60
+    },
+    {
+      "path": "/radar/",
       "views": 60
     },
     {
@@ -59,22 +59,22 @@
       "views": 60
     },
     {
-      "path": "/reviews/typeform/",
-      "views": 60
-    },
-    {
       "path": "/blog/lovable-evolution-guide-2026/",
       "views": 60
     },
     {
-      "path": "/blog/airtable/",
+      "path": "/reviews/typeform/",
+      "views": 60
+    },
+    {
+      "path": "/reviews/make/",
       "views": 50
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 4140
+      "views": 4280
     },
     {
       "country": "Morocco",
@@ -110,7 +110,7 @@
     },
     {
       "country": "France",
-      "views": 130
+      "views": 140
     }
   ],
   "top_referrers": [
