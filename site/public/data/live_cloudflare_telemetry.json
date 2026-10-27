@@ -1,84 +1,84 @@
 {
-  "last_synced": "2026-10-27T02:41:38.168312",
+  "last_synced": "2026-10-27T08:34:33.339445",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 1822,
-  "total_requests": 21229,
-  "total_visits": 564,
-  "total_pageviews": 4199,
+  "total_visitors_network": 2225,
+  "total_requests": 22810,
+  "total_visits": 689,
+  "total_pageviews": 4759,
   "percent_cached": "56.14%",
-  "data_served_mb": 186.3,
+  "data_served_mb": 199.3,
   "top_pages": [
     {
       "path": "/",
-      "views": 1242
+      "views": 1314
     },
     {
       "path": "/blog/",
-      "views": 96
+      "views": 112
     },
     {
       "path": "/sentinel/",
       "views": 81
     },
     {
-      "path": "/awards/",
-      "views": 72
-    },
-    {
       "path": "/blog/make-automation-revolution/",
-      "views": 69
+      "views": 76
     },
     {
-      "path": "/versus/",
-      "views": 60
+      "path": "/awards/",
+      "views": 75
     },
     {
       "path": "/deals/",
-      "views": 60
+      "views": 65
+    },
+    {
+      "path": "/versus/",
+      "views": 65
     },
     {
       "path": "/terms/",
-      "views": 54
-    },
-    {
-      "path": "/reviews/elevenlabs/",
-      "views": 52
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 49
+      "views": 61
     },
     {
       "path": "/reviews/airtable/",
-      "views": 49
+      "views": 56
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 56
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 52
     },
     {
       "path": "/reviews/apollo-io/",
-      "views": 47
+      "views": 50
     },
     {
       "path": "/reviews/clickup/",
-      "views": 46
+      "views": 50
     },
     {
-      "path": "/reviews/zapier/",
-      "views": 42
+      "path": "/reviews/adcreative-ai/",
+      "views": 49
     },
     {
       "path": "/calculator/",
-      "views": 42
+      "views": 49
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3255
+      "views": 3709
     },
     {
       "country": "Morocco",
-      "views": 635
+      "views": 636
     },
     {
       "country": "Belgium",
@@ -86,31 +86,31 @@
     },
     {
       "country": "Germany",
-      "views": 344
+      "views": 366
     },
     {
       "country": "Canada",
-      "views": 201
+      "views": 287
     },
     {
       "country": "India",
-      "views": 196
+      "views": 210
     },
     {
       "country": "United Kingdom",
-      "views": 158
+      "views": 177
     },
     {
       "country": "Netherlands",
-      "views": 140
+      "views": 150
     },
     {
       "country": "Singapore",
-      "views": 116
+      "views": 117
     },
     {
       "country": "France",
-      "views": 108
+      "views": 116
     }
   ],
   "top_referrers": [

@@ -109,5 +109,6 @@ AFFILIATE_MAP = {
     "riverside": "https://riverside.fm/?via=heliatech",
     "tally": "https://tally.so/?via=heliatech",
     "tome": "https://tome.app/?via=heliatech",
-    "veed": "https://www.veed.io/?via=heliatech"
+    "veed": "https://www.veed.io/?via=heliatech",
+    "klap": "https://klap.app/?via=heliatech"
 }

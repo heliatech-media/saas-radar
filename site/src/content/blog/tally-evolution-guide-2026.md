@@ -11,7 +11,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: tally
 image: /images/blog/tally.svg
 tldr:
@@ -29,7 +29,6 @@ affiliate_cta:
   button_text: Claim Your Free Tally Account ➔
   url: https://tally.so/?via=heliatech
 ---
-
 For over a decade, building a simple digital form felt like navigating a labyrinth of rigid grid systems, restrictive templates, and frustrating paywalls. Companies routinely found themselves trapped in bloated legacy software ecosystems, paying exorbitant monthly fees just to collect basic customer feedback or process file uploads. The modern web demanded speed, elegance, and intuitive design, yet form builders remained stubbornly archaic—until a minimalist disruption rewrote the rules of digital data collection.
 
 ## 1. The Genesis & Evolution
@@ -47,7 +46,7 @@ For B2B organizations looking to optimize their operational overhead, Tally deli
 
 - **Uncompromising Free Tier:** Unlike competitors that restrict submissions or truncate form counts after a trial period, Tally's free tier includes unlimited forms, unlimited submissions, and file uploads. This alone saves growing startups hundreds of dollars annually.
 - **Native Logic & Calculations:** Complex pricing calculators, multi-step qualification quizzes, and conditional logic flows are fully functional right out of the box without hitting sudden tier paywalls.
-- **Ecosystem Interoperability:** With native webhooks, custom domains, and seamless API integrations with platforms like Make and Zapier, Tally acts as a frictionless data intake engine for your existing CRM and database infrastructure.
+- **Ecosystem Interoperability:** With native webhooks, custom domains, and seamless API integrations with platforms like [Make](/reviews/make) and [Zapier](/reviews/zapier), Tally acts as a frictionless data intake engine for your existing CRM and database infrastructure.
 - **Versatile Embedding Architecture:** Whether you need an inline form embedded inside a documentation site, a pop-up acquisition lead magnet, a slide-out drawer, or a standalone full-page landing site, Tally adapts instantly to your brand layout.
 
 ```mermaid

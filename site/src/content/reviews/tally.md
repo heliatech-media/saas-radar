@@ -129,7 +129,7 @@ Tally is a revolutionary form builder that lets users create complex forms as ea
 - Generous free tier includes unlimited forms, submissions, and file uploads.
 - Notion-style block editor creates an ultra-flat learning curve.
 - Advanced features like conditional logic and calculations are fully functional without hitting paywalls.
-- Native webhook and API integrations seamlessly connect with automation platforms like Make and Zapier.
+- Native webhook and API integrations seamlessly connect with automation platforms like [Make](/reviews/make) and [Zapier](/reviews/zapier).
 - Embed options include inline, pop-up, drawer, and full-page layouts.
 
 

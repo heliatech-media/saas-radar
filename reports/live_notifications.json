@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-27 02:37:21",
+    "title": "Cycle Autonome #Klap",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klap et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-10-27 02:33:37",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `kaspr, klap, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-10-26 22:21:24",
     "title": "Cycle Autonome #Tally",
     "category": "CYCLE",
@@ -334,19 +348,5 @@
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Lemlist et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-23 21:25:50",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `apollo-io, brevo, clickup, heygen, lusha`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-10-23 21:20:39",
-    "title": "Helia-Lupin Déployé & Opérationnel 😈",
-    "category": "LUPIN",
-    "message": "Les 5 Coups de Maître Lupin sont déployés en production : Ghost Hijacking Heroku, Pricing Leaks Papaya Global, Parasite SEO GitHub, Trophées Gagnants et Simulateur de Surfacturation interactif.",
-    "link": "https://heliatech.online/versus"
   }
 ]

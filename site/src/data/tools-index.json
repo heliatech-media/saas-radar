@@ -140,6 +140,17 @@
     "commission_rate": "20% recurring for up to 12 months"
   },
   {
+    "name": "Klap",
+    "slug": "klap",
+    "tagline": "Turn long-form YouTube videos into viral short-form clips with AI in one click.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Content creators, digital marketing agencies, and podcast hosts scaling short-form social channels.",
+    "affiliate_url": "https://klap.app/?via=heliatech",
+    "commission_rate": "30% recurring"
+  },
+  {
     "name": "Lemlist",
     "slug": "lemlist",
     "tagline": "Personalized cold email software with custom image and video automation to boost reply rates.",
@@ -293,13 +304,12 @@
   {
     "name": "Resend",
     "slug": "resend",
-    "tagline": "Email for developers, designed to build, test, and deliver transactional emails with code that scales.",
+    "tagline": "Email for developers with a modern API, React support, and high deliverability.",
     "category": "DevTools",
     "rating": 4.8,
     "starting_price": "$20/mo",
-    "best_for": "Full-stack developers, SaaS startups, and engineering teams modernizing their tech stack",
-    "affiliate_url": "https://resend.com/?via=heliatech",
-    "commission_rate": "20% recurring for 12 months"
+    "best_for": "Software engineers, indie hackers, and product teams building modern web applications.",
+    "affiliate_url": "https://resend.com/?via=heliatech"
   },
   {
     "name": "Retool",

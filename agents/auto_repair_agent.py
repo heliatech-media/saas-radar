@@ -78,7 +78,13 @@ class AutoRepairAgent:
     def sync_cloudflare_redirects(self):
         """Generates Cloudflare Pages _redirects file for instant edge 302 hops."""
         redirects_file = SITE_DIR / "public" / "_redirects"
-        lines = ["# Cloudflare Pages Edge Directives - Instant Affiliate Hops\n"]
+        lines = [
+            "# Strict Permanent HTTPS & Apex Domain Enforcement (Cloudflare Pages)\n",
+            "http://heliatech.online/* https://heliatech.online/:splat 301!\n",
+            "http://www.heliatech.online/* https://heliatech.online/:splat 301!\n",
+            "https://www.heliatech.online/* https://heliatech.online/:splat 301!\n\n",
+            "# Cloudflare Pages Edge Directives - Instant Affiliate Hops\n"
+        ]
         for md_file in sorted(self.reviews_dir.glob("*.md")):
             slug = md_file.stem
             try:
