@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-10-27T00:29:56.246609",
+  "last_synced": "2026-10-27T01:10:20.778034",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-09-28 - 2026-10-26)",
-  "total_visitors_network": 1577,
-  "total_requests": 20151,
-  "total_visits": 488,
-  "total_pageviews": 4010,
+  "time_window": "28 Days (2026-09-29 - 2026-10-27)",
+  "total_visitors_network": 1588,
+  "total_requests": 20238,
+  "total_visits": 492,
+  "total_pageviews": 4052,
   "percent_cached": "56.14%",
-  "data_served_mb": 180.3,
+  "data_served_mb": 181.0,
   "top_pages": [
     {
       "path": "/",
-      "views": 1090
-    },
-    {
-      "path": "/sentinel/",
-      "views": 90
-    },
-    {
-      "path": "/versus/",
-      "views": 70
+      "views": 1230
     },
     {
       "path": "/blog/",
-      "views": 70
+      "views": 94
     },
     {
-      "path": "/reviews/retool/",
-      "views": 70
+      "path": "/sentinel/",
+      "views": 81
     },
     {
       "path": "/awards/",
-      "views": 70
-    },
-    {
-      "path": "/deals/",
-      "views": 60
-    },
-    {
-      "path": "/blog/airtable/",
-      "views": 50
-    },
-    {
-      "path": "/reviews/typeform/",
-      "views": 50
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 50
+      "views": 71
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 50
+      "views": 69
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 50
+      "path": "/versus/",
+      "views": 58
     },
     {
-      "path": "/reviews/make/",
-      "views": 50
+      "path": "/deals/",
+      "views": 57
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 40
+      "path": "/terms/",
+      "views": 52
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 51
+    },
+    {
+      "path": "/reviews/airtable/",
+      "views": 48
     },
     {
       "path": "/reviews/apollo-io/",
-      "views": 40
+      "views": 46
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 46
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 45
+    },
+    {
+      "path": "/calculator/",
+      "views": 42
+    },
+    {
+      "path": "/reviews/zapier/",
+      "views": 41
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3000
+      "views": 3122
     },
     {
       "country": "Morocco",
-      "views": 590
+      "views": 634
     },
     {
       "country": "Belgium",
-      "views": 450
+      "views": 573
     },
     {
       "country": "Germany",
-      "views": 290
-    },
-    {
-      "country": "Netherlands",
-      "views": 250
+      "views": 340
     },
     {
       "country": "Canada",
-      "views": 190
+      "views": 197
     },
     {
       "country": "India",
-      "views": 170
+      "views": 195
     },
     {
       "country": "United Kingdom",
-      "views": 170
+      "views": 156
+    },
+    {
+      "country": "Netherlands",
+      "views": 140
     },
     {
       "country": "Singapore",
-      "views": 160
+      "views": 114
     },
     {
-      "country": "FI",
-      "views": 100
+      "country": "France",
+      "views": 106
     }
   ],
   "top_referrers": [
