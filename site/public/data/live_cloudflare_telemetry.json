@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-27T01:40:40.475659",
+  "last_synced": "2026-10-27T01:50:51.078554",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 1599,
-  "total_requests": 20536,
-  "total_visits": 495,
-  "total_pageviews": 4063,
+  "total_visitors_network": 1702,
+  "total_requests": 20681,
+  "total_visits": 527,
+  "total_pageviews": 4102,
   "percent_cached": "56.14%",
-  "data_served_mb": 181.9,
+  "data_served_mb": 182.6,
   "top_pages": [
     {
       "path": "/",
@@ -36,23 +36,23 @@
     },
     {
       "path": "/deals/",
-      "views": 57
+      "views": 58
     },
     {
       "path": "/terms/",
-      "views": 53
+      "views": 54
     },
     {
       "path": "/reviews/elevenlabs/",
-      "views": 51
+      "views": 52
     },
     {
       "path": "/reviews/airtable/",
-      "views": 48
+      "views": 49
     },
     {
       "path": "/reviews/make/",
-      "views": 46
+      "views": 48
     },
     {
       "path": "/reviews/apollo-io/",
@@ -60,25 +60,25 @@
     },
     {
       "path": "/reviews/clickup/",
-      "views": 45
+      "views": 46
     },
     {
       "path": "/calculator/",
       "views": 42
     },
     {
-      "path": "/media-kit/",
+      "path": "/reviews/adcreative-ai/",
       "views": 41
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 3135
+      "views": 3146
     },
     {
       "country": "Morocco",
-      "views": 634
+      "views": 635
     },
     {
       "country": "Belgium",
@@ -86,11 +86,11 @@
     },
     {
       "country": "Germany",
-      "views": 341
+      "views": 342
     },
     {
       "country": "Canada",
-      "views": 199
+      "views": 200
     },
     {
       "country": "India",
@@ -98,7 +98,7 @@
     },
     {
       "country": "United Kingdom",
-      "views": 156
+      "views": 158
     },
     {
       "country": "Netherlands",
@@ -110,7 +110,7 @@
     },
     {
       "country": "France",
-      "views": 106
+      "views": 108
     }
   ],
   "top_referrers": [
