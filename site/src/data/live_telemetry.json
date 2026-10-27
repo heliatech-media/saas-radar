@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-27 02:27:31 UTC",
+  "last_updated": "2026-10-27 08:40:50 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 44,
+    "total_monetized_tools": 69,
     "total_published_investigations": 104,
     "reviews_audited": 45,
     "masterclasses_and_duels": 59,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$15,400 USD",
+    "projected_monthly_mrr": "$24,150 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -73,6 +73,11 @@
   ],
   "active_monetized_hops": [
     {
+      "slug": "activepieces",
+      "destination": "https://www.activepieces.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "adcreative-ai",
       "destination": "https://www.adcreative.ai/?fp_ref=heliatech",
       "type": "Commission Partner"
@@ -84,7 +89,7 @@
     },
     {
       "slug": "apollo-io",
-      "destination": "https://apollo.grsm.io/heliatech",
+      "destination": "https://www.apollo.io/?ref=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -94,8 +99,8 @@
     },
     {
       "slug": "brevo",
-      "destination": "https://brevo.partnerlinks.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.brevo.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "castmagic",
@@ -103,8 +108,23 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "clay",
+      "destination": "https://www.clay.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "clickup",
-      "destination": "https://clickup.pxf.io/c/heliatech",
+      "destination": "https://www.clickup.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "cognism",
+      "destination": "https://www.cognism.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "coqui",
+      "destination": "https://github.com/coqui-ai/TTS",
       "type": "Catalog Edge Hop"
     },
     {
@@ -114,8 +134,8 @@
     },
     {
       "slug": "descript",
-      "destination": "https://get.descript.com/?via=heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.descript.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "elevenlabs",
@@ -129,13 +149,28 @@
     },
     {
       "slug": "heygen",
-      "destination": "https://heygen.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.heygen.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "jasper-ai",
-      "destination": "https://partnerstack.com/jasper?via=heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.jasper-ai.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "kaspr",
+      "destination": "https://www.kaspr.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "klap",
+      "destination": "https://klap.app",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "leadiq",
+      "destination": "https://leadiq.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "lemlist",
@@ -154,8 +189,8 @@
     },
     {
       "slug": "lusha",
-      "destination": "https://lusha.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.lusha.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "make",
@@ -168,6 +203,16 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "multiplier",
+      "destination": "https://www.usemultiplier.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "murf-ai",
+      "destination": "https://murf.ai",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "n8n",
       "destination": "https://n8n.io/?via=heliatech",
       "type": "Commission Partner"
@@ -178,8 +223,23 @@
       "type": "Catalog Edge Hop"
     },
     {
+      "slug": "openai-tts",
+      "destination": "https://platform.openai.com/docs/guides/text-to-speech",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "opus-clip",
       "destination": "https://www.opus.pro/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "oyster",
+      "destination": "https://www.oysterhr.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "papaya-global",
+      "destination": "https://www.papayaglobal.com/?ref=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -198,6 +258,16 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "plane",
+      "destination": "https://plane.so",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "playht",
+      "destination": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "podcastle",
       "destination": "https://podcastle.grrow.co/?via=heliatech",
       "type": "Commission Partner"
@@ -208,8 +278,28 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "power-automate",
+      "destination": "https://powerautomate.microsoft.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "printify",
-      "destination": "https://printify.pxf.io/c/heliatech",
+      "destination": "https://www.printify.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "relay",
+      "destination": "https://www.relay.app",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "remote",
+      "destination": "https://remote.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "resemble-ai",
+      "destination": "https://www.resemble.ai",
       "type": "Catalog Edge Hop"
     },
     {
@@ -219,8 +309,8 @@
     },
     {
       "slug": "retool",
-      "destination": "https://retool.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.retool.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "rewardful",
@@ -228,9 +318,19 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "rippling",
+      "destination": "https://www.rippling.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "riverside",
       "destination": "https://riverside.fm/?via=heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "speechify",
+      "destination": "https://speechify.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "submagic",
@@ -249,8 +349,8 @@
     },
     {
       "slug": "tome",
-      "destination": "https://tome.app/?via=heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.tome.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "transistor",
@@ -258,14 +358,29 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "tray-io",
+      "destination": "https://tray.ai",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "typeform",
-      "destination": "https://typeform.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.typeform.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "uplead",
+      "destination": "https://www.uplead.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "veed",
       "destination": "https://www.veed.io/?via=heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "velocity-global",
+      "destination": "https://velocityglobal.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "vercel",
@@ -274,8 +389,8 @@
     },
     {
       "slug": "voiceflow",
-      "destination": "https://voiceflow.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://www.voiceflow.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "wati",
@@ -284,16 +399,40 @@
     },
     {
       "slug": "webflow",
-      "destination": "https://webflow.pxf.io/c/heliatech",
+      "destination": "https://www.webflow.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "workato",
+      "destination": "https://www.workato.com",
       "type": "Catalog Edge Hop"
     },
     {
       "slug": "zapier",
       "destination": "https://zapier.com/app/register?via=heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "zoominfo",
+      "destination": "https://www.zoominfo.com",
+      "type": "Catalog Edge Hop"
     }
   ],
   "recent_events": [
+    {
+      "timestamp": "2026-10-23 21:59:50",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `notion-ai, playht`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-10-23 21:52:34",
+      "title": "Cycle Autonome #Vercel",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Vercel et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
     {
       "timestamp": "2026-10-23 21:51:51",
       "title": "Alerte Lien Mort Détecté",
@@ -314,20 +453,6 @@
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Lemlist et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-10-23 21:25:50",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `apollo-io, brevo, clickup, heygen, lusha`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-10-23 21:20:39",
-      "title": "Helia-Lupin Déployé & Opérationnel 😈",
-      "category": "LUPIN",
-      "message": "Les 5 Coups de Maître Lupin sont déployés en production : Ghost Hijacking Heroku, Pricing Leaks Papaya Global, Parasite SEO GitHub, Trophées Gagnants et Simulateur de Surfacturation interactif.",
-      "link": "https://heliatech.online/versus"
     }
   ]
 }

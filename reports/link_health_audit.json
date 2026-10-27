@@ -1,25 +1,10 @@
 {
-  "timestamp": "2026-10-27 02:33:37",
+  "timestamp": "2026-10-27 08:43:35",
   "total_links_audited": 69,
-  "healthy_links": 63,
-  "broken_links_count": 6,
-  "health_rate": "91.3%",
+  "healthy_links": 65,
+  "broken_links_count": 4,
+  "health_rate": "94.2%",
   "broken_links": [
-    {
-      "slug": "kaspr",
-      "target_url": "https://www.kaspr.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.kaspr.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
-    },
-    {
-      "slug": "klap",
-      "target_url": "https://www.klap.com",
-      "final_url": "https://www.klap.com/onderhoud.php",
-      "status_code": 503,
-      "healthy": false
-    },
     {
       "slug": "notion-ai",
       "target_url": "https://affiliates.notion.so/heliatech",
@@ -148,7 +133,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=v7fdFBviSHY7YN&gsxid=v7fdFBviSHY7YN&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=kRiUjxG4OQuWdM&gsxid=kRiUjxG4OQuWdM&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -176,17 +161,16 @@
     {
       "slug": "kaspr",
       "target_url": "https://www.kaspr.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.kaspr.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+      "final_url": "https://www.kaspr.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "klap",
-      "target_url": "https://www.klap.com",
-      "final_url": "https://www.klap.com/onderhoud.php",
-      "status_code": 503,
-      "healthy": false
+      "target_url": "https://klap.app",
+      "final_url": "https://klap.app/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "leadiq",
@@ -326,7 +310,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=yuQUBdIjkN6iA5&gsxid=yuQUBdIjkN6iA5&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bLQcESEaKzpkXs&gsxid=bLQcESEaKzpkXs&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

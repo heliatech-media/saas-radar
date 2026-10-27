@@ -90,6 +90,19 @@
         "saas",
         "emailautomation"
       ]
+    },
+    "beehiiv-vs-brevo": {
+      "id": 4926598,
+      "url": "https://dev.to/heliatech/beehiiv-vs-brevo-newsletter-monetization-vs-multi-channel-crm-1331",
+      "title": "Beehiiv vs Brevo: Newsletter Monetization vs Multi-Channel CRM",
+      "canonical_url": "https://heliatech.online/blog/beehiiv-vs-brevo",
+      "published": true,
+      "tags": [
+        "beehiiv",
+        "brevo",
+        "beehiivvsbrevo",
+        "comparison"
+      ]
     }
   },
   "last_sync": null
