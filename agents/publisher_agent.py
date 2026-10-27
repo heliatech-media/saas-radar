@@ -53,6 +53,12 @@ class PublisherAgent:
 
         # Format clean markdown with YAML frontmatter and detailed body
         yaml_header = yaml.dump(frontmatter, allow_unicode=True, sort_keys=False)
+        features_text = "\n".join([f"- **{feature}**" for feature in review.key_features])
+        pricing_text = "\n".join([f"| **{tier.name}** | {tier.price} | {tier.billing_period} | {', '.join(tier.features[:2])} |" for tier in review.pricing_tiers])
+        pros_text = "\n".join([f"- {pro}" for pro in review.pros])
+        cons_text = "\n".join([f"- {con}" for con in review.cons])
+        faqs_text = "\n\n".join([f"### {faq.question}\n\n{faq.answer}" for faq in review.faqs])
+
         content = f"""---
 {yaml_header}---
 
@@ -65,21 +71,21 @@ class PublisherAgent:
 
 ## Key Features & Capabilities
 
-{"".join([f"- **{feature}**\n" for feature in review.key_features])}
+{features_text}
 
 ## Pricing Overview
 
 | Plan | Price | Billing | Key Highlights |
 | :--- | :--- | :--- | :--- |
-{"".join([f"| **{tier.name}** | {tier.price} | {tier.billing_period} | {', '.join(tier.features[:2])} |\n" for tier in review.pricing_tiers])}
+{pricing_text}
 
 ## Pros & Cons
 
 ### Pros
-{"".join([f"- {pro}\n" for pro in review.pros])}
+{pros_text}
 
 ### Cons
-{"".join([f"- {con}\n" for con in review.cons])}
+{cons_text}
 
 ## Detailed Verdict & Technical Analysis
 
@@ -87,7 +93,7 @@ class PublisherAgent:
 
 ## Frequently Asked Questions
 
-{"".join([f"### {faq.question}\n\n{faq.answer}\n\n" for faq in review.faqs])}
+{faqs_text}
 """
 
         with open(filepath, "w", encoding="utf-8") as f:
