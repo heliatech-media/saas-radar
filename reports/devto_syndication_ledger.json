@@ -181,6 +181,19 @@
         "projectmanagement",
         "workspaceos"
       ]
+    },
+    "clickup-vs-monday-com": {
+      "id": 4935669,
+      "url": "https://dev.to/heliatech/clickup-vs-mondaycom-the-definitive-enterprise-project-os-shootout-kh4",
+      "title": "ClickUp vs Monday.com: The Definitive Enterprise Project OS Shootout",
+      "canonical_url": "https://heliatech.online/blog/clickup-vs-monday-com",
+      "published": true,
+      "tags": [
+        "clickup",
+        "mondaycom",
+        "clickupvsmondaycom",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

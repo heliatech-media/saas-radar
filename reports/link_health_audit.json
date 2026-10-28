@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-10-28 12:39:25",
+  "timestamp": "2026-10-28 16:04:59",
   "total_links_audited": 71,
-  "healthy_links": 67,
-  "broken_links_count": 4,
-  "health_rate": "94.4%",
+  "healthy_links": 66,
+  "broken_links_count": 5,
+  "health_rate": "93.0%",
   "broken_links": [
+    {
+      "slug": "minicong",
+      "target_url": "https://minicong.ai/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
+    },
     {
       "slug": "notion-ai",
       "target_url": "https://affiliates.notion.so/heliatech",
@@ -133,7 +141,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TQ8nsWA4aKNgjX&gsxid=TQ8nsWA4aKNgjX&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=BmQgSffSQ87aQT&gsxid=BmQgSffSQ87aQT&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -216,10 +224,11 @@
     },
     {
       "slug": "minicong",
-      "target_url": "https://www.minicong.com",
-      "final_url": "https://www.minicong.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://minicong.ai/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "monday-com",
@@ -317,7 +326,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=6L1MaDTFpaInAS&gsxid=6L1MaDTFpaInAS&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3gsWi40CCmVGY2&gsxid=3gsWi40CCmVGY2&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-28 16:06:01",
+    "title": "Cycle Autonome #Dumpling AI",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Dumpling AI et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-10-28 16:04:59",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-10-28 12:39:56",
     "title": "Cycle Autonome #Minicong",
     "category": "CYCLE",
@@ -333,20 +347,6 @@
     "title": "Cycle Autonome #Typeform",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Typeform et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-24 04:38:40",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-10-24 00:48:53",
-    "title": "Stratégie Rewardful 100% Opérationnelle 🏆",
-    "category": "REWARDFUL",
-    "message": "Helia-RewardfulEngine est actif ! 9 logiciels majeurs (beehiiv, Transistor, Memberstack, Podia...) sont liés à ton token heliatech avec redirection edge 302.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

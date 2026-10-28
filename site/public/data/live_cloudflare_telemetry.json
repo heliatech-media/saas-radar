@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-28T12:38:13.890966",
+  "last_synced": "2026-10-28T16:04:06.502194",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2950,
-  "total_requests": 29000,
-  "total_visits": 914,
-  "total_pageviews": 6124,
+  "total_visitors_network": 3031,
+  "total_requests": 30209,
+  "total_visits": 939,
+  "total_pageviews": 6254,
   "percent_cached": "56.14%",
-  "data_served_mb": 273.8,
+  "data_served_mb": 280.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 1590
+      "views": 1620
     },
     {
       "path": "/terms/",
@@ -23,11 +23,15 @@
       "views": 90
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 90
     },
     {
-      "path": "/blog/",
+      "path": "/sentinel/",
+      "views": 90
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
       "views": 90
     },
     {
@@ -39,7 +43,7 @@
       "views": 80
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 80
     },
     {
@@ -47,23 +51,19 @@
       "views": 80
     },
     {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 80
-    },
-    {
-      "path": "/radar/",
+      "path": "/blog/elevenlabs-vs-heygen/",
       "views": 70
     },
     {
-      "path": "/reviews/lusha/",
+      "path": "/awards/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/zapier/",
       "views": 70
     },
     {
       "path": "/reviews/transistor/",
-      "views": 70
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
       "views": 70
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 5420
+      "views": 5560
     },
     {
       "country": "Morocco",
-      "views": 1100
+      "views": 1290
     },
     {
       "country": "Germany",
@@ -102,15 +102,15 @@
     },
     {
       "country": "HK",
-      "views": 190
+      "views": 200
     },
     {
       "country": "FI",
-      "views": 180
+      "views": 190
     },
     {
       "country": "India",
-      "views": 170
+      "views": 180
     }
   ],
   "top_referrers": [

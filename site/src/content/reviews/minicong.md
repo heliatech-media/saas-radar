@@ -6,7 +6,7 @@ tagline: Autonomous AI video generation and localization pipeline for enterprise
 category: AI Video
 rating: 4.6
 website_url: https://minicong.ai
-affiliate_url: https://minicong.ai
+affiliate_url: "https://minicong.ai/?via=heliatech"
 summary: Minicong is an enterprise-grade AI video generation and translation platform
   designed to automate hyper-personalized video content at scale. By leveraging neural
   rendering and advanced voice synthesis, it empowers revenue and marketing teams
