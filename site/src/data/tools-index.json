@@ -205,6 +205,16 @@
     "affiliate_url": "https://www.make.com/en/register?pc=heliatechmake"
   },
   {
+    "name": "Minicong",
+    "slug": "minicong",
+    "tagline": "Autonomous AI video generation and localization pipeline for enterprise growth teams",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$49/mo",
+    "best_for": "B2B growth teams, global marketing agencies, and localized content creators",
+    "affiliate_url": "https://minicong.ai"
+  },
+  {
     "name": "Monday.com",
     "slug": "monday-com",
     "tagline": "A customizable Work OS where teams build custom workflows, manage projects, and scale operations.",

@@ -1,41 +1,45 @@
 {
-  "last_synced": "2026-10-28T13:22:49.883224",
+  "last_synced": "2026-10-28T12:38:13.890966",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2943,
-  "total_requests": 28928,
-  "total_visits": 912,
-  "total_pageviews": 6118,
+  "total_visitors_network": 2950,
+  "total_requests": 29000,
+  "total_visits": 914,
+  "total_pageviews": 6124,
   "percent_cached": "56.14%",
-  "data_served_mb": 272.9,
+  "data_served_mb": 273.8,
   "top_pages": [
     {
       "path": "/",
-      "views": 1370
+      "views": 1590
     },
     {
-      "path": "/awards/",
-      "views": 120
-    },
-    {
-      "path": "/sentinel/",
-      "views": 110
-    },
-    {
-      "path": "/blog/",
+      "path": "/terms/",
       "views": 100
+    },
+    {
+      "path": "/reviews/brevo/",
+      "views": 90
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 100
+      "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/blog/",
+      "views": 90
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/clickup/",
       "views": 80
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/sentinel/",
       "views": 80
     },
     {
@@ -43,70 +47,66 @@
       "views": 80
     },
     {
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "views": 80
+    },
+    {
       "path": "/radar/",
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/reviews/lusha/",
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/reviews/transistor/",
       "views": 70
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/blog/elevenlabs-vs-heygen/",
       "views": 70
     },
     {
-      "path": "/blog/heygen-evolution-guide-2026/",
-      "views": 60
-    },
-    {
-      "path": "/reviews/typeform/",
-      "views": 60
-    },
-    {
-      "path": "/blog/best-elevenlabs-alternatives-2026/",
-      "views": 60
+      "path": "/calculator/",
+      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5240
+      "views": 5420
     },
     {
       "country": "Morocco",
-      "views": 1290
-    },
-    {
-      "country": "Belgium",
-      "views": 450
+      "views": 1100
     },
     {
       "country": "Germany",
-      "views": 400
+      "views": 570
+    },
+    {
+      "country": "Belgium",
+      "views": 560
     },
     {
       "country": "Canada",
-      "views": 330
+      "views": 270
     },
     {
-      "country": "Netherlands",
-      "views": 270
+      "country": "United Kingdom",
+      "views": 260
     },
     {
       "country": "France",
       "views": 200
     },
     {
-      "country": "United Kingdom",
-      "views": 180
+      "country": "HK",
+      "views": 190
     },
     {
-      "country": "Singapore",
-      "views": 170
+      "country": "FI",
+      "views": 180
     },
     {
       "country": "India",

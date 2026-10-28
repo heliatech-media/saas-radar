@@ -168,6 +168,19 @@
         "saas",
         "automation"
       ]
+    },
+    "clickup-evolution-guide-2026": {
+      "id": 4934638,
+      "url": "https://dev.to/heliatech/clickup-the-genesis-of-the-workspace-os-and-the-hands-on-guide-to-project-velocity-in-2026-dj2",
+      "title": "ClickUp: The Genesis of the Workspace OS and the Hands-on Guide to Project Velocity in 2026",
+      "canonical_url": "https://heliatech.online/blog/clickup-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "clickup",
+        "productivity",
+        "projectmanagement",
+        "workspaceos"
+      ]
     }
   },
   "last_sync": null

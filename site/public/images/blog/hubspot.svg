@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="glow-subtle" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35" result="blur1"/>
+      <feGaussianBlur stdDeviation="15" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Radial Lighting -->
+    <radialGradient id="ambientCyan" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="ambientPurple" cx="15%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1"/>
+    </pattern>
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#gridPattern)"/>
+  <rect width="1200" height="630" fill="url(#dotPattern)"/>
+  
+  <!-- Ambient Lighting Orbs -->
+  <rect width="1200" height="630" fill="url(#ambientCyan)"/>
+  <rect width="1200" height="630" fill="url(#ambientPurple)"/>
+
+  <!-- ========================================== -->
+  <!-- BACKGROUND 3D VECTOR CRM METAPHOR ELEMENTS -->
+  <!-- ========================================== -->
+  <g id="crm-metaphor-background" transform="translate(620, 80)">
+    <!-- Central Holographic Database / Revenue Structure -->
+    <!-- Isometric Grid Platform -->
+    <g transform="translate(180, 160) scale(1, 0.5) rotate(45)" filter="url(#glow-heavy)">
+      <polygon points="-180,-180 180,-180 180,180 -180,180" fill="none" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="2"/>
+      <polygon points="-120,-120 120,-120 120,120 -120,120" fill="none" stroke="#8b5cf6" stroke-opacity="0.2" stroke-width="1"/>
+      <polygon points="-60,-60 60,-60 60,60 -60,60" fill="none" stroke="#d946ef" stroke-opacity="0.25" stroke-width="1"/>
+    </g>
+
+    <!-- Multi-Dimensional Data Cube (Wireframe & Solid Faces) -->
+    <g transform="translate(180, 130)">
+      <!-- Cube Back Lines -->
+      <path d="M 0,-60 L 0,30 M -52,-30 L 0,-60 L 52,-30" fill="none" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="1.5"/>
+      
+      <!-- Floating Enriched Contact Nodes & Vectors -->
+      <g filter="url(#glow)">
+        <!-- Node 1 -->
+        <circle cx="-110" cy="-40" r="6" fill="#38bdf8"/>
+        <path d="M -110,-40 L 0,-60" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="4,4"/>
+        
+        <!-- Node 2 -->
+        <circle cx="130" cy="-20" r="8" fill="#d946ef"/>
+        <path d="M 130,-20 L 52,-30" stroke="#d946ef" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="4,4"/>
+
+        <!-- Node 3 (High-velocity Revenue Chart Vector) -->
+        <path d="M -140,80 L -70,20 L 0,50 L 90,-10 L 150,30" fill="none" stroke="url(#cyanGrad)" stroke-width="3" filter="url(#glow)"/>
+        <circle cx="90" cy="-10" r="5" fill="#06b6d4"/>
+        <circle cx="-70" cy="20" r="4" fill="#8b5cf6"/>
+      </g>
+
+      <!-- Central Multi-Dimensional Cube Structure -->
+      <!-- Bottom Face -->
+      <polygon points="0,60 80,20 0,-20 -80,20" fill="#090d16" fill-opacity="0.8" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+      <!-- Left Face -->
+      <polygon points="-80,20 0,-20 0,70 -80,110" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1.5"/>
+      <!-- Right Face -->
+      <polygon points="0,-20 80,20 80,110 0,70" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1.5"/>
+      
+      <!-- Inner Glowing Core (Rate Card Leak Core) -->
+      <polygon points="0,-5 40,15 0,35 -40,15" fill="url(#purpleGrad)" fill-opacity="0.6" stroke="#d946ef" stroke-width="1.5" filter="url(#glow)"/>
+      <line x1="0" y1="-5" x2="0" y2="60" stroke="#d946ef" stroke-width="2" stroke-dasharray="2,2"/>
+    </g>
+
+    <!-- Floating Security / Architectural Warning HUD Elements -->
+    <g transform="translate(40, 20)">
+      <rect x="0" y="0" width="130" height="32" rx="6" fill="#090d16" fill-opacity="0.9" stroke="#d946ef" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="16" cy="16" r="4" fill="#d946ef" filter="url(#glow-subtle)"/>
+      <text x="32" y="21" fill="#f8fafc" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="1">TRAP_DETECTED</text>
+    </g>
+    
+    <g transform="translate(260, 240)">
+      <rect x="0" y="0" width="145" height="32" rx="6" fill="#090d16" fill-opacity="0.9" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="16" cy="16" r="4" fill="#06b6d4" filter="url(#glow-subtle)"/>
+      <text x="32" y="21" fill="#f8fafc" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="1">RATE_LEAK_2026</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- FOREGROUND TYPOGRAPHY & DOSSIER CONTENT    -->
+  <!-- ========================================== -->
+  <g transform="translate(80, 85)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <!-- Pill Background with Glassmorphism -->
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="url(#glassGrad)" stroke="url(#cyanGrad)" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <!-- Glowing Status Dot -->
+      <circle cx="18" cy="16" r="4.5" fill="#06b6d4" filter="url(#glow)"/>
+      <circle cx="18" cy="16" r="2" fill="#ffffff"/>
+      <!-- Pill Text -->
+      <text x="38" y="20.5" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: HUBSPOT -->
+    <g transform="translate(0, 95)">
+      <!-- Ambient Glow Behind Title -->
+      <text x="0" y="0" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="78" font-weight="900" letter-spacing="4" filter="url(#glow-heavy)" opacity="0.4">HUBSPOT</text>
+      <!-- Crisp Foreground Title -->
+      <text x="0" y="0" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="78" font-weight="900" letter-spacing="4">HUBSPOT</text>
+      
+      <!-- Enterprise Edition Badge attached to title -->
+      <g transform="translate(425, -55)">
+        <rect x="0" y="0" width="155" height="30" rx="4" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="1"/>
+        <text x="12" y="20" fill="#d946ef" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1.5">ENTERPRISE 2026</text>
+      </g>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 135)">
+      <text x="0" y="0" fill="url(#cyanGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="1.5">B2B Sales &amp; CRM Intelligence</text>
+    </g>
+
+    <!-- Investigation Headline (The Core Title) -->
+    <g transform="translate(0, 185)">
+      <!-- Multi-line wrapped clean typography -->
+      <text x="0" y="0" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" letter-spacing="0.5">
+        <tspan x="0" dy="0">Hidden Rate Card: The Uncensored</tspan>
+        <tspan x="0" dy="38">Pricing Leak &amp; Onboarding Traps</tspan>
+      </text>
+    </g>
+
+    <!-- Executive Metadata / Footer inside Content Area -->
+    <g transform="translate(0, 315)">
+      <!-- Divider Line -->
+      <path d="M 0,0 L 580,0" stroke="url(#cyanGrad)" stroke-opacity="0.3" stroke-width="1"/>
+      
+      <!-- Meta Items -->
+      <g transform="translate(0, 20)">
+        <!-- Author/Source -->
+        <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">INVESTIGATION BY</text>
+        <text x="0" y="18" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5">HELIA TECH RESEARCH</text>
+
+        <!-- Classification -->
+        <g transform="translate(220, 0)">
+          <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">CLASSIFICATION</text>
+          <text x="0" y="18" fill="#d946ef" font-family="monospace" font-size="14" font-weight="700" letter-spacing="0.5">RESTRICTED // AUDIT</text>
+        </g>
+
+        <!-- Status -->
+        <g transform="translate(440, 0)">
+          <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">VERIFICATION</text>
+          <text x="0" y="18" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="700" letter-spacing="0.5">VERIFIED 100%</text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ========================================== -->
+  <!-- FRAME & BRANDING WATERMARK                 -->
+  <!-- ========================================== -->
+  <!-- Outer Tech Border Frame -->
+  <rect x="20" y="20" width="1160" height="590" rx="8" fill="none" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
+  
+  <!-- Corner Tech Accents -->
+  <g stroke="#06b6d4" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Top Left -->
+    <path d="M 20 45 L 20 28 L 45 28"/>
+    <!-- Top Right -->
+    <path d="M 1180 45 L 1180 28 L 1155 28"/>
+    <!-- Bottom Left -->
+    <path d="M 20 585 L 20 602 L 45 602"/>
+    <!-- Bottom Right -->
+    <path d="M 1180 585 L 1180 602 L 1155 602"/>
+  </g>
+
+  <!-- Watermark URL -->
+  <text x="1150" y="595" text-anchor="end" fill="#64748b" font-family="monospace" font-size="11" font-weight="600" letter-spacing="2">HELIATECH.ONLINE</text>
+</svg>

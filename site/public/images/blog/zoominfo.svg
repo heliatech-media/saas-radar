@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+
+    <!-- Brand & Accent Gradients -->
+    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="violetFuchsiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="goldWarning" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <!-- Glow & Blur Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.05"/>
+      <circle cx="40" cy="40" r="1" fill="#06b6d4" fill-opacity="0.2"/>
+    </pattern>
+
+    <!-- Hex Pattern -->
+    <pattern id="hexMatrix" width="60" height="104" patternUnits="userSpaceOnUse">
+      <path d="M30 0 L60 17.32 L60 51.96 L30 69.28 L0 51.96 L0 17.32 Z" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.08"/>
+      <path d="M30 104 L60 121.32 L60 155.96 L30 173.28 L0 155.96 L0 121.32 Z" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#cyberGrid)"/>
+
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="150" cy="100" r="250" fill="#06b6d4" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1050" cy="500" r="300" fill="#8b5cf6" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="800" cy="150" r="200" fill="#d946ef" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Geometric Decorative Lines -->
+  <g opacity="0.3">
+    <path d="M0 150 L1200 150" stroke="url(#cyanBlueGrad)" stroke-width="0.5" stroke-dasharray="4 8"/>
+    <path d="M0 480 L1200 480" stroke="url(#violetFuchsiaGrad)" stroke-width="0.5" stroke-dasharray="4 8"/>
+    <path d="M300 0 L300 630" stroke="url(#cyanBlueGrad)" stroke-width="0.5" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- ==================== TOP BADGE ==================== -->
+  <g transform="translate(80, 60)">
+    <rect x="0" y="0" width="310" height="34" rx="17" fill="url(#glassGrad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="20" cy="17" r="4" fill="#06b6d4" filter="url(#glow-subtle)"/>
+    <text x="38" y="22" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY (LEFT SIDE) ==================== -->
+  <g transform="translate(80, 130)">
+    <!-- Category Subtitle -->
+    <text x="0" y="24" fill="#8b5cf6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" letter-spacing="4" filter="url(#glow-subtle)">B2B SALES &amp; CRM INTELLIGENCE</text>
+
+    <!-- Main Title -->
+    <text x="0" y="75" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5">
+      ZOOMINFO
+    </text>
+
+    <!-- Investigation Headline Lines -->
+    <text x="0" y="130" fill="#f3f4f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.3">
+      Enterprise 2026 Rate Card Leak:
+    </text>
+    <text x="0" y="168" fill="url(#goldWarning)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" letter-spacing="-0.2" filter="url(#glow-subtle)">
+      The Hidden $15,000 Minimums
+    </text>
+    <text x="0" y="206" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600" letter-spacing="-0.2">
+      &amp; Credit Expiration Traps
+    </text>
+
+    <!-- Metadata Badges / Chips -->
+    <g transform="translate(0, 240)">
+      <!-- Chip 1 -->
+      <rect x="0" y="0" width="130" height="30" rx="6" fill="#1e1b4b" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1"/>
+      <text x="14" y="20" fill="#c4b5fd" font-family="monospace" font-size="11" font-weight="700">STATUS: LEAKED</text>
+
+      <!-- Chip 2 -->
+      <rect x="142" y="0" width="145" height="30" rx="6" fill="#450a0a" stroke="#ef4444" stroke-opacity="0.5" stroke-width="1"/>
+      <text x="154" y="20" fill="#fca5a5" font-family="monospace" font-size="11" font-weight="700">RISK: CRITICAL</text>
+
+      <!-- Chip 3 -->
+      <rect x="299" y="0" width="125" height="30" rx="6" fill="#082f49" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1"/>
+      <text x="313" y="20" fill="#7dd3fc" font-family="monospace" font-size="11" font-weight="700">AUDIT: 2026</text>
+    </g>
+  </g>
+
+  <!-- ==================== 3D VECTOR ILLUSTRATION (RIGHT SIDE) ==================== -->
+  <!-- Metaphor: Multi-dimensional Database Cube & Enriched Contact Graphs / Revenue Velocity Flow -->
+  <g transform="translate(730, 80)" filter="url(#dropShadow)">
+    
+    <!-- Background Hex Grid Matrix Frame -->
+    <rect x="-30" y="-10" width="440" height="480" rx="16" fill="url(#hexMatrix)" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
+    
+    <!-- Floating Holographic Data Cube (Isometric projection) -->
+    <g transform="translate(190, 160)">
+      
+      <!-- Back Faces -->
+      <path d="M 0 -80 L 100 -130 L 100 -30 L 0 20 Z" fill="#0f172a" stroke="#8b5cf6" stroke-width="1" opacity="0.6"/>
+      <path d="M -100 -130 L 0 -80 L 0 20 L -100 -30 Z" fill="#1e1b4b" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
+      
+      <!-- Top Face -->
+      <path d="M 0 -180 L 100 -130 L 0 -80 L -100 -130 Z" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5" opacity="0.9"/>
+      
+      <!-- Front Faces (Glassmorphism) -->
+      <path d="M 0 -80 L 100 -30 L 100 70 L 0 20 Z" fill="url(#glassGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+      <path d="M -100 -30 L 0 -80 L 0 20 L -100 70 Z" fill="url(#glassGrad)" stroke="#8b5cf6" stroke-width="1.5"/>
+
+      <!-- Internal Network Grid Lines within Cube -->
+      <g stroke="#38bdf8" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2">
+        <line x1="-50" y1="-105" x2="-50" y2="-5" />
+        <line x1="-100" y1="-80" x2="0" y2="-30" />
+        <line x1="50" y1="-105" x2="50" y2="-5" />
+        <line x1="0" y1="-130" x2="100" y2="-80" />
+      </g>
+
+      <!-- Glowing Nodes / Data Points -->
+      <circle cx="0" cy="-130" r="5" fill="#06b6d4" filter="url(#glow)"/>
+      <circle cx="-50" cy="-105" r="4" fill="#38bdf8" filter="url(#glow)"/>
+      <circle cx="50" cy="-80" r="4" fill="#8b5cf6" filter="url(#glow)"/>
+      <circle cx="0" cy="-30" r="6" fill="#d946ef" filter="url(#glow)"/>
+      <circle cx="-50" y="20" r="4" fill="#06b6d4" filter="url(#glow)"/>
+      <circle cx="50" cy="20" r="5" fill="#ef4444" filter="url(#glow)"/>
+
+      <!-- Connecting Data Streams / Vectors -->
+      <path d="M 0 -130 L -50 -105 L 0 -30 L 50 20" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="2" filter="url(#glow-subtle)"/>
+      <path d="M 50 -80 L 0 -30 L -50 20" fill="none" stroke="url(#violetFuchsiaGrad)" stroke-width="2" filter="url(#glow-subtle)"/>
+
+    </g>
+
+    <!-- Floating UI Card: Rate Card Leak Metric Overlay -->
+    <g transform="translate(15, 20) scale(0.9)" filter="url(#dropShadow)">
+      <rect width="210" height="90" rx="10" fill="#030712" fill-opacity="0.85" stroke="#ef4444" stroke-opacity="0.6" stroke-width="1.5"/>
+      <path d="M 12 15 L 12 75" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+      <text x="28" y="32" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">BASE FLOOR MINIMUM</text>
+      <text x="28" y="62" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900">$15,000</text>
+      <rect x="135" y="42" width="60" height="20" rx="4" fill="#450a0a"/>
+      <text x="142" y="56" fill="#fca5a5" font-family="monospace" font-size="10" font-weight="700">+35% YOY</text>
+    </g>
+
+    <!-- Floating UI Card: Credit Expiration Trap Warning -->
+    <g transform="translate(140, 340) scale(0.9)" filter="url(#dropShadow)">
+      <rect width="230" height="90" rx="10" fill="#030712" fill-opacity="0.85" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1.5"/>
+      <path d="M 12 15 L 12 75" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+      <text x="28" y="32" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">CREDIT EXPIRATION</text>
+      <text x="28" y="62" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="900">USE-IT-OR-LOSE</text>
+      <circle cx="205" cy="45" r="12" fill="#78350f" fill-opacity="0.6"/>
+      <text x="201" y="49" fill="#f59e0b" font-family="monospace" font-size="12" font-weight="bold">!</text>
+    </g>
+
+    <!-- Orbital Connecting Rings & Analytics Graph Curves -->
+    <g transform="translate(190, 380)">
+      <path d="M -150 -30 C -80 30, 80 30, 150 -30" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
+      <path d="M -120 -50 C -60 0, 60 0, 120 -50" fill="none" stroke="url(#violetFuchsiaGrad)" stroke-width="1.5" opacity="0.5"/>
+    </g>
+
+  </g>
+
+  <!-- ==================== FOOTER BRANDING ==================== -->
+  <g transform="translate(80, 570)">
+    <!-- Brand Signature -->
+    <text x="0" y="0" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="1.5">
+      RESEARCHED &amp; VERIFIED BY <tspan fill="#38bdf8" font-weight="700">HELIA TECH</tspan>
+    </text>
+    <text x="1040" y="0" fill="#64748b" font-family="monospace" font-size="11" text-anchor="end" letter-spacing="1">
+      heliatech.online
+    </text>
+
+    <!-- Bottom Accent Line -->
+    <line x1="0" y1="15" x2="1040" y2="15" stroke="url(#cyanBlueGrad)" stroke-width="1" opacity="0.3"/>
+  </g>
+
+</svg>

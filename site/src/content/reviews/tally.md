@@ -128,7 +128,7 @@ Tally is a radically different form builder that operates like a document editor
 - Generous free tier offering unlimited forms and submissions
 - Notion-style text editor makes building forms exceptionally fast
 - Built-in conditional logic, calculations, and file uploads at no extra cost
-- Seamless native integrations with Notion, Airtable, Slack, and webhooks
+- Seamless native integrations with Notion, [Airtable](/reviews/airtable), Slack, and webhooks
 - Custom branding and domain mapping available on affordable plans
 
 
