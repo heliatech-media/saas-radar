@@ -1,37 +1,49 @@
 {
-  "last_synced": "2026-10-28T10:11:48.090425",
+  "last_synced": "2026-10-28T09:40:26.308785",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2893,
-  "total_requests": 27852,
-  "total_visits": 896,
-  "total_pageviews": 5975,
+  "total_visitors_network": 2894,
+  "total_requests": 27894,
+  "total_visits": 897,
+  "total_pageviews": 6002,
   "percent_cached": "56.14%",
-  "data_served_mb": 265.7,
+  "data_served_mb": 266.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 1340
+      "views": 1570
     },
     {
-      "path": "/awards/",
-      "views": 110
-    },
-    {
-      "path": "/sentinel/",
-      "views": 110
-    },
-    {
-      "path": "/blog/",
+      "path": "/terms/",
       "views": 100
+    },
+    {
+      "path": "/reviews/brevo/",
+      "views": 90
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 100
+      "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 90
+    },
+    {
+      "path": "/sentinel/",
+      "views": 80
+    },
+    {
+      "path": "/blog/",
+      "views": 80
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 80
+    },
+    {
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 80
     },
     {
@@ -39,78 +51,66 @@
       "views": 80
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 80
+      "path": "/awards/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/transistor/",
+      "views": 70
     },
     {
       "path": "/radar/",
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/reviews/lusha/",
       "views": 70
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/blog/elevenlabs-vs-heygen/",
       "views": 70
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 60
-    },
-    {
-      "path": "/deals/",
-      "views": 60
-    },
-    {
-      "path": "/blog/heygen-evolution-guide-2026/",
-      "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5070
+      "views": 5340
     },
     {
       "country": "Morocco",
-      "views": 1000
-    },
-    {
-      "country": "Belgium",
-      "views": 450
+      "views": 860
     },
     {
       "country": "Germany",
-      "views": 400
+      "views": 570
+    },
+    {
+      "country": "Belgium",
+      "views": 560
     },
     {
       "country": "Canada",
-      "views": 330
-    },
-    {
-      "country": "Netherlands",
       "views": 270
     },
     {
       "country": "United Kingdom",
-      "views": 180
+      "views": 260
     },
     {
-      "country": "Singapore",
-      "views": 170
+      "country": "France",
+      "views": 200
+    },
+    {
+      "country": "HK",
+      "views": 190
+    },
+    {
+      "country": "FI",
+      "views": 180
     },
     {
       "country": "India",
       "views": 170
-    },
-    {
-      "country": "France",
-      "views": 150
     }
   ],
   "top_referrers": [

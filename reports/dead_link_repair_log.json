@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-27T15:42:07.834997",
+  "timestamp": "2026-10-28T09:40:46.822845",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
@@ -12,39 +12,39 @@
   },
   "healed_redirects": [
     {
-      "slug": "zoominfo",
-      "target_url": "https://www.zoominfo.com",
-      "source_file": "best-apollo-alternatives-2026.md"
+      "slug": "playht",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
-      "slug": "cognism",
-      "target_url": "https://www.cognism.com",
-      "source_file": "best-apollo-alternatives-2026.md"
+      "slug": "murf-ai",
+      "target_url": "https://murf.ai",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
-      "slug": "kaspr",
-      "target_url": "https://www.kaspr.com",
-      "source_file": "best-apollo-alternatives-2026.md"
+      "slug": "resemble-ai",
+      "target_url": "https://www.resemble.ai",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
-      "slug": "leadiq",
-      "target_url": "https://leadiq.com",
-      "source_file": "best-apollo-alternatives-2026.md"
+      "slug": "openai-tts",
+      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
-      "slug": "uplead",
-      "target_url": "https://www.uplead.com",
-      "source_file": "best-apollo-alternatives-2026.md"
+      "slug": "speechify",
+      "target_url": "https://speechify.com",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
-      "slug": "clay",
-      "target_url": "https://www.clay.com",
-      "source_file": "best-apollo-alternatives-2026.md"
+      "slug": "coqui",
+      "target_url": "https://github.com/coqui-ai/TTS",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "source_file": "best-deel-alternatives-2026.md"
+      "source_file": "papaya-global-2026-pricing-rate-card-leaks.md"
     },
     {
       "slug": "rippling",
@@ -77,36 +77,6 @@
       "source_file": "best-deel-alternatives-2026.md"
     },
     {
-      "slug": "playht",
-      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "murf-ai",
-      "target_url": "https://murf.ai",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "resemble-ai",
-      "target_url": "https://www.resemble.ai",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "openai-tts",
-      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "speechify",
-      "target_url": "https://speechify.com",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "coqui",
-      "target_url": "https://github.com/coqui-ai/TTS",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
       "slug": "relay",
       "target_url": "https://www.relay.app",
       "source_file": "best-zapier-alternatives-2026.md"
@@ -130,6 +100,36 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "zoominfo",
+      "target_url": "https://www.zoominfo.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "cognism",
+      "target_url": "https://www.cognism.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "kaspr",
+      "target_url": "https://www.kaspr.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "leadiq",
+      "target_url": "https://leadiq.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "uplead",
+      "target_url": "https://www.uplead.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "clay",
+      "target_url": "https://www.clay.com",
+      "source_file": "best-apollo-alternatives-2026.md"
     }
   ],
   "healed_internal_links": [],

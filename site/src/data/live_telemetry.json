@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-27 15:40:40 UTC",
+  "last_updated": "2026-10-28 09:40:24 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
@@ -269,8 +269,8 @@
     },
     {
       "slug": "v0",
-      "destination": "https://v0.dev",
-      "type": "Catalog Edge Hop"
+      "destination": "https://v0.dev/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "veed",
@@ -305,6 +305,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-24 00:33:04",
+      "title": "Cycle Autonome #Lovable",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Lovable et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-10-24 00:32:22",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-10-24 00:25:31",
       "title": "Rewardful Intégré & Monétisé à 100% 💰",
       "category": "MONETIZATION",
@@ -323,20 +337,6 @@
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-10-23 22:03:22",
-      "title": "Helia-LinkDoctor Déployé & 100% Liens Réparés 🩺",
-      "category": "HEALTH",
-      "message": "Helia-LinkDoctor a analysé tout le site : 25 redirections manquantes créées automatiquement, migration PlayHT (fermé par Meta) vers ElevenLabs opérée, et 100% de santé validé sur les 50 endpoints !",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-10-23 21:59:50",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `notion-ai, playht`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     }
   ]
