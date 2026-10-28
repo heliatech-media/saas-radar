@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-28T07:10:55.673971",
+  "last_synced": "2026-10-28T07:20:59.364781",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2711,
-  "total_requests": 27226,
-  "total_visits": 840,
-  "total_pageviews": 5698,
+  "total_visitors_network": 2754,
+  "total_requests": 27400,
+  "total_visits": 853,
+  "total_pageviews": 5791,
   "percent_cached": "56.14%",
-  "data_served_mb": 258.0,
+  "data_served_mb": 259.4,
   "top_pages": [
     {
       "path": "/",
@@ -23,11 +23,11 @@
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
@@ -43,6 +43,14 @@
       "views": 70
     },
     {
+      "path": "/reviews/heygen/",
+      "views": 70
+    },
+    {
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 70
+    },
+    {
       "path": "/radar/",
       "views": 70
     },
@@ -51,19 +59,11 @@
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/typeform/",
+      "path": "/reviews/make/",
       "views": 60
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/typeform/",
       "views": 60
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 4850
+      "views": 4930
     },
     {
       "country": "Morocco",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 360
+      "views": 390
     },
     {
       "country": "Canada",
