@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-28T11:56:58.013792",
+  "last_synced": "2026-10-28T12:02:13.601622",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
   "total_visitors_network": 2913,
-  "total_requests": 28266,
+  "total_requests": 28312,
   "total_visits": 903,
-  "total_pageviews": 6041,
+  "total_pageviews": 6042,
   "percent_cached": "56.14%",
-  "data_served_mb": 269.0,
+  "data_served_mb": 269.1,
   "top_pages": [
     {
       "path": "/",
@@ -23,16 +23,12 @@
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 100
-    },
-    {
       "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/versus/",
-      "views": 80
+      "path": "/blog/make-automation-revolution/",
+      "views": 100
     },
     {
       "path": "/reviews/beehiiv/",
@@ -43,6 +39,14 @@
       "views": 80
     },
     {
+      "path": "/versus/",
+      "views": 80
+    },
+    {
+      "path": "/reviews/heygen/",
+      "views": 70
+    },
+    {
       "path": "/radar/",
       "views": 70
     },
@@ -51,34 +55,30 @@
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
       "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 60
     },
     {
       "path": "/reviews/typeform/",
       "views": 60
     },
     {
-      "path": "/blog/vercel-evolution-guide-2026/",
+      "path": "/blog/heygen-evolution-guide-2026/",
+      "views": 60
+    },
+    {
+      "path": "/reviews/make/",
       "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5120
+      "views": 5160
     },
     {
       "country": "Morocco",
-      "views": 1100
+      "views": 1120
     },
     {
       "country": "Belgium",
