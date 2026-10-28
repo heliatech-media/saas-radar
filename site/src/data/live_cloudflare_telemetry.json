@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-28T16:43:36.354243",
+  "last_synced": "2026-10-28T17:13:44.761935",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 3028,
-  "total_requests": 30145,
-  "total_visits": 938,
-  "total_pageviews": 6249,
+  "total_visitors_network": 3048,
+  "total_requests": 30286,
+  "total_visits": 944,
+  "total_pageviews": 6265,
   "percent_cached": "56.14%",
-  "data_served_mb": 280.6,
+  "data_served_mb": 285.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 1380
+      "views": 1390
     },
     {
       "path": "/awards/",
@@ -23,11 +23,11 @@
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
@@ -59,26 +59,26 @@
       "views": 70
     },
     {
+      "path": "/reviews/typeform/",
+      "views": 60
+    },
+    {
       "path": "/blog/heygen-evolution-guide-2026/",
       "views": 60
     },
     {
       "path": "/blog/vercel-evolution-guide-2026/",
       "views": 60
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5440
+      "views": 5460
     },
     {
       "country": "Morocco",
-      "views": 1580
+      "views": 1610
     },
     {
       "country": "Belgium",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 400
+      "views": 410
     },
     {
       "country": "Canada",
