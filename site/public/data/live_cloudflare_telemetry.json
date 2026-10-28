@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-28T20:04:26.352207",
+  "last_synced": "2026-10-28T20:44:35.264747",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 3102,
-  "total_requests": 31152,
-  "total_visits": 961,
-  "total_pageviews": 6363,
+  "total_visitors_network": 3112,
+  "total_requests": 31242,
+  "total_visits": 964,
+  "total_pageviews": 6380,
   "percent_cached": "56.14%",
-  "data_served_mb": 295.4,
+  "data_served_mb": 296.5,
   "top_pages": [
     {
       "path": "/",
@@ -23,11 +23,11 @@
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
@@ -43,14 +43,6 @@
       "views": 80
     },
     {
-      "path": "/reviews/retool/",
-      "views": 70
-    },
-    {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 70
-    },
-    {
       "path": "/radar/",
       "views": 70
     },
@@ -59,26 +51,34 @@
       "views": 70
     },
     {
-      "path": "/deals/",
-      "views": 60
+      "path": "/reviews/retool/",
+      "views": 70
     },
     {
-      "path": "/reviews/typeform/",
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 70
+    },
+    {
+      "path": "/blog/best-elevenlabs-alternatives-2026/",
       "views": 60
     },
     {
       "path": "/blog/heygen-evolution-guide-2026/",
+      "views": 60
+    },
+    {
+      "path": "/reviews/typeform/",
       "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5650
+      "views": 5670
     },
     {
       "country": "Morocco",
-      "views": 1750
+      "views": 1780
     },
     {
       "country": "Belgium",
