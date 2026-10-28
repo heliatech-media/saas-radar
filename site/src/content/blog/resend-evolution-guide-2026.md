@@ -12,7 +12,7 @@ tags:
 - React Email
 - SaaS Infrastructure
 - API
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: resend
 image: /images/blog/resend.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Resend Account ➔
   url: https://resend.com/?via=heliatech
 ---
-
 For over two decades, the software engineering lifecycle has undergone a relentless, hyper-accelerated evolution. We abandoned monoliths for cloud-native microservices, traded monolithic SQL dumps for edge-replicated databases, and revolutionized styling with utility-first CSS frameworks. Yet, whenever an application needed to whisper back to its user—to send a password reset link, an invoice, or a mission-critical alert—developers were abruptly dragged back into the dark ages of the early 2000s. We were forced to wrestle with archaic SMTP servers, decipher impenetrable documentation from legacy dinosaurs, and hand-code raw, table-based HTML designed for Outlook clients that should have been retired decades ago. Email infrastructure was the unyielding bottleneck of modern web engineering.
 
 > [!NOTE]

@@ -1,25 +1,25 @@
 {
-  "last_synced": "2026-10-28T11:12:01.465267",
+  "last_synced": "2026-10-28T11:56:58.013792",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2903,
-  "total_requests": 27942,
-  "total_visits": 899,
-  "total_pageviews": 6025,
+  "total_visitors_network": 2913,
+  "total_requests": 28266,
+  "total_visits": 903,
+  "total_pageviews": 6041,
   "percent_cached": "56.14%",
-  "data_served_mb": 267.0,
+  "data_served_mb": 269.0,
   "top_pages": [
     {
       "path": "/",
       "views": 1360
     },
     {
-      "path": "/sentinel/",
+      "path": "/awards/",
       "views": 110
     },
     {
-      "path": "/awards/",
+      "path": "/sentinel/",
       "views": 110
     },
     {
@@ -31,7 +31,7 @@
       "views": 100
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/versus/",
       "views": 80
     },
     {
@@ -39,7 +39,7 @@
       "views": 80
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/adcreative-ai/",
       "views": 80
     },
     {
@@ -59,15 +59,15 @@
       "views": 70
     },
     {
-      "path": "/reviews/typeform/",
-      "views": 60
-    },
-    {
       "path": "/reviews/make/",
       "views": 60
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/typeform/",
+      "views": 60
+    },
+    {
+      "path": "/blog/vercel-evolution-guide-2026/",
       "views": 60
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 1010
+      "views": 1100
     },
     {
       "country": "Belgium",
@@ -97,6 +97,10 @@
       "views": 270
     },
     {
+      "country": "France",
+      "views": 200
+    },
+    {
       "country": "United Kingdom",
       "views": 180
     },
@@ -107,10 +111,6 @@
     {
       "country": "India",
       "views": 170
-    },
-    {
-      "country": "France",
-      "views": 150
     }
   ],
   "top_referrers": [
