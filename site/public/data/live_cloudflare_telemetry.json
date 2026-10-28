@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-10-28T00:49:16.145026",
+  "last_synced": "2026-10-28T01:09:21.648494",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-09-29 - 2026-10-27)",
-  "total_visitors_network": 2530,
-  "total_requests": 26491,
-  "total_visits": 784,
-  "total_pageviews": 5467,
+  "time_window": "28 Days (2026-09-30 - 2026-10-28)",
+  "total_visitors_network": 2542,
+  "total_requests": 26524,
+  "total_visits": 788,
+  "total_pageviews": 5478,
   "percent_cached": "56.14%",
-  "data_served_mb": 235.5,
+  "data_served_mb": 237.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 1270
-    },
-    {
-      "path": "/sentinel/",
-      "views": 110
-    },
-    {
-      "path": "/blog/make-automation-revolution/",
-      "views": 100
-    },
-    {
-      "path": "/awards/",
-      "views": 100
+      "views": 1448
     },
     {
       "path": "/blog/",
-      "views": 100
+      "views": 122
     },
     {
-      "path": "/versus/",
-      "views": 80
+      "path": "/sentinel/",
+      "views": 107
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 80
+      "path": "/blog/make-automation-revolution/",
+      "views": 89
     },
     {
-      "path": "/reviews/retool/",
-      "views": 70
-    },
-    {
-      "path": "/radar/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 60
+      "path": "/awards/",
+      "views": 81
     },
     {
       "path": "/deals/",
+      "views": 74
+    },
+    {
+      "path": "/versus/",
+      "views": 73
+    },
+    {
+      "path": "/terms/",
+      "views": 69
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 67
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 61
+    },
+    {
+      "path": "/reviews/airtable/",
+      "views": 61
+    },
+    {
+      "path": "/calculator/",
       "views": 60
     },
     {
-      "path": "/reviews/typeform/",
-      "views": 60
+      "path": "/reviews/apollo-io/",
+      "views": 58
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 60
+      "path": "/reviews/clickup/",
+      "views": 57
     },
     {
-      "path": "/blog/vercel-evolution-guide-2026/",
-      "views": 50
+      "path": "/reviews/adcreative-ai/",
+      "views": 57
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 4770
+      "views": 4726
     },
     {
       "country": "Morocco",
-      "views": 1000
+      "views": 1020
     },
     {
       "country": "Belgium",
-      "views": 450
+      "views": 573
     },
     {
       "country": "Germany",
-      "views": 320
+      "views": 386
     },
     {
       "country": "Canada",
-      "views": 320
-    },
-    {
-      "country": "Netherlands",
-      "views": 270
+      "views": 289
     },
     {
       "country": "India",
-      "views": 170
+      "views": 233
     },
     {
       "country": "United Kingdom",
-      "views": 170
+      "views": 178
+    },
+    {
+      "country": "Netherlands",
+      "views": 150
     },
     {
       "country": "Singapore",
-      "views": 160
+      "views": 141
     },
     {
       "country": "France",
-      "views": 150
+      "views": 138
     }
   ],
   "top_referrers": [
