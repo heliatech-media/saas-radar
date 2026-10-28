@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-28T06:30:45.221537",
+  "last_synced": "2026-10-28T07:10:54.883454",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2695,
-  "total_requests": 27107,
-  "total_visits": 835,
-  "total_pageviews": 5603,
+  "total_visitors_network": 2711,
+  "total_requests": 27226,
+  "total_visits": 840,
+  "total_pageviews": 5698,
   "percent_cached": "56.14%",
-  "data_served_mb": 256.6,
+  "data_served_mb": 258.0,
   "top_pages": [
     {
       "path": "/",
-      "views": 1300
+      "views": 1320
     },
     {
       "path": "/sentinel/",
@@ -31,11 +31,11 @@
       "views": 100
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/adcreative-ai/",
       "views": 80
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/versus/",
       "views": 80
     },
     {
@@ -51,30 +51,30 @@
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
     },
     {
-      "path": "/deals/",
-      "views": 60
+      "path": "/reviews/heygen/",
+      "views": 70
     },
     {
       "path": "/reviews/typeform/",
       "views": 60
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/reviews/make/",
       "views": 60
     },
     {
-      "path": "/blog/linear-evolution-guide-2026/",
-      "views": 50
+      "path": "/deals/",
+      "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 4840
+      "views": 4850
     },
     {
       "country": "Morocco",
@@ -85,12 +85,12 @@
       "views": 450
     },
     {
-      "country": "Canada",
-      "views": 330
+      "country": "Germany",
+      "views": 360
     },
     {
-      "country": "Germany",
-      "views": 320
+      "country": "Canada",
+      "views": 330
     },
     {
       "country": "Netherlands",
