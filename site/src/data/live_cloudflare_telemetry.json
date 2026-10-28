@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-28T22:08:50.391214",
+  "last_synced": "2026-10-28T22:55:02.731905",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 3137,
-  "total_requests": 31337,
-  "total_visits": 972,
-  "total_pageviews": 6432,
+  "total_visitors_network": 3150,
+  "total_requests": 31436,
+  "total_visits": 976,
+  "total_pageviews": 6454,
   "percent_cached": "56.14%",
-  "data_served_mb": 297.2,
+  "data_served_mb": 299.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 1390
+      "views": 1400
     },
     {
       "path": "/awards/",
@@ -43,7 +43,7 @@
       "views": 80
     },
     {
-      "path": "/reviews/make/",
+      "path": "/radar/",
       "views": 70
     },
     {
@@ -51,7 +51,7 @@
       "views": 70
     },
     {
-      "path": "/radar/",
+      "path": "/reviews/heygen/",
       "views": 70
     },
     {
@@ -59,7 +59,7 @@
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/reviews/make/",
       "views": 70
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 5730
+      "views": 5790
     },
     {
       "country": "Morocco",
