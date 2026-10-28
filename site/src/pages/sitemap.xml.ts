@@ -14,6 +14,7 @@ export async function GET() {
     '/versus/',
     '/calculator/',
     '/calculator/ai-pricing/',
+    '/pricing-leaks/',
     '/blog/',
   ];
 

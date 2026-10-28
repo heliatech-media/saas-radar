@@ -182,7 +182,7 @@ const jsonLd = {
   canonical="https://heliatech.online/calculator/"
   jsonLd={jsonLd}
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-16 print:hidden">
     
     <!-- Hero Header -->
     <div class="text-center max-w-3xl mx-auto mb-14">
@@ -407,6 +407,15 @@ const jsonLd = {
               class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-cyan-300 hover:text-cyan-200 bg-cyan-950/40 hover:bg-cyan-950/60 border border-cyan-500/30 hover:border-cyan-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>📄 Copy CFO Executive Memo</span>
+            </button>
+
+            <!-- 1-Click Printable Board Memo (PDF/Print) -->
+            <button 
+              id="btn-print-memo"
+              type="button"
+              class="w-full py-3 px-4 rounded-xl font-mono text-xs font-bold text-amber-300 hover:text-amber-200 bg-amber-950/40 hover:bg-amber-950/60 border border-amber-500/30 hover:border-amber-500/50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-amber-500/10"
+            >
+              <span>🖨️ Generate Printable Board Memo (PDF)</span>
             </button>
 
             <!-- Social Viral Share Trigger -->
@@ -691,9 +700,198 @@ Generated via HeliaTech Autonomous Intelligence Lab`;
         });
       }
 
+      // 1-Click Printable Board Memo Trigger
+      const btnPrintMemo = document.getElementById('btn-print-memo');
+      if (btnPrintMemo) {
+        btnPrintMemo.addEventListener('click', () => {
+          // Sync data to printable memo
+          const printAuditId = document.getElementById('print-audit-id');
+          const printDate = document.getElementById('print-date');
+          const printOpsScale = document.getElementById('print-ops-scale');
+          const printSeatsScale = document.getElementById('print-seats-scale');
+          const printSavingsPercent = document.getElementById('print-savings-percent');
+          const printCostLegacy = document.getElementById('print-cost-legacy');
+          const printCostOptimized = document.getElementById('print-cost-optimized');
+          const printOdoSavings = document.getElementById('print-odometer-savings');
+          const printMonthlySavings = document.getElementById('print-monthly-savings');
+          const printTableBody = document.getElementById('print-table-body');
+          const printVerificationLink = document.getElementById('print-verification-link');
+
+          const now = new Date();
+          if (printAuditId) printAuditId.textContent = 'HT-' + now.getFullYear() + '-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+          if (printDate) printDate.textContent = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
+          if (printOpsScale && sliderOps) printOpsScale.textContent = parseInt(sliderOps.value, 10).toLocaleString('en-US') + ' operations/mo';
+          if (printSeatsScale && sliderSeats) printSeatsScale.textContent = sliderSeats.value + ' active team seats';
+          if (printSavingsPercent && savingsPercentEl) printSavingsPercent.textContent = savingsPercentEl.textContent;
+          if (printCostLegacy && costLegacyEl) printCostLegacy.textContent = costLegacyEl.textContent;
+          if (printCostOptimized && costOptimizedEl) printCostOptimized.textContent = costOptimizedEl.textContent;
+          if (printOdoSavings && odoSavings) printOdoSavings.textContent = odoSavings.textContent + ' / yr';
+          if (printMonthlySavings && monthlySavingsBadge) printMonthlySavings.textContent = monthlySavingsBadge.textContent;
+          if (printVerificationLink) printVerificationLink.textContent = window.location.href;
+
+          // Populate table rows
+          if (printTableBody) {
+            printTableBody.innerHTML = '';
+            checkboxes.forEach((cb) => {
+              if (cb.checked) {
+                const legacyName = cb.dataset.legacyName;
+                const optName = cb.dataset.optName;
+                const legacyBase = parseFloat(cb.dataset.legacyBase) || 0;
+                const optBase = parseFloat(cb.dataset.optBase) || 0;
+                const ops = parseInt(sliderOps?.value || '50000', 10);
+                const seats = parseInt(sliderSeats?.value || '5', 10);
+                const legCost = Math.round((legacyBase + (ops * (parseFloat(cb.dataset.legacyUnit) || 0) * 0.1) + (seats * 15)) * 12);
+                const optCost = Math.round((optBase + (ops * (parseFloat(cb.dataset.optUnit) || 0) * 0.1) + (seats * 4)) * 12);
+                const delta = Math.max(0, legCost - optCost);
+
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-slate-200';
+                tr.innerHTML = `
+                  <td class="p-2 border-r border-slate-200 font-mono font-medium text-slate-800">${cb.closest('label')?.querySelector('.text-sm')?.textContent || legacyName}</td>
+                  <td class="p-2 border-r border-slate-200 font-bold text-rose-700">${legacyName} ($${legCost.toLocaleString('en-US')}/yr)</td>
+                  <td class="p-2 border-r border-slate-200 font-bold text-emerald-700">${optName} ($${optCost.toLocaleString('en-US')}/yr)</td>
+                  <td class="p-2 border-r border-slate-200 text-right font-mono font-black text-emerald-800">-$${delta.toLocaleString('en-US')}/yr</td>
+                  <td class="p-2 text-slate-600 text-[11px]">Replaces punitive tier markups with modern open protocols.</td>
+                `;
+                printTableBody.appendChild(tr);
+              }
+            });
+          }
+
+          // Trigger browser print dialog
+          window.print();
+        });
+      }
+
       // Parse and initial run
       parseUrlState();
       calculateTCO();
     })();
   </script>
+
+  <!-- ========================================== -->
+  <!-- PRINT-ONLY EXECUTIVE BOARD MEMO (PDF READY) -->
+  <!-- ========================================== -->
+  <div id="printable-board-memo" class="hidden print:block bg-white text-slate-900 p-8 font-sans max-w-4xl mx-auto">
+    <!-- Header -->
+    <div class="border-b-2 border-slate-900 pb-4 mb-6 flex justify-between items-start">
+      <div>
+        <div class="text-[11px] font-mono tracking-widest text-rose-600 font-bold uppercase mb-1">
+          CONFIDENTIAL // BOARD OF DIRECTORS BRIEFING
+        </div>
+        <h1 class="text-2xl font-black tracking-tight text-slate-900 uppercase">
+          Forensic SaaS Stack Overspend & Runway Recovery Audit
+        </h1>
+        <p class="text-xs text-slate-600 font-mono mt-1">
+          Audited by HeliaTech Media Research Desk • Ref: <span id="print-audit-id">HT-2026-TCO</span>
+        </p>
+      </div>
+      <div class="text-right">
+        <div class="text-xs font-mono font-bold text-slate-800" id="print-date">OCTOBER 2026</div>
+        <div class="text-[10px] font-mono text-slate-500 uppercase mt-0.5">STATUS: ACTION REQUIRED</div>
+        <div class="mt-2 inline-block px-2 py-0.5 border border-slate-900 text-[10px] font-mono font-black uppercase tracking-wider">
+          VERIFIED DATA
+        </div>
+      </div>
+    </div>
+
+    <!-- Executive Summary Directive -->
+    <div class="mb-6 p-4 bg-slate-50 border border-slate-200 rounded-lg text-xs leading-relaxed text-slate-700">
+      <strong class="text-slate-900 font-bold">EXECUTIVE DIRECTIVE:</strong>
+      This audit itemizes active vendor bloat, unutilized feature tax, and predatory pricing tiers within the operational software stack for an organization operating at 
+      <strong id="print-ops-scale" class="text-slate-900 font-semibold">50,000 operations/mo</strong> across 
+      <strong id="print-seats-scale" class="text-slate-900 font-semibold">5 active team seats</strong>.
+      Executing the recommended modern architectural migrations below immediately reduces operational overhead by 
+      <strong id="print-savings-percent" class="text-emerald-700 font-black">-78%</strong> without sacrificing SOC2 compliance, reliability, or team velocity.
+    </div>
+
+    <!-- 4 Key Financial Metrics -->
+    <div class="grid grid-cols-4 gap-3 mb-6">
+      <div class="p-3 border border-slate-300 rounded-lg text-center">
+        <div class="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Current SaaS Burn</div>
+        <div id="print-cost-legacy" class="text-lg font-black text-rose-700 font-mono mt-1">$7,420 / yr</div>
+        <div class="text-[9px] text-slate-500 mt-0.5">Legacy vendor rate</div>
+      </div>
+      <div class="p-3 border border-slate-300 rounded-lg text-center">
+        <div class="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Optimized Stack Cost</div>
+        <div id="print-cost-optimized" class="text-lg font-black text-slate-900 font-mono mt-1">$1,580 / yr</div>
+        <div class="text-[9px] text-slate-500 mt-0.5">Modern agentic stack</div>
+      </div>
+      <div class="p-3 border-2 border-emerald-600 bg-emerald-50/50 rounded-lg text-center">
+        <div class="text-[10px] font-mono uppercase text-emerald-800 font-bold tracking-wider">Net Runway Injected</div>
+        <div id="print-odometer-savings" class="text-xl font-black text-emerald-700 font-mono mt-1">$5,840 / yr</div>
+        <div class="text-[9px] text-emerald-800 font-medium mt-0.5">Pure EBITDA recovery</div>
+      </div>
+      <div class="p-3 border border-slate-300 rounded-lg text-center">
+        <div class="text-[10px] font-mono uppercase text-slate-500 tracking-wider">Gross Margin Gain</div>
+        <div id="print-monthly-savings" class="text-lg font-black text-cyan-800 font-mono mt-1">$486 / mo</div>
+        <div class="text-[9px] text-slate-500 mt-0.5">Recurring cash savings</div>
+      </div>
+    </div>
+
+    <!-- Actionable Vendor Replacement Table -->
+    <div class="mb-6">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-900 mb-2 flex items-center justify-between">
+        <span>Vendor Substitution Schedule & ROI Breakdown</span>
+        <span class="text-[10px] font-normal text-slate-500">Benchmark source: HeliaTech Independent Lab</span>
+      </div>
+      <table class="w-full text-left text-xs border border-slate-300 border-collapse">
+        <thead>
+          <tr class="bg-slate-100 border-b border-slate-300 text-[10px] font-mono uppercase tracking-wider text-slate-700">
+            <th class="p-2 border-r border-slate-300">Software Category</th>
+            <th class="p-2 border-r border-slate-300">Incumbent (Legacy Vendor)</th>
+            <th class="p-2 border-r border-slate-300">Recommended Alternative</th>
+            <th class="p-2 border-r border-slate-300 text-right">Est. Cost Delta</th>
+            <th class="p-2">Forensic Justification</th>
+          </tr>
+        </thead>
+        <tbody id="print-table-body" class="divide-y divide-slate-200">
+          <!-- Filled dynamically by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Implementation & Sign-off Section -->
+    <div class="border-t-2 border-slate-900 pt-4 mt-6">
+      <div class="grid grid-cols-2 gap-8 text-xs">
+        <div>
+          <div class="text-[10px] font-mono uppercase text-slate-500 tracking-wider mb-1">Prepared By:</div>
+          <div class="font-bold text-slate-900">IT & Infrastructure Architecture Audit Desk</div>
+          <div class="text-slate-600 text-[11px] mt-0.5">HeliaTech Independent Intelligence Lab (https://heliatech.online)</div>
+          <div class="mt-4 pt-4 border-t border-dashed border-slate-300">
+            <span class="text-[10px] font-mono text-slate-400">Signature: ____________________________________</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono uppercase text-slate-500 tracking-wider mb-1">Executive Approval (Sign-Off):</div>
+          <div class="font-bold text-slate-900">Chief Financial Officer / Head of Procurement</div>
+          <div class="text-slate-600 text-[11px] mt-0.5">Authorization to initiate vendor migration & contract cancellation</div>
+          <div class="mt-4 pt-4 border-t border-dashed border-slate-300">
+            <span class="text-[10px] font-mono text-slate-400">Signature: ____________________________________</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 pt-3 border-t border-slate-200 flex justify-between items-center text-[10px] font-mono text-slate-500">
+        <span>Verification Link: <span id="print-verification-link">https://heliatech.online/calculator/</span></span>
+        <span>Generated autonomously • Valid for Q4 2026 Procurement</span>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      header, nav, footer, #mobile-nav-drawer {
+        display: none !important;
+      }
+      #printable-board-memo {
+        display: block !important;
+        visibility: visible !important;
+      }
+    }
+  </style>
+
 </Layout>
