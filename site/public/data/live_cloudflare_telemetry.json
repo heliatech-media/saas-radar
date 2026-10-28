@@ -1,38 +1,34 @@
 {
-  "last_synced": "2026-10-28T12:32:23.147573",
+  "last_synced": "2026-10-28T13:02:41.522035",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2923,
-  "total_requests": 28617,
-  "total_visits": 906,
-  "total_pageviews": 6084,
+  "total_visitors_network": 2933,
+  "total_requests": 28831,
+  "total_visits": 909,
+  "total_pageviews": 6105,
   "percent_cached": "56.14%",
-  "data_served_mb": 271.4,
+  "data_served_mb": 272.6,
   "top_pages": [
     {
       "path": "/",
       "views": 1360
     },
     {
+      "path": "/awards/",
+      "views": 120
+    },
+    {
       "path": "/sentinel/",
       "views": 110
-    },
-    {
-      "path": "/awards/",
-      "views": 110
-    },
-    {
-      "path": "/blog/make-automation-revolution/",
-      "views": 100
     },
     {
       "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/versus/",
-      "views": 80
+      "path": "/blog/make-automation-revolution/",
+      "views": 100
     },
     {
       "path": "/reviews/adcreative-ai/",
@@ -43,11 +39,11 @@
       "views": 80
     },
     {
-      "path": "/radar/",
-      "views": 70
+      "path": "/versus/",
+      "views": 80
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/radar/",
       "views": 70
     },
     {
@@ -59,26 +55,30 @@
       "views": 70
     },
     {
+      "path": "/reviews/retool/",
+      "views": 70
+    },
+    {
       "path": "/blog/heygen-evolution-guide-2026/",
       "views": 60
     },
     {
-      "path": "/blog/best-elevenlabs-alternatives-2026/",
+      "path": "/reviews/typeform/",
       "views": 60
     },
     {
-      "path": "/reviews/typeform/",
+      "path": "/blog/best-elevenlabs-alternatives-2026/",
       "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5200
+      "views": 5230
     },
     {
       "country": "Morocco",
-      "views": 1200
+      "views": 1280
     },
     {
       "country": "Belgium",
