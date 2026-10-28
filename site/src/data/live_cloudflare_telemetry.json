@@ -1,37 +1,37 @@
 {
-  "last_synced": "2026-10-28T12:02:14.594027",
+  "last_synced": "2026-10-28T12:32:23.147573",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2913,
-  "total_requests": 28312,
-  "total_visits": 903,
-  "total_pageviews": 6042,
+  "total_visitors_network": 2923,
+  "total_requests": 28617,
+  "total_visits": 906,
+  "total_pageviews": 6084,
   "percent_cached": "56.14%",
-  "data_served_mb": 269.1,
+  "data_served_mb": 271.4,
   "top_pages": [
     {
       "path": "/",
       "views": 1360
     },
     {
-      "path": "/awards/",
-      "views": 110
-    },
-    {
       "path": "/sentinel/",
       "views": 110
     },
     {
-      "path": "/blog/",
-      "views": 100
+      "path": "/awards/",
+      "views": 110
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/",
+      "views": 100
+    },
+    {
+      "path": "/versus/",
       "views": 80
     },
     {
@@ -39,12 +39,8 @@
       "views": 80
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/beehiiv/",
       "views": 80
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
     },
     {
       "path": "/radar/",
@@ -59,26 +55,30 @@
       "views": 70
     },
     {
-      "path": "/reviews/typeform/",
-      "views": 60
+      "path": "/reviews/heygen/",
+      "views": 70
     },
     {
       "path": "/blog/heygen-evolution-guide-2026/",
       "views": 60
     },
     {
-      "path": "/reviews/make/",
+      "path": "/blog/best-elevenlabs-alternatives-2026/",
+      "views": 60
+    },
+    {
+      "path": "/reviews/typeform/",
       "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5160
+      "views": 5200
     },
     {
       "country": "Morocco",
-      "views": 1120
+      "views": 1200
     },
     {
       "country": "Belgium",
