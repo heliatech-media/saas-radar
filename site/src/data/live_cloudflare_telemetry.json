@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-28T20:44:36.209490",
+  "last_synced": "2026-10-28T21:04:40.804801",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 3112,
-  "total_requests": 31242,
-  "total_visits": 964,
-  "total_pageviews": 6380,
+  "total_visitors_network": 3127,
+  "total_requests": 31292,
+  "total_visits": 969,
+  "total_pageviews": 6404,
   "percent_cached": "56.14%",
-  "data_served_mb": 296.5,
+  "data_served_mb": 296.8,
   "top_pages": [
     {
       "path": "/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/awards/",
-      "views": 120
+      "views": 130
     },
     {
       "path": "/sentinel/",
@@ -43,11 +43,15 @@
       "views": 80
     },
     {
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 70
+    },
+    {
       "path": "/radar/",
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/deals/",
       "views": 70
     },
     {
@@ -55,19 +59,15 @@
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/reviews/heygen/",
       "views": 70
-    },
-    {
-      "path": "/blog/best-elevenlabs-alternatives-2026/",
-      "views": 60
     },
     {
       "path": "/blog/heygen-evolution-guide-2026/",
       "views": 60
     },
     {
-      "path": "/reviews/typeform/",
+      "path": "/blog/best-elevenlabs-alternatives-2026/",
       "views": 60
     }
   ],
