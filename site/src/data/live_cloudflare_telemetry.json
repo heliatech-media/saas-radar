@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-28T03:09:53.017794",
+  "last_synced": "2026-10-28T03:40:01.092027",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2615,
-  "total_requests": 26866,
-  "total_visits": 810,
-  "total_pageviews": 5542,
+  "total_visitors_network": 2628,
+  "total_requests": 26896,
+  "total_visits": 814,
+  "total_pageviews": 5551,
   "percent_cached": "56.14%",
-  "data_served_mb": 250.7,
+  "data_served_mb": 252.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 1472
+      "views": 1474
     },
     {
       "path": "/blog/",
@@ -40,7 +40,7 @@
     },
     {
       "path": "/terms/",
-      "views": 70
+      "views": 71
     },
     {
       "path": "/reviews/elevenlabs/",
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 4757
+      "views": 4764
     },
     {
       "country": "Morocco",
