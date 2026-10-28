@@ -89,7 +89,7 @@ Suppose you offer two distinct service tiers: *Growth Marketing* and *Enterprise
 ### Step 4: Connect Your Data Stack
 Before hitting publish, wire your form directly into your operational backend:
 1. Navigate to the **Integrations** tab in the form builder.
-2. Authenticate your **Airtable** or **Notion** workspace.
+2. Authenticate your **[Airtable](/reviews/airtable)** or **Notion** workspace.
 3. Map your form fields (Name, Email, Package) directly to your project tracking database columns.
 4. Connect a **Slack** channel webhook so your entire team receives real-time celebration pings when a new client signs up.
 

@@ -128,7 +128,7 @@ Tally is a radically different form builder that operates like a document editor
 ### Pros
 - Generous free tier that includes logic, file uploads, and unlimited forms without gating core features.
 - Notion-style text editor interface makes form creation fast and frictionless.
-- Native integrations with Notion, Slack, Google Sheets, Airtable, and Webhooks.
+- Native integrations with Notion, Slack, Google Sheets, [Airtable](/reviews/airtable), and Webhooks.
 - Built-in Stripe integration for accepting payments and subscriptions directly through forms.
 - Clean, minimalist aesthetic that looks custom-built rather than like a generic third-party form.
 

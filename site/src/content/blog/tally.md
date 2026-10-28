@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Forms
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: tally
 image: /images/blog/tally.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Tally Account ➔
   url: https://tally.so/?via=heliatech
 ---
-
 <p>F&shy;or over a decade, digital data collection was trapped behind a wall of rigid, bloated form builders. If you wanted to gather client intake details, process a payment, or run a customer satisfaction survey, you were forced to choose between legacy dinosaurs that charged exorbitant monthly fees per response, or clunky open-source plugins that broke every time your server updated. Creating a simple contact form required navigating nested menus, configuring conditional logic trees inside confusing visual grids, and paying hidden penalties just to remove a third-party watermark. The market was fragmented, expensive, and fundamentally broken for modern knowledge workers.</p>
 
 > [!NOTE]
@@ -54,7 +53,7 @@ For B2B strategists and operations leaders, efficiency is measured in reduced fr
 *   **The Notion-Style Text Editor:** By stripping away legacy UI clutter, Tally enables zero-learning-curve form creation. Teams can draft intake sheets, job applications, and client feedback loops as quickly as they type a shared document.
 *   **Unrivaled Generous Free Tier:** Unlike competitors that restrict form responses or gate logic features, Tally's free tier empowers businesses to scale their data collection efforts infinitely before ever upgrading to a paid plan.
 *   **Native Stripe Payment Processing:** Collecting one-time fees, recurring subscriptions, or donation tiers is frictionless. Tally embeds Stripe directly into the form flow, bypassing complex checkout integrations without taking a cut of transaction revenues.
-*   **Ecosystem-Wide Integrations:** Tally connects natively with the modern stack—including Notion, Slack, Google Sheets, Airtable, and Webhooks—ensuring that every submitted data point instantly flows into your company's operational nervous system.
+*   **Ecosystem-Wide Integrations:** Tally connects natively with the modern stack—including Notion, Slack, Google Sheets, [Airtable](/reviews/airtable), and Webhooks—ensuring that every submitted data point instantly flows into your company's operational nervous system.
 
 ```mermaid
 flowchart LR

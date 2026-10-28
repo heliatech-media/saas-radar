@@ -304,11 +304,11 @@
   {
     "name": "Resend",
     "slug": "resend",
-    "tagline": "Email for developers: build, send, and monitor transactional emails with modern APIs and React components.",
-    "category": "Developer Tools",
+    "tagline": "Email for developers, built with React and modern APIs.",
+    "category": "DevTools",
     "rating": 4.8,
     "starting_price": "$20/mo",
-    "best_for": "Full-stack developers, engineering teams, and startups building modern web applications.",
+    "best_for": "Full-stack developers, engineering teams, and modern SaaS companies scaling transactional email.",
     "affiliate_url": "https://resend.com/?via=heliatech"
   },
   {
