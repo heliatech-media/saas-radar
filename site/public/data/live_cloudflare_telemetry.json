@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-28T16:34:47.059889",
+  "last_synced": "2026-10-28T16:43:36.354243",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 3019,
-  "total_requests": 29932,
-  "total_visits": 935,
-  "total_pageviews": 6230,
+  "total_visitors_network": 3028,
+  "total_requests": 30145,
+  "total_visits": 938,
+  "total_pageviews": 6249,
   "percent_cached": "56.14%",
-  "data_served_mb": 279.6,
+  "data_served_mb": 280.6,
   "top_pages": [
     {
       "path": "/",
@@ -23,11 +23,11 @@
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
@@ -35,15 +35,15 @@
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 80
-    },
-    {
       "path": "/reviews/beehiiv/",
       "views": 80
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/reviews/adcreative-ai/",
+      "views": 80
+    },
+    {
+      "path": "/radar/",
       "views": 70
     },
     {
@@ -55,30 +55,30 @@
       "views": 70
     },
     {
-      "path": "/radar/",
+      "path": "/reviews/retool/",
       "views": 70
+    },
+    {
+      "path": "/blog/heygen-evolution-guide-2026/",
+      "views": 60
     },
     {
       "path": "/blog/vercel-evolution-guide-2026/",
       "views": 60
     },
     {
-      "path": "/reviews/typeform/",
-      "views": 60
-    },
-    {
-      "path": "/blog/heygen-evolution-guide-2026/",
+      "path": "/reviews/make/",
       "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5430
+      "views": 5440
     },
     {
       "country": "Morocco",
-      "views": 1560
+      "views": 1580
     },
     {
       "country": "Belgium",
