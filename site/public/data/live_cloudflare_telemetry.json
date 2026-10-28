@@ -1,25 +1,25 @@
 {
-  "last_synced": "2026-10-28T07:20:59.364781",
+  "last_synced": "2026-10-28T07:41:05.201929",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 2754,
-  "total_requests": 27400,
-  "total_visits": 853,
-  "total_pageviews": 5791,
+  "total_visitors_network": 2768,
+  "total_requests": 27561,
+  "total_visits": 858,
+  "total_pageviews": 5809,
   "percent_cached": "56.14%",
-  "data_served_mb": 259.4,
+  "data_served_mb": 260.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 1320
-    },
-    {
-      "path": "/sentinel/",
-      "views": 110
+      "views": 1330
     },
     {
       "path": "/awards/",
+      "views": 110
+    },
+    {
+      "path": "/sentinel/",
       "views": 110
     },
     {
@@ -43,6 +43,10 @@
       "views": 70
     },
     {
+      "path": "/radar/",
+      "views": 70
+    },
+    {
       "path": "/reviews/heygen/",
       "views": 70
     },
@@ -51,19 +55,15 @@
       "views": 70
     },
     {
-      "path": "/radar/",
-      "views": 70
-    },
-    {
       "path": "/reviews/beehiiv/",
       "views": 70
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/typeform/",
       "views": 60
     },
     {
-      "path": "/reviews/typeform/",
+      "path": "/reviews/make/",
       "views": 60
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 4930
+      "views": 4940
     },
     {
       "country": "Morocco",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 390
+      "views": 400
     },
     {
       "country": "Canada",
