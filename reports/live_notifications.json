@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-10-28 16:38:07",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `elevenlabs, notion-ai, peripety, podcastle, tome, v0`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-10-28 12:01:20",
+    "title": "Cycle Autonome #Tally",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-10-28 11:59:51",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
@@ -334,19 +348,5 @@
     "category": "REWARDFUL",
     "message": "Helia-RewardfulEngine est actif ! 9 logiciels majeurs (beehiiv, Transistor, Memberstack, Podia...) sont liés à ton token heliatech avec redirection edge 302.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-24 00:33:04",
-    "title": "Cycle Autonome #Lovable",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Lovable et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-24 00:32:22",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]

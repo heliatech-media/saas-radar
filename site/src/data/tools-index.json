@@ -357,11 +357,11 @@
   {
     "name": "Tally",
     "slug": "tally",
-    "tagline": "The simplest, most powerful notion-style form builder for the web.",
-    "category": "Automation & Forms",
+    "tagline": "The simplest, Notion-style form builder for the web with a remarkably generous free tier.",
+    "category": "Productivity & Forms",
     "rating": 4.8,
     "starting_price": "$29/mo",
-    "best_for": "Solopreneurs, startups, product teams, and agencies looking for advanced form logic without a high SaaS price tag.",
+    "best_for": "Bootstrapped founders, indie hackers, product managers, and lean teams who need robust forms without enterprise SaaS price tags.",
     "affiliate_url": "https://tally.so/?via=heliatech"
   },
   {

@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#070d1a"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+
+    <!-- Glow & Lighting Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="deepGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Element Gradients -->
+    <linearGradient id="cyanBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+    
+    <linearGradient id="glassStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.07"/>
+    </pattern>
+    
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#8b5cf6" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#cyberGrid)"/>
+  <rect width="1200" height="630" fill="url(#dotGrid)"/>
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="950" cy="180" r="220" fill="#8b5cf6" opacity="0.12" filter="url(#deepGlow)"/>
+  <circle cx="780" cy="450" r="250" fill="#06b6d4" opacity="0.10" filter="url(#deepGlow)"/>
+  <circle cx="200" cy="500" r="180" fill="#d946ef" opacity="0.08" filter="url(#deepGlow)"/>
+
+  <!-- ================= BACKGROUND ARCHITECTURAL STRUCTURES ================= -->
+  <g opacity="0.4">
+    <!-- Abstract Isometric Data Cube Framework -->
+    <path d="M950 120 L1070 190 L1070 330 L950 400 L830 330 L830 190 Z" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4"/>
+    <path d="M950 120 L950 260 M1070 190 L950 260 L830 190" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+    
+    <!-- Connection lines converging -->
+    <path d="M650 315 L830 260" stroke="url(#cyanBlue)" stroke-width="1.5" stroke-opacity="0.4"/>
+    <path d="M650 315 L950 400" stroke="url(#violetFuchsia)" stroke-width="1.5" stroke-opacity="0.3"/>
+    <path d="M650 315 L1070 190" stroke="url(#cyanBlue)" stroke-width="1" stroke-dasharray="2 4" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ================= MAIN FOREGROUND GRAPHICS (CRM / AI METAPHOR) ================= -->
+  <!-- 3D Multidimensional Database Cube / Enriched Contact Graph Nodes -->
+  <g transform="translate(760, 210)">
+    <!-- Node Network Connections -->
+    <line x1="120" y1="120" x2="220" y2="40" stroke="#38bdf8" stroke-width="1.5" opacity="0.6"/>
+    <line x1="120" y1="120" x2="40" y2="200" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+    <line x1="120" y1="120" x2="200" y2="220" stroke="#d946ef" stroke-width="1.5" opacity="0.6"/>
+    <line x1="220" y1="40" x2="300" y2="100" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+    <line x1="200" y1="220" x2="300" y2="180" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Central AI Core Node -->
+    <g transform="translate(120, 120)">
+      <circle cx="0" cy="0" r="45" fill="#030712" stroke="url(#cyanBlue)" stroke-width="2" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="30" fill="url(#cyanBlue)" opacity="0.2"/>
+      <!-- Inner geometric core -->
+      <path d="M-15 -15 L15 -15 L15 15 L-15 15 Z" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(45)"/>
+      <circle cx="0" cy="0" r="6" fill="#38bdf8"/>
+    </g>
+
+    <!-- Satellite Node 1 (Einstein AI Metric) -->
+    <g transform="translate(220, 40)">
+      <rect x="-35" y="-20" width="70" height="40" rx="8" fill="#090d16" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="monospace" font-size="11" fill="#c084fc" text-anchor="middle">+480% AI</text>
+      <circle cx="-25" cy="0" r="3" fill="#d946ef" filter="url(#glow)"/>
+    </g>
+
+    <!-- Satellite Node 2 (Storage Overage Leak) -->
+    <g transform="translate(40, 200)">
+      <rect x="-45" y="-20" width="90" height="40" rx="8" fill="#090d16" stroke="#d946ef" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="monospace" font-size="11" fill="#f472b6" text-anchor="middle">LEAK DETECT</text>
+      <circle cx="-32" cy="0" r="3" fill="#d946ef" filter="url(#glow)"/>
+    </g>
+
+    <!-- Satellite Node 3 (Revenue Data Stream) -->
+    <g transform="translate(200, 220)">
+      <rect x="-40" y="-20" width="80" height="40" rx="8" fill="#090d16" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="monospace" font-size="11" fill="#38bdf8" text-anchor="middle">$RateCard</text>
+      <circle cx="-28" cy="0" r="3" fill="#06b6d4" filter="url(#glow)"/>
+    </g>
+
+    <!-- Floating Micro Nodes -->
+    <circle cx="300" cy="100" r="8" fill="#8b5cf6" filter="url(#glow)"/>
+    <circle cx="300" cy="180" r="6" fill="#06b6d4" filter="url(#glow)"/>
+    <circle cx="100" cy="20" r="5" fill="#38bdf8" filter="url(#glow)"/>
+  </g>
+
+  <!-- Holographic Revenue Chart Overlay -->
+  <g transform="translate(740, 440)" opacity="0.85">
+    <rect x="0" y="0" width="380" height="110" rx="12" fill="url(#glassGrad)" stroke="url(#glassStroke)" stroke-width="1"/>
+    <path d="M 20 80 Q 80 40 140 60 T 260 30 T 360 20" fill="none" stroke="url(#cyanBlue)" stroke-width="2.5" filter="url(#glow)"/>
+    <path d="M 20 80 Q 80 40 140 60 T 260 30 T 360 20 L 360 100 L 20 100 Z" fill="url(#cyanBlue)" opacity="0.08"/>
+    <!-- Data points -->
+    <circle cx="140" cy="60" r="4" fill="#38bdf8"/>
+    <circle cx="260" cy="30" r="4" fill="#8b5cf6"/>
+    <circle cx="360" cy="20" r="4" fill="#d946ef"/>
+    <text x="25" y="25" font-family="sans-serif" font-weight="700" font-size="11" fill="#94a3b8" letter-spacing="1">SALES CLOUD INTEL TRAJECTORY</text>
+  </g>
+
+  <!-- ================= TYPOGRAPHY & BRANDING ================= -->
+  <g transform="translate(80, 85)">
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="280" height="32" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"/>
+      <!-- Glowing Dot -->
+      <circle cx="20" cy="16" r="4" fill="#06b6d4" filter="url(#glow)"/>
+      <circle cx="20" cy="16" r="4" fill="#38bdf8"/>
+      <text x="38" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" fill="#38bdf8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title: SALESFORCE -->
+    <text x="0" y="115" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" fill="#ffffff" letter-spacing="4" filter="url(#glow)">SALESFORCE</text>
+    <text x="0" y="115" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" fill="url(#cyanBlue)" letter-spacing="4">SALESFORCE</text>
+
+    <!-- Category Subtitle -->
+    <text x="2" y="155" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="16" fill="#94a3b8" letter-spacing="3">B2B SALES &amp; CRM INTELLIGENCE</text>
+
+    <!-- Investigation Title (Split for perfect visual hierarchy) -->
+    <g transform="translate(0, 205)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="32" fill="#f8fafc" letter-spacing="0.5">Salesforce Sales Cloud 2026 Hidden Rate Card:</text>
+      <text x="0" y="42" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="32" fill="url(#violetFuchsia)" letter-spacing="0.5" filter="url(#glow)">Einstein 1 AI Costs &amp; Storage Overage Leaks</text>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM ARCHITECTURAL METADATA BAR ================= -->
+  <g transform="translate(80, 560)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Meta Item 1 -->
+    <g transform="translate(0, 20)">
+      <text x="0" y="0" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">SYSTEM ID</text>
+      <text x="0" y="16" font-family="monospace" font-size="13" fill="#cbd5e1" letter-spacing="1">HT-CRM-2026-X9</text>
+    </g>
+
+    <!-- Meta Item 2 -->
+    <g transform="translate(220, 20)">
+      <text x="0" y="0" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">AUDIT VECTOR</text>
+      <text x="0" y="16" font-family="monospace" font-size="13" fill="#38bdf8" letter-spacing="1">AI_CONSUMPTION_ANALYSIS</text>
+    </g>
+
+    <!-- Meta Item 3 -->
+    <g transform="translate(500, 20)">
+      <text x="0" y="0" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">SECURITY CLEARANCE</text>
+      <text x="0" y="16" font-family="monospace" font-size="13" fill="#d946ef" letter-spacing="1">RESTRICTED DOSSIER</text>
+    </g>
+
+    <!-- Domain Watermark -->
+    <g transform="translate(870, 22)">
+      <text x="0" y="12" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="16" fill="#38bdf8" letter-spacing="3" opacity="0.9">HELIATECH.ONLINE</text>
+    </g>
+  </g>
+</svg>

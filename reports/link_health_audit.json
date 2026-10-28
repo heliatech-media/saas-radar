@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-10-28 11:59:51",
+  "timestamp": "2026-10-28 16:38:07",
   "total_links_audited": 70,
-  "healthy_links": 66,
-  "broken_links_count": 4,
-  "health_rate": "94.3%",
+  "healthy_links": 64,
+  "broken_links_count": 6,
+  "health_rate": "91.4%",
   "broken_links": [
+    {
+      "slug": "elevenlabs",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='elevenlabs.io', port=443): Read timed out. (read timeout=7)"
+    },
     {
       "slug": "notion-ai",
       "target_url": "https://affiliates.notion.so/heliatech",
@@ -36,6 +44,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno 11002] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "v0",
+      "target_url": "https://v0.dev/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='v0.app', port=443): Read timed out."
     }
   ],
   "audit_details": [
@@ -133,9 +149,10 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LP7a61cSxJVZOc&gsxid=LP7a61cSxJVZOc&gspk=OTFiYjM2Mzg5MDIy",
-      "status_code": 200,
-      "healthy": true
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='elevenlabs.io', port=443): Read timed out. (read timeout=7)"
     },
     {
       "slug": "framer",
@@ -310,7 +327,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=e9MUs2OFy3uc6Y&gsxid=e9MUs2OFy3uc6Y&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=RRJQwNm3abehk4&gsxid=RRJQwNm3abehk4&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -466,9 +483,10 @@
     {
       "slug": "v0",
       "target_url": "https://v0.dev/?via=heliatech",
-      "final_url": "https://v0.app/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='v0.app', port=443): Read timed out."
     },
     {
       "slug": "veed",

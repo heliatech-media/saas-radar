@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%#030712" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#070b19"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+
+    <!-- Glowing Orb Gradients -->
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fuchsiaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- UI Panel Gradients -->
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="panelBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="150" cy="100" r="300" fill="url(#cyanGlow)"/>
+  <circle cx="1050" cy="500" r="350" fill="url(#fuchsiaGlow)"/>
+  <circle cx="700" cy="250" r="250" fill="url(#violetGlow)"/>
+
+  <!-- Geometric Decorative Lines & Cyber Accents -->
+  <g opacity="0.4" stroke-width="1">
+    <path d="M 0,150 L 300,150 L 350,200 L 1200,200" fill="none" stroke="url(#cyanBlue)"/>
+    <path d="M 1200,480 L 900,480 L 850,430 L 0,430" fill="none" stroke="url(#violetFuchsia)"/>
+    <line x1="950" y1="50" x2="1150" y2="50" stroke="#38bdf8" stroke-dasharray="4,4"/>
+    <line x1="50" y1="580" x2="250" y2="580" stroke="#d946ef" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- ==================== HEADER / BADGE ==================== -->
+  <g transform="translate(80, 70)">
+    <!-- Pill Badge -->
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="18" cy="16" r="4" fill="#06b6d4" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="34" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY (LEFT COLUMN) ==================== -->
+  <g transform="translate(80, 140)">
+    <!-- Category Subtitle -->
+    <text x="0" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#8b5cf6" letter-spacing="3">B2B SALES &amp; CRM INTELLIGENCE</text>
+    
+    <!-- Main Title: HUBSPOT -->
+    <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" fill="#ffffff" letter-spacing="-1" filter="url(#softGlow)">HUBSPOT</text>
+    
+    <!-- Investigation Subtitle -->
+    <text x="0" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#cbd5e1" letter-spacing="-0.5">Enterprise 2026 Hidden Rate Card:</text>
+    <text x="0" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="url(#violetFuchsia)" letter-spacing="-0.5">The Uncensored Pricing Leak &amp; Onboarding Traps</text>
+
+    <!-- Key Metrics / Data Callouts -->
+    <g transform="translate(0, 195)">
+      <!-- Metric 1 -->
+      <rect x="0" y="0" width="145" height="55" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="15" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">AVG. OVERRUN</text>
+      <text x="15" y="44" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#06b6d4">+314%</text>
+
+      <!-- Metric 2 -->
+      <rect x="160" y="0" width="145" height="55" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="175" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">CONTACT TIER</text>
+      <text x="175" y="44" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#d946ef">100K+ CLI</text>
+    </g>
+  </g>
+
+  <!-- ==================== 3D CRM & DATA METAPHOR (RIGHT COLUMN) ==================== -->
+  <g transform="translate(680, 80)">
+    
+    <!-- Main Glassmorphism Panel Container -->
+    <rect x="0" y="0" width="450" height="480" rx="16" fill="url(#panelBg)" stroke="url(#panelBorder)" stroke-width="1.5" filter="url(#glow)"/>
+    
+    <!-- Panel Header Bar -->
+    <path d="M 0,48 L 450,48" stroke="#1e293b" stroke-width="1"/>
+    <circle cx="24" cy="24" r="6" fill="#ef4444" opacity="0.8"/>
+    <circle cx="44" cy="24" r="6" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="64" cy="24" r="6" fill="#10b981" opacity="0.8"/>
+    <text x="90" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="1">CRM_INTELLIGENCE_ENGINE // v2026.4</text>
+
+    <!-- Multi-Dimensional Database Cubes & Enriched Contact Graphs (SVG Isometric Vector Art) -->
+    <g transform="translate(55, 75)">
+      
+      <!-- Connection Flow Lines -->
+      <path d="M 80,100 L 170,160 L 260,100" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+      <path d="M 170,160 L 170,260" fill="none" stroke="#d946ef" stroke-width="2" opacity="0.6"/>
+      <path d="M 80,100 L 80,210 L 170,260" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+      <path d="M 260,100 L 260,210 L 170,260" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+
+      <!-- Node 1: Contact Enriched Graph (Left) -->
+      <g transform="translate(40, 50)">
+        <polygon points="40,0 80,23 40,46 0,23" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-width="1.5"/>
+        <polygon points="0,23 40,46 40,80 0,57" fill="#06b6d4" fill-opacity="0.4" stroke="#06b6d4" stroke-width="1.5"/>
+        <polygon points="40,46 80,23 80,57 40,80" fill="#0f172a" fill-opacity="0.8" stroke="#06b6d4" stroke-width="1.5"/>
+        <circle cx="40" cy="46" r="4" fill="#38bdf8" filter="url(#softGlow)"/>
+      </g>
+
+      <!-- Node 2: Revenue / Rate Card Core (Top Center) -->
+      <g transform="translate(130, 0)">
+        <polygon points="40,0 80,23 40,46 0,23" fill="#8b5cf6" fill-opacity="0.3" stroke="#8b5cf6" stroke-width="1.5"/>
+        <polygon points="0,23 40,46 40,80 0,57" fill="#8b5cf6" fill-opacity="0.5" stroke="#8b5cf6" stroke-width="1.5"/>
+        <polygon points="40,46 80,23 80,57 40,80" fill="#0f172a" fill-opacity="0.8" stroke="#8b5cf6" stroke-width="1.5"/>
+        <circle cx="40" cy="46" r="4" fill="#d946ef" filter="url(#softGlow)"/>
+      </g>
+
+      <!-- Node 3: Onboarding Trap Matrix (Right) -->
+      <g transform="translate(220, 50)">
+        <polygon points="40,0 80,23 40,46 0,23" fill="#d946ef" fill-opacity="0.2" stroke="#d946ef" stroke-width="1.5"/>
+        <polygon points="0,23 40,46 40,80 0,57" fill="#d946ef" fill-opacity="0.4" stroke="#d946ef" stroke-width="1.5"/>
+        <polygon points="40,46 80,23 80,57 40,80" fill="#0f172a" fill-opacity="0.8" stroke="#d946ef" stroke-width="1.5"/>
+        <circle cx="40" cy="46" r="4" fill="#38bdf8" filter="url(#softGlow)"/>
+      </g>
+
+      <!-- Central Master Cube: Enterprise Core Intelligence -->
+      <g transform="translate(130, 160)">
+        <!-- Outer Glowing Prism -->
+        <polygon points="40,0 80,23 40,46 0,23" fill="#38bdf8" fill-opacity="0.4" stroke="#38bdf8" stroke-width="2"/>
+        <polygon points="0,23 40,46 40,80 0,57" fill="#06b6d4" fill-opacity="0.6" stroke="#38bdf8" stroke-width="2"/>
+        <polygon points="40,46 80,23 80,57 40,80" fill="#0f172a" fill-opacity="0.9" stroke="#38bdf8" stroke-width="2"/>
+        <!-- Core Pulse -->
+        <circle cx="40" cy="46" r="8" fill="#ffffff" filter="url(#softGlow)">
+          <animate attributeName="r" values="6;10;6" dur="3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+    </g>
+
+    <!-- Data Stream Visualizer / Holographic Analytics Readout inside Panel -->
+    <g transform="translate(35, 310)">
+      <rect x="0" y="0" width="380" height="135" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+      
+      <!-- Graph Header -->
+      <text x="20" y="25" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="0.5">REAL-TIME TIER SCALING VELOCITY</text>
+      <text x="330" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#10b981">+42.8%</text>
+
+      <!-- SVG Sparkline / High-Velocity Revenue Chart -->
+      <path d="M 20,95 Q 80,60 140,80 T 260,40 T 360,70" fill="none" stroke="url(#cyanBlue)" stroke-width="2.5" filter="url(#softGlow)"/>
+      <path d="M 20,95 Q 80,60 140,80 T 260,40 T 360,70 L 360,115 L 20,115 Z" fill="url(#cyanGlow)" opacity="0.3"/>
+
+      <!-- Data Points on Chart -->
+      <circle cx="140" cy="80" r="3.5" fill="#38bdf8"/>
+      <circle cx="260" cy="40" r="3.5" fill="#d946ef"/>
+      <circle cx="360" cy="70" r="3.5" fill="#06b6d4"/>
+
+      <!-- Grid ticks inside mini graph -->
+      <line x1="20" y1="115" x2="360" y2="115" stroke="#334155" stroke-width="1"/>
+    </g>
+
+  </g>
+
+  <!-- ==================== FOOTER BRANDING ==================== -->
+  <g transform="translate(80, 580)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="2">HELIATECH.ONLINE</text>
+    <circle cx="130" cy="-4" r="2" fill="#38bdf8"/>
+    <text x="142" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569" letter-spacing="1">SECURE ENTERPRISE INTELLIGENCE</text>
+  </g>
+</svg>
