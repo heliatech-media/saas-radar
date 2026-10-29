@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ToolIcon from '../../components/ToolIcon.astro';
+import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -480,4 +481,6 @@ const jsonLd = {
       });
     }
   </script>
+  <!-- Helia-CRO: Sticky Floating Conversion Bar on Reviews -->
+  <StickyAffiliateBar toolSlug={slug} toolName={tool.name} discountBadge="Official Partner Deal" />
 </Layout>

@@ -185,6 +185,21 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
                 if (current.recent_events.length > 50) current.recent_events.pop();
 
                 localStorage.setItem(storeKey, JSON.stringify(current));
+
+                // Dispatch Global Edge Beacon for Centralized Real-Time Telemetry
+                try {
+                  const beaconData = JSON.stringify({
+                    type: 'HOP',
+                    tool: toolSlug,
+                    path: path,
+                    referrer: document.referrer || 'Direct'
+                  });
+                  if (navigator.sendBeacon) {
+                    navigator.sendBeacon('/api/telemetry', beaconData);
+                  } else {
+                    fetch('/api/telemetry', { method: 'POST', body: beaconData, keepalive: true }).catch(() => {});
+                  }
+                } catch(bErr) {}
               } catch(e) {}
             }
           });

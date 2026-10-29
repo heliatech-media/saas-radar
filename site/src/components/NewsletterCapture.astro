@@ -85,10 +85,25 @@ const {
         const email = emailInput.value.trim();
         if (!email) return;
 
-        // Store subscriber lead in localStorage for immediate retention
-        const stored = JSON.parse(localStorage.getItem('heliatech_subscribers') || '[]');
-        stored.push({ email, timestamp: new Date().toISOString() });
-        localStorage.setItem('heliatech_subscribers', JSON.stringify(stored));
+        // 1. Dispatch directly to Centralized Edge API (Instant Telegram Alert)
+        try {
+          fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              path: window.location.pathname,
+              referrer: document.referrer || 'Direct'
+            })
+          }).catch(() => {});
+        } catch(err) {}
+
+        // 2. Also keep local backup
+        try {
+          const stored = JSON.parse(localStorage.getItem('heliatech_subscribers') || '[]');
+          stored.push({ email, timestamp: new Date().toISOString() });
+          localStorage.setItem('heliatech_subscribers', JSON.stringify(stored));
+        } catch(err) {}
 
         form.classList.add('hidden');
         successMsg.classList.remove('hidden');

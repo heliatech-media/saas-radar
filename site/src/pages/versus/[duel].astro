@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ToolIcon from '../../components/ToolIcon.astro';
+import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
 import duelsData from '../../data/versus-duels.json';
 
 export async function getStaticPaths() {
@@ -101,6 +102,10 @@ const avgA = Math.round(
 const avgB = Math.round(
   (toolB.scores.performance + toolB.scores.pricing + toolB.scores.easeOfUse + toolB.scores.enterprise + toolB.scores.ecosystem) / 5
 );
+
+// Determine overall winner for Floating Sticky Bar
+const winnerName = duel.verdict?.winner || toolA.name;
+const winnerSlug = (duel.verdict?.winner === toolB.name) ? toolB.slug : toolA.slug;
 ---
 
 <Layout 
@@ -540,4 +545,6 @@ const avgB = Math.round(
     </div>
 
   </div>
+  <!-- Helia-CRO: Sticky Floating Conversion Bar on Versus Duels -->
+  <StickyAffiliateBar toolSlug={winnerSlug} toolName={winnerName} discountBadge="Empirical Winner 2026" />
 </Layout>
