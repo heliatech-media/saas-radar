@@ -1,12 +1,12 @@
 {
-  "last_synced": "2026-10-29T14:49:00.112233",
+  "last_synced": "2026-10-29T14:59:03.340063",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3602,
-  "total_requests": 34111,
-  "total_visits": 1116,
-  "total_pageviews": 7039,
+  "total_visitors_network": 3605,
+  "total_requests": 34117,
+  "total_visits": 1117,
+  "total_pageviews": 7041,
   "percent_cached": "56.14%",
   "data_served_mb": 338.3,
   "top_pages": [
@@ -39,27 +39,23 @@
       "views": 90
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 80
-    },
-    {
       "path": "/radar/",
       "views": 80
     },
     {
-      "path": "/deals/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 70
+      "path": "/reviews/beehiiv/",
+      "views": 80
     },
     {
       "path": "/reviews/n8n/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/apollo-io/",
       "views": 70
     },
     {
@@ -67,7 +63,11 @@
       "views": 70
     },
     {
-      "path": "/reviews/make/",
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 70
+    },
+    {
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 70
     }
   ],
@@ -110,7 +110,7 @@
     },
     {
       "country": "India",
-      "views": 170
+      "views": 180
     }
   ],
   "top_referrers": [
