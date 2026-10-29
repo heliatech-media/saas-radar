@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-10-29T15:49:14.717726",
+  "last_synced": "2026-10-29T12:40:33.155547",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3635,
-  "total_requests": 34366,
-  "total_visits": 1126,
-  "total_pageviews": 7071,
+  "total_visitors_network": 3553,
+  "total_requests": 33941,
+  "total_visits": 1101,
+  "total_pageviews": 6989,
   "percent_cached": "56.14%",
-  "data_served_mb": 339.9,
+  "data_served_mb": 331.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 1550
+      "views": 1800
     },
     {
-      "path": "/awards/",
-      "views": 160
-    },
-    {
-      "path": "/sentinel/",
+      "path": "/reviews/resend/",
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 100
+      "path": "/terms/",
+      "views": 110
     },
     {
       "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/reviews/clickup/",
+      "views": 100
+    },
+    {
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 90
+    },
+    {
+      "path": "/sentinel/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/brevo/",
+      "views": 90
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 90
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 90
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
+      "views": 90
+    },
+    {
+      "path": "/awards/",
+      "views": 80
     },
     {
       "path": "/versus/",
-      "views": 90
+      "views": 80
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/elevenlabs/",
       "views": 80
     },
     {
       "path": "/radar/",
       "views": 80
-    },
-    {
-      "path": "/blog/apollo-io-vs-lusha/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/retool/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/apollo-io/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/heygen/",
-      "views": 70
-    },
-    {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6420
+      "views": 6650
     },
     {
       "country": "Morocco",
-      "views": 2300
+      "views": 1840
     },
     {
       "country": "Belgium",
-      "views": 490
+      "views": 600
     },
     {
       "country": "Germany",
-      "views": 410
+      "views": 580
     },
     {
       "country": "Canada",
-      "views": 330
+      "views": 270
     },
     {
-      "country": "Netherlands",
-      "views": 270
+      "country": "United Kingdom",
+      "views": 260
     },
     {
       "country": "France",
       "views": 220
     },
     {
-      "country": "Singapore",
+      "country": "CN",
       "views": 210
     },
     {
-      "country": "United Kingdom",
-      "views": 180
+      "country": "HK",
+      "views": 210
     },
     {
-      "country": "India",
-      "views": 180
+      "country": "FI",
+      "views": 200
     }
   ],
   "top_referrers": [
@@ -138,5 +138,7 @@
   "devices": {
     "Desktop": 64,
     "Mobile": 36
-  }
+  },
+  "total_hops": 38,
+  "total_leads": 12
 }

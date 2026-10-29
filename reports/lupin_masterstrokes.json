@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-10-29T14:58:40.133569",
+  "timestamp": "2026-10-29T12:41:38.835154",
   "agent": "Helia-Lupin",
   "status": "ACTIVE_SUPREMACY",
   "coups": {
     "coup_1_ghost_hijacking": {
       "target": "Heroku Free Tier Discontinuation",
       "monetized_tool": "supabase",
-      "file": "E:\\Users\\PC Gamer\\Documents\\start with0$\\site\\src\\content\\blog\\heroku-free-tier-alternatives-2026.md",
+      "file": "/home/runner/work/saas-radar/saas-radar/site/src/content/blog/heroku-free-tier-alternatives-2026.md",
       "status": "LIVE"
     },
     "coup_2_pricing_leaks": {
       "target": "Papaya Global Enterprise Rate Card",
       "monetized_tool": "papaya-global",
-      "file": "E:\\Users\\PC Gamer\\Documents\\start with0$\\site\\src\\content\\blog\\papaya-global-2026-pricing-rate-card-leaks.md",
+      "file": "/home/runner/work/saas-radar/saas-radar/site/src/content/blog/papaya-global-2026-pricing-rate-card-leaks.md",
       "status": "LIVE"
     },
     "coup_3_github_parasite": {
       "target": "Awesome B2B SaaS 2026 Index",
-      "file": "E:\\Users\\PC Gamer\\Documents\\start with0$\\reports\\AWESOME_B2B_SAAS_2026.md",
+      "file": "/home/runner/work/saas-radar/saas-radar/reports/AWESOME_B2B_SAAS_2026.md",
       "status": "READY_FOR_SYNDICATION"
     },
     "coup_4_trophy_outreach": {

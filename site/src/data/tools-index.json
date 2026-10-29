@@ -97,6 +97,17 @@
     "affiliate_url": "https://www.descript.com"
   },
   {
+    "name": "Dumpling AI",
+    "slug": "dumpling-ai",
+    "tagline": "Turn long-form video into high-converting, bite-sized social clips with AI-powered multi-format reframing.",
+    "category": "AI Video",
+    "rating": 4.5,
+    "starting_price": "$29/mo",
+    "best_for": "Content creators, podcast hosts, and B2B marketing teams scaling video distribution without a dedicated editing staff.",
+    "affiliate_url": "https://www.dumpling.ai/?via=heliatech",
+    "commission_rate": "20% recurring"
+  },
+  {
     "name": "ElevenLabs",
     "slug": "elevenlabs",
     "tagline": "Industry-leading generative AI voice platform delivering hyper-realistic text-to-speech and dynamic voice cloning.",
@@ -138,6 +149,16 @@
     "best_for": "Mid-market to enterprise marketing teams, content agencies, and corporate brand managers.",
     "affiliate_url": "https://partnerstack.com/jasper?via=heliatech",
     "commission_rate": "20% recurring for up to 12 months"
+  },
+  {
+    "name": "Julius AI",
+    "slug": "julius-ai",
+    "tagline": "Your intelligent data analyst that writes code, cleans data, and visualizes insights in seconds.",
+    "category": "AI Data Analysis",
+    "rating": 4.6,
+    "starting_price": "$0/mo",
+    "best_for": "Data analysts, marketers, researchers, and operations teams looking to automate manual reporting and ad-hoc exploratory data analysis.",
+    "affiliate_url": "https://julius.ai"
   },
   {
     "name": "Klap",
@@ -203,6 +224,27 @@
     "starting_price": "$9/mo",
     "best_for": "Operations teams, growth marketers, and developers building multi-step automated data pipelines.",
     "affiliate_url": "https://www.make.com/en/register?pc=heliatechmake"
+  },
+  {
+    "name": "Memberstack",
+    "slug": "memberstack",
+    "tagline": "The ultimate user authentication and membership management platform for Webflow, HTML, and custom websites.",
+    "category": "B2B SaaS / Creator Tools",
+    "rating": 4.7,
+    "starting_price": "$29/mo",
+    "best_for": "Webflow agencies, freelance developers, and SaaS founders building on no-code stacks.",
+    "affiliate_url": "https://www.memberstack.com/?via=heliatech"
+  },
+  {
+    "name": "Minicong",
+    "slug": "minicong",
+    "tagline": "Autonomous AI video generation and localization pipeline for enterprise growth teams",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$49/mo",
+    "best_for": "B2B growth teams, global marketing agencies, and localized content creators",
+    "affiliate_url": "https://minicong.ai/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Monday.com",

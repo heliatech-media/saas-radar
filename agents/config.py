@@ -111,5 +111,7 @@ AFFILIATE_MAP = {
     "tome": "https://tome.app/?via=heliatech",
     "veed": "https://www.veed.io/?via=heliatech",
     "klap": "https://klap.app/?via=heliatech",
-    "v0": "https://v0.dev/?via=heliatech"
+    "v0": "https://v0.dev/?via=heliatech",
+    "minicong": "https://minicong.ai/?via=heliatech",
+    "dumpling-ai": "https://www.dumpling.ai/?via=heliatech"
 }

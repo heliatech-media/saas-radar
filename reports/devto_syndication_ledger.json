@@ -168,6 +168,58 @@
         "saas",
         "automation"
       ]
+    },
+    "clickup-evolution-guide-2026": {
+      "id": 4934638,
+      "url": "https://dev.to/heliatech/clickup-the-genesis-of-the-workspace-os-and-the-hands-on-guide-to-project-velocity-in-2026-dj2",
+      "title": "ClickUp: The Genesis of the Workspace OS and the Hands-on Guide to Project Velocity in 2026",
+      "canonical_url": "https://heliatech.online/blog/clickup-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "clickup",
+        "productivity",
+        "projectmanagement",
+        "workspaceos"
+      ]
+    },
+    "clickup-vs-monday-com": {
+      "id": 4935669,
+      "url": "https://dev.to/heliatech/clickup-vs-mondaycom-the-definitive-enterprise-project-os-shootout-kh4",
+      "title": "ClickUp vs Monday.com: The Definitive Enterprise Project OS Shootout",
+      "canonical_url": "https://heliatech.online/blog/clickup-vs-monday-com",
+      "published": true,
+      "tags": [
+        "clickup",
+        "mondaycom",
+        "clickupvsmondaycom",
+        "comparison"
+      ]
+    },
+    "cursor-evolution-guide-2026": {
+      "id": 4940116,
+      "url": "https://dev.to/heliatech/cursor-the-ai-first-code-editor-blueprint-and-enterprise-engineering-velocity-masterclass-2pn4",
+      "title": "Cursor: The AI-First Code Editor Blueprint and Enterprise Engineering Velocity Masterclass",
+      "canonical_url": "https://heliatech.online/blog/cursor-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "cursor",
+        "productivity",
+        "saas",
+        "automation"
+      ]
+    },
+    "elevenagents-ai-receptionist-guide": {
+      "id": 4941139,
+      "url": "https://dev.to/heliatech/elevenagents-how-to-deploy-a-247-ai-phone-receptionist-for-your-business-without-code-2026-4m0f",
+      "title": "ElevenAgents: How to Deploy a 24/7 AI Phone Receptionist for Your Business Without Code (2026)",
+      "canonical_url": "https://heliatech.online/blog/elevenagents-ai-receptionist-guide",
+      "published": true,
+      "tags": [
+        "elevenagents",
+        "aireceptionist",
+        "audio",
+        "businessautomation"
+      ]
     }
   },
   "last_sync": null
