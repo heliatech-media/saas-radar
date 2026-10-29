@@ -151,6 +151,16 @@
     "commission_rate": "20% recurring for up to 12 months"
   },
   {
+    "name": "Julius AI",
+    "slug": "julius-ai",
+    "tagline": "Your intelligent data analyst that writes code, cleans data, and visualizes insights in seconds.",
+    "category": "AI Data Analysis",
+    "rating": 4.6,
+    "starting_price": "$0/mo",
+    "best_for": "Data analysts, marketers, researchers, and operations teams looking to automate manual reporting and ad-hoc exploratory data analysis.",
+    "affiliate_url": "https://julius.ai"
+  },
+  {
     "name": "Klap",
     "slug": "klap",
     "tagline": "Turn long-form YouTube videos into viral short-form clips with AI in one click.",

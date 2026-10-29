@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-10-29 09:45:08",
-  "total_pages_audited": 65,
-  "monetized_pages": 62,
-  "total_ctas_tracked": 332,
+  "timestamp": "2026-10-29 12:40:31",
+  "total_pages_audited": 66,
+  "monetized_pages": 63,
+  "total_ctas_tracked": 335,
   "average_cro_score": "88.2/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -17,6 +17,15 @@
       "type": "blog",
       "word_count": 1124,
       "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "julius-ai-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1044,
+      "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -134,15 +143,6 @@
       "type": "blog",
       "word_count": 1240,
       "cta_count": 7,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "podia-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 969,
-      "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"

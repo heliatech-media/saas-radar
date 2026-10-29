@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-29T09:45:09.035419",
+  "last_synced": "2026-10-29T12:40:33.155547",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3454,
-  "total_requests": 33654,
-  "total_visits": 1070,
-  "total_pageviews": 6854,
+  "total_visitors_network": 3553,
+  "total_requests": 33941,
+  "total_visits": 1101,
+  "total_pageviews": 6989,
   "percent_cached": "56.14%",
-  "data_served_mb": 323.6,
+  "data_served_mb": 331.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 1750
+      "views": 1800
     },
     {
       "path": "/reviews/resend/",
@@ -43,6 +43,10 @@
       "views": 90
     },
     {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 90
+    },
+    {
       "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 90
     },
@@ -55,10 +59,6 @@
       "views": 80
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 80
-    },
-    {
       "path": "/versus/",
       "views": 80
     },
@@ -67,26 +67,26 @@
       "views": 80
     },
     {
-      "path": "/calculator/",
+      "path": "/radar/",
       "views": 80
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6500
+      "views": 6650
     },
     {
       "country": "Morocco",
       "views": 1840
     },
     {
-      "country": "Germany",
-      "views": 580
+      "country": "Belgium",
+      "views": 600
     },
     {
-      "country": "Belgium",
-      "views": 560
+      "country": "Germany",
+      "views": 580
     },
     {
       "country": "Canada",

@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-10-29 09:45:56",
-  "total_links_audited": 73,
+  "timestamp": "2026-10-29 12:41:38",
+  "total_links_audited": 74,
   "healthy_links": 68,
-  "broken_links_count": 5,
-  "health_rate": "93.2%",
+  "broken_links_count": 6,
+  "health_rate": "91.9%",
   "broken_links": [
+    {
+      "slug": "julius-ai",
+      "target_url": "https://www.julius-ai.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.julius-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.julius-ai.com', port=443): Failed to resolve 'www.julius-ai.com' ([Errno -2] Name or service not known)\"))"
+    },
     {
       "slug": "minicong",
       "target_url": "https://minicong.ai/?via=heliatech",
@@ -148,7 +156,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=fRYILjaox5IOk7&gsxid=fRYILjaox5IOk7&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=HJRpmcOmmvZk5d&gsxid=HJRpmcOmmvZk5d&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -172,6 +180,14 @@
       "final_url": "https://www.jasper-ai.com/",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "julius-ai",
+      "target_url": "https://www.julius-ai.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.julius-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.julius-ai.com', port=443): Failed to resolve 'www.julius-ai.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "kaspr",
@@ -231,8 +247,8 @@
     },
     {
       "slug": "memberstack",
-      "target_url": "https://www.memberstack.com",
-      "final_url": "https://www.memberstack.com/",
+      "target_url": "https://www.memberstack.com/?via=heliatech",
+      "final_url": "https://www.memberstack.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -340,7 +356,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=qywO4VYgDXBQHF&gsxid=qywO4VYgDXBQHF&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=HY5FAOuqt787pz&gsxid=HY5FAOuqt787pz&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
