@@ -87,7 +87,7 @@ Select the project scope block and click the branching icon. Configure the logic
 Type `/` again and select the **Stripe** payment block. Connect your verified Stripe account securely with a single OAuth authorization click. Set a fixed deposit amount (e.g., $500 initial consultation fee) so that form submission requires successful payment completion.
 
 ### Step 5: Connect Your Operational Database
-Navigate to the **Integrations** tab in your form settings. Link your Tally form directly to an **Airtable** base or **Google Sheet**. Map your form fields to your database columns. Now, every time a client submits and pays, their record automatically populates your project management pipeline while sending an instant notification to a designated **Slack** channel.
+Navigate to the **Integrations** tab in your form settings. Link your Tally form directly to an **[Airtable](/reviews/airtable)** base or **Google Sheet**. Map your form fields to your database columns. Now, every time a client submits and pays, their record automatically populates your project management pipeline while sending an instant notification to a designated **Slack** channel.
 
 ## 4. Critical Assessment & Trade-offs
 
@@ -98,7 +98,7 @@ While Tally is a masterclass in modern SaaS design, executive decision-makers mu
 | **Pricing & Value** | Generous free tier with unlimited forms and responses. | Paid tiers are strictly for team collaboration and white-labeling. | Massive cost savings for bootstrapped startups and lean agencies. |
 | **User Interface** | Blazing-fast Notion-style text editor with slash commands. | Complex branching in massive multi-page surveys can get crowded. | High onboarding velocity, though long forms require careful organization. |
 | **Compliance & Security** | Secure SSL, GDPR compliance, and encrypted data storage. | Lacks out-of-the-box HIPAA compliance for healthcare data. | Ideal for general B2B and e-commerce, but unsuitable for medical intake. |
-| **Data Analytics** | Clean response dashboard and direct export to spreadsheets. | Minimal native advanced visualization compared to Typeform. | Requires integration with BI tools or Airtable for deep data analysis. |
+| **Data Analytics** | Clean response dashboard and direct export to spreadsheets. | Minimal native advanced visualization compared to Typeform. | Requires integration with BI tools or [Airtable](/reviews/airtable) for deep data analysis. |
 
 ## 5. HeliaTech Final Verdict & Recommendation
 
