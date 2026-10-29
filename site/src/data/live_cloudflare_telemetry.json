@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-10-29T12:40:33.155547",
+  "last_synced": "2026-10-29T15:59:15.580245",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3553,
-  "total_requests": 33941,
-  "total_visits": 1101,
-  "total_pageviews": 6989,
+  "total_visitors_network": 3638,
+  "total_requests": 34425,
+  "total_visits": 1127,
+  "total_pageviews": 7076,
   "percent_cached": "56.14%",
-  "data_served_mb": 331.5,
+  "data_served_mb": 340.0,
   "top_pages": [
     {
       "path": "/",
-      "views": 1800
+      "views": 1550
     },
     {
-      "path": "/reviews/resend/",
+      "path": "/awards/",
+      "views": 160
+    },
+    {
+      "path": "/sentinel/",
       "views": 110
     },
     {
-      "path": "/terms/",
-      "views": 110
+      "path": "/blog/make-automation-revolution/",
+      "views": 100
     },
     {
       "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 100
-    },
-    {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 90
-    },
-    {
-      "path": "/sentinel/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 90
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 90
-    },
-    {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 90
-    },
-    {
-      "path": "/blog/make-automation-revolution/",
-      "views": 90
-    },
-    {
-      "path": "/awards/",
-      "views": 80
-    },
-    {
       "path": "/versus/",
-      "views": 80
+      "views": 90
     },
     {
-      "path": "/reviews/elevenlabs/",
+      "path": "/reviews/adcreative-ai/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/beehiiv/",
       "views": 80
     },
     {
       "path": "/radar/",
       "views": 80
+    },
+    {
+      "path": "/blog/lovable-evolution-guide-2026/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/heygen/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/n8n/",
+      "views": 70
+    },
+    {
+      "path": "/deals/",
+      "views": 70
+    },
+    {
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/retool/",
+      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6650
+      "views": 6420
     },
     {
       "country": "Morocco",
-      "views": 1840
+      "views": 2300
     },
     {
       "country": "Belgium",
-      "views": 600
+      "views": 490
     },
     {
       "country": "Germany",
-      "views": 580
+      "views": 410
     },
     {
       "country": "Canada",
-      "views": 270
+      "views": 330
     },
     {
-      "country": "United Kingdom",
-      "views": 260
+      "country": "Netherlands",
+      "views": 270
     },
     {
       "country": "France",
       "views": 220
     },
     {
-      "country": "CN",
+      "country": "Singapore",
       "views": 210
     },
     {
-      "country": "HK",
-      "views": 210
+      "country": "India",
+      "views": 180
     },
     {
-      "country": "FI",
-      "views": 200
+      "country": "United Kingdom",
+      "views": 180
     }
   ],
   "top_referrers": [
@@ -138,7 +138,5 @@
   "devices": {
     "Desktop": 64,
     "Mobile": 36
-  },
-  "total_hops": 38,
-  "total_leads": 12
+  }
 }
