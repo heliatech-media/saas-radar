@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-29T14:59:03.340063",
+  "last_synced": "2026-10-29T15:19:05.135244",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3605,
-  "total_requests": 34117,
-  "total_visits": 1117,
-  "total_pageviews": 7041,
+  "total_visitors_network": 3616,
+  "total_requests": 34147,
+  "total_visits": 1120,
+  "total_pageviews": 7051,
   "percent_cached": "56.14%",
-  "data_served_mb": 338.3,
+  "data_served_mb": 338.5,
   "top_pages": [
     {
       "path": "/",
@@ -23,11 +23,11 @@
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
@@ -47,7 +47,7 @@
       "views": 80
     },
     {
-      "path": "/reviews/n8n/",
+      "path": "/reviews/apollo-io/",
       "views": 70
     },
     {
@@ -55,19 +55,19 @@
       "views": 70
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 70
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/reviews/heygen/",
+      "views": 70
+    },
+    {
+      "path": "/deals/",
       "views": 70
     },
     {
       "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 70
-    },
-    {
-      "path": "/blog/apollo-io-vs-lusha/",
       "views": 70
     }
   ],
