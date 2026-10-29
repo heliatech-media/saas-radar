@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-29T20:50:54.126306",
+  "last_synced": "2026-10-29T21:11:05.026835",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3815,
-  "total_requests": 36032,
-  "total_visits": 1182,
-  "total_pageviews": 7301,
+  "total_visitors_network": 3827,
+  "total_requests": 36415,
+  "total_visits": 1186,
+  "total_pageviews": 7313,
   "percent_cached": "56.14%",
-  "data_served_mb": 358.1,
+  "data_served_mb": 358.8,
   "top_pages": [
     {
       "path": "/",
-      "views": 1560
+      "views": 1580
     },
     {
       "path": "/awards/",
@@ -27,11 +27,11 @@
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
@@ -43,11 +43,11 @@
       "views": 90
     },
     {
-      "path": "/calculator/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 80
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/calculator/",
       "views": 80
     },
     {
@@ -63,22 +63,22 @@
       "views": 70
     },
     {
-      "path": "/reviews/airtable/",
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/heygen/",
       "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6730
+      "views": 6740
     },
     {
       "country": "Morocco",
-      "views": 2590
+      "views": 2620
     },
     {
       "country": "Belgium",
@@ -105,11 +105,11 @@
       "views": 220
     },
     {
-      "country": "United Kingdom",
+      "country": "India",
       "views": 180
     },
     {
-      "country": "India",
+      "country": "United Kingdom",
       "views": 180
     }
   ],
