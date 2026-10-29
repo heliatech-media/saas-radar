@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-29T23:01:36.772519",
+  "last_synced": "2026-10-29T23:21:43.408636",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3876,
-  "total_requests": 37032,
-  "total_visits": 1201,
-  "total_pageviews": 7360,
+  "total_visitors_network": 3886,
+  "total_requests": 37068,
+  "total_visits": 1204,
+  "total_pageviews": 7372,
   "percent_cached": "56.14%",
-  "data_served_mb": 365.3,
+  "data_served_mb": 365.7,
   "top_pages": [
     {
       "path": "/",
@@ -39,15 +39,15 @@
       "views": 90
     },
     {
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 90
+    },
+    {
       "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
       "path": "/calculator/",
-      "views": 80
-    },
-    {
-      "path": "/blog/apollo-io-vs-lusha/",
       "views": 80
     },
     {
@@ -59,22 +59,22 @@
       "views": 70
     },
     {
-      "path": "/deals/",
-      "views": 70
-    },
-    {
       "path": "/blog/vercel-evolution-guide-2026/",
       "views": 70
     },
     {
       "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
+    },
+    {
+      "path": "/reviews/heygen/",
+      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6780
+      "views": 6790
     },
     {
       "country": "Morocco",
