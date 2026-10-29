@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-29T08:07:13.258687",
+  "last_synced": "2026-10-29T08:47:21.715598",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3385,
-  "total_requests": 33470,
-  "total_visits": 1049,
-  "total_pageviews": 6768,
+  "total_visitors_network": 3401,
+  "total_requests": 33504,
+  "total_visits": 1054,
+  "total_pageviews": 6782,
   "percent_cached": "56.14%",
-  "data_served_mb": 316.9,
+  "data_served_mb": 319.6,
   "top_pages": [
     {
       "path": "/",
@@ -23,11 +23,11 @@
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 100
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
@@ -43,6 +43,10 @@
       "views": 80
     },
     {
+      "path": "/radar/",
+      "views": 70
+    },
+    {
       "path": "/reviews/heygen/",
       "views": 70
     },
@@ -51,7 +55,7 @@
       "views": 70
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/apollo-io/",
       "views": 70
     },
     {
@@ -59,11 +63,7 @@
       "views": 70
     },
     {
-      "path": "/radar/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/apollo-io/",
+      "path": "/deals/",
       "views": 70
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 6100
+      "views": 6120
     },
     {
       "country": "Morocco",
