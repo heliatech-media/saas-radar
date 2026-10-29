@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="1200" style="background:#030712; font-family:'Inter', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-glow-1" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg-glow-2" cx="85% cy="80%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Node & UI Gradients -->
+    <linearGradient id="cyan-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="violet-fuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5"/>
+      <circle cx="40" cy="40" r="1" fill="#334155" fill-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="#030712"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Ambient Lighting -->
+  <rect width="1200" height="630" fill="url(#bg-glow-1)"/>
+  <rect width="1200" height="630" fill="url(#bg-glow-2)"/>
+
+  <!-- Geometric Decorative Elements (Top Right & Bottom Left) -->
+  <g opacity="0.15">
+    <circle cx="1100" cy="50" r="200" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="8 4"/>
+    <circle cx="1100" cy="50" r="160" fill="none" stroke="#8b5cf6" stroke-width="0.5"/>
+    <circle cx="100" cy="580" r="250" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- Workflow / Automation Metaphor Nodes (Right Side Architecture) -->
+  <g id="workflow-nodes" transform="translate(680, 70)">
+    <!-- Connecting Paths / Vectors -->
+    <path d="M 60 120 L 180 120 L 260 220 L 380 220" fill="none" stroke="url(#stroke-grad)" stroke-width="2.5" stroke-dasharray="6 6">
+      <animate attributeName="stroke-dashoffset" from="100" to="0" dur="10s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 180 120 L 260 30 L 380 30" fill="none" stroke="url(#stroke-grad)" stroke-width="2" opacity="0.6"/>
+    <path d="M 260 220 L 340 340 L 420 340" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+    
+    <!-- Pulse Webhook Rings -->
+    <circle cx="180" cy="120" r="24" fill="#06b6d4" fill-opacity="0.1" filter="url(#glow-subtle)">
+      <animate attributeName="r" values="20;35;20" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="220" r="30" fill="#8b5cf6" fill-opacity="0.1" filter="url(#glow-subtle)">
+      <animate attributeName="r" values="25;40;25" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Node Card 1: Trigger / Auth -->
+    <g transform="translate(10, 80)">
+      <rect width="110" height="80" rx="12" fill="url(#panel-bg)" stroke="#06b6d4" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <circle cx="25" cy="25" r="10" fill="#06b6d4" fill-opacity="0.2"/>
+      <path d="M21 25 L24 28 L30 22" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+      <text x="25" y="52" fill="#e2e8f0" font-size="11" font-weight="600">Auth Trigger</text>
+      <text x="25" y="66" fill="#64748b" font-size="9">JWT / Session</text>
+    </g>
+
+    <!-- Node Card 2: Logic / Gating -->
+    <g transform="translate(200, 170)">
+      <rect width="130" height="90" rx="12" fill="url(#panel-bg)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow-heavy)"/>
+      <circle cx="25" cy="25" r="10" fill="#8b5cf6" fill-opacity="0.2"/>
+      <path d="M21 21 L29 21 M25 17 L25 29" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+      <text x="25" y="55" fill="#e2e8f0" font-size="12" font-weight="700">Memberstack</text>
+      <text x="25" y="70" fill="#c084fc" font-size="10" font-weight="500">Access Control</text>
+    </g>
+
+    <!-- Node Card 3: API Webhook / Action -->
+    <g transform="translate(340, -10)">
+      <rect width="110" height="80" rx="12" fill="url(#panel-bg)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <circle cx="25" cy="25" r="10" fill="#38bdf8" fill-opacity="0.2"/>
+      <path d="M20 25 L30 25 M27 21 L31 25 L27 29" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="25" y="52" fill="#e2e8f0" font-size="11" font-weight="600">API Sync</text>
+      <text x="25" y="66" fill="#64748b" font-size="9">Webhook v2</text>
+    </g>
+
+    <!-- Node Card 4: UI Render / Creator App -->
+    <g transform="translate(360, 290)">
+      <rect width="120" height="80" rx="12" fill="url(#panel-bg)" stroke="#d946ef" stroke-width="1.5" filter="url(#glow-subtle)"/>
+      <circle cx="25" cy="25" r="10" fill="#d946ef" fill-opacity="0.2"/>
+      <rect x="20" y="21" width="10" height="8" rx="1" fill="none" stroke="#d946ef" stroke-width="1.5"/>
+      <text x="25" y="52" fill="#e2e8f0" font-size="11" font-weight="600">Gated UI</text>
+      <text x="25" y="66" fill="#64748b" font-size="9">DOM Injection</text>
+    </g>
+
+    <!-- Floating Metric Tag -->
+    <g transform="translate(60, 290)">
+      <rect x="0" y="0" width="140" height="42" rx="8" fill="#090d16" fill-opacity="0.9" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="15" cy="21" r="5" fill="#10b981"/>
+      <text x="30" y="19" fill="#94a3b8" font-size="9">MEMBERSHIP VELOCITY</text>
+      <text x="30" y="33" fill="#34d399" font-size="12" font-weight="700">99.98% SLA</text>
+    </g>
+  </g>
+
+  <!-- Foreground Content / Left Side Typography -->
+  <g id="main-content" transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 85)">
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <circle cx="18" cy="16" r="5" fill="#06b6d4" filter="url(#glow-heavy)">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="35" y="21" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title & Subtitle -->
+    <g transform="translate(0, 160)">
+      <!-- Category Subtitle -->
+      <text x="0" y="0" fill="#8b5cf6" font-size="13" font-weight="700" letter-spacing="3" text-transform="uppercase">B2B SaaS / Creator Tools Investigation</text>
+      
+      <!-- Headline -->
+      <text x="0" y="55" fill="#ffffff" font-size="44" font-weight="800" letter-spacing="-1">
+        MEMBERSTACK
+      </text>
+      
+      <text x="0" y="105" fill="#94a3b8" font-size="22" font-weight="400" letter-spacing="-0.5">
+        The Architectural Evolution of Gated Web Apps
+      </text>
+      <text x="0" y="135" fill="#64748b" font-size="18" font-weight="400">
+        and the Hands-On Guide to Membership Velocity
+      </text>
+    </g>
+
+    <!-- Feature Bullet Points / Highlights -->
+    <g transform="translate(0, 350)">
+      <!-- Point 1 -->
+      <g transform="translate(0, 0)">
+        <path d="M0 10 L8 10 M4 6 L4 14" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+        <text x="24" y="14" fill="#cbd5e1" font-size="14" font-weight="500">Universal DOM &amp; Framework Agnostic Integration</text>
+      </g>
+      <!-- Point 2 -->
+      <g transform="translate(0, 35)">
+        <path d="M0 10 L8 10 M4 6 L4 14" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+        <text x="24" y="14" fill="#cbd5e1" font-size="14" font-weight="500">Granular Access Control &amp; Custom Metadata Schemas</text>
+      </g>
+      <!-- Point 3 -->
+      <g transform="translate(0, 70)">
+        <path d="M0 10 L8 10 M4 6 L4 14" fill="none" stroke="#d946ef" stroke-width="2" stroke-linecap="round"/>
+        <text x="24" y="14" fill="#cbd5e1" font-size="14" font-weight="500">High-Performance Webhooks &amp; Real-time Sync Pipelines</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metadata Bar / Brand Stamp -->
+    <g transform="translate(0, 520)">
+      <line x1="0" y1="0" x2="560" y2="0" stroke="#1e293b" stroke-width="1"/>
+      <text x="0" y="25" fill="#64748b" font-size="11" font-weight="600" letter-spacing="1">PUBLISHED BY HELIATECH.ONLINE</text>
+      <text x="240" y="25" fill="#334155" font-size="11">•</text>
+      <text x="260" y="25" fill="#64748b" font-size="11" font-weight="500">RESEARCH DIVISION</text>
+      
+      <!-- Status Badge -->
+      <g transform="translate(460, 10)">
+        <rect x="0" y="-3" width="100" height="20" rx="4" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="50" y="11" fill="#38bdf8" font-size="9" font-weight="700" text-anchor="middle">VERIFIED ARCH</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

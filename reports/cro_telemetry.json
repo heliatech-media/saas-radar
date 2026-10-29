@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-28 16:04:04",
-  "total_pages_audited": 64,
-  "monetized_pages": 61,
-  "total_ctas_tracked": 330,
-  "average_cro_score": "88.1/100",
+  "timestamp": "2026-10-29 09:45:08",
+  "total_pages_audited": 65,
+  "monetized_pages": 62,
+  "total_ctas_tracked": 332,
+  "average_cro_score": "88.2/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
     "Floating Sticky Affiliate Bar (StickyAffiliateBar.astro)",
@@ -13,28 +13,46 @@
   "estimated_rpv_lift": "+38.4%",
   "pages": [
     {
-      "slug": "beehiiv-vs-brevo",
+      "slug": "framer-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1985,
+      "word_count": 1124,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "castmagic-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 911,
       "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "riverside-evolution-guide-2026",
+      "slug": "memberstack-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1084,
-      "cta_count": 3,
+      "word_count": 1278,
+      "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "tome-evolution-guide-2026",
+      "slug": "rewardful-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1070,
-      "cta_count": 2,
+      "word_count": 1496,
+      "cta_count": 9,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-apollo-alternatives-2026",
+      "type": "blog",
+      "word_count": 2947,
+      "cta_count": 14,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -49,6 +67,33 @@
       "status": "OPTIMIZED"
     },
     {
+      "slug": "cursor-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1065,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "lovable-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1108,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "retool",
+      "type": "blog",
+      "word_count": 901,
+      "cta_count": 7,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
       "slug": "elevenagents-ai-receptionist-guide",
       "type": "blog",
       "word_count": 1293,
@@ -58,91 +103,46 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "beehiiv-evolution-guide-2026",
+      "slug": "best-deel-alternatives-2026",
       "type": "blog",
-      "word_count": 1249,
-      "cta_count": 7,
+      "word_count": 2984,
+      "cta_count": 14,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "v0-evolution-guide-2026",
+      "slug": "lemlist-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1179,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "wati-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1268,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "clickup-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1224,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "apollo-io-vs-lusha",
-      "type": "blog",
-      "word_count": 1877,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "riverside",
-      "type": "blog",
-      "word_count": 1214,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "submagic-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1283,
+      "word_count": 1275,
       "cta_count": 5,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "n8n-evolution-guide-2026",
+      "slug": "vercel-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1035,
+      "word_count": 1118,
       "cta_count": 5,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "printify-evolution-guide-2026",
+      "slug": "airtable",
       "type": "blog",
-      "word_count": 1271,
+      "word_count": 1240,
       "cta_count": 7,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "castmagic-evolution-guide-2026",
+      "slug": "podia-evolution-guide-2026",
       "type": "blog",
-      "word_count": 911,
-      "cta_count": 4,
+      "word_count": 969,
+      "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"

@@ -104,7 +104,8 @@
     "rating": 4.5,
     "starting_price": "$29/mo",
     "best_for": "Content creators, podcast hosts, and B2B marketing teams scaling video distribution without a dedicated editing staff.",
-    "affiliate_url": "https://www.dumpling.ai"
+    "affiliate_url": "https://www.dumpling.ai/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "ElevenLabs",
@@ -213,6 +214,16 @@
     "starting_price": "$9/mo",
     "best_for": "Operations teams, growth marketers, and developers building multi-step automated data pipelines.",
     "affiliate_url": "https://www.make.com/en/register?pc=heliatechmake"
+  },
+  {
+    "name": "Memberstack",
+    "slug": "memberstack",
+    "tagline": "The ultimate user authentication and membership management platform for Webflow, HTML, and custom websites.",
+    "category": "B2B SaaS / Creator Tools",
+    "rating": 4.7,
+    "starting_price": "$29/mo",
+    "best_for": "Webflow agencies, freelance developers, and SaaS founders building on no-code stacks.",
+    "affiliate_url": "https://www.memberstack.com/?via=heliatech"
   },
   {
     "name": "Minicong",

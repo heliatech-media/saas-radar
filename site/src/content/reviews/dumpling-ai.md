@@ -6,7 +6,7 @@ tagline: Turn long-form video into high-converting, bite-sized social clips with
 category: AI Video
 rating: 4.5
 website_url: https://www.dumpling.ai
-affiliate_url: https://www.dumpling.ai
+affiliate_url: "https://www.dumpling.ai/?via=heliatech"
 summary: Dumpling AI is an advanced video automation platform designed to ingest long-form
   webinars, podcasts, and video content, automatically clipping and formatting them
   for TikTok, YouTube Shorts, and Instagram Reels. Utilizing sophisticated vision

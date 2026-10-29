@@ -1,29 +1,37 @@
 {
-  "last_synced": "2026-10-28T16:04:06.502194",
+  "last_synced": "2026-10-29T09:45:09.035419",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-09-30 - 2026-10-28)",
-  "total_visitors_network": 3031,
-  "total_requests": 30209,
-  "total_visits": 939,
-  "total_pageviews": 6254,
+  "time_window": "28 Days (2026-10-01 - 2026-10-29)",
+  "total_visitors_network": 3454,
+  "total_requests": 33654,
+  "total_visits": 1070,
+  "total_pageviews": 6854,
   "percent_cached": "56.14%",
-  "data_served_mb": 280.7,
+  "data_served_mb": 323.6,
   "top_pages": [
     {
       "path": "/",
-      "views": 1620
+      "views": 1750
+    },
+    {
+      "path": "/reviews/resend/",
+      "views": 110
     },
     {
       "path": "/terms/",
-      "views": 100
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 90
+      "views": 110
     },
     {
       "path": "/blog/",
+      "views": 100
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 100
+    },
+    {
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 90
     },
     {
@@ -31,7 +39,7 @@
       "views": 90
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/reviews/brevo/",
       "views": 90
     },
     {
@@ -39,11 +47,15 @@
       "views": 90
     },
     {
-      "path": "/reviews/clickup/",
+      "path": "/blog/make-automation-revolution/",
+      "views": 90
+    },
+    {
+      "path": "/awards/",
       "views": 80
     },
     {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "path": "/blog/elevenlabs-vs-heygen/",
       "views": 80
     },
     {
@@ -51,38 +63,26 @@
       "views": 80
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 70
-    },
-    {
-      "path": "/awards/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/zapier/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/transistor/",
-      "views": 70
+      "path": "/reviews/elevenlabs/",
+      "views": 80
     },
     {
       "path": "/calculator/",
-      "views": 70
+      "views": 80
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5560
+      "views": 6500
     },
     {
       "country": "Morocco",
-      "views": 1290
+      "views": 1840
     },
     {
       "country": "Germany",
-      "views": 570
+      "views": 580
     },
     {
       "country": "Belgium",
@@ -98,19 +98,19 @@
     },
     {
       "country": "France",
-      "views": 200
+      "views": 220
+    },
+    {
+      "country": "CN",
+      "views": 210
     },
     {
       "country": "HK",
-      "views": 200
+      "views": 210
     },
     {
       "country": "FI",
-      "views": 190
-    },
-    {
-      "country": "India",
-      "views": 180
+      "views": 200
     }
   ],
   "top_referrers": [

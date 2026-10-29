@@ -104,7 +104,7 @@ While Tally is an exceptional utility, executive leaders must evaluate its const
 | :--- | :--- | :--- | :--- |
 | **Pricing & Limits** | Unlimited forms & submissions for free; transparent scaling. | Advanced branding removal requires the Pro plan. | Incredible value for high-volume data collectors. |
 | **User Interface** | Blazing-fast Notion-style editor; intuitive and clean. | Minimalist design means fewer artistic animation widgets. | Ideal for professional, clean, distraction-free forms. |
-| **Integrations** | Direct sync with Notion, Airtable, Slack, and webhooks. | Deep custom CRM mapping may require [Zapier](/reviews/zapier)/[Make](/reviews/make) for edge cases. | Highly capable for modern, API-first tech stacks. |
+| **Integrations** | Direct sync with Notion, [Airtable](/reviews/airtable), Slack, and webhooks. | Deep custom CRM mapping may require [Zapier](/reviews/zapier)/[Make](/reviews/make) for edge cases. | Highly capable for modern, API-first tech stacks. |
 | **Analytics** | Built-in response summaries and submission views. | Basic reporting compared to enterprise feedback suites like Qualtrics. | Perfect for operations; lighter on deep statistical analysis. |
 
 ## 5. HeliaTech Final Verdict & Recommendation
