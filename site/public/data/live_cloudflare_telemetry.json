@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-29T16:49:34.147233",
+  "last_synced": "2026-10-29T17:09:39.053151",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3664,
-  "total_requests": 34685,
-  "total_visits": 1135,
-  "total_pageviews": 7105,
+  "total_visitors_network": 3675,
+  "total_requests": 34838,
+  "total_visits": 1139,
+  "total_pageviews": 7119,
   "percent_cached": "56.14%",
-  "data_served_mb": 342.2,
+  "data_served_mb": 342.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 1550
+      "views": 1560
     },
     {
       "path": "/awards/",
@@ -67,7 +67,7 @@
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/calculator/",
       "views": 70
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 2340
+      "views": 2350
     },
     {
       "country": "Belgium",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 410
+      "views": 420
     },
     {
       "country": "Canada",
