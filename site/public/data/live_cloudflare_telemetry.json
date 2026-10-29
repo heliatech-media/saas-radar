@@ -1,33 +1,33 @@
 {
-  "last_synced": "2026-10-29T17:59:54.587100",
+  "last_synced": "2026-10-29T18:20:05.415988",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3729,
-  "total_requests": 35126,
-  "total_visits": 1155,
-  "total_pageviews": 7153,
+  "total_visitors_network": 3739,
+  "total_requests": 35227,
+  "total_visits": 1159,
+  "total_pageviews": 7165,
   "percent_cached": "56.14%",
-  "data_served_mb": 345.8,
+  "data_served_mb": 346.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 1860
+      "views": 1560
     },
     {
-      "path": "/terms/",
-      "views": 110
-    },
-    {
-      "path": "/reviews/resend/",
-      "views": 110
+      "path": "/awards/",
+      "views": 160
     },
     {
       "path": "/sentinel/",
-      "views": 100
+      "views": 110
     },
     {
-      "path": "/reviews/clickup/",
+      "path": "/versus/",
+      "views": 110
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
@@ -35,82 +35,82 @@
       "views": 100
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 100
-    },
-    {
-      "path": "/reviews/brevo/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 90
-    },
-    {
-      "path": "/radar/",
-      "views": 90
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 90
-    },
-    {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 90
+      "path": "/reviews/beehiiv/",
+      "views": 80
     },
     {
       "path": "/calculator/",
       "views": 80
     },
     {
-      "path": "/versus/",
+      "path": "/radar/",
       "views": 80
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 80
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/retool/",
+      "views": 70
+    },
+    {
+      "path": "/reviews/heygen/",
+      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6780
+      "views": 6530
     },
     {
       "country": "Morocco",
-      "views": 1970
-    },
-    {
-      "country": "Germany",
-      "views": 610
+      "views": 2370
     },
     {
       "country": "Belgium",
-      "views": 600
+      "views": 490
+    },
+    {
+      "country": "Germany",
+      "views": 420
     },
     {
       "country": "Canada",
+      "views": 330
+    },
+    {
+      "country": "Netherlands",
       "views": 270
     },
     {
-      "country": "United Kingdom",
-      "views": 260
-    },
-    {
-      "country": "HK",
-      "views": 230
+      "country": "Singapore",
+      "views": 220
     },
     {
       "country": "France",
       "views": 220
     },
     {
-      "country": "CN",
-      "views": 220
+      "country": "United Kingdom",
+      "views": 180
     },
     {
-      "country": "FI",
-      "views": 210
+      "country": "India",
+      "views": 180
     }
   ],
   "top_referrers": [
