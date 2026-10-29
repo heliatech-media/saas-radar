@@ -158,7 +158,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "Data analysts, marketers, researchers, and operations teams looking to automate manual reporting and ad-hoc exploratory data analysis.",
-    "affiliate_url": "https://julius.ai"
+    "affiliate_url": "https://julius.ai/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Klap",
@@ -374,6 +375,16 @@
     "best_for": "Professional podcasters, remote interviewers, media production agencies, and content marketing teams",
     "affiliate_url": "https://riverside.fm/?via=heliatech",
     "commission_rate": "30% recurring"
+  },
+  {
+    "name": "Sanity",
+    "slug": "sanity",
+    "tagline": "The composable content platform that turns structured content into real-time data infrastructure.",
+    "category": "DevTools",
+    "rating": 4.6,
+    "starting_price": "$15",
+    "best_for": "Frontend developers, digital agencies, and content operations teams building high-performance, omnichannel applications.",
+    "affiliate_url": "https://www.sanity.io"
   },
   {
     "name": "Submagic",

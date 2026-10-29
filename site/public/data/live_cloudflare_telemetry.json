@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-29T20:00:40.364870",
+  "last_synced": "2026-10-29T20:20:45.868326",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3792,
-  "total_requests": 35763,
-  "total_visits": 1175,
-  "total_pageviews": 7253,
+  "total_visitors_network": 3797,
+  "total_requests": 35854,
+  "total_visits": 1177,
+  "total_pageviews": 7284,
   "percent_cached": "56.14%",
-  "data_served_mb": 352.4,
+  "data_served_mb": 353.1,
   "top_pages": [
     {
       "path": "/",
@@ -19,19 +19,19 @@
       "views": 160
     },
     {
-      "path": "/sentinel/",
-      "views": 110
-    },
-    {
       "path": "/versus/",
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 100
+      "path": "/sentinel/",
+      "views": 110
     },
     {
       "path": "/blog/",
+      "views": 100
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
       "views": 100
     },
     {
@@ -43,42 +43,42 @@
       "views": 90
     },
     {
-      "path": "/radar/",
-      "views": 80
-    },
-    {
       "path": "/calculator/",
       "views": 80
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/radar/",
+      "views": 80
+    },
+    {
+      "path": "/reviews/n8n/",
       "views": 70
     },
     {
-      "path": "/reviews/make/",
+      "path": "/blog/vercel-evolution-guide-2026/",
       "views": 70
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/deals/",
       "views": 70
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/reviews/airtable/",
       "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6670
+      "views": 6690
     },
     {
       "country": "Morocco",
-      "views": 2560
+      "views": 2570
     },
     {
       "country": "Belgium",

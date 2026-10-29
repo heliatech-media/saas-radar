@@ -220,6 +220,19 @@
         "audio",
         "businessautomation"
       ]
+    },
+    "elevenlabs-ia-voix-revolution": {
+      "id": 4943103,
+      "url": "https://dev.to/heliatech/elevenlabs-the-hyper-realistic-ai-voice-revolution-and-how-to-industrialize-your-media-in-2026-26ph",
+      "title": "ElevenLabs: The Hyper-Realistic AI Voice Revolution and How to Industrialize Your Media in 2026",
+      "canonical_url": "https://heliatech.online/blog/elevenlabs-ia-voix-revolution",
+      "published": true,
+      "tags": [
+        "technology",
+        "audio",
+        "machinelearning",
+        "voicecloning"
+      ]
     }
   },
   "last_sync": null

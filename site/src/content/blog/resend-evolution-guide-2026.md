@@ -13,7 +13,7 @@ tags:
 - React
 - Email API
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: resend
 image: /images/blog/resend.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Resend Account ➔
   url: https://resend.com/?via=heliatech
 ---
-
 For decades, sending an automated password reset or a critical billing receipt meant wading through a digital swamp of legacy SMTP infrastructure. Engineering teams spent countless hours wrestling with arcane XML configurations, mysterious blacklists, and brittle HTML templates that rendered like 1999 newsletters across mobile clients. Email infrastructure was treated as an uninspired utility—painful to build, terrifying to scale, and universally dreaded by the developer vanguard.
 
 Then came the shift. Modern web architecture demanded tools that treated developer experience with the same reverence as user experience. Enter **Resend**: a developer-first email platform that combines a robust transactional email API with modern React-based template creation.

@@ -6,7 +6,7 @@ tagline: Your intelligent data analyst that writes code, cleans data, and visual
 category: AI Data Analysis
 rating: 4.6
 website_url: https://julius.ai
-affiliate_url: https://julius.ai
+affiliate_url: "https://julius.ai/?via=heliatech"
 summary: Julius AI is a powerful, chat-based data analysis platform that lets non-technical
   users query messy spreadsheets, write Python code under the hood, and generate publication-ready
   visualizations simply by typing plain English.

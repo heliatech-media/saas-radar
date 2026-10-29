@@ -109,7 +109,7 @@ competitor_matches:
 Memberstack enables developers, agencies, and founders to add secure user authentication, gated content, and Stripe-powered recurring payments to custom or [Webflow](/reviews/webflow) websites. It bridges the gap between no-code frontend design and robust backend user management without requiring custom API architectures.
 
 ### Who is Memberstack Best For?
-**Target Audience:** Webflow agencies, freelance developers, and SaaS founders building on no-code stacks.
+**Target Audience:** [Webflow](/reviews/webflow) agencies, freelance developers, and SaaS founders building on no-code stacks.
 
 ## Key Features & Capabilities
 

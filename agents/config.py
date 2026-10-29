@@ -113,5 +113,6 @@ AFFILIATE_MAP = {
     "klap": "https://klap.app/?via=heliatech",
     "v0": "https://v0.dev/?via=heliatech",
     "minicong": "https://minicong.ai/?via=heliatech",
-    "dumpling-ai": "https://www.dumpling.ai/?via=heliatech"
+    "dumpling-ai": "https://www.dumpling.ai/?via=heliatech",
+    "julius-ai": "https://julius.ai/?via=heliatech"
 }
