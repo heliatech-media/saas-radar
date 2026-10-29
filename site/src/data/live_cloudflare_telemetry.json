@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-10-29T03:16:08.116672",
+  "last_synced": "2026-10-29T03:36:13.466822",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3252,
-  "total_requests": 32421,
-  "total_visits": 1008,
-  "total_pageviews": 6546,
+  "total_visitors_network": 3265,
+  "total_requests": 32515,
+  "total_visits": 1012,
+  "total_pageviews": 6569,
   "percent_cached": "56.14%",
-  "data_served_mb": 305.0,
+  "data_served_mb": 305.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 1430
+      "views": 1440
     },
     {
       "path": "/awards/",
-      "views": 140
+      "views": 150
     },
     {
       "path": "/sentinel/",
@@ -43,11 +43,11 @@
       "views": 80
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/heygen/",
       "views": 70
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/deals/",
       "views": 70
     },
     {
@@ -67,18 +67,18 @@
       "views": 70
     },
     {
-      "path": "/blog/supabase-vs-retool/",
+      "path": "/reviews/clickup/",
       "views": 60
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 5840
+      "views": 5860
     },
     {
       "country": "Morocco",
-      "views": 1980
+      "views": 2000
     },
     {
       "country": "Belgium",
