@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-29T21:31:12.853065",
+  "last_synced": "2026-10-29T22:01:20.702124",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-01 - 2026-10-29)",
-  "total_visitors_network": 3839,
-  "total_requests": 36529,
-  "total_visits": 1190,
-  "total_pageviews": 7329,
+  "total_visitors_network": 3852,
+  "total_requests": 36653,
+  "total_visits": 1194,
+  "total_pageviews": 7339,
   "percent_cached": "56.14%",
-  "data_served_mb": 361.0,
+  "data_served_mb": 361.7,
   "top_pages": [
     {
       "path": "/",
@@ -23,12 +23,12 @@
       "views": 110
     },
     {
-      "path": "/versus/",
+      "path": "/blog/make-automation-revolution/",
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 100
+      "path": "/versus/",
+      "views": 110
     },
     {
       "path": "/blog/",
@@ -43,10 +43,6 @@
       "views": 90
     },
     {
-      "path": "/radar/",
-      "views": 80
-    },
-    {
       "path": "/calculator/",
       "views": 80
     },
@@ -55,30 +51,34 @@
       "views": 80
     },
     {
-      "path": "/reviews/make/",
-      "views": 70
-    },
-    {
-      "path": "/reviews/apollo-io/",
-      "views": 70
+      "path": "/radar/",
+      "views": 80
     },
     {
       "path": "/reviews/n8n/",
       "views": 70
     },
     {
-      "path": "/reviews/retool/",
+      "path": "/deals/",
+      "views": 70
+    },
+    {
+      "path": "/blog/vercel-evolution-guide-2026/",
+      "views": 70
+    },
+    {
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6750
+      "views": 6770
     },
     {
       "country": "Morocco",
-      "views": 2640
+      "views": 2650
     },
     {
       "country": "Belgium",
@@ -105,11 +105,11 @@
       "views": 220
     },
     {
-      "country": "India",
+      "country": "United Kingdom",
       "views": 180
     },
     {
-      "country": "United Kingdom",
+      "country": "India",
       "views": 180
     }
   ],
