@@ -85,16 +85,25 @@ const {
         const email = emailInput.value.trim();
         if (!email) return;
 
-        // 1. Dispatch directly to Centralized Edge API (Instant Telegram Alert)
+        // 1. Direct Instant Alert to Executive Telegram Desk
         try {
-          fetch('/api/subscribe', {
+          const leadMsg = 
+            '⭐ NOUVEAU LEAD B2B HELIATECH !\n' +
+            '━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+            '📧 Email : ' + email + '\n' +
+            '📄 Page : ' + window.location.pathname + '\n' +
+            '🔗 Source : ' + (document.referrer || 'Direct') + '\n' +
+            '📱 Appareil : ' + (window.innerWidth < 768 ? 'Mobile' : 'Desktop') + '\n' +
+            '⏰ Heure : ' + new Date().toLocaleTimeString();
+
+          fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              email: email,
-              path: window.location.pathname,
-              referrer: document.referrer || 'Direct'
-            })
+              chat_id: '8819768123',
+              text: leadMsg
+            }),
+            keepalive: true
           }).catch(() => {});
         } catch(err) {}
 

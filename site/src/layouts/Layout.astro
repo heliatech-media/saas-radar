@@ -186,19 +186,26 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
                 localStorage.setItem(storeKey, JSON.stringify(current));
 
-                // Dispatch Global Edge Beacon for Centralized Real-Time Telemetry
+                // Dispatch Global Edge Beacon & Instant Telegram Alert to Executive Desk
                 try {
-                  const beaconData = JSON.stringify({
-                    type: 'HOP',
-                    tool: toolSlug,
-                    path: path,
-                    referrer: document.referrer || 'Direct'
-                  });
-                  if (navigator.sendBeacon) {
-                    navigator.sendBeacon('/api/telemetry', beaconData);
-                  } else {
-                    fetch('/api/telemetry', { method: 'POST', body: beaconData, keepalive: true }).catch(() => {});
-                  }
+                  const hopMsg = 
+                    '🎯 CONVERSION DETECTÉE - AFFILIATE HOP !\n' +
+                    '━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+                    '🚀 Outil : ' + (toolSlug || 'Unknown').toUpperCase() + '\n' +
+                    '📄 Page source : ' + path + '\n' +
+                    '🔗 Referrer : ' + (document.referrer || 'Direct / Organic') + '\n' +
+                    '📱 Appareil : ' + (window.innerWidth < 768 ? 'Mobile' : 'Desktop') + '\n' +
+                    '⏰ Heure : ' + new Date().toLocaleTimeString();
+
+                  fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      chat_id: '8819768123',
+                      text: hopMsg
+                    }),
+                    keepalive: true
+                  }).catch(() => {});
                 } catch(bErr) {}
               } catch(e) {}
             }
