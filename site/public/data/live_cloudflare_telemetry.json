@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-30T01:52:17.346393",
+  "last_synced": "2026-10-30T02:12:24.872154",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 3920,
-  "total_requests": 37146,
-  "total_visits": 1215,
-  "total_pageviews": 7404,
+  "total_visitors_network": 4273,
+  "total_requests": 37504,
+  "total_visits": 1324,
+  "total_pageviews": 7538,
   "percent_cached": "56.14%",
-  "data_served_mb": 367.7,
+  "data_served_mb": 370.0,
   "top_pages": [
     {
       "path": "/",
-      "views": 1580
+      "views": 1600
     },
     {
       "path": "/awards/",
@@ -39,11 +39,11 @@
       "views": 90
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/reviews/beehiiv/",
       "views": 90
     },
     {
@@ -51,11 +51,11 @@
       "views": 80
     },
     {
-      "path": "/calculator/",
+      "path": "/radar/",
       "views": 80
     },
     {
-      "path": "/radar/",
+      "path": "/calculator/",
       "views": 80
     },
     {
@@ -63,11 +63,11 @@
       "views": 70
     },
     {
-      "path": "/deals/",
+      "path": "/blog/supabase-vs-retool/",
       "views": 70
     },
     {
-      "path": "/blog/vercel-evolution-guide-2026/",
+      "path": "/deals/",
       "views": 70
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 2650
+      "views": 2660
     },
     {
       "country": "Belgium",
@@ -86,11 +86,11 @@
     },
     {
       "country": "Germany",
-      "views": 420
+      "views": 430
     },
     {
       "country": "Canada",
-      "views": 330
+      "views": 340
     },
     {
       "country": "Netherlands",
@@ -105,11 +105,11 @@
       "views": 220
     },
     {
-      "country": "FI",
-      "views": 180
+      "country": "India",
+      "views": 190
     },
     {
-      "country": "India",
+      "country": "FI",
       "views": 180
     }
   ],
