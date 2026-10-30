@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-30T19:47:58.899874",
+  "last_synced": "2026-10-30T20:08:05.230059",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 5156,
-  "total_requests": 39558,
-  "total_visits": 1598,
-  "total_pageviews": 8184,
+  "total_visitors_network": 5179,
+  "total_requests": 39650,
+  "total_visits": 1605,
+  "total_pageviews": 8208,
   "percent_cached": "56.14%",
-  "data_served_mb": 391.7,
+  "data_served_mb": 392.3,
   "top_pages": [
     {
       "path": "/",
-      "views": 1810
+      "views": 1820
     },
     {
       "path": "/awards/",
@@ -31,11 +31,11 @@
       "views": 130
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 110
+      "path": "/blog/",
+      "views": 120
     },
     {
-      "path": "/blog/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 110
     },
     {
@@ -47,6 +47,10 @@
       "views": 100
     },
     {
+      "path": "/deals/",
+      "views": 90
+    },
+    {
       "path": "/reviews/adcreative-ai/",
       "views": 90
     },
@@ -56,10 +60,6 @@
     },
     {
       "path": "/blog/apollo-io-vs-lusha/",
-      "views": 90
-    },
-    {
-      "path": "/deals/",
       "views": 90
     },
     {
@@ -94,7 +94,7 @@
     },
     {
       "country": "Netherlands",
-      "views": 270
+      "views": 290
     },
     {
       "country": "Singapore",
