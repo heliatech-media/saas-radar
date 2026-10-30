@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-30T18:37:37.698308",
+  "last_synced": "2026-10-30T19:07:46.802848",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 5110,
-  "total_requests": 39416,
-  "total_visits": 1584,
-  "total_pageviews": 8123,
+  "total_visitors_network": 5126,
+  "total_requests": 39494,
+  "total_visits": 1589,
+  "total_pageviews": 8152,
   "percent_cached": "56.14%",
-  "data_served_mb": 390.0,
+  "data_served_mb": 390.8,
   "top_pages": [
     {
       "path": "/",
-      "views": 1770
+      "views": 1800
     },
     {
       "path": "/awards/",
@@ -35,11 +35,11 @@
       "views": 110
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/blog/",
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 110
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 7270
+      "views": 7280
     },
     {
       "country": "Morocco",
@@ -98,7 +98,7 @@
     },
     {
       "country": "Singapore",
-      "views": 250
+      "views": 260
     },
     {
       "country": "France",
