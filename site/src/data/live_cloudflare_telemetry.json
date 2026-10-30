@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T01:12:07.980389",
+  "last_synced": "2026-10-30T01:52:16.510171",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 3909,
-  "total_requests": 37128,
-  "total_visits": 1211,
-  "total_pageviews": 7395,
+  "total_visitors_network": 3920,
+  "total_requests": 37146,
+  "total_visits": 1215,
+  "total_pageviews": 7404,
   "percent_cached": "56.14%",
-  "data_served_mb": 367.5,
+  "data_served_mb": 367.7,
   "top_pages": [
     {
       "path": "/",
@@ -23,11 +23,11 @@
       "views": 130
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/make-automation-revolution/",
       "views": 110
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/sentinel/",
       "views": 110
     },
     {
@@ -35,11 +35,11 @@
       "views": 100
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 90
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/reviews/beehiiv/",
       "views": 90
     },
     {
@@ -47,11 +47,11 @@
       "views": 90
     },
     {
-      "path": "/calculator/",
+      "path": "/reviews/make/",
       "views": 80
     },
     {
-      "path": "/reviews/make/",
+      "path": "/calculator/",
       "views": 80
     },
     {
@@ -63,18 +63,18 @@
       "views": 70
     },
     {
-      "path": "/blog/vercel-evolution-guide-2026/",
+      "path": "/deals/",
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/blog/vercel-evolution-guide-2026/",
       "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6820
+      "views": 6830
     },
     {
       "country": "Morocco",
