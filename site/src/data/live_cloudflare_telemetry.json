@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T16:27:03.425031",
+  "last_synced": "2026-10-30T17:07:08.203189",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 5030,
-  "total_requests": 39257,
-  "total_visits": 1559,
-  "total_pageviews": 8058,
+  "total_visitors_network": 5054,
+  "total_requests": 39294,
+  "total_visits": 1566,
+  "total_pageviews": 8074,
   "percent_cached": "56.14%",
-  "data_served_mb": 387.5,
+  "data_served_mb": 387.8,
   "top_pages": [
     {
       "path": "/",
@@ -31,11 +31,11 @@
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 110
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/blog/",
       "views": 110
     },
     {
@@ -43,15 +43,15 @@
       "views": 110
     },
     {
+      "path": "/reviews/beehiiv/",
+      "views": 100
+    },
+    {
       "path": "/blog/apollo-io-vs-lusha/",
       "views": 90
     },
     {
       "path": "/deals/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/beehiiv/",
       "views": 90
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 7210
+      "views": 7220
     },
     {
       "country": "Morocco",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 450
+      "views": 460
     },
     {
       "country": "Canada",
