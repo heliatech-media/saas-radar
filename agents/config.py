@@ -115,5 +115,6 @@ AFFILIATE_MAP = {
     "minicong": "https://minicong.ai/?via=heliatech",
     "dumpling-ai": "https://www.dumpling.ai/?via=heliatech",
     "julius-ai": "https://julius.ai/?via=heliatech",
-    "sanity": "https://www.sanity.io/?ref=heliatech"
+    "sanity": "https://www.sanity.io/?ref=heliatech",
+    "klaviyo": "https://partnerstack.com/klaviyo?via=heliatech"
 }

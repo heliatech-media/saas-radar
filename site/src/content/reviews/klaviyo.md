@@ -6,7 +6,7 @@ tagline: Data-driven marketing automation platform built specifically for e-comm
 category: Marketing Automation
 rating: 4.6
 website_url: https://www.klaviyo.com
-affiliate_url: https://www.klaviyo.com
+affiliate_url: "https://partnerstack.com/klaviyo?via=heliatech"
 summary: Klaviyo is a powerhouse marketing automation platform that unifies customer
   data from deep e-commerce integrations to drive targeted email, SMS, and push campaigns.
   It eliminates traditional data silos by syncing directly with platforms like Shopify

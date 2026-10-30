@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#020408" />
+    </radialGradient>
+    
+    <linearGradient id="cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-cyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <linearGradient id="grid-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="drop-shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="hex-grid" width="40" height="69.282" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M 40 0 L 20 11.547 L 0 0 L 0 23.094 L 20 34.641 L 40 23.094 Z M 0 34.641 L 20 46.188 L 40 34.641 L 40 57.735 L 20 69.282 L 0 57.735 Z" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.1" fill="none" />
+    </pattern>
+    <pattern id="dot-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.1" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bg-glow)" />
+  <rect width="1200" height="630" fill="url(#hex-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-grid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="180" r="220" fill="#8b5cf6" opacity="0.15" filter="url(#glow-heavy)" />
+  <circle cx="780" cy="400" r="180" fill="#06b6d4" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="200" cy="500" r="250" fill="#d946ef" opacity="0.08" filter="url(#glow-heavy)" />
+
+  <!-- Diagonal Cyber Accent Lines -->
+  <g opacity="0.3">
+    <path d="M-100 100 L 1300 -200" stroke="url(#cyan-violet)" stroke-width="2" />
+    <path d="M-100 200 L 1300 -100" stroke="url(#fuchsia-cyan)" stroke-width="1" />
+    <path d="M-100 600 L 900 -200" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="5 5" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- RIGHT SIDE: 3D DATA / E-COMMERCE METAPHOR -->
+  <!-- ========================================== -->
+  <g transform="translate(680, 80)" filter="url(#drop-shadow)">
+    <!-- Central Data Core platform -->
+    <g transform="translate(180, 220)">
+      <!-- Isometric Base Grid -->
+      <path d="M -150 50 L 0 125 L 150 50 L 0 -25 Z" fill="#0b1329" stroke="#06b6d4" stroke-width="1.5" opacity="0.8" />
+      <path d="M -150 90 L 0 165 L 150 90 L 0 15 Z" fill="#0b1329" stroke="#8b5cf6" stroke-width="1" opacity="0.5" />
+
+      <!-- Vertical Energy Pillars -->
+      <g stroke="url(#cyan-violet)" stroke-width="2" opacity="0.8">
+        <line x1="-100" y1="25" x2="-100" y2="-120" />
+        <line x1="0" y1="75" x2="0" y2="-80" />
+        <line x1="100" y1="25" x2="100" y2="-150" />
+      </g>
+
+      <!-- Floating Data Nodes / E-Commerce Pulse Points -->
+      <g filter="url(#glow-subtle)">
+        <!-- Node 1 -->
+        <circle cx="-100" cy="-120" r="8" fill="#06b6d4" />
+        <circle cx="-100" cy="-120" r="16" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 2" />
+        
+        <!-- Node 2 (Highest Revenue Spike) -->
+        <circle cx="100" cy="-150" r="12" fill="#d946ef" />
+        <circle cx="100" cy="-150" r="22" fill="none" stroke="#d946ef" stroke-width="1.5" />
+        
+        <!-- Node 3 -->
+        <circle cx="0" cy="-80" r="6" fill="#38bdf8" />
+      </g>
+
+      <!-- Connecting Data Streams (Bezier Curves) -->
+      <path d="M -100 -120 C -50 -160, -50 -40, 0 -80" fill="none" stroke="url(#cyan-violet)" stroke-width="2.5" filter="url(#glow-subtle)" />
+      <path d="M 0 -80 C 50 -120, 50 -110, 100 -150" fill="none" stroke="url(#fuchsia-cyan)" stroke-width="3" filter="url(#glow-subtle)" />
+      <path d="M -100 25 C -50 60, 50 60, 100 25" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 4" />
+
+      <!-- Floating Holographic Rings & Metrics Card -->
+      <g transform="translate(0, -220)">
+        <!-- Hologram ring -->
+        <ellipse cx="0" cy="0" rx="90" ry="35" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.7" />
+        
+        <!-- Glass Card -->
+        <rect x="-85" y="-75" width="170" height="60" rx="10" fill="url(#glass-grad)" stroke="#38bdf8" stroke-width="1" backdrop-filter="blur(10px)" />
+        <text x="0" y="-45" font-family="'Inter', system-ui, sans-serif" font-size="11" fill="#38bdf8" font-weight="600" text-anchor="middle" letter-spacing="1">REAL-TIME REVENUE</text>
+        <text x="0" y="-20" font-family="'Inter', system-ui, sans-serif" font-size="22" fill="#ffffff" font-weight="800" text-anchor="middle">+348.5%</text>
+
+        <!-- Upward Vector Arrow -->
+        <path d="M 55 -55 L 70 -55 L 70 -40" fill="none" stroke="#d946ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M 50 -40 L 70 -55" fill="none" stroke="#d946ef" stroke-width="2" stroke-linecap="round" />
+      </g>
+
+      <!-- Orbiting Particle Dots -->
+      <circle cx="-50" cy="-30" r="3" fill="#ffffff" filter="url(#glow-heavy)" />
+      <circle cx="60" cy="-20" r="4" fill="#06b6d4" filter="url(#glow-heavy)" />
+      <circle cx="-20" cy="10" r="2.5" fill="#d946ef" />
+    </g>
+
+    <!-- Secondary Floating Connection Nodes -->
+    <g transform="translate(40, 100)" opacity="0.8">
+      <rect x="0" y="0" width="130" height="40" rx="6" fill="#090d16" stroke="#8b5cf6" stroke-width="1" />
+      <circle cx="20" cy="20" r="5" fill="#8b5cf6" />
+      <text x="35" y="25" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ffffff" font-weight="500">SMS / Email</text>
+    </g>
+    
+    <g transform="translate(280, 50)" opacity="0.8">
+      <rect x="0" y="0" width="140" height="40" rx="6" fill="#090d16" stroke="#06b6d4" stroke-width="1" />
+      <circle cx="20" cy="20" r="5" fill="#06b6d4" />
+      <text x="35" y="25" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ffffff" font-weight="500">Customer Graph</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- LEFT SIDE: TYPOGRAPHY & BADGES             -->
+  <!-- ========================================== -->
+  <g transform="translate(80, 95)">
+    
+    <!-- Top Pill Badge -->
+    <g filter="url(#drop-shadow)">
+      <rect x="0" y="0" width="290" height="34" rx="17" fill="#0f172a" stroke="url(#cyan-violet)" stroke-width="1.5" />
+      <circle cx="20" cy="17" r="4" fill="#06b6d4" filter="url(#glow-heavy)" />
+      <text x="35" y="22" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: KLAVIYO -->
+    <text x="0" y="150" font-family="'Inter', system-ui, sans-serif" font-size="88" font-weight="900" fill="#ffffff" letter-spacing="3" filter="url(#drop-shadow)">
+      KLAVIYO
+    </text>
+    
+    <!-- Glowing Accent Underline Bar -->
+    <rect x="2" y="166" width="340" height="4" rx="2" fill="url(#cyan-violet)" filter="url(#glow-heavy)" />
+    <rect x="2" y="166" width="120" height="4" rx="2" fill="#d946ef" />
+
+    <!-- Category Subtitle -->
+    <text x="2" y="212" font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="600" fill="#06b6d4" letter-spacing="2">
+      MARKETING AUTOMATION &amp; DATA ENGINE
+    </text>
+
+    <!-- Investigation Headline Paragraph -->
+    <g transform="translate(2, 250)">
+      <text x="0" y="0" font-family="'Inter', system-ui, sans-serif" font-size="28" font-weight="700" fill="#f8fafc">
+        The Data-Driven Engine Transforming
+      </text>
+      <text x="0" y="36" font-family="'Inter', system-ui, sans-serif" font-size="28" font-weight="700" fill="url(#fuchsia-cyan)">
+        E-Commerce Revenue &amp; Retention
+      </text>
+      
+      <!-- Descriptive Subtext -->
+      <text x="0" y="80" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="400" fill="#94a3b8" line-height="1.5">
+        <tspan x="0" dy="0">Deep-dive architectural investigation into real-time customer data</tspan>
+        <tspan x="0" dy="22">pipelines, predictive analytics, and automated multi-channel growth.</tspan>
+      </text>
+    </g>
+
+    <!-- Interactive / Tech Metadata Specs at Bottom -->
+    <g transform="translate(2, 415)">
+      <!-- Stat Box 1 -->
+      <rect x="0" y="0" width="140" height="50" rx="8" fill="#0b1329" stroke="#334155" stroke-width="1" />
+      <text x="15" y="20" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">DATA VELOCITY</text>
+      <text x="15" y="40" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">Sub-Second</text>
+
+      <!-- Stat Box 2 -->
+      <rect x="155" y="0" width="140" height="50" rx="8" fill="#0b1329" stroke="#334155" stroke-width="1" />
+      <text x="170" y="20" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">INTEGRATION</text>
+      <text x="170" y="40" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#d946ef">Omni-Channel</text>
+      
+      <!-- Stat Box 3 -->
+      <rect x="310" y="0" width="140" height="50" rx="8" fill="#0b1329" stroke="#334155" stroke-width="1" />
+      <text x="325" y="20" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">CORE ENGINE</text>
+      <text x="325" y="40" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#06b6d4">CDP + Flows</text>
+    </g>
+
+  </g>
+
+  <!-- Frame / Border Accent -->
+  <rect x="15" y="15" width="1170" height="600" rx="12" fill="none" stroke="#334155" stroke-width="1" opacity="0.4" />
+  <rect x="25" y="25" width="1150" height="580" rx="8" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.2" />
+
+  <!-- Corner Tech Brackets -->
+  <g stroke="#06b6d4" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 20 40 L 20 20 L 40 20" />
+    <path d="M 1180 40 L 1180 20 L 1160 20" />
+    <path d="M 20 590 L 20 610 L 40 610" />
+    <path d="M 1180 590 L 1180 610 L 1160 610" />
+  </g>
+</svg>
