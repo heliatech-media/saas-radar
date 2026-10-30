@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T20:58:17.833856",
+  "last_synced": "2026-10-30T21:28:25.948992",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 5192,
-  "total_requests": 39740,
-  "total_visits": 1609,
-  "total_pageviews": 8237,
+  "total_visitors_network": 5203,
+  "total_requests": 39777,
+  "total_visits": 1612,
+  "total_pageviews": 8256,
   "percent_cached": "56.14%",
-  "data_served_mb": 393.2,
+  "data_served_mb": 394.4,
   "top_pages": [
     {
       "path": "/",
@@ -23,20 +23,20 @@
       "views": 150
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 130
-    },
-    {
       "path": "/versus/",
       "views": 130
     },
     {
-      "path": "/blog/",
-      "views": 120
+      "path": "/blog/make-automation-revolution/",
+      "views": 130
     },
     {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 110
+      "views": 120
+    },
+    {
+      "path": "/blog/",
+      "views": 120
     },
     {
       "path": "/sentinel/",
@@ -47,11 +47,7 @@
       "views": 100
     },
     {
-      "path": "/deals/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 90
     },
     {
@@ -59,22 +55,26 @@
       "views": 90
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 80
+      "path": "/deals/",
+      "views": 90
     },
     {
       "path": "/reviews/make/",
+      "views": 80
+    },
+    {
+      "path": "/reviews/apollo-io/",
       "views": 80
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 7370
+      "views": 7410
     },
     {
       "country": "Morocco",
@@ -98,7 +98,7 @@
     },
     {
       "country": "Singapore",
-      "views": 260
+      "views": 270
     },
     {
       "country": "France",
