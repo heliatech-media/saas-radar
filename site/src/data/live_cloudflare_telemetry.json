@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T14:36:10.415449",
+  "last_synced": "2026-10-30T14:46:16.236720",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4965,
-  "total_requests": 39082,
-  "total_visits": 1539,
-  "total_pageviews": 8008,
+  "total_visitors_network": 4977,
+  "total_requests": 39130,
+  "total_visits": 1542,
+  "total_pageviews": 8017,
   "percent_cached": "56.14%",
-  "data_served_mb": 385.7,
+  "data_served_mb": 385.9,
   "top_pages": [
     {
       "path": "/",
@@ -31,11 +31,11 @@
       "views": 110
     },
     {
-      "path": "/blog/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 110
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/blog/",
       "views": 110
     },
     {
