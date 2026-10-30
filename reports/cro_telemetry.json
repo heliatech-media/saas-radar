@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-30 08:30:30",
-  "total_pages_audited": 69,
-  "monetized_pages": 65,
-  "total_ctas_tracked": 340,
-  "average_cro_score": "87.8/100",
+  "timestamp": "2026-10-30 12:41:29",
+  "total_pages_audited": 70,
+  "monetized_pages": 66,
+  "total_ctas_tracked": 342,
+  "average_cro_score": "87.9/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
     "Floating Sticky Affiliate Bar (StickyAffiliateBar.astro)",

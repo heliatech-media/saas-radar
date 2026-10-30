@@ -173,6 +173,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Klaviyo",
+    "slug": "klaviyo",
+    "tagline": "Data-driven marketing automation platform built specifically for e-commerce brands.",
+    "category": "Marketing Automation",
+    "rating": 4.6,
+    "starting_price": "$45/mo",
+    "best_for": "E-commerce brands, DTC merchants, and digital marketers scaling growth through behavioral segmentation.",
+    "affiliate_url": "https://www.klaviyo.com"
+  },
+  {
     "name": "Lemlist",
     "slug": "lemlist",
     "tagline": "Personalized cold email software with custom image and video automation to boost reply rates.",

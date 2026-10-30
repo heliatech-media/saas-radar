@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-30 08:33:28",
-  "total_links_audited": 75,
-  "healthy_links": 70,
+  "timestamp": "2026-10-30 12:44:43",
+  "total_links_audited": 77,
+  "healthy_links": 72,
   "broken_links_count": 5,
-  "health_rate": "93.3%",
+  "health_rate": "93.5%",
   "broken_links": [
     {
       "slug": "minicong",
@@ -148,7 +148,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=NobryOWcASVKhg&gsxid=NobryOWcASVKhg&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9H4K53TNg8sCHl&gsxid=9H4K53TNg8sCHl&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -191,6 +191,13 @@
       "slug": "klap",
       "target_url": "https://klap.app/?via=heliatech",
       "final_url": "https://klap.app/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "klaviyo",
+      "target_url": "https://www.klaviyo.com",
+      "final_url": "https://www.klaviyo.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -347,7 +354,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2ECdNZnhGwvDK8&gsxid=2ECdNZnhGwvDK8&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=sWBjJBwIP6Ohsp&gsxid=sWBjJBwIP6Ohsp&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -431,6 +438,13 @@
     },
     {
       "slug": "riverside",
+      "target_url": "https://riverside.fm/?via=heliatech",
+      "final_url": "https://riverside.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "riverside-fm",
       "target_url": "https://riverside.fm/?via=heliatech",
       "final_url": "https://riverside.com/?via=heliatech",
       "status_code": 200,

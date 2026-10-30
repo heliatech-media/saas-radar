@@ -132,7 +132,14 @@
       "title": "Cursor: The AI-First Code Editor Blueprint and Enterprise Engineering Velocity Masterclass",
       "tool_slug": "cursor",
       "canonical_url": "https://heliatech.online/blog/cursor-evolution-guide-2026"
+    },
+    "elevenagents-ai-receptionist-guide": {
+      "published_at": "2026-10-30T12:45:14.015615",
+      "share_urn": "urn:li:share:7521900008498085888",
+      "title": "ElevenAgents: How to Deploy a 24/7 AI Phone Receptionist for Your Business Without Code (2026)",
+      "tool_slug": "elevenlabs",
+      "canonical_url": "https://heliatech.online/blog/elevenagents-ai-receptionist-guide"
     }
   },
-  "last_publish": "2026-10-30T08:33:57.848952"
+  "last_publish": "2026-10-30T12:45:14.015622"
 }

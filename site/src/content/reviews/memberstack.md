@@ -149,7 +149,7 @@ Memberstack stands out as the gold standard for adding membership infrastructure
 
 ### Does Memberstack work with sites outside of Webflow?
 
-Yes. While Memberstack is heavily optimized for Webflow, it can be installed on any website that allows you to paste HTML snippet code and custom JavaScript attributes.
+Yes. While Memberstack is heavily optimized for [Webflow](/reviews/webflow), it can be installed on any website that allows you to paste HTML snippet code and custom JavaScript attributes.
 
 ### How does Memberstack handle payments?
 

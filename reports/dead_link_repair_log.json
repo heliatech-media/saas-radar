@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-30T08:32:02.061516",
+  "timestamp": "2026-10-30T12:43:09.979446",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 121,
-    "total_redirects_active": 75,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 123,
+    "total_redirects_active": 77,
+    "new_redirects_healed": 25,
     "internal_links_repaired": 0,
     "external_targets_repaired": 13,
     "content_files_modified": 0
@@ -130,6 +130,11 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "klaviyo",
+      "target_url": "https://www.klaviyo.com",
+      "source_file": "klaviyo-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
