@@ -6,7 +6,7 @@ tagline: The composable content platform that turns structured content into real
 category: DevTools
 rating: 4.6
 website_url: https://www.sanity.io
-affiliate_url: https://www.sanity.io
+affiliate_url: "https://www.sanity.io/?ref=heliatech"
 summary: Sanity is a headless CMS built around a real-time datastore and a fully customizable,
   React-based editing studio (Sanity Studio). It treats content as structured JSON
   data, empowering engineering teams to build bespoke omnichannel digital experiences

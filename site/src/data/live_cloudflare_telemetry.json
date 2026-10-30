@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T08:04:01.521541",
+  "last_synced": "2026-10-30T08:34:11.686378",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4710,
-  "total_requests": 38104,
-  "total_visits": 1460,
-  "total_pageviews": 7771,
+  "total_visitors_network": 4717,
+  "total_requests": 38141,
+  "total_visits": 1462,
+  "total_pageviews": 7781,
   "percent_cached": "56.14%",
-  "data_served_mb": 376.7,
+  "data_served_mb": 377.8,
   "top_pages": [
     {
       "path": "/",
@@ -51,6 +51,10 @@
       "views": 80
     },
     {
+      "path": "/reviews/apollo-io/",
+      "views": 80
+    },
+    {
       "path": "/deals/",
       "views": 80
     },
@@ -65,16 +69,12 @@
     {
       "path": "/reviews/n8n/",
       "views": 70
-    },
-    {
-      "path": "/blog/vercel-evolution-guide-2026/",
-      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6950
+      "views": 6970
     },
     {
       "country": "Morocco",

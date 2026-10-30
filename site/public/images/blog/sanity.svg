@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#070b19"/>
+      <stop offset="100%" stop-color="#0b0f1d"/>
+    </linearGradient>
+
+    <!-- Glowing Orbs & Ambient Gradients -->
+    <radialGradient id="cyanOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fuchsiaOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic & Neon Stroke Gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="neonFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0b0f1a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.2"/>
+    </pattern>
+
+    <!-- Hexagon Symbol for AST / Data Nodes -->
+    <polygon id="hexNode" points="20,0 50,0 70,30 50,60 20,60 0,30" />
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#gridPattern)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="150" cy="100" r="300" fill="url(#cyanOrb)" filter="url(#glowStrong)" />
+  <circle cx="950" cy="500" r="350" fill="url(#fuchsiaOrb)" filter="url(#glowStrong)" />
+  <circle cx="650" cy="200" r="250" fill="url(#violetOrb)" filter="url(#glowStrong)" />
+
+  <!-- ================= TECHNICAL DECORATIONS ================= -->
+  <!-- Abstract Data Streams / Circuit Lines in Background -->
+  <g stroke-opacity="0.25" fill="none">
+    <path d="M 0 150 L 350 150 L 420 220 L 700 220" stroke="#38bdf8" stroke-width="1.5" />
+    <path d="M 1200 450 L 850 450 L 780 380 L 550 380" stroke="#d946ef" stroke-width="1.5" />
+    <path d="M 200 630 L 200 480 L 280 400 L 450 400" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 4" />
+    <path d="M 1000 0 L 1000 200 L 900 300 L 750 300" stroke="#8b5cf6" stroke-width="1" />
+  </g>
+
+  <!-- ================= RIGHT SIDE: 3D VECTOR IDE & AST SYNTAX VISUALIZATION ================= -->
+  <!-- Floating Isometric IDE Window -->
+  <g transform="translate(620, 95)" filter="url(#glowStrong)">
+    <!-- Window Drop Shadow / Outer Glow Plane -->
+    <polygon points="10,20 530,0 530,420 10,440" fill="#030712" fill-opacity="0.8" />
+    
+    <!-- Main IDE Glass Panel -->
+    <polygon points="0,15 520,0 520,400 0,415" fill="url(#panelGrad)" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.5" />
+    
+    <!-- Title Bar -->
+    <path d="M 0,15 L 520,0 L 520,45 L 0,60 Z" fill="#0f172a" fill-opacity="0.9" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+    <circle cx="25" cy="30" r="5" fill="#f43f5e" />
+    <circle cx="45" cy="30" r="5" fill="#fbbf24" />
+    <circle cx="65" cy="30" r="5" fill="#34d399" />
+    <text x="90" y="34" fill="#94a3b8" font-family="monospace" font-size="12" letter-spacing="1">sanity/structured-content.groq</text>
+
+    <!-- Code / AST Content inside IDE -->
+    <g transform="translate(30, 80)" font-family="monospace" font-size="13">
+      <text x="0" y="0" fill="#f472b6">import</text>
+      <text x="70" y="0" fill="#e2e8f0">{ createClient }</text>
+      <text x="210" y="0" fill="#f472b6">from</text>
+      <text x="250" y="0" fill="#34d399">'@sanity/client'</text>
+
+      <text x="0" y="30" fill="#38bdf8">const</text>
+      <text x="45" y="30" fill="#cbd5e1">query =</text>
+      <text x="105" y="30" fill="#fbbf24">groq`</text>
+      
+      <text x="20" y="55" fill="#c084fc">*[</text>
+      <text x="40" y="55" fill="#38bdf8">_type</text>
+      <text x="80" y="55" fill="#cbd5e1"> == </text>
+      <text x="115" y="55" fill="#34d399">"enterpriseDoc"</text>
+      <text x="245" y="55" fill="#c084fc">] {</text>
+
+      <text x="40" y="80" fill="#cbd5e1">title,</text>
+      <text x="40" y="105" fill="#cbd5e1">slug,</text>
+      <text x="40" y="130" fill="#f472b6">"vectorEmbedding":</text>
+      <text x="180" y="130" fill="#38bdf8">ai.embed(body)</text>
+
+      <text x="20" y="155" fill="#c084fc">}</text>
+      <text x="20" y="180" fill="#fbbf24">`</text>
+
+      <!-- Real-time pulse indicator line -->
+      <line x1="0" y1="210" x2="400" y2="210" stroke="#1e293b" stroke-width="1" />
+      <circle cx="20" cy="210" r="3" fill="#06b6d4" />
+      <text x="35" y="214" fill="#06b6d4" font-size="11" letter-spacing="0.5">Real-time sync active: Connected to Dataset [production]</text>
+    </g>
+
+    <!-- Floating AST Node Graph Overlay on IDE -->
+    <g transform="translate(320, 240)" filter="url(#subtleGlow)">
+      <line x1="0" y1="0" x2="80" y2="-50" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <line x1="80" y1="-50" x2="140" y2="-20" stroke="#38bdf8" stroke-width="1.5"/>
+      
+      <circle cx="0" cy="0" r="6" fill="#06b6d4" />
+      <circle cx="80" cy="-50" r="8" fill="#d946ef" />
+      <circle cx="140" cy="-20" r="5" fill="#38bdf8" />
+      
+      <!-- Mini Tooltip Box -->
+      <rect x="70" y="-80" width="90" height="22" rx="4" fill="#090d16" stroke="#d946ef" stroke-width="1" />
+      <text x="78" y="-65" fill="#f5d0fe" font-family="monospace" font-size="10">AST Node</text>
+    </g>
+  </g>
+
+  <!-- Connecting Data Vectors from Left to Right -->
+  <g filter="url(#glow)">
+    <path d="M 450 350 C 520 350, 560 280, 620 280" fill="none" stroke="url(#neonCyan)" stroke-width="3" />
+    <circle cx="535" cy="318" r="4" fill="#38bdf8" />
+  </g>
+
+  <!-- ================= LEFT SIDE: TYPOGRAPHY & BRANDING ================= -->
+  <!-- Top Architectural Dossier Badge -->
+  <g transform="translate(80, 80)">
+    <!-- Pill Background -->
+    <rect x="0" y="0" width="310" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <!-- Glowing Status Dot -->
+    <circle cx="20" cy="17" r="4" fill="#06b6d4" filter="url(#glow)" />
+    <circle cx="20" cy="17" r="2" fill="#ffffff" />
+    <!-- Badge Text -->
+    <text x="36" y="22" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Title & Subtitle Section -->
+  <g transform="translate(80, 165)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" fill="#d946ef" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="4" filter="url(#subtleGlow)">DEVTOOLS // ENTERPRISE DATA ENGINEERING</text>
+    
+    <!-- Tool Title: SANITY -->
+    <text x="0" y="75" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" letter-spacing="6" filter="url(#glow)">SANITY</text>
+    <text x="275" y="75" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" letter-spacing="6" filter="url(#glow)">.</text>
+
+    <!-- Investigation Title (Multi-line) -->
+    <text x="0" y="125" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" letter-spacing="0.5">The Evolution of Structured Content Infrastructure</text>
+    <text x="0" y="155" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" letter-spacing="0.5">and the Hands-on Guide to Real-Time Data Engineering.</text>
+  </g>
+
+  <!-- ================= BOTTOM METRICS / TECHNICAL SPECS BAR ================= -->
+  <g transform="translate(80, 505)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Metric 1 -->
+    <g transform="translate(0, 20)">
+      <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">INFRA_CORE</text>
+      <text x="0" y="20" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="700">GROQ Query Engine</text>
+    </g>
+
+    <!-- Metric 2 -->
+    <g transform="translate(280, 20)">
+      <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">LATENCY_BENCHMARK</text>
+      <text x="0" y="20" fill="#d946ef" font-family="system-ui, sans-serif" font-size="16" font-weight="700">&lt; 12ms Real-Time Sync</text>
+    </g>
+
+    <!-- Metric 3 -->
+    <g transform="translate(580, 20)">
+      <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">SCHEMA_PARADIGM</text>
+      <text x="0" y="20" fill="#34d399" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Content as Code (Portable Text)</text>
+    </g>
+
+    <!-- Security/Verification Badge on Right -->
+    <g transform="translate(900, 10)">
+      <rect x="0" y="0" width="140" height="36" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="18" cy="18" r="4" fill="#34d399" />
+      <text x="32" y="23" fill="#cbd5e1" font-family="monospace" font-size="11" font-weight="600">VERIFIED V4</text>
+    </g>
+  </g>
+
+  <!-- Floating Hexagonal Accent Nodes (Left side decor) -->
+  <g transform="translate(80, 390)" stroke="url(#neonFuchsia)" stroke-width="1.5" fill="none" filter="url(#glow)">
+    <polygon points="15,0 35,0 45,17 35,35 15,35 5,17" />
+    <circle cx="25" cy="17" r="3" fill="#38bdf8" />
+  </g>
+  <g transform="translate(140, 420)" stroke="#06b6d4" stroke-width="1" fill="none" opacity="0.6">
+    <polygon points="10,0 25,0 32,12 25,25 10,25 3,12" />
+  </g>
+  <line x1="115" y1="407" x2="143" y2="425" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+
+  <!-- Top Right Branding Watermark / Logo Mark -->
+  <g transform="translate(1080, 40)" opacity="0.8">
+    <circle cx="20" cy="20" r="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 3" />
+    <circle cx="20" cy="20" r="8" fill="url(#neonCyan)" filter="url(#glow)" />
+  </g>
+
+</svg>

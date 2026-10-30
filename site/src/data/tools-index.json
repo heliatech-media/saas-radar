@@ -377,6 +377,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Riverside.fm",
+    "slug": "riverside-fm",
+    "tagline": "Studio-quality remote video and audio recording made simple and bulletproof.",
+    "category": "Audio/Podcasting",
+    "rating": 4.6,
+    "starting_price": "$15/mo",
+    "best_for": "Professional podcasters, remote media agencies, journalists, and content creators demanding pristine post-production assets.",
+    "affiliate_url": "https://riverside.fm/?via=heliatech"
+  },
+  {
     "name": "Sanity",
     "slug": "sanity",
     "tagline": "The composable content platform that turns structured content into real-time data infrastructure.",
@@ -384,7 +394,8 @@
     "rating": 4.6,
     "starting_price": "$15",
     "best_for": "Frontend developers, digital agencies, and content operations teams building high-performance, omnichannel applications.",
-    "affiliate_url": "https://www.sanity.io"
+    "affiliate_url": "https://www.sanity.io/?ref=heliatech",
+    "commission_rate": "Custom / Enterprise referral structure"
   },
   {
     "name": "Submagic",

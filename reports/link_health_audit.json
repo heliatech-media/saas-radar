@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-29 20:21:29",
+  "timestamp": "2026-10-30 08:33:28",
   "total_links_audited": 75,
   "healthy_links": 70,
   "broken_links_count": 5,
@@ -148,7 +148,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=fodMM2VVRECaDb&gsxid=fodMM2VVRECaDb&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=NobryOWcASVKhg&gsxid=NobryOWcASVKhg&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -347,7 +347,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xnQI6eTXGurPWm&gsxid=xnQI6eTXGurPWm&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2ECdNZnhGwvDK8&gsxid=2ECdNZnhGwvDK8&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -438,8 +438,8 @@
     },
     {
       "slug": "sanity",
-      "target_url": "https://www.sanity.com",
-      "final_url": "https://www.sanity.com/",
+      "target_url": "https://www.sanity.io/?ref=heliatech",
+      "final_url": "https://www.sanity.io/?ref=heliatech",
       "status_code": 200,
       "healthy": true
     },

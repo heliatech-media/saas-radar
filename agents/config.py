@@ -114,5 +114,6 @@ AFFILIATE_MAP = {
     "v0": "https://v0.dev/?via=heliatech",
     "minicong": "https://minicong.ai/?via=heliatech",
     "dumpling-ai": "https://www.dumpling.ai/?via=heliatech",
-    "julius-ai": "https://julius.ai/?via=heliatech"
+    "julius-ai": "https://julius.ai/?via=heliatech",
+    "sanity": "https://www.sanity.io/?ref=heliatech"
 }
