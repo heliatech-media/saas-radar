@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T03:12:41.455153",
+  "last_synced": "2026-10-30T03:42:49.798086",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4294,
-  "total_requests": 37549,
-  "total_visits": 1331,
-  "total_pageviews": 7559,
+  "total_visitors_network": 4304,
+  "total_requests": 37568,
+  "total_visits": 1334,
+  "total_pageviews": 7568,
   "percent_cached": "56.14%",
-  "data_served_mb": 370.4,
+  "data_served_mb": 370.8,
   "top_pages": [
     {
       "path": "/",
@@ -35,15 +35,15 @@
       "views": 100
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 90
-    },
-    {
       "path": "/blog/apollo-io-vs-lusha/",
       "views": 90
     },
     {
       "path": "/reviews/adcreative-ai/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/beehiiv/",
       "views": 90
     },
     {
