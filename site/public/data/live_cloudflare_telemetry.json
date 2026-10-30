@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T05:33:24.451280",
+  "last_synced": "2026-10-30T06:03:31.260178",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4657,
-  "total_requests": 37959,
-  "total_visits": 1443,
-  "total_pageviews": 7719,
+  "total_visitors_network": 4669,
+  "total_requests": 37991,
+  "total_visits": 1447,
+  "total_pageviews": 7731,
   "percent_cached": "56.14%",
-  "data_served_mb": 375.2,
+  "data_served_mb": 375.7,
   "top_pages": [
     {
       "path": "/",
@@ -51,11 +51,11 @@
       "views": 80
     },
     {
-      "path": "/deals/",
+      "path": "/calculator/",
       "views": 80
     },
     {
-      "path": "/calculator/",
+      "path": "/deals/",
       "views": 80
     },
     {
@@ -63,11 +63,11 @@
       "views": 80
     },
     {
-      "path": "/reviews/n8n/",
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/reviews/airtable/",
       "views": 70
     }
   ],
