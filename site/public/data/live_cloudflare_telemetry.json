@@ -1,29 +1,29 @@
 {
-  "last_synced": "2026-10-30T13:15:41.976692",
+  "last_synced": "2026-10-30T13:35:47.709879",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4907,
-  "total_requests": 38931,
-  "total_visits": 1521,
-  "total_pageviews": 7968,
+  "total_visitors_network": 4919,
+  "total_requests": 38947,
+  "total_visits": 1524,
+  "total_pageviews": 7975,
   "percent_cached": "56.14%",
-  "data_served_mb": 383.9,
+  "data_served_mb": 384.0,
   "top_pages": [
     {
       "path": "/",
-      "views": 1750
+      "views": 1760
     },
     {
       "path": "/awards/",
       "views": 160
     },
     {
-      "path": "/versus/",
+      "path": "/blog/make-automation-revolution/",
       "views": 130
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/versus/",
       "views": 130
     },
     {
@@ -43,11 +43,7 @@
       "views": 90
     },
     {
-      "path": "/radar/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/deals/",
       "views": 90
     },
     {
@@ -55,7 +51,11 @@
       "views": 90
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/adcreative-ai/",
+      "views": 90
+    },
+    {
+      "path": "/radar/",
       "views": 90
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 7150
+      "views": 7160
     },
     {
       "country": "Morocco",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Germany",
-      "views": 430
+      "views": 440
     },
     {
       "country": "Canada",
