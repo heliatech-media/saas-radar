@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-10-30T21:28:26.698664",
+  "last_synced": "2026-10-30T21:58:35.336386",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 5203,
-  "total_requests": 39777,
-  "total_visits": 1612,
-  "total_pageviews": 8256,
+  "total_visitors_network": 5214,
+  "total_requests": 39849,
+  "total_visits": 1616,
+  "total_pageviews": 8289,
   "percent_cached": "56.14%",
-  "data_served_mb": 394.4,
+  "data_served_mb": 394.9,
   "top_pages": [
     {
       "path": "/",
-      "views": 1820
+      "views": 2040
     },
     {
-      "path": "/awards/",
+      "path": "/radar/",
       "views": 160
     },
     {
       "path": "/calculator/",
-      "views": 150
+      "views": 110
     },
     {
-      "path": "/versus/",
-      "views": 130
+      "path": "/reviews/clickup/",
+      "views": 110
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 130
-    },
-    {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 120
-    },
-    {
-      "path": "/blog/",
-      "views": 120
-    },
-    {
-      "path": "/sentinel/",
       "views": 110
+    },
+    {
+      "path": "/reviews/resend/",
+      "views": 110
+    },
+    {
+      "path": "/terms/",
+      "views": 110
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 100
     },
     {
       "path": "/reviews/beehiiv/",
       "views": 100
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/awards/",
+      "views": 100
+    },
+    {
+      "path": "/blog/",
+      "views": 100
+    },
+    {
+      "path": "/blog/brevo-evolution-guide-2026/",
+      "views": 100
+    },
+    {
+      "path": "/sentinel/",
+      "views": 100
+    },
+    {
+      "path": "/reviews/brevo/",
       "views": 90
     },
     {
-      "path": "/radar/",
+      "path": "/blog/castmagic-evolution-guide-2026/",
       "views": 90
-    },
-    {
-      "path": "/reviews/adcreative-ai/",
-      "views": 90
-    },
-    {
-      "path": "/deals/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 80
-    },
-    {
-      "path": "/reviews/apollo-io/",
-      "views": 80
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 7410
+      "views": 7530
     },
     {
       "country": "Morocco",
-      "views": 2660
+      "views": 2410
     },
     {
       "country": "Belgium",
-      "views": 530
+      "views": 660
     },
     {
       "country": "Germany",
-      "views": 460
+      "views": 610
     },
     {
       "country": "Canada",
-      "views": 340
-    },
-    {
-      "country": "Netherlands",
       "views": 290
     },
     {
+      "country": "United Kingdom",
+      "views": 290
+    },
+    {
+      "country": "HK",
+      "views": 260
+    },
+    {
       "country": "Singapore",
-      "views": 270
+      "views": 250
+    },
+    {
+      "country": "CN",
+      "views": 240
     },
     {
       "country": "France",
-      "views": 220
-    },
-    {
-      "country": "India",
-      "views": 190
-    },
-    {
-      "country": "FI",
-      "views": 180
+      "views": 230
     }
   ],
   "top_referrers": [
