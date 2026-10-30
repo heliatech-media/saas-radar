@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-30T04:53:12.724184",
+  "last_synced": "2026-10-30T05:33:23.517910",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4647,
-  "total_requests": 37932,
-  "total_visits": 1440,
-  "total_pageviews": 7704,
+  "total_visitors_network": 4657,
+  "total_requests": 37959,
+  "total_visits": 1443,
+  "total_pageviews": 7719,
   "percent_cached": "56.14%",
-  "data_served_mb": 374.9,
+  "data_served_mb": 375.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 1630
+      "views": 1640
     },
     {
       "path": "/awards/",
@@ -39,19 +39,19 @@
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 90
-    },
-    {
       "path": "/reviews/beehiiv/",
       "views": 90
     },
     {
-      "path": "/radar/",
-      "views": 80
+      "path": "/reviews/adcreative-ai/",
+      "views": 90
     },
     {
       "path": "/reviews/make/",
+      "views": 80
+    },
+    {
+      "path": "/deals/",
       "views": 80
     },
     {
@@ -59,22 +59,22 @@
       "views": 80
     },
     {
-      "path": "/deals/",
-      "views": 70
-    },
-    {
-      "path": "/blog/supabase-vs-retool/",
-      "views": 70
+      "path": "/radar/",
+      "views": 80
     },
     {
       "path": "/reviews/n8n/",
+      "views": 70
+    },
+    {
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6870
+      "views": 6920
     },
     {
       "country": "Morocco",
