@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-30T08:34:11.686378",
+  "last_synced": "2026-10-30T08:54:14.355730",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4717,
-  "total_requests": 38141,
-  "total_visits": 1462,
-  "total_pageviews": 7781,
+  "total_visitors_network": 4720,
+  "total_requests": 38152,
+  "total_visits": 1463,
+  "total_pageviews": 7785,
   "percent_cached": "56.14%",
-  "data_served_mb": 377.8,
+  "data_served_mb": 377.9,
   "top_pages": [
     {
       "path": "/",
@@ -33,6 +33,10 @@
     {
       "path": "/blog/",
       "views": 110
+    },
+    {
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "views": 100
     },
     {
       "path": "/blog/apollo-io-vs-lusha/",
@@ -65,16 +69,12 @@
     {
       "path": "/radar/",
       "views": 80
-    },
-    {
-      "path": "/reviews/n8n/",
-      "views": 70
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 6970
+      "views": 7070
     },
     {
       "country": "Morocco",
