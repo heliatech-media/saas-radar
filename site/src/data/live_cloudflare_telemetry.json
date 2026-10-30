@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-30T11:35:09.045271",
+  "last_synced": "2026-10-30T11:55:15.454279",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-02 - 2026-10-30)",
-  "total_visitors_network": 4841,
-  "total_requests": 38510,
-  "total_visits": 1500,
-  "total_pageviews": 7886,
+  "total_visitors_network": 4855,
+  "total_requests": 38564,
+  "total_visits": 1505,
+  "total_pageviews": 7933,
   "percent_cached": "56.14%",
-  "data_served_mb": 381.7,
+  "data_served_mb": 382.6,
   "top_pages": [
     {
       "path": "/",
-      "views": 1700
+      "views": 1740
     },
     {
       "path": "/awards/",
@@ -59,22 +59,22 @@
       "views": 90
     },
     {
+      "path": "/calculator/",
+      "views": 90
+    },
+    {
       "path": "/reviews/make/",
       "views": 80
     },
     {
       "path": "/reviews/apollo-io/",
       "views": 80
-    },
-    {
-      "path": "/calculator/",
-      "views": 80
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 7140
+      "views": 7150
     },
     {
       "country": "Morocco",
@@ -82,7 +82,7 @@
     },
     {
       "country": "Belgium",
-      "views": 490
+      "views": 530
     },
     {
       "country": "Germany",
