@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-31T09:34:40.275675",
+  "last_synced": "2026-10-31T12:34:21.177891",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5925,
-  "total_requests": 41994,
-  "total_visits": 1836,
-  "total_pageviews": 9066,
+  "total_visitors_network": 5977,
+  "total_requests": 42401,
+  "total_visits": 1852,
+  "total_pageviews": 9204,
   "percent_cached": "56.14%",
-  "data_served_mb": 417.3,
+  "data_served_mb": 421.9,
   "top_pages": [
     {
       "path": "/",
-      "views": 2130
+      "views": 2140
     },
     {
       "path": "/calculator/",
@@ -27,11 +27,11 @@
       "views": 130
     },
     {
-      "path": "/reviews/resend/",
+      "path": "/terms/",
       "views": 120
     },
     {
-      "path": "/terms/",
+      "path": "/reviews/resend/",
       "views": 120
     },
     {
@@ -39,15 +39,7 @@
       "views": 110
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 110
-    },
-    {
       "path": "/reviews/elevenlabs/",
-      "views": 110
-    },
-    {
-      "path": "/reviews/clickup/",
       "views": 110
     },
     {
@@ -55,15 +47,23 @@
       "views": 110
     },
     {
+      "path": "/reviews/clickup/",
+      "views": 110
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 110
+    },
+    {
       "path": "/awards/",
       "views": 110
     },
     {
-      "path": "/reviews/brevo/",
+      "path": "/sentinel/",
       "views": 100
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "path": "/reviews/brevo/",
       "views": 100
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 8250
+      "views": 8390
     },
     {
       "country": "Morocco",
@@ -90,7 +90,7 @@
     },
     {
       "country": "Singapore",
-      "views": 290
+      "views": 320
     },
     {
       "country": "Canada",
@@ -106,7 +106,7 @@
     },
     {
       "country": "CN",
-      "views": 250
+      "views": 260
     },
     {
       "country": "France",

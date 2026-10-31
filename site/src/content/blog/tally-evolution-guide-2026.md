@@ -90,7 +90,7 @@ To maintain journalistic integrity, executive strategy requires evaluating both 
 | **Pricing & Value** | Incredible free tier with unlimited forms and submissions. | Advanced customization and white-labeling require Pro tier. | **Exceptional** |
 | **User Experience** | Blazing-fast Notion-style slash-command editor. | Learning curve for legacy users accustomed to visual canvas drag-and-drop. | **Modern & Fast** |
 | **Data Logic** | Powerful inline calculations and conditional branching. | Tracing deeply nested logic across massive forms can become intricate. | **Robust** |
-| **Ecosystem & CRM** | Seamless native sync with Airtable, Notion, and Webhooks. | Lacks native enterprise CRM pipelines or built-in email sequence automation. | **Extensible** |
+| **Ecosystem & CRM** | Seamless native sync with [Airtable](/reviews/airtable), Notion, and Webhooks. | Lacks native enterprise CRM pipelines or built-in email sequence automation. | **Extensible** |
 
 ## 5. HeliaTech Final Verdict & Recommendation
 

@@ -5,7 +5,7 @@ tagline: The open-source infrastructure for scheduling meetings at scale
 category: Automation
 rating: 4.7
 website_url: https://cal.com
-affiliate_url: https://cal.com
+affiliate_url: "https://cal.com/?via=heliatech"
 summary: Cal.com is a developer-first, highly customizable open-source scheduling
   infrastructure designed to replace legacy tools like Calendly. It offers deep API
   access, white-labeling capabilities, and robust routing forms that integrate directly
