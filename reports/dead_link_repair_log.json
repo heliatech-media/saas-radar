@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-10-30T12:43:09.979446",
+  "timestamp": "2026-10-31T08:55:29.890009",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
     "total_content_files_scanned": 123,
     "total_redirects_active": 77,
-    "new_redirects_healed": 25,
+    "new_redirects_healed": 24,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 13,
+    "external_targets_repaired": 14,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -130,11 +130,6 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "klaviyo",
-      "target_url": "https://www.klaviyo.com",
-      "source_file": "klaviyo-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -173,6 +168,12 @@
       "slug": "jasper-ai",
       "dead_target": "https://partnerstack.com/jasper?via=heliatech",
       "healed_target": "https://www.jasper-ai.com",
+      "status_code": 404
+    },
+    {
+      "slug": "klaviyo",
+      "dead_target": "https://partnerstack.com/klaviyo?via=heliatech",
+      "healed_target": "https://www.klaviyo.com",
       "status_code": 404
     },
     {

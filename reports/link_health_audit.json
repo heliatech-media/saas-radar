@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-10-30 12:44:43",
+  "timestamp": "2026-10-31 08:57:16",
   "total_links_audited": 77,
-  "healthy_links": 72,
-  "broken_links_count": 5,
-  "health_rate": "93.5%",
+  "healthy_links": 71,
+  "broken_links_count": 6,
+  "health_rate": "92.2%",
   "broken_links": [
+    {
+      "slug": "dumpling-ai",
+      "target_url": "https://www.dumpling.ai/?via=heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.dumpling.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.dumpling.ai', port=443) at 0x15844c87890>, 'Connection to www.dumpling.ai timed out. (connect timeout=7)'))"
+    },
     {
       "slug": "minicong",
       "target_url": "https://minicong.ai/?via=heliatech",
@@ -141,14 +149,15 @@
     {
       "slug": "dumpling-ai",
       "target_url": "https://www.dumpling.ai/?via=heliatech",
-      "final_url": "https://www.dumpling.ai/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.dumpling.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.dumpling.ai', port=443) at 0x15844c87890>, 'Connection to www.dumpling.ai timed out. (connect timeout=7)'))"
     },
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9H4K53TNg8sCHl&gsxid=9H4K53TNg8sCHl&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=B0E6Uj152ejCtB&gsxid=B0E6Uj152ejCtB&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -354,7 +363,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=sWBjJBwIP6Ohsp&gsxid=sWBjJBwIP6Ohsp&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=l7tl4k6ohek5U4&gsxid=l7tl4k6ohek5U4&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
