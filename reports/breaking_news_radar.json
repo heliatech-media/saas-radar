@@ -1,18 +1,7 @@
 {
-  "last_scan": "2026-10-31T08:57:37.506718",
-  "total_events_detected": 5,
-  "breaking_opportunities": [
-    {
-      "partner": "Supabase",
-      "tool_slug": "supabase",
-      "title": "Introducing DBArena: open, reproducible benchmarks for hosted Postgres",
-      "link": "https://supabase.com/blog/introducing-dbarena",
-      "pub_date": "Fri, 30 Oct 2026 00:00:00 -0700",
-      "summary": "DBArena benchmarks hosted Postgres providers on price-performance, with a public methodology.",
-      "is_breaking": true,
-      "relevance_score": 1
-    }
-  ],
+  "last_scan": "2026-10-31T13:13:19.572537",
+  "total_events_detected": 0,
+  "breaking_opportunities": [],
   "processed_urls": [
     "https://openai.com/index/the-future-of-the-firm",
     "https://supabase.com/blog/getting-started-with-the-supabase-dotnet-sdk",
