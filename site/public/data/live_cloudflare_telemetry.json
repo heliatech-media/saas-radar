@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-10-31T18:44:13.081841",
+  "last_synced": "2026-10-31T19:14:18.697129",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 6121,
-  "total_requests": 43046,
-  "total_visits": 1897,
-  "total_pageviews": 9442,
+  "total_visitors_network": 6140,
+  "total_requests": 43187,
+  "total_visits": 1903,
+  "total_pageviews": 9497,
   "percent_cached": "56.14%",
-  "data_served_mb": 429.8,
+  "data_served_mb": 430.9,
   "top_pages": [
     {
       "path": "/",
-      "views": 1990
+      "views": 2010
     },
     {
       "path": "/calculator/",
-      "views": 310
+      "views": 330
     },
     {
       "path": "/awards/",
@@ -35,11 +35,11 @@
       "views": 140
     },
     {
-      "path": "/radar/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/radar/",
       "views": 120
     },
     {
@@ -51,7 +51,11 @@
       "views": 100
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/make/",
       "views": 90
     },
     {
@@ -59,22 +63,18 @@
       "views": 90
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/heygen/",
       "views": 90
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/make/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 8740
+      "views": 8750
     },
     {
       "country": "Morocco",
@@ -82,23 +82,27 @@
     },
     {
       "country": "Belgium",
-      "views": 530
+      "views": 540
     },
     {
       "country": "Germany",
       "views": 470
     },
     {
+      "country": "Netherlands",
+      "views": 380
+    },
+    {
       "country": "Singapore",
       "views": 380
     },
     {
-      "country": "Netherlands",
-      "views": 360
-    },
-    {
       "country": "Canada",
       "views": 340
+    },
+    {
+      "country": "United Kingdom",
+      "views": 270
     },
     {
       "country": "India",
@@ -107,10 +111,6 @@
     {
       "country": "France",
       "views": 220
-    },
-    {
-      "country": "United Kingdom",
-      "views": 190
     }
   ],
   "top_referrers": [
