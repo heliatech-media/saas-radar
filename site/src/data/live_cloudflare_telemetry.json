@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-31T06:31:18.962585",
+  "last_synced": "2026-10-31T06:51:24.695890",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5837,
-  "total_requests": 41427,
-  "total_visits": 1809,
-  "total_pageviews": 8823,
+  "total_visitors_network": 5851,
+  "total_requests": 41457,
+  "total_visits": 1813,
+  "total_pageviews": 8834,
   "percent_cached": "56.14%",
-  "data_served_mb": 410.4,
+  "data_served_mb": 410.6,
   "top_pages": [
     {
       "path": "/",
@@ -51,11 +51,11 @@
       "views": 90
     },
     {
-      "path": "/reviews/make/",
+      "path": "/deals/",
       "views": 90
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/make/",
       "views": 90
     },
     {
