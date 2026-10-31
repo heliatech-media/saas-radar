@@ -233,6 +233,19 @@
         "machinelearning",
         "voicecloning"
       ]
+    },
+    "cal-com-evolution-guide-2026": {
+      "id": 4953548,
+      "url": "https://dev.to/heliatech/calcom-the-open-source-scheduling-infrastructure-and-enterprise-automation-blueprint-i8",
+      "title": "Cal.com: The Open-Source Scheduling Infrastructure and Enterprise Automation Blueprint",
+      "canonical_url": "https://heliatech.online/blog/cal-com-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "calcom",
+        "productivity",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null

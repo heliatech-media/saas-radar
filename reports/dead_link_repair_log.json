@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-31T12:34:42.620552",
+  "timestamp": "2026-10-31T15:54:49.702327",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 125,
-    "total_redirects_active": 78,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 127,
+    "total_redirects_active": 79,
+    "new_redirects_healed": 25,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -75,6 +75,11 @@
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
       "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "screen-studio",
+      "target_url": "https://www.screen-studio.com",
+      "source_file": "screen-studio-evolution-guide-2026.md"
     },
     {
       "slug": "relay",

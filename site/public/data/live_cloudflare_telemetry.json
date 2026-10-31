@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-10-31T12:34:21.177891",
+  "last_synced": "2026-10-31T15:54:20.925897",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5977,
-  "total_requests": 42401,
-  "total_visits": 1852,
-  "total_pageviews": 9204,
+  "total_visitors_network": 6027,
+  "total_requests": 42746,
+  "total_visits": 1868,
+  "total_pageviews": 9343,
   "percent_cached": "56.14%",
-  "data_served_mb": 421.9,
+  "data_served_mb": 427.1,
   "top_pages": [
     {
       "path": "/",
-      "views": 2140
+      "views": 2170
     },
     {
       "path": "/calculator/",
-      "views": 200
+      "views": 260
     },
     {
       "path": "/radar/",
@@ -27,7 +27,7 @@
       "views": 130
     },
     {
-      "path": "/terms/",
+      "path": "/blog/make-automation-revolution/",
       "views": 120
     },
     {
@@ -35,23 +35,15 @@
       "views": 120
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 110
-    },
-    {
-      "path": "/reviews/elevenlabs/",
-      "views": 110
-    },
-    {
-      "path": "/versus/",
-      "views": 110
+      "path": "/terms/",
+      "views": 120
     },
     {
       "path": "/reviews/clickup/",
       "views": 110
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/brevo/",
       "views": 110
     },
     {
@@ -59,22 +51,30 @@
       "views": 110
     },
     {
+      "path": "/versus/",
+      "views": 110
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 110
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 110
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 100
+    },
+    {
       "path": "/sentinel/",
-      "views": 100
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 100
-    },
-    {
-      "path": "/blog/brevo-evolution-guide-2026/",
       "views": 100
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 8390
+      "views": 8610
     },
     {
       "country": "Morocco",
@@ -90,7 +90,7 @@
     },
     {
       "country": "Singapore",
-      "views": 320
+      "views": 340
     },
     {
       "country": "Canada",
@@ -101,12 +101,12 @@
       "views": 290
     },
     {
-      "country": "HK",
+      "country": "CN",
       "views": 270
     },
     {
-      "country": "CN",
-      "views": 260
+      "country": "HK",
+      "views": 270
     },
     {
       "country": "France",

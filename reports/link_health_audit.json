@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-31 12:35:07",
-  "total_links_audited": 78,
+  "timestamp": "2026-10-31 15:55:19",
+  "total_links_audited": 79,
   "healthy_links": 73,
-  "broken_links_count": 5,
-  "health_rate": "93.6%",
+  "broken_links_count": 6,
+  "health_rate": "92.4%",
   "broken_links": [
     {
       "slug": "minicong",
@@ -36,6 +36,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "screen-studio",
+      "target_url": "https://www.screen-studio.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.screen-studio.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')))"
     },
     {
       "slug": "tome",
@@ -155,7 +163,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=suPvtSExPeHq74&gsxid=suPvtSExPeHq74&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bhTVdjSI9uW8rq&gsxid=bhTVdjSI9uW8rq&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -361,7 +369,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=7xc57jrVg9v8xK&gsxid=7xc57jrVg9v8xK&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xoy2ISyvVlhmH2&gsxid=xoy2ISyvVlhmH2&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -463,6 +471,14 @@
       "final_url": "https://www.sanity.io/?ref=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "screen-studio",
+      "target_url": "https://www.screen-studio.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.screen-studio.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')))"
     },
     {
       "slug": "speechify",

@@ -105,7 +105,7 @@ Tally rethinks form building by offering a Notion-inspired text-based interface 
 - **Unlimited forms and responses on the free plan**
 - **Advanced conditional logic and hidden fields**
 - **Native Stripe payment collection**
-- **Direct integrations with Notion, Airtable, Google Sheets, and Webhooks**
+- **Direct integrations with Notion, [Airtable](/reviews/airtable), Google Sheets, and Webhooks**
 
 ## Pricing Overview
 

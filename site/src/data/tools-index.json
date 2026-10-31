@@ -420,6 +420,16 @@
     "commission_rate": "Custom / Enterprise referral structure"
   },
   {
+    "name": "Screen Studio",
+    "slug": "screen-studio",
+    "tagline": "Turn ordinary screen recordings into cinematic promotional videos with automated zoom and smooth cursor tracking.",
+    "category": "AI Video & Screen Recording",
+    "rating": 4.8,
+    "starting_price": "$89",
+    "best_for": "SaaS founders, product managers, developer advocates, and content creators looking to make high-end product demos quickly.",
+    "affiliate_url": "https://screen.studio"
+  },
+  {
     "name": "Submagic",
     "slug": "submagic",
     "tagline": "AI-powered video captioning and editing tool that transforms raw footage into viral short-form clips in minutes.",
