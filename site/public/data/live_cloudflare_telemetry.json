@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-31T09:12:01.707871",
+  "last_synced": "2026-10-31T10:12:15.371827",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5908,
-  "total_requests": 41775,
-  "total_visits": 1831,
-  "total_pageviews": 8983,
+  "total_visitors_network": 5920,
+  "total_requests": 41967,
+  "total_visits": 1835,
+  "total_pageviews": 9051,
   "percent_cached": "56.14%",
-  "data_served_mb": 415.3,
+  "data_served_mb": 416.9,
   "top_pages": [
     {
       "path": "/",
-      "views": 1910
+      "views": 1940
     },
     {
       "path": "/calculator/",
@@ -27,12 +27,12 @@
       "views": 160
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 140
     },
     {
-      "path": "/blog/",
-      "views": 130
+      "path": "/blog/make-automation-revolution/",
+      "views": 140
     },
     {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
@@ -43,12 +43,20 @@
       "views": 110
     },
     {
+      "path": "/radar/",
+      "views": 100
+    },
+    {
       "path": "/reviews/beehiiv/",
       "views": 100
     },
     {
-      "path": "/radar/",
-      "views": 100
+      "path": "/deals/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 90
     },
     {
       "path": "/blog/apollo-io-vs-lusha/",
@@ -59,22 +67,14 @@
       "views": 90
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 90
-    },
-    {
       "path": "/reviews/adcreative-ai/",
-      "views": 90
-    },
-    {
-      "path": "/deals/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 8100
+      "views": 8180
     },
     {
       "country": "Morocco",
@@ -89,16 +89,16 @@
       "views": 470
     },
     {
+      "country": "Netherlands",
+      "views": 360
+    },
+    {
       "country": "Canada",
       "views": 340
     },
     {
-      "country": "Netherlands",
-      "views": 330
-    },
-    {
       "country": "Singapore",
-      "views": 300
+      "views": 310
     },
     {
       "country": "India",
