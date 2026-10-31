@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-31T16:53:41.890292",
+  "last_synced": "2026-10-31T17:23:49.894039",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 6027,
-  "total_requests": 42747,
-  "total_visits": 1868,
-  "total_pageviews": 9342,
+  "total_visitors_network": 6040,
+  "total_requests": 42834,
+  "total_visits": 1872,
+  "total_pageviews": 9373,
   "percent_cached": "56.14%",
-  "data_served_mb": 427.0,
+  "data_served_mb": 428.0,
   "top_pages": [
     {
       "path": "/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/calculator/",
-      "views": 300
+      "views": 310
     },
     {
       "path": "/awards/",
@@ -27,19 +27,19 @@
       "views": 160
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 140
-    },
-    {
       "path": "/blog/",
       "views": 140
     },
     {
-      "path": "/radar/",
-      "views": 120
+      "path": "/blog/make-automation-revolution/",
+      "views": 140
     },
     {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "views": 120
+    },
+    {
+      "path": "/radar/",
       "views": 120
     },
     {
@@ -51,10 +51,6 @@
       "views": 100
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
-      "views": 90
-    },
-    {
       "path": "/reviews/make/",
       "views": 90
     },
@@ -63,18 +59,22 @@
       "views": 90
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 90
+    },
+    {
+      "path": "/deals/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 8490
+      "views": 8550
     },
     {
       "country": "Morocco",
