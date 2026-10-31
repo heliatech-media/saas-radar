@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-10-31 08:53:38 UTC",
+  "last_updated": "2026-10-31 09:34:38 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 53,
-    "total_published_investigations": 123,
-    "reviews_audited": 53,
-    "masterclasses_and_duels": 70,
+    "total_published_investigations": 125,
+    "reviews_audited": 54,
+    "masterclasses_and_duels": 71,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$18,550 USD",
@@ -340,6 +340,13 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-25 08:04:57",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-10-25 03:32:39",
       "title": "Cycle Autonome #Podcastle",
       "category": "CYCLE",
@@ -366,13 +373,6 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `notion-ai, transistor`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
-    },
-    {
-      "timestamp": "2026-10-25 00:03:25",
-      "title": "Cycle Autonome #Descript",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]
 }

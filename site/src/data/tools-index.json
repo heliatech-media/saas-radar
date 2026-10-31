@@ -55,6 +55,16 @@
     "commission_rate": "€5 per free account signup + up to €500 per paid plan subscription"
   },
   {
+    "name": "Cal.com",
+    "slug": "cal-com",
+    "tagline": "The open-source infrastructure for scheduling meetings at scale",
+    "category": "Automation",
+    "rating": 4.7,
+    "starting_price": "$15/user/mo",
+    "best_for": "Engineering-led teams, agencies, and enterprises requiring white-labeled, API-driven scheduling workflows.",
+    "affiliate_url": "https://cal.com"
+  },
+  {
     "name": "Castmagic",
     "slug": "castmagic",
     "tagline": "Turn long-form audio and video recordings into show notes, blog posts, and social clips instantly with AI.",
