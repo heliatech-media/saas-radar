@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-31T10:12:16.008790",
+  "last_synced": "2026-10-31T10:42:22.554203",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5920,
-  "total_requests": 41967,
-  "total_visits": 1835,
-  "total_pageviews": 9051,
+  "total_visitors_network": 5931,
+  "total_requests": 42026,
+  "total_visits": 1838,
+  "total_pageviews": 9074,
   "percent_cached": "56.14%",
-  "data_served_mb": 416.9,
+  "data_served_mb": 417.9,
   "top_pages": [
     {
       "path": "/",
@@ -27,11 +27,11 @@
       "views": 160
     },
     {
-      "path": "/blog/",
+      "path": "/blog/make-automation-revolution/",
       "views": 140
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/blog/",
       "views": 140
     },
     {
@@ -51,7 +51,11 @@
       "views": 100
     },
     {
-      "path": "/deals/",
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/make/",
       "views": 90
     },
     {
@@ -59,11 +63,7 @@
       "views": 90
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/make/",
+      "path": "/deals/",
       "views": 90
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 8180
+      "views": 8190
     },
     {
       "country": "Morocco",
