@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-31T07:41:38.100950",
+  "last_synced": "2026-10-31T08:11:44.495769",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5871,
-  "total_requests": 41532,
-  "total_visits": 1820,
-  "total_pageviews": 8877,
+  "total_visitors_network": 5883,
+  "total_requests": 41602,
+  "total_visits": 1823,
+  "total_pageviews": 8903,
   "percent_cached": "56.14%",
-  "data_served_mb": 411.3,
+  "data_served_mb": 411.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 1880
+      "views": 1890
     },
     {
       "path": "/calculator/",
@@ -59,11 +59,11 @@
       "views": 90
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 90
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 8010
+      "views": 8030
     },
     {
       "country": "Morocco",
@@ -94,11 +94,11 @@
     },
     {
       "country": "Netherlands",
-      "views": 320
+      "views": 330
     },
     {
       "country": "Singapore",
-      "views": 280
+      "views": 300
     },
     {
       "country": "France",
