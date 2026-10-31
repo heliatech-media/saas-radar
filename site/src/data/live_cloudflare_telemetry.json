@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-10-31T14:43:20.063582",
+  "last_synced": "2026-10-31T15:23:26.806872",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 6006,
-  "total_requests": 42540,
-  "total_visits": 1861,
-  "total_pageviews": 9267,
+  "total_visitors_network": 6016,
+  "total_requests": 42617,
+  "total_visits": 1864,
+  "total_pageviews": 9293,
   "percent_cached": "56.14%",
-  "data_served_mb": 424.6,
+  "data_served_mb": 426.1,
   "top_pages": [
     {
       "path": "/",
-      "views": 1950
+      "views": 1960
     },
     {
       "path": "/calculator/",
-      "views": 260
+      "views": 280
     },
     {
       "path": "/awards/",
@@ -39,12 +39,12 @@
       "views": 120
     },
     {
-      "path": "/sentinel/",
+      "path": "/radar/",
       "views": 110
     },
     {
-      "path": "/radar/",
-      "views": 100
+      "path": "/sentinel/",
+      "views": 110
     },
     {
       "path": "/reviews/beehiiv/",
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 8370
+      "views": 8420
     },
     {
       "country": "Morocco",
@@ -93,12 +93,12 @@
       "views": 360
     },
     {
-      "country": "Canada",
-      "views": 340
+      "country": "Singapore",
+      "views": 350
     },
     {
-      "country": "Singapore",
-      "views": 330
+      "country": "Canada",
+      "views": 340
     },
     {
       "country": "India",
