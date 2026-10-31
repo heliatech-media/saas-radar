@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-31T05:21:00.164269",
+  "last_synced": "2026-10-31T05:51:06.711303",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 5795,
-  "total_requests": 41317,
-  "total_visits": 1796,
-  "total_pageviews": 8775,
+  "total_visitors_network": 5812,
+  "total_requests": 41355,
+  "total_visits": 1801,
+  "total_pageviews": 8790,
   "percent_cached": "56.14%",
-  "data_served_mb": 408.9,
+  "data_served_mb": 409.2,
   "top_pages": [
     {
       "path": "/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/calculator/",
-      "views": 210
+      "views": 220
     },
     {
       "path": "/awards/",
@@ -59,11 +59,11 @@
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/radar/",
       "views": 90
     },
     {
-      "path": "/radar/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 7830
+      "views": 7880
     },
     {
       "country": "Morocco",
