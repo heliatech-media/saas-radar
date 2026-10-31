@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-10-31T22:14:56.104925",
+  "last_synced": "2026-10-31T22:55:03.216304",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-03 - 2026-10-31)",
-  "total_visitors_network": 6197,
-  "total_requests": 43639,
-  "total_visits": 1921,
-  "total_pageviews": 9651,
+  "total_visitors_network": 6210,
+  "total_requests": 43729,
+  "total_visits": 1925,
+  "total_pageviews": 9685,
   "percent_cached": "56.14%",
-  "data_served_mb": 436.2,
+  "data_served_mb": 438.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 2010
+      "views": 2020
     },
     {
       "path": "/calculator/",
@@ -35,11 +35,11 @@
       "views": 140
     },
     {
-      "path": "/radar/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/radar/",
       "views": 120
     },
     {
@@ -51,11 +51,15 @@
       "views": 100
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/reviews/make/",
       "views": 90
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/apollo-io/",
+      "views": 90
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
@@ -63,18 +67,14 @@
       "views": 90
     },
     {
-      "path": "/reviews/make/",
-      "views": 90
-    },
-    {
-      "path": "/reviews/apollo-io/",
+      "path": "/deals/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 8920
+      "views": 8970
     },
     {
       "country": "Morocco",
@@ -90,7 +90,7 @@
     },
     {
       "country": "Singapore",
-      "views": 390
+      "views": 410
     },
     {
       "country": "Netherlands",
