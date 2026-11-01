@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-01T06:37:12.774876",
+  "last_synced": "2026-11-01T07:07:21.468716",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7427,
-  "total_requests": 46812,
-  "total_visits": 2302,
-  "total_pageviews": 10644,
+  "total_visitors_network": 7437,
+  "total_requests": 46885,
+  "total_visits": 2305,
+  "total_pageviews": 10678,
   "percent_cached": "56.14%",
-  "data_served_mb": 467.1,
+  "data_served_mb": 467.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 2060
+      "views": 2070
     },
     {
       "path": "/calculator/",
@@ -55,6 +55,10 @@
       "views": 110
     },
     {
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 100
+    },
+    {
       "path": "/blog/framer-evolution-guide-2026/",
       "views": 100
     },
@@ -65,16 +69,12 @@
     {
       "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 100
-    },
-    {
-      "path": "/blog/apollo-io-vs-lusha/",
-      "views": 100
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9420
+      "views": 9440
     },
     {
       "country": "Morocco",
