@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import LeadMagnetDrawer from '../components/LeadMagnetDrawer.astro';
 
 interface Props {
   title: string;
@@ -415,5 +416,6 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <!-- Cloudflare Web Analytics (Official Zero-Cookie Privacy-Preserving Telemetry) -->
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c3360d131e3241459e695ed9dd51a825"}'></script>
     <!-- End Cloudflare Web Analytics -->
+    <LeadMagnetDrawer />
   </body>
 </html>

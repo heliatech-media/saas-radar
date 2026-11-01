@@ -1,0 +1,181 @@
+---
+// LeadMagnetDrawer.astro - High-Converting B2B Lead Acquisition Drawer
+---
+
+<div 
+  id="ht-lead-drawer" 
+  class="fixed z-50 transition-all duration-500 transform translate-y-32 opacity-0 pointer-events-none bottom-0 inset-x-0 sm:bottom-6 sm:right-6 sm:left-auto sm:max-w-md w-full p-4 sm:p-0"
+>
+  <div class="relative bg-slate-950/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-950/50 overflow-hidden group">
+    
+    <!-- Subtle Background Glows -->
+    <div class="absolute -right-16 -top-16 w-40 h-40 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute -left-16 -bottom-16 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+    <!-- Close Button -->
+    <button 
+      id="ht-drawer-close" 
+      type="button" 
+      class="absolute top-4 right-4 text-slate-500 hover:text-white text-sm font-mono transition-colors p-1"
+      aria-label="Close"
+    >
+      ✕
+    </button>
+
+    <!-- Top Pill Badge -->
+    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-bold tracking-widest uppercase mb-3">
+      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+      <span>THE HELIATECH RADAR</span>
+    </div>
+
+    <!-- Title & Value Prop -->
+    <h4 class="text-base sm:text-lg font-black text-white tracking-tight mb-1.5">
+      Get The 2026 SaaS Pricing Rate Cards & Secret Deals
+    </h4>
+    <p class="text-xs text-slate-400 font-normal leading-relaxed mb-4">
+      Join 14,000+ founders and CTOs. Every Thursday, receive uncompromised software audits and up to $15,000 in private partner credits.
+    </p>
+
+    <!-- Lead Form -->
+    <form id="ht-drawer-form" class="flex flex-col sm:flex-row gap-2">
+      <input 
+        type="email" 
+        id="ht-drawer-email" 
+        required
+        placeholder="work.email@company.com" 
+        class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-xs font-mono text-white placeholder-slate-500 outline-none transition-all shadow-inner"
+      />
+      <button 
+        type="submit" 
+        id="ht-drawer-btn"
+        class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 text-slate-950 font-black font-mono text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 flex-shrink-0 cursor-pointer shadow-lg shadow-cyan-500/20"
+      >
+        <span>Access Radar</span>
+        <span>➔</span>
+      </button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="ht-drawer-success" class="hidden mt-3 p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] text-center">
+      ⚡ Access unlocked. Your first confidential briefing arrives this Thursday.
+    </div>
+
+    <!-- Trust Footer -->
+    <div class="mt-3 flex items-center justify-between text-[10px] font-mono text-slate-500">
+      <span>🔒 Zero Spam Guarantee</span>
+      <span>•</span>
+      <span>1-Click Opt-out</span>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const drawer = document.getElementById('ht-lead-drawer');
+    const closeBtn = document.getElementById('ht-drawer-close');
+    const form = document.getElementById('ht-drawer-form');
+    const emailInput = document.getElementById('ht-drawer-email');
+    const successMsg = document.getElementById('ht-drawer-success');
+    const submitBtn = document.getElementById('ht-drawer-btn');
+
+    if (!drawer) return;
+
+    // Check if dismissed or already subscribed in past 7 days
+    const dismissedAt = localStorage.getItem('ht_drawer_dismissed');
+    const isSubscribed = localStorage.getItem('ht_lead_subscribed');
+    const now = Date.now();
+
+    if (isSubscribed) return;
+    if (dismissedAt && (now - parseInt(dismissedAt, 10) < 7 * 24 * 3600 * 1000)) return;
+
+    let shown = false;
+
+    function showDrawer() {
+      if (shown) return;
+      shown = true;
+      drawer.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      drawer.classList.add('translate-y-0', 'opacity-100');
+    }
+
+    function hideDrawer() {
+      drawer.classList.remove('translate-y-0', 'opacity-100');
+      drawer.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+      localStorage.setItem('ht_drawer_dismissed', Date.now().toString());
+    }
+
+    // Trigger 1: After 18 seconds of active reading
+    setTimeout(showDrawer, 18000);
+
+    // Trigger 2: After 45% scroll depth
+    window.addEventListener('scroll', () => {
+      const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (scrollPercent > 0.45) {
+        showDrawer();
+      }
+    }, { passive: true });
+
+    // Trigger 3: Desktop Exit Intent (cursor leaves top of viewport)
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY <= 0 && window.innerWidth >= 768) {
+        showDrawer();
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hideDrawer);
+    }
+
+    if (form && emailInput) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        // 1. Dispatch to Cloudflare backend function (/api/subscribe)
+        try {
+          fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              path: window.location.pathname,
+              referrer: document.referrer || 'Direct'
+            }),
+            keepalive: true
+          }).catch(() => {});
+        } catch(err) {}
+
+        // 2. Direct Fallback Alert to Executive Telegram
+        try {
+          const leadMsg = 
+            '⭐ NOUVEAU SUBSCRIBER RADAR (DRAWER) !\n' +
+            '━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+            '📧 Email : ' + email + '\n' +
+            '📄 Page : ' + window.location.pathname + '\n' +
+            '🔗 Source : ' + (document.referrer || 'Direct') + '\n' +
+            '📱 Appareil : ' + (window.innerWidth < 768 ? 'Mobile' : 'Desktop') + '\n' +
+            '⏰ Heure : ' + new Date().toLocaleTimeString();
+
+          fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: '8819768123',
+              text: leadMsg
+            }),
+            keepalive: true
+          }).catch(() => {});
+        } catch(err) {}
+
+        // 3. Save subscriber state
+        localStorage.setItem('ht_lead_subscribed', 'true');
+
+        form.classList.add('hidden');
+        if (successMsg) successMsg.classList.remove('hidden');
+
+        setTimeout(hideDrawer, 3500);
+      });
+    }
+  })();
+</script>

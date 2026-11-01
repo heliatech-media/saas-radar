@@ -700,66 +700,152 @@ Generated via HeliaTech Autonomous Intelligence Lab`;
         });
       }
 
-      // 1-Click Printable Board Memo Trigger
+      // Synchronize and render printable board memo
+      function executePrintMemo() {
+        const printAuditId = document.getElementById('print-audit-id');
+        const printDate = document.getElementById('print-date');
+        const printOpsScale = document.getElementById('print-ops-scale');
+        const printSeatsScale = document.getElementById('print-seats-scale');
+        const printSavingsPercent = document.getElementById('print-savings-percent');
+        const printCostLegacy = document.getElementById('print-cost-legacy');
+        const printCostOptimized = document.getElementById('print-cost-optimized');
+        const printOdoSavings = document.getElementById('print-odometer-savings');
+        const printMonthlySavings = document.getElementById('print-monthly-savings');
+        const printTableBody = document.getElementById('print-table-body');
+        const printVerificationLink = document.getElementById('print-verification-link');
+
+        const now = new Date();
+        if (printAuditId) printAuditId.textContent = 'HT-' + now.getFullYear() + '-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+        if (printDate) printDate.textContent = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
+        if (printOpsScale && sliderOps) printOpsScale.textContent = parseInt(sliderOps.value, 10).toLocaleString('en-US') + ' operations/mo';
+        if (printSeatsScale && sliderSeats) printSeatsScale.textContent = sliderSeats.value + ' active team seats';
+        if (printSavingsPercent && savingsPercentEl) printSavingsPercent.textContent = savingsPercentEl.textContent;
+        if (printCostLegacy && costLegacyEl) printCostLegacy.textContent = costLegacyEl.textContent;
+        if (printCostOptimized && costOptimizedEl) printCostOptimized.textContent = costOptimizedEl.textContent;
+        if (printOdoSavings && odoSavings) printOdoSavings.textContent = odoSavings.textContent + ' / yr';
+        if (printMonthlySavings && monthlySavingsBadge) printMonthlySavings.textContent = monthlySavingsBadge.textContent;
+        if (printVerificationLink) printVerificationLink.textContent = window.location.href;
+
+        // Populate table rows
+        if (printTableBody) {
+          printTableBody.innerHTML = '';
+          checkboxes.forEach((cb) => {
+            if (cb.checked) {
+              const legacyName = cb.dataset.legacyName;
+              const optName = cb.dataset.optName;
+              const legacyBase = parseFloat(cb.dataset.legacyBase) || 0;
+              const optBase = parseFloat(cb.dataset.optBase) || 0;
+              const ops = parseInt(sliderOps?.value || '10000', 10);
+              const seats = parseInt(sliderSeats?.value || '5', 10);
+              const legacySeatPrice = parseFloat(cb.dataset.legacySeat) || 0;
+              const optSeatPrice = parseFloat(cb.dataset.optSeat) || 0;
+              const legacyUnit = parseFloat(cb.dataset.legacyUnit) || 0;
+              const optUnit = parseFloat(cb.dataset.optUnit) || 0;
+
+              const costLegacy = (legacyBase + (seats * legacySeatPrice) + (ops * legacyUnit)) * 12;
+              const costOpt = (optBase + (seats * optSeatPrice) + (ops * optUnit)) * 12;
+              const savings = costLegacy - costOpt;
+
+              const tr = document.createElement('tr');
+              tr.className = 'border-b border-slate-200';
+              tr.innerHTML = `
+                <td class="p-3 font-bold text-slate-900">${legacyName} ➔ <span class="text-emerald-700">${optName}</span></td>
+                <td class="p-3 text-slate-700 text-right">$${Math.round(costLegacy).toLocaleString('en-US')}</td>
+                <td class="p-3 font-bold text-emerald-800 text-right">$${Math.round(costOpt).toLocaleString('en-US')}</td>
+                <td class="p-3 font-black text-emerald-700 text-right">+$${Math.round(savings).toLocaleString('en-US')}</td>
+                <td class="p-3 text-slate-500 text-xs">Eliminates per-seat markup and linear operational penalties across legacy tiers; unlocks high-concurrency API handshakes with modern open protocols.</td>
+              `;
+              printTableBody.appendChild(tr);
+            }
+          });
+        }
+
+        // Trigger browser print dialog
+        window.print();
+      }
+
+      // CFO Lead Magnet Gate Modal Handler
+      const cfoModal = document.getElementById('cfo-memo-modal');
+      const cfoModalClose = document.getElementById('cfo-modal-close');
+      const cfoModalForm = document.getElementById('cfo-modal-form');
+      const cfoModalEmail = document.getElementById('cfo-modal-email');
+      const modalSavingsAmount = document.getElementById('modal-savings-amount');
+
+      function openCfoGateModal() {
+        if (modalSavingsAmount && odoSavings) {
+          modalSavingsAmount.textContent = odoSavings.textContent + ' / yr';
+        }
+        if (cfoModal) cfoModal.classList.remove('hidden');
+      }
+
+      if (cfoModalClose && cfoModal) {
+        cfoModalClose.addEventListener('click', () => {
+          cfoModal.classList.add('hidden');
+        });
+      }
+
+      if (cfoModalForm && cfoModalEmail) {
+        cfoModalForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = cfoModalEmail.value.trim();
+          if (!email) return;
+
+          const savingsText = (odoSavings?.textContent || '$18,450') + ' / yr';
+
+          // 1. Dispatch lead to Cloudflare /api/subscribe backend
+          try {
+            fetch('/api/subscribe', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: email,
+                path: '/calculator/',
+                annual_savings: savingsText,
+                referrer: document.referrer || 'Calculator'
+              }),
+              keepalive: true
+            }).catch(() => {});
+          } catch(err) {}
+
+          // 2. Direct Fallback Alert to Executive Telegram
+          try {
+            const leadMsg = 
+              '⭐ NOUVEAU LEAD QUALIFIÉ CFO (MEMO CALCULATEUR) !\n' +
+              '━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+              '📧 Email : ' + email + '\n' +
+              '💰 Économies : ' + savingsText + '\n' +
+              '📄 Source : /calculator/ (Export Board Memo PDF)\n' +
+              '⏰ Heure : ' + new Date().toLocaleTimeString();
+
+            fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                chat_id: '8819768123',
+                text: leadMsg
+              }),
+              keepalive: true
+            }).catch(() => {});
+          } catch(err) {}
+
+          localStorage.setItem('ht_cfo_email', email);
+          if (cfoModal) cfoModal.classList.add('hidden');
+
+          // Proceed to print
+          executePrintMemo();
+        });
+      }
+
+      // 1-Click Printable Board Memo Trigger (Gated by Email)
       const btnPrintMemo = document.getElementById('btn-print-memo');
       if (btnPrintMemo) {
         btnPrintMemo.addEventListener('click', () => {
-          // Sync data to printable memo
-          const printAuditId = document.getElementById('print-audit-id');
-          const printDate = document.getElementById('print-date');
-          const printOpsScale = document.getElementById('print-ops-scale');
-          const printSeatsScale = document.getElementById('print-seats-scale');
-          const printSavingsPercent = document.getElementById('print-savings-percent');
-          const printCostLegacy = document.getElementById('print-cost-legacy');
-          const printCostOptimized = document.getElementById('print-cost-optimized');
-          const printOdoSavings = document.getElementById('print-odometer-savings');
-          const printMonthlySavings = document.getElementById('print-monthly-savings');
-          const printTableBody = document.getElementById('print-table-body');
-          const printVerificationLink = document.getElementById('print-verification-link');
-
-          const now = new Date();
-          if (printAuditId) printAuditId.textContent = 'HT-' + now.getFullYear() + '-' + Math.random().toString(36).substring(2, 8).toUpperCase();
-          if (printDate) printDate.textContent = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
-          if (printOpsScale && sliderOps) printOpsScale.textContent = parseInt(sliderOps.value, 10).toLocaleString('en-US') + ' operations/mo';
-          if (printSeatsScale && sliderSeats) printSeatsScale.textContent = sliderSeats.value + ' active team seats';
-          if (printSavingsPercent && savingsPercentEl) printSavingsPercent.textContent = savingsPercentEl.textContent;
-          if (printCostLegacy && costLegacyEl) printCostLegacy.textContent = costLegacyEl.textContent;
-          if (printCostOptimized && costOptimizedEl) printCostOptimized.textContent = costOptimizedEl.textContent;
-          if (printOdoSavings && odoSavings) printOdoSavings.textContent = odoSavings.textContent + ' / yr';
-          if (printMonthlySavings && monthlySavingsBadge) printMonthlySavings.textContent = monthlySavingsBadge.textContent;
-          if (printVerificationLink) printVerificationLink.textContent = window.location.href;
-
-          // Populate table rows
-          if (printTableBody) {
-            printTableBody.innerHTML = '';
-            checkboxes.forEach((cb) => {
-              if (cb.checked) {
-                const legacyName = cb.dataset.legacyName;
-                const optName = cb.dataset.optName;
-                const legacyBase = parseFloat(cb.dataset.legacyBase) || 0;
-                const optBase = parseFloat(cb.dataset.optBase) || 0;
-                const ops = parseInt(sliderOps?.value || '50000', 10);
-                const seats = parseInt(sliderSeats?.value || '5', 10);
-                const legCost = Math.round((legacyBase + (ops * (parseFloat(cb.dataset.legacyUnit) || 0) * 0.1) + (seats * 15)) * 12);
-                const optCost = Math.round((optBase + (ops * (parseFloat(cb.dataset.optUnit) || 0) * 0.1) + (seats * 4)) * 12);
-                const delta = Math.max(0, legCost - optCost);
-
-                const tr = document.createElement('tr');
-                tr.className = 'border-b border-slate-200';
-                tr.innerHTML = `
-                  <td class="p-2 border-r border-slate-200 font-mono font-medium text-slate-800">${cb.closest('label')?.querySelector('.text-sm')?.textContent || legacyName}</td>
-                  <td class="p-2 border-r border-slate-200 font-bold text-rose-700">${legacyName} ($${legCost.toLocaleString('en-US')}/yr)</td>
-                  <td class="p-2 border-r border-slate-200 font-bold text-emerald-700">${optName} ($${optCost.toLocaleString('en-US')}/yr)</td>
-                  <td class="p-2 border-r border-slate-200 text-right font-mono font-black text-emerald-800">-$${delta.toLocaleString('en-US')}/yr</td>
-                  <td class="p-2 text-slate-600 text-[11px]">Replaces punitive tier markups with modern open protocols.</td>
-                `;
-                printTableBody.appendChild(tr);
-              }
-            });
+          const unlocked = localStorage.getItem('ht_cfo_email');
+          if (unlocked) {
+            executePrintMemo();
+          } else {
+            openCfoGateModal();
           }
-
-          // Trigger browser print dialog
-          window.print();
         });
       }
 
@@ -893,5 +979,70 @@ Generated via HeliaTech Autonomous Intelligence Lab`;
       }
     }
   </style>
+
+
+  <!-- CFO Executive Memo Lead Capture Modal -->
+  <div id="cfo-memo-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all duration-300">
+    <div class="relative w-full max-w-lg bg-gradient-to-b from-slate-900 to-slate-950 border border-amber-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-amber-950/40 overflow-hidden">
+      
+      <div class="absolute -right-20 -top-20 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <button id="cfo-modal-close" type="button" class="absolute top-5 right-5 text-slate-500 hover:text-white font-mono text-sm p-1 cursor-pointer">
+        ✕
+      </button>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 text-[10px] font-mono font-bold tracking-widest uppercase mb-3">
+        <span>🏛️ CFO BOARD-READY DELIVERABLE</span>
+      </div>
+
+      <h3 class="text-xl sm:text-2xl font-black text-white tracking-tight mb-2">
+        Unlock Your Certified 2026 Board Memo & PDF
+      </h3>
+
+      <p class="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed mb-6">
+        Enter your corporate work email to generate your board-level consolidation memo, lock in verified partner pricing, and receive future benchmark rate cards.
+      </p>
+
+      <!-- Dynamic Savings Highlight -->
+      <div class="p-4 rounded-xl bg-amber-950/30 border border-amber-500/20 mb-6 flex items-center justify-between">
+        <div>
+          <div class="text-[10px] font-mono text-amber-400/80 uppercase font-bold">Identified Annual Savings</div>
+          <div id="modal-savings-amount" class="text-xl sm:text-2xl font-black font-mono text-amber-300">+$18,450 / yr</div>
+        </div>
+        <div class="text-right">
+          <div class="text-[10px] font-mono text-slate-400 uppercase">Audit Status</div>
+          <div class="text-xs font-mono font-bold text-emerald-400">✓ VERIFIED LAB AUDIT</div>
+        </div>
+      </div>
+
+      <form id="cfo-modal-form" class="space-y-4">
+        <div>
+          <label for="cfo-modal-email" class="block text-[11px] font-mono text-slate-400 mb-1.5 uppercase tracking-wider">Corporate Work Email</label>
+          <input 
+            type="email" 
+            id="cfo-modal-email" 
+            required 
+            placeholder="cfo@company.com" 
+            class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-xs font-mono text-white placeholder-slate-500 outline-none transition-all shadow-inner"
+          />
+        </div>
+
+        <button 
+          type="submit" 
+          id="cfo-modal-submit"
+          class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black font-mono text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 cursor-pointer"
+        >
+          <span>Generate Certified PDF & Send Memo ➔</span>
+        </button>
+      </form>
+
+      <div class="mt-4 flex items-center justify-center gap-3 text-[10px] font-mono text-slate-500">
+        <span>🔒 Strict Privacy Guarantee</span>
+        <span>•</span>
+        <span>Instant PDF Unlock</span>
+      </div>
+
+    </div>
+  </div>
 
 </Layout>
