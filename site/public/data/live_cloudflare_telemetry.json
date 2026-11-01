@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-01T15:29:26.877258",
+  "last_synced": "2026-11-01T15:59:33.873698",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7662,
-  "total_requests": 47823,
-  "total_visits": 2375,
-  "total_pageviews": 11003,
+  "total_visitors_network": 7672,
+  "total_requests": 47870,
+  "total_visits": 2378,
+  "total_pageviews": 11022,
   "percent_cached": "56.14%",
-  "data_served_mb": 490.3,
+  "data_served_mb": 491.0,
   "top_pages": [
     {
       "path": "/",
@@ -47,15 +47,15 @@
       "views": 120
     },
     {
-      "path": "/sentinel/",
-      "views": 110
-    },
-    {
       "path": "/reviews/heygen/",
       "views": 110
     },
     {
-      "path": "/terms/",
+      "path": "/sentinel/",
+      "views": 110
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 100
     },
     {
@@ -63,18 +63,18 @@
       "views": 100
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 100
     },
     {
-      "path": "/reviews/make/",
+      "path": "/terms/",
       "views": 100
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 10000
+      "views": 10020
     },
     {
       "country": "Morocco",
