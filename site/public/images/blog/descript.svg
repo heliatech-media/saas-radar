@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070913" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- UI & Accent Gradients -->
+    <linearGradient id="cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="glass-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur1" />
+      <feGaussianBlur stdDeviation="40" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Geometric Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.07" />
+    </pattern>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#8b5cf6" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bg-glow)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+  <rect width="1200" height="630" fill="url(#grid-fade)" />
+
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="200" cy="150" r="180" fill="#06b6d4" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="1000" cy="450" r="220" fill="#8b5cf6" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="850" cy="120" r="140" fill="#d946ef" opacity="0.08" filter="url(#glow-heavy)" />
+
+  <!-- HELIA TECH Brand Watermark / Geometric Accents -->
+  <g opacity="0.3">
+    <path d="M1100 50 L1150 78 L1150 135 L1100 163 L1050 135 L1050 78 Z" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <path d="M1100 70 L1133 89 L1133 124 L1100 143 L1067 124 L1067 89 Z" fill="none" stroke="#8b5cf6" stroke-width="0.75" />
+    <circle cx="1100" cy="106.5" r="4" fill="#06b6d4" />
+  </g>
+
+  <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+  <g transform="translate(80, 60)" filter="url(#drop-shadow)">
+    <rect x="0" y="0" width="310" height="34" rx="17" fill="url(#glass-bg)" stroke="url(#glass-border)" stroke-width="1.5" />
+    <!-- Glowing Pulsing Dot -->
+    <circle cx="22" cy="17" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+    <circle cx="22" cy="17" r="2" fill="#ffffff" />
+    <!-- Badge Text -->
+    <text x="38" y="21.5" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Typography: Main Title & Subtitle -->
+  <g transform="translate(80, 130)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" fill="#8b5cf6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="4" text-transform="uppercase">Audio/Podcasting • Enterprise Media Workflow</text>
+    
+    <!-- Main Title -->
+    <text x="0" y="46" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5">
+      DESCRIPT: <tspan fill="url(#cyan-violet)">The Word-Processor</tspan>
+    </text>
+    <text x="0" y="92" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5">
+      Paradigm Shift
+    </text>
+  </g>
+
+  <!-- 3D Vector Illustration: The Word-Processor to Audio/Video Neural Workspace -->
+  <g transform="translate(80, 260)" filter="url(#drop-shadow)">
+    
+    <!-- Main Glass Window (IDE / Editor Frame) -->
+    <rect x="0" y="0" width="1040" height="280" rx="16" fill="url(#glass-bg)" stroke="url(#glass-border)" stroke-width="1.5" />
+    
+    <!-- Window Header Bar -->
+    <path d="M 0 16 C 0 7.163 7.163 0 16 0 L 1024 0 C 1032.837 0 1040 7.163 1040 16 L 1040 44 L 0 44 Z" fill="#090d16" opacity="0.9" />
+    <!-- Window Controls -->
+    <circle cx="24" cy="22" r="6" fill="#ef4444" opacity="0.8" />
+    <circle cx="44" cy="22" r="6" fill="#f59e0b" opacity="0.8" />
+    <circle cx="64" cy="22" r="6" fill="#10b981" opacity="0.8" />
+    
+    <!-- Window Title pill in header -->
+    <rect x="420" y="14" width="200" height="16" rx="8" fill="#1e293b" opacity="0.8" />
+    <text x="520" y="25" fill="#94a3b8" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="1">DESCRIPT_CORE_V4.AI</text>
+
+    <!-- LEFT SIDE: Text Editing Paradigm (Word Processor view) -->
+    <g transform="translate(30, 70)">
+      <!-- Line Highlights & Text Blocks simulating script editing -->
+      <rect x="0" y="0" width="380" height="190" rx="8" fill="#030712" opacity="0.5" stroke="#1e293b" stroke-width="1" />
+      
+      <!-- Editor Header -->
+      <text x="20" y="28" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">SCRIPT_TIMELINE_SYNC</text>
+      <circle cx="350" cy="24" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+
+      <!-- Paragraph Lines with active edit highlighting -->
+      <g transform="translate(20, 55)" font-family="monospace" font-size="12">
+        <!-- Active deletion / edit line -->
+        <rect x="-6" y="-3" width="320" height="22" rx="4" fill="#d946ef" fill-opacity="0.12" stroke="#d946ef" stroke-width="0.75" />
+        <text x="0" y="12" fill="#f472b6" text-decoration="line-through">Uh, welcome to the enterprise architecture podcast...</text>
+        
+        <!-- Normal transcribed text lines -->
+        <text x="0" y="42" fill="#cbd5e1">Today we examine the paradigm shift of</text>
+        <text x="0" y="66" fill="#cbd5e1">audio editing translated directly into clean text.</text>
+        
+        <!-- AI Overdub / Studio Sound indicator block -->
+        <rect x="-6" y="85" width="335" height="42" rx="6" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-width="0.75" />
+        <text x="10" y="102" fill="#38bdf8" font-size="10" font-weight="bold">AI_STUDIO_SOUND_ENHANCEMENT</text>
+        <text x="10" y="118" fill="#94a3b8" font-size="11">Frequencies stabilized &amp; room noise excised.</text>
+      </g>
+    </g>
+
+    <!-- CENTRAL CONVERGENCE: Vector Transformation Nexus -->
+    <g transform="translate(450, 160)">
+      <!-- Connecting Flow Rays -->
+      <path d="M-30 0 L 30 0" stroke="url(#cyan-violet)" stroke-width="3" stroke-dasharray="6 4" filter="url(#glow-subtle)" />
+      <polygon points="25,-5 35,0 25,5" fill="#38bdf8" />
+      
+      <!-- Central Processing Core Icon -->
+      <circle cx="0" cy="0" r="32" fill="#090d16" stroke="url(#cyan-violet)" stroke-width="2" filter="url(#drop-shadow)" />
+      <circle cx="0" cy="0" r="24" fill="#1e293b" opacity="0.6" />
+      <!-- Inner geometric neural nodes -->
+      <path d="M-10 -10 L10 -10 L10 10 L-10 10 Z" fill="none" stroke="#d946ef" stroke-width="1.5" transform="rotate(45)" />
+      <circle cx="0" cy="0" r="6" fill="#06b6d4" filter="url(#glow-subtle)" />
+    </g>
+
+    <!-- RIGHT SIDE: 3D Holographic Audio Waveform & Neural Render Timeline -->
+    <g transform="translate(520, 70)">
+      <rect x="0" y="0" width="490" height="190" rx="8" fill="#030712" opacity="0.5" stroke="#1e293b" stroke-width="1" />
+
+      <!-- Timeline Header -->
+      <text x="20" y="28" fill="#d946ef" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">VECTOR_NEURAL_RENDER_STREAM</text>
+      <circle cx="460" cy="24" r="4" fill="#d946ef" filter="url(#glow-subtle)" />
+
+      <!-- 3D Isometric / Multi-layered Waveform Visualization -->
+      <g transform="translate(30, 50)">
+        <!-- Time grid markers -->
+        <line x1="0" y1="100" x2="430" y2="100" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+        <line x1="107" y1="10" x2="107" y2="110" stroke="#38bdf8" stroke-width="0.5" opacity="0.3" />
+        <line x1="214" y1="10" x2="214" y2="110" stroke="#38bdf8" stroke-width="0.5" opacity="0.3" />
+        <line x1="321" y1="10" x2="321" y2="110" stroke="#38bdf8" stroke-width="0.5" opacity="0.3" />
+
+        <!-- Layer 3 (Background Violet Wave) -->
+        <path d="M 0 60 Q 25 20, 50 60 T 100 60 T 150 40 T 200 70 T 250 30 T 300 60 T 350 50 T 400 60 L 430 60" 
+              fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.4" />
+
+        <!-- Layer 2 (Sky Blue Mid-tone Wave) -->
+        <path d="M 0 60 Q 30 80, 60 40 T 120 70 T 180 30 T 240 60 T 300 40 T 360 80 T 420 50 L 430 60" 
+              fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.7" />
+
+        <!-- Layer 1 (Foreground Cyan Luminous Wave with Glow) -->
+        <path d="M 0 60 C 40 10, 80 110, 120 60 C 160 10, 200 110, 240 60 C 280 10, 320 110, 360 60 C 400 20, 415 80, 430 60" 
+              fill="none" stroke="url(#cyan-violet)" stroke-width="3.5" filter="url(#glow-subtle)" />
+
+        <!-- Playhead Indicator Line -->
+        <g transform="translate(160, 0)">
+          <line x1="0" y1="0" x2="0" y2="120" stroke="#d946ef" stroke-width="2" filter="url(#glow-subtle)" />
+          <polygon points="-4,0 4,0 0,6" fill="#d946ef" />
+          <rect x="-18" y="-14" width="36" height="16" rx="4" fill="#d946ef" />
+          <text x="0" y="-3" fill="#ffffff" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">01:24</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Floating Enterprise Metrics / Badges on bottom of window -->
+    <g transform="translate(30, 230)">
+      <!-- Metric 1: Processing Speed -->
+      <rect x="0" y="0" width="160" height="34" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <circle cx="15" cy="17" r="4" fill="#06b6d4" />
+      <text x="28" y="14" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="9" font-weight="600">TRANSCRIPTION</text>
+      <text x="28" y="27" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">99.8% ACCURACY</text>
+
+      <!-- Metric 2: Multi-track Sync -->
+      <rect x="175" y="0" width="160" height="34" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <circle cx="190" cy="17" r="4" fill="#8b5cf6" />
+      <text x="203" y="14" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="9" font-weight="600">WORKFLOW</text>
+      <text x="203" y="27" fill="#c084fc" font-family="monospace" font-size="11" font-weight="bold">MULTI-TRACK SYNC</text>
+
+      <!-- Metric 3: Enterprise Security -->
+      <rect x="350" y="0" width="160" height="34" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <circle cx="365" cy="17" r="4" fill="#d946ef" />
+      <text x="378" y="14" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="9" font-weight="600">SECURITY</text>
+      <text x="378" y="27" fill="#f472b6" font-family="monospace" font-size="11" font-weight="bold">SOC2 COMPLIANT</text>
+    </g>
+
+  </g>
+
+</svg>

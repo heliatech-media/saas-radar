@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-01 09:24:39",
+  "timestamp": "2026-11-01 13:39:21",
   "total_articles_scanned": 130,
-  "average_authenticity_score": "92.5/100",
+  "average_authenticity_score": "92.4/100",
   "honest_tradeoffs_coverage": "100.0%",
-  "total_cliches_detected": 7,
+  "total_cliches_detected": 8,
   "status": "APPROVED_HIGH_INTEGRITY",
   "enforced_standards": [
     "Strict blacklisting of generic AI filler vocabulary",
