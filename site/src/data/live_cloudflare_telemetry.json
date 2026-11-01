@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-01T01:15:36.261922",
+  "last_synced": "2026-11-01T01:45:41.992755",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 6255,
-  "total_requests": 43954,
-  "total_visits": 1939,
-  "total_pageviews": 9775,
+  "total_visitors_network": 6271,
+  "total_requests": 44096,
+  "total_visits": 1944,
+  "total_pageviews": 9799,
   "percent_cached": "56.14%",
-  "data_served_mb": 441.5,
+  "data_served_mb": 442.7,
   "top_pages": [
     {
       "path": "/",
@@ -19,11 +19,11 @@
       "views": 350
     },
     {
-      "path": "/awards/",
+      "path": "/versus/",
       "views": 170
     },
     {
-      "path": "/versus/",
+      "path": "/awards/",
       "views": 170
     },
     {
@@ -51,11 +51,11 @@
       "views": 100
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/heygen/",
       "views": 90
     },
     {
@@ -63,22 +63,22 @@
       "views": 90
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/reviews/make/",
       "views": 90
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9030
+      "views": 9040
     },
     {
       "country": "Morocco",
-      "views": 2710
+      "views": 2720
     },
     {
       "country": "Belgium",
