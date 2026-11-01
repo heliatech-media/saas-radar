@@ -97,6 +97,7 @@ class TelegramCommander:
                 "  _Exemple:_ `/alternatives zapier` ou `/alternatives deel`\n"
                 "• `/newsletter` : Compiler et expédier la newsletter The Thursday Radar\n"
                 "• `/pitch` : Déclencher un pitch de partenariat B2B sponsorisé\n"
+                "• `/repondre <email> <question>` : Formuler un audit d'ingénierie avec liens affiliés\n"
                 "• `/cycle` : Déclencher un cycle de croissance complet\n"
                 "• `/cockpit` : Lien direct vers votre console secrète de supervision\n\n"
                 "Je suis à vos ordres."
@@ -264,6 +265,31 @@ class TelegramCommander:
                 res = agent.dispatch_pr_outreach(max_pitches=1)
                 self.send_message(chat_id, f"✅ *Pitch de partenariat envoyé !* ({res.get('dispatched_count', 0)} expédié(s))")
             threading.Thread(target=run_pitch, daemon=True).start()
+
+        elif cmd in ("/repondre", "/reply"):
+            if len(args) < 2:
+                self.send_message(chat_id, "⚠️ Usage : `/repondre <destinataire@email.com> <question ou sujet>`\n_Exemple :_ `/repondre client@saas.com Make vs Zapier pour 100k requetes`")
+                return
+
+            recipient = args[0]
+            question = " ".join(args[1:])
+            self.send_message(chat_id, f"💡 *Helia-EngineeringDesk formule l'audit pour `{recipient}`...*\nRecherche des benchmarks et des liens d'affiliation en cours.")
+
+            def run_reply():
+                from agents.engineering_desk_agent import EngineeringDeskAgent
+                agent = EngineeringDeskAgent()
+                reply_payload = agent.craft_engineering_reply(
+                    sender_email=recipient,
+                    subject="Your Infrastructure Question",
+                    message=question
+                )
+                success = agent.dispatch_reply(reply_payload)
+                if success:
+                    self.send_message(chat_id, f"✅ *Réponse officielle expédiée à `{recipient}` !*\nOutils recommandés : {', '.join(reply_payload['relevant_tools']) or 'Standard'}")
+                else:
+                    self.send_message(chat_id, f"❌ Erreur lors de l'expédition de la réponse à `{recipient}`.")
+
+            threading.Thread(target=run_reply, daemon=True).start()
 
         elif cmd == "/cycle":
             self.send_message(chat_id, "🚀 *Cycle de croissance autonome lancé immédiatement !*\nJe vous tiens informé dès la fin du déploiement.")

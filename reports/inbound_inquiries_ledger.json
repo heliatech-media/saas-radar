@@ -1,0 +1,14 @@
+{
+  "total_inquiries": 1,
+  "inquiries": [
+    {
+      "to": "hamzaelfahsi@gmail.com",
+      "subject": "Re: Question about Make vs Zapier pricing [HeliaTech Advisory]",
+      "dispatched_at": "2026-11-01T02:20:00.252634",
+      "tools_recommended": [
+        "Make",
+        "Zapier"
+      ]
+    }
+  ]
+}
