@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-01T09:27:54.882794",
+  "last_synced": "2026-11-01T10:08:02.706296",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7497,
-  "total_requests": 47114,
-  "total_visits": 2324,
-  "total_pageviews": 10761,
+  "total_visitors_network": 7507,
+  "total_requests": 47184,
+  "total_visits": 2327,
+  "total_pageviews": 10783,
   "percent_cached": "56.14%",
-  "data_served_mb": 472.3,
+  "data_served_mb": 474.8,
   "top_pages": [
     {
       "path": "/",
-      "views": 2080
+      "views": 2090
     },
     {
       "path": "/calculator/",
@@ -43,7 +43,7 @@
       "views": 120
     },
     {
-      "path": "/sentinel/",
+      "path": "/reviews/heygen/",
       "views": 110
     },
     {
@@ -51,7 +51,7 @@
       "views": 110
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/sentinel/",
       "views": 110
     },
     {
@@ -63,18 +63,18 @@
       "views": 100
     },
     {
-      "path": "/reviews/make/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 100
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/reviews/make/",
       "views": 100
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9580
+      "views": 9610
     },
     {
       "country": "Morocco",
