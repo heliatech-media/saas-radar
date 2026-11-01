@@ -9,8 +9,18 @@ export async function onRequestOptions() {
     status: 204,
     headers: {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+}
+
+export async function onRequestGet() {
+  return new Response(JSON.stringify({ status: "active", service: "heliatech-newsletter-api" }), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     },
   });
 }
