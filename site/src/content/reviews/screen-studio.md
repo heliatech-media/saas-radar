@@ -6,7 +6,7 @@ tagline: Turn ordinary screen recordings into cinematic promotional videos with 
 category: AI Video & Screen Recording
 rating: 4.8
 website_url: https://screen.studio
-affiliate_url: https://screen.studio
+affiliate_url: "https://screen.studio/?via=heliatech"
 summary: Screen Studio is a macOS screen recorder that automatically adds professional
   zoom-ins, smooth cursor interpolation, and dynamic framing to your tutorials and
   product demos. It eliminates the need for complex keyframing in traditional video

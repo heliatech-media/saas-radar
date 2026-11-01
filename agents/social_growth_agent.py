@@ -148,8 +148,8 @@ No markdown fences or commentary.
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                    print(f"[SOCIAL AGENT] ⏳ Free tier rate-limit on X thread (attempt {attempt+1}/3). Backing off 20s...")
-                    time.sleep(20)
+                    print(f"[SOCIAL AGENT] ⏳ Free tier rate-limit on X thread (attempt {attempt+1}/3). Retrying in 2s...")
+                    time.sleep(2)
                 else:
                     print(f"[SOCIAL AGENT] ⚠️ X thread generation error: {e}")
                     break
@@ -285,8 +285,8 @@ We just published our complete architectural teardown and hands-on workshop on t
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                    print(f"[SOCIAL AGENT] ⏳ Free tier rate-limit on LinkedIn post (attempt {attempt+1}/3). Backing off 20s...")
-                    time.sleep(20)
+                    print(f"[SOCIAL AGENT] ⏳ Free tier rate-limit on LinkedIn post (attempt {attempt+1}/3). Retrying in 2s...")
+                    time.sleep(2)
                 else:
                     print(f"[SOCIAL AGENT] ⚠️ Error generating LinkedIn post: {e}")
                     break

@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 1,
+  "total_sent": 2,
   "dispatches": [
     {
       "type": "weekly_radar",
@@ -8,6 +8,13 @@
       "recipient": "hamzaelfahsi@gmail.com",
       "dispatched_at": "2026-11-01T02:09:31.619376",
       "resend_id": "01a194a7-8cf6-79a8-b193-be15a9cd816d"
+    },
+    {
+      "type": "sponsor_pitch",
+      "brand": "Make",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "dispatched_at": "2026-11-01T02:37:01.308420",
+      "resend_id": "01a194c0-b72e-74e8-bdd1-3223259668a1"
     }
   ],
   "active_campaigns": {
@@ -16,8 +23,10 @@
       "current_issue": 43
     },
     "pr_outreach": {
-      "last_sent": null,
-      "sent_brands": []
+      "last_sent": "2026-11-01T02:37:01.308429",
+      "sent_brands": [
+        "Make"
+      ]
     }
   }
 }

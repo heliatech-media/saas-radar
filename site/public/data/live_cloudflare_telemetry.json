@@ -1,61 +1,53 @@
 {
-  "last_synced": "2026-11-01T08:57:46.564947",
+  "last_synced": "2026-11-01T09:21:43.171501",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7470,
-  "total_requests": 47067,
-  "total_visits": 2315,
-  "total_pageviews": 10738,
+  "total_visitors_network": 7488,
+  "total_requests": 47098,
+  "total_visits": 2321,
+  "total_pageviews": 10755,
   "percent_cached": "56.14%",
-  "data_served_mb": 470.1,
+  "data_served_mb": 471.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 2280
+      "views": 2080
     },
     {
       "path": "/calculator/",
-      "views": 380
-    },
-    {
-      "path": "/radar/",
-      "views": 180
-    },
-    {
-      "path": "/blog/",
-      "views": 140
-    },
-    {
-      "path": "/terms/",
-      "views": 130
-    },
-    {
-      "path": "/versus/",
-      "views": 120
-    },
-    {
-      "path": "/blog/make-automation-revolution/",
-      "views": 120
+      "views": 460
     },
     {
       "path": "/awards/",
+      "views": 180
+    },
+    {
+      "path": "/versus/",
+      "views": 170
+    },
+    {
+      "path": "/blog/",
+      "views": 150
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
+      "views": 140
+    },
+    {
+      "path": "/radar/",
+      "views": 130
+    },
+    {
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/reviews/resend/",
-      "views": 120
+      "path": "/sentinel/",
+      "views": 110
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/elevenlabs/",
+      "path": "/reviews/heygen/",
       "views": 110
     },
     {
@@ -63,54 +55,62 @@
       "views": 110
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 110
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 100
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 110
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 100
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 100
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 100
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9540
+      "views": 9580
     },
     {
       "country": "Morocco",
-      "views": 2850
+      "views": 3060
     },
     {
       "country": "Germany",
-      "views": 880
+      "views": 740
     },
     {
       "country": "Belgium",
-      "views": 660
+      "views": 550
     },
     {
       "country": "Singapore",
-      "views": 420
+      "views": 440
+    },
+    {
+      "country": "Netherlands",
+      "views": 380
     },
     {
       "country": "United Kingdom",
-      "views": 390
+      "views": 350
     },
     {
       "country": "Canada",
-      "views": 300
-    },
-    {
-      "country": "CN",
-      "views": 270
-    },
-    {
-      "country": "HK",
-      "views": 270
+      "views": 340
     },
     {
       "country": "India",
-      "views": 250
+      "views": 240
+    },
+    {
+      "country": "France",
+      "views": 230
     }
   ],
   "top_referrers": [

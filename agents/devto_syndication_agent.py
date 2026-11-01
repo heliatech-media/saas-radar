@@ -240,9 +240,20 @@ def publish_article(
     except urllib.error.HTTPError as e:
         error_body = e.read().decode("utf-8")
         print(f"[ERROR] HTTP Error {e.code}: {error_body}")
+        if e.code == 422 and "already been taken" in error_body:
+            print(f"[INFO] Article '{slug}' is already published on DEV.to. Recording in ledger and continuing...")
+            ledger = load_ledger()
+            ledger["syndicated_articles"][slug] = {
+                "id": "already_published",
+                "url": f"https://dev.to/{slug}",
+                "canonical_url": canonical_url,
+                "status": "already_published"
+            }
+            save_ledger(ledger)
+            return {"status": "already_published", "slug": slug}
         if e.code == 429:
             print("[INFO] DEV.to rate limit hit (max ~1 article per 30-60s on new accounts). Please wait a minute before publishing next article.")
-        raise
+        return {"status": "error", "code": e.code, "detail": error_body}
 
 
 if __name__ == "__main__":

@@ -117,5 +117,6 @@ AFFILIATE_MAP = {
     "julius-ai": "https://julius.ai/?via=heliatech",
     "sanity": "https://www.sanity.io/?ref=heliatech",
     "klaviyo": "https://partnerstack.com/klaviyo?via=heliatech",
-    "kit": "https://kit.com/?via=heliatech"
+    "kit": "https://kit.com/?via=heliatech",
+    "screen-studio": "https://screen.studio/?via=heliatech"
 }

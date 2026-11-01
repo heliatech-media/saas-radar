@@ -246,6 +246,38 @@
         "saas",
         "automation"
       ]
+    },
+    "elevenlabs-vs-heygen": {
+      "id": "already_published",
+      "url": "https://dev.to/elevenlabs-vs-heygen",
+      "canonical_url": "https://heliatech.online/blog/elevenlabs-vs-heygen",
+      "status": "already_published"
+    },
+    "framer-evolution-guide-2026": {
+      "id": 4955375,
+      "url": "https://dev.to/heliatech/framer-the-evolution-of-visual-react-development-and-the-hands-on-guide-to-enterprise-web-velocity-315n",
+      "title": "Framer: The Evolution of Visual React Development and the Hands-on Guide to Enterprise Web Velocity",
+      "canonical_url": "https://heliatech.online/blog/framer-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "framer",
+        "webdevelopment",
+        "uiuxdesign",
+        "saas"
+      ]
+    },
+    "heroku-free-tier-alternatives-2026": {
+      "id": 4956546,
+      "url": "https://dev.to/heliatech/heroku-free-tier-is-dead-the-7-best-modern-cloud-alternatives-in-2026-2o4e",
+      "title": "Heroku Free Tier Is Dead: The 7 Best Modern Cloud Alternatives in 2026",
+      "canonical_url": "https://heliatech.online/blog/heroku-free-tier-alternatives-2026",
+      "published": true,
+      "tags": [
+        "heroku",
+        "supabase",
+        "cloud",
+        "alternatives"
+      ]
     }
   },
   "last_sync": null

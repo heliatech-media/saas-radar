@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-31T13:11:07.353137",
+  "timestamp": "2026-11-01T09:23:11.778012",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 125,
-    "total_redirects_active": 78,
-    "new_redirects_healed": 25,
+    "total_content_files_scanned": 130,
+    "total_redirects_active": 80,
+    "new_redirects_healed": 24,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -77,36 +77,6 @@
       "source_file": "best-deel-alternatives-2026.md"
     },
     {
-      "slug": "screen-studio",
-      "target_url": "https://www.screen-studio.com",
-      "source_file": "screen-studio-evolution-guide-2026.md"
-    },
-    {
-      "slug": "relay",
-      "target_url": "https://www.relay.app",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "workato",
-      "target_url": "https://www.workato.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "activepieces",
-      "target_url": "https://www.activepieces.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "tray-io",
-      "target_url": "https://tray.ai",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "power-automate",
-      "target_url": "https://powerautomate.microsoft.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
       "source_file": "best-elevenlabs-alternatives-2026.md"
@@ -160,11 +130,6 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "kit",
-      "target_url": "https://www.kit.com",
-      "source_file": "kit-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

@@ -438,7 +438,8 @@
     "rating": 4.8,
     "starting_price": "$89",
     "best_for": "SaaS founders, product managers, developer advocates, and content creators looking to make high-end product demos quickly.",
-    "affiliate_url": "https://screen.studio"
+    "affiliate_url": "https://screen.studio/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Submagic",

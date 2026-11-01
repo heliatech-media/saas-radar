@@ -92,7 +92,7 @@ Type `/` to invoke the command menu.
 Select a multiple-choice question (e.g., *"What is your monthly marketing budget?"*). Click the settings gear and apply conditional logic: if the user selects "Under $5,000," route them to a tailored onboarding path; if they select "$50,000+", trigger a priority scheduling block.
 
 ### Step 4: Connect Your Stack & Publish
-Link your Notion database or Airtable base directly within the integration settings to ensure incoming leads automatically populate your CRM. Hit **Publish**, copy your clean, minimalist embed code or custom domain link, and deploy it live to your web property.
+Link your Notion database or [Airtable](/reviews/airtable) base directly within the integration settings to ensure incoming leads automatically populate your CRM. Hit **Publish**, copy your clean, minimalist embed code or custom domain link, and deploy it live to your web property.
 
 ## 4. Critical Assessment & Trade-offs
 
@@ -102,7 +102,7 @@ No software is a silver bullet. While Tally excels in speed, cost-efficiency, an
 | :--- | :--- | :--- | :--- |
 | **Pricing & Value** | Unmatched free tier with unlimited responses & zero branding. | Advanced team collaboration features require a paid upgrade. | Exceptional ROI for all company sizes. |
 | **Interface & UX** | Fast, keyboard-first, Notion-style text editing. | Lacks heavy drag-and-drop spatial canvas customization. | Perfect for speed; less ideal for pixel-obsessed designers. |
-| **Integrations & Logic** | Powerful conditional logic, Notion, Airtable, and Stripe sync. | Not built for ultra-complex enterprise compliance frameworks (e.g., advanced HIPAA). | Ideal for standard commercial use cases. |
+| **Integrations & Logic** | Powerful conditional logic, Notion, [Airtable](/reviews/airtable), and Stripe sync. | Not built for ultra-complex enterprise compliance frameworks (e.g., advanced HIPAA). | Ideal for standard commercial use cases. |
 | **Branding & Styling** | Clean, modern, distraction-free aesthetic out of the box. | Limited deep CSS injection compared to heavily branded form builders like Typeform. | Great for native site integration, less suited for flamboyant marketing landing pages. |
 
 ## 5. HeliaTech Final Verdict & Recommendation
