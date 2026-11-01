@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-01T01:45:42.804127",
+  "last_synced": "2026-11-01T01:55:45.757633",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 6271,
-  "total_requests": 44096,
-  "total_visits": 1944,
-  "total_pageviews": 9799,
+  "total_visitors_network": 6557,
+  "total_requests": 44651,
+  "total_visits": 2032,
+  "total_pageviews": 10146,
   "percent_cached": "56.14%",
-  "data_served_mb": 442.7,
+  "data_served_mb": 448.3,
   "top_pages": [
     {
       "path": "/",
@@ -16,14 +16,14 @@
     },
     {
       "path": "/calculator/",
-      "views": 350
-    },
-    {
-      "path": "/versus/",
-      "views": 170
+      "views": 390
     },
     {
       "path": "/awards/",
+      "views": 180
+    },
+    {
+      "path": "/versus/",
       "views": 170
     },
     {
@@ -47,19 +47,15 @@
       "views": 110
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 110
-    },
-    {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "path": "/reviews/heygen/",
       "views": 100
     },
     {
-      "path": "/reviews/adcreative-ai/",
-      "views": 90
+      "path": "/reviews/beehiiv/",
+      "views": 100
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/reviews/make/",
       "views": 90
     },
     {
@@ -67,30 +63,30 @@
       "views": 90
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/adcreative-ai/",
       "views": 90
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9040
+      "views": 9080
     },
     {
       "country": "Morocco",
       "views": 2720
     },
     {
-      "country": "Belgium",
-      "views": 540
+      "country": "Germany",
+      "views": 690
     },
     {
-      "country": "Germany",
-      "views": 470
+      "country": "Belgium",
+      "views": 540
     },
     {
       "country": "Singapore",
@@ -106,7 +102,7 @@
     },
     {
       "country": "United Kingdom",
-      "views": 270
+      "views": 280
     },
     {
       "country": "India",
