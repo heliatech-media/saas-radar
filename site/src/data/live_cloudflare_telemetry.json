@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-01T04:46:40.832326",
+  "last_synced": "2026-11-01T05:26:49.880867",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7373,
-  "total_requests": 46323,
-  "total_visits": 2285,
-  "total_pageviews": 10567,
+  "total_visitors_network": 7384,
+  "total_requests": 46489,
+  "total_visits": 2289,
+  "total_pageviews": 10593,
   "percent_cached": "56.14%",
-  "data_served_mb": 463.0,
+  "data_served_mb": 463.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 2040
+      "views": 2060
     },
     {
       "path": "/calculator/",
@@ -67,22 +67,22 @@
       "views": 100
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 90
+      "path": "/blog/framer-evolution-guide-2026/",
+      "views": 100
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9320
+      "views": 9360
     },
     {
       "country": "Morocco",
-      "views": 2950
+      "views": 2980
     },
     {
       "country": "Germany",
-      "views": 710
+      "views": 730
     },
     {
       "country": "Belgium",
@@ -97,11 +97,11 @@
       "views": 380
     },
     {
-      "country": "United Kingdom",
+      "country": "Canada",
       "views": 340
     },
     {
-      "country": "Canada",
+      "country": "United Kingdom",
       "views": 340
     },
     {
