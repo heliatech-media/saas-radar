@@ -95,6 +95,8 @@ class TelegramCommander:
                 "  _Exemple:_ `/versus elevenlabs heygen`\n"
                 "• `/alternatives <logiciel>` : Générer le Top 7 des alternatives monétisées\n"
                 "  _Exemple:_ `/alternatives zapier` ou `/alternatives deel`\n"
+                "• `/newsletter` : Compiler et expédier la newsletter The Thursday Radar\n"
+                "• `/pitch` : Déclencher un pitch de partenariat B2B sponsorisé\n"
                 "• `/cycle` : Déclencher un cycle de croissance complet\n"
                 "• `/cockpit` : Lien direct vers votre console secrète de supervision\n\n"
                 "Je suis à vos ordres."
@@ -241,6 +243,27 @@ class TelegramCommander:
                     self.send_message(chat_id, f"⚠️ Erreur lors de la génération des alternatives pour '{target}'.")
 
             threading.Thread(target=run_alternatives, daemon=True).start()
+
+        elif cmd in ("/newsletter", "/email"):
+            self.send_message(chat_id, "📬 *Helia-EmailCampaign déclenche l'expédition de la newsletter...*")
+            def run_newsletter():
+                from agents.email_campaign_agent import EmailCampaignAgent
+                agent = EmailCampaignAgent()
+                res = agent.dispatch_weekly_radar(force=True)
+                if res.get("status") == "SUCCESS":
+                    self.send_message(chat_id, f"✅ *The Thursday Radar #{res['issue']} expédiée avec succès !* (ID: `{res['dispatch_id']}`)")
+                else:
+                    self.send_message(chat_id, f"⚠️ Échec d'envoi de la newsletter : {res}")
+            threading.Thread(target=run_newsletter, daemon=True).start()
+
+        elif cmd == "/pitch":
+            self.send_message(chat_id, "🤝 *Helia-EmailCampaign prépare et expédie le pitch de partenariat B2B...*")
+            def run_pitch():
+                from agents.email_campaign_agent import EmailCampaignAgent
+                agent = EmailCampaignAgent()
+                res = agent.dispatch_pr_outreach(max_pitches=1)
+                self.send_message(chat_id, f"✅ *Pitch de partenariat envoyé !* ({res.get('dispatched_count', 0)} expédié(s))")
+            threading.Thread(target=run_pitch, daemon=True).start()
 
         elif cmd == "/cycle":
             self.send_message(chat_id, "🚀 *Cycle de croissance autonome lancé immédiatement !*\nJe vous tiens informé dès la fin du déploiement.")
