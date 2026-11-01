@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-01 13:36:20 UTC",
+  "last_updated": "2026-11-01 15:29:55 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 56,
-    "total_published_investigations": 130,
-    "reviews_audited": 56,
-    "masterclasses_and_duels": 74,
+    "total_published_investigations": 132,
+    "reviews_audited": 57,
+    "masterclasses_and_duels": 75,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$19,600 USD",
@@ -119,8 +119,8 @@
     },
     {
       "slug": "descript",
-      "destination": "https://descript.grsm.io/heliatech",
-      "type": "Commission Partner"
+      "destination": "https://get.descript.com/heliatech",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "dumpling-ai",
@@ -355,6 +355,13 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-25 19:22:55",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-10-25 15:14:33",
       "title": "Cycle Autonome #Podia",
       "category": "CYCLE",
@@ -381,13 +388,6 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `notion-ai, podcastle`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
-    },
-    {
-      "timestamp": "2026-10-25 08:05:37",
-      "title": "Cycle Autonome #Podcastle",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Podcastle et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]
 }

@@ -105,7 +105,8 @@
     "rating": 4.6,
     "starting_price": "$12/mo",
     "best_for": "Podcasters, content creators, internal communications teams, and video editors looking to slash rough-cut times.",
-    "affiliate_url": "https://www.descript.com"
+    "affiliate_url": "https://get.descript.com/heliatech",
+    "commission_rate": "15% recurring for 12 months"
   },
   {
     "name": "Dumpling AI",
@@ -290,6 +291,16 @@
     "best_for": "Cross-functional teams, agency operations, and project managers seeking visual, highly automatable workflows.",
     "affiliate_url": "https://monday.com/?ref=heliatech",
     "commission_rate": "22% recurring for the first year"
+  },
+  {
+    "name": "Murf.ai",
+    "slug": "murf-ai",
+    "tagline": "Transform text into studio-quality voiceovers with human-like AI voices in minutes.",
+    "category": "AI Audio/Voiceover",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Content creators, e-learning developers, marketers, and product teams needing quick localized voiceovers.",
+    "affiliate_url": "https://murf.ai"
   },
   {
     "name": "Notion AI",

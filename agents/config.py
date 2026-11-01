@@ -119,5 +119,5 @@ AFFILIATE_MAP = {
     "klaviyo": "https://partnerstack.com/klaviyo?via=heliatech",
     "kit": "https://kit.com/?via=heliatech",
     "screen-studio": "https://screen.studio/?via=heliatech",
-    "descript": "https://descript.grsm.io/heliatech"
+    "descript": "https://get.descript.com/heliatech"
 }
