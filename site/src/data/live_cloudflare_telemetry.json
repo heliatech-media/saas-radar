@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-01T01:55:46.161219",
+  "last_synced": "2026-11-01T02:05:51.032625",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 6557,
-  "total_requests": 44651,
-  "total_visits": 2032,
-  "total_pageviews": 10146,
+  "total_visitors_network": 6561,
+  "total_requests": 44702,
+  "total_visits": 2033,
+  "total_pageviews": 10157,
   "percent_cached": "56.14%",
-  "data_served_mb": 448.3,
+  "data_served_mb": 448.6,
   "top_pages": [
     {
       "path": "/",
@@ -47,11 +47,11 @@
       "views": 110
     },
     {
-      "path": "/reviews/heygen/",
-      "views": 100
+      "path": "/reviews/beehiiv/",
+      "views": 110
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/heygen/",
       "views": 100
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 9080
+      "views": 9100
     },
     {
       "country": "Morocco",
@@ -106,7 +106,7 @@
     },
     {
       "country": "India",
-      "views": 230
+      "views": 240
     },
     {
       "country": "France",

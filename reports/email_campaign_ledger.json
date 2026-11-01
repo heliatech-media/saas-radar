@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-01T02:09:31.611795",
+  "total_sent": 1,
+  "dispatches": [
+    {
+      "type": "weekly_radar",
+      "issue": 43,
+      "recipient": "hamzaelfahsi@gmail.com",
+      "dispatched_at": "2026-11-01T02:09:31.619376",
+      "resend_id": "01a194a7-8cf6-79a8-b193-be15a9cd816d"
+    }
+  ],
+  "active_campaigns": {
+    "weekly_radar": {
+      "last_sent": "2026-11-01T02:09:31.619376",
+      "current_issue": 43
+    },
+    "pr_outreach": {
+      "last_sent": null,
+      "sent_brands": []
+    }
+  }
+}

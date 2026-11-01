@@ -45,6 +45,7 @@ from agents.blog_agent import BlogAgent
 from agents.security_agent import SecurityAgent
 from agents.auto_repair_agent import AutoRepairAgent
 from agents.email_reporter_agent import EmailReporterAgent
+from agents.email_campaign_agent import EmailCampaignAgent
 from agents.social_growth_agent import SocialGrowthAgent
 from agents.visionary_growth_agent import VisionaryGrowthAgent
 from agents.article_layout_agent import ArticleLayoutAgent
@@ -88,6 +89,7 @@ class HeliaAutonomousDirector:
         self.publisher = PublisherAgent()
         self.blog_agent = BlogAgent(api_key=api_key)
         self.reporter = EmailReporterAgent()
+        self.email_campaign = EmailCampaignAgent()
         self.social = SocialGrowthAgent(api_key=api_key)
         self.stylist = ArticleLayoutAgent()
         self.artist = ImageGeneratorAgent(api_key=api_key)
@@ -362,6 +364,22 @@ class HeliaAutonomousDirector:
                 self.log("Helia-LinkedInSyndicator", f"LinkedIn syndicator status: {li_res.get('status', 'Standby')}", "📋")
         except Exception as e:
             self.log("Helia-LinkedInSyndicator", f"LinkedIn syndicator notice: {e}", "⚠️")
+
+        # Step 6.20: Sub-Agent EmailCampaign (Autonomous B2B Newsletter & PR Outreach)
+        try:
+            self.log("Helia-EmailCampaign", "Checking autonomous B2B newsletter & partner outreach queues...", "📬")
+            email_res = self.email_campaign.dispatch_weekly_radar(force=False)
+            if email_res.get("status") == "SUCCESS":
+                self.log("Helia-EmailCampaign", f"Broadcasted The Thursday Radar #{email_res['issue']} via Resend.", "🌟")
+            else:
+                self.log("Helia-EmailCampaign", f"Email campaign status: {email_res.get('reason', email_res.get('status', 'Standby'))}", "📋")
+
+            # Autonomous PR pitch sweep
+            pr_res = self.email_campaign.dispatch_pr_outreach(max_pitches=1)
+            if pr_res.get("dispatched_count", 0) > 0:
+                self.log("Helia-EmailCampaign", f"Dispatched {pr_res['dispatched_count']} accreditation pitches to winning partners.", "💎")
+        except Exception as e:
+            self.log("Helia-EmailCampaign", f"Email campaign notice: {e}", "⚠️")
 
         # Step 7: Sub-Agent EdgePublisher
         self.log("Helia-EdgePublisher", "Compiling Astro static build and validating zero-error edge propagation...", "⚙️")
