@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-01T09:21:43.171501",
+  "last_synced": "2026-11-01T09:27:53.948648",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7488,
-  "total_requests": 47098,
-  "total_visits": 2321,
-  "total_pageviews": 10755,
+  "total_visitors_network": 7497,
+  "total_requests": 47114,
+  "total_visits": 2324,
+  "total_pageviews": 10761,
   "percent_cached": "56.14%",
-  "data_served_mb": 471.2,
+  "data_served_mb": 472.3,
   "top_pages": [
     {
       "path": "/",
@@ -47,11 +47,11 @@
       "views": 110
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/reviews/beehiiv/",
       "views": 110
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/heygen/",
       "views": 110
     },
     {
