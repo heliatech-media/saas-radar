@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-01T03:26:19.909991",
+  "last_synced": "2026-11-01T03:56:26.566210",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7330,
-  "total_requests": 45901,
-  "total_visits": 2272,
-  "total_pageviews": 10506,
+  "total_visitors_network": 7340,
+  "total_requests": 46081,
+  "total_visits": 2275,
+  "total_pageviews": 10526,
   "percent_cached": "56.14%",
-  "data_served_mb": 457.7,
+  "data_served_mb": 459.4,
   "top_pages": [
     {
       "path": "/",
@@ -35,31 +35,27 @@
       "views": 140
     },
     {
-      "path": "/radar/",
-      "views": 120
-    },
-    {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 110
+      "path": "/radar/",
+      "views": 120
     },
     {
       "path": "/sentinel/",
       "views": 110
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 100
-    },
-    {
-      "path": "/reviews/apollo-io/",
-      "views": 100
+      "path": "/reviews/beehiiv/",
+      "views": 110
     },
     {
       "path": "/blog/apollo-io-vs-lusha/",
+      "views": 100
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 100
     },
     {
@@ -67,18 +63,22 @@
       "views": 100
     },
     {
-      "path": "/terms/",
+      "path": "/reviews/apollo-io/",
+      "views": 100
+    },
+    {
+      "path": "/reviews/make/",
       "views": 90
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 9230
+      "views": 9270
     },
     {
       "country": "Morocco",
-      "views": 2850
+      "views": 2880
     },
     {
       "country": "Germany",
