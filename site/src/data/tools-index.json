@@ -55,6 +55,17 @@
     "commission_rate": "€5 per free account signup + up to €500 per paid plan subscription"
   },
   {
+    "name": "Cal.com",
+    "slug": "cal-com",
+    "tagline": "The open-source infrastructure for scheduling meetings at scale",
+    "category": "Automation",
+    "rating": 4.7,
+    "starting_price": "$15/user/mo",
+    "best_for": "Engineering-led teams, agencies, and enterprises requiring white-labeled, API-driven scheduling workflows.",
+    "affiliate_url": "https://cal.com/?via=heliatech",
+    "commission_rate": "20% recurring"
+  },
+  {
     "name": "Castmagic",
     "slug": "castmagic",
     "tagline": "Turn long-form audio and video recordings into show notes, blog posts, and social clips instantly with AI.",
@@ -169,7 +180,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "Professional creators, newsletter publishers, and independent educators scaling digital businesses.",
-    "affiliate_url": "https://kit.com"
+    "affiliate_url": "https://kit.com/?via=heliatech",
+    "commission_rate": "30% recurring for up to 12 months"
   },
   {
     "name": "Klap",
@@ -419,6 +431,16 @@
     "commission_rate": "Custom / Enterprise referral structure"
   },
   {
+    "name": "Screen Studio",
+    "slug": "screen-studio",
+    "tagline": "Turn ordinary screen recordings into cinematic promotional videos with automated zoom and smooth cursor tracking.",
+    "category": "AI Video & Screen Recording",
+    "rating": 4.8,
+    "starting_price": "$89",
+    "best_for": "SaaS founders, product managers, developer advocates, and content creators looking to make high-end product demos quickly.",
+    "affiliate_url": "https://screen.studio"
+  },
+  {
     "name": "Submagic",
     "slug": "submagic",
     "tagline": "AI-powered video captioning and editing tool that transforms raw footage into viral short-form clips in minutes.",
@@ -442,11 +464,11 @@
   {
     "name": "Tally",
     "slug": "tally",
-    "tagline": "The simplest, most powerful notion-style form builder for the web.",
-    "category": "Automation",
+    "tagline": "The simplest, Notion-style form builder for the web with a generous free tier.",
+    "category": "Form Builder",
     "rating": 4.8,
     "starting_price": "$29/mo",
-    "best_for": "Founders, marketers, operators, and agencies looking to build gorgeous forms without hitting bloated pricing gates.",
+    "best_for": "Bootstrapped founders, indie hackers, product managers, and agencies needing clean forms without heavy licensing costs.",
     "affiliate_url": "https://tally.so/?via=heliatech"
   },
   {

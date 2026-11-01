@@ -13,7 +13,7 @@ tags:
 - Creator Economy
 - Email Marketing
 - SaaS
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: kit
 image: /images/blog/kit.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Kit Account ➔
   url: /go/kit
 ---
-
 The creator economy once suffered from an invisible bottleneck: digital operators were forced to choose between rigid, corporate email monoliths designed for traditional e-commerce catalogs or clunky blogging tools that buckled under the weight of automated sales funnels. Subscribers were trapped inside duplicate lists, racking up inflated software bills while advanced targeting remained an elusive engineering dream. Enter Kit—formerly known as ConvertKit—a platform engineered from the ground up to solve the operational friction of modern newsletter businesses and independent creators.
 
 ## 1. The Genesis & Evolution

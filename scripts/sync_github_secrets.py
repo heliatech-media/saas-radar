@@ -126,7 +126,8 @@ def main():
         "TWITTER_CLIENT_SECRET",
         "TWITTER_ACCESS_TOKEN",
         "TWITTER_REFRESH_TOKEN",
-        "SENTINEL_PASSWORD"
+        "SENTINEL_PASSWORD",
+        "RESEND_API_KEY"
     ]
     
     success_count = 0

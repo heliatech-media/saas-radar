@@ -6,7 +6,7 @@ tagline: The creator-first email marketing platform built to scale newsletters a
 category: Creator SaaS & Newsletters
 rating: 4.6
 website_url: https://kit.com
-affiliate_url: https://kit.com
+affiliate_url: "https://kit.com/?via=heliatech"
 summary: Kit (formerly ConvertKit) is an advanced audience-building platform designed
   specifically for professional creators, bloggers, and newsletter operators. It combines
   robust visual automation workflows with a clean, creator-centric subscriber management

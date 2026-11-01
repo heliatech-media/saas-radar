@@ -9,7 +9,7 @@
     "masterclasses_and_duels": 71,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$18,550 USD",
+    "projected_monthly_mrr": "$18,900 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -95,6 +95,11 @@
     {
       "slug": "brevo",
       "destination": "https://brevo.partnerlinks.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "cal-com",
+      "destination": "https://cal.com/?via=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -361,7 +366,7 @@
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-10-25 03:31:37",
+      "timestamp": "2026-10-25 08:04:57",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",

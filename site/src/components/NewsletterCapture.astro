@@ -85,7 +85,21 @@ const {
         const email = emailInput.value.trim();
         if (!email) return;
 
-        // 1. Direct Instant Alert to Executive Telegram Desk
+        // 1. Send via Cloudflare Backend API (fires Telegram + Resend VIP Welcome Email)
+        try {
+          fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              path: window.location.pathname,
+              referrer: document.referrer || 'Direct'
+            }),
+            keepalive: true
+          }).catch(() => {});
+        } catch(err) {}
+
+        // 2. Direct Instant Fallback Alert to Executive Telegram Desk
         try {
           const leadMsg = 
             '⭐ NOUVEAU LEAD B2B HELIATECH !\n' +
@@ -107,7 +121,7 @@ const {
           }).catch(() => {});
         } catch(err) {}
 
-        // 2. Also keep local backup
+        // 3. Local backup
         try {
           const stored = JSON.parse(localStorage.getItem('heliatech_subscribers') || '[]');
           stored.push({ email, timestamp: new Date().toISOString() });
