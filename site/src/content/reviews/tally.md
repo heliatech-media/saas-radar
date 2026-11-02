@@ -131,7 +131,7 @@ Tally is a radically different form builder that operates like a text document, 
 
 Tally has completely disrupted the form builder market by challenging the exploitative pricing models of legacy tools that charge based on response volume. By treating form creation like writing a document, it reduces friction to near zero. For product managers, indie hackers, and operations teams, Tally eliminates the anxiety of hitting response quotas mid-campaign.
 
-Technically, the platform is lightweight, highly performant, and embeds smoothly into Notion workspaces, Webflow, and custom React apps. While it lacks the heavily animated, flashy conversational layout of Typeform, its flexibility, zero-cost response limits, and robust webhook infrastructure make it an absolute powerhouse for data collection.
+Technically, the platform is lightweight, highly performant, and embeds smoothly into Notion workspaces, [Webflow](/reviews/webflow), and custom React apps. While it lacks the heavily animated, flashy conversational layout of Typeform, its flexibility, zero-cost response limits, and robust webhook infrastructure make it an absolute powerhouse for data collection.
 
 Ultimately, if you are tired of paying enterprise prices just to collect a few thousand feedback submissions a month, migrating to Tally is a no-brainer. The ROI is immediate since the core utility is entirely free, and upgrading to Pro unlocks enterprise-grade branding and workspace collaboration for a fraction of competitors' costs.
 

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-02 09:57:29",
-  "total_pages_audited": 75,
-  "monetized_pages": 71,
-  "total_ctas_tracked": 353,
+  "timestamp": "2026-11-02 12:50:40",
+  "total_pages_audited": 76,
+  "monetized_pages": 72,
+  "total_ctas_tracked": 356,
   "average_cro_score": "88.0/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -13,60 +13,6 @@
   "estimated_rpv_lift": "+38.4%",
   "pages": [
     {
-      "slug": "riverside",
-      "type": "blog",
-      "word_count": 1214,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "airtable",
-      "type": "blog",
-      "word_count": 1240,
-      "cta_count": 7,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "apollo-io-vs-lusha",
-      "type": "blog",
-      "word_count": 1877,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "hubspot-enterprise-pricing-rate-card-leaks-2026",
-      "type": "blog",
-      "word_count": 768,
-      "cta_count": 0,
-      "has_monetized_hop": false,
-      "cro_score": 60,
-      "status": "NEEDS_BOOST"
-    },
-    {
-      "slug": "lemlist-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1275,
-      "cta_count": 5,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "supabase-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1096,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
       "slug": "framer-evolution-guide-2026",
       "type": "blog",
       "word_count": 1124,
@@ -76,55 +22,37 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "vercel-evolution-guide-2026",
+      "slug": "julius-ai-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1118,
-      "cta_count": 5,
+      "word_count": 1044,
+      "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "heygen-evolution-guide-2026",
+      "slug": "castmagic-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1168,
-      "cta_count": 6,
+      "word_count": 911,
+      "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "elevenlabs-vs-heygen",
+      "slug": "memberstack-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1824,
+      "word_count": 1278,
       "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "screen-studio-evolution-guide-2026",
+      "slug": "rewardful-evolution-guide-2026",
       "type": "blog",
-      "word_count": 932,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "tome-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1070,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "beehiiv-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1249,
-      "cta_count": 7,
+      "word_count": 1496,
+      "cta_count": 9,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -139,13 +67,85 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "riverside-fm-evolution-guide-2026",
+      "slug": "klap-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1235,
-      "cta_count": 0,
-      "has_monetized_hop": false,
-      "cro_score": 60,
-      "status": "NEEDS_BOOST"
+      "word_count": 1128,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "captions-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1104,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "cursor-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1065,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "lovable-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1108,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "retool",
+      "type": "blog",
+      "word_count": 901,
+      "cta_count": 7,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "elevenagents-ai-receptionist-guide",
+      "type": "blog",
+      "word_count": 1293,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-deel-alternatives-2026",
+      "type": "blog",
+      "word_count": 2984,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "lemlist-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1275,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "vercel-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1118,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
     }
   ]
 }

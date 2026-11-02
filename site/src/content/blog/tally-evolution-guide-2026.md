@@ -11,7 +11,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: tally
 image: /images/blog/tally.svg
 tldr:
@@ -29,8 +29,7 @@ affiliate_cta:
   button_text: Claim Your Free Tally Account ➔
   url: https://tally.so/?via=heliatech
 ---
-
-For over a decade, digital data collection felt like a tax on human patience. If you wanted to spin up a high-converting client intake sheet, a job application, or an event feedback mechanism, you were forced into a Faustian bargain with legacy form builders. You either endured rigid, clunky drag-and-drop interfaces that required a computer science degree to align vertically, or you signed up for exorbitant SaaS tiers that held your own customer responses hostage behind paywalls. We built intricate labyrinths of software duct tape—Zapier webhooks, CSS workarounds, and endless UI tweaks—just to ask a customer what their name was. The friction was systemic, expensive, and entirely unnecessary. Then came Tally, completely rewriting the rules of how data enters the enterprise ecosystem.
+For over a decade, digital data collection felt like a tax on human patience. If you wanted to spin up a high-converting client intake sheet, a job application, or an event feedback mechanism, you were forced into a Faustian bargain with legacy form builders. You either endured rigid, clunky drag-and-drop interfaces that required a computer science degree to align vertically, or you signed up for exorbitant SaaS tiers that held your own customer responses hostage behind paywalls. We built intricate labyrinths of software duct tape—[Zapier](/reviews/zapier) webhooks, CSS workarounds, and endless UI tweaks—just to ask a customer what their name was. The friction was systemic, expensive, and entirely unnecessary. Then came Tally, completely rewriting the rules of how data enters the enterprise ecosystem.
 
 ## 1. The Genesis & Evolution: How Tally Dismantled the Form Builder Monopoly
 

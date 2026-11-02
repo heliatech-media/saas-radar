@@ -66,6 +66,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "Captions",
+    "slug": "captions",
+    "tagline": "An AI-powered video editor designed to create, edit, and translate professional talking-head videos with a single tap.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$10/mo",
+    "best_for": "Solopreneurs, talking-head creators, digital marketers, and educators scaling short-form video output.",
+    "affiliate_url": "https://www.captions.ai"
+  },
+  {
     "name": "Castmagic",
     "slug": "castmagic",
     "tagline": "Turn long-form audio and video recordings into show notes, blog posts, and social clips instantly with AI.",

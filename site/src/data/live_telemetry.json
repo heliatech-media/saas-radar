@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-02 09:57:29 UTC",
+  "last_updated": "2026-11-02 12:50:40 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 57,
-    "total_published_investigations": 132,
-    "reviews_audited": 57,
-    "masterclasses_and_duels": 75,
+    "total_published_investigations": 134,
+    "reviews_audited": 58,
+    "masterclasses_and_duels": 76,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$19,950 USD",
@@ -360,6 +360,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-26 03:41:08",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle, tally`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-10-25 23:33:14",
+      "title": "Cycle Autonome #Riverside",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Riverside et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-10-25 23:31:55",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -375,20 +389,6 @@
     },
     {
       "timestamp": "2026-10-25 19:22:55",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-10-25 15:14:33",
-      "title": "Cycle Autonome #Podia",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Podia et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-10-25 15:13:42",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
