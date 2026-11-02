@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-02T18:56:59.219721",
+  "last_synced": "2026-11-02T19:07:06.027202",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 8916,
-  "total_requests": 57644,
-  "total_visits": 2763,
-  "total_pageviews": 12857,
+  "total_visitors_network": 8928,
+  "total_requests": 57784,
+  "total_visits": 2767,
+  "total_pageviews": 12870,
   "percent_cached": "56.14%",
-  "data_served_mb": 609.5,
+  "data_served_mb": 610.4,
   "top_pages": [
     {
       "path": "/",
@@ -31,11 +31,11 @@
       "views": 180
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 170
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 170
     },
     {
@@ -47,38 +47,38 @@
       "views": 130
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 120
-    },
-    {
       "path": "/reviews/heygen/",
       "views": 120
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 110
+      "path": "/reviews/beehiiv/",
+      "views": 120
     },
     {
       "path": "/blog/apollo-io-vs-lusha/",
       "views": 110
     },
     {
-      "path": "/terms/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 110
     },
     {
-      "path": "/sentinel/",
+      "path": "/reviews/apollo-io/",
+      "views": 110
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11590
+      "views": 11610
     },
     {
       "country": "Morocco",
-      "views": 4510
+      "views": 4560
     },
     {
       "country": "Germany",
