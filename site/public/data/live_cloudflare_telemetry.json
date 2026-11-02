@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-02T20:17:34.272847",
+  "last_synced": "2026-11-02T20:27:38.764914",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 9030,
-  "total_requests": 58700,
-  "total_visits": 2799,
-  "total_pageviews": 12964,
+  "total_visitors_network": 9055,
+  "total_requests": 58855,
+  "total_visits": 2807,
+  "total_pageviews": 12985,
   "percent_cached": "56.14%",
-  "data_served_mb": 615.3,
+  "data_served_mb": 615.8,
   "top_pages": [
     {
       "path": "/",
@@ -59,11 +59,11 @@
       "views": 120
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 110
     },
     {
-      "path": "/terms/",
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 110
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 11670
+      "views": 11690
     },
     {
       "country": "Morocco",
-      "views": 4840
+      "views": 4860
     },
     {
       "country": "Germany",
@@ -106,7 +106,7 @@
     },
     {
       "country": "Brazil",
-      "views": 260
+      "views": 280
     },
     {
       "country": "India",
