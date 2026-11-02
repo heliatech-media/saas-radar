@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-02T19:57:24.124009",
+  "last_synced": "2026-11-02T20:07:28.185080",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 8998,
-  "total_requests": 58515,
-  "total_visits": 2789,
-  "total_pageviews": 12930,
+  "total_visitors_network": 9016,
+  "total_requests": 58607,
+  "total_visits": 2794,
+  "total_pageviews": 12951,
   "percent_cached": "56.14%",
-  "data_served_mb": 613.6,
+  "data_served_mb": 614.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 2370
+      "views": 2380
     },
     {
       "path": "/calculator/",
@@ -31,11 +31,11 @@
       "views": 180
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 170
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 170
     },
     {
@@ -47,7 +47,7 @@
       "views": 130
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 120
     },
     {
@@ -55,26 +55,26 @@
       "views": 120
     },
     {
+      "path": "/reviews/beehiiv/",
+      "views": 120
+    },
+    {
       "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 110
     },
     {
-      "path": "/terms/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 110
     },
     {
       "path": "/reviews/apollo-io/",
-      "views": 110
-    },
-    {
-      "path": "/blog/framer-evolution-guide-2026/",
       "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11630
+      "views": 11650
     },
     {
       "country": "Morocco",
@@ -82,7 +82,7 @@
     },
     {
       "country": "Germany",
-      "views": 990
+      "views": 1000
     },
     {
       "country": "Singapore",
