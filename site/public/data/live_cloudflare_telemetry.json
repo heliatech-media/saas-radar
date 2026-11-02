@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-02T15:54:47.501551",
+  "last_synced": "2026-11-02T18:56:58.318350",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 8783,
-  "total_requests": 56179,
-  "total_visits": 2722,
-  "total_pageviews": 12451,
+  "total_visitors_network": 8916,
+  "total_requests": 57644,
+  "total_visits": 2763,
+  "total_pageviews": 12857,
   "percent_cached": "56.14%",
-  "data_served_mb": 596.8,
+  "data_served_mb": 609.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 2620
+      "views": 2370
     },
     {
       "path": "/calculator/",
-      "views": 600
+      "views": 630
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 210
+    },
+    {
+      "path": "/awards/",
+      "views": 200
+    },
+    {
+      "path": "/versus/",
+      "views": 180
     },
     {
       "path": "/radar/",
-      "views": 190
+      "views": 170
     },
     {
       "path": "/blog/",
       "views": 170
     },
     {
-      "path": "/terms/",
-      "views": 160
-    },
-    {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 150
-    },
-    {
       "path": "/blog/make-automation-revolution/",
       "views": 140
     },
     {
-      "path": "/versus/",
-      "views": 140
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     },
     {
       "path": "/reviews/beehiiv/",
-      "views": 130
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 130
-    },
-    {
-      "path": "/reviews/elevenlabs/",
       "views": 120
     },
     {
-      "path": "/awards/",
+      "path": "/reviews/heygen/",
       "views": 120
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 120
+      "path": "/reviews/apollo-io/",
+      "views": 110
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 120
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 110
+    },
+    {
+      "path": "/terms/",
+      "views": 110
+    },
+    {
+      "path": "/sentinel/",
+      "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11520
+      "views": 11590
     },
     {
       "country": "Morocco",
-      "views": 4370
+      "views": 4510
     },
     {
       "country": "Germany",
-      "views": 910
+      "views": 990
     },
     {
       "country": "Singapore",
-      "views": 660
+      "views": 640
     },
     {
       "country": "Belgium",
-      "views": 660
+      "views": 550
+    },
+    {
+      "country": "Netherlands",
+      "views": 520
     },
     {
       "country": "United Kingdom",
-      "views": 430
-    },
-    {
-      "country": "CN",
-      "views": 350
+      "views": 410
     },
     {
       "country": "Canada",
-      "views": 310
+      "views": 350
     },
     {
       "country": "Brazil",
-      "views": 290
+      "views": 250
     },
     {
-      "country": "HK",
-      "views": 280
+      "country": "France",
+      "views": 240
     }
   ],
   "top_referrers": [
