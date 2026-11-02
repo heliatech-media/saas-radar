@@ -1,33 +1,29 @@
 {
-  "last_synced": "2026-11-02T22:28:24.804710",
+  "last_synced": "2026-11-02T21:42:35.570652",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 9159,
-  "total_requests": 59835,
-  "total_visits": 2839,
-  "total_pageviews": 13117,
+  "total_visitors_network": 9168,
+  "total_requests": 59934,
+  "total_visits": 2842,
+  "total_pageviews": 13121,
   "percent_cached": "56.14%",
-  "data_served_mb": 622.1,
+  "data_served_mb": 622.4,
   "top_pages": [
     {
       "path": "/",
-      "views": 2390
+      "views": 2640
     },
     {
       "path": "/calculator/",
-      "views": 630
+      "views": 670
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 210
+      "path": "/radar/",
+      "views": 190
     },
     {
-      "path": "/awards/",
-      "views": 200
-    },
-    {
-      "path": "/versus/",
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 180
     },
     {
@@ -35,11 +31,7 @@
       "views": 170
     },
     {
-      "path": "/radar/",
-      "views": 170
-    },
-    {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "path": "/terms/",
       "views": 160
     },
     {
@@ -47,70 +39,78 @@
       "views": 150
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/reviews/beehiiv/",
+      "views": 140
+    },
+    {
+      "path": "/versus/",
+      "views": 140
+    },
+    {
+      "path": "/reviews/brevo/",
       "views": 130
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 130
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 130
+    },
+    {
+      "path": "/reviews/resend/",
+      "views": 130
+    },
+    {
+      "path": "/reviews/clickup/",
       "views": 120
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/awards/",
       "views": 120
-    },
-    {
-      "path": "/sentinel/",
-      "views": 110
-    },
-    {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 110
-    },
-    {
-      "path": "/blog/apollo-io-vs-lusha/",
-      "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11820
+      "views": 11830
     },
     {
       "country": "Morocco",
-      "views": 5050
+      "views": 5060
     },
     {
       "country": "Germany",
-      "views": 1000
+      "views": 1140
     },
     {
       "country": "Singapore",
-      "views": 640
+      "views": 690
     },
     {
       "country": "Belgium",
-      "views": 550
-    },
-    {
-      "country": "Netherlands",
-      "views": 520
+      "views": 660
     },
     {
       "country": "United Kingdom",
-      "views": 410
+      "views": 440
     },
     {
-      "country": "Canada",
+      "country": "CN",
       "views": 350
     },
     {
       "country": "Brazil",
-      "views": 280
+      "views": 310
     },
     {
-      "country": "India",
-      "views": 240
+      "country": "Canada",
+      "views": 310
+    },
+    {
+      "country": "HK",
+      "views": 280
     }
   ],
   "top_referrers": [
