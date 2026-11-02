@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-02T21:07:55.161977",
+  "last_synced": "2026-11-02T21:28:02.524861",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 9108,
-  "total_requests": 59227,
-  "total_visits": 2823,
-  "total_pageviews": 13054,
+  "total_visitors_network": 9121,
+  "total_requests": 59387,
+  "total_visits": 2827,
+  "total_pageviews": 13075,
   "percent_cached": "56.14%",
-  "data_served_mb": 618.6,
+  "data_served_mb": 619.8,
   "top_pages": [
     {
       "path": "/",
@@ -31,16 +31,16 @@
       "views": 180
     },
     {
-      "path": "/blog/",
-      "views": 170
-    },
-    {
       "path": "/radar/",
       "views": 170
     },
     {
+      "path": "/blog/",
+      "views": 170
+    },
+    {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 150
+      "views": 160
     },
     {
       "path": "/blog/make-automation-revolution/",
@@ -51,34 +51,34 @@
       "views": 130
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 120
-    },
-    {
       "path": "/reviews/heygen/",
       "views": 120
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 110
-    },
-    {
-      "path": "/sentinel/",
-      "views": 110
+      "path": "/reviews/beehiiv/",
+      "views": 120
     },
     {
       "path": "/blog/framer-evolution-guide-2026/",
+      "views": 110
+    },
+    {
+      "path": "/terms/",
+      "views": 110
+    },
+    {
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11760
+      "views": 11770
     },
     {
       "country": "Morocco",
-      "views": 4920
+      "views": 4940
     },
     {
       "country": "Germany",
