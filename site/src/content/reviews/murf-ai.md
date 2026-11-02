@@ -6,7 +6,7 @@ tagline: Transform text into studio-quality voiceovers with human-like AI voices
 category: AI Audio/Voiceover
 rating: 4.6
 website_url: https://murf.ai
-affiliate_url: https://murf.ai
+affiliate_url: "https://murf.ai/?fp_ref=heliatech"
 summary: Murf.ai is a leading text-to-speech platform featuring over 120+ realistic
   AI voices in 20+ languages. It empowers creators, educators, and enterprises to
   build professional-grade voiceovers without needing recording equipment or voice

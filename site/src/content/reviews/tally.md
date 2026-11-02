@@ -1,34 +1,35 @@
 ---
 name: Tally
 slug: tally
-tagline: The simplest, Notion-style form builder for the web with a generous free
+tagline: The simplest, Notion-style form builder for the web with an unmatched free
   tier.
 category: Form Builder
 rating: 4.8
 website_url: https://tally.so
 affiliate_url: https://tally.so/?via=heliatech
-summary: Tally rethinks form building by offering a Notion-inspired text-based interface
-  where users can type commands to create forms instantly. It stands out for its remarkably
-  generous free tier that includes unlimited forms, responses, and file uploads without
-  removing branding.
-best_for: Bootstrapped founders, indie hackers, product managers, and agencies needing
-  clean forms without heavy licensing costs.
+summary: Tally is a radically different form builder that operates like a text document,
+  allowing anyone to build infinite forms using Markdown shortcuts. It offers a jaw-dropping
+  free tier that includes unlimited forms, responses, and file uploads, charging only
+  for advanced enterprise features and customization.
+best_for: Solopreneurs, startups, and agencies looking for powerful forms without
+  per-response pricing limits.
 pros:
-- Incredible free tier with unlimited forms and submissions
-- Intuitive Notion-like text editor interface
-- Powerful advanced logic, calculations, and Notion/Airtable integrations
-- Clean, minimalist embed options that look native to any site
-- Accept payments natively via Stripe integration
+- Notion-style interface makes form creation intuitive and blazing fast
+- Extremely generous free tier with unlimited forms and responses
+- Advanced features like conditional logic, calculations, and hidden fields are free
+- Seamless native integrations with Notion, Slack, Google Sheets, and webhooks
+- White-labeling and custom domain support available on affordable pro plans
 cons:
-- Limited styling customization compared to heavily branded form builders like Typeform
-- Not built for complex enterprise compliance frameworks (e.g., advanced HIPAA setups)
-- Can occasionally feel too minimalist for users wanting drag-and-drop spatial layouts
+- Design customization is minimalist, which may not suit heavily branded enterprise
+  sites
+- Advanced multi-step layouts require careful structuring to avoid long vertical scrolls
+- Lacks native high-volume email marketing drip automations compared to Typeform
 key_features:
-- Notion-style block editor for rapid form creation
-- Unlimited forms and responses on the free plan
-- Advanced conditional logic and hidden fields
-- Native Stripe payment collection
-- Direct integrations with Notion, Airtable, Google Sheets, and Webhooks
+- Notion-style block editor for typing out form fields
+- Unlimited forms and responses on the free tier
+- Advanced logic jumps and inline calculations
+- Custom domains and CSS styling injection
+- Payment collection via Stripe integration
 pricing_tiers:
 - name: Free
   price: $0/mo
@@ -36,117 +37,114 @@ pricing_tiers:
   features:
   - Unlimited forms
   - Unlimited responses
-  - File uploads
-  - Email notifications
-  - Basic integrations
+  - Unlimited file uploads
+  - Conditional logic & calculations
+  - Accept payments via Stripe (5% fee)
   is_popular: false
 - name: Tally Pro
   price: $29/mo
   billing_period: monthly
   features:
-  - Custom domain mapping
   - Remove Tally branding
-  - Team collaboration and workspaces
-  - Advanced styling and custom CSS
-  - Priority support
+  - Custom domains
+  - Team collaboration & workspaces
+  - Reduced Stripe transaction fee (0%)
+  - Advanced email notifications & routing
   is_popular: true
 alternatives:
 - Typeform
 - Jotform
-- Google Forms
+- Fillout
 faqs:
 - question: Is Tally really free for unlimited responses?
-  answer: Yes. Tally's free plan allows you to create unlimited forms and collect
-    unlimited responses without any artificial caps, making it uniquely affordable
-    for high-volume users.
-- question: How does Tally make money if the free tier is so generous?
-  answer: Tally monetizes through its Pro tier, which unlocks advanced features such
-    as custom domains, removing Tally branding, custom CSS, team collaboration spaces,
-    and priority support.
+  answer: Yes. Tally's core philosophy is to provide unlimited forms, responses, and
+    file uploads on their free plan. They monetize by offering a Pro tier for advanced
+    branding removal, custom domains, and team collaboration.
 - question: Can I accept payments through Tally forms?
-  answer: Yes, Tally integrates natively with Stripe, allowing you to sell products,
-    services, or collect one-time and recurring payments directly through your forms
-    without taking a commission.
+  answer: Yes, Tally integrates directly with Stripe. You can collect one-time payments,
+    subscriptions, or donations directly inside the form workflow.
+- question: How does Tally compare to Typeform?
+  answer: While Typeform uses a conversational one-question-at-a-time slide format,
+    Tally uses a clean, document-based layout similar to Notion. Tally is significantly
+    cheaper and offers unlimited responses on its free plan, whereas Typeform heavily
+    restricts response counts.
 roi_metrics:
-  hours_saved_monthly: 15
+  hours_saved_monthly: 12
   financial_lift_monthly: $450/mo
-  payback_period_weeks: 1.5
-  roi_summary: By eliminating form response limits and streamlining data routing to
-    Airtable and Notion, teams save hours of manual data entry while cutting legacy
-    software subscription costs.
+  payback_period_weeks: 0.0
+  roi_summary: By eliminating per-response pricing caps and streamlining form deployment
+    directly inside existing text workflows, teams save dozens of engineering and
+    administrative hours monthly while cutting form-software overhead to zero.
 benchmark_scores:
-  performance: 9.2
+  performance: 9.5
   ease_of_use: 9.8
   value_for_money: 10.0
-  integrations: 8.9
+  integrations: 9.0
 competitor_matches:
 - competitor: Typeform
-  key_advantage: Tally provides unlimited responses and forms for free, whereas Typeform
-    aggressively gates submissions on expensive pricing tiers.
-  when_to_switch: Choose Typeform if you require highly bespoke, award-winning branded
-    animations and cinematic user flow designs.
-- competitor: Google Forms
-  key_advantage: Tally offers a drastically superior UI, Notion-style text editing,
-    custom CSS, and native Stripe payments.
-  when_to_switch: Choose Google Forms only if you are strictly confined to the Google
-    Workspace ecosystem for simple internal polls.
+  key_advantage: Completely free unlimited responses and a much lower Pro price point.
+  when_to_switch: Choose Typeform if you specifically require heavily animated, high-end
+    conversational one-question-at-a-time survey experiences.
+- competitor: Jotform
+  key_advantage: Simpler, cleaner UI with a modern document-based writing experience.
+  when_to_switch: Choose Jotform if you need thousands of complex, highly regulated
+    healthcare or PDF-mapping templates out of the box.
 ---
 
 ## Executive Summary
 
-Tally rethinks form building by offering a Notion-inspired text-based interface where users can type commands to create forms instantly. It stands out for its remarkably generous free tier that includes unlimited forms, responses, and file uploads without removing branding.
+Tally is a radically different form builder that operates like a text document, allowing anyone to build infinite forms using Markdown shortcuts. It offers a jaw-dropping free tier that includes unlimited forms, responses, and file uploads, charging only for advanced enterprise features and customization.
 
 ### Who is Tally Best For?
-**Target Audience:** Bootstrapped founders, indie hackers, product managers, and agencies needing clean forms without heavy licensing costs.
+**Target Audience:** Solopreneurs, startups, and agencies looking for powerful forms without per-response pricing limits.
 
 ## Key Features & Capabilities
 
-- **Notion-style text editor with slash commands**
-- **Conditional logic and calculations**
-- **Unlimited forms and submissions on the free plan**
-- **Seamless native integrations with Notion, [Airtable](/reviews/airtable), Google Sheets, and webhooks**
-- **Custom domains, CSS styling, and team collaboration**
-
+- **Notion-style block editor for typing out form fields**
+- **Unlimited forms and responses on the free tier**
+- **Advanced logic jumps and inline calculations**
+- **Custom domains and CSS styling injection**
+- **Payment collection via Stripe integration**
 
 ## Pricing Overview
 
 | Plan | Price | Billing | Key Highlights |
 | :--- | :--- | :--- | :--- |
 | **Free** | $0/mo | monthly | Unlimited forms, Unlimited responses |
-| **Tally Pro** | $29/mo | monthly | Custom domain mapping, Remove Tally branding |
+| **Tally Pro** | $29/mo | monthly | Remove Tally branding, Custom domains |
 
 ## Pros & Cons
 
 ### Pros
-- Incredible free tier that includes unlimited forms and submissions
-- Familiar Notion-like slash-command editor makes creation lightning fast
-- Powerful advanced logic, calculations, and Notion/[Airtable](/reviews/airtable) integrations built right in
-- Clean, highly customizable styling with zero Tally branding on paid tiers
-
+- Notion-style interface makes form creation intuitive and blazing fast
+- Extremely generous free tier with unlimited forms and responses
+- Advanced features like conditional logic, calculations, and hidden fields are free
+- Seamless native integrations with Notion, Slack, Google Sheets, and webhooks
+- White-labeling and custom domain support available on affordable pro plans
 
 ### Cons
-- Limited styling customization compared to heavily branded form builders like Typeform
-- Not built for complex enterprise compliance frameworks (e.g., advanced HIPAA setups)
-- Can occasionally feel too minimalist for users wanting drag-and-drop spatial layouts
+- Design customization is minimalist, which may not suit heavily branded enterprise sites
+- Advanced multi-step layouts require careful structuring to avoid long vertical scrolls
+- Lacks native high-volume email marketing drip automations compared to Typeform
 
 ## Detailed Verdict & Technical Analysis
 
-Tally is arguably the most disruptive form builder to hit the SaaS market in years. By challenging the traditional SaaS model of gating form responses behind expensive tiers, Tally provides a robust free version that satisfies 90% of solo creators and early-stage startups. The Notion-like editing workflow means you can spin up complex intake forms, surveys, or quizzes in a matter of minutes without getting bogged down by clunky UI elements.
+Tally has completely disrupted the form builder market by challenging the exploitative pricing models of legacy tools that charge based on response volume. By treating form creation like writing a document, it reduces friction to near zero. For product managers, indie hackers, and operations teams, Tally eliminates the anxiety of hitting response quotas mid-campaign.
 
-From a technical perspective, the platform is lightweight, loads quickly when embedded, and handles webhooks and database syncs reliably. While enterprise teams might miss niche design customizations or advanced healthcare-grade security workflows, the Pro tier at $29/month is exceptionally priced for custom domains and brand removal.
+Technically, the platform is lightweight, highly performant, and embeds smoothly into Notion workspaces, Webflow, and custom React apps. While it lacks the heavily animated, flashy conversational layout of Typeform, its flexibility, zero-cost response limits, and robust webhook infrastructure make it an absolute powerhouse for data collection.
 
-If you are currently paying a legacy form provider hundreds of dollars a year just to collect basic customer feedback or lead generation data, migrating to Tally is a no-brainer. It delivers outsized operational value with virtually zero learning curve.
+Ultimately, if you are tired of paying enterprise prices just to collect a few thousand feedback submissions a month, migrating to Tally is a no-brainer. The ROI is immediate since the core utility is entirely free, and upgrading to Pro unlocks enterprise-grade branding and workspace collaboration for a fraction of competitors' costs.
 
 ## Frequently Asked Questions
 
 ### Is Tally really free for unlimited responses?
 
-Yes. Tally's free plan allows you to create unlimited forms and collect unlimited responses without any artificial caps, making it uniquely affordable for high-volume users.
-
-### How does Tally make money if the free tier is so generous?
-
-Tally monetizes through its Pro tier, which unlocks advanced features such as custom domains, removing Tally branding, custom CSS, team collaboration spaces, and priority support.
+Yes. Tally's core philosophy is to provide unlimited forms, responses, and file uploads on their free plan. They monetize by offering a Pro tier for advanced branding removal, custom domains, and team collaboration.
 
 ### Can I accept payments through Tally forms?
 
-Yes, Tally integrates natively with Stripe, allowing you to sell products, services, or collect one-time and recurring payments directly through your forms without taking a commission.
+Yes, Tally integrates directly with Stripe. You can collect one-time payments, subscriptions, or donations directly inside the form workflow.
+
+### How does Tally compare to Typeform?
+
+While Typeform uses a conversational one-question-at-a-time slide format, Tally uses a clean, document-based layout similar to Notion. Tally is significantly cheaper and offers unlimited responses on its free plan, whereas Typeform heavily restricts response counts.

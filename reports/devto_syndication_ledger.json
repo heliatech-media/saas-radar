@@ -291,6 +291,12 @@
         "saas",
         "automation"
       ]
+    },
+    "heygen-evolution-guide-2026": {
+      "id": "already_published",
+      "url": "https://dev.to/heygen-evolution-guide-2026",
+      "canonical_url": "https://heliatech.online/blog/heygen-evolution-guide-2026",
+      "status": "already_published"
     }
   },
   "last_sync": null

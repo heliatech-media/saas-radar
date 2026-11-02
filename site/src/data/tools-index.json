@@ -300,7 +300,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "Content creators, e-learning developers, marketers, and product teams needing quick localized voiceovers.",
-    "affiliate_url": "https://murf.ai"
+    "affiliate_url": "https://murf.ai/?fp_ref=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Notion AI",
@@ -476,11 +477,11 @@
   {
     "name": "Tally",
     "slug": "tally",
-    "tagline": "The simplest, Notion-style form builder for the web with a generous free tier.",
+    "tagline": "The simplest, Notion-style form builder for the web with an unmatched free tier.",
     "category": "Form Builder",
     "rating": 4.8,
     "starting_price": "$29/mo",
-    "best_for": "Bootstrapped founders, indie hackers, product managers, and agencies needing clean forms without heavy licensing costs.",
+    "best_for": "Solopreneurs, startups, and agencies looking for powerful forms without per-response pricing limits.",
     "affiliate_url": "https://tally.so/?via=heliatech"
   },
   {

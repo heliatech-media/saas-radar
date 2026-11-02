@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-01T15:30:37.708308",
+  "timestamp": "2026-11-02T09:57:51.576717",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
     "total_content_files_scanned": 132,
     "total_redirects_active": 80,
-    "new_redirects_healed": 24,
+    "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -42,6 +42,31 @@
       "source_file": "best-apollo-alternatives-2026.md"
     },
     {
+      "slug": "relay",
+      "target_url": "https://www.relay.app",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "workato",
+      "target_url": "https://www.workato.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "activepieces",
+      "target_url": "https://www.activepieces.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "tray-io",
+      "target_url": "https://tray.ai",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "power-automate",
+      "target_url": "https://powerautomate.microsoft.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "source_file": "best-deel-alternatives-2026.md"
@@ -75,36 +100,6 @@
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
       "source_file": "best-deel-alternatives-2026.md"
-    },
-    {
-      "slug": "relay",
-      "target_url": "https://www.relay.app",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "workato",
-      "target_url": "https://www.workato.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "activepieces",
-      "target_url": "https://www.activepieces.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "tray-io",
-      "target_url": "https://tray.ai",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "power-automate",
-      "target_url": "https://powerautomate.microsoft.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "murf-ai",
-      "target_url": "https://murf.ai",
-      "source_file": "murf-ai-evolution-guide-2026.md"
     },
     {
       "slug": "playht",

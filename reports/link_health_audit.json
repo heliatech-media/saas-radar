@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01 15:31:07",
+  "timestamp": "2026-11-02 09:58:05",
   "total_links_audited": 80,
   "healthy_links": 75,
   "broken_links_count": 5,
@@ -155,7 +155,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=eqGeOob20HZItZ&gsxid=eqGeOob20HZItZ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Ot0VdzayCAnpcl&gsxid=Ot0VdzayCAnpcl&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -184,7 +184,7 @@
       "slug": "julius-ai",
       "target_url": "https://julius.ai/?via=heliatech",
       "final_url": "https://julius.ai/?via=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -198,7 +198,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -283,13 +283,13 @@
       "slug": "multiplier",
       "target_url": "https://www.usemultiplier.com",
       "final_url": "https://www.usemultiplier.com/",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
       "slug": "murf-ai",
-      "target_url": "https://murf.ai",
-      "final_url": "https://murf.ai/",
+      "target_url": "https://murf.ai/?fp_ref=heliatech",
+      "final_url": "https://murf.ai/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -333,7 +333,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -368,7 +368,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=RvgmN0PfYrWp3B&gsxid=RvgmN0PfYrWp3B&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Xbik0pl9YmS40e&gsxid=Xbik0pl9YmS40e&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

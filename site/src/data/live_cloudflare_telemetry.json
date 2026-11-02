@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-01T15:29:57.450853",
+  "last_synced": "2026-11-02T09:57:30.279991",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-04 - 2026-11-01)",
-  "total_visitors_network": 7681,
-  "total_requests": 47891,
-  "total_visits": 2381,
-  "total_pageviews": 11037,
+  "time_window": "28 Days (2026-10-05 - 2026-11-02)",
+  "total_visitors_network": 8485,
+  "total_requests": 54138,
+  "total_visits": 2630,
+  "total_pageviews": 11991,
   "percent_cached": "56.14%",
-  "data_served_mb": 491.2,
+  "data_served_mb": 549.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 2400
+      "views": 2300
     },
     {
       "path": "/calculator/",
-      "views": 410
+      "views": 540
+    },
+    {
+      "path": "/awards/",
+      "views": 190
+    },
+    {
+      "path": "/versus/",
+      "views": 170
     },
     {
       "path": "/radar/",
-      "views": 180
-    },
-    {
-      "path": "/terms/",
       "views": 150
     },
     {
       "path": "/blog/",
-      "views": 140
-    },
-    {
-      "path": "/versus/",
-      "views": 120
-    },
-    {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 120
+      "views": 150
     },
     {
       "path": "/blog/make-automation-revolution/",
+      "views": 140
+    },
+    {
+      "path": "/reviews/heygen/",
       "views": 120
     },
     {
-      "path": "/reviews/clickup/",
+      "path": "/reviews/beehiiv/",
       "views": 120
     },
     {
-      "path": "/reviews/brevo/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/awards/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/resend/",
-      "views": 120
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/elevenlabs/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 110
     },
     {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "path": "/terms/",
+      "views": 110
+    },
+    {
+      "path": "/sentinel/",
+      "views": 110
+    },
+    {
+      "path": "/blog/framer-evolution-guide-2026/",
+      "views": 110
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 10040
+      "views": 10690
     },
     {
       "country": "Morocco",
-      "views": 2850
+      "views": 4020
     },
     {
       "country": "Germany",
-      "views": 910
-    },
-    {
-      "country": "Belgium",
-      "views": 660
+      "views": 760
     },
     {
       "country": "Singapore",
-      "views": 460
+      "views": 610
+    },
+    {
+      "country": "Belgium",
+      "views": 550
+    },
+    {
+      "country": "Netherlands",
+      "views": 520
     },
     {
       "country": "United Kingdom",
-      "views": 400
+      "views": 410
     },
     {
       "country": "Canada",
-      "views": 300
-    },
-    {
-      "country": "CN",
-      "views": 280
-    },
-    {
-      "country": "HK",
-      "views": 270
+      "views": 350
     },
     {
       "country": "India",
-      "views": 250
+      "views": 240
+    },
+    {
+      "country": "France",
+      "views": 240
     }
   ],
   "top_referrers": [
