@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-02T20:47:49.221859",
+  "last_synced": "2026-11-02T21:07:54.547919",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 9085,
-  "total_requests": 59043,
-  "total_visits": 2816,
-  "total_pageviews": 13023,
+  "total_visitors_network": 9108,
+  "total_requests": 59227,
+  "total_visits": 2823,
+  "total_pageviews": 13054,
   "percent_cached": "56.14%",
-  "data_served_mb": 617.3,
+  "data_served_mb": 618.6,
   "top_pages": [
     {
       "path": "/",
@@ -31,20 +31,20 @@
       "views": 180
     },
     {
-      "path": "/radar/",
-      "views": 170
-    },
-    {
       "path": "/blog/",
       "views": 170
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 150
+      "path": "/radar/",
+      "views": 170
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 130
+      "views": 150
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
+      "views": 150
     },
     {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
@@ -59,11 +59,11 @@
       "views": 120
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 110
     },
     {
-      "path": "/blog/apollo-io-vs-lusha/",
+      "path": "/sentinel/",
       "views": 110
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 11720
+      "views": 11760
     },
     {
       "country": "Morocco",
-      "views": 4880
+      "views": 4920
     },
     {
       "country": "Germany",
