@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-02T12:51:13.877859",
+  "timestamp": "2026-11-02T15:55:34.884506",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
     "total_content_files_scanned": 134,
     "total_redirects_active": 81,
-    "new_redirects_healed": 24,
+    "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -40,11 +40,6 @@
       "slug": "clay",
       "target_url": "https://www.clay.com",
       "source_file": "best-apollo-alternatives-2026.md"
-    },
-    {
-      "slug": "captions",
-      "target_url": "https://www.captions.com",
-      "source_file": "captions-evolution-guide-2026.md"
     },
     {
       "slug": "papaya-global",

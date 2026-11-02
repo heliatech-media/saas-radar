@@ -120,5 +120,6 @@ AFFILIATE_MAP = {
     "kit": "https://kit.com/?via=heliatech",
     "screen-studio": "https://screen.studio/?via=heliatech",
     "descript": "https://get.descript.com/heliatech",
-    "murf-ai": "https://murf.ai/?fp_ref=heliatech"
+    "murf-ai": "https://murf.ai/?fp_ref=heliatech",
+    "captions": "https://www.captions.ai/?via=heliatech"
 }

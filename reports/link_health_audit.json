@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02 12:51:43",
+  "timestamp": "2026-11-02 15:56:20",
   "total_links_audited": 81,
   "healthy_links": 76,
   "broken_links_count": 5,
@@ -98,8 +98,8 @@
     },
     {
       "slug": "captions",
-      "target_url": "https://www.captions.com",
-      "final_url": "https://clearcaptions.com/facebook/",
+      "target_url": "https://www.captions.ai/?via=heliatech",
+      "final_url": "https://captions.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -162,7 +162,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=gvCaquuXALYgHP&gsxid=gvCaquuXALYgHP&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=SGqdGaoPVpQQvm&gsxid=SGqdGaoPVpQQvm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -375,7 +375,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2ySlsSP91mZWtb&gsxid=2ySlsSP91mZWtb&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=K3816SCraRESVT&gsxid=K3816SCraRESVT&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

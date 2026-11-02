@@ -73,7 +73,8 @@
     "rating": 4.6,
     "starting_price": "$10/mo",
     "best_for": "Solopreneurs, talking-head creators, digital marketers, and educators scaling short-form video output.",
-    "affiliate_url": "https://www.captions.ai"
+    "affiliate_url": "https://www.captions.ai/?via=heliatech",
+    "commission_rate": "Not publicly disclosed"
   },
   {
     "name": "Castmagic",
@@ -110,13 +111,12 @@
   {
     "name": "Descript",
     "slug": "descript",
-    "tagline": "The all-in-one audio and video editor that works like a word processor.",
+    "tagline": "The all-in-one video and podcast editing software that works like a word processor.",
     "category": "Audio/Podcasting",
     "rating": 4.6,
     "starting_price": "$12/mo",
-    "best_for": "Podcasters, content creators, internal communications teams, and video editors looking to slash rough-cut times.",
-    "affiliate_url": "https://get.descript.com/heliatech",
-    "commission_rate": "15% recurring for 12 months"
+    "best_for": "Podcasters, content creators, educators, and internal communication teams looking to scale video production without mastering complex non-linear editors.",
+    "affiliate_url": "https://get.descript.com/heliatech"
   },
   {
     "name": "Dumpling AI",

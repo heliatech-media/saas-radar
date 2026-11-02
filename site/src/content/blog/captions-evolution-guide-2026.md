@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: captions
 image: /images/blog/captions.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Captions Account ➔
   url: /go/captions
 ---
-
 Content creation used to be an exercise in logistical endurance. Before the advent of generative AI video suites, a marketing team wishing to publish a single polished talking-head clip had to marshal an army of specialists: a scriptwriter, a teleprompter wrangler, an audio engineer to scrub room echo, a transcriptionist to burn custom kinetic subtitles, and a localization agency to dub the footage into foreign markets. The human bottleneck was staggering, stretching a 60-second social clip across a multi-day post-production pipeline. Today, that legacy workflow belongs in a museum.
 
 ## 1. The Genesis & Evolution

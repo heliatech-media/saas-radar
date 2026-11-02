@@ -6,7 +6,7 @@ tagline: An AI-powered video editor designed to create, edit, and translate prof
 category: AI Video
 rating: 4.6
 website_url: https://www.captions.ai
-affiliate_url: https://www.captions.ai
+affiliate_url: "https://www.captions.ai/?via=heliatech"
 summary: Captions is an advanced mobile and desktop application that automates tedious
   post-production workflows for content creators and marketers. By leveraging generative
   AI, it instantly produces dynamic captions, corrects eye contact, removes filler

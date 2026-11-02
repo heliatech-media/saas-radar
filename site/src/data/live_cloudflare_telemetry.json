@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-11-02T12:50:42.651085",
+  "last_synced": "2026-11-02T15:54:47.501551",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 8680,
-  "total_requests": 55206,
-  "total_visits": 2690,
-  "total_pageviews": 12301,
+  "total_visitors_network": 8783,
+  "total_requests": 56179,
+  "total_visits": 2722,
+  "total_pageviews": 12451,
   "percent_cached": "56.14%",
-  "data_served_mb": 583.6,
+  "data_served_mb": 596.8,
   "top_pages": [
     {
       "path": "/",
-      "views": 2600
+      "views": 2620
     },
     {
       "path": "/calculator/",
-      "views": 580
+      "views": 600
     },
     {
       "path": "/radar/",
@@ -39,6 +39,14 @@
       "views": 140
     },
     {
+      "path": "/versus/",
+      "views": 140
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 130
+    },
+    {
       "path": "/reviews/beehiiv/",
       "views": 130
     },
@@ -47,12 +55,8 @@
       "views": 130
     },
     {
-      "path": "/versus/",
-      "views": 130
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 130
+      "path": "/reviews/elevenlabs/",
+      "views": 120
     },
     {
       "path": "/awards/",
@@ -65,32 +69,28 @@
     {
       "path": "/blog/elevenlabs-vs-heygen/",
       "views": 120
-    },
-    {
-      "path": "/reviews/resend/",
-      "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11300
+      "views": 11520
     },
     {
       "country": "Morocco",
-      "views": 4070
+      "views": 4370
     },
     {
       "country": "Germany",
       "views": 910
     },
     {
-      "country": "Belgium",
+      "country": "Singapore",
       "views": 660
     },
     {
-      "country": "Singapore",
-      "views": 630
+      "country": "Belgium",
+      "views": 660
     },
     {
       "country": "United Kingdom",
