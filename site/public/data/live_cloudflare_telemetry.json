@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-02T20:07:29.012922",
+  "last_synced": "2026-11-02T20:17:33.381988",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 9016,
-  "total_requests": 58607,
-  "total_visits": 2794,
-  "total_pageviews": 12951,
+  "total_visitors_network": 9030,
+  "total_requests": 58700,
+  "total_visits": 2799,
+  "total_pageviews": 12964,
   "percent_cached": "56.14%",
-  "data_served_mb": 614.4,
+  "data_served_mb": 615.3,
   "top_pages": [
     {
       "path": "/",
@@ -31,11 +31,11 @@
       "views": 180
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 170
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 170
     },
     {
@@ -47,7 +47,7 @@
       "views": 130
     },
     {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "path": "/reviews/beehiiv/",
       "views": 120
     },
     {
@@ -55,7 +55,7 @@
       "views": 120
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 120
     },
     {
@@ -63,7 +63,7 @@
       "views": 110
     },
     {
-      "path": "/blog/framer-evolution-guide-2026/",
+      "path": "/terms/",
       "views": 110
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 11650
+      "views": 11670
     },
     {
       "country": "Morocco",
-      "views": 4800
+      "views": 4840
     },
     {
       "country": "Germany",
