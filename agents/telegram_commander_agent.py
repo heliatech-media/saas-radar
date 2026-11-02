@@ -128,6 +128,42 @@ class TelegramCommander:
             )
             self.send_message(chat_id, msg)
 
+        elif cmd in ("/revenus", "/benefices", "/gains"):
+            ps_key = os.getenv("PARTNERSTACK_API_KEY", "").strip()
+            if not ps_key:
+                self.send_message(chat_id, "⚠️ Clé PartnerStack non configurée dans le fichier .env.")
+                return
+
+            try:
+                headers = {"Authorization": f"Bearer {ps_key}", "Accept": "application/json"}
+                rew_res = requests.get("https://api.partnerstack.com/api/v2/rewards", headers=headers, timeout=10).json()
+                rewards = rew_res.get("data", {}).get("items", [])
+                cust_res = requests.get("https://api.partnerstack.com/api/v2/customers", headers=headers, timeout=10).json()
+                customers = cust_res.get("data", {}).get("items", [])
+                pay_res = requests.get("https://api.partnerstack.com/api/v2/payouts", headers=headers, timeout=10).json()
+                payouts = pay_res.get("data", {}).get("items", [])
+
+                pending_count = sum(1 for r in rewards if r.get("reward_status") == "pending")
+                paid_customers = sum(1 for c in customers if c.get("has_paid"))
+
+                bank_info = "Airwallex (Compte MAD)"
+                if payouts and payouts[0].get("provider", {}).get("meta"):
+                    meta = payouts[0]["provider"]["meta"]
+                    bank_info = f"{meta.get('account_name', 'Hamza')} ({meta.get('account_currency', 'MAD')} - *{meta.get('account_number_last_4', '')})"
+
+                msg = (
+                    "💰 *[BILAN FINANCIER & COMMISSIONS EN DIRECT]*\n\n"
+                    f"• 👥 *Clients Référés Payants :* *{paid_customers} client(s)*\n"
+                    f"• ⏳ *Commissions en attente (Pending) :* *{pending_count} transaction(s)*\n"
+                    f"• 🏦 *Compte de virement lié :* `{bank_info}`\n"
+                    f"• 🤝 *Partenaire actif :* ElevenLabs (25% à 30% MRR)\n\n"
+                    "📌 *Tableau de bord officiel :* [Accéder à PartnerStack](https://dash.partnerstack.com)\n"
+                    "⚡ _Note : Les commissions SaaS sont validées sous 30 jours (délai de rétractation) avant virement bancaire automatique._"
+                )
+                self.send_message(chat_id, msg)
+            except Exception as e:
+                self.send_message(chat_id, f"❌ Erreur lors de la récupération des revenus : {e}")
+
         elif cmd in ("/cockpit", "/sentinel"):
             master_pw = os.getenv("SENTINEL_PASSWORD", "Helia-Protected")
             msg = (
