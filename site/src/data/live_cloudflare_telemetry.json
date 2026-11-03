@@ -1,26 +1,26 @@
 {
-  "last_synced": "2026-11-03T06:57:34.336107",
+  "last_synced": "2026-11-03T09:51:46.926692",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 9763,
-  "total_requests": 66314,
-  "total_visits": 3026,
-  "total_pageviews": 14247,
+  "total_visitors_network": 9819,
+  "total_requests": 67402,
+  "total_visits": 3043,
+  "total_pageviews": 14379,
   "percent_cached": "56.14%",
-  "data_served_mb": 657.7,
+  "data_served_mb": 664.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 2680
+      "views": 2720
     },
     {
       "path": "/calculator/",
-      "views": 720
+      "views": 730
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 220
+      "views": 230
     },
     {
       "path": "/radar/",
@@ -35,6 +35,10 @@
       "views": 170
     },
     {
+      "path": "/reviews/elevenlabs/",
+      "views": 150
+    },
+    {
       "path": "/blog/make-automation-revolution/",
       "views": 150
     },
@@ -47,10 +51,6 @@
       "views": 140
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 140
-    },
-    {
       "path": "/versus/",
       "views": 140
     },
@@ -59,26 +59,26 @@
       "views": 140
     },
     {
-      "path": "/reviews/brevo/",
-      "views": 130
-    },
-    {
       "path": "/awards/",
       "views": 130
     },
     {
       "path": "/blog/elevenlabs-vs-heygen/",
       "views": 130
+    },
+    {
+      "path": "/reviews/resend/",
+      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 12290
+      "views": 12430
     },
     {
       "country": "Morocco",
-      "views": 6180
+      "views": 6350
     },
     {
       "country": "Germany",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Singapore",
-      "views": 770
+      "views": 860
     },
     {
       "country": "Belgium",
@@ -98,7 +98,7 @@
     },
     {
       "country": "CN",
-      "views": 360
+      "views": 370
     },
     {
       "country": "Brazil",

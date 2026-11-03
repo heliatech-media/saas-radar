@@ -78,7 +78,7 @@ Let’s operationalize Tally by building a high-converting client onboarding int
 2. **Draft with Markdown:** Type `/` to open the command menu. Add a Heading block titled `Client Onboarding & Project Scope`. Below it, add a Short Answer block for `Client Name` and an Email block for `Business Email`.
 3. **Incorporate Conditional Logic:** Add a Multiple Choice question asking `What is your primary service requirement?` (Options: Web Development, Brand Identity, Fractional Operations). Click on specific options and configure logic to show or hide subsequent project-specific detail blocks dynamically.
 4. **Embed Calculations & Submissions:** Add a linear scale or number block to capture expected project budget ranges. Finish by inserting a Submit button block.
-5. **Integrate & Deploy:** Head to the Integrations tab and connect your form directly to an Airtable base or Slack channel. Publish the form, grab the clean embed code or minimalist sharing link, and deploy it live to your website.
+5. **Integrate & Deploy:** Head to the Integrations tab and connect your form directly to an [Airtable](/reviews/airtable) base or Slack channel. Publish the form, grab the clean embed code or minimalist sharing link, and deploy it live to your website.
 
 ## 4. Critical Assessment & Trade-offs
 
@@ -89,7 +89,7 @@ While Tally is an exceptional tool, a rigorous evaluation requires examining bot
 | **Pricing & Limits** | Unlimited forms & submissions for free. | White-labeling & custom domains require Pro. | Ideal for budget-conscious teams; branding is subtle. |
 | **Creation Speed** | Notion-style markdown editor is ultra-fast. | Minimalist styling can feel restrictive. | Perfect for functional forms; less suited for wild branding. |
 | **Functionality** | Advanced logic, calculations, & file uploads included. | Reporting and analytics are relatively basic. | Great for data capture; use BI tools for deep analytics. |
-| **Integrations** | Webhooks, Zapier, Notion, and Airtable native sync. | Lacks a massive proprietary app marketplace. | Easily bridges gaps via robust webhook infrastructure. |
+| **Integrations** | Webhooks, [Zapier](/reviews/zapier), Notion, and Airtable native sync. | Lacks a massive proprietary app marketplace. | Easily bridges gaps via robust webhook infrastructure. |
 
 ## 5. HeliaTech Final Verdict & Recommendation
 
