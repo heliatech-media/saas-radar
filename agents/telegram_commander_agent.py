@@ -260,7 +260,7 @@ class TelegramCommander:
                         d_type = d.get('type')
                         subj = d.get('subject')
                         scope = d.get('recipients_scope')
-                        partner = d.get('sponsor_partner')
+                        partner = d.get('featured_partner', d.get('sponsor_partner'))
                         badge = d.get('status_badge')
                         block = (
                             f"📅 *{date_str}* [{d_type}]\n"

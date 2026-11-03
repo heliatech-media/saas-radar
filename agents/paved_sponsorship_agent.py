@@ -347,7 +347,7 @@ class PavedSponsorshipAgent:
           You are receiving this exclusive partner briefing because you are subscribed to <em>The Thursday Radar</em> at heliatech.online.
         </p>
         <p style="font-size: 10px; color: #4b5563;">
-          <a href="https://heliatech.online" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a> &bull; <a href="https://www.paved.com/sites/heliatech-radar" style="color: #6b7280; text-decoration: underline;">Sponsor on Paved Marketplace</a>
+          <a href="https://heliatech.online" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a> &bull; <a href="https://www.paved.com/sites/heliatech-radar" style="color: #6b7280; text-decoration: underline;">Partner Inquiries (Media Kit)</a>
         </p>
       </div>
 
@@ -365,7 +365,7 @@ class PavedSponsorshipAgent:
         Drafts a high-impact, data-driven B2B sponsorship pitch to send to marketing leaders
         driving them to book directly on our Paved Marketplace URL.
         """
-        pitch = f"""Subject: Partnership / Sponsoring HeliaTech Thursday Radar ({target_brand})
+        pitch = f"""Subject: Partnership & Editorial Spotlight: HeliaTech Thursday Radar ({target_brand})
 
 Hi {contact_name},
 
