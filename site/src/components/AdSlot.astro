@@ -1,0 +1,34 @@
+---
+interface Props {
+  slotId?: string;
+  format?: 'auto' | 'horizontal' | 'rectangle';
+  className?: string;
+}
+
+const { slotId = "4334705198476561", format = "auto", className = "" } = Astro.props;
+---
+
+<div class={`my-8 w-full max-w-4xl mx-auto ${className}`}>
+  <div class="relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/40 p-4 transition-all duration-300 hover:border-slate-700/80">
+    <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800/60">
+      <span class="text-[10px] font-mono tracking-widest uppercase text-slate-500 font-semibold flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-500/60"></span>
+        Espace Partenaire • Publicité
+      </span>
+      <span class="text-[10px] font-mono text-slate-600">HeliaTech Network</span>
+    </div>
+    
+    <!-- AdSense Target Slot Container -->
+    <div class="min-h-[100px] flex items-center justify-center text-center overflow-hidden">
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center;"
+           data-ad-layout="in-article"
+           data-ad-format={format}
+           data-ad-client="ca-pub-4334705198476561"
+           data-full-width-responsive="true"></ins>
+      <script is:inline>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+</div>

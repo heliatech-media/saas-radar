@@ -6,6 +6,7 @@ import RoiCalculator from '../../components/RoiCalculator.astro';
 import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
 import NewsletterCapture from '../../components/NewsletterCapture.astro';
 import PricingShockCalculator from '../../components/PricingShockCalculator.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -259,6 +260,9 @@ const jsonLd = {
         cheaperToolSlug="make" 
       />
     )}
+
+    <!-- Google AdSense Managed Partner Slot -->
+    <AdSlot />
 
     <!-- HeliaTech B2B Executive Lead Magnet -->
     <NewsletterCapture />
