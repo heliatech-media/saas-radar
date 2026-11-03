@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-03T15:56:09.626915",
+  "last_synced": "2026-11-03T19:14:40.759386",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10092,
-  "total_requests": 69313,
-  "total_visits": 3128,
-  "total_pageviews": 14745,
+  "total_visitors_network": 10177,
+  "total_requests": 70861,
+  "total_visits": 3154,
+  "total_pageviews": 14826,
   "percent_cached": "56.14%",
-  "data_served_mb": 692.7,
+  "data_served_mb": 699.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 2750
+      "views": 2530
     },
     {
       "path": "/calculator/",
-      "views": 730
+      "views": 830
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 250
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 270
+      "views": 250
+    },
+    {
+      "path": "/awards/",
+      "views": 220
     },
     {
       "path": "/radar/",
-      "views": 200
+      "views": 190
     },
     {
       "path": "/blog/",
-      "views": 180
+      "views": 190
     },
     {
-      "path": "/terms/",
-      "views": 170
-    },
-    {
-      "path": "/reviews/elevenlabs/",
-      "views": 150
+      "path": "/versus/",
+      "views": 190
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 140
+    },
+    {
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "views": 130
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 120
+    },
+    {
       "path": "/reviews/beehiiv/",
-      "views": 150
+      "views": 120
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 140
+      "path": "/reviews/heygen/",
+      "views": 120
     },
     {
-      "path": "/awards/",
-      "views": 140
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 140
-    },
-    {
-      "path": "/versus/",
-      "views": 140
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 130
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 130
+      "path": "/blog/make-vs-zapier/",
+      "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 12870
+      "views": 13190
     },
     {
       "country": "Morocco",
-      "views": 6900
+      "views": 6980
     },
     {
       "country": "Germany",
-      "views": 1330
+      "views": 1190
     },
     {
       "country": "Singapore",
-      "views": 890
+      "views": 910
     },
     {
       "country": "Belgium",
-      "views": 670
+      "views": 550
+    },
+    {
+      "country": "Netherlands",
+      "views": 520
     },
     {
       "country": "United Kingdom",
-      "views": 450
-    },
-    {
-      "country": "CN",
-      "views": 380
-    },
-    {
-      "country": "Brazil",
-      "views": 340
+      "views": 430
     },
     {
       "country": "Canada",
-      "views": 310
+      "views": 360
     },
     {
-      "country": "HK",
-      "views": 290
+      "country": "Brazil",
+      "views": 300
+    },
+    {
+      "country": "France",
+      "views": 260
     }
   ],
   "top_referrers": [
