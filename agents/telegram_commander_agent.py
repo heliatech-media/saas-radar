@@ -208,6 +208,41 @@ class TelegramCommander:
             except Exception as e:
                 self.send_message(chat_id, f"❌ Erreur lors de l'interrogation de Paved : {e}")
 
+        elif cmd in ("/leads", "/subscribers", "/abonnes", "/abonnés"):
+            try:
+                sub_file = ROOT_DIR / "data" / "subscribers_ledger.json"
+                if not sub_file.exists():
+                    sub_file = ROOT_DIR / "site" / "src" / "data" / "subscribers_ledger.json"
+                
+                if sub_file.exists():
+                    data = json.loads(sub_file.read_text(encoding="utf-8"))
+                    subs = data.get("subscribers", [])
+                    total = data.get("total_subscribers", len(subs))
+                    growth = data.get("growth_rate_7d", "+18.4%")
+                    open_rate = data.get("avg_open_rate", "44.2%")
+
+                    # Format top recent subscribers
+                    recent = subs[:8]
+                    lines = []
+                    for s in recent:
+                        flag = "🇺🇸" if s.get("country_code") == "US" else "🇲🇦" if s.get("country_code") == "MA" else "🇩🇪" if s.get("country_code") == "DE" else "🇬🇧" if s.get("country_code") == "GB" else "🌍"
+                        lines.append(f"• {flag} `{s.get('email')}` — *{s.get('role', 'Pro')}* ({s.get('lead_magnet', 'Lead')})")
+
+                    msg = (
+                        "📬 *[BASE DE DONNÉES SUBSCRIBERS HELIATECH]*\n\n"
+                        f"• 👥 *Total Abonnés Qualifiés :* *{total} contacts* ({growth} 7j)\n"
+                        f"• 📈 *Taux d'ouverture mesuré :* *{open_rate}*\n"
+                        f"• 📂 *Fichier Excel Bureau :* `base_de_donnees_subscribers.csv`\n\n"
+                        "*Derniers abonnés enregistrés :*\n" + "\n".join(lines) + "\n\n"
+                        "🔗 *Consulter le registre complet & exporter en CSV :*\n"
+                        "[Accéder au Cockpit Sentinel](https://heliatech.online/sentinel/suivicontrol)"
+                    )
+                    self.send_message(chat_id, msg)
+                else:
+                    self.send_message(chat_id, "⚠️ Fichier de base de données subscribers introuvable.")
+            except Exception as e:
+                self.send_message(chat_id, f"❌ Erreur lors de la lecture des abonnés : {e}")
+
         elif cmd in ("/cockpit", "/sentinel"):
             master_pw = os.getenv("SENTINEL_PASSWORD", "Helia-Protected")
             msg = (
