@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-03T19:14:40.759386",
+  "last_synced": "2026-11-03T19:24:52.752687",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10177,
-  "total_requests": 70861,
-  "total_visits": 3154,
-  "total_pageviews": 14826,
+  "total_visitors_network": 10187,
+  "total_requests": 70986,
+  "total_visits": 3157,
+  "total_pageviews": 14843,
   "percent_cached": "56.14%",
-  "data_served_mb": 699.7,
+  "data_served_mb": 700.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 2530
+      "views": 2560
     },
     {
       "path": "/calculator/",
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 13190
+      "views": 13210
     },
     {
       "country": "Morocco",
-      "views": 6980
+      "views": 7020
     },
     {
       "country": "Germany",
