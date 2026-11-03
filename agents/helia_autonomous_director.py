@@ -74,6 +74,7 @@ from agents.breaking_news_sniffer_agent import BreakingNewsSnifferAgent
 from agents.devto_syndication_agent import syndicate_next_monetized_article
 from agents.linkedin_syndication_agent import LinkedInSyndicator
 from agents.cloudflare_analytics_agent import CloudflareAnalyticsAgent
+from agents.paved_sponsorship_agent import PavedSponsorshipAgent
 from agents.models import ToolReview
 
 
@@ -116,6 +117,7 @@ class HeliaAutonomousDirector:
         self.news_sniffer = BreakingNewsSnifferAgent(api_key=api_key)
         self.linkedin_syndicator = LinkedInSyndicator()
         self.cloudflare_analytics = CloudflareAnalyticsAgent()
+        self.paved = PavedSponsorshipAgent()
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -176,6 +178,14 @@ class HeliaAutonomousDirector:
                 self.log("Helia-RewardfulEngine", f"Ingested viral SaaS: {scouted['name']} -> /go/{scouted['slug']}", "🎯")
         except Exception as e:
             self.log("Helia-RewardfulEngine", f"Rewardful scout notice: {e}", "⚠️")
+
+        # Step 2.85: Sub-Agent PavedSponsorshipSentinel (Autonomous Marketplace Sync)
+        self.log("Helia-PavedSentinel", "Querying Paved.com marketplace for new advertiser bookings and calendar slots...", "💼")
+        try:
+            paved_res = self.paved.poll_and_sync_bookings()
+            self.log("Helia-PavedSentinel", f"Paved sync complete: {paved_res['total_active']} active sponsorship(s), {paved_res['new_detected']} new detected.", "✅")
+        except Exception as e:
+            self.log("Helia-PavedSentinel", f"Paved sync warning: {e}", "⚠️")
 
         # Step 2.8: Sub-Agent AffiliateHunter (Autonomous AI Link & Partner Scout)
         self.log("Helia-AffiliateHunter", "Autonomous AI link scout scanning unmonetized tools...", "🏹")
