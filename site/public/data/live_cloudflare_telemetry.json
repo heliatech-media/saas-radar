@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-03T23:46:31.462364",
+  "last_synced": "2026-11-04T00:06:37.233381",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10363,
-  "total_requests": 74064,
-  "total_visits": 3212,
-  "total_pageviews": 15110,
+  "total_visitors_network": 10368,
+  "total_requests": 74530,
+  "total_visits": 3214,
+  "total_pageviews": 15159,
   "percent_cached": "56.14%",
-  "data_served_mb": 716.1,
+  "data_served_mb": 718.4,
   "top_pages": [
     {
       "path": "/",
@@ -31,15 +31,15 @@
       "views": 220
     },
     {
+      "path": "/blog/",
+      "views": 190
+    },
+    {
       "path": "/radar/",
       "views": 190
     },
     {
       "path": "/versus/",
-      "views": 190
-    },
-    {
-      "path": "/blog/",
       "views": 190
     },
     {
@@ -63,22 +63,22 @@
       "views": 120
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/blog/make-vs-zapier/",
-      "views": 110
+      "path": "/reviews/heygen/",
+      "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 13430
+      "views": 13440
     },
     {
       "country": "Morocco",
-      "views": 7830
+      "views": 8020
     },
     {
       "country": "Germany",
@@ -98,7 +98,7 @@
     },
     {
       "country": "United Kingdom",
-      "views": 440
+      "views": 500
     },
     {
       "country": "Canada",
