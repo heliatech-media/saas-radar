@@ -1,58 +1,50 @@
 {
-  "last_synced": "2026-11-02T21:42:35.570652",
+  "last_synced": "2026-11-03T03:50:51.528971",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-05 - 2026-11-02)",
-  "total_visitors_network": 9168,
-  "total_requests": 59934,
-  "total_visits": 2842,
-  "total_pageviews": 13121,
+  "time_window": "28 Days (2026-10-06 - 2026-11-03)",
+  "total_visitors_network": 9657,
+  "total_requests": 64105,
+  "total_visits": 2993,
+  "total_pageviews": 13818,
   "percent_cached": "56.14%",
-  "data_served_mb": 622.4,
+  "data_served_mb": 644.0,
   "top_pages": [
     {
       "path": "/",
-      "views": 2640
+      "views": 2660
     },
     {
       "path": "/calculator/",
-      "views": 670
+      "views": 700
+    },
+    {
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "views": 210
     },
     {
       "path": "/radar/",
       "views": 190
     },
     {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 180
-    },
-    {
       "path": "/blog/",
-      "views": 170
+      "views": 180
     },
     {
       "path": "/terms/",
       "views": 160
     },
     {
+      "path": "/reviews/beehiiv/",
+      "views": 150
+    },
+    {
       "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 140
-    },
-    {
       "path": "/versus/",
       "views": 140
-    },
-    {
-      "path": "/reviews/brevo/",
-      "views": 130
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 130
     },
     {
       "path": "/blog/elevenlabs-vs-heygen/",
@@ -63,30 +55,38 @@
       "views": 130
     },
     {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 130
+    },
+    {
       "path": "/reviews/clickup/",
-      "views": 120
+      "views": 130
     },
     {
       "path": "/awards/",
-      "views": 120
+      "views": 130
+    },
+    {
+      "path": "/reviews/brevo/",
+      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 11830
+      "views": 12040
     },
     {
       "country": "Morocco",
-      "views": 5060
+      "views": 5980
     },
     {
       "country": "Germany",
-      "views": 1140
+      "views": 1310
     },
     {
       "country": "Singapore",
-      "views": 690
+      "views": 730
     },
     {
       "country": "Belgium",
@@ -94,22 +94,22 @@
     },
     {
       "country": "United Kingdom",
-      "views": 440
+      "views": 450
     },
     {
       "country": "CN",
-      "views": 350
+      "views": 360
     },
     {
       "country": "Brazil",
-      "views": 310
+      "views": 340
     },
     {
       "country": "Canada",
       "views": 310
     },
     {
-      "country": "HK",
+      "country": "France",
       "views": 280
     }
   ],

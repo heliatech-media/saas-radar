@@ -14,7 +14,7 @@ tags:
 - B2B Software
 - Video Editing
 - Podcasting
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: descript
 image: /images/blog/descript.svg
 tldr:
@@ -32,7 +32,6 @@ affiliate_cta:
   button_text: Claim Your Free Descript Account ➔
   url: https://get.descript.com/heliatech
 ---
-
 For decades, digital media production has been held hostage by the timeline. Editors, podcasters, and corporate communications teams spent countless hours scrubbing through waveforms, hunting for errant "ums" and "ahs," and making pixel-level cuts on complex multi-track timelines. It was a tedious, high-friction workflow that required specialized training, expensive hardware, and a staggering amount of patience. The human bottleneck in content creation wasn't the ideation or the recording—it was the excruciating post-production grind.
 
 Then came a paradigm shift that turned traditional non-linear editing (NLE) on its head. Instead of forcing humans to adapt to the machine's timeline, what if the machine adapted to human language? This is the core premise behind Descript, a groundbreaking media editing suite that treats your audio and video like a standard text document.
