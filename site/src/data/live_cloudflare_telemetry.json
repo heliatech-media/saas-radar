@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-03T23:26:25.726680",
+  "last_synced": "2026-11-03T23:46:31.462364",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10352,
-  "total_requests": 73761,
-  "total_visits": 3209,
-  "total_pageviews": 15101,
+  "total_visitors_network": 10363,
+  "total_requests": 74064,
+  "total_visits": 3212,
+  "total_pageviews": 15110,
   "percent_cached": "56.14%",
-  "data_served_mb": 713.8,
+  "data_served_mb": 716.1,
   "top_pages": [
     {
       "path": "/",
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 7760
+      "views": 7830
     },
     {
       "country": "Germany",
