@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-03T22:26:03.676283",
+  "last_synced": "2026-11-03T22:36:04.572575",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10308,
-  "total_requests": 73032,
-  "total_visits": 3195,
-  "total_pageviews": 14979,
+  "total_visitors_network": 10310,
+  "total_requests": 73137,
+  "total_visits": 3196,
+  "total_pageviews": 14984,
   "percent_cached": "56.14%",
-  "data_served_mb": 708.4,
+  "data_served_mb": 708.6,
   "top_pages": [
     {
       "path": "/",
@@ -31,7 +31,7 @@
       "views": 220
     },
     {
-      "path": "/versus/",
+      "path": "/radar/",
       "views": 190
     },
     {
@@ -39,7 +39,7 @@
       "views": 190
     },
     {
-      "path": "/radar/",
+      "path": "/versus/",
       "views": 190
     },
     {
@@ -67,7 +67,7 @@
       "views": 120
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/make-vs-zapier/",
       "views": 110
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 7520
+      "views": 7560
     },
     {
       "country": "Germany",
