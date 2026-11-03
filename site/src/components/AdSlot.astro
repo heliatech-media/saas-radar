@@ -8,27 +8,60 @@ interface Props {
 const { slotId = "4334705198476561", format = "auto", className = "" } = Astro.props;
 ---
 
-<div class={`my-8 w-full max-w-4xl mx-auto ${className}`}>
+<div class={`my-8 w-full max-w-4xl mx-auto ad-slot-wrapper ${className}`}>
   <div class="relative overflow-hidden rounded-xl border border-slate-800/80 bg-slate-900/40 p-4 transition-all duration-300 hover:border-slate-700/80">
     <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800/60">
       <span class="text-[10px] font-mono tracking-widest uppercase text-slate-500 font-semibold flex items-center gap-1.5">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-500/60"></span>
-        Espace Partenaire • Publicité
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-500/60 animate-pulse"></span>
+        Partenaire Certifié • Annonce
       </span>
-      <span class="text-[10px] font-mono text-slate-600">HeliaTech Network</span>
+      <span class="text-[10px] font-mono text-slate-500">HeliaTech Media Network</span>
     </div>
     
     <!-- AdSense Target Slot Container -->
-    <div class="min-h-[100px] flex items-center justify-center text-center overflow-hidden">
+    <div class="adsense-container min-h-[90px] flex items-center justify-center text-center overflow-hidden relative">
       <ins class="adsbygoogle"
-           style="display:block; text-align:center;"
+           style="display:block; text-align:center; min-height:90px; width:100%;"
            data-ad-layout="in-article"
            data-ad-format={format}
            data-ad-client="ca-pub-4334705198476561"
            data-full-width-responsive="true"></ins>
       <script is:inline>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch(e) {}
       </script>
+
+      <!-- High-Converting B2B Fallback (Active if AdSense is loading, blocked, or awaiting auction fill) -->
+      <div class="ad-fallback-banner absolute inset-0 bg-[#080b11] border border-cyan-500/20 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-left z-0">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-white tracking-wide truncate">Sponsorisez HeliaTech Radar</span>
+              <span class="px-1.5 py-0.2 rounded text-[9px] font-mono bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-semibold">10 000+ Pros</span>
+            </div>
+            <p class="text-[11px] text-slate-400 truncate">
+              Mise en avant ciblée auprès de 10 000+ décideurs tech, directeurs IT et fondateurs SaaS.
+            </p>
+          </div>
+        </div>
+        <a href="/sponsor" class="shrink-0 px-4 py-2 rounded-lg text-xs font-mono font-bold bg-gradient-to-r from-cyan-500 to-sky-500 text-slate-950 hover:from-cyan-400 hover:to-sky-400 shadow-md shadow-cyan-500/20 transition-all duration-200">
+          Réserver un Slot ➔
+        </a>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* When AdSense successfully renders an iframe or filled ad, hide the fallback teaser */
+  .adsense-container:has(iframe) .ad-fallback-banner,
+  .adsense-container:has(ins[data-ad-status="filled"]) .ad-fallback-banner {
+    display: none !important;
+  }
+</style>
