@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Thursday Radar #42 | Helia Tech</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #030712;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #e5e7eb;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #0b0f19;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .header {
+      padding: 32px 24px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      border-bottom: 1px solid #374151;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid #06b6d4;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #22d3ee;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .sponsor-box {
+      margin: 24px;
+      padding: 20px;
+      background-color: #111827;
+      border: 1px solid #0284c7;
+      border-radius: 8px;
+    }
+    .sponsor-tag {
+      font-size: 10px;
+      font-weight: 800;
+      color: #38bdf8;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .content-section {
+      padding: 0 24px 24px 24px;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #38bdf8;
+      margin: 24px 0 12px 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #9ca3af;
+      margin: 0 0 16px 0;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #06b6d4;
+      color: #030712 !important;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    .metric-grid {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid #1f2937;
+      border-radius: 6px;
+    }
+    .metric-cell {
+      padding: 12px;
+      text-align: center;
+      background-color: #111827;
+      border: 1px solid #1f2937;
+    }
+    .metric-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: #22d3ee;
+    }
+    .metric-lbl {
+      font-size: 11px;
+      color: #6b7280;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .footer {
+      padding: 24px;
+      background-color: #030712;
+      border-top: 1px solid #1f2937;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div style="padding: 24px 12px;">
+    <div class="container">
+      
+      <!-- Header -->
+      <div class="header">
+        <div class="badge">WEEKLY EXECUTIVE DISPATCH</div>
+        <h1>The Thursday Radar</h1>
+        <p style="margin: 0; color: #94a3b8; font-size: 13px;">HeliaTech Independent Software Observatory &bull; Issue #42</p>
+      </div>
+
+      <!-- Native Sponsored Spotlight -->
+      <div class="sponsor-box">
+        <div class="sponsor-tag">&bull; Featured Sponsor Placement</div>
+        <h3 style="margin: 0 0 8px 0; color: #ffffff; font-size: 16px;">Automate Complex B2B Pipelines at Enterprise Scale with Make</h3>
+        <p style="font-size: 13px; color: #cbd5e1; margin-bottom: 12px;">
+          Stop paying Zapier's 4x premium on high-volume task runs. Make empowers engineering teams to build multi-step integrations with advanced error handling, webhooks, and visual logic execution without code bottlenecks.
+        </p>
+        <a href="https://heliatech.online/go/make" class="cta-btn">Explore Make Enterprise &rarr;</a>
+      </div>
+
+      <!-- Main Editorial Content -->
+      <div class="content-section">
+        <h2>1. The 2026 Developer Stack: Cursor vs GitHub Copilot Teardown</h2>
+        <p>
+          This week, our research desk audited over 140,000 lines of legacy TypeScript and Rust across 12 engineering teams to quantify developer velocity between hierarchical workspace models and standard inline autocomplete.
+        </p>
+
+        <!-- Benchmark Matrix -->
+        <table class="metric-grid">
+          <tr>
+            <td class="metric-cell">
+              <div class="metric-val">96 / 100</div>
+              <div class="metric-lbl">Cursor Index</div>
+            </td>
+            <td class="metric-cell">
+              <div class="metric-val">84 / 100</div>
+              <div class="metric-lbl">Copilot Index</div>
+            </td>
+            <td class="metric-cell">
+              <div class="metric-val">-38%</div>
+              <div class="metric-lbl">Context Decay</div>
+            </td>
+          </tr>
+        </table>
+
+        <p>
+          The deciding factor? Shadow workspace indexing and granular <code>.cursorrules</code> enforcement. When teams scale beyond 15 developers, monolithic context windows without architectural isolation begin degrading commit velocity by up to 22%.
+        </p>
+
+        <h2>2. Architecture Alert: Anthropic MCP Protocol Open-Sourced</h2>
+        <p>
+          Model Context Protocol (MCP) is rapidly becoming the universal USB-C cable for AI models connecting directly to enterprise data stores. Supabase, PostgreSQL, and BigQuery have already launched official MCP native endpoints.
+        </p>
+        <p>
+          Next week, we publish our comprehensive implementation guide: <em>Deploying Zero-ETL MCP Servers in Enterprise VPCs</em>.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p style="margin-bottom: 8px; color: #9ca3af;">
+          <strong>Helia Tech Media</strong> &bull; Global Software Benchmark Observatory<br>
+          Delivered exclusively to engineering leaders, CTOs, and founders.
+        </p>
+        <p style="margin-bottom: 8px;">
+          You received this email because you subscribed to The Thursday Radar at <a href="https://heliatech.online" style="color: #22d3ee; text-decoration: none;">heliatech.online</a>.
+        </p>
+        <p style="font-size: 10px; color: #4b5563;">
+          Disclosures: All benchmarks are independently tested. Qualifying partner links may yield publisher royalties without altering user pricing.<br>
+          <a href="https://heliatech.online" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a> &bull; <a href="https://heliatech.online/sponsor" style="color: #6b7280; text-decoration: underline;">Sponsor This Newsletter</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

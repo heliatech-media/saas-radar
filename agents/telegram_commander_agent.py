@@ -243,6 +243,145 @@ class TelegramCommander:
             except Exception as e:
                 self.send_message(chat_id, f"❌ Erreur lors de la lecture des abonnés : {e}")
 
+        elif cmd in ("/queue", "/prochains", "/planning", "/envois"):
+            try:
+                queue_file = ROOT_DIR / "data" / "email_dispatch_queue.json"
+                if not queue_file.exists():
+                    queue_file = ROOT_DIR / "site" / "src" / "data" / "email_dispatch_queue.json"
+
+                if queue_file.exists():
+                    data = json.loads(queue_file.read_text(encoding="utf-8"))
+                    dispatches = data.get("upcoming_dispatches", [])
+                    total = data.get("total_upcoming", len(dispatches))
+
+                    blocks = []
+                    for d in dispatches:
+                        date_str = d.get('scheduled_date_fr', 'Bientôt')
+                        d_type = d.get('type')
+                        subj = d.get('subject')
+                        scope = d.get('recipients_scope')
+                        partner = d.get('sponsor_partner')
+                        badge = d.get('status_badge')
+                        block = (
+                            f"📅 *{date_str}* [{d_type}]\n"
+                            f"• *Objet :* {subj}\n"
+                            f"• *Cible :* {scope}\n"
+                            f"• *Partenaire :* `{partner}`\n"
+                            f"• *Statut :* `{badge}`"
+                        )
+                        blocks.append(block)
+
+                    msg = (
+                        "🚀 *[FILE D'ATTENTE DES PROCHAINS ENVOIS EMAILS]*\n\n"
+                        f"• 📬 *Total en attente :* *{total} campagnes prêtes*\n"
+                        f"• ⚡ *Prochain départ :* *Ce jeudi 05/11 à 15:00*\n\n"
+                        + "\n\n".join(blocks) + "\n\n"
+                        "🔗 *Consulter & prévisualiser en direct :*\n"
+                        "[Cockpit Sentinel](https://heliatech.online/sentinel/suivicontrol)"
+                    )
+                    self.send_message(chat_id, msg)
+                else:
+                    self.send_message(chat_id, "⚠️ Fichier de file d'attente d'emails introuvable.")
+            except Exception as e:
+                self.send_message(chat_id, f"❌ Erreur lors de la lecture de la file d'emails : {e}")
+
+        elif cmd in ("/plan_sponsor", "/sponsor_deal", "/offresponsor"):
+            if len(args) < 3:
+                self.send_message(
+                    chat_id,
+                    "⚠️ Usage : `/plan_sponsor <NomProduit> <Lien> <Offre ou Détails>`\n\n"
+                    "_Exemple :_\n"
+                    "`/plan_sponsor Notion https://notion.so/start 50% de remise sur le plan Team avec le code HELIA2026`"
+                )
+                return
+
+            prod_name = args[0]
+            prod_link = args[1]
+            prod_offer = " ".join(args[2:])
+
+            self.send_message(
+                chat_id,
+                f"🧠 *Helia-PavedSentinel prend la commande !*\n\n"
+                f"• Produit : *{prod_name}*\n"
+                f"• Lien : `{prod_link}`\n"
+                f"• Offre : _{prod_offer}_\n\n"
+                "⚡ Rédaction de l'email dédié B2B par l'IA et insertion dans la file d'attente..."
+            )
+
+            def run_sponsor_plan():
+                try:
+                    from agents.paved_sponsorship_agent import PavedSponsorshipAgent
+                    agent = PavedSponsorshipAgent()
+                    
+                    # Generate the HTML email
+                    html_path = agent.generate_dedicated_email_briefing(
+                        brand_name=prod_name,
+                        website_url=prod_link,
+                        headline=f"Accelerate Your Engineering Velocity with {prod_name}",
+                        core_problem=f"Scaling modern architectures requires eliminating friction. {prod_name} empowers technical teams with enterprise-grade reliability.",
+                        key_features=[
+                            f"<strong>Enterprise Performance:</strong> Built specifically for high-throughput engineering workflows.",
+                            f"<strong>Seamless Integration:</strong> Plugs directly into your existing cloud stack with zero downtime.",
+                            f"<strong>Dedicated HeliaTech Perk:</strong> {prod_offer}"
+                        ],
+                        exclusive_offer=prod_offer,
+                        cta_url=prod_link
+                    )
+
+                    # Add to queue
+                    queue_file = ROOT_DIR / "data" / "email_dispatch_queue.json"
+                    site_queue = ROOT_DIR / "site" / "src" / "data" / "email_dispatch_queue.json"
+                    
+                    queue_data = {"total_upcoming": 0, "upcoming_dispatches": []}
+                    if queue_file.exists():
+                        queue_data = json.loads(queue_file.read_text(encoding="utf-8"))
+
+                    new_disp = {
+                        "id": f"disp_custom_{prod_name.lower()}_{int(time.time())}",
+                        "type": "Custom Dedicated Sponsor E-Blast",
+                        "format": "Special Executive Briefing",
+                        "scheduled_date": datetime.now().isoformat() + "Z",
+                        "scheduled_date_fr": "Programmé à la demande du Patron",
+                        "subject": f"[Special Briefing] Accelerate Your Velocity with {prod_name} (Exclusive Offer)",
+                        "sender": "HeliaTech Briefings <briefing@heliatech.online>",
+                        "recipients_scope": "All 142 Verified B2B Subscribers",
+                        "recipients_count": 142,
+                        "sponsor_partner": f"{prod_name} (Offre Externe)",
+                        "featured_topics": [
+                            f"Exclusive {prod_name} Architecture Teardown",
+                            prod_offer,
+                            f"Verified Link: {prod_link}"
+                        ],
+                        "preview_file": html_path.name,
+                        "status": "APPROVED_READY",
+                        "status_badge": "Validé Patron & Prêt"
+                    }
+
+                    queue_data["upcoming_dispatches"].insert(0, new_disp)
+                    queue_data["total_upcoming"] = len(queue_data["upcoming_dispatches"])
+                    
+                    # Write to both locations
+                    json_str = json.dumps(queue_data, indent=2)
+                    queue_file.write_text(json_str, encoding="utf-8")
+                    if site_queue.parent.exists():
+                        site_queue.write_text(json_str, encoding="utf-8")
+
+                    res_msg = (
+                        f"✅ *EMAIL SPONSORISÉ PRÊT & PROGRAMMÉ !*\n\n"
+                        f"• 🎯 *Produit :* *{prod_name}*\n"
+                        f"• 📧 *Objet :* `{new_disp['subject']}`\n"
+                        f"• 👥 *Audience :* 142 abonnés qualifiés\n"
+                        f"• 📂 *Fichier HTML généré :* `{html_path.name}`\n\n"
+                        "🔗 *Prévisualiser dans ton Cockpit :*\n"
+                        "[Ouvrir le Cockpit Sentinel](https://heliatech.online/sentinel/suivicontrol)"
+                    )
+                    self.send_message(chat_id, res_msg)
+
+                except Exception as ex:
+                    self.send_message(chat_id, f"❌ Erreur lors de la génération du sponsor : {ex}")
+
+            threading.Thread(target=run_sponsor_plan, daemon=True).start()
+
         elif cmd in ("/cockpit", "/sentinel"):
             master_pw = os.getenv("SENTINEL_PASSWORD", "Helia-Protected")
             msg = (

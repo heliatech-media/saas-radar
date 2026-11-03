@@ -1,0 +1,88 @@
+{
+  "updated_at": "2026-11-03T23:54:00.000Z",
+  "queue_status": "ACTIVE_DISPATCH_PIPELINE",
+  "total_upcoming": 4,
+  "next_scheduled_dispatch": "2026-11-05T14:00:00Z",
+  "upcoming_dispatches": [
+    {
+      "id": "disp_44_radar",
+      "type": "Weekly Newsletter",
+      "format": "The Thursday Radar #44",
+      "scheduled_date": "2026-11-05T14:00:00Z",
+      "scheduled_date_fr": "Jeudi 05 Novembre 2026 à 15:00",
+      "subject": "The Thursday Radar #44: Cursor vs Copilot Benchmark & Anthropic MCP Protocol",
+      "sender": "HeliaTech <partnership@heliatech.online>",
+      "recipients_scope": "All 142 Verified B2B Subscribers",
+      "recipients_count": 142,
+      "sponsor_partner": "Make (Celonis Enterprise)",
+      "featured_topics": [
+        "Cursor vs GitHub Copilot 2026 Teardown (Roland Lopez Benchmark)",
+        "Anthropic MCP Protocol Open-Sourced (Zero-ETL AI Data)",
+        "Exclusive Make Automation Rate Cards"
+      ],
+      "preview_file": "sample_newsletter.html",
+      "status": "READY_FOR_DISPATCH",
+      "status_badge": "Planifié & Prêt"
+    },
+    {
+      "id": "disp_dedicated_supabase",
+      "type": "Dedicated E-Blast",
+      "format": "Special Partner Briefing",
+      "scheduled_date": "2026-11-09T15:30:00Z",
+      "scheduled_date_fr": "Lundi 09 Novembre 2026 à 16:30",
+      "subject": "[Special Briefing] Eliminate 70% of Cloud DB Complexity with Serverless Postgres",
+      "sender": "HeliaTech Briefings <briefing@heliatech.online>",
+      "recipients_scope": "CTOs & Infrastructure Decision-Makers (US & Tier-1)",
+      "recipients_count": 86,
+      "sponsor_partner": "Supabase Enterprise Architecture",
+      "featured_topics": [
+        "100% Open-Source Postgres with zero lock-in",
+        "Native Model Context Protocol (MCP) Vector Endpoints",
+        "$250 Cloud Credits + 3 Months Team Plan Exclusive"
+      ],
+      "preview_file": "dedicated_email_sample.html",
+      "status": "QUEUED",
+      "status_badge": "En File d'Attente (Paved Slot)"
+    },
+    {
+      "id": "disp_outbound_pitch_postman",
+      "type": "Outbound Sponsorship Pitch",
+      "format": "B2B Partner Acquisition",
+      "scheduled_date": "2026-11-10T10:00:00Z",
+      "scheduled_date_fr": "Mardi 10 Novembre 2026 à 11:00",
+      "subject": "Partnership / Sponsoring HeliaTech Thursday Radar (Postman Enterprise)",
+      "sender": "Hamza El Fahsi <partnership@heliatech.online>",
+      "recipients_scope": "Head of Growth & Developer Marketing @ Postman",
+      "recipients_count": 3,
+      "sponsor_partner": "Postman Enterprise / API Governance",
+      "featured_topics": [
+        "12,800+ Monthly US Decision-Makers Reach",
+        "44% Executive Open Rate on The Thursday Radar",
+        "Paved Marketplace Direct Booking Link"
+      ],
+      "preview_file": "campaigns/sponsors/2026-11-03_postman-enterprise_dedicated.html",
+      "status": "AI_PREPARED",
+      "status_badge": "Généré par Helia-PavedSentinel"
+    },
+    {
+      "id": "disp_45_radar",
+      "type": "Weekly Newsletter",
+      "format": "The Thursday Radar #45",
+      "scheduled_date": "2026-11-12T14:00:00Z",
+      "scheduled_date_fr": "Jeudi 12 Novembre 2026 à 15:00",
+      "subject": "The Thursday Radar #45: The End of SaaS Bloat & ElevenLabs Voice v4 Teardown",
+      "sender": "HeliaTech <partnership@heliatech.online>",
+      "recipients_scope": "All Verified Subscribers",
+      "recipients_count": 160,
+      "sponsor_partner": "Paved Slot Booking Open ($250)",
+      "featured_topics": [
+        "ElevenLabs Voice AI v4 Challenge Results",
+        "Eliminating 65% SaaS Waste: The 2026 Playbook",
+        "Apollo.io vs ZoomInfo Data Decay Analysis"
+      ],
+      "preview_file": "sample_newsletter.html",
+      "status": "COMPILING",
+      "status_badge": "En Rédaction Autonome"
+    }
+  ]
+}

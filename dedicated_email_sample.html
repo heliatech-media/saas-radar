@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Partner Briefing: Supabase Enterprise Architecture</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #030712;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #e5e7eb;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #0b0f19;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .header {
+      padding: 32px 24px;
+      background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%);
+      border-bottom: 1px solid #059669;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #34d399;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      margin: 0 0 10px 0;
+      font-size: 26px;
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+    }
+    .hero-subtitle {
+      margin: 0;
+      color: #a7f3d0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .content {
+      padding: 32px 28px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #34d399;
+      margin: 0 0 12px 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #9ca3af;
+      margin: 0 0 16px 0;
+    }
+    .highlight-card {
+      background-color: #111827;
+      border-left: 4px solid #10b981;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+    .feature-list {
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .feature-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #1f2937;
+      font-size: 14px;
+      color: #d1d5db;
+      display: flex;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      color: #10b981;
+      font-weight: 800;
+      margin-right: 12px;
+    }
+    .offer-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 78, 59, 0.2) 100%);
+      border: 1px dashed #10b981;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #10b981;
+      color: #022c22 !important;
+      font-weight: 800;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+    }
+    .footer {
+      padding: 24px;
+      background-color: #030712;
+      border-top: 1px solid #1f2937;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div style="padding: 24px 12px;">
+    <div class="container">
+      
+      <!-- Special Partner Briefing Header -->
+      <div class="header">
+        <div class="badge">SPECIAL PARTNER DISPATCH &bull; HELIATECH EXECUTIVE RADAR</div>
+        <h1 class="hero-title">Eliminate 70% of Cloud DB Complexity with Serverless Postgres</h1>
+        <p class="hero-subtitle">An exclusive technical deep-dive presented by Supabase &amp; HeliaTech</p>
+      </div>
+
+      <!-- Main Body Content -->
+      <div class="content">
+        <p>Dear Engineering Leader,</p>
+        
+        <p>
+          Managing production PostgreSQL instances on traditional hyperscalers (AWS RDS, Google Cloud SQL) frequently turns into an infrastructure nightmare: complex connection pooling, manual read-replica provisioning, and unpredictable monthly bill shocks.
+        </p>
+
+        <div class="highlight-card">
+          <p style="margin: 0; color: #e5e7eb; font-weight: 600;">
+            "Supabase gives our engineering organization enterprise-grade Postgres with instant branching, real-time subscriptions, and zero database ops."
+          </p>
+          <span style="display: block; font-size: 12px; color: #9ca3af; margin-top: 6px;">— Principal Infrastructure Architect, Global SaaS</span>
+        </div>
+
+        <h2>Why High-Growth Engineering Teams Choose Supabase:</h2>
+
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div><strong>Production Postgres with Zero Lock-in:</strong> 100% open-source PostgreSQL with standard pgvector, pg_cron, and PostGIS extensions out of the box.</div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div><strong>Native MCP (Model Context Protocol) Support:</strong> Connect your private AI agents directly to Postgres tables with automated context isolation.</div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div><strong>Instant Git-Style DB Branching:</strong> Spin up ephemeral database environments for every pull request without affecting production data.</div>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">&#10003;</span>
+            <div><strong>Built-in Auth, Storage &amp; Edge Functions:</strong> Complete developer toolkit backed by global CDN edge execution.</div>
+          </li>
+        </ul>
+
+        <!-- Exclusive Offer Box -->
+        <div class="offer-box">
+          <span style="font-size: 11px; font-weight: 800; color: #34d399; letter-spacing: 1px; text-transform: uppercase;">Exclusive HeliaTech Subscriber Privilege</span>
+          <h3 style="margin: 8px 0; color: #ffffff; font-size: 20px;">Claim $250 in Cloud Credits + 3 Months Team Plan</h3>
+          <p style="font-size: 13px; color: #cbd5e1; margin-bottom: 20px;">
+            Deploy your first production cluster in under 90 seconds. No enterprise contract required.
+          </p>
+          <a href="https://heliatech.online/go/supabase" class="cta-btn">Claim Your Enterprise Credits &rarr;</a>
+        </div>
+
+        <p style="font-size: 13px; color: #9ca3af; margin-top: 24px;">
+          Best regards,<br>
+          <strong style="color: #ffffff;">The HeliaTech Research Desk</strong><br>
+          <span style="font-size: 12px; color: #6b7280;">In partnership with Supabase Architecture</span>
+        </p>
+      </div>
+
+      <!-- Footer Compliance -->
+      <div class="footer">
+        <p style="margin-bottom: 8px;">
+          <strong>Helia Tech Media</strong> &bull; Global Software Benchmark Observatory<br>
+          You are receiving this exclusive partner briefing because you are subscribed to <em>The Thursday Radar</em> at heliatech.online.
+        </p>
+        <p style="font-size: 10px; color: #4b5563;">
+          To ensure you only receive relevant dispatches, you can adjust your preferences at any time.<br>
+          <a href="https://heliatech.online" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a> &bull; <a href="https://heliatech.online/sponsor" style="color: #6b7280; text-decoration: underline;">Sponsor a Special Dispatch</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

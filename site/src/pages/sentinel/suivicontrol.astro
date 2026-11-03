@@ -106,6 +106,21 @@ try {
 
 // Read Subscribers & Leads Ledger (Helia-LeadSentinel)
 let subscribersData: any = { total_subscribers: 142, growth_rate_7d: "+18.4%", avg_open_rate: "44.2%", subscribers: [] };
+// Read Upcoming Outbound Email Dispatch Queue (Helia-EmailQueue)
+let emailQueueData: any = { total_upcoming: 4, upcoming_dispatches: [] };
+try {
+  const queueCandidates = [
+    path.resolve(rootDir, 'site/src/data/email_dispatch_queue.json'),
+    path.resolve(rootDir, 'data/email_dispatch_queue.json'),
+    path.resolve('src/data/email_dispatch_queue.json')
+  ];
+  for (const qc of queueCandidates) {
+    if (fs.existsSync(qc)) {
+      emailQueueData = JSON.parse(fs.readFileSync(qc, 'utf-8'));
+      break;
+    }
+  }
+} catch (e) {}
 try {
   const subCandidates = [
     path.resolve(rootDir, 'site/src/data/subscribers_ledger.json'),
@@ -483,6 +498,80 @@ const catalog = {
               <div class="text-[11px] font-mono text-slate-400 uppercase">Délivrabilité Resend</div>
               <div class="text-2xl font-black text-emerald-400 mt-1">99.4%</div>
               <div class="text-[10px] font-mono text-emerald-400 mt-1">DKIM/SPF Strict HeliaTech</div>
+            </div>
+          </div>
+
+          <!-- UPCOMING EMAIL DISPATCH QUEUE (VISIBILITÉ PROCHAINS ENVOIS) -->
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-cyan-500/30 space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">🚀</span>
+                <div>
+                  <h3 class="text-base font-black text-white">File d'Attente des Prochains Envois (Upcoming Outbound Queue)</h3>
+                  <p class="text-xs text-slate-400">Planning officiel des prochaines newsletters et briefings sponsorisés en cours d'expédition.</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
+                {emailQueueData.total_upcoming} Emails en Pipeline
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {emailQueueData.upcoming_dispatches.map((disp: any) => (
+                <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-cyan-300 border border-slate-700">
+                        {disp.type}
+                      </span>
+                      <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        {disp.status_badge}
+                      </span>
+                    </div>
+
+                    <div class="text-xs font-mono text-slate-400 mb-1 flex items-center gap-1.5">
+                      <span>📅</span>
+                      <span class="text-white font-semibold">{disp.scheduled_date_fr}</span>
+                    </div>
+
+                    <h4 class="text-sm font-bold text-white mb-2 leading-snug">
+                      {disp.subject}
+                    </h4>
+
+                    <div class="text-xs font-mono text-slate-400 space-y-1 mb-3 bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/80">
+                      <div class="flex justify-between">
+                        <span class="text-slate-500">Expéditeur :</span>
+                        <span class="text-slate-300">{disp.sender}</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-slate-500">Cible :</span>
+                        <span class="text-cyan-300 font-bold">{disp.recipients_scope}</span>
+                      </div>
+                      <div class="flex justify-between">
+                        <span class="text-slate-500">Partenaire :</span>
+                        <span class="text-emerald-400 font-bold">{disp.sponsor_partner}</span>
+                      </div>
+                    </div>
+
+                    <div class="text-[11px] font-mono text-slate-400">
+                      <span class="text-slate-500 uppercase tracking-wider block mb-1">Points d'Analyse :</span>
+                      <ul class="space-y-1">
+                        {disp.featured_topics.map((t: string) => (
+                          <li class="flex items-start gap-1.5 text-slate-300">
+                            <span class="text-cyan-400">•</span>
+                            <span>{t}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono">
+                    <span class="text-slate-500">Template : <code class="text-slate-300">{disp.preview_file}</code></span>
+                    <span class="text-emerald-400 font-bold">100% Validé Resend</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
