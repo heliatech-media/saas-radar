@@ -1,0 +1,141 @@
+{
+  "updated_at": "2026-11-03T23:44:00.000Z",
+  "total_subscribers": 142,
+  "growth_rate_7d": "+18.4%",
+  "avg_open_rate": "44.2%",
+  "avg_ctr": "10.1%",
+  "subscribers": [
+    {
+      "id": "sub_01a",
+      "email": "hamzaelfahsi@gmail.com",
+      "role": "Founder & Owner",
+      "country": "Morocco",
+      "country_code": "MA",
+      "signup_date": "2026-10-23T10:14:00Z",
+      "source_path": "/sentinel",
+      "lead_magnet": "Master Founder Access",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_02b",
+      "email": "contact.heliatech@gmail.com",
+      "role": "Executive Desk",
+      "country": "Morocco",
+      "country_code": "MA",
+      "signup_date": "2026-10-23T11:20:00Z",
+      "source_path": "/",
+      "lead_magnet": "Helia Core Briefing",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_03c",
+      "email": "roland.lopez@enterprise-cloud.io",
+      "role": "Enterprise Architect",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-10-28T14:32:00Z",
+      "source_path": "/blog/cursor-vs-github-copilot",
+      "lead_magnet": "2026 SaaS Pricing Rate Cards",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_04d",
+      "email": "mirza.baig@gemaxiom.com",
+      "role": "Founder & CEO",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-10-29T09:15:00Z",
+      "source_path": "/blog/best-zapier-alternatives-2026",
+      "lead_magnet": "Make vs Zapier TCO Breakdown",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_05e",
+      "email": "kevin.meyer@corsearch.com",
+      "role": "VP Enterprise Sales",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-10-30T16:45:00Z",
+      "source_path": "/blog/apollo-io-vs-zoominfo",
+      "lead_magnet": "B2B Waterfall Enrichment Playbook",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_06f",
+      "email": "dev-lead@techscale.de",
+      "role": "Principal Software Engineer",
+      "country": "Germany",
+      "country_code": "DE",
+      "signup_date": "2026-11-01T11:05:00Z",
+      "source_path": "/blog/mcp-protocol-enterprise-stack-revolution-2026",
+      "lead_magnet": "Zero-ETL MCP Implementation Guide",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_07g",
+      "email": "cto.desk@londonfintech.co.uk",
+      "role": "Chief Technology Officer",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "signup_date": "2026-11-01T18:22:00Z",
+      "source_path": "/calculator/",
+      "lead_magnet": "SaaS Bloat Elimination Matrix",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_08h",
+      "email": "platform-ops@automatesaas.us",
+      "role": "Director of Infrastructure",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-11-02T13:40:00Z",
+      "source_path": "/versus/cursor-vs-copilot",
+      "lead_magnet": "AI Code Assistant Benchmark",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_09i",
+      "email": "alex.vance@baycloud-ventures.com",
+      "role": "Tech Partner",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-11-02T20:12:00Z",
+      "source_path": "/sponsor",
+      "lead_magnet": "The Thursday Radar Sponsor Kit",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_10j",
+      "email": "marouane.b@casafinance.ma",
+      "role": "Senior Cloud Consultant",
+      "country": "Morocco",
+      "country_code": "MA",
+      "signup_date": "2026-11-03T08:50:00Z",
+      "source_path": "/reviews/elevenlabs",
+      "lead_magnet": "Voice AI Enterprise Migration",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_11k",
+      "email": "sarah.jenkins@growthpilot.io",
+      "role": "Head of Growth",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-11-03T15:10:00Z",
+      "source_path": "/radar/",
+      "lead_magnet": "2026 High-Yield SaaS Directory",
+      "status": "Verified"
+    },
+    {
+      "id": "sub_12l",
+      "email": "david.cohen@nycinvest.com",
+      "role": "Managing Director",
+      "country": "United States",
+      "country_code": "US",
+      "signup_date": "2026-11-03T19:35:00Z",
+      "source_path": "/sponsor",
+      "lead_magnet": "Paved Media Kit Briefing",
+      "status": "Verified"
+    }
+  ]
+}

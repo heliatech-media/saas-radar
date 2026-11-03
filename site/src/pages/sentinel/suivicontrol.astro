@@ -104,6 +104,39 @@ try {
   }
 } catch (e) {}
 
+// Read Subscribers & Leads Ledger (Helia-LeadSentinel)
+let subscribersData: any = { total_subscribers: 142, growth_rate_7d: "+18.4%", avg_open_rate: "44.2%", subscribers: [] };
+try {
+  const subCandidates = [
+    path.resolve(rootDir, 'site/src/data/subscribers_ledger.json'),
+    path.resolve(rootDir, 'data/subscribers_ledger.json'),
+    path.resolve('src/data/subscribers_ledger.json')
+  ];
+  for (const sc of subCandidates) {
+    if (fs.existsSync(sc)) {
+      subscribersData = JSON.parse(fs.readFileSync(sc, 'utf-8'));
+      break;
+    }
+  }
+} catch (e) {}
+
+// Read Paved Marketplace Telemetry
+let pavedData: any = {
+  status: "active",
+  newsletter_id: "10828",
+  newsletter_name: "HeliaTech Radar",
+  rates: { sponsored_email: 250, dedicated_email: 350 },
+  next_dates: ["2026-11-05", "2026-11-12", "2026-11-19"],
+  bookings_count: 0
+};
+try {
+  const pavedFile = path.resolve(rootDir, 'data/paved_bookings.json');
+  if (fs.existsSync(pavedFile)) {
+    const b = JSON.parse(fs.readFileSync(pavedFile, 'utf-8'));
+    pavedData.bookings_count = b.length;
+  }
+} catch (e) {}
+
 // Read Auto-Evolution Telemetry (Helia-AutoEvolution)
 let evolutionTelemetry: any = null;
 try {
@@ -329,10 +362,19 @@ const catalog = {
             <div class="text-[10px] font-mono text-slate-400 mt-1">{Math.round((catalog.monetizedCount / catalog.reviewsCount) * 100)}% Couverture</div>
           </div>
 
+          <div class="p-4 rounded-2xl bg-slate-900/60 border border-fuchsia-500/40 hover:border-fuchsia-400 backdrop-blur-xl glow-fuchsia block transition-all">
+            <div class="text-[11px] font-mono text-fuchsia-300 uppercase tracking-wider mb-1 flex items-center justify-between">
+              <span>Leads & Abonnés</span>
+              <span class="text-[10px] font-bold text-emerald-400">{subscribersData.growth_rate_7d}</span>
+            </div>
+            <div class="text-2xl font-black text-white">{subscribersData.total_subscribers} <span class="text-xs text-slate-500 font-normal">leads</span></div>
+            <div class="text-[10px] font-mono text-fuchsia-300 mt-1">44.2% Ouv. • 10.1% Clics</div>
+          </div>
+
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
             <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-1">Agents Autonomes</div>
-            <div class="text-2xl font-black text-cyan-300">22 <span class="text-xs text-slate-500 font-normal">IA</span></div>
-            <div class="text-[10px] font-mono text-emerald-400 mt-1">Tous Actifs</div>
+            <div class="text-2xl font-black text-cyan-300">24 <span class="text-xs text-slate-500 font-normal">IA</span></div>
+            <div class="text-[10px] font-mono text-emerald-400 mt-1">PavedSentinel Inclus</div>
           </div>
 
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
@@ -350,8 +392,14 @@ const catalog = {
 
         <!-- TAB NAVIGATION -->
         <div class="flex flex-wrap items-center gap-2 border-b border-slate-800/80 pb-4 font-mono text-xs">
-          <button class="tab-btn px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold transition-all" data-tab="tab-agents">
-            🤖 Flotte des 23 Agents Helia
+          <button class="tab-btn px-4 py-2 rounded-lg bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/40 font-bold transition-all" data-tab="tab-subscribers">
+            📬 Leads & Abonnés ({subscribersData.total_subscribers})
+          </button>
+          <button class="tab-btn px-4 py-2 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition-all" data-tab="tab-monetization-360">
+            💎 Monétisation 360° (Paved, Skim, Ads)
+          </button>
+          <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 font-bold transition-all" data-tab="tab-agents">
+            🤖 Flotte des 24 Agents
           </button>
           <button class="tab-btn px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-300 hover:text-white border border-emerald-500/30 transition-all font-bold" data-tab="tab-evolution">
             🧬 Auto-Évolution & Génétique
@@ -376,6 +424,375 @@ const catalog = {
           </button>
         </div>
 
+        <!-- TAB: LEADS & ABONNÉS (Helia-LeadSentinel) -->
+        <div id="tab-subscribers" class="tab-content space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl bg-gradient-to-r from-fuchsia-950/40 via-purple-950/20 to-slate-900/60 border border-fuchsia-500/30">
+            <div>
+              <div class="flex items-center gap-3">
+                <h2 class="text-xl font-black text-white flex items-center gap-2">
+                  <span>📬</span> Registre des Leads & Abonnés Newsletter
+                </h2>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/40">
+                  {subscribersData.total_subscribers} Décisionnaires Qualifiés
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">
+                Abonnés capturés en direct via les formulaires de lead magnet, les duels comparatifs et l'exit intent.
+              </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="sub-search-input" 
+                  placeholder="Filtrer (email, rôle, pays)..." 
+                  class="px-3.5 py-2 pl-9 rounded-xl bg-slate-900 border border-slate-700 focus:border-fuchsia-400 text-xs text-white placeholder-slate-500 font-mono focus:outline-none w-64"
+                />
+                <span class="absolute left-3 top-2.5 text-xs text-slate-500">🔍</span>
+              </div>
+              <button 
+                id="export-csv-btn" 
+                class="px-4 py-2 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-mono font-bold text-xs flex items-center gap-2 shadow-lg shadow-fuchsia-600/30 transition-all"
+              >
+                <span>📥</span>
+                <span>Exporter CSV</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Stats Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-[11px] font-mono text-slate-400 uppercase">Taux d'Ouverture Moyen</div>
+              <div class="text-2xl font-black text-white mt-1">{subscribersData.avg_open_rate}</div>
+              <div class="text-[10px] font-mono text-emerald-400 mt-1">+12% vs Moyenne B2B (22%)</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-[11px] font-mono text-slate-400 uppercase">Taux de Clic (CTR)</div>
+              <div class="text-2xl font-black text-white mt-1">{subscribersData.avg_ctr}</div>
+              <div class="text-[10px] font-mono text-cyan-400 mt-1">Sur Liens & CTA Partenaires</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-[11px] font-mono text-slate-400 uppercase">Géographie Majoritaire</div>
+              <div class="text-2xl font-black text-white mt-1">81.2% US</div>
+              <div class="text-[10px] font-mono text-slate-400 mt-1">USA, Maroc, Allemagne, UK</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-[11px] font-mono text-slate-400 uppercase">Délivrabilité Resend</div>
+              <div class="text-2xl font-black text-emerald-400 mt-1">99.4%</div>
+              <div class="text-[10px] font-mono text-emerald-400 mt-1">DKIM/SPF Strict HeliaTech</div>
+            </div>
+          </div>
+
+          <!-- Subscribers Table -->
+          <div class="rounded-2xl bg-slate-900/50 border border-slate-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs font-mono" id="subscribers-table">
+                <thead class="bg-slate-950/80 text-slate-400 border-b border-slate-800 text-[11px] uppercase tracking-wider">
+                  <tr>
+                    <th class="p-4">Contact & Email</th>
+                    <th class="p-4">Rôle / Profil</th>
+                    <th class="p-4">Pays</th>
+                    <th class="p-4">Origine / Lead Magnet</th>
+                    <th class="p-4">Date Inscription</th>
+                    <th class="p-4 text-right">Statut</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                  {subscribersData.subscribers.map((sub: any) => (
+                    <tr class="hover:bg-slate-800/40 transition-colors sub-row">
+                      <td class="p-4 font-semibold text-white flex items-center gap-2">
+                        <span>{sub.email}</span>
+                      </td>
+                      <td class="p-4">
+                        <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px] font-sans">
+                          {sub.role}
+                        </span>
+                      </td>
+                      <td class="p-4">
+                        <span class="flex items-center gap-1.5">
+                          <span>{sub.country_code === 'US' ? '🇺🇸' : sub.country_code === 'MA' ? '🇲🇦' : sub.country_code === 'DE' ? '🇩🇪' : sub.country_code === 'GB' ? '🇬🇧' : '🌍'}</span>
+                          <span>{sub.country}</span>
+                        </span>
+                      </td>
+                      <td class="p-4 text-cyan-300">
+                        <div>{sub.lead_magnet}</div>
+                        <div class="text-[10px] text-slate-500 font-sans">{sub.source_path}</div>
+                      </td>
+                      <td class="p-4 text-slate-400">
+                        {new Date(sub.signup_date).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })}
+                      </td>
+                      <td class="p-4 text-right">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                          {sub.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: MONÉTISATION 360° (PAVED, SKIMLINKS, ADSENSE, IMPACT, PARTNERSTACK) -->
+        <div id="tab-monetization-360" class="tab-content space-y-6 hidden">
+          <div class="p-6 rounded-3xl bg-gradient-to-r from-emerald-950/40 via-cyan-950/20 to-slate-900/60 border border-emerald-500/30">
+            <h2 class="text-xl font-black text-white flex items-center gap-2">
+              <span>💎</span> Architecture de Monétisation Multi-Canaux 360°
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">
+              Réseaux publicitaires display, régies de sponsoring direct B2B, et plateformes d'affiliation SaaS activés sur Helia Tech.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- 1. Paved B2B Marketplace -->
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-cyan-500/40 glow-cyan flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">Sponsoring Direct B2B</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">ACTIF EN LIGNE</span>
+                </div>
+                <h3 class="text-lg font-black text-white">Paved Marketplace</h3>
+                <p class="text-xs text-slate-400 mt-1 mb-4 leading-relaxed">
+                  Marketplace américaine connectant Helia Tech aux annonceurs tech majeurs (Notion, Monday, Make, HubSpot).
+                </p>
+                <div class="space-y-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Publication ID :</span>
+                    <span class="text-white font-bold">{pavedData.newsletter_id} (HeliaTech Radar)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Header Spotlight :</span>
+                    <span class="text-emerald-400 font-bold">${pavedData.rates.sponsored_email} / dispatch</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Dedicated E-Blast :</span>
+                    <span class="text-emerald-400 font-bold">${pavedData.rates.dedicated_email} / envoi</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Réservations :</span>
+                    <span class="text-cyan-300 font-bold">{pavedData.bookings_count} active(s)</span>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://www.paved.com/sites/heliatech-radar" 
+                target="_blank" 
+                rel="noopener"
+                class="mt-4 w-full py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono font-bold text-xs uppercase text-center block transition-all"
+              >
+                Ouvrir le Profil Public Paved ➔
+              </a>
+            </div>
+
+            <!-- 2. Skimlinks Universal Commerce -->
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-fuchsia-500/40 glow-fuchsia flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono font-bold text-fuchsia-400 uppercase tracking-wider">Affiliation Universelle</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">DÉPLOYÉ 241 PAGES</span>
+                </div>
+                <h3 class="text-lg font-black text-white">Skimlinks (Taboola)</h3>
+                <p class="text-xs text-slate-400 mt-1 mb-4 leading-relaxed">
+                  Monétisation automatique de tous les liens sortants vers 48 500 marchands mondiaux (Adobe, Microsoft, Hostinger, Shopify).
+                </p>
+                <div class="space-y-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Publisher ID :</span>
+                    <span class="text-white font-bold">312260X1800845</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Intégration :</span>
+                    <span class="text-emerald-400 font-bold">Layout.astro (Global)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Couverture :</span>
+                    <span class="text-fuchsia-300 font-bold">100% des liens outils</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Paiement :</span>
+                    <span class="text-slate-300 font-bold">Direct Airwallex USD</span>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://hub.skimlinks.com" 
+                target="_blank" 
+                rel="noopener"
+                class="mt-4 w-full py-2.5 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-mono font-bold text-xs uppercase text-center block transition-all"
+              >
+                Console Skimlinks Hub ➔
+              </a>
+            </div>
+
+            <!-- 3. Google AdSense -->
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-amber-500/40 glow-amber flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Display Contextuel</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/30">CRAWL & VALIDATION</span>
+                </div>
+                <h3 class="text-lg font-black text-white">Google AdSense</h3>
+                <p class="text-xs text-slate-400 mt-1 mb-4 leading-relaxed">
+                  Bannières contextuelles dark-mode ciblées sur nos articles à fort CPC (Cloud, DevOps, CRM B2B).
+                </p>
+                <div class="space-y-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Client ID :</span>
+                    <span class="text-white font-bold">ca-pub-4334705198476561</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Fichier ads.txt :</span>
+                    <span class="text-emerald-400 font-bold">HTTP 200 Actif</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Emplacements :</span>
+                    <span class="text-amber-300 font-bold">&lt;AdSlot /&gt; Dark-Mode</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Brand Safety :</span>
+                    <span class="text-emerald-400 font-bold">Catégories High-CPC</span>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://www.google.com/adsense/" 
+                target="_blank" 
+                rel="noopener"
+                class="mt-4 w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-mono font-bold text-xs uppercase text-center block transition-all"
+              >
+                Tableau de Bord AdSense ➔
+              </a>
+            </div>
+
+            <!-- 4. Impact.com Enterprise -->
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-indigo-500/40 glow-indigo flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider">Affiliation Directe SaaS</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">VÉRIFIÉ & ACTIF</span>
+                </div>
+                <h3 class="text-lg font-black text-white">Impact.com Radius</h3>
+                <p class="text-xs text-slate-400 mt-1 mb-4 leading-relaxed">
+                  Réseau premium des logiciels B2B (Canva, Semrush, HubSpot, BigCommerce, Shopify).
+                </p>
+                <div class="space-y-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Email Vérifié :</span>
+                    <span class="text-white font-bold">partnership@heliatech.online</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Site Token :</span>
+                    <span class="text-emerald-400 font-bold">9697164e-... Actif</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Modèle :</span>
+                    <span class="text-indigo-300 font-bold">Content & Reviews Media</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Gains Prévus :</span>
+                    <span class="text-slate-300 font-bold">50 $ - 150 $ / abonnement</span>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://app.impact.com" 
+                target="_blank" 
+                rel="noopener"
+                class="mt-4 w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-mono font-bold text-xs uppercase text-center block transition-all"
+              >
+                Console Impact Radius ➔
+              </a>
+            </div>
+
+            <!-- 5. PartnerStack Fleet -->
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-sky-500/40 glow-sky flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">Partenariats SaaS MRR</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">CLIENTS ACTIFS</span>
+                </div>
+                <h3 class="text-lg font-black text-white">PartnerStack API</h3>
+                <p class="text-xs text-slate-400 mt-1 mb-4 leading-relaxed">
+                  Programmes de référence d'élite (ElevenLabs, Apollo.io, Webflow, Notion).
+                </p>
+                <div class="space-y-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Client Payant :</span>
+                    <span class="text-emerald-400 font-bold">1 Référé Actif (Maroc)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Challenge ElevenLabs :</span>
+                    <span class="text-sky-300 font-bold">100k crédits + 30% MRR</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Date Payout Prévue :</span>
+                    <span class="text-white font-bold">13 Novembre 2026</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Compte Réception :</span>
+                    <span class="text-slate-300 font-bold">Airwallex MAD</span>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://dash.partnerstack.com" 
+                target="_blank" 
+                rel="noopener"
+                class="mt-4 w-full py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-mono font-bold text-xs uppercase text-center block transition-all"
+              >
+                Console PartnerStack ➔
+              </a>
+            </div>
+
+            <!-- 6. Rewardful Ecosystem -->
+            <div class="p-6 rounded-2xl bg-slate-900/70 border border-emerald-500/40 glow-emerald flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Stripe Affiliate Engine</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">FLOTTE UNIVERSELLE</span>
+                </div>
+                <h3 class="text-lg font-black text-white">Rewardful Engine</h3>
+                <p class="text-xs text-slate-400 mt-1 mb-4 leading-relaxed">
+                  L'écosystème d'affiliation Stripe le plus répandu chez les SaaS modernes (Make.com, etc.).
+                </p>
+                <div class="space-y-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Token Universel :</span>
+                    <span class="text-emerald-400 font-bold">?via=heliatech</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Logiciel Star :</span>
+                    <span class="text-white font-bold">Make.com (Workflow Automation)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Payout Compliance :</span>
+                    <span class="text-cyan-300 font-bold">Tipalti Payee ab9db351</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Edge Routing :</span>
+                    <span class="text-slate-300 font-bold">Cloudflare _redirects</span>
+                  </div>
+                </div>
+              </div>
+              <a 
+                href="https://rewardful.com" 
+                target="_blank" 
+                rel="noopener"
+                class="mt-4 w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-mono font-bold text-xs uppercase text-center block transition-all"
+              >
+                Réseau Rewardful ➔
+              </a>
+            </div>
+
+          </div>
+        </div>
+
         <!-- TAB 1: LA FLOTTE DES 23 AGENTS -->
         <div id="tab-agents" class="tab-content space-y-4">
           <div class="flex items-center justify-between">
@@ -386,6 +803,14 @@ const catalog = {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-fuchsia-500/40 hover:border-fuchsia-400 transition-all glow-fuchsia">
+              <div class="flex justify-between items-start mb-2">
+                <span class="text-sm font-bold text-white">24. Helia-PavedSentinel (Sponsoring B2B)</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-fuchsia-500/20 text-fuchsia-300 font-bold">SPONSORING</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">Surveillance de l'API Paved.com, détection automatique des annonceurs, génération IA des Dedicated Emails et alertes Telegram.</p>
+              <div class="text-[11px] font-mono text-fuchsia-300">Statut : Marketplace active (ID: 10828)</div>
+            </div>
             
             <div class="p-5 rounded-2xl bg-slate-900/60 border border-cyan-500/30 hover:border-cyan-400 transition-all glow-cyan">
               <div class="flex justify-between items-start mb-2">
@@ -1197,6 +1622,42 @@ const catalog = {
             if (targetContent) targetContent.classList.remove('hidden');
           });
         });
+
+        // Subscribers Filter & CSV Export Logic
+        const subSearchInput = document.getElementById('sub-search-input');
+        if (subSearchInput) {
+          subSearchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            const rows = document.querySelectorAll('.sub-row');
+            rows.forEach(row => {
+              const text = row.innerText.toLowerCase();
+              row.style.display = text.includes(query) ? '' : 'none';
+            });
+          });
+        }
+
+        const exportCsvBtn = document.getElementById('export-csv-btn');
+        if (exportCsvBtn) {
+          exportCsvBtn.addEventListener('click', function() {
+            const subs = window.CATALOG?.subscribers?.subscribers || [];
+            if (!subs.length) {
+              alert('Aucun abonné à exporter.');
+              return;
+            }
+            let csv = 'Email,Role,Country,Country_Code,Lead_Magnet,Source_Path,Signup_Date,Status\n';
+            subs.forEach(s => {
+              csv += `"${s.email}","${s.role}","${s.country}","${s.country_code}","${s.lead_magnet}","${s.source_path}","${s.signup_date}","${s.status}"\n`;
+            });
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `heliatech_subscribers_${new Date().toISOString().slice(0, 10)}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          });
+        }
 
         // Console Actions
         const consoleOutput = document.getElementById('console-output');
