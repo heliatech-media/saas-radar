@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-03T20:55:27.288674",
+  "last_synced": "2026-11-03T21:25:37.239935",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10254,
-  "total_requests": 72062,
-  "total_visits": 3178,
-  "total_pageviews": 14924,
+  "total_visitors_network": 10273,
+  "total_requests": 72366,
+  "total_visits": 3184,
+  "total_pageviews": 14938,
   "percent_cached": "56.14%",
-  "data_served_mb": 705.6,
+  "data_served_mb": 706.2,
   "top_pages": [
     {
       "path": "/",
@@ -48,7 +48,7 @@
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 140
+      "views": 150
     },
     {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 13290
+      "views": 13310
     },
     {
       "country": "Morocco",
-      "views": 7230
+      "views": 7350
     },
     {
       "country": "Germany",
