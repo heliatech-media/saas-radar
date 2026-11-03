@@ -6,7 +6,7 @@ tagline: AI-powered storytelling and presentation format that builds narrative d
 category: AI Video & Presentation
 rating: 4.5
 website_url: https://tome.app
-affiliate_url: "https://tome.app/?via=heliatech"
+affiliate_url: "https://gamma.app"
 summary: Tome leverages generative AI to transform text prompts into fully designed,
   beautifully formatted presentations, pitches, and landing pages. It acts as an interactive
   canvas designed to streamline deck creation for founders, sales teams, and marketers.
@@ -139,6 +139,14 @@ Tome represents a massive leap forward for professionals who suffer from 'blank 
 However, it is not a silver bullet. If your presentations require strict corporate compliance templates, highly technical data visualizations, or flawless native PowerPoint handoffs, Tome will introduce friction. The AI struggles with deep domain-specific logic, meaning you must invest time in fact-checking and rewriting outputs. 
 
 Ultimately, Tome delivers the highest ROI to startup founders raising capital, enterprise sales reps building bespoke pitches, and agencies needing quick mockups. If you spend more than five hours a week formatting slides and wrestling with design alignments, the Pro tier pays for itself almost immediately.
+
+
+> [!IMPORTANT]
+> **Market Advisory:** The original Tome application (`tome.app`) sunsetted its standalone presentation editor in 2025. If you are seeking cutting-edge AI presentation and narrative deck generation, our research desk recommends:
+> 
+> 1. **[Gamma](/go/tome)**: The undisputed #1 AI-native storytelling canvas for generating modern, mobile-responsive decks, documents, and web pages from simple prompts. [Explore Gamma Free ➔](/go/tome)
+> 2. **[AdCreative.ai](/go/adcreative-ai)**: If your pitch decks require conversion-optimized commercial visuals and ad banners. [Claim Free Credits on AdCreative.ai ➔](/go/adcreative-ai)
+
 
 ## Frequently Asked Questions
 

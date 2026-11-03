@@ -1,0 +1,408 @@
+[
+  {
+    "route": "/go/adcreative-ai",
+    "target": "https://www.adcreative.ai/?fp_ref=heliatech",
+    "status": 200,
+    "final_url": "https://www.adcreative.ai/?fp_ref=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/airtable",
+    "target": "https://airtable.com/?ref=heliatech",
+    "status": 200,
+    "final_url": "https://www.airtable.com/?ref=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/apollo-io",
+    "target": "https://www.apollo.io",
+    "status": 200,
+    "final_url": "https://www.apollo.io",
+    "error": null
+  },
+  {
+    "route": "/go/beehiiv",
+    "target": "https://www.beehiiv.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.beehiiv.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/brevo",
+    "target": "https://www.brevo.com",
+    "status": 200,
+    "final_url": "https://www.brevo.com",
+    "error": null
+  },
+  {
+    "route": "/go/cal-com",
+    "target": "https://cal.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://cal.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/captions",
+    "target": "https://www.captions.ai/?via=heliatech",
+    "status": 200,
+    "final_url": "https://captions.ai/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/castmagic",
+    "target": "https://castmagic.io/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.castmagic.io/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/clickup",
+    "target": "https://clickup.com",
+    "status": 200,
+    "final_url": "https://clickup.com",
+    "error": null
+  },
+  {
+    "route": "/go/cursor",
+    "target": "https://www.cursor.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://cursor.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/descript",
+    "target": "https://www.descript.com",
+    "status": 200,
+    "final_url": "https://www.descript.com",
+    "error": null
+  },
+  {
+    "route": "/go/dumpling-ai",
+    "target": "https://www.dumpling.ai/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.dumpling.ai/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/elevenlabs",
+    "target": "https://try.elevenlabs.io/ajhd6t7k04dh",
+    "status": 200,
+    "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=u8NhQfrjrhGyb8&gsxid=u8NhQfrjrhGyb8&gspk=OTFiYjM2Mzg5MDIy",
+    "error": null
+  },
+  {
+    "route": "/go/framer",
+    "target": "https://framer.partnerstack.com/heliatech",
+    "status": 200,
+    "final_url": "https://framer.partnerstack.com/heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/heygen",
+    "target": "https://www.heygen.com",
+    "status": 200,
+    "final_url": "https://www.heygen.com",
+    "error": null
+  },
+  {
+    "route": "/go/jasper-ai",
+    "target": "https://www.jasper.ai",
+    "status": 200,
+    "final_url": "https://www.jasper.ai",
+    "error": null
+  },
+  {
+    "route": "/go/julius-ai",
+    "target": "https://julius.ai/?via=heliatech",
+    "status": 403,
+    "final_url": "https://julius.ai/?via=heliatech",
+    "error": "HTTPError 403"
+  },
+  {
+    "route": "/go/kit",
+    "target": "https://kit.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://kit.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/klap",
+    "target": "https://klap.app/?via=heliatech",
+    "status": 200,
+    "final_url": "https://klap.app/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/klaviyo",
+    "target": "https://www.klaviyo.com",
+    "status": 200,
+    "final_url": "https://www.klaviyo.com",
+    "error": null
+  },
+  {
+    "route": "/go/lemlist",
+    "target": "https://lemlist.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.lemlist.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/linear",
+    "target": "https://linear.app/?via=heliatech",
+    "status": 200,
+    "final_url": "https://linear.app/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/lovable",
+    "target": "https://lovable.dev/?via=heliatech",
+    "status": 403,
+    "final_url": "https://lovable.dev/?via=heliatech",
+    "error": "HTTPError 403"
+  },
+  {
+    "route": "/go/lusha",
+    "target": "https://www.lusha.com",
+    "status": 200,
+    "final_url": "https://www.lusha.com",
+    "error": null
+  },
+  {
+    "route": "/go/make",
+    "target": "https://www.make.com/en/register?pc=heliatechmake",
+    "status": 403,
+    "final_url": "https://www.make.com/en/register?pc=heliatechmake",
+    "error": "HTTPError 403"
+  },
+  {
+    "route": "/go/memberstack",
+    "target": "https://www.memberstack.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.memberstack.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/minicong",
+    "target": "https://www.heygen.com",
+    "status": 200,
+    "final_url": "https://www.heygen.com",
+    "error": null
+  },
+  {
+    "route": "/go/monday-com",
+    "target": "https://monday.com/?ref=heliatech",
+    "status": 200,
+    "final_url": "https://monday.com/?ref=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/murf-ai",
+    "target": "https://murf.ai/?fp_ref=heliatech",
+    "status": 200,
+    "final_url": "https://murf.ai/?fp_ref=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/n8n",
+    "target": "https://n8n.io/?via=heliatech",
+    "status": 200,
+    "final_url": "https://n8n.io/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/notion-ai",
+    "target": "https://www.notion.so",
+    "status": 200,
+    "final_url": "https://www.notion.com/",
+    "error": null
+  },
+  {
+    "route": "/go/opus-clip",
+    "target": "https://www.opus.pro/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.opus.pro/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/partnerstack",
+    "target": "https://partnerstack.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://partnerstack.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/peripety",
+    "target": "https://try.elevenlabs.io/ajhd6t7k04dh",
+    "status": 200,
+    "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=OcAMfVFHIjayH1&gsxid=OcAMfVFHIjayH1&gspk=OTFiYjM2Mzg5MDIy",
+    "error": null
+  },
+  {
+    "route": "/go/phantombuster",
+    "target": "https://phantombuster.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://phantombuster.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/podcastle",
+    "target": "https://podcastle.ai",
+    "status": 200,
+    "final_url": "https://async.com/",
+    "error": null
+  },
+  {
+    "route": "/go/podia",
+    "target": "https://www.podia.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.podia.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/printify",
+    "target": "https://printify.com",
+    "status": 200,
+    "final_url": "https://printify.com",
+    "error": null
+  },
+  {
+    "route": "/go/resend",
+    "target": "https://resend.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://resend.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/retool",
+    "target": "https://retool.com",
+    "status": 200,
+    "final_url": "https://retool.com",
+    "error": null
+  },
+  {
+    "route": "/go/rewardful",
+    "target": "https://www.rewardful.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.rewardful.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/riverside-fm",
+    "target": "https://riverside.fm/?via=heliatech",
+    "status": 200,
+    "final_url": "https://riverside.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/riverside",
+    "target": "https://riverside.fm/?via=heliatech",
+    "status": 200,
+    "final_url": "https://riverside.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/sanity",
+    "target": "https://www.sanity.io/?ref=heliatech",
+    "status": 200,
+    "final_url": "https://www.sanity.io/?ref=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/screen-studio",
+    "target": "https://screen.studio/?via=heliatech",
+    "status": 200,
+    "final_url": "https://screen.studio/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/submagic",
+    "target": "https://submagic.co/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.submagic.co/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/supabase",
+    "target": "https://supabase.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://supabase.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/tally",
+    "target": "https://tally.so/?via=heliatech",
+    "status": 200,
+    "final_url": "https://tally.so/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/tome",
+    "target": "https://gamma.app",
+    "status": 403,
+    "final_url": "https://gamma.app",
+    "error": "HTTPError 403"
+  },
+  {
+    "route": "/go/transistor",
+    "target": "https://transistor.fm/?via=heliatech",
+    "status": 200,
+    "final_url": "https://transistor.fm/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/typeform",
+    "target": "https://www.typeform.com",
+    "status": 200,
+    "final_url": "https://www.typeform.com",
+    "error": null
+  },
+  {
+    "route": "/go/v0",
+    "target": "https://v0.dev/?via=heliatech",
+    "status": 200,
+    "final_url": "https://v0.app/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/veed",
+    "target": "https://www.veed.io/?via=heliatech",
+    "status": 200,
+    "final_url": "https://www.veed.io/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/vercel",
+    "target": "https://vercel.com/?via=heliatech",
+    "status": 200,
+    "final_url": "https://vercel.com/?via=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/voiceflow",
+    "target": "https://www.voiceflow.com",
+    "status": 200,
+    "final_url": "https://www.voiceflow.com",
+    "error": null
+  },
+  {
+    "route": "/go/wati",
+    "target": "https://www.wati.io/?fp_ref=heliatech",
+    "status": 200,
+    "final_url": "https://www.wati.io/ar/?fp_ref=heliatech",
+    "error": null
+  },
+  {
+    "route": "/go/webflow",
+    "target": "https://webflow.com",
+    "status": 200,
+    "final_url": "https://webflow.com",
+    "error": null
+  },
+  {
+    "route": "/go/zapier",
+    "target": "https://zapier.com/app/register?via=heliatech",
+    "status": 200,
+    "final_url": "https://zapier.com/app/register?via=heliatech",
+    "error": null
+  }
+]
