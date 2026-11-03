@@ -164,6 +164,50 @@ class TelegramCommander:
             except Exception as e:
                 self.send_message(chat_id, f"❌ Erreur lors de la récupération des revenus : {e}")
 
+        elif cmd in ("/sponsors", "/paved", "/sponsor"):
+            try:
+                paved_key = os.getenv("PAVED_API_KEY", "8a34206f-b3de-488f-b4e9-2e723309700d").strip()
+                newsletter_id = os.getenv("PAVED_NEWSLETTER_ID", "10828").strip()
+                headers = {"Authorization": f"Token {paved_key}", "Accept": "application/json", "User-Agent": "HeliaTech/1.0"}
+                
+                # Fetch newsletter details
+                url = f"https://api.paved.com/publisher/v1/newsletters/{newsletter_id}"
+                res = requests.get(url, headers=headers, timeout=10)
+                if res.status_code != 200:
+                    self.send_message(chat_id, f"⚠️ Erreur API Paved (HTTP {res.status_code}).")
+                    return
+                paved_data = res.json()
+                
+                # Fetch active sponsorships
+                url_spon = f"https://api.paved.com/publisher/v1/newsletters/{newsletter_id}/sponsorships"
+                res_spon = requests.get(url_spon, headers=headers, timeout=10)
+                sponsorships = res_spon.json() if res_spon.status_code == 200 else []
+                
+                options = paved_data.get("sponsorship_options", [])
+                opts_summary = []
+                for opt in options:
+                    name = opt.get("name") or opt.get("type", "").replace("_", " ").title()
+                    price = opt.get("price", "0")
+                    next_date = opt.get("next_available_dates", ["N/A"])
+                    next_str = next_date[0] if next_date else "N/A"
+                    opts_summary.append(f"• *{name}* : `${price}` (Prochain créneau : `{next_str}`)")
+                
+                bookings_txt = f"{len(sponsorships)} réservation(s) active(s)"
+                if sponsorships:
+                    bookings_txt += "\n👉 " + "\n".join([f"- {s.get('advertiser_name', 'Sponsor')} ({s.get('date')})" for s in sponsorships[:3]])
+
+                msg = (
+                    "💼 *[PAVED SPONSORSHIP MARKETPLACE EN DIRECT]*\n\n"
+                    f"• 📡 *Publication :* *{paved_data.get('name', 'HeliaTech Radar')}*\n"
+                    f"• 🏷️ *Statut :* `{paved_data.get('status', 'draft').upper()}`\n"
+                    f"• 💰 *Offres actives :*\n" + "\n".join(opts_summary) + "\n\n"
+                    f"• 📅 *Réservations :* {bookings_txt}\n\n"
+                    "🔗 *Profil public annonceurs :* [paved.com/sites/heliatech-radar](https://www.paved.com/sites/heliatech-radar)"
+                )
+                self.send_message(chat_id, msg)
+            except Exception as e:
+                self.send_message(chat_id, f"❌ Erreur lors de l'interrogation de Paved : {e}")
+
         elif cmd in ("/cockpit", "/sentinel"):
             master_pw = os.getenv("SENTINEL_PASSWORD", "Helia-Protected")
             msg = (
