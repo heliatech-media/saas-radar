@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ToolIcon from '../../components/ToolIcon.astro';
 import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
+import AdSlot from '../../components/AdSlot.astro';
 import duelsData from '../../data/versus-duels.json';
 
 export async function getStaticPaths() {
@@ -446,6 +447,9 @@ const winnerSlug = (duel.verdict?.winner === toolB.name) ? toolB.slug : toolA.sl
         </table>
       </div>
     </div>
+
+    <!-- Google AdSense Managed Partner Slot -->
+    <AdSlot />
 
     <!-- TCO Financial Model & Burn Rate Teardown -->
     <div class="p-8 sm:p-10 rounded-3xl bg-slate-900/70 border border-emerald-500/30 shadow-xl mb-16 relative overflow-hidden backdrop-blur-xl">
