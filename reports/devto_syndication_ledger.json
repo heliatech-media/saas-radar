@@ -368,6 +368,19 @@
       "url": "https://dev.to/klap-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/klap-evolution-guide-2026",
       "status": "already_published"
+    },
+    "klaviyo-evolution-guide-2026": {
+      "id": 4969146,
+      "url": "https://dev.to/heliatech/klaviyo-the-data-driven-engine-transforming-e-commerce-revenue-and-customer-retention-59ja",
+      "title": "Klaviyo: The Data-Driven Engine Transforming E-Commerce Revenue and Customer Retention",
+      "canonical_url": "https://heliatech.online/blog/klaviyo-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "klaviyo",
+        "marketingautomation",
+        "ecommerce",
+        "saas"
+      ]
     }
   },
   "last_sync": null

@@ -89,7 +89,7 @@ While Tally is an exceptional tool, a rigorous evaluation requires examining bot
 | **Pricing & Limits** | Unlimited forms & submissions for free. | White-labeling & custom domains require Pro. | Ideal for budget-conscious teams; branding is subtle. |
 | **Creation Speed** | Notion-style markdown editor is ultra-fast. | Minimalist styling can feel restrictive. | Perfect for functional forms; less suited for wild branding. |
 | **Functionality** | Advanced logic, calculations, & file uploads included. | Reporting and analytics are relatively basic. | Great for data capture; use BI tools for deep analytics. |
-| **Integrations** | Webhooks, [Zapier](/reviews/zapier), Notion, and Airtable native sync. | Lacks a massive proprietary app marketplace. | Easily bridges gaps via robust webhook infrastructure. |
+| **Integrations** | Webhooks, [Zapier](/reviews/zapier), Notion, and [Airtable](/reviews/airtable) native sync. | Lacks a massive proprietary app marketplace. | Easily bridges gaps via robust webhook infrastructure. |
 
 ## 5. HeliaTech Final Verdict & Recommendation
 

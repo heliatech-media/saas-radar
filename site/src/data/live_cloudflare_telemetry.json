@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-03T09:51:46.926692",
+  "last_synced": "2026-11-03T12:53:50.491353",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 9819,
-  "total_requests": 67402,
-  "total_visits": 3043,
-  "total_pageviews": 14379,
+  "total_visitors_network": 9973,
+  "total_requests": 68366,
+  "total_visits": 3091,
+  "total_pageviews": 14596,
   "percent_cached": "56.14%",
-  "data_served_mb": 664.7,
+  "data_served_mb": 672.2,
   "top_pages": [
     {
       "path": "/",
-      "views": 2720
+      "views": 2740
     },
     {
       "path": "/calculator/",
@@ -20,11 +20,11 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 230
+      "views": 240
     },
     {
       "path": "/radar/",
-      "views": 190
+      "views": 200
     },
     {
       "path": "/blog/",
@@ -35,7 +35,7 @@
       "views": 170
     },
     {
-      "path": "/reviews/elevenlabs/",
+      "path": "/reviews/beehiiv/",
       "views": 150
     },
     {
@@ -43,11 +43,19 @@
       "views": 150
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/elevenlabs/",
       "views": 150
     },
     {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 140
+    },
+    {
       "path": "/reviews/clickup/",
+      "views": 140
+    },
+    {
+      "path": "/awards/",
       "views": 140
     },
     {
@@ -55,30 +63,22 @@
       "views": 140
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 140
-    },
-    {
-      "path": "/awards/",
+      "path": "/reviews/brevo/",
       "views": 130
     },
     {
       "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 130
-    },
-    {
-      "path": "/reviews/resend/",
       "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 12430
+      "views": 12610
     },
     {
       "country": "Morocco",
-      "views": 6350
+      "views": 6570
     },
     {
       "country": "Germany",
@@ -86,11 +86,11 @@
     },
     {
       "country": "Singapore",
-      "views": 860
+      "views": 880
     },
     {
       "country": "Belgium",
-      "views": 660
+      "views": 670
     },
     {
       "country": "United Kingdom",
@@ -98,7 +98,7 @@
     },
     {
       "country": "CN",
-      "views": 370
+      "views": 380
     },
     {
       "country": "Brazil",
