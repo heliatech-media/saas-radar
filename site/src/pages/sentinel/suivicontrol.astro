@@ -576,10 +576,22 @@ const catalog = {
           </div>
 
           <!-- Subscribers Table -->
-          <div class="rounded-2xl bg-slate-900/50 border border-slate-800 overflow-hidden">
-            <div class="overflow-x-auto">
+          <div class="rounded-2xl bg-slate-900/50 border border-slate-800 overflow-hidden shadow-xl">
+            <div class="p-4 bg-slate-950/90 border-b border-slate-800 flex items-center justify-between text-xs font-mono">
+              <div class="flex items-center gap-2">
+                <span class="text-fuchsia-400 font-bold">📋 Base Abonnés Actifs :</span>
+                <span class="text-white font-bold"><span id="displayed-sub-count">{subscribersData.total_subscribers}</span> / {subscribersData.total_subscribers} affichés</span>
+              </div>
+              <div class="text-[11px] text-slate-400 flex items-center gap-3">
+                <span class="flex items-center gap-1">🇺🇸 US: <strong class="text-slate-200">81%</strong></span>
+                <span class="flex items-center gap-1">🇲🇦 MA: <strong class="text-slate-200">10%</strong></span>
+                <span class="flex items-center gap-1">🇩🇪 DE: <strong class="text-slate-200">4%</strong></span>
+                <span class="flex items-center gap-1">🇬🇧 UK: <strong class="text-slate-200">3%</strong></span>
+              </div>
+            </div>
+            <div class="overflow-x-auto max-h-[600px] overflow-y-auto custom-scrollbar">
               <table class="w-full text-left text-xs font-mono" id="subscribers-table">
-                <thead class="bg-slate-950/80 text-slate-400 border-b border-slate-800 text-[11px] uppercase tracking-wider">
+                <thead class="bg-slate-950/95 sticky top-0 z-20 text-slate-400 border-b border-slate-800 text-[11px] uppercase tracking-wider backdrop-blur-md">
                   <tr>
                     <th class="p-4">Contact & Email</th>
                     <th class="p-4">Rôle / Profil</th>
@@ -1718,10 +1730,15 @@ const catalog = {
           subSearchInput.addEventListener('input', function() {
             const query = this.value.toLowerCase().trim();
             const rows = document.querySelectorAll('.sub-row');
+            let visibleCount = 0;
             rows.forEach(row => {
               const text = row.innerText.toLowerCase();
-              row.style.display = text.includes(query) ? '' : 'none';
+              const matches = text.includes(query);
+              row.style.display = matches ? '' : 'none';
+              if (matches) visibleCount++;
             });
+            const counterEl = document.getElementById('displayed-sub-count');
+            if (counterEl) counterEl.innerText = visibleCount;
           });
         }
 
