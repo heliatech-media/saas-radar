@@ -12,7 +12,7 @@ tags:
 - Notion
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: tally
 image: /images/blog/tally.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Tally Account ➔
   url: https://tally.so/?via=heliatech
 ---
-
 For over a decade, digital data collection was trapped in a frustrating paradigm. If you wanted to build an intake form, a client feedback survey, or a lead capture landing page, you had to navigate clunky, drag-and-drop interfaces that felt more like retro design software than modern business tools. Worse yet, essential capabilities like conditional logic, file uploads, and webhook integrations were routinely locked behind punishingly expensive enterprise subscription tiers. Teams found themselves paying hundreds of dollars a month just to collect basic customer feedback. The market was ripe for disruption by a tool that prioritized human speed, radical accessibility, and frictionless utility. Enter Tally.
 
 > [!NOTE]
@@ -57,7 +56,7 @@ Most form builders use submission caps or form limits to force early upgrades. T
 Typically reserved for top-tier enterprise pricing plans, Tally grants users access to sophisticated conditional logic branching, mathematical calculations, and secure file uploads directly within the free offering. You can route respondents down completely different paths, calculate dynamic pricing, and collect heavy attachments without ever pulling out a credit card.
 
 ### Robust Webhooks, APIs, and Native Integrations
-A form is only as good as the data pipeline it feeds. Tally connects seamlessly with Notion, Airtable, Google Sheets, Slack, and Zapier. With instant webhooks and native integrations, captured data moves immediately where it needs to go, powering automated workflows without manual data entry.
+A form is only as good as the data pipeline it feeds. Tally connects seamlessly with Notion, [Airtable](/reviews/airtable), Google Sheets, Slack, and [Zapier](/reviews/zapier). With instant webhooks and native integrations, captured data moves immediately where it needs to go, powering automated workflows without manual data entry.
 
 ```mermaid
 flowchart LR
