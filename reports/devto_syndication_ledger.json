@@ -387,6 +387,19 @@
       "url": "https://dev.to/lemlist-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/lemlist-evolution-guide-2026",
       "status": "already_published"
+    },
+    "cursor-vs-github-copilot": {
+      "id": 4971020,
+      "url": "https://dev.to/heliatech/cursor-vs-github-copilot-the-2026-developer-velocity-legacy-monolith-benchmark-54ib",
+      "title": "Cursor vs GitHub Copilot: The 2026 Developer Velocity & Legacy Monolith Benchmark",
+      "canonical_url": "https://heliatech.online/blog/cursor-vs-github-copilot",
+      "published": true,
+      "tags": [
+        "cursor",
+        "githubcopilot",
+        "aicoding",
+        "developertools"
+      ]
     }
   },
   "last_sync": null
