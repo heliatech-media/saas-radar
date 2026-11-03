@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-03T22:56:12.478523",
+  "last_synced": "2026-11-03T23:16:20.264427",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 10331,
-  "total_requests": 73445,
-  "total_visits": 3202,
-  "total_pageviews": 15066,
+  "total_visitors_network": 10342,
+  "total_requests": 73667,
+  "total_visits": 3206,
+  "total_pageviews": 15092,
   "percent_cached": "56.14%",
-  "data_served_mb": 712.2,
+  "data_served_mb": 713.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 2620
+      "views": 2630
     },
     {
       "path": "/calculator/",
@@ -31,6 +31,10 @@
       "views": 220
     },
     {
+      "path": "/versus/",
+      "views": 190
+    },
+    {
       "path": "/radar/",
       "views": 190
     },
@@ -39,15 +43,11 @@
       "views": 190
     },
     {
-      "path": "/versus/",
-      "views": 190
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 160
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 150
-    },
-    {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 150
     },
     {
@@ -67,18 +67,18 @@
       "views": 120
     },
     {
-      "path": "/blog/make-vs-zapier/",
+      "path": "/blog/apollo-io-vs-lusha/",
       "views": 110
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 13380
+      "views": 13410
     },
     {
       "country": "Morocco",
-      "views": 7650
+      "views": 7700
     },
     {
       "country": "Germany",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Singapore",
-      "views": 920
+      "views": 930
     },
     {
       "country": "Belgium",
@@ -98,7 +98,7 @@
     },
     {
       "country": "United Kingdom",
-      "views": 430
+      "views": 440
     },
     {
       "country": "Canada",
