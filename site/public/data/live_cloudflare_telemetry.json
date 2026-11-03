@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-03T12:53:50.491353",
+  "last_synced": "2026-11-03T15:56:09.626915",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-06 - 2026-11-03)",
-  "total_visitors_network": 9973,
-  "total_requests": 68366,
-  "total_visits": 3091,
-  "total_pageviews": 14596,
+  "total_visitors_network": 10092,
+  "total_requests": 69313,
+  "total_visits": 3128,
+  "total_pageviews": 14745,
   "percent_cached": "56.14%",
-  "data_served_mb": 672.2,
+  "data_served_mb": 692.7,
   "top_pages": [
     {
       "path": "/",
-      "views": 2740
+      "views": 2750
     },
     {
       "path": "/calculator/",
@@ -20,7 +20,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 240
+      "views": 270
     },
     {
       "path": "/radar/",
@@ -35,7 +35,7 @@
       "views": 170
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/elevenlabs/",
       "views": 150
     },
     {
@@ -43,12 +43,8 @@
       "views": 150
     },
     {
-      "path": "/reviews/elevenlabs/",
+      "path": "/reviews/beehiiv/",
       "views": 150
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 140
     },
     {
       "path": "/reviews/clickup/",
@@ -56,6 +52,10 @@
     },
     {
       "path": "/awards/",
+      "views": 140
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 140
     },
     {
@@ -74,19 +74,19 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 12610
+      "views": 12870
     },
     {
       "country": "Morocco",
-      "views": 6570
+      "views": 6900
     },
     {
       "country": "Germany",
-      "views": 1320
+      "views": 1330
     },
     {
       "country": "Singapore",
-      "views": 880
+      "views": 890
     },
     {
       "country": "Belgium",

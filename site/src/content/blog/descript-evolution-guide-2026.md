@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - AI Editing
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: descript
 image: /images/blog/descript.svg
 tldr:
@@ -31,10 +31,9 @@ affiliate_cta:
   button_text: Claim Your Free Descript Account ➔
   url: https://get.descript.com/heliatech
 ---
-
 For decades, the standard enterprise workflow for producing a simple corporate podcast, webinar, or training video resembled an archaeological dig. Producers sifted through gigabytes of raw footage, squinting at multitrack timelines, zooming in on jagged audio waveforms, and slicing tape with digital razor blades. If a CEO stuttered or used filler words, an editor spent precious billable hours slicing timelines and manually nudging clips. The human bottleneck in modern communication wasn't the creation of ideas—it was the tedious mechanics of post-production.
 
-Then came Descript. By treating audio and video like a standard text document, this platform fundamentally upended legacy NLE (Non-Linear Editing) paradigms. Today, we dive deep into the architecture, business impact, and practical deployment of the media editing tool that changed how the world speaks and publishes.
+Then came Descript. By treating audio and video like a standard text document, this platform fundamentally upended legacy NLE (Non-[Linear](/reviews/linear) Editing) paradigms. Today, we dive deep into the architecture, business impact, and practical deployment of the media editing tool that changed how the world speaks and publishes.
 
 ## 1. The Genesis & Evolution: How Text Replaced the Timeline
 

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-03 12:53:48 UTC",
+  "last_updated": "2026-11-03 15:56:07 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
@@ -365,6 +365,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-27 12:54:58",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `notion-ai, peripety, podcastle, tome, v0`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-10-27 08:44:26",
+      "title": "Cycle Autonome #Resend",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Resend et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-10-27 08:43:35",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -383,20 +397,6 @@
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `kaspr, klap, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-10-26 22:21:24",
-      "title": "Cycle Autonome #Tally",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-10-26 22:20:37",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `jasper-ai, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     }
   ]
