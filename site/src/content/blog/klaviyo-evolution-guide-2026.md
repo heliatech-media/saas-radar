@@ -93,7 +93,7 @@ Klaviyo remains the gold standard for data-driven e-commerce marketing automatio
 
 If Klaviyo's enterprise pricing structure feels prohibitive for your store's margins, consider these high-performance alternatives evaluated by our research desk:
 
-- **[Brevo (formerly Sendinblue)](/go/brevo)**: Pay per send volume with unlimited contacts, slashing marketing overhead by up to 70%. [Explore Brevo Free Tier ➔](/go/brevo)
+- **[Brevo (formerly Sendinblue)](/go/brevo)**: Pay per send volume with unlimited contacts, slashing marketing overhead by up to 70%. [Explore [Brevo](/reviews/brevo) Free Tier ➔](/go/brevo)
 - **[Kit (ConvertKit)](/go/kit)**: Industry-standard visual automations tailored for creators and digital storefronts. [Try Kit Free ➔](/go/kit)
 
 If you are serious about scaling an online store and treating your customer data as a primary business asset, Klaviyo is an essential investment. Ready to transform your customer journey?

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ToolIcon from '../../components/ToolIcon.astro';
 import StickyAffiliateBar from '../../components/StickyAffiliateBar.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import NewsletterCapture from '../../components/NewsletterCapture.astro';
 import duelsData from '../../data/versus-duels.json';
 
 export async function getStaticPaths() {
@@ -539,6 +540,9 @@ const winnerSlug = (duel.verdict?.winner === toolB.name) ? toolB.slug : toolA.sl
         ))}
       </div>
     </div>
+
+    <!-- HeliaTech B2B Executive Lead Magnet -->
+    <NewsletterCapture headline="GET THE 2026 SAAS CONFIDENTIAL BENCHMARKS" subheadline="Never overpay for tech stack tools. Join 14,000+ tech leads receiving our weekly pricing audits and private credits." />
 
     <!-- Arena Guarantee Footer -->
     <div class="p-8 rounded-3xl bg-slate-950/60 border border-slate-800 text-center text-xs font-mono text-slate-400 max-w-2xl mx-auto">

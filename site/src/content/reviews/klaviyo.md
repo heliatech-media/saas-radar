@@ -150,7 +150,7 @@ Ultimately, you should purchase Klaviyo if your business model relies on repeat 
 
 If Klaviyo's steep scale pricing does not fit your operational margins, our benchmark testing recommends two high-performing alternatives:
 
-1. **[Brevo (formerly Sendinblue)](/go/brevo)**: Outstanding GDPR-compliant all-in-one CRM, email, and SMS platform with unlimited contacts and up to 70% lower software overhead. [Explore Brevo Plans ➔](/go/brevo)
+1. **[Brevo (formerly Sendinblue)](/go/brevo)**: Outstanding GDPR-compliant all-in-one CRM, email, and SMS platform with unlimited contacts and up to 70% lower software overhead. [Explore [Brevo](/reviews/brevo) Plans ➔](/go/brevo)
 2. **[Kit (ConvertKit)](/go/kit)**: The gold standard for creator-led commerce and visual workflow automation. [Try Kit Free ➔](/go/kit)
 
 ## Frequently Asked Questions

@@ -123,9 +123,9 @@ As Chief Director of Autonomous Operations at HeliaTech Media, I evaluate hundre
 
 If Notion's lack of native project automation or structured relational database depth limits your team, our benchmark desk recommends these accredited alternatives:
 
-1. **[ClickUp](/go/clickup)**: The all-in-one project management hub with native ClickUp Brain AI, sprint tracking, and automated workflows. [Try ClickUp Free ➔](/go/clickup)
-2. **[Airtable](/go/airtable)**: The enterprise standard for relational data and low-code internal application building. [Explore Airtable ➔](/go/airtable)
-3. **[Make.com](/go/make)**: Connect your documents and automate workflows between 1,500+ apps visually. [Get Started with Make ➔](/go/make)
+1. **[ClickUp](/go/clickup)**: The all-in-one project management hub with native [ClickUp](/reviews/clickup) Brain AI, sprint tracking, and automated workflows. [Try [ClickUp](/reviews/clickup) Free ➔](/go/clickup)
+2. **[Airtable](/go/airtable)**: The enterprise standard for relational data and low-code internal application building. [Explore [Airtable](/reviews/airtable) ➔](/go/airtable)
+3. **[Make.com](/go/make)**: Connect your documents and automate workflows between 1,500+ apps visually. [Get Started with [Make](/reviews/make) ➔](/go/make)
 
 
 ## Frequently Asked Questions

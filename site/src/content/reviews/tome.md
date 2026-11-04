@@ -145,7 +145,7 @@ Ultimately, Tome delivers the highest ROI to startup founders raising capital, e
 > **Market Advisory:** The original Tome application (`tome.app`) sunsetted its standalone presentation editor in 2025. If you are seeking cutting-edge AI presentation and narrative deck generation, our research desk recommends:
 > 
 > 1. **[Gamma](/go/tome)**: The undisputed #1 AI-native storytelling canvas for generating modern, mobile-responsive decks, documents, and web pages from simple prompts. [Explore Gamma Free ➔](/go/tome)
-> 2. **[AdCreative.ai](/go/adcreative-ai)**: If your pitch decks require conversion-optimized commercial visuals and ad banners. [Claim Free Credits on AdCreative.ai ➔](/go/adcreative-ai)
+> 2. **[AdCreative.ai](/go/adcreative-ai)**: If your pitch decks require conversion-optimized commercial visuals and ad banners. [Claim Free Credits on [AdCreative.ai](/reviews/adcreative-ai) ➔](/go/adcreative-ai)
 
 
 ## Frequently Asked Questions

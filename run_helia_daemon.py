@@ -41,7 +41,7 @@ logger = logging.getLogger("Helia-Daemon")
 
 def main():
     parser = argparse.ArgumentParser(description="Helia 24/7 Autonomous Growth Daemon")
-    parser.add_argument("--interval-hours", type=float, default=4.0, help="Interval between autonomous cycles in hours (default: 4.0)")
+    parser.add_argument("--interval-hours", type=float, default=2.0, help="Interval between autonomous cycles in hours (default: 2.0)")
     parser.add_argument("--once", action="store_true", help="Run a single autonomous cycle and exit")
     parser.add_argument("--no-push", action="store_true", help="Disable automatic git push to GitHub/Cloudflare")
     args = parser.parse_args()

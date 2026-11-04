@@ -81,13 +81,13 @@
 
     if (!drawer) return;
 
-    // Check if dismissed or already subscribed in past 7 days
+    // Check if dismissed or already subscribed in past 24 hours
     const dismissedAt = localStorage.getItem('ht_drawer_dismissed');
     const isSubscribed = localStorage.getItem('ht_lead_subscribed');
     const now = Date.now();
 
     if (isSubscribed) return;
-    if (dismissedAt && (now - parseInt(dismissedAt, 10) < 7 * 24 * 3600 * 1000)) return;
+    if (dismissedAt && (now - parseInt(dismissedAt, 10) < 1 * 24 * 3600 * 1000)) return;
 
     let shown = false;
 
@@ -104,13 +104,13 @@
       localStorage.setItem('ht_drawer_dismissed', Date.now().toString());
     }
 
-    // Trigger 1: After 18 seconds of active reading
-    setTimeout(showDrawer, 18000);
+    // Trigger 1: High-Intent Engagement (After 8 seconds of active reading)
+    setTimeout(showDrawer, 8000);
 
-    // Trigger 2: After 45% scroll depth
+    // Trigger 2: After 30% scroll depth
     window.addEventListener('scroll', () => {
       const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-      if (scrollPercent > 0.45) {
+      if (scrollPercent > 0.30) {
         showDrawer();
       }
     }, { passive: true });

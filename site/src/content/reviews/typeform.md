@@ -158,7 +158,7 @@ Typeform remains the gold standard for organizations that view forms not just as
 While Typeform delivers exceptional conversational design, its steep response-based pricing can quickly eat into marketing margins. Our research desk highlights:
 
 1. **[Tally](/go/tally)**: The simplest form builder on the web. Create unlimited forms and collect unlimited responses completely free, with Notion-like intuitive formatting. [Start Free with Tally ➔](/go/tally)
-2. **[Make.com](/go/make)**: Automate form responses and route submission data directly to your CRM, Slack, or Google Sheets with zero code. [Connect with Make ➔](/go/make)
+2. **[Make.com](/go/make)**: Automate form responses and route submission data directly to your CRM, Slack, or Google Sheets with zero code. [Connect with [Make](/reviews/make) ➔](/go/make)
 
 
 ## Frequently Asked Questions
