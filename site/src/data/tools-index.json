@@ -184,6 +184,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "Instantly.ai",
+    "slug": "instantly-ai",
+    "tagline": "Scale your cold email outreach with unlimited accounts and automated warmups.",
+    "category": "Sales Automation",
+    "rating": 4.8,
+    "starting_price": "$37/mo",
+    "best_for": "Lead generation agencies, high-volume SDR teams, and B2B founders scaling outbound sales.",
+    "affiliate_url": "https://instantly.ai"
+  },
+  {
     "name": "Jasper AI",
     "slug": "jasper-ai",
     "tagline": "An AI-powered content creation platform built specifically for enterprise marketing teams to scale campaigns.",
