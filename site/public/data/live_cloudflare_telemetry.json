@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-04T02:29:58.885870",
+  "last_synced": "2026-11-04T02:57:36.012145",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 10495,
-  "total_requests": 77030,
-  "total_visits": 3253,
-  "total_pageviews": 15284,
+  "total_visitors_network": 10509,
+  "total_requests": 77397,
+  "total_visits": 3257,
+  "total_pageviews": 15292,
   "percent_cached": "56.14%",
-  "data_served_mb": 726.6,
+  "data_served_mb": 727.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 2660
+      "views": 2670
     },
     {
       "path": "/calculator/",
@@ -31,10 +31,6 @@
       "views": 220
     },
     {
-      "path": "/blog/",
-      "views": 190
-    },
-    {
       "path": "/radar/",
       "views": 190
     },
@@ -43,8 +39,12 @@
       "views": 190
     },
     {
+      "path": "/blog/",
+      "views": 190
+    },
+    {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 170
+      "views": 180
     },
     {
       "path": "/blog/make-automation-revolution/",
@@ -74,15 +74,15 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 13680
+      "views": 13700
     },
     {
       "country": "Morocco",
-      "views": 8610
+      "views": 8730
     },
     {
       "country": "Germany",
-      "views": 1200
+      "views": 1210
     },
     {
       "country": "Singapore",
@@ -102,7 +102,7 @@
     },
     {
       "country": "Canada",
-      "views": 360
+      "views": 370
     },
     {
       "country": "Brazil",
