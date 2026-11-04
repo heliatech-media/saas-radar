@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: tally
 image: /images/blog/tally.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Tally Account ➔
   url: https://tally.so/?via=heliatech
 ---
-
 For decades, digital data collection has labored under an extractive economic model. If you wanted to run a customer feedback loop, a multi-stage onboarding pipeline, or an event registration engine with advanced logic, you were forced into a restrictive subscription tier. Legacy form builders capitalized on your volume, penalizing growth by charging more the moment your business gained traction. The digital workspace was cluttered with bloated interfaces, rigid drag-and-drop constraints, and arbitrary submission caps that squeezed margins for growing businesses.
 
 Then came the paradigm shift. What if building a form felt as frictionless as writing a document?
@@ -50,7 +49,7 @@ For B2B strategists and tech leaders, Tally is not merely a survey tool; it is a
 
 *   **The Notion-Style Text Editor:** Speed is currency in modern business. By allowing creators to draft forms using familiar markdown shortcuts and natural typing, form creation time drops from hours to minutes. There are no invisible layout grids to fight against.
 *   **Advanced Logic, Calculations, and Piped Text:** Tally empowers users to build dynamic questionnaires that calculate real-time pricing, score assessment quizzes, and branch into complex conditional pathways. Piped text allows you to inject previous answers directly into subsequent questions, creating a personalized conversational experience.
-*   **Generous File Uploads & Webhook Integrations:** Unlike competitors who gate file storage or webhook triggers behind high-tier plans, Tally lets you collect rich media and instantly route that data via webhooks to Zapier, Make, or custom endpoints without hitting an artificial ceiling.
+*   **Generous File Uploads & Webhook Integrations:** Unlike competitors who gate file storage or webhook triggers behind high-tier plans, Tally lets you collect rich media and instantly route that data via webhooks to [Zapier](/reviews/zapier), [Make](/reviews/make), or custom endpoints without hitting an artificial ceiling.
 *   **Clean, Brand-Aligned Embeds:** Whether embedded as a full-page experience, a popup, or inline within your Notion workspace or marketing site, Tally forms inherit your brand’s typography and aesthetic seamlessly, entirely removing clumsy branding.
 
 ```mermaid

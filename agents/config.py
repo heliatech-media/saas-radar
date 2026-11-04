@@ -94,7 +94,7 @@ AFFILIATE_MAP = {
     "transistor-fm": "https://transistor.fm/?via=heliatech",
     "veed-io": "https://www.veed.io/?via=heliatech",
     "lovable": "https://lovable.dev/?via=heliatech",
-    "supabase": "https://supabase.com/?via=heliatech",
+    "supabase": "https://supabase.com",
     "typeform": "https://www.typeform.com",
     "vercel": "https://vercel.com/?via=heliatech",
     "jasper-ai": "https://www.jasper.ai",
