@@ -230,7 +230,14 @@
       "title": "Cursor vs GitHub Copilot: The 2026 Developer Velocity & Legacy Monolith Benchmark",
       "tool_slug": "cursor",
       "canonical_url": "https://heliatech.online/blog/cursor-vs-github-copilot"
+    },
+    "cursor-vs-windsurf-2026-claude-3-7-token-limit-pricing-leak": {
+      "published_at": "2026-11-04T09:54:52.895388",
+      "share_urn": "urn:li:share:7523684182246580225",
+      "title": "LEAK: Cursor 2026 Enterprise Rate Card vs Windsurf: Claude 3.7 Sonnet Token Caps Exposed",
+      "tool_slug": "cursor",
+      "canonical_url": "https://heliatech.online/blog/cursor-vs-windsurf-2026-claude-3-7-token-limit-pricing-leak"
     }
   },
-  "last_publish": "2026-11-04T10:11:39.865346"
+  "last_publish": "2026-11-04T09:54:52.895399"
 }
