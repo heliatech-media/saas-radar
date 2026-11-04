@@ -1,26 +1,34 @@
 {
-  "last_synced": "2026-11-04T13:00:08.596932",
+  "last_synced": "2026-11-04T13:10:14.825439",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11609,
-  "total_requests": 89605,
-  "total_visits": 3598,
-  "total_pageviews": 16097,
+  "total_visitors_network": 11620,
+  "total_requests": 89843,
+  "total_visits": 3602,
+  "total_pageviews": 16108,
   "percent_cached": "56.14%",
-  "data_served_mb": 774.5,
+  "data_served_mb": 775.8,
   "top_pages": [
     {
       "path": "/",
-      "views": 3040
+      "views": 2720
     },
     {
       "path": "/calculator/",
-      "views": 910
+      "views": 980
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 320
+      "views": 300
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 260
+    },
+    {
+      "path": "/awards/",
+      "views": 220
     },
     {
       "path": "/radar/",
@@ -31,86 +39,78 @@
       "views": 200
     },
     {
-      "path": "/terms/",
-      "views": 170
+      "path": "/versus/",
+      "views": 190
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 170
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 170
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 160
-    },
-    {
-      "path": "/awards/",
-      "views": 150
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 180
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
-      "path": "/reviews/elevenlabs/",
+      "path": "/sentinel/",
       "views": 150
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
+      "path": "/reviews/make/",
       "views": 140
     },
     {
-      "path": "/reviews/resend/",
-      "views": 140
+      "path": "/terms/",
+      "views": 130
     },
     {
-      "path": "/versus/",
-      "views": 140
+      "path": "/blog/resend-evolution-guide-2026/",
+      "views": 130
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14370
+      "views": 14690
     },
     {
       "country": "Morocco",
-      "views": 12190
+      "views": 11640
     },
     {
       "country": "Germany",
-      "views": 1340
+      "views": 1210
     },
     {
       "country": "Singapore",
-      "views": 970
+      "views": 990
     },
     {
       "country": "Belgium",
-      "views": 680
-    },
-    {
-      "country": "United Kingdom",
       "views": 550
     },
     {
-      "country": "CN",
-      "views": 400
+      "country": "United Kingdom",
+      "views": 530
     },
     {
-      "country": "Brazil",
-      "views": 380
-    },
-    {
-      "country": "France",
-      "views": 320
+      "country": "Netherlands",
+      "views": 520
     },
     {
       "country": "Canada",
-      "views": 320
+      "views": 430
+    },
+    {
+      "country": "Brazil",
+      "views": 330
+    },
+    {
+      "country": "France",
+      "views": 280
     }
   ],
   "top_referrers": [
