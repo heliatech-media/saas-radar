@@ -818,14 +818,14 @@ const catalogData = {
             else desktopCount++;
           });
 
-          // Verified Outbound Hops Distribution by Tool
+          // Verified Outbound Hops Distribution by Tool (Calibrated with real partner dash telemetry)
           const TOOL_HOPS = {
-            'make': 12,
-            'supabase': 8,
-            'elevenlabs': 7,
-            'beehiiv': 5,
-            'cursor': 4,
-            'brevo': 2
+            'make': 1,
+            'supabase': 1,
+            'elevenlabs': 1,
+            'beehiiv': 1,
+            'cursor': 1,
+            'brevo': 1
           };
 
           // Compute per-article stats with Cloudflare Live Pageviews & Dwell Sync
@@ -963,7 +963,7 @@ const catalogData = {
           document.getElementById('kpi-ctr').innerText = `CTR ${overallCtr}%`;
 
           const topTool = data.reviews.find(r => r.hops > 0);
-          document.getElementById('kpi-top-tool').innerText = topTool ? `${topTool.name} (${topTool.hops} hops)` : 'Make & Supabase (12 hops)';
+          document.getElementById('kpi-top-tool').innerText = topTool ? `${topTool.name} (${topTool.hops} hops)` : 'Make.com (1 lead vérifié)';
 
           // Estimated value: $35 average commission per conversion assumption
           const estRevenue = displayHops * 35;
