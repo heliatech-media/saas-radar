@@ -299,3 +299,34 @@ netlify-feedback,
   height: 0 !important;
   width: 0 !important;
 }
+
+/* ==========================================================================
+   LINEAR-STYLE MOUSE-FOLLOW SPOTLIGHT CARD (AWWWARDS CRITERIA)
+   ========================================================================== */
+.spotlight-card {
+  position: relative;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    450px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px),
+    rgba(6, 182, 212, 0.35),
+    rgba(217, 70, 239, 0.15),
+    transparent 65%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 20;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}

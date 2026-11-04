@@ -219,6 +219,8 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     </script>
   </head>
   <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
+    <!-- Reading & Scroll Progress Indicator (Linear / Awwwards Standard) -->
+    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 z-[100] transition-[width] duration-75 pointer-events-none"></div>
     <!-- Ambient Cyber Glows (Mobile-GPU Optimized: Lightweight on phones, rich on desktop) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <!-- Top Ambient Cyan/Fuchsia Aurora -->
@@ -443,6 +445,43 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <!-- End Cloudflare Web Analytics -->
     <SpotlightCommandPalette />
     <LeadMagnetDrawer />
+
+    <!-- Reading Progress & Mouse-Follow Spotlight Runtime Core -->
+    <script is:inline>
+      (function() {
+        // 1. Reading Progress Bar
+        const bar = document.getElementById('scroll-progress-bar');
+        if (bar) {
+          window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            bar.style.width = Math.min(progress, 100) + '%';
+          }, { passive: true });
+        }
+
+        // 2. Linear-Style Mouse-Follow Radial Spotlight
+        if (window.matchMedia('(pointer: fine)').matches) {
+          document.addEventListener('mousemove', function(e) {
+            const cards = document.querySelectorAll('.spotlight-card');
+            cards.forEach(card => {
+              const rect = card.getBoundingClientRect();
+              if (
+                e.clientX >= rect.left - 100 &&
+                e.clientX <= rect.right + 100 &&
+                e.clientY >= rect.top - 100 &&
+                e.clientY <= rect.bottom + 100
+              ) {
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', x + 'px');
+                card.style.setProperty('--mouse-y', y + 'px');
+              }
+            });
+          }, { passive: true });
+        }
+      })();
+    </script>
 
     <!-- Skimlinks Universal Commerce Monetization (Publisher ID: 312260X1800845) -->
     <script type="text/javascript" src="https://s.skimresources.com/js/312260X1800845.skimlinks.js"></script>
