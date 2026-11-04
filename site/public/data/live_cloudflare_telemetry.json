@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T07:21:44.299350",
+  "last_synced": "2026-11-04T07:29:45.703045",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11385,
-  "total_requests": 82605,
-  "total_visits": 3529,
-  "total_pageviews": 15803,
+  "total_visitors_network": 11395,
+  "total_requests": 82720,
+  "total_visits": 3532,
+  "total_pageviews": 15815,
   "percent_cached": "56.14%",
-  "data_served_mb": 747.6,
+  "data_served_mb": 748.0,
   "top_pages": [
     {
       "path": "/",
@@ -35,11 +35,11 @@
       "views": 200
     },
     {
-      "path": "/versus/",
+      "path": "/radar/",
       "views": 190
     },
     {
-      "path": "/radar/",
+      "path": "/versus/",
       "views": 190
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 14300
+      "views": 14350
     },
     {
       "country": "Morocco",
-      "views": 9760
+      "views": 9810
     },
     {
       "country": "Germany",
@@ -106,7 +106,7 @@
     },
     {
       "country": "Brazil",
-      "views": 310
+      "views": 320
     },
     {
       "country": "France",
