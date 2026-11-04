@@ -116,7 +116,8 @@
     "rating": 4.6,
     "starting_price": "$12/mo",
     "best_for": "Podcasters, content creators, internal communications teams, and video editors looking to speed up rough cuts.",
-    "affiliate_url": "https://www.descript.com"
+    "affiliate_url": "https://descript.grsm.io/heliatech",
+    "commission_rate": "15% recurring for up to 12 months"
   },
   {
     "name": "Dumpling AI",
@@ -213,8 +214,8 @@
     "rating": 4.6,
     "starting_price": "$45/mo",
     "best_for": "E-commerce brands, DTC merchants, and digital marketers scaling growth through behavioral segmentation.",
-    "affiliate_url": "https://partnerstack.com",
-    "commission_rate": "Custom CPA or revenue share"
+    "affiliate_url": "https://partnerstack.com/klaviyo?via=heliatech",
+    "commission_rate": "Custom CPA or tiered commission based on referral type"
   },
   {
     "name": "Lemlist",
@@ -402,11 +403,11 @@
   {
     "name": "Resend",
     "slug": "resend",
-    "tagline": "Email for developers: The modern API to build, test, and deliver transactional emails at scale.",
+    "tagline": "Email for developers: build, send, and monitor transactional emails with modern APIs and React.",
     "category": "DevTools",
     "rating": 4.8,
     "starting_price": "$20/mo",
-    "best_for": "Full-stack developers, engineering teams, and startups building web applications who want frictionless email integration.",
+    "best_for": "Full-stack developers, engineering teams, and startups modernizing their transactional email stack.",
     "affiliate_url": "https://resend.com/?via=heliatech"
   },
   {

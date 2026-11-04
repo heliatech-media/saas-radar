@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 3,
+  "total_sent": 4,
   "dispatches": [
     {
       "type": "weekly_radar",
@@ -22,6 +22,13 @@
       "recipient": "hamzaelfahsi@gmail.com",
       "dispatched_at": "2026-11-04T10:11:40.464636",
       "resend_id": "01a1a5d4-0900-7eae-88b4-1a6fd4caa19f"
+    },
+    {
+      "type": "sponsor_pitch",
+      "brand": "HeyGen",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "dispatched_at": "2026-11-04T12:22:24.362257",
+      "resend_id": "01a1a64b-b8c7-7a76-9277-7b06aa5f2dc4"
     }
   ],
   "active_campaigns": {
@@ -30,10 +37,11 @@
       "current_issue": 43
     },
     "pr_outreach": {
-      "last_sent": "2026-11-04T09:54:52.897590",
+      "last_sent": "2026-11-04T12:22:24.362280",
       "sent_brands": [
         "Make",
-        "Supabase"
+        "Supabase",
+        "HeyGen"
       ]
     }
   }

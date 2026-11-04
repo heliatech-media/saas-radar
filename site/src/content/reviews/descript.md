@@ -6,7 +6,7 @@ tagline: The all-in-one video and podcast editing software that treats your medi
 category: Audio/Podcasting
 rating: 4.6
 website_url: https://www.descript.com
-affiliate_url: https://www.descript.com
+affiliate_url: "https://descript.grsm.io/heliatech"
 summary: Descript is a groundbreaking media editing tool that transcribes audio and
   video into text, allowing users to edit recordings simply by deleting, copying,
   or rewriting words in a word processor interface. It combines text-based editing,

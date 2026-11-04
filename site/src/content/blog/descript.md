@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Audio/Podcasting
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: descript
 image: /images/blog/descript.svg
 tldr:
@@ -31,12 +31,11 @@ affiliate_cta:
   button_text: Claim Your Free Descript Account ➔
   url: https://www.descript.com
 ---
-
 <span class="drop-cap">F</span>or decades, professional media editing was held hostage by the timeline. Whether you were cutting a multi-speaker corporate podcast or assembling a routine product walkthrough, creative professionals were forced to stare at endless jagged waveforms, razor blades in hand, scrubbing back and forth to locate a stray "um" or trim an awkward pause. It was tedious, highly specialized labor that created a massive operational bottleneck for scaling enterprises trying to keep up with the insatiable demand for rich video and audio content. That friction vanished the day software began treating media not as a complex audio-visual signal, but as a plain text document.
 
 ## 1. The Genesis & Evolution: How Descript Upended Legacy Dinosaurs
 
-When Andrew Mason—the serial entrepreneur best known for founding Groupon—turned his attention to audio editing, he didn't set out to build just another traditional Non-Linear Editor (NLE). He recognized a fundamental disconnect in how humans communicate and how software captured that communication. Speech is inherently linguistic; why were we editing it like a sequence of electrical voltages?
+When Andrew Mason—the serial entrepreneur best known for founding Groupon—turned his attention to audio editing, he didn't set out to build just another traditional Non-[Linear](/reviews/linear) Editor (NLE). He recognized a fundamental disconnect in how humans communicate and how software captured that communication. Speech is inherently linguistic; why were we editing it like a sequence of electrical voltages?
 
 Launched after years of intensive R&D, Descript introduced a radically intuitive concept: transcribe the audio or video automatically using state-of-the-art machine learning, and let users edit the recording simply by deleting, copying, or rewriting the words on their screen. If you wanted to cut a sentence out of an interview, you didn't slice the audio track—you simply highlighted the text in the transcript and pressed backspace. 
 

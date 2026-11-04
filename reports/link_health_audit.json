@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04 09:54:27",
+  "timestamp": "2026-11-04 12:21:49",
   "total_links_audited": 81,
   "healthy_links": 80,
   "broken_links_count": 1,
@@ -11,7 +11,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
     }
   ],
   "audit_details": [
@@ -130,7 +130,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Hq6qiCgCeobBxt&gsxid=Hq6qiCgCeobBxt&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=pBjG5ZW1j0CYM9&gsxid=pBjG5ZW1j0CYM9&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -173,7 +173,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -185,8 +185,8 @@
     },
     {
       "slug": "klaviyo",
-      "target_url": "https://partnerstack.com",
-      "final_url": "https://partnerstack.com/",
+      "target_url": "https://www.klaviyo.com",
+      "final_url": "https://www.klaviyo.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -245,7 +245,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "monday-com",
@@ -307,7 +307,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -320,7 +320,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=GFeF37gnfTXpD2&gsxid=GFeF37gnfTXpD2&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=EoJfVj7oWzjDGw&gsxid=EoJfVj7oWzjDGw&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -341,7 +341,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=duSbvrJ5Vlztno&gsxid=duSbvrJ5Vlztno&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=D8dg6BxDJKagSy&gsxid=D8dg6BxDJKagSy&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -551,7 +551,7 @@
     {
       "slug": "wati",
       "target_url": "https://www.wati.io/?fp_ref=heliatech",
-      "final_url": "https://www.wati.io/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/ar/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
