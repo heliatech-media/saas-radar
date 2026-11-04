@@ -254,7 +254,8 @@ Article URL: https://heliatech.online/blog/{post.slug}
 3. RADICAL HONESTY (The Trust Paradox): Explicitly cite 1 concrete engineering limitation or trade-off (e.g. learning curve, API rate limits, lack of enterprise SSO). True authority admits drawbacks.
 4. TROJAN CALL-TO-ACTION: Position the article URL not as a sales link, but as an indispensable engineering benchmark, interactive calculator, or architectural dossier.
 5. TYPOGRAPHY & CADENCE: Punchy 1-2 sentence paragraphs with clean line breaks. Use bullet markers (→ or ⚡) for empirical findings. Add 3 to 5 high-intent B2B hashtags (#SaaS #EnterpriseTech #Automation #Engineering #ROI).
-6. 100% native, razor-sharp American English.
+6. ZERO ENGAGEMENT BAIT (STRICT EXECUTIVE RULE): NEVER use cheap growth-hacker tactics like "Comment 'RADAR' below", "Type YES to receive...", "Like and share to get...", or "Agree?". True engineering authority commands respect through pure data density, dignified tone, and intellectual rigor.
+7. 100% native, razor-sharp American English.
 
 Reply ONLY with the text of the LinkedIn post. No commentary.
 """
