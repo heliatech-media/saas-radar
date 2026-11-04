@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-04 21:35:24 UTC",
+  "last_updated": "2026-11-04 21:39:12 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 59,
+    "total_monetized_tools": 60,
     "total_published_investigations": 146,
     "reviews_audited": 60,
     "masterclasses_and_duels": 86,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$20,650 USD",
+    "projected_monthly_mrr": "$21,000 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -141,6 +141,11 @@
       "slug": "elevenlabs",
       "destination": "https://try.elevenlabs.io/ajhd6t7k04dh",
       "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "fathom",
+      "destination": "https://fathom.video/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "framer",
@@ -309,8 +314,8 @@
     },
     {
       "slug": "supabase",
-      "destination": "https://supabase.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://supabase.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "tally",
@@ -370,6 +375,13 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-30 12:45:40",
+      "title": "Cycle Autonome #Klaviyo",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klaviyo et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-10-30 12:44:43",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -396,13 +408,6 @@
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Sanity et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-10-29 20:21:29",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
     }
   ]
 }

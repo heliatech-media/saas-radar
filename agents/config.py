@@ -134,7 +134,7 @@ AFFILIATE_MAP = {
     "transistor-fm": "https://transistor.fm/?via=heliatech",
     "veed-io": "https://www.veed.io/?via=heliatech",
     "lovable": "https://lovable.dev/?via=heliatech",
-    "supabase": "https://supabase.com",
+    "supabase": "https://supabase.com/?via=heliatech",
     "typeform": "https://www.typeform.com",
     "vercel": "https://vercel.com/?via=heliatech",
     "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
@@ -162,7 +162,8 @@ AFFILIATE_MAP = {
     "descript": "https://descript.grsm.io/heliatech",
     "murf-ai": "https://murf.ai/?fp_ref=heliatech",
     "captions": "https://www.captions.ai/?via=heliatech",
-    "clay": "https://clay.com/?via=heliatech"
+    "clay": "https://clay.com/?via=heliatech",
+    "fathom": "https://fathom.video/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
