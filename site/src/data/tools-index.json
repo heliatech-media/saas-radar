@@ -418,8 +418,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://retool.com",
-    "commission_rate": "Up to $1,500 per customer or 20% recurring"
+    "affiliate_url": "https://retool.com/?fpr=heliatech",
+    "commission_rate": "15% for 12 months on paid plans"
   },
   {
     "name": "Riverside",
@@ -455,13 +455,12 @@
   {
     "name": "Screen Studio",
     "slug": "screen-studio",
-    "tagline": "Turn ordinary screen recordings into cinematic promotional videos with automated zoom and smooth cursor tracking.",
-    "category": "AI Video & Screen Recording",
-    "rating": 4.8,
+    "tagline": "Professional screen recordings with automatic zooms and cursor smoothing.",
+    "category": "AI Video",
+    "rating": 4.9,
     "starting_price": "$89",
-    "best_for": "SaaS founders, product managers, developer advocates, and content creators looking to make high-end product demos quickly.",
-    "affiliate_url": "https://screen.studio/?via=heliatech",
-    "commission_rate": "30% recurring"
+    "best_for": "SaaS founders, product managers, and developers who need to create high-quality product demos without hiring a video editor.",
+    "affiliate_url": "https://screen.studio/?via=heliatech"
   },
   {
     "name": "Submagic",

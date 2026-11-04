@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-04 15:07:26 UTC",
+  "last_updated": "2026-11-04 15:45:25 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
@@ -269,8 +269,8 @@
     },
     {
       "slug": "retool",
-      "destination": "https://retool.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://retool.com/?fpr=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "rewardful",
@@ -365,6 +365,13 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-29 12:41:38",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `julius-ai, minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-10-29 09:46:25",
       "title": "Cycle Autonome #Memberstack",
       "category": "CYCLE",
@@ -391,13 +398,6 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
-    },
-    {
-      "timestamp": "2026-10-28 12:39:56",
-      "title": "Cycle Autonome #Minicong",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Minicong et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]
 }

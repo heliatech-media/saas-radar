@@ -1,10 +1,17 @@
 [
   {
-    "timestamp": "2026-11-04 15:11:13",
-    "title": "Cycle Autonome #Riverside.fm",
+    "timestamp": "2026-11-04 15:46:48",
+    "title": "Cycle Autonome #Screen Studio",
     "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Riverside.fm et mis à jour le calendrier social.",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Screen Studio et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-04 15:46:16",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
   },
   {
     "timestamp": "2026-11-04 15:10:39",
@@ -341,12 +348,5 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-10-28 16:06:01",
-    "title": "Cycle Autonome #Dumpling AI",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Dumpling AI et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]
