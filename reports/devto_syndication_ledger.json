@@ -451,6 +451,19 @@
       "url": "https://dev.to/lusha-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/lusha-evolution-guide-2026",
       "status": "already_published"
+    },
+    "make-vs-zapier": {
+      "id": 4975927,
+      "url": "https://dev.to/heliatech/make-vs-zapier-the-2026-enterprise-automation-teardown-5a2k",
+      "title": "Make vs Zapier: The 2026 Enterprise Automation Teardown",
+      "canonical_url": "https://heliatech.online/blog/make-vs-zapier",
+      "published": true,
+      "tags": [
+        "make",
+        "zapier",
+        "makevszapier",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

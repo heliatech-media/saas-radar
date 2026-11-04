@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-11-04 15:10:39",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-11-04 14:57:28",
     "title": "Cycle Autonome #Resend",
     "category": "CYCLE",
@@ -341,12 +348,5 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-10-28 12:39:56",
-    "title": "Cycle Autonome #Minicong",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Minicong et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

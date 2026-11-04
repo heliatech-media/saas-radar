@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Developer Experience
 - Enterprise Tech
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: resend
 image: /images/blog/resend.svg
 tldr:
@@ -30,13 +30,12 @@ affiliate_cta:
   button_text: Claim Your Free Resend Account ➔
   url: https://resend.com/?via=heliatech
 ---
-
 F
 or decades, transactional email was the 'junk drawer' of the enterprise tech stack. Developers were forced to navigate the labyrinthine dashboards of legacy giants like SendGrid or the archaic, permission-heavy gates of AWS SES. These platforms were built for marketing departments—cluttered with drag-and-drop editors and convoluted list management tools—while the engineers responsible for the actual delivery were left to wrestle with brittle SMTP configurations and opaque delivery logs. The friction wasn't just a nuisance; it was a silent killer of product velocity. Then came Resend, a tool that didn't just iterate on the email API, but fundamentally reimagined it as a first-class citizen of the modern developer workflow.
 
 ## 1. The Genesis & Evolution: Reclaiming the Inbox for Engineers
 
-The story of Resend is one of professional frustration meeting visionary execution. Founded by Zeno Rocha and a team of seasoned engineers, Resend was born out of a simple observation: why is sending an email so much harder than deploying a database? While the rest of the stack—from Vercel's frontend deployments to Supabase's backend—had evolved toward a 'Developer Experience (DX) First' philosophy, email infrastructure remained stuck in 2010.
+The story of Resend is one of professional frustration meeting visionary execution. Founded by Zeno Rocha and a team of seasoned engineers, Resend was born out of a simple observation: why is sending an email so much harder than deploying a database? While the rest of the stack—from Vercel's frontend deployments to [Supabase](/reviews/supabase)'s backend—had evolved toward a 'Developer Experience (DX) First' philosophy, email infrastructure remained stuck in 2010.
 
 Resend disrupted the status quo by stripping away the marketing bloat. They realized that in the modern SaaS era, email is part of the product's core logic—password resets, magic links, and notification digests are UI components, not marketing campaigns. By focusing on clean APIs, lightning-fast onboarding, and a 'code-over-config' mentality, Resend quickly evolved from a niche tool for startups into a robust infrastructure choice for enterprise engineering teams who demand reliability without the bureaucratic overhead of legacy incumbents.
 
