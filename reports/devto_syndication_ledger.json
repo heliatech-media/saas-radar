@@ -503,6 +503,19 @@
         "stripe",
         "saas"
       ]
+    },
+    "minicong-evolution-guide-2026": {
+      "id": 4977610,
+      "url": "https://dev.to/heliatech/minicong-the-evolution-of-autonomous-ai-video-and-the-15-minute-enterprise-localization-blueprint-4cfi",
+      "title": "Minicong: The Evolution of Autonomous AI Video and the 15-Minute Enterprise Localization Blueprint",
+      "canonical_url": "https://heliatech.online/blog/minicong-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "minicong",
+        "aivideo",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null

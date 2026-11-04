@@ -152,6 +152,16 @@
     "affiliate_url": "https://try.elevenlabs.io/ajhd6t7k04dh"
   },
   {
+    "name": "Fathom",
+    "slug": "fathom",
+    "tagline": "AI-powered meeting assistant that records, transcribes, highlights, and summarizes your calls for free.",
+    "category": "Audio/Podcasting",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "Sales teams, remote executives, consultants, and podcast hosts who manage heavy meeting schedules.",
+    "affiliate_url": "https://fathom.video"
+  },
+  {
     "name": "Framer",
     "slug": "framer",
     "tagline": "Design and publish stunning, production-ready responsive websites with the power of a canvas and React under the hood.",
