@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T06:11:23.364901",
+  "last_synced": "2026-11-04T06:19:19.780157",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11081,
-  "total_requests": 80955,
-  "total_visits": 3435,
-  "total_pageviews": 15617,
+  "total_visitors_network": 11336,
+  "total_requests": 81319,
+  "total_visits": 3514,
+  "total_pageviews": 15727,
   "percent_cached": "56.14%",
-  "data_served_mb": 741.2,
+  "data_served_mb": 743.5,
   "top_pages": [
     {
       "path": "/",
@@ -51,7 +51,7 @@
       "views": 150
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/reviews/make/",
       "views": 130
     },
     {
@@ -59,26 +59,26 @@
       "views": 130
     },
     {
-      "path": "/reviews/make/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     },
     {
-      "path": "/blog/framer-evolution-guide-2026/",
+      "path": "/reviews/heygen/",
       "views": 120
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/reviews/linear/",
       "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14020
+      "views": 14070
     },
     {
       "country": "Morocco",
-      "views": 9500
+      "views": 9540
     },
     {
       "country": "Germany",
@@ -93,12 +93,12 @@
       "views": 550
     },
     {
-      "country": "Netherlands",
-      "views": 520
+      "country": "United Kingdom",
+      "views": 530
     },
     {
-      "country": "United Kingdom",
-      "views": 510
+      "country": "Netherlands",
+      "views": 520
     },
     {
       "country": "Canada",
@@ -109,7 +109,7 @@
       "views": 310
     },
     {
-      "country": "India",
+      "country": "France",
       "views": 270
     }
   ],
