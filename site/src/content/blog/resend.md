@@ -12,7 +12,7 @@ tags:
 - Email API
 - SaaS Architecture
 - TypeScript
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: resend
 image: /images/blog/resend.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Resend Account ➔
   url: https://resend.com/?via=heliatech
 ---
-
 F**or decades,** engineering teams building world-class SaaS applications hit an invisible, infuriating wall the moment they needed to send a password reset or an invoice. Despite living in an era of lightning-fast edge computing, serverless functions, and pristine TypeScript architectures, transactional email remained trapped in the dark ages. Developers were forced to interface with legacy dinosaurs—clunky incumbents built in the early 2000s—featuring bloated dashboards, labyrinthine documentation, and SDKs that felt like an afterthought. Crafting an email meant wrestling with raw, inline HTML tables that broke across mobile clients, or fighting endless DNS battles just to get SPF and DKIM records to align. The human bottleneck was immense: talented software engineers burning hours debugging SMTP errors instead of shipping core product features. Then came Resend.
 
 ## 1. The Genesis & Evolution

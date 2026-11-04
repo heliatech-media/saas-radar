@@ -413,6 +413,19 @@
         "pricingleaks",
         "enterprise"
       ]
+    },
+    "cursor-vs-windsurf-2026-claude-3-7-token-limit-pricing-leak": {
+      "id": 4974704,
+      "url": "https://dev.to/heliatech/leak-cursor-2026-enterprise-rate-card-vs-windsurf-claude-37-sonnet-token-caps-exposed-3b47",
+      "title": "LEAK: Cursor 2026 Enterprise Rate Card vs Windsurf: Claude 3.7 Sonnet Token Caps Exposed",
+      "canonical_url": "https://heliatech.online/blog/cursor-vs-windsurf-2026-claude-3-7-token-limit-pricing-leak",
+      "published": true,
+      "tags": [
+        "cursor",
+        "breakingnews",
+        "pricingleaks",
+        "enterprise"
+      ]
     }
   },
   "last_sync": null

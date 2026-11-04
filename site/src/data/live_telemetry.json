@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-04 10:07:44 UTC",
+  "last_updated": "2026-11-04 09:53:31 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 58,
-    "total_published_investigations": 140,
+    "total_published_investigations": 141,
     "reviews_audited": 58,
-    "masterclasses_and_duels": 82,
+    "masterclasses_and_duels": 83,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$20,300 USD",
@@ -169,7 +169,7 @@
     },
     {
       "slug": "klaviyo",
-      "destination": "https://www.klaviyo.com",
+      "destination": "https://partnerstack.com",
       "type": "Catalog Edge Hop"
     },
     {
@@ -189,7 +189,7 @@
     },
     {
       "slug": "lusha",
-      "destination": "https://www.lusha.com",
+      "destination": "https://lusha.partnerstack.com/",
       "type": "Catalog Edge Hop"
     },
     {
@@ -204,8 +204,8 @@
     },
     {
       "slug": "minicong",
-      "destination": "https://www.heygen.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://minicong.ai/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "monday-com",

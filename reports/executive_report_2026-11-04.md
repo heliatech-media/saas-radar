@@ -10,8 +10,8 @@
 | :--- | :--- | :--- | :--- |
 | **Monthly Organic Traffic** | Launch Phase | **100,000 / mo** | **1,000,000 / mo** |
 | **Audited B2B Software** | **58 Platforms** | 50 Platforms | 250 Platforms |
-| **In-Depth Masterclasses** | **83 Articles** | 30 Articles | 150 Articles |
-| **Total Search-Indexed URLs** | **143 Pages** | 100 Pages | 500+ Pages |
+| **In-Depth Masterclasses** | **84 Articles** | 30 Articles | 150 Articles |
+| **Total Search-Indexed URLs** | **144 Pages** | 100 Pages | 500+ Pages |
 
 ---
 

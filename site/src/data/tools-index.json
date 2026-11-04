@@ -111,11 +111,11 @@
   {
     "name": "Descript",
     "slug": "descript",
-    "tagline": "The all-in-one audio and video editor that works like a word processor.",
+    "tagline": "The all-in-one video and podcast editing software that treats your media like a text document.",
     "category": "Audio/Podcasting",
     "rating": 4.6,
     "starting_price": "$12/mo",
-    "best_for": "Podcasters, content creators, remote interviewers, and marketing teams producing talking-head video content.",
+    "best_for": "Podcasters, content creators, internal communications teams, and video editors looking to speed up rough cuts.",
     "affiliate_url": "https://www.descript.com"
   },
   {
@@ -213,8 +213,8 @@
     "rating": 4.6,
     "starting_price": "$45/mo",
     "best_for": "E-commerce brands, DTC merchants, and digital marketers scaling growth through behavioral segmentation.",
-    "affiliate_url": "https://www.klaviyo.com",
-    "commission_rate": "Custom / CPA per referral"
+    "affiliate_url": "https://partnerstack.com",
+    "commission_rate": "Custom CPA or revenue share"
   },
   {
     "name": "Lemlist",
@@ -257,8 +257,8 @@
     "rating": 4.3,
     "starting_price": "$39/mo",
     "best_for": "Outbound sales development reps, account executives, and tech recruiters looking for high-accuracy contact data.",
-    "affiliate_url": "https://www.lusha.com",
-    "commission_rate": "Up to 50% for the first year or tiered recurring"
+    "affiliate_url": "https://lusha.partnerstack.com/",
+    "commission_rate": "Up to 50% for the first year or recurring depending on tier"
   },
   {
     "name": "Make",
@@ -288,7 +288,7 @@
     "rating": 4.6,
     "starting_price": "$49/mo",
     "best_for": "B2B growth teams, global marketing agencies, and localized content creators",
-    "affiliate_url": "https://www.heygen.com",
+    "affiliate_url": "https://minicong.ai/?via=heliatech",
     "commission_rate": "20% recurring"
   },
   {
