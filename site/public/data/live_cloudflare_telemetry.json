@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T03:10:10.756943",
+  "last_synced": "2026-11-04T03:17:47.512143",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 10709,
-  "total_requests": 77740,
-  "total_visits": 3319,
-  "total_pageviews": 15367,
+  "total_visitors_network": 10727,
+  "total_requests": 77886,
+  "total_visits": 3325,
+  "total_pageviews": 15375,
   "percent_cached": "56.14%",
-  "data_served_mb": 729.3,
+  "data_served_mb": 729.6,
   "top_pages": [
     {
       "path": "/",
@@ -24,14 +24,14 @@
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 250
+      "views": 260
     },
     {
       "path": "/awards/",
       "views": 220
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 190
     },
     {
@@ -39,7 +39,7 @@
       "views": 190
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 190
     },
     {
@@ -55,11 +55,11 @@
       "views": 130
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/reviews/make/",
       "views": 120
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/apollo-io/",
       "views": 120
     },
     {
@@ -67,7 +67,7 @@
       "views": 120
     },
     {
-      "path": "/sentinel/",
+      "path": "/reviews/heygen/",
       "views": 120
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 8760
+      "views": 8820
     },
     {
       "country": "Germany",
