@@ -9,47 +9,69 @@ const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new D
 
 const featuredPost = sortedPosts[0];
 const otherPosts = sortedPosts.slice(1);
+
+// Helper function to map granular categories into clean high-level clusters
+function getCluster(category: string = ""): string {
+  const c = (category || "").toLowerCase();
+  if (c.includes('breaking') || c.includes('leak') || c.includes('pricing') || c.includes('news')) return 'LEAKS';
+  if (c.includes('video') || c.includes('audio') || c.includes('voice') || c.includes('podcast') || c.includes('avatar') || c.includes('media')) return 'VIDEO_VOICE';
+  if (c.includes('automation') || c.includes('no-code') || c.includes('workflow')) return 'AUTOMATION';
+  if (c.includes('devtool') || c.includes('cloud') || c.includes('developer') || c.includes('frontend') || c.includes('data analysis') || c.includes('ai development') || c.includes('infrastructure')) return 'DEVTOOLS';
+  if (c.includes('sales') || c.includes('crm') || c.includes('marketing') || c.includes('newsletter') || c.includes('advertising') || c.includes('whatsapp') || c.includes('prospecting')) return 'SALES_CRM';
+  return 'PRODUCTIVITY';
+}
+
+const clusters = [
+  { id: 'ALL', name: 'All Guides', count: otherPosts.length, icon: '📚' },
+  { id: 'AUTOMATION', name: 'Automation & No-Code', count: otherPosts.filter(p => getCluster(p.data.category) === 'AUTOMATION').length, icon: '⚡' },
+  { id: 'VIDEO_VOICE', name: 'AI Video & Voice', count: otherPosts.filter(p => getCluster(p.data.category) === 'VIDEO_VOICE').length, icon: '🎙️' },
+  { id: 'DEVTOOLS', name: 'DevTools & Cloud', count: otherPosts.filter(p => getCluster(p.data.category) === 'DEVTOOLS').length, icon: '🛠️' },
+  { id: 'SALES_CRM', name: 'B2B Sales & CRM', count: otherPosts.filter(p => getCluster(p.data.category) === 'SALES_CRM').length, icon: '🎯' },
+  { id: 'LEAKS', name: 'Pricing Leaks & News', count: otherPosts.filter(p => getCluster(p.data.category) === 'LEAKS').length, icon: '🚨' },
+  { id: 'PRODUCTIVITY', name: 'Workspace OS', count: otherPosts.filter(p => getCluster(p.data.category) === 'PRODUCTIVITY').length, icon: '💼' }
+];
 ---
 
 <Layout 
   title="Blog & SaaS Investigations: Evolution, Case Studies & Hands-on Guides"
   description="Exhaustive teardowns, product evolution stories, and step-by-step masterclasses on top-tier B2B software and autonomous AI engines."
 >
-  <div class="max-w-6xl mx-auto px-6 sm:px-8 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    
     <!-- Header Hero -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-6 shadow-glow-cyan">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>HELIATECH EDITORIAL • DEEP DIVES & MASTERCLASSES</span>
+        <span>HELIATECH EDITORIAL • {posts.length} MASTERCLASSES & INVESTIGATIONS</span>
       </div>
 
-      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
         The Software & AI <br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
           Intelligence Lab.
         </span>
       </h1>
 
-      <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-        Uncover the origins of world-class SaaS, master their hidden superpowers, and apply our step-by-step workshops to scale your enterprise velocity.
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+        Uncover the architecture of world-class SaaS, master hidden superpowers, and apply our step-by-step workshops to eliminate overhead and scale enterprise velocity.
       </p>
     </div>
 
     <!-- Featured Post Spotlight -->
     {featuredPost && (
-      <div class="mb-16">
-        <div class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-4 font-bold flex items-center gap-2">
-          <span>✦ FEATURED INVESTIGATION</span>
+      <div class="mb-14">
+        <div class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-3 font-bold flex items-center gap-2">
+          <span>✦ LATEST FLAGSHIP INVESTIGATION</span>
         </div>
         <a 
           href={`/blog/${featuredPost.slug}`}
-          class="group block relative rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-10 transition-all duration-300 shadow-glass-cyber overflow-hidden"
+          class="spotlight-card group block relative rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 sm:p-10 transition-all duration-300 shadow-glass-cyber overflow-hidden"
         >
           <div class="absolute -right-20 -top-20 w-96 h-96 bg-gradient-to-br from-cyan-500/10 via-fuchsia-500/5 to-transparent rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none"></div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-7">
-              <div class="flex flex-wrap items-center gap-3 mb-5 text-xs font-mono">
+              <div class="flex flex-wrap items-center gap-3 mb-4 text-xs font-mono">
                 {featuredPost.data.tool_slug && (
                   <ToolIcon slug={featuredPost.data.tool_slug} size="sm" />
                 )}
@@ -62,17 +84,17 @@ const otherPosts = sortedPosts.slice(1);
                 <span class="text-slate-400">{new Date(featuredPost.data.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
               </div>
 
-              <h2 class="text-2xl sm:text-4xl font-black text-white group-hover:text-cyan-300 transition-colors mb-4 leading-tight">
+              <h2 class="text-xl sm:text-3xl font-black text-white group-hover:text-cyan-300 transition-colors mb-3 leading-tight">
                 {featuredPost.data.title}
               </h2>
 
-              <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 line-clamp-3">
                 {featuredPost.data.description}
               </p>
 
-              <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-800/80">
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px]">
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800/80">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px]">
                     <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-[10px] font-bold text-white">
                       HT
                     </div>
@@ -80,8 +102,8 @@ const otherPosts = sortedPosts.slice(1);
                   <span class="text-xs font-mono text-slate-300 font-medium">By {featuredPost.data.author}</span>
                 </div>
 
-                <span class="inline-flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all">
-                  <span>READ FULL INVESTIGATION</span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all">
+                  <span>READ INVESTIGATION</span>
                   <span>➔</span>
                 </span>
               </div>
@@ -101,83 +123,439 @@ const otherPosts = sortedPosts.slice(1);
       </div>
     )}
 
-    <!-- Other Articles Grid -->
-    {otherPosts.length > 0 && (
-      <div>
-        <div class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6 font-bold flex items-center gap-2">
-          <span>ALL INVESTIGATIONS & GUIDES</span>
-          <span class="h-[1px] flex-grow bg-slate-800"></span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {otherPosts.map((post) => (
-            <a 
-              href={`/blog/${post.slug}`}
-              class="group flex flex-col justify-between rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-glass-cyber"
-            >
-              <div>
-                <!-- Card Hero Visual Thumbnail -->
-                <div class="w-full aspect-[1200/630] bg-slate-950/80 overflow-hidden border-b border-slate-800/80 relative">
-                  <img 
-                    src={post.data.image || `/images/blog/${post.data.tool_slug || post.slug}.svg`} 
-                    alt={`${post.data.title} thumbnail`}
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <span class="px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-semibold">
-                      {post.data.category}
-                    </span>
-                    {post.data.tool_slug && (
-                      <ToolIcon slug={post.data.tool_slug} size="xs" />
-                    )}
-                  </div>
-                </div>
-
-                <div class="p-6">
-                  <div class="flex items-center gap-2 mb-3 text-xs font-mono text-slate-400">
-                    <span class="text-[11px]">{post.data.readingTime} READ</span>
-                    <span class="text-slate-600">•</span>
-                    <span class="text-[11px]">{new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                  </div>
-
-                  <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-3 leading-snug line-clamp-2">
-                    {post.data.title}
-                  </h3>
-
-                  <p class="text-slate-400 text-xs sm:text-sm line-clamp-2 leading-relaxed">
-                    {post.data.description}
-                  </p>
-                </div>
-              </div>
-
-              <div class="px-6 pb-6 pt-3 flex items-center justify-between border-t border-slate-800/40 text-xs font-mono">
-                <span class="text-cyan-400/70 text-[11px] font-medium">HELIA INTEL</span>
-                <span class="text-cyan-400 group-hover:translate-x-1 transition-transform flex items-center gap-1 font-bold">
-                  <span>Explore</span>
-                  <span>➔</span>
-                </span>
-              </div>
-            </a>
-          ))}
-        </div>
+    <!-- INTERACTIVE CONTROLS: CATEGORIES & FILTER BAR -->
+    <div id="guides-anchor" class="scroll-mt-24 mb-8">
+      
+      <!-- Top Bar: Category Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto custom-scrollbar pb-3 mb-6">
+        {clusters.map((c) => (
+          <button
+            type="button"
+            class="category-filter-btn shrink-0 flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 border cursor-pointer"
+            data-cluster={c.id}
+          >
+            <span>{c.icon}</span>
+            <span>{c.name}</span>
+            <span class="badge-count px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800 text-slate-400 font-bold">{c.count}</span>
+          </button>
+        ))}
       </div>
-    )}
 
-    <!-- Bottom Radar Link Section -->
-    <div class="mt-20 p-8 sm:p-12 rounded-3xl bg-slate-900/70 border border-slate-800 text-center relative overflow-hidden">
+      <!-- Secondary Controls: Instant Search & Sort Options -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/50 border border-slate-800/80 backdrop-blur-xl">
+        
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-80">
+          <svg class="w-4 h-4 text-cyan-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input 
+            id="guides-search-input"
+            type="text" 
+            placeholder="Search guides, tools, or topics..." 
+            class="w-full pl-10 pr-8 py-2 rounded-xl bg-slate-950/70 border border-slate-800 text-white placeholder-slate-500 text-xs font-sans focus:outline-none focus:border-cyan-500/50 transition-colors"
+          />
+          <button 
+            id="guides-search-clear"
+            type="button" 
+            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs font-mono"
+            aria-label="Clear Search"
+          >
+            ✕
+          </button>
+        </div>
+
+        <!-- Sort Select & Results Metric -->
+        <div class="flex items-center justify-between w-full sm:w-auto gap-4">
+          <div id="guides-count-display" class="text-xs font-mono text-slate-400">
+            Showing <strong class="text-white" id="count-start">1</strong> - <strong class="text-white" id="count-end">20</strong> of <strong class="text-cyan-400" id="count-total">{otherPosts.length}</strong> guides
+          </div>
+
+          <div class="flex items-center gap-2">
+            <label for="guides-sort-select" class="text-[11px] font-mono text-slate-500 uppercase tracking-wider hidden sm:inline">Sort:</label>
+            <select 
+              id="guides-sort-select" 
+              class="px-3 py-1.5 rounded-xl bg-slate-950/70 border border-slate-800 text-slate-300 text-xs font-mono focus:outline-none focus:border-cyan-500/50 cursor-pointer"
+            >
+              <option value="DATE_DESC">Newest First</option>
+              <option value="DATE_ASC">Oldest First</option>
+              <option value="TITLE_ASC">Alphabetical (A-Z)</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ARTICLES GRID CONTAINER (20 PER PAGE) -->
+    <div 
+      id="guides-grid" 
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+    >
+      {otherPosts.map((post) => (
+        <article 
+          class="spotlight-card guide-article-card group flex flex-col justify-between rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 overflow-hidden transition-all duration-300 shadow-glass-cyber"
+          data-slug={post.slug}
+          data-cluster={getCluster(post.data.category)}
+          data-date={new Date(post.data.date).getTime()}
+          data-title={post.data.title.toLowerCase()}
+          data-desc={post.data.description.toLowerCase()}
+          data-category={post.data.category.toLowerCase()}
+        >
+          <div>
+            <!-- Card Hero Visual Thumbnail -->
+            <div class="w-full aspect-[1200/630] bg-slate-950/80 overflow-hidden border-b border-slate-800/80 relative">
+              <img 
+                src={post.data.image || `/images/blog/${post.data.tool_slug || post.slug}.svg`} 
+                alt={`${post.data.title} thumbnail`}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-semibold">
+                  {post.data.category}
+                </span>
+                {post.data.tool_slug && (
+                  <ToolIcon slug={post.data.tool_slug} size="xs" />
+                )}
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3 text-xs font-mono text-slate-400">
+                <span class="text-[11px]">{post.data.readingTime} READ</span>
+                <span class="text-slate-600">•</span>
+                <span class="text-[11px]">{new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+              </div>
+
+              <h2 class="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-2.5 leading-snug line-clamp-2">
+                <a href={`/blog/${post.slug}`}>
+                  {post.data.title}
+                </a>
+              </h2>
+
+              <p class="text-slate-400 text-xs leading-relaxed line-clamp-2">
+                {post.data.description}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-6 pb-5 pt-3 flex items-center justify-between border-t border-slate-800/40 text-xs font-mono">
+            <span class="text-slate-500 text-[11px]">Helia Intel</span>
+            <a 
+              href={`/blog/${post.slug}`} 
+              class="text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-1 transition-all flex items-center gap-1 font-bold"
+              aria-label={`Read masterclass: ${post.data.title}`}
+            >
+              <span>Read Guide</span>
+              <span>➔</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- ZERO RESULTS PLACEHOLDER -->
+    <div id="guides-empty-state" class="hidden p-12 rounded-3xl bg-slate-900/40 border border-slate-800 text-center my-8">
+      <span class="text-4xl block mb-3">🔍</span>
+      <h3 class="text-lg font-bold text-white mb-2">No matching investigations found</h3>
+      <p class="text-xs text-slate-400 max-w-md mx-auto mb-6">
+        No guides match your search or filter. Try a broader term or reset to all categories.
+      </p>
+      <button 
+        id="guides-reset-btn"
+        type="button" 
+        class="px-4 py-2 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold hover:bg-cyan-500/20 transition-colors cursor-pointer"
+      >
+        Reset All Filters ➔
+      </button>
+    </div>
+
+    <!-- PAGINATION BAR (20 PER PAGE) -->
+    <nav 
+      id="guides-pagination" 
+      class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl mb-16"
+      aria-label="Guides Pagination"
+    >
+      <button
+        id="pagination-prev-btn"
+        type="button"
+        class="w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-950/70 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 disabled:opacity-30 disabled:pointer-events-none transition-all text-xs font-mono flex items-center justify-center gap-1.5 cursor-pointer"
+      >
+        <span>←</span>
+        <span>Previous</span>
+      </button>
+
+      <div id="pagination-pages-container" class="flex items-center gap-1.5 flex-wrap justify-center font-mono text-xs">
+        <!-- Dynamically populated page number buttons -->
+      </div>
+
+      <button
+        id="pagination-next-btn"
+        type="button"
+        class="w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-950/70 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 disabled:opacity-30 disabled:pointer-events-none transition-all text-xs font-mono flex items-center justify-center gap-1.5 cursor-pointer"
+      >
+        <span>Next</span>
+        <span>→</span>
+      </button>
+    </nav>
+
+    <!-- Bottom Radar CTA Section -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-slate-900/70 border border-slate-800 text-center relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-fuchsia-500/5 to-transparent pointer-events-none"></div>
-      <h3 class="text-2xl font-black text-white mb-3">Looking for granular technical benchmarks?</h3>
-      <p class="text-slate-400 text-sm max-w-xl mx-auto mb-6">
-        Access our SaaS Radar directory to inspect real-time performance scores, ROI payback velocity, and pricing architectures for 20+ audited tools.
+      <h3 class="text-xl sm:text-2xl font-black text-white mb-3">Looking for granular technical benchmarks?</h3>
+      <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto mb-6">
+        Access our SaaS Radar directory to inspect real-time performance scores, ROI payback velocity, and pricing architectures for 35+ audited tools.
       </p>
       <a 
-        href="/"
+        href="/radar"
         class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300"
       >
         <span>Access SaaS Radar Engine</span>
         <span>➔</span>
       </a>
     </div>
+
   </div>
 </Layout>
+
+<!-- Client-Side Instant Classification, Search & 20-Per-Page Pagination Controller -->
+<script is:inline>
+  (function() {
+    const PAGE_SIZE = 20;
+    const grid = document.getElementById('guides-grid');
+    if (!grid) return;
+
+    const cards = Array.from(grid.querySelectorAll('.guide-article-card'));
+    const filterButtons = document.querySelectorAll('.category-filter-btn');
+    const searchInput = document.getElementById('guides-search-input');
+    const searchClear = document.getElementById('guides-search-clear');
+    const sortSelect = document.getElementById('guides-sort-select');
+    const resetBtn = document.getElementById('guides-reset-btn');
+    const emptyState = document.getElementById('guides-empty-state');
+    const paginationNav = document.getElementById('guides-pagination');
+    const prevBtn = document.getElementById('pagination-prev-btn');
+    const nextBtn = document.getElementById('pagination-next-btn');
+    const pagesContainer = document.getElementById('pagination-pages-container');
+    const countStart = document.getElementById('count-start');
+    const countEnd = document.getElementById('count-end');
+    const countTotal = document.getElementById('count-total');
+    const countDisplay = document.getElementById('guides-count-display');
+    const anchor = document.getElementById('guides-anchor');
+
+    // Parse URL params
+    const params = new URLSearchParams(window.location.search);
+    let currentCluster = params.get('cat') || 'ALL';
+    let currentPage = parseInt(params.get('page') || '1', 10);
+    let currentSort = params.get('sort') || 'DATE_DESC';
+    let currentQuery = params.get('q') || '';
+
+    if (isNaN(currentPage) || currentPage < 1) currentPage = 1;
+    if (searchInput && currentQuery) {
+      searchInput.value = currentQuery;
+      if (searchClear) searchClear.classList.remove('hidden');
+    }
+    if (sortSelect) sortSelect.value = currentSort;
+
+    function syncUI() {
+      // 1. Update filter pill buttons style
+      filterButtons.forEach(btn => {
+        const cluster = btn.getAttribute('data-cluster');
+        if (cluster === currentCluster) {
+          btn.className = 'category-filter-btn shrink-0 flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all duration-200 border cursor-pointer bg-cyan-500/15 text-cyan-300 border-cyan-500/40 shadow-glow-cyan';
+        } else {
+          btn.className = 'category-filter-btn shrink-0 flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all duration-200 border cursor-pointer bg-slate-900/60 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700';
+        }
+      });
+
+      // 2. Filter cards
+      let visible = cards.filter(card => {
+        const matchesCluster = currentCluster === 'ALL' || card.getAttribute('data-cluster') === currentCluster;
+        if (!matchesCluster) return false;
+
+        if (currentQuery) {
+          const q = currentQuery.toLowerCase().trim();
+          const title = card.getAttribute('data-title') || '';
+          const desc = card.getAttribute('data-desc') || '';
+          const cat = card.getAttribute('data-category') || '';
+          return title.includes(q) || desc.includes(q) || cat.includes(q);
+        }
+        return true;
+      });
+
+      // 3. Sort cards
+      visible.sort((a, b) => {
+        if (currentSort === 'DATE_ASC') {
+          return parseInt(a.getAttribute('data-date') || '0', 10) - parseInt(b.getAttribute('data-date') || '0', 10);
+        }
+        if (currentSort === 'TITLE_ASC') {
+          return (a.getAttribute('data-title') || '').localeCompare(b.getAttribute('data-title') || '');
+        }
+        // Default: DATE_DESC
+        return parseInt(b.getAttribute('data-date') || '0', 10) - parseInt(a.getAttribute('data-date') || '0', 10);
+      });
+
+      // 4. Compute pagination parameters
+      const totalCount = visible.length;
+      const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const endIndex = Math.min(startIndex + PAGE_SIZE, totalCount);
+
+      // Hide all cards first
+      cards.forEach(c => c.classList.add('hidden'));
+
+      // Show paginated subset and reorder in DOM
+      if (totalCount > 0) {
+        visible.slice(startIndex, endIndex).forEach(card => {
+          card.classList.remove('hidden');
+          grid.appendChild(card);
+        });
+        if (emptyState) emptyState.classList.add('hidden');
+        grid.classList.remove('hidden');
+        if (paginationNav) paginationNav.classList.remove('hidden');
+      } else {
+        if (emptyState) emptyState.classList.remove('hidden');
+        grid.classList.add('hidden');
+        if (paginationNav) paginationNav.classList.add('hidden');
+      }
+
+      // Update counters
+      if (countStart) countStart.textContent = totalCount > 0 ? (startIndex + 1).toString() : '0';
+      if (countEnd) countEnd.textContent = endIndex.toString();
+      if (countTotal) countTotal.textContent = totalCount.toString();
+
+      // Update pagination buttons
+      if (prevBtn) prevBtn.disabled = currentPage <= 1;
+      if (nextBtn) nextBtn.disabled = currentPage >= totalPages;
+
+      // Render Page Numbers
+      if (pagesContainer) {
+        let pagesHtml = '';
+        for (let p = 1; p <= totalPages; p++) {
+          const isActive = p === currentPage;
+          pagesHtml += `
+            <button 
+              type="button" 
+              class="pagination-num-btn w-8 h-8 rounded-lg flex items-center justify-center text-xs font-mono transition-all cursor-pointer ${
+                isActive 
+                  ? 'bg-cyan-500 text-slate-950 font-black shadow-glow-cyan' 
+                  : 'bg-slate-950/70 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
+              }"
+              data-page="${p}"
+            >
+              ${p}
+            </button>
+          `;
+        }
+        pagesContainer.innerHTML = pagesHtml;
+
+        // Attach page number click listeners
+        pagesContainer.querySelectorAll('.pagination-num-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const p = parseInt(this.getAttribute('data-page') || '1', 10);
+            goToPage(p);
+          });
+        });
+      }
+
+      // Update URL query string
+      const url = new URL(window.location.href);
+      if (currentPage > 1) url.searchParams.set('page', currentPage.toString());
+      else url.searchParams.delete('page');
+
+      if (currentCluster !== 'ALL') url.searchParams.set('cat', currentCluster);
+      else url.searchParams.delete('cat');
+
+      if (currentSort !== 'DATE_DESC') url.searchParams.set('sort', currentSort);
+      else url.searchParams.delete('sort');
+
+      if (currentQuery) url.searchParams.set('q', currentQuery);
+      else url.searchParams.delete('q');
+
+      window.history.replaceState({}, '', url.pathname + url.search);
+    }
+
+    function goToPage(p, shouldScroll = true) {
+      currentPage = p;
+      syncUI();
+      if (shouldScroll && anchor) {
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Prev / Next Listeners
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 1) goToPage(currentPage - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToPage(currentPage + 1);
+      });
+    }
+
+    // Filter Button Listeners
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        currentCluster = this.getAttribute('data-cluster') || 'ALL';
+        currentPage = 1;
+        syncUI();
+      });
+    });
+
+    // Search Input Listener
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        currentQuery = this.value;
+        currentPage = 1;
+        if (searchClear) {
+          if (currentQuery) searchClear.classList.remove('hidden');
+          else searchClear.classList.add('hidden');
+        }
+        syncUI();
+      });
+    }
+
+    // Clear Search Listener
+    if (searchClear) {
+      searchClear.addEventListener('click', function() {
+        if (searchInput) searchInput.value = '';
+        currentQuery = '';
+        searchClear.classList.add('hidden');
+        currentPage = 1;
+        syncUI();
+      });
+    }
+
+    // Sort Select Listener
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function() {
+        currentSort = this.value;
+        currentPage = 1;
+        syncUI();
+      });
+    }
+
+    // Reset Filters Button
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        currentCluster = 'ALL';
+        currentQuery = '';
+        currentSort = 'DATE_DESC';
+        currentPage = 1;
+        if (searchInput) searchInput.value = '';
+        if (searchClear) searchClear.classList.add('hidden');
+        if (sortSelect) sortSelect.value = 'DATE_DESC';
+        syncUI();
+      });
+    }
+
+    // Initial Trigger
+    syncUI();
+  })();
+</script>
