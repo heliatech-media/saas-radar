@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T04:08:15.562179",
+  "last_synced": "2026-11-04T04:18:21.197830",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 10902,
-  "total_requests": 78711,
-  "total_visits": 3379,
-  "total_pageviews": 15471,
+  "total_visitors_network": 10920,
+  "total_requests": 78851,
+  "total_visits": 3385,
+  "total_pageviews": 15480,
   "percent_cached": "56.14%",
-  "data_served_mb": 732.3,
+  "data_served_mb": 732.7,
   "top_pages": [
     {
       "path": "/",
@@ -59,7 +59,7 @@
       "views": 130
     },
     {
-      "path": "/media-kit/",
+      "path": "/reviews/beehiiv/",
       "views": 120
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 8990
+      "views": 9020
     },
     {
       "country": "Germany",
@@ -102,7 +102,7 @@
     },
     {
       "country": "Canada",
-      "views": 410
+      "views": 420
     },
     {
       "country": "Brazil",
