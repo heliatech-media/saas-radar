@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T12:39:59.397177",
+  "last_synced": "2026-11-04T12:52:08.242040",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11597,
-  "total_requests": 89208,
-  "total_visits": 3595,
-  "total_pageviews": 16082,
+  "total_visitors_network": 11605,
+  "total_requests": 89465,
+  "total_visits": 3597,
+  "total_pageviews": 16090,
   "percent_cached": "56.14%",
-  "data_served_mb": 773.0,
+  "data_served_mb": 773.7,
   "top_pages": [
     {
       "path": "/",
@@ -47,11 +47,11 @@
       "views": 180
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/sentinel/",
       "views": 150
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
@@ -59,11 +59,11 @@
       "views": 140
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/blog/resend-evolution-guide-2026/",
       "views": 130
     },
     {
-      "path": "/blog/resend-evolution-guide-2026/",
+      "path": "/terms/",
       "views": 130
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 11400
+      "views": 11520
     },
     {
       "country": "Germany",
