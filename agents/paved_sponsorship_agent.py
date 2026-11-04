@@ -369,7 +369,7 @@ class PavedSponsorshipAgent:
 
 Hi {contact_name},
 
-I'm Hamza, founder of Helia Tech (heliatech.online) — an independent software intelligence observatory and technical benchmarking platform.
+I'm reaching out from the HeliaTech Partnerships Team (heliatech.online) — an independent software intelligence observatory and technical benchmarking platform.
 
 Every Thursday, our executive dispatch ("The Thursday Radar") reaches over 2,500 active technical decision-makers, CTOs, senior software architects, and tech founders with an average executive open rate of 44%. 
 
@@ -386,8 +386,8 @@ Would you be open to featuring {target_brand} on an upcoming Thursday dispatch?
 
 Best regards,
 
-Hamza El Fahsi
-Founder & Publisher, Helia Tech
+The HeliaTech Partnerships Team
+HeliaTech Media
 partnership@heliatech.online
 https://heliatech.online
 """

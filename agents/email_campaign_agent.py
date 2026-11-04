@@ -5,7 +5,7 @@ Powered by Resend API and the official domain: partnership@heliatech.online.
 Autonomous Capabilities:
 1. Compiles and broadcasts 'The Thursday Radar' weekly newsletter to subscribers.
 2. Dispatches digital PR and accreditation badge outreach to SaaS CMOs & DevRel leaders.
-3. Sends weekly executive intelligence digests to Hamza (Director).
+3. Sends weekly executive intelligence digests to the Director.
 4. Maintains an immutable dispatch ledger in reports/email_campaign_ledger.json.
 """
 
@@ -40,7 +40,7 @@ LEDGER_PATH = REPORTS_DIR / "email_campaign_ledger.json"
 SUBSCRIBERS_PATH = REPORTS_DIR / "subscribers_master.json"
 
 DEFAULT_SENDER = "HeliaTech <partnership@heliatech.online>"
-DIRECTOR_EMAIL = "hamzaelfahsi@gmail.com"
+DIRECTOR_EMAIL = os.getenv("DIRECTOR_EMAIL", "director@heliatech.online")
 
 
 class EmailCampaignAgent:

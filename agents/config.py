@@ -163,3 +163,9 @@ AFFILIATE_MAP = {
     "murf-ai": "https://murf.ai/?fp_ref=heliatech",
     "captions": "https://www.captions.ai/?via=heliatech"
 }
+
+# Strict Anonymity & Institutional Branding Policy:
+# NEVER mention any personal names in any outgoing email, pitch, article, post, or document.
+DEFAULT_BRAND_SIGNATURE = "The HeliaTech Partnerships Team"
+DEFAULT_EDITORIAL_SIGNATURE = "The HeliaTech Editorial Team"
+DEFAULT_EXECUTIVE_SENDER = "HeliaTech <partnership@heliatech.online>"

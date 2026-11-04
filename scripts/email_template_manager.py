@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates" / "emails"
-DEFAULT_TEST_EMAIL = "hamzaelfahsi@gmail.com"
+DEFAULT_TEST_EMAIL = "director@heliatech.online"
 SENDER = "HeliaTech <partnership@heliatech.online>"
 
 SAMPLE_DATA = {

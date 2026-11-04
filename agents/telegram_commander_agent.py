@@ -1,6 +1,6 @@
 """
 Helia-TelegramCommander 3.0: World-Class Autonomous Two-Way Command & Control Interface.
-Allows the Founder (Hamza) to issue real-time executive commands to Helia directly via Telegram:
+Allows the Founder  to issue real-time executive commands to Helia directly via Telegram:
 - 📊 Statut Global & Observatoire
 - 📈 Visiteurs & Trafic Cloudflare Live
 - 🎨 Audit Awwwards 9.55/10 & Score Jury Mondial
@@ -115,10 +115,10 @@ class TelegramCommander:
             
             # Setup descriptions
             requests.post(f"https://api.telegram.org/bot{self.token}/setMyDescription", json={
-                "description": "🏛️ HeliaTech Executive Commander 3.0 — Interface autonome de pilotage stratégique de heliatech.online pour Hamza. Déployée avec Swarm Cognitif IA, audit Awwwards temps réel, monitoring Cloudflare et contrôle d'affiliation 100% autonome."
+                "description": "🏛️ HeliaTech Executive Commander 3.0 — Interface autonome de pilotage stratégique de heliatech.online pour le commandement. Déployée avec Swarm Cognitif IA, audit Awwwards temps réel, monitoring Cloudflare et contrôle d'affiliation 100% autonome."
             }, timeout=5)
             requests.post(f"https://api.telegram.org/bot{self.token}/setMyShortDescription", json={
-                "short_description": "⚡ Terminal Exécutif IA de heliatech.online — Pilotage 24/7 par Hamza."
+                "short_description": "⚡ Terminal Exécutif IA de heliatech.online — Pilotage souverain 24/7."
             }, timeout=5)
             logger.info("Official Telegram command menu & descriptions configured successfully.")
         except Exception as e:
@@ -559,7 +559,7 @@ class TelegramCommander:
                 bank_info = "Airwallex (Compte MAD)"
                 if payouts and payouts[0].get("provider", {}).get("meta"):
                     meta = payouts[0]["provider"]["meta"]
-                    bank_info = f"{meta.get('account_name', 'Hamza')} ({meta.get('account_currency', 'MAD')} - *{meta.get('account_number_last_4', '')})"
+                    bank_info = f"{meta.get('account_name', 'Principal')} ({meta.get('account_currency', 'MAD')} - *{meta.get('account_number_last_4', '')})"
 
                 msg = (
                     "💰 *[BILAN FINANCIER & COMMISSIONS EN DIRECT]*\n"

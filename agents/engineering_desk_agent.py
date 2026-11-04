@@ -553,7 +553,7 @@ if __name__ == "__main__":
     # Test 1: Duel Grounding (Make vs Zapier)
     print("\n--- TEST 1: DUEL MAKE VS ZAPIER ---")
     reply1 = agent.craft_engineering_reply(
-        sender_email="hamzaelfahsi@gmail.com",
+        sender_email="subscriber@example.com",
         subject="Zapier vs Make scaling costs",
         message="We are spending $800/mo on Zapier. Is Make really cheaper?"
     )
@@ -563,7 +563,7 @@ if __name__ == "__main__":
     # Test 2: Unverified Tool (Strict refusal to hallucinate)
     print("\n--- TEST 2: UNKNOWN UNVERIFIED TOOL ---")
     reply2 = agent.craft_engineering_reply(
-        sender_email="hamzaelfahsi@gmail.com",
+        sender_email="subscriber@example.com",
         subject="What do you think of RandomFictionalTool?",
         message="Should we buy RandomFictionalTool for $500/mo?"
     )

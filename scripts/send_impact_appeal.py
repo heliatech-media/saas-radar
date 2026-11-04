@@ -14,9 +14,9 @@ if not RESEND_API_KEY:
     print("[ERROR] RESEND_API_KEY missing")
     sys.exit(1)
 
-sender = "Hamza El Fahsi • HeliaTech <partnership@heliatech.online>"
+sender = "HeliaTech Partnerships <partnership@heliatech.online>"
 to_recipients = ["support@impact.com"]
-cc_recipients = ["hamzaelfahsi@gmail.com"]
+cc_recipients = ["director@heliatech.online"]
 
 subject = "Publisher Application Review & Manual Verification: HeliaTech Media (https://heliatech.online)"
 
@@ -67,8 +67,8 @@ html_body = """<!DOCTYPE html>
   <p>Thank you for your assistance and review.</p>
 
   <div class="footer">
-    <strong>Hamza El Fahsi</strong><br>
-    Founder & Head of Operations<br>
+    <strong>The HeliaTech Partnerships Team</strong><br>
+    Head of Global Partnerships<br>
     HeliaTech Media Observatory<br>
     <a href="https://heliatech.online" style="color: #0284c7;">https://heliatech.online</a> • partnership@heliatech.online
   </div>

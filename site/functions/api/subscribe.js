@@ -1,6 +1,6 @@
 /**
  * Cloudflare Pages Function: /api/subscribe
- * Captures email leads, dispatches instant Telegram alert to Hamza,
+ * Captures email leads, dispatches instant Telegram alert to the executive desk,
  * and sends an executive welcome email via Resend (from briefing@heliatech.online).
  */
 

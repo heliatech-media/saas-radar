@@ -1,6 +1,6 @@
 """
 Helia-RewardfulEngine: Autonomous Rewardful Discovery, Token Binding & Auto-Monetization.
-Configured with Hamza's official Rewardful affiliate identity (token: 'heliatech').
+Configured with official Rewardful affiliate identity (token: 'heliatech').
 Automatically discovers SaaS platforms powered by Rewardful (Stripe Billing ecosystem),
 binds the universal '?via=heliatech' parameter, and provisions 302 edge redirects and reviews.
 """
