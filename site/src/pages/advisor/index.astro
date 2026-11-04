@@ -1,0 +1,352 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolIcon from '../../components/ToolIcon.astro';
+import NewsletterCapture from '../../components/NewsletterCapture.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+const advisorCategories = [
+  {
+    id: "automation",
+    name: "Workflow & Backend Automation",
+    icon: "⚡",
+    headline: "Stop Overpaying on Task-Metered Zaps",
+    legacy: "Zapier Enterprise ($1,200+/mo)",
+    recommended: {
+      name: "Make.com",
+      slug: "make",
+      tier: "Pro / Teams",
+      pricing: "$16 - $29 / mo",
+      url: "/go/make",
+      badge: "Save 85% on Operations",
+      perk: "1 Month Pro Free (10,000 Ops)",
+      perkCode: "heliatechmake",
+      why: "Visual multi-branching DAG canvas, native JSON array iterators, and zero webhook multiplier surcharges."
+    }
+  },
+  {
+    id: "voice_ai",
+    name: "Voice AI & Receptionist Telephony",
+    icon: "🎙️",
+    headline: "Human-Quality Autonomous Phone & Voice",
+    legacy: "Legacy Call Centers / Twilio IVR ($3,000+/mo)",
+    recommended: {
+      name: "ElevenLabs v4",
+      slug: "elevenlabs",
+      tier: "Scale / Conversational Agents",
+      pricing: "$22 - $99 / mo",
+      url: "/go/elevenlabs",
+      badge: "Sub-95ms Roundtrip Latency",
+      perk: "Starter Tier for $1.00 + 30k Chars",
+      perkCode: null,
+      why: "Industry-leading speech synthesis and ultra-low latency real-time voice agents across 32 languages."
+    }
+  },
+  {
+    id: "sales_lead",
+    name: "B2B Prospecting & Contact Enrichment",
+    icon: "🎯",
+    headline: "Unbundle $15k Annual Data Contracts",
+    legacy: "ZoomInfo / SalesLoft ($15,000/yr)",
+    recommended: {
+      name: "Apollo.io",
+      slug: "apollo-io",
+      tier: "Professional",
+      pricing: "$79 - $119 / mo",
+      url: "/go/apollo-io",
+      badge: "275M+ Verified B2B Leads",
+      perk: "Free Account + 60 Mobile Credits",
+      perkCode: null,
+      why: "Full-cycle prospecting, verified email waterfall enrichment, and automated sequences without multi-year lock-in."
+    }
+  },
+  {
+    id: "developer",
+    name: "AI Code Velocity & Refactoring",
+    icon: "💻",
+    headline: "Next-Gen Speculative Codebase Editing",
+    legacy: "Standard Copilot ($19/mo per seat)",
+    recommended: {
+      name: "Cursor IDE",
+      slug: "cursor",
+      tier: "Pro / Enterprise",
+      pricing: "$20 / seat / mo",
+      url: "/go/cursor",
+      badge: "3.4x Faster PR Velocity",
+      perk: "14-Day Free Pro Access",
+      perkCode: null,
+      why: "Deep multi-file Composer indexing, shadow-workspace terminal execution, and Claude 3.5/3.7 integration."
+    }
+  },
+  {
+    id: "email_marketing",
+    name: "Transactional & Marketing Deliverability",
+    icon: "✉️",
+    headline: "Bypass Exponential Contact Tier Taxes",
+    legacy: "HubSpot / Mailchimp ($800+/mo)",
+    recommended: {
+      name: "Brevo",
+      slug: "brevo",
+      tier: "Business / Enterprise",
+      pricing: "$65 / mo (Unlimited Contacts)",
+      url: "/go/brevo",
+      badge: "Pay Per Email, Not Contacts",
+      perk: "Free Plan (300 emails/day forever)",
+      perkCode: null,
+      why: "Store 100,000+ contacts for $0. Pay only for emails delivered with dedicated European IP deliverability."
+    }
+  },
+  {
+    id: "video_ai",
+    name: "AI Video Cloning & Short-Form Repurposing",
+    icon: "🎬",
+    headline: "Autonomous Studio Video Production",
+    legacy: "Video Production Agencies ($5,000/video)",
+    recommended: {
+      name: "HeyGen",
+      slug: "heygen",
+      tier: "Creator / Team",
+      pricing: "$29 - $89 / mo",
+      url: "/go/heygen",
+      badge: "4K Photorealistic Avatars",
+      perk: "Free Interactive Trial",
+      perkCode: null,
+      why: "Studio-grade digital avatars, automated lip-sync in 175+ languages, and instant screen-recorded tutorials."
+    }
+  }
+];
+---
+
+<Layout 
+  title="Autonomous B2B SaaS Stack Advisor (2026): Custom Architecture in 3 Clicks"
+  description="Interactive 3-step B2B software diagnostic. Select your primary bottleneck and team size to receive a forensic stack recommendation, calculated cost savings, and verified partner perks."
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-4 shadow-inner-cyan">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span>AUTONOMOUS STACK DIAGNOSTIC 2026</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+        Discover Your Optimal <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">High-Yield Tech Stack</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+        Stop bleeding capital on legacy 2022 software contracts. Select your core engineering challenge to instantly unlock verified modern replacements, annual cost savings, and pre-negotiated partner credits.
+      </p>
+    </div>
+
+    <!-- Interactive Advisor Container -->
+    <div class="p-6 sm:p-10 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-glass-cyber backdrop-blur-2xl relative overflow-hidden mb-16">
+      
+      <!-- Subtle Glows -->
+      <div class="absolute -right-24 -top-24 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-24 -bottom-24 w-80 h-80 bg-fuchsia-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- STEP 1: Select Use Case / Bottleneck -->
+      <div class="mb-10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-7 h-7 rounded-full bg-cyan-500 text-slate-950 font-black text-xs flex items-center justify-center font-mono">1</span>
+          <h2 class="text-lg font-bold text-white tracking-wide">Select Your Primary Infrastructure Bottleneck</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="category-selector">
+          {advisorCategories.map((cat, idx) => (
+            <button 
+              type="button"
+              data-cat-id={cat.id}
+              class={`p-4 rounded-2xl border text-left transition-all cursor-pointer group flex flex-col justify-between ${idx === 0 ? 'bg-cyan-950/40 border-cyan-500/60 shadow-inner-cyan ring-1 ring-cyan-400/40 active-cat' : 'bg-slate-950/70 border-slate-800 hover:border-slate-700'}`}
+            >
+              <div>
+                <span class="text-2xl mb-2 block">{cat.icon}</span>
+                <span class="text-sm font-bold text-white block group-hover:text-cyan-300 transition-colors">{cat.name}</span>
+                <span class="text-[11px] font-mono text-slate-400 block mt-1 line-clamp-1">{cat.headline}</span>
+              </div>
+              <span class="mt-3 text-[10px] font-mono text-cyan-400 flex items-center gap-1 font-bold">
+                <span>Configure Replacement</span>
+                <span>➔</span>
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- STEP 2: Team Size & Budget Scale -->
+      <div class="mb-10 pt-8 border-t border-slate-800/80">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-7 h-7 rounded-full bg-cyan-500 text-slate-950 font-black text-xs flex items-center justify-center font-mono">2</span>
+          <h2 class="text-lg font-bold text-white tracking-wide">Select Team Scale & Transaction Volume</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="scale-selector">
+          <button 
+            type="button"
+            data-scale="starter"
+            class="p-4 rounded-2xl border bg-slate-950/70 border-slate-800 hover:border-slate-700 text-left transition-all cursor-pointer scale-btn"
+          >
+            <span class="text-xs font-mono text-cyan-400 font-bold block uppercase mb-1">Solo / Small Team</span>
+            <span class="text-base font-bold text-white block">1 - 5 Members</span>
+            <span class="text-xs text-slate-400 block mt-1">Light workloads, rapid MVPs</span>
+          </button>
+
+          <button 
+            type="button"
+            data-scale="growth"
+            class="p-4 rounded-2xl border bg-cyan-950/40 border-cyan-500/60 shadow-inner-cyan ring-1 ring-cyan-400/40 text-left transition-all cursor-pointer scale-btn active-scale"
+          >
+            <span class="text-xs font-mono text-emerald-400 font-bold block uppercase mb-1">Growth Startup (Recommended)</span>
+            <span class="text-base font-bold text-white block">6 - 25 Members</span>
+            <span class="text-xs text-slate-400 block mt-1">Scaling pipelines, recurring volume</span>
+          </button>
+
+          <button 
+            type="button"
+            data-scale="enterprise"
+            class="p-4 rounded-2xl border bg-slate-950/70 border-slate-800 hover:border-slate-700 text-left transition-all cursor-pointer scale-btn"
+          >
+            <span class="text-xs font-mono text-fuchsia-400 font-bold block uppercase mb-1">Mid-Market / Enterprise</span>
+            <span class="text-base font-bold text-white block">25+ Members</span>
+            <span class="text-xs text-slate-400 block mt-1">High throughput, multi-seat MSAs</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Live Recommendation Display (Calculated in real time) -->
+      <div class="pt-8 border-t border-slate-800/80">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-7 h-7 rounded-full bg-emerald-400 text-slate-950 font-black text-xs flex items-center justify-center font-mono">3</span>
+          <h2 class="text-lg font-bold text-white tracking-wide">Declassified 2026 Recommendation & ROI Matrix</h2>
+        </div>
+
+        <div id="advisor-output" class="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-cyan-500/40 shadow-2xl space-y-6">
+          <!-- Dynamically populated via client script -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AdSlot Sponsor Placement -->
+    <AdSlot />
+
+    <!-- Executive Newsletter Lead Magnet -->
+    <div class="my-14">
+      <NewsletterCapture 
+        headline="RECEIVE THE COMPLETE 2026 B2B STACK BLUEPRINT"
+        subheadline="Join 14,000+ tech leaders receiving weekly confidential teardowns, verified rate card leaks, and up to $15,000 in private partner credits."
+      />
+    </div>
+
+  </div>
+
+  <!-- Client-side Interactive Logic -->
+  <script is:inline define:vars={{ advisorCategories }}>
+    (function() {
+      let selectedCatId = "automation";
+      let selectedScale = "growth";
+
+      const scaleMultipliers = {
+        starter: { legacyMul: 0.4, optMul: 0.5, label: "Solo / Seed Stage", savingsBase: 4200 },
+        growth: { legacyMul: 1.0, optMul: 1.0, label: "Growth Team (6-25 seats)", savingsBase: 12400 },
+        enterprise: { legacyMul: 3.2, optMul: 2.5, label: "Enterprise Scale (25+ seats)", savingsBase: 38600 }
+      };
+
+      const outputContainer = document.getElementById('advisor-output');
+      const catButtons = document.querySelectorAll('#category-selector button');
+      const scaleButtons = document.querySelectorAll('#scale-selector button');
+
+      function renderRecommendation() {
+        const cat = advisorCategories.find(c => c.id === selectedCatId) || advisorCategories[0];
+        const scale = scaleMultipliers[selectedScale] || scaleMultipliers.growth;
+
+        const estSavings = scale.savingsBase;
+
+        outputContainer.innerHTML = `
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-bold uppercase tracking-wider">
+                EMPIRICAL VERDICT: ${cat.recommended.badge}
+              </span>
+              <h3 class="text-2xl font-black text-white tracking-tight mt-2">
+                Migrate From ${cat.legacy.split('(')[0].trim()} ➔ ${cat.recommended.name}
+              </h3>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Optimized for ${scale.label} • Projected Annual Savings: <strong class="text-emerald-400 font-mono text-sm">+$${estSavings.toLocaleString()} / year</strong>
+              </p>
+            </div>
+            
+            <a 
+              href="${cat.recommended.url}" 
+              target="_blank" 
+              rel="noopener sponsored"
+              class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-black font-mono text-xs uppercase tracking-wider shadow-glow-cyan transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95 flex-shrink-0"
+            >
+              <span>Deploy ${cat.recommended.name} Free</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+            <div class="p-4 rounded-xl bg-red-950/20 border border-red-500/30">
+              <span class="text-red-400 font-bold block mb-1 uppercase tracking-wider">Legacy Trap / High TCO:</span>
+              <span class="text-white font-bold text-sm block">${cat.legacy}</span>
+              <p class="text-slate-400 mt-2 font-normal font-sans text-xs">Overage penalties, high task multipliers, and locked annual seat commitments.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+              <span class="text-emerald-400 font-bold block mb-1 uppercase tracking-wider">Modern High-Yield Architecture:</span>
+              <span class="text-white font-bold text-sm block">${cat.recommended.name} (${cat.recommended.pricing})</span>
+              <p class="text-slate-300 mt-2 font-normal font-sans text-xs">${cat.recommended.why}</p>
+            </div>
+          </div>
+
+          <!-- Exclusive Perk Capsule -->
+          <div class="p-4 rounded-xl bg-slate-900 border border-cyan-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono">
+            <div class="flex items-center gap-2.5">
+              <span class="text-lg">🎁</span>
+              <div>
+                <span class="text-cyan-300 font-bold block">Verified Partner Deal: ${cat.recommended.perk}</span>
+                <span class="text-slate-400 text-[11px]">${cat.recommended.perkCode ? `Use code: <strong class="text-white">${cat.recommended.perkCode}</strong> at checkout` : 'Automatically applied via HeliaTech link'}</span>
+              </div>
+            </div>
+            <a href="${cat.recommended.url}" target="_blank" rel="noopener sponsored" class="text-cyan-400 hover:text-white underline text-[11px] font-bold">
+              Claim Perk Directly ➔
+            </a>
+          </div>
+        `;
+      }
+
+      // Handle category selection
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catButtons.forEach(b => {
+            b.classList.remove('bg-cyan-950/40', 'border-cyan-500/60', 'shadow-inner-cyan', 'ring-1', 'ring-cyan-400/40', 'active-cat');
+            b.classList.add('bg-slate-950/70', 'border-slate-800');
+          });
+          btn.classList.remove('bg-slate-950/70', 'border-slate-800');
+          btn.classList.add('bg-cyan-950/40', 'border-cyan-500/60', 'shadow-inner-cyan', 'ring-1', 'ring-cyan-400/40', 'active-cat');
+          selectedCatId = btn.getAttribute('data-cat-id');
+          renderRecommendation();
+        });
+      });
+
+      // Handle scale selection
+      scaleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          scaleButtons.forEach(b => {
+            b.classList.remove('bg-cyan-950/40', 'border-cyan-500/60', 'shadow-inner-cyan', 'ring-1', 'ring-cyan-400/40', 'active-scale');
+            b.classList.add('bg-slate-950/70', 'border-slate-800');
+          });
+          btn.classList.remove('bg-slate-950/70', 'border-slate-800');
+          btn.classList.add('bg-cyan-950/40', 'border-cyan-500/60', 'shadow-inner-cyan', 'ring-1', 'ring-cyan-400/40', 'active-scale');
+          selectedScale = btn.getAttribute('data-scale');
+          renderRecommendation();
+        });
+      });
+
+      // Initial render
+      renderRecommendation();
+    })();
+  </script>
+</Layout>
