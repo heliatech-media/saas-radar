@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T12:24:07.829303",
+  "last_synced": "2026-11-04T12:32:02.146988",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11583,
-  "total_requests": 88801,
-  "total_visits": 3590,
-  "total_pageviews": 16052,
+  "total_visitors_network": 11593,
+  "total_requests": 89023,
+  "total_visits": 3593,
+  "total_pageviews": 16071,
   "percent_cached": "56.14%",
-  "data_served_mb": 770.9,
+  "data_served_mb": 772.5,
   "top_pages": [
     {
       "path": "/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/calculator/",
-      "views": 960
+      "views": 970
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -47,16 +47,20 @@
       "views": 180
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/sentinel/",
       "views": 150
     },
     {
       "path": "/reviews/make/",
       "views": 140
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 130
     },
     {
       "path": "/blog/resend-evolution-guide-2026/",
@@ -65,20 +69,16 @@
     {
       "path": "/reviews/linear/",
       "views": 130
-    },
-    {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14660
+      "views": 14680
     },
     {
       "country": "Morocco",
-      "views": 11370
+      "views": 11400
     },
     {
       "country": "Germany",
