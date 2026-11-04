@@ -331,6 +331,11 @@ class DomainUpskiller:
             "Astro Static SSR Edge Optimization: Building 250+ static pages under 30 seconds with sub-80ms TTFB across Cloudflare global edge",
             "Zero-Broken-Link Invariant Enforcement: Automated redirects verification ensuring 100% route monetization integrity",
             "Cloudflare Edge Stale-While-Revalidate Policies: Bulletproofing uptime during continuous background deployments"
+        ],
+        "design": [
+            "Awwwards Site of the Year 2026: Kinetic Micro-Interactions, Canvas Shaders & Mouse-Follow Spotlight Mechanics",
+            "Linear & Vercel Luxury Design System: Glassmorphism, 1px Hairline Gradient Borders, and Visual Hierarchy",
+            "Cognitive Load & Reading Ergonomics: Stylized Drop Caps, High-Contrast Callout Anchors & Mobile Touch Targets (>44px)"
         ]
     }
 
@@ -445,7 +450,7 @@ class HeliaSwarmCognitiveCoordinator:
         """
         Executes a scheduled self-evolution session, picking the next domain in rotation.
         """
-        domains = ["content", "monetization", "social", "cro", "engineering"]
+        domains = ["content", "monetization", "social", "cro", "engineering", "design"]
         
         # Pick domain based on current hour to ensure balanced learning
         domain_idx = int(datetime.now().strftime("%H")) % len(domains)

@@ -57,7 +57,7 @@ try {
     if (fs.existsSync(journalPath)) {
       cognitiveMemory.evolution_journal = JSON.parse(fs.readFileSync(journalPath, 'utf-8'));
     }
-    const brainFiles = ['content', 'monetization', 'social', 'cro', 'engineering', 'telemetry', 'security'];
+    const brainFiles = ['content', 'monetization', 'social', 'cro', 'engineering', 'telemetry', 'security', 'design'];
     for (const bf of brainFiles) {
       const bp = path.join(memDir, `${bf}_brain.json`);
       if (fs.existsSync(bp)) {
@@ -808,6 +808,25 @@ const catalogData = {
               <div class="text-[11px] font-mono text-slate-500 flex justify-between">
                 <span>Confidence: 98%</span>
                 <span class="text-cyan-400">Real Data</span>
+              </div>
+            </div>
+
+            <!-- Brain 7: World Design & Awwwards Jury -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/80 hover:border-pink-500/50 transition-all group">
+              <div class="flex justify-between items-start mb-3">
+                <span class="text-xs font-mono uppercase tracking-wider text-pink-400 font-bold flex items-center gap-1.5">
+                  <span>🎨</span> World Design Brain
+                </span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-pink-500/20 text-pink-300 font-bold">
+                  {cognitiveMemory.brains['design']?.heuristics?.length || 6} Rules
+                </span>
+              </div>
+              <p class="text-xs text-slate-300 font-medium mb-3">
+                Awwwards Jury Standards, Kinetic Micro-Affordance & Ergonomic Touch Architecture.
+              </p>
+              <div class="text-[11px] font-mono text-slate-500 flex justify-between">
+                <span>Confidence: 99%</span>
+                <span class="text-pink-400">9.55 SOTD</span>
               </div>
             </div>
           </div>

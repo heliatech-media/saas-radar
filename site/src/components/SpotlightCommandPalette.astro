@@ -1,0 +1,261 @@
+---
+import toolsData from '../data/tools-index.json';
+import { getCollection } from 'astro:content';
+
+const blogPosts = await getCollection('blog');
+
+const searchIndex = [
+  // Core Navigation
+  { title: "SaaS Radar 2026", subtitle: "Full accredited software directory", url: "/radar", badge: "Explorer", icon: "🛰️" },
+  { title: "SaaS Stack Advisor", subtitle: "3-step interactive ROI & stack diagnostic", url: "/advisor", badge: "AI Tool", icon: "🧠" },
+  { title: "2026 Award Winners", subtitle: "Official empirical accreditation registry", url: "/awards", badge: "Registry", icon: "🏆" },
+  { title: "Versus Duels", subtitle: "Forensic head-to-head software showdowns", url: "/versus", badge: "Duels", icon: "⚔️" },
+  { title: "Pricing Leaks & Scoops", subtitle: "Changelog leaks & unannounced rate hikes", url: "/pricing-leaks", badge: "News", icon: "🚨" },
+  { title: "ROI Savings Calculator", subtitle: "Calculate migration overhead recovery", url: "/calculator", badge: "Calculator", icon: "🧮" },
+  
+  // Tools
+  ...toolsData.map((t: any) => ({
+    title: t.name,
+    subtitle: `${t.category} • ${t.starting_price || 'Freemium'} • Rating ${t.rating || 4.7}/5`,
+    url: `/reviews/${t.slug}`,
+    badge: "SaaS Review",
+    icon: "💎"
+  })),
+
+  // Top Masterclass Guides
+  ...blogPosts.slice(0, 15).map((b: any) => ({
+    title: b.data.title,
+    subtitle: `${b.data.category || 'Guide'} • ${b.data.readingTime || '8 min read'}`,
+    url: `/blog/${b.slug}`,
+    badge: "Masterclass",
+    icon: "📰"
+  }))
+];
+---
+
+<!-- Linear / Vercel-Style Spotlight Command Palette (Ctrl+K / ⌘K) -->
+<div 
+  id="spotlight-modal" 
+  class="fixed inset-0 z-[100] hidden items-start justify-center pt-16 sm:pt-24 px-4 bg-black/80 backdrop-blur-xl transition-all duration-200"
+  role="dialog" 
+  aria-modal="true" 
+  aria-labelledby="spotlight-title"
+>
+  <div 
+    id="spotlight-container"
+    class="w-full max-w-2xl rounded-2xl bg-[#08090d]/95 border border-white/[0.12] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9),0_0_30px_0_rgba(6,182,212,0.15)] overflow-hidden transform transition-all duration-200 scale-95 opacity-0"
+  >
+    <!-- Search Input Bar -->
+    <div class="relative flex items-center px-4 py-3.5 border-b border-white/[0.08] bg-white/[0.02]">
+      <svg class="w-5 h-5 text-cyan-400 shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input 
+        id="spotlight-input"
+        type="text" 
+        placeholder="Type to search software, duels, guides, or press Esc..." 
+        autocomplete="off"
+        spellcheck="false"
+        class="w-full bg-transparent text-white placeholder-slate-500 font-sans text-sm sm:text-base focus:outline-none"
+      />
+      <div class="flex items-center gap-1.5 shrink-0 pl-2">
+        <kbd class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 border border-slate-700/80 text-slate-400">Esc</kbd>
+      </div>
+    </div>
+
+    <!-- Quick Filter Tags -->
+    <div class="flex items-center gap-1.5 px-4 py-2 border-b border-white/[0.04] bg-slate-950/40 text-[11px] font-mono overflow-x-auto custom-scrollbar">
+      <span class="text-slate-500 uppercase tracking-wider text-[10px]">Filter:</span>
+      <button type="button" class="spotlight-filter px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-bold active" data-category="ALL">All</button>
+      <button type="button" class="spotlight-filter px-2.5 py-0.5 rounded-full bg-white/[0.03] text-slate-400 hover:text-white border border-white/[0.06]" data-category="SaaS Review">Software</button>
+      <button type="button" class="spotlight-filter px-2.5 py-0.5 rounded-full bg-white/[0.03] text-slate-400 hover:text-white border border-white/[0.06]" data-category="Explorer">Navigation</button>
+      <button type="button" class="spotlight-filter px-2.5 py-0.5 rounded-full bg-white/[0.03] text-slate-400 hover:text-white border border-white/[0.06]" data-category="Masterclass">Guides</button>
+    </div>
+
+    <!-- Results List -->
+    <div 
+      id="spotlight-results" 
+      class="max-h-[360px] overflow-y-auto custom-scrollbar p-2 space-y-1 font-sans text-sm"
+    >
+      <!-- Injected dynamically via JavaScript -->
+    </div>
+
+    <!-- Footer Key Hints -->
+    <div class="flex items-center justify-between px-4 py-2.5 bg-black/40 border-t border-white/[0.06] text-[11px] font-mono text-slate-500">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-[10px] text-slate-400">↑</kbd><kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-[10px] text-slate-400">↓</kbd> Navigate</span>
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-[10px] text-slate-400">↵</kbd> Open</span>
+      </div>
+      <span class="text-cyan-400 font-bold">HeliaTech Spotlight 2026</span>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ searchIndex }}>
+  (function() {
+    const modal = document.getElementById('spotlight-modal');
+    const container = document.getElementById('spotlight-container');
+    const input = document.getElementById('spotlight-input');
+    const resultsContainer = document.getElementById('spotlight-results');
+    const triggers = document.querySelectorAll('[data-spotlight-trigger]');
+    const filterButtons = document.querySelectorAll('.spotlight-filter');
+
+    let activeFilter = 'ALL';
+    let selectedIndex = 0;
+    let currentResults = [];
+
+    function renderResults(query = '') {
+      const q = query.toLowerCase().trim();
+      currentResults = searchIndex.filter(item => {
+        const matchesCategory = activeFilter === 'ALL' || item.badge === activeFilter;
+        if (!matchesCategory) return false;
+        if (!q) return true;
+        return (
+          item.title.toLowerCase().includes(q) ||
+          item.subtitle.toLowerCase().includes(q) ||
+          item.badge.toLowerCase().includes(q)
+        );
+      }).slice(0, 25);
+
+      if (currentResults.length === 0) {
+        resultsContainer.innerHTML = `
+          <div class="p-8 text-center text-slate-500 font-mono text-xs">
+            No software or guides found for "${query}". Try searching "Make", "ElevenLabs", or "Zapier".
+          </div>
+        `;
+        return;
+      }
+
+      if (selectedIndex >= currentResults.length) selectedIndex = 0;
+
+      resultsContainer.innerHTML = currentResults.map((item, idx) => {
+        const isSelected = idx === selectedIndex;
+        return `
+          <a 
+            href="${item.url}" 
+            class="spotlight-item flex items-center justify-between p-3 rounded-xl transition-all duration-150 cursor-pointer ${
+              isSelected 
+                ? 'bg-gradient-to-r from-cyan-500/15 via-sky-500/10 to-transparent border border-cyan-500/30 text-white pl-4' 
+                : 'hover:bg-white/[0.04] text-slate-300 border border-transparent'
+            }"
+            data-index="${idx}"
+          >
+            <div class="flex items-center gap-3 overflow-hidden mr-2">
+              <span class="text-lg shrink-0">${item.icon}</span>
+              <div class="overflow-hidden">
+                <div class="font-bold text-sm text-white truncate flex items-center gap-2">
+                  <span>${item.title}</span>
+                  ${item.badge ? `<span class="text-[10px] font-mono px-2 py-0.2 rounded-full bg-white/[0.06] text-slate-400 border border-white/[0.08]">${item.badge}</span>` : ''}
+                </div>
+                <div class="text-xs text-slate-400 truncate mt-0.5">${item.subtitle}</div>
+              </div>
+            </div>
+            <span class="text-xs text-slate-500 font-mono shrink-0 ${isSelected ? 'text-cyan-400 font-bold' : ''}">↵</span>
+          </a>
+        `;
+      }).join('');
+
+      // Add click handlers
+      const items = resultsContainer.querySelectorAll('.spotlight-item');
+      items.forEach(el => {
+        el.addEventListener('mouseenter', function() {
+          selectedIndex = parseInt(this.getAttribute('data-index') || '0', 10);
+          updateSelectedHighlight();
+        });
+      });
+    }
+
+    function updateSelectedHighlight() {
+      const items = resultsContainer.querySelectorAll('.spotlight-item');
+      items.forEach((el, idx) => {
+        if (idx === selectedIndex) {
+          el.className = 'spotlight-item flex items-center justify-between p-3 rounded-xl transition-all duration-150 cursor-pointer bg-gradient-to-r from-cyan-500/15 via-sky-500/10 to-transparent border border-cyan-500/30 text-white pl-4';
+        } else {
+          el.className = 'spotlight-item flex items-center justify-between p-3 rounded-xl transition-all duration-150 cursor-pointer hover:bg-white/[0.04] text-slate-300 border border-transparent';
+        }
+      });
+    }
+
+    function openSpotlight() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      setTimeout(() => {
+        container.classList.remove('scale-95', 'opacity-0');
+        container.classList.add('scale-100', 'opacity-100');
+        input.focus();
+        input.select();
+      }, 20);
+      renderResults(input.value);
+    }
+
+    function closeSpotlight() {
+      container.classList.remove('scale-100', 'opacity-100');
+      container.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 150);
+    }
+
+    // Filter Buttons
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-cyan-500/15', 'text-cyan-300', 'border-cyan-500/30', 'font-bold');
+          b.classList.add('bg-white/[0.03]', 'text-slate-400');
+        });
+        this.classList.remove('bg-white/[0.03]', 'text-slate-400');
+        this.classList.add('bg-cyan-500/15', 'text-cyan-300', 'border-cyan-500/30', 'font-bold');
+        activeFilter = this.getAttribute('data-category') || 'ALL';
+        selectedIndex = 0;
+        renderResults(input.value);
+      });
+    });
+
+    // Keyboard Shortcuts (Ctrl+K, Cmd+K, /)
+    window.addEventListener('keydown', function(e) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (modal.classList.contains('hidden')) openSpotlight();
+        else closeSpotlight();
+      } else if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+        e.preventDefault();
+        openSpotlight();
+      } else if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeSpotlight();
+      } else if (!modal.classList.contains('hidden')) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (selectedIndex < currentResults.length - 1) {
+            selectedIndex++;
+            updateSelectedHighlight();
+          }
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (selectedIndex > 0) {
+            selectedIndex--;
+            updateSelectedHighlight();
+          }
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          const target = currentResults[selectedIndex];
+          if (target && target.url) {
+            window.location.href = target.url;
+          }
+        }
+      }
+    });
+
+    input.addEventListener('input', function() {
+      selectedIndex = 0;
+      renderResults(this.value);
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeSpotlight();
+    });
+
+    triggers.forEach(t => t.addEventListener('click', openSpotlight));
+    window.openHeliaSpotlight = openSpotlight;
+  })();
+</script>

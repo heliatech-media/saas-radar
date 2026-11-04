@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import LeadMagnetDrawer from '../components/LeadMagnetDrawer.astro';
+import SpotlightCommandPalette from '../components/SpotlightCommandPalette.astro';
 
 interface Props {
   title: string;
@@ -288,6 +289,20 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
         <!-- Right: High-End Live Observatory Pill & Action Trigger -->
         <div class="flex items-center gap-3">
+          <!-- Spotlight Quick Search Trigger (Ctrl+K / ⌘K) -->
+          <button
+            type="button"
+            data-spotlight-trigger
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-500/40 text-xs font-mono text-slate-300 hover:text-white transition-all cursor-pointer shadow-sm group"
+            aria-label="Search software (Ctrl+K)"
+          >
+            <svg class="w-3.5 h-3.5 text-cyan-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <span class="hidden lg:inline text-[11px] text-slate-300">Search</span>
+            <kbd class="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-slate-900 border border-slate-700/80 rounded text-slate-400 group-hover:text-cyan-300">⌘K</kbd>
+          </button>
+
           <!-- Live Index Status (Discrete Pulse) -->
           <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] font-mono text-slate-400">
             <span class="relative flex h-1.5 w-1.5">
@@ -426,6 +441,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <!-- Cloudflare Web Analytics (Official Zero-Cookie Privacy-Preserving Telemetry) -->
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c3360d131e3241459e695ed9dd51a825"}'></script>
     <!-- End Cloudflare Web Analytics -->
+    <SpotlightCommandPalette />
     <LeadMagnetDrawer />
 
     <!-- Skimlinks Universal Commerce Monetization (Publisher ID: 312260X1800845) -->
