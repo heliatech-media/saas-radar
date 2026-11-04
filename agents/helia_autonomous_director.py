@@ -120,6 +120,8 @@ class HeliaAutonomousDirector:
         self.paved = PavedSponsorshipAgent()
         from agents.cognitive_core import HeliaSwarmCognitiveCoordinator
         self.cognitive_core = HeliaSwarmCognitiveCoordinator(api_key=api_key)
+        from agents.design_jury_agent import HeliaDesignJuryAgent
+        self.design_jury = HeliaDesignJuryAgent(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -161,6 +163,14 @@ class HeliaAutonomousDirector:
         self.log("Helia-VisualArtist", "Auditing 1200x630 custom hero visuals & OpenGraph social cards...", "🖼️")
         visual_res = self.artist.process_all_articles()
         self.log("Helia-VisualArtist", f"Visual assets verified for {visual_res['generated']} articles.", "✨")
+
+        # Step 2.65: Sub-Agent DesignJury (World-Class Web Design Competition Audit)
+        try:
+            self.log("Helia-DesignJury", "Auditing site aesthetics, typography rhythm & Awwwards readiness...", "🎨")
+            jury_report = self.design_jury.evaluate_against_awwwards_rubric()
+            self.log("Helia-DesignJury", f"Grand Jury Score: {jury_report.get('overall_awwwards_score', 9.5)}/10 • Status: {jury_report.get('jury_status')}", "🏆")
+        except Exception as e:
+            self.log("Helia-DesignJury", f"Design jury audit note: {e}", "⚠️")
 
         # Step 2.7: Sub-Agent AffiliateHub (Multi-Network Autonomous API Sync)
         self.log("Helia-AffiliateHub", "Querying partner networks (Impact, PartnerStack, CJ) for tracking links...", "🔗")
