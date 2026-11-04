@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T06:21:27.483360",
+  "last_synced": "2026-11-04T06:39:26.224392",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11338,
-  "total_requests": 81353,
-  "total_visits": 3514,
-  "total_pageviews": 15729,
+  "total_visitors_network": 11353,
+  "total_requests": 81645,
+  "total_visits": 3519,
+  "total_pageviews": 15751,
   "percent_cached": "56.14%",
-  "data_served_mb": 743.6,
+  "data_served_mb": 744.9,
   "top_pages": [
     {
       "path": "/",
@@ -55,30 +55,30 @@
       "views": 130
     },
     {
-      "path": "/terms/",
-      "views": 130
-    },
-    {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     },
     {
-      "path": "/reviews/heygen/",
+      "path": "/terms/",
+      "views": 130
+    },
+    {
+      "path": "/sentinel/",
       "views": 120
     },
     {
-      "path": "/reviews/linear/",
+      "path": "/reviews/beehiiv/",
       "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14070
+      "views": 14170
     },
     {
       "country": "Morocco",
-      "views": 9540
+      "views": 9610
     },
     {
       "country": "Germany",
