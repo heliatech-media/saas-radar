@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T11:08:24.267032",
+  "last_synced": "2026-11-04T11:11:06.197238",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11546,
-  "total_requests": 87190,
-  "total_visits": 3579,
-  "total_pageviews": 16006,
+  "total_visitors_network": 11549,
+  "total_requests": 87255,
+  "total_visits": 3580,
+  "total_pageviews": 16010,
   "percent_cached": "56.14%",
-  "data_served_mb": 764.5,
+  "data_served_mb": 765.1,
   "top_pages": [
     {
       "path": "/",
@@ -32,7 +32,7 @@
     },
     {
       "path": "/radar/",
-      "views": 200
+      "views": 210
     },
     {
       "path": "/blog/",
@@ -47,15 +47,15 @@
       "views": 180
     },
     {
+      "path": "/sentinel/",
+      "views": 150
+    },
+    {
       "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
       "path": "/blog/resend-evolution-guide-2026/",
-      "views": 130
-    },
-    {
-      "path": "/sentinel/",
       "views": 130
     },
     {
