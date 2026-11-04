@@ -94,7 +94,7 @@
     "rating": 4.3,
     "starting_price": "$7",
     "best_for": "Fast-growing agencies, operations teams, and project managers who need hyper-customizable workflows.",
-    "affiliate_url": "https://clickup.com",
+    "affiliate_url": "https://clickup.pxf.io/c/heliatech",
     "commission_rate": "20% recurring commission for up to 12 months"
   },
   {
@@ -158,7 +158,7 @@
     "rating": 4.7,
     "starting_price": "$29/mo",
     "best_for": "Sales teams, content creators, global enterprises, and educators scaling localized video output.",
-    "affiliate_url": "https://www.heygen.com",
+    "affiliate_url": "https://www.heygen.com/?via=heliatech",
     "commission_rate": "20% recurring"
   },
   {
@@ -169,8 +169,8 @@
     "rating": 4.5,
     "starting_price": "$39/mo",
     "best_for": "Mid-market to enterprise marketing teams, content agencies, and corporate brand managers.",
-    "affiliate_url": "https://www.jasper.ai",
-    "commission_rate": "20% recurring for up to 12 months"
+    "affiliate_url": "https://partnerstack.com/jasper?via=heliatech",
+    "commission_rate": "30% recurring for up to 12 months"
   },
   {
     "name": "Julius AI",
@@ -402,11 +402,11 @@
   {
     "name": "Resend",
     "slug": "resend",
-    "tagline": "Email for developers. The best API to reach humans instead of spam folders.",
+    "tagline": "Email for developers: The modern API to build, test, and deliver transactional emails at scale.",
     "category": "DevTools",
     "rating": 4.8,
     "starting_price": "$20/mo",
-    "best_for": "Frontend developers, full-stack engineers, and modern SaaS startups",
+    "best_for": "Full-stack developers, engineering teams, and startups building web applications who want frictionless email integration.",
     "affiliate_url": "https://resend.com/?via=heliatech"
   },
   {

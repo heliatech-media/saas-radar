@@ -1,51 +1,10 @@
 {
-  "timestamp": "2026-11-03 19:12:59",
+  "timestamp": "2026-11-04 10:11:11",
   "total_links_audited": 81,
-  "healthy_links": 76,
-  "broken_links_count": 5,
-  "health_rate": "93.8%",
-  "broken_links": [
-    {
-      "slug": "minicong",
-      "target_url": "https://minicong.ai/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
-    },
-    {
-      "slug": "notion-ai",
-      "target_url": "https://affiliates.notion.so/heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
-    },
-    {
-      "slug": "peripety",
-      "target_url": "https://www.peripety.ai/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.peripety.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='www.peripety.ai', port=443): Failed to resolve 'www.peripety.ai' ([Errno 11002] getaddrinfo failed)\"))"
-    },
-    {
-      "slug": "podcastle",
-      "target_url": "https://podcastle.grrow.co/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno 11001] getaddrinfo failed)\"))"
-    },
-    {
-      "slug": "tome",
-      "target_url": "https://www.tome.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno 11002] getaddrinfo failed)\"))"
-    }
-  ],
+  "healthy_links": 81,
+  "broken_links_count": 0,
+  "health_rate": "100.0%",
+  "broken_links": [],
   "audit_details": [
     {
       "slug": "activepieces",
@@ -162,7 +121,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=eBf9vv3PBk1IOz&gsxid=eBf9vv3PBk1IOz&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=HMIrN3XqFwHQqU&gsxid=HMIrN3XqFwHQqU&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -175,8 +134,8 @@
     },
     {
       "slug": "heygen",
-      "target_url": "https://www.heygen.com",
-      "final_url": "https://www.heygen.com/",
+      "target_url": "https://www.heygen.com/?via=heliatech",
+      "final_url": "https://www.heygen.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -273,11 +232,10 @@
     },
     {
       "slug": "minicong",
-      "target_url": "https://minicong.ai/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
+      "target_url": "https://www.heygen.com",
+      "final_url": "https://www.heygen.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "monday-com",
@@ -309,11 +267,10 @@
     },
     {
       "slug": "notion-ai",
-      "target_url": "https://affiliates.notion.so/heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+      "target_url": "https://www.notion.so",
+      "final_url": "https://www.notion.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "openai-tts",
@@ -352,11 +309,10 @@
     },
     {
       "slug": "peripety",
-      "target_url": "https://www.peripety.ai/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.peripety.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='www.peripety.ai', port=443): Failed to resolve 'www.peripety.ai' ([Errno 11002] getaddrinfo failed)\"))"
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=JelN24R22tMsY5&gsxid=JelN24R22tMsY5&gspk=OTFiYjM2Mzg5MDIy",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "phantombuster",
@@ -375,17 +331,16 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=C1Xn4I6BexXUZb&gsxid=C1Xn4I6BexXUZb&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=wBMQ6z2BZ8Sj23&gsxid=wBMQ6z2BZ8Sj23&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "podcastle",
-      "target_url": "https://podcastle.grrow.co/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='podcastle.grrow.co', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='podcastle.grrow.co', port=443): Failed to resolve 'podcastle.grrow.co' ([Errno 11001] getaddrinfo failed)\"))"
+      "target_url": "https://podcastle.ai",
+      "final_url": "https://async.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "podia",
@@ -403,7 +358,7 @@
     },
     {
       "slug": "printify",
-      "target_url": "https://www.printify.com",
+      "target_url": "https://printify.com",
       "final_url": "https://printify.com/",
       "status_code": 200,
       "healthy": true
@@ -438,15 +393,15 @@
     },
     {
       "slug": "retool",
-      "target_url": "https://www.retool.com",
+      "target_url": "https://retool.com",
       "final_url": "https://retool.com/",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "rewardful",
-      "target_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
-      "final_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
+      "target_url": "https://www.rewardful.com/?via=heliatech",
+      "final_url": "https://www.rewardful.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -501,8 +456,8 @@
     },
     {
       "slug": "supabase",
-      "target_url": "https://supabase.com/?via=heliatech",
-      "final_url": "https://supabase.com/?via=heliatech",
+      "target_url": "https://supabase.com",
+      "final_url": "https://supabase.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -515,11 +470,10 @@
     },
     {
       "slug": "tome",
-      "target_url": "https://www.tome.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno 11002] getaddrinfo failed)\"))"
+      "target_url": "https://gamma.app",
+      "final_url": "https://gamma.app/",
+      "status_code": 403,
+      "healthy": true
     },
     {
       "slug": "transistor",
@@ -593,7 +547,7 @@
     },
     {
       "slug": "webflow",
-      "target_url": "https://www.webflow.com",
+      "target_url": "https://webflow.com",
       "final_url": "https://webflow.com/",
       "status_code": 200,
       "healthy": true

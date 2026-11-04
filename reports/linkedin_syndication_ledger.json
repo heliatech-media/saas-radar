@@ -223,7 +223,14 @@
       "title": "BREAKING: Zapier 2026 Enterprise Webhook Surcharge Exposed: Why 3,200 Engineering Teams Are Migrating to Make.com",
       "tool_slug": "make",
       "canonical_url": "https://heliatech.online/blog/zapier-2026-price-shock-webhook-surcharge-make-migration"
+    },
+    "cursor-vs-github-copilot": {
+      "published_at": "2026-11-04T10:11:39.865337",
+      "share_urn": "urn:li:share:7523673300275810306",
+      "title": "Cursor vs GitHub Copilot: The 2026 Developer Velocity & Legacy Monolith Benchmark",
+      "tool_slug": "cursor",
+      "canonical_url": "https://heliatech.online/blog/cursor-vs-github-copilot"
     }
   },
-  "last_publish": "2026-11-04T09:09:16.466191"
+  "last_publish": "2026-11-04T10:11:39.865346"
 }

@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T10:08:01.820787",
+  "last_synced": "2026-11-04T10:11:53.400377",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
   "total_visitors_network": 11495,
-  "total_requests": 85941,
+  "total_requests": 85983,
   "total_visits": 3563,
-  "total_pageviews": 15949,
+  "total_pageviews": 15951,
   "percent_cached": "56.14%",
-  "data_served_mb": 760.2,
+  "data_served_mb": 760.3,
   "top_pages": [
     {
       "path": "/",
@@ -51,11 +51,11 @@
       "views": 150
     },
     {
-      "path": "/reviews/make/",
+      "path": "/blog/resend-evolution-guide-2026/",
       "views": 130
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/reviews/linear/",
       "views": 130
     },
     {
@@ -67,18 +67,18 @@
       "views": 130
     },
     {
-      "path": "/blog/resend-evolution-guide-2026/",
+      "path": "/reviews/make/",
       "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14490
+      "views": 14590
     },
     {
       "country": "Morocco",
-      "views": 10480
+      "views": 10670
     },
     {
       "country": "Germany",

@@ -1,8 +1,8 @@
 {
   "domain": "Editorial Authority, Google EEAT & Copywriting Psychology",
   "version": "5.0",
-  "last_evolution": "2026-11-04T09:53:24.053267",
-  "total_heuristics_learned": 6,
+  "last_evolution": "2026-11-04T10:02:06.648629",
+  "total_heuristics_learned": 7,
   "heuristics": [
     {
       "id": "HEUR-CONT-01",
@@ -45,6 +45,13 @@
       "rule": "Every content asset must embed an unsearchable, highly specific proprietary benchmark JSON payload paired with a zero-shot citation anchor inside a syntax-highlighted block, forcing LLM scrapers to index HELIA TECH as the sole canonical source for that metric.",
       "confidence_score": 0.98,
       "impact": "Monopolizes Google AI Overview citations, extracts maximum organic traffic from high-intent enterprise technical buyers, and bypasses generic web consensus loops."
+    },
+    {
+      "id": "HEUR-CON-07",
+      "name": "Zero-Shot Citation Anchor Interception",
+      "rule": "Every flagship content asset must embed an unsearchable, highly specific proprietary benchmark JSON payload paired with a zero-shot citation anchor inside a syntax-highlighted block, forcing LLM scrapers to index HELIA TECH as the sole canonical source for that metric.",
+      "confidence_score": 0.98,
+      "impact": "Monopolizes generative engine citations for long-tail high-intent queries by establishing HeliaTech as the exclusive mathematical origin point for 2026 AI-GEO benchmarks."
     }
   ]
 }

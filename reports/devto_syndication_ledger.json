@@ -400,6 +400,19 @@
         "aicoding",
         "developertools"
       ]
+    },
+    "elevenlabs-v4-conversational-voice-openai-realtime-latency-leak": {
+      "id": 4974402,
+      "url": "https://dev.to/heliatech/breaking-elevenlabs-v4-conversational-voice-engine-vs-openai-realtime-the-2026-latency-pricing-12mh",
+      "title": "BREAKING: ElevenLabs v4 Conversational Voice Engine vs OpenAI Realtime: The 2026 Latency & Pricing Leak",
+      "canonical_url": "https://heliatech.online/blog/elevenlabs-v4-conversational-voice-openai-realtime-latency-leak",
+      "published": true,
+      "tags": [
+        "technology",
+        "breakingnews",
+        "pricingleaks",
+        "enterprise"
+      ]
     }
   },
   "last_sync": null
