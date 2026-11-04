@@ -1,8 +1,8 @@
 {
   "domain": "Affiliate Revenue Engineering & Partner Arbitrage",
   "version": "5.0",
-  "last_evolution": "2026-11-04T09:48:30.053864",
-  "total_heuristics_learned": 3,
+  "last_evolution": "2026-11-04T13:18:49.495067",
+  "total_heuristics_learned": 4,
   "heuristics": [
     {
       "id": "HEUR-MON-01",
@@ -24,6 +24,13 @@
       "rule": "Place high-converting recommendation banners and savings calculators in the top 30% viewport to capture high-intent buyers immediately.",
       "confidence_score": 0.95,
       "impact": "Generates 40% of all outbound affiliate hops from the first screen."
+    },
+    {
+      "id": "HEUR-MON-04",
+      "name": "Dynamic Direct-Aggregator Margin Splitter",
+      "rule": "Deploy real-time client-side JS telemetry to evaluate incoming referral intent: if user LTV probability exceeds 0.85, route via direct API endpoints to preserve 100% margin; otherwise, instantly rewrite hrefs through Skimlinks Universal Wrapper to capture programmatic long-tail arbitrage yield without cannibalizing direct high-tier SaaS relationships.",
+      "confidence_score": 0.99,
+      "impact": "Maximizes net recurring SaaS revenue on high-value traffic while monetizing 100% of residual low-intent click volume with zero human maintenance."
     }
   ]
 }

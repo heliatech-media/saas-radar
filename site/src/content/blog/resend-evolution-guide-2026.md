@@ -12,7 +12,7 @@ tags:
 - React
 - Email API
 - SaaS Architecture
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: resend
 image: /images/blog/resend.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Resend Account ➔
   url: https://resend.com/?via=heliatech
 ---
-
 For over two decades, setting up transactional email felt like an unholy rite of passage reserved for sysadmin martyrs. Engineering teams were routinely forced to wrangle notoriously archaic SMTP configurations, fight bizarre client-specific CSS bugs in tables, and parse cryptic error logs from legacy titans like SendGrid, Mailgun, or AWS SES. The human bottleneck was staggering: frontend developers spent hours writing brittle HTML inline styles, while backend engineers wrestled with DNS authentication, leaving businesses vulnerable to the dreaded spam folder. The market desperately craved a paradigm shift—an email platform built by developers, for developers.
 
 ## 1. The Genesis & Evolution: Disrupting Legacy Dinosaurs

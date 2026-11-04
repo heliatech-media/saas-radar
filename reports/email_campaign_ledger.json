@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 4,
+  "total_sent": 5,
   "dispatches": [
     {
       "type": "weekly_radar",
@@ -29,6 +29,13 @@
       "recipient": "hamzaelfahsi@gmail.com",
       "dispatched_at": "2026-11-04T12:22:24.362257",
       "resend_id": "01a1a64b-b8c7-7a76-9277-7b06aa5f2dc4"
+    },
+    {
+      "type": "sponsor_pitch",
+      "brand": "Papaya Global",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "dispatched_at": "2026-11-04T13:32:11.672412",
+      "resend_id": "01a1a68b-9d43-77a5-afad-446e3d9ff258"
     }
   ],
   "active_campaigns": {
@@ -37,11 +44,12 @@
       "current_issue": 43
     },
     "pr_outreach": {
-      "last_sent": "2026-11-04T12:22:24.362280",
+      "last_sent": "2026-11-04T13:32:11.672424",
       "sent_brands": [
         "Make",
         "Supabase",
-        "HeyGen"
+        "HeyGen",
+        "Papaya Global"
       ]
     }
   }

@@ -322,7 +322,7 @@
     "rating": 4.6,
     "starting_price": "$10",
     "best_for": "Teams and individuals already heavily invested in the Notion ecosystem who manage vast amounts of internal documentation.",
-    "affiliate_url": "https://www.notion.so",
+    "affiliate_url": "https://affiliates.notion.so/heliatech",
     "commission_rate": "50% for the first year of Plus and Business plans"
   },
   {
@@ -376,8 +376,8 @@
     "rating": 4.5,
     "starting_price": "$11.99/mo",
     "best_for": "Content creators, remote interviewers, and marketing teams producing audio or video podcasts.",
-    "affiliate_url": "https://podcastle.ai",
-    "commission_rate": "30% recurring"
+    "affiliate_url": "https://podcastle.ai/?via=heliatech",
+    "commission_rate": "30% recurring for 12 months"
   },
   {
     "name": "Podia",
@@ -445,13 +445,12 @@
   {
     "name": "Sanity",
     "slug": "sanity",
-    "tagline": "The composable content platform that turns structured content into real-time data infrastructure.",
+    "tagline": "The composable content platform built for structured data and real-time developer workflows",
     "category": "DevTools",
     "rating": 4.6,
     "starting_price": "$15",
-    "best_for": "Frontend developers, digital agencies, and content operations teams building high-performance, omnichannel applications.",
-    "affiliate_url": "https://www.sanity.io/?ref=heliatech",
-    "commission_rate": "Custom / Enterprise referral structure"
+    "best_for": "Frontend developers, JAMstack architects, and digital agencies building content-heavy web applications",
+    "affiliate_url": "https://www.sanity.io/?ref=heliatech"
   },
   {
     "name": "Screen Studio",

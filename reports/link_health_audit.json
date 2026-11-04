@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-04 12:21:49",
+  "timestamp": "2026-11-04 13:31:35",
   "total_links_audited": 81,
-  "healthy_links": 80,
-  "broken_links_count": 1,
-  "health_rate": "98.8%",
+  "healthy_links": 79,
+  "broken_links_count": 2,
+  "health_rate": "97.5%",
   "broken_links": [
     {
       "slug": "minicong",
@@ -12,6 +12,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "slug": "notion-ai",
+      "target_url": "https://affiliates.notion.so/heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     }
   ],
   "audit_details": [
@@ -130,7 +138,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=pBjG5ZW1j0CYM9&gsxid=pBjG5ZW1j0CYM9&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=8IWxa6bvNTFBFO&gsxid=8IWxa6bvNTFBFO&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -173,8 +181,8 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "status_code": 429,
+      "healthy": false
     },
     {
       "slug": "klap",
@@ -277,10 +285,11 @@
     },
     {
       "slug": "notion-ai",
-      "target_url": "https://www.notion.so",
-      "final_url": "https://www.notion.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://affiliates.notion.so/heliatech",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "openai-tts",
@@ -320,7 +329,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=EoJfVj7oWzjDGw&gsxid=EoJfVj7oWzjDGw&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2qEorUTJyymom6&gsxid=2qEorUTJyymom6&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -341,14 +350,14 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=D8dg6BxDJKagSy&gsxid=D8dg6BxDJKagSy&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ZKAzY5ZxtoiBRG&gsxid=ZKAzY5ZxtoiBRG&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "podcastle",
-      "target_url": "https://podcastle.ai",
-      "final_url": "https://async.com/",
+      "target_url": "https://podcastle.ai/?via=heliatech",
+      "final_url": "https://async.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
