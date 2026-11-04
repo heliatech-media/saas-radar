@@ -74,13 +74,13 @@
 
     <!-- Feature Checklist -->
     <text x="50" y="240" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">✓ Microsoft Azure Enterprise Licensing</text>
-    <text x="50" y="275" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">✓ Pull Request & GitHub Issue Context</text>
-    <text x="50" y="310" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">✓ JetBrains, Visual Studio & Neovim</text>
+    <text x="50" y="275" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">✓ Pull Request &amp; GitHub Issue Context</text>
+    <text x="50" y="310" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15">✓ JetBrains, Visual Studio &amp; Neovim</text>
     <text x="50" y="345" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600">Limited Context on Deep Multi-File Edits</text>
   </g>
 
   <!-- Footer Banner -->
   <text x="600" y="560" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" text-anchor="middle">
-    Audited on 10M+ Lines of Code & Legacy Monolith Repositories | HeliaTech Media Observatory
+    Audited on 10M+ Lines of Code &amp; Legacy Monolith Repositories | HeliaTech Media Observatory
   </text>
 </svg>
