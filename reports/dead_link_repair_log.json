@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04T13:29:57.943428",
+  "timestamp": "2026-11-04T14:55:11.632419",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
@@ -7,7 +7,7 @@
     "total_redirects_active": 81,
     "new_redirects_healed": 23,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 6,
+    "external_targets_repaired": 8,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -163,6 +163,18 @@
       "slug": "klaviyo",
       "dead_target": "https://partnerstack.com/klaviyo?via=heliatech",
       "healed_target": "https://www.klaviyo.com",
+      "status_code": 404
+    },
+    {
+      "slug": "lusha",
+      "dead_target": "https://lusha.pxf.io/heliatech",
+      "healed_target": "https://www.lusha.com",
+      "status_code": 404
+    },
+    {
+      "slug": "printify",
+      "dead_target": "https://printify.pxf.io/c/heliatech",
+      "healed_target": "https://www.printify.com",
       "status_code": 404
     }
   ]

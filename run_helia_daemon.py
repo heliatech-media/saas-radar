@@ -28,8 +28,43 @@ ROOT_DIR = Path(__file__).resolve().parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+import atexit
+import psutil
 import threading
 from agents.helia_autonomous_director import HeliaAutonomousDirector
+from agents.telegram_commander_agent import TelegramCommander
+
+LOCK_FILE = ROOT_DIR / 'data' / 'helia_daemon.lock'
+
+def acquire_single_instance_lock():
+    LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
+    if LOCK_FILE.exists():
+        try:
+            with open(LOCK_FILE, 'r', encoding='utf-8') as f:
+                c = f.read().strip()
+                if c:
+                    old_pid = int(c.split(':')[0])
+                    if psutil.pid_exists(old_pid):
+                        proc = psutil.Process(old_pid)
+                        if 'python' in proc.name().lower() and old_pid != os.getpid():
+                            logger.warning(
+                                f'Another instance of Helia Daemon is ALREADY running (PID: {old_pid}). Exiting.'
+                            )
+                            sys.exit(0)
+        except Exception:
+            pass
+
+    with open(LOCK_FILE, 'w', encoding='utf-8') as f:
+        f.write(f'{os.getpid()}:{datetime.now().isoformat()}')
+
+    def release_lock():
+        try:
+            if LOCK_FILE.exists():
+                LOCK_FILE.unlink()
+        except Exception:
+            pass
+
+    atexit.register(release_lock)
 from agents.telegram_commander_agent import TelegramCommander
 
 logging.basicConfig(
@@ -40,6 +75,7 @@ logger = logging.getLogger("Helia-Daemon")
 
 
 def main():
+    acquire_single_instance_lock()
     parser = argparse.ArgumentParser(description="Helia 24/7 Autonomous Growth Daemon")
     parser.add_argument("--interval-hours", type=float, default=2.0, help="Interval between autonomous cycles in hours (default: 2.0)")
     parser.add_argument("--once", action="store_true", help="Run a single autonomous cycle and exit")

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04 13:31:35",
+  "timestamp": "2026-11-04 14:56:49",
   "total_links_audited": 81,
   "healthy_links": 79,
   "broken_links_count": 2,
@@ -138,7 +138,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=8IWxa6bvNTFBFO&gsxid=8IWxa6bvNTFBFO&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xm5cJjpHc4PqfV&gsxid=xm5cJjpHc4PqfV&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -181,8 +181,8 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 429,
-      "healthy": false
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "klap",
@@ -228,8 +228,8 @@
     },
     {
       "slug": "lusha",
-      "target_url": "https://lusha.partnerstack.com/",
-      "final_url": "https://lusha.partnerstack.com/",
+      "target_url": "https://www.lusha.com",
+      "final_url": "https://www.lusha.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -329,7 +329,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2qEorUTJyymom6&gsxid=2qEorUTJyymom6&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3sDOnXqmI1jgpT&gsxid=3sDOnXqmI1jgpT&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -350,7 +350,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ZKAzY5ZxtoiBRG&gsxid=ZKAzY5ZxtoiBRG&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=fgv4KJFbqBtSgb&gsxid=fgv4KJFbqBtSgb&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -377,7 +377,7 @@
     },
     {
       "slug": "printify",
-      "target_url": "https://printify.com",
+      "target_url": "https://www.printify.com",
       "final_url": "https://printify.com/",
       "status_code": 200,
       "healthy": true
@@ -419,8 +419,8 @@
     },
     {
       "slug": "rewardful",
-      "target_url": "https://www.rewardful.com/?via=heliatech",
-      "final_url": "https://www.rewardful.com/?via=heliatech",
+      "target_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
+      "final_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

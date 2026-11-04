@@ -3,6 +3,7 @@ Configuration & Environment Settings for the Multi-Agent System.
 """
 
 import os
+import time
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -27,11 +28,14 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 # Model Failover Pool: Auto-rotates if quota (429) or busy (503) occurs
 AVAILABLE_AI_MODELS = [
-    GEMINI_MODEL,
+    "gemini-3-flash-preview",
     "gemini-3.1-flash-lite",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "gemini-flash-latest",
+    GEMINI_MODEL,
     "gemini-flash-lite-latest",
     "gemini-3.6-flash",
-    "gemini-3-flash-preview",
 ]
 
 def call_gemini_with_failover(client, contents, config=None, preferred_model=None):
@@ -52,7 +56,9 @@ def call_gemini_with_failover(client, contents, config=None, preferred_model=Non
         except Exception as e:
             err_str = str(e)
             last_error = e
-            if any(k in err_str for k in ["429", "RESOURCEEXHAUSTED", "503", "404", "UNAVAILABLE"]):
+            if any(k in err_str for k in ["429", "RESOURCEEXHAUSTED", "RESOURCE_EXHAUSTED", "503", "404", "UNAVAILABLE"]):
+                print(f"[GeminiFailover] Notice: Model {model_name} busy/limited. Trying next model...")
+                time.sleep(1.5)
                 print(f"[GeminiFailover] Warning: Model {model_name} busy or exhausted. Auto-failing over to next model...")
                 continue
             else:
