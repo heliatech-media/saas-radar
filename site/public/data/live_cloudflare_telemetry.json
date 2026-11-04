@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T11:12:45.281190",
+  "last_synced": "2026-11-04T11:28:49.275549",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11549,
-  "total_requests": 87255,
-  "total_visits": 3580,
-  "total_pageviews": 16010,
+  "total_visitors_network": 11557,
+  "total_requests": 87718,
+  "total_visits": 3582,
+  "total_pageviews": 16024,
   "percent_cached": "56.14%",
-  "data_served_mb": 765.1,
+  "data_served_mb": 767.9,
   "top_pages": [
     {
       "path": "/",
@@ -47,12 +47,16 @@
       "views": 180
     },
     {
+      "path": "/blog/make-automation-revolution/",
+      "views": 150
+    },
+    {
       "path": "/sentinel/",
       "views": 150
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 150
+      "path": "/reviews/make/",
+      "views": 140
     },
     {
       "path": "/blog/resend-evolution-guide-2026/",
@@ -63,10 +67,6 @@
       "views": 130
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 130
-    },
-    {
       "path": "/terms/",
       "views": 130
     }
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 14620
+      "views": 14650
     },
     {
       "country": "Morocco",
-      "views": 10940
+      "views": 11090
     },
     {
       "country": "Germany",
@@ -106,7 +106,7 @@
     },
     {
       "country": "Brazil",
-      "views": 320
+      "views": 330
     },
     {
       "country": "France",
