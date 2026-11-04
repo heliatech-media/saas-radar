@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T09:52:20.024803",
+  "last_synced": "2026-11-04T09:57:56.990817",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11477,
-  "total_requests": 85540,
-  "total_visits": 3557,
-  "total_pageviews": 15934,
+  "total_visitors_network": 11485,
+  "total_requests": 85723,
+  "total_visits": 3560,
+  "total_pageviews": 15941,
   "percent_cached": "56.14%",
-  "data_served_mb": 758.8,
+  "data_served_mb": 759.3,
   "top_pages": [
     {
       "path": "/",
