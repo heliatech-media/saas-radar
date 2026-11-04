@@ -127,7 +127,7 @@ AFFILIATE_MAP = {
     "phantombuster": "https://phantombuster.com/?via=heliatech",
     "podia": "https://www.podia.com/?via=heliatech",
     "printify": "https://printify.pxf.io/c/heliatech",
-    "retool": "https://retool.com",
+    "retool": "https://retool.com/?fpr=heliatech",
     "rewardful": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "tweethunter": "https://tweethunter.io/?via=helia",
     "riverside-fm": "https://riverside.fm/?via=heliatech",

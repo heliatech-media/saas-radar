@@ -464,6 +464,19 @@
         "makevszapier",
         "comparison"
       ]
+    },
+    "make-vs-zapier-fr": {
+      "id": 4976508,
+      "url": "https://dev.to/heliatech/make-vs-zapier-laudit-technique-des-automatisations-dentreprise-en-2026-2iom",
+      "title": "Make vs Zapier : L'audit technique des automatisations d'entreprise en 2026",
+      "canonical_url": "https://heliatech.online/blog/make-vs-zapier-fr",
+      "published": true,
+      "tags": [
+        "make",
+        "zapier",
+        "makevszapier",
+        "comparatif"
+      ]
     }
   },
   "last_sync": null
