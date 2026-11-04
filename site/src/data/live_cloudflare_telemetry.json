@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T01:49:47.881995",
+  "last_synced": "2026-11-04T02:07:19.331875",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 10473,
-  "total_requests": 76514,
-  "total_visits": 3246,
-  "total_pageviews": 15270,
+  "total_visitors_network": 10485,
+  "total_requests": 76763,
+  "total_visits": 3250,
+  "total_pageviews": 15278,
   "percent_cached": "56.14%",
-  "data_served_mb": 725.5,
+  "data_served_mb": 726.1,
   "top_pages": [
     {
       "path": "/",
@@ -63,26 +63,26 @@
       "views": 120
     },
     {
-      "path": "/blog/framer-evolution-guide-2026/",
+      "path": "/reviews/beehiiv/",
       "views": 120
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 13660
+      "views": 13680
     },
     {
       "country": "Morocco",
-      "views": 8400
+      "views": 8510
     },
     {
       "country": "Germany",
-      "views": 1190
+      "views": 1200
     },
     {
       "country": "Singapore",
