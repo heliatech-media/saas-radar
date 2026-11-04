@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T05:08:47.063583",
+  "last_synced": "2026-11-04T05:18:51.759941",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 10995,
-  "total_requests": 79584,
-  "total_visits": 3408,
-  "total_pageviews": 15534,
+  "total_visitors_network": 11007,
+  "total_requests": 79817,
+  "total_visits": 3412,
+  "total_pageviews": 15546,
   "percent_cached": "56.14%",
-  "data_served_mb": 735.5,
+  "data_served_mb": 736.3,
   "top_pages": [
     {
       "path": "/",
@@ -31,11 +31,11 @@
       "views": 220
     },
     {
-      "path": "/radar/",
+      "path": "/versus/",
       "views": 190
     },
     {
-      "path": "/versus/",
+      "path": "/radar/",
       "views": 190
     },
     {
@@ -51,34 +51,34 @@
       "views": 150
     },
     {
-      "path": "/terms/",
-      "views": 130
-    },
-    {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 120
+      "path": "/terms/",
+      "views": 130
     },
     {
       "path": "/reviews/heygen/",
+      "views": 120
+    },
+    {
+      "path": "/sentinel/",
+      "views": 120
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 13860
+      "views": 13910
     },
     {
       "country": "Morocco",
-      "views": 9200
+      "views": 9250
     },
     {
       "country": "Germany",
