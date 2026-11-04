@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-04T23:03:22.924132",
+  "last_synced": "2026-11-04T23:13:27.496119",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 14614,
-  "total_requests": 105610,
-  "total_visits": 4530,
-  "total_pageviews": 19982,
+  "total_visitors_network": 14689,
+  "total_requests": 105926,
+  "total_visits": 4553,
+  "total_pageviews": 20080,
   "percent_cached": "56.14%",
-  "data_served_mb": 840.9,
+  "data_served_mb": 841.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 3430
+      "views": 3530
     },
     {
       "path": "/",
@@ -67,18 +67,18 @@
       "views": 140
     },
     {
-      "path": "/terms/",
+      "path": "/blog/make-vs-zapier/",
       "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 18600
+      "views": 18700
     },
     {
       "country": "Morocco",
-      "views": 14600
+      "views": 14680
     },
     {
       "country": "Germany",
