@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T07:01:38.779312",
+  "last_synced": "2026-11-04T07:19:39.684518",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11372,
-  "total_requests": 82007,
-  "total_visits": 3525,
-  "total_pageviews": 15784,
+  "total_visitors_network": 11385,
+  "total_requests": 82575,
+  "total_visits": 3529,
+  "total_pageviews": 15803,
   "percent_cached": "56.14%",
-  "data_served_mb": 746.2,
+  "data_served_mb": 747.5,
   "top_pages": [
     {
       "path": "/",
@@ -35,11 +35,11 @@
       "views": 200
     },
     {
-      "path": "/radar/",
+      "path": "/versus/",
       "views": 190
     },
     {
-      "path": "/versus/",
+      "path": "/radar/",
       "views": 190
     },
     {
@@ -67,18 +67,18 @@
       "views": 130
     },
     {
-      "path": "/sentinel/",
-      "views": 120
+      "path": "/blog/resend-evolution-guide-2026/",
+      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14230
+      "views": 14300
     },
     {
       "country": "Morocco",
-      "views": 9710
+      "views": 9760
     },
     {
       "country": "Germany",
@@ -110,7 +110,7 @@
     },
     {
       "country": "France",
-      "views": 270
+      "views": 280
     }
   ],
   "top_referrers": [
