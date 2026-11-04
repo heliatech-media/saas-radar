@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T16:39:43.413128",
+  "last_synced": "2026-11-04T16:59:51.140600",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11791,
-  "total_requests": 94297,
-  "total_visits": 3655,
-  "total_pageviews": 16295,
+  "total_visitors_network": 11805,
+  "total_requests": 94688,
+  "total_visits": 3659,
+  "total_pageviews": 16309,
   "percent_cached": "56.14%",
-  "data_served_mb": 811.1,
+  "data_served_mb": 812.4,
   "top_pages": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 320
+      "views": 330
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
@@ -59,26 +59,26 @@
       "views": 140
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 130
-    },
-    {
-      "path": "/terms/",
+      "path": "/blog/make-vs-zapier/",
       "views": 130
     },
     {
       "path": "/reviews/linear/",
+      "views": 130
+    },
+    {
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14990
+      "views": 15010
     },
     {
       "country": "Morocco",
-      "views": 12830
+      "views": 12920
     },
     {
       "country": "Germany",
