@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T17:06:31.284718",
+  "last_synced": "2026-11-04T17:09:55.914718",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11812,
-  "total_requests": 94823,
-  "total_visits": 3661,
-  "total_pageviews": 16318,
+  "total_visitors_network": 11815,
+  "total_requests": 94907,
+  "total_visits": 3662,
+  "total_pageviews": 16331,
   "percent_cached": "56.14%",
-  "data_served_mb": 812.8,
+  "data_served_mb": 813.2,
   "top_pages": [
     {
       "path": "/",
@@ -27,12 +27,12 @@
       "views": 260
     },
     {
-      "path": "/awards/",
+      "path": "/radar/",
       "views": 220
     },
     {
-      "path": "/radar/",
-      "views": 210
+      "path": "/awards/",
+      "views": 220
     },
     {
       "path": "/blog/",
@@ -59,26 +59,26 @@
       "views": 140
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 130
-    },
-    {
       "path": "/terms/",
       "views": 130
     },
     {
       "path": "/blog/resend-evolution-guide-2026/",
       "views": 130
+    },
+    {
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 15030
+      "views": 15060
     },
     {
       "country": "Morocco",
-      "views": 12960
+      "views": 13000
     },
     {
       "country": "Germany",
@@ -93,11 +93,11 @@
       "views": 550
     },
     {
-      "country": "Netherlands",
+      "country": "United Kingdom",
       "views": 530
     },
     {
-      "country": "United Kingdom",
+      "country": "Netherlands",
       "views": 530
     },
     {
