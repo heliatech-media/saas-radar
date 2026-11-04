@@ -221,31 +221,40 @@ class HeliaAutonomousDirector:
         except Exception as e:
             self.log("Helia-CognitiveSwarm", f"Cognitive training cycle note: {e}", "⚠️")
 
-        # Step 3: Sub-Agent TrendScout
-        self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")
-        keyword = self.radar.scout_trending_software()
-        self.log("Helia-TrendScout", f"Target locked: '{keyword.tool_name}' ({keyword.category}) | Commission: {keyword.average_commission}", "🎯")
-
-        # Step 4: Sub-Agent Analyst
-        self.log("Helia-Analyst", f"Executing architectural forensic teardown of '{keyword.tool_name}'...", "🔬")
-        review = self.analyst.analyze_tool(tool_name=keyword.tool_name, category_hint=keyword.category)
-        review_path = self.publisher.publish_review(review)
-        self.log("Helia-Analyst", f"Review published & indexed: {review_path.name}", "📑")
-
-        # Step 5: Sub-Agent ContentFactory
-        self.log("Helia-ContentFactory", f"Drafting 100% English masterclass & practical workshop for '{keyword.tool_name}'...", "✍️")
+        # Step 3: Sub-Agent TrendScout (Resilient Discovery)
+        keyword = None
         try:
-            blog_post = self.blog_agent.write_tool_masterclass(review)
-            blog_path = self.publisher.publish_blog_post(blog_post)
-            self.log("Helia-ContentFactory", f"Masterclass published: {blog_path.name}", "📰")
-
-            # Step 6: Sub-Agent SocialGrowth
-            self.log("Helia-SocialGrowth", "Synthesizing viral Twitter/X growth thread & hooks...", "🐦")
-            tweets = self.social.craft_viral_x_thread(blog_post)
-            self.social.broadcast_thread_to_x(tweets)
-            self.log("Helia-SocialGrowth", f"Drafted {len(tweets)}-tweet high-converting thread.", "🚀")
+            self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")
+            keyword = self.radar.scout_trending_software()
+            self.log("Helia-TrendScout", f"Target locked: '{keyword.tool_name}' ({keyword.category}) | Commission: {keyword.average_commission}", "🎯")
         except Exception as e:
-            self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
+            self.log("Helia-TrendScout", f"Trend scout notice ({e}). Proceeding to next growth vector...", "⚠️")
+
+        # Step 4 & 5: Sub-Agent Analyst & ContentFactory (Insulated)
+        if keyword:
+            review = None
+            try:
+                self.log("Helia-Analyst", f"Executing architectural forensic teardown of '{keyword.tool_name}'...", "🔬")
+                review = self.analyst.analyze_tool(tool_name=keyword.tool_name, category_hint=keyword.category)
+                review_path = self.publisher.publish_review(review)
+                self.log("Helia-Analyst", f"Review published & indexed: {review_path.name}", "📑")
+            except Exception as e:
+                self.log("Helia-Analyst", f"Analyst review notice ({e}).", "⚠️")
+
+            if review:
+                try:
+                    self.log("Helia-ContentFactory", f"Drafting 100% English masterclass & practical workshop for '{keyword.tool_name}'...", "✍️")
+                    blog_post = self.blog_agent.write_tool_masterclass(review)
+                    blog_path = self.publisher.publish_blog_post(blog_post)
+                    self.log("Helia-ContentFactory", f"Masterclass published: {blog_path.name}", "📰")
+
+                    # Step 6: Sub-Agent SocialGrowth
+                    self.log("Helia-SocialGrowth", "Synthesizing viral Twitter/X growth thread & hooks...", "🐦")
+                    tweets = self.social.craft_viral_x_thread(blog_post)
+                    self.social.broadcast_thread_to_x(tweets)
+                    self.log("Helia-SocialGrowth", f"Drafted {len(tweets)}-tweet high-converting thread.", "🚀")
+                except Exception as e:
+                    self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
 
         # Step 5.5: Sub-Agent VersusEngine (Dual Head-to-Head Duel Showdowns)
         try:

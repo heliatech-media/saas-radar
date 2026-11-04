@@ -9,7 +9,7 @@ import json
 from datetime import datetime
 from google import genai
 from google.genai import types
-from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP
+from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP, call_gemini_with_failover
 from agents.models import ToolReview, BlogPost, AffiliateCTA
 from agents.article_layout_agent import ArticleLayoutAgent
 from agents.image_generator_agent import ImageGeneratorAgent
@@ -79,13 +79,14 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
         if not self.client:
             raise ValueError("GEMINI_API_KEY is not configured.")
 
-        response = self.client.models.generate_content(
-            model=self.model,
+        response = call_gemini_with_failover(
+            client=self.client,
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.7,
                 response_mime_type="application/json",
-            )
+            ),
+            preferred_model=self.model
         )
 
         raw_text = (response.text or "").strip()

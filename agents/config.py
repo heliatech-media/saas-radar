@@ -23,7 +23,41 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 DEVTO_API_KEY = os.getenv("DEVTO_API_KEY", "")
 
 # Default Model as per Google GenAI SDK standards
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+
+# Model Failover Pool: Auto-rotates if quota (429) or busy (503) occurs
+AVAILABLE_AI_MODELS = [
+    GEMINI_MODEL,
+    "gemini-3.1-flash-lite",
+    "gemini-flash-lite-latest",
+    "gemini-3.6-flash",
+    "gemini-3-flash-preview",
+]
+
+def call_gemini_with_failover(client, contents, config=None, preferred_model=None):
+    models_to_try = []
+    if preferred_model:
+        models_to_try.append(preferred_model)
+    for m in AVAILABLE_AI_MODELS:
+        if m not in models_to_try:
+            models_to_try.append(m)
+
+    last_error = None
+    for model_name in models_to_try:
+        try:
+            kwargs = {"model": model_name, "contents": contents}
+            if config:
+                kwargs["config"] = config
+            return client.models.generate_content(**kwargs)
+        except Exception as e:
+            err_str = str(e)
+            last_error = e
+            if any(k in err_str for k in ["429", "RESOURCEEXHAUSTED", "503", "404", "UNAVAILABLE"]):
+                print(f"[GeminiFailover] Warning: Model {model_name} busy or exhausted. Auto-failing over to next model...")
+                continue
+            else:
+                raise e
+    raise last_error
 
 # Target High-Margin SaaS Niches with high recurring affiliate payouts
 TARGET_NICHES = [
@@ -75,7 +109,7 @@ AFFILIATE_MAP = {
     "getimg-ai": "https://getimg.ai/?via=heliatech",
     "heygen": "https://www.heygen.com/?via=heliatech",
     "linear": "https://linear.app/?via=heliatech",
-    "lusha": "https://lusha.partnerstack.com/",
+    "lusha": "https://lusha.pxf.io/heliatech",
     "memberstack": "https://www.memberstack.com/?via=heliatech",
     "monday-com": "https://monday.com/?ref=heliatech",
     "framer": "https://framer.partnerstack.com/heliatech",
@@ -86,9 +120,9 @@ AFFILIATE_MAP = {
     "partnerstack": "https://partnerstack.com/?via=heliatech",
     "phantombuster": "https://phantombuster.com/?via=heliatech",
     "podia": "https://www.podia.com/?via=heliatech",
-    "printify": "https://printify.com",
+    "printify": "https://printify.pxf.io/c/heliatech",
     "retool": "https://retool.com",
-    "rewardful": "https://www.rewardful.com/?via=heliatech",
+    "rewardful": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "tweethunter": "https://tweethunter.io/?via=helia",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
     "transistor-fm": "https://transistor.fm/?via=heliatech",

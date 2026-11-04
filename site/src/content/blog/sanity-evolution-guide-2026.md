@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: sanity
 image: /images/blog/sanity.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Sanity Account ➔
   url: https://www.sanity.io/?ref=heliatech
 ---
-
 ### Introduction
 
 > [!NOTE]

@@ -31,7 +31,7 @@ if str(ROOT_DIR) not in sys.path:
 
 load_dotenv(ROOT_DIR / ".env")
 
-from agents.config import GEMINI_API_KEY, GEMINI_MODEL, BLOG_CONTENT_DIR, DATA_DIR
+from agents.config import GEMINI_API_KEY, GEMINI_MODEL, BLOG_CONTENT_DIR, DATA_DIR, call_gemini_with_failover
 
 # High-intent replacement queries in B2B SaaS
 HIGH_INTENT_ALTERNATIVES = [

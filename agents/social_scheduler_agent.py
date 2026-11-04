@@ -162,60 +162,107 @@ class SocialSchedulerAgent:
         schedule_queue = []
         base_time = datetime.now() + timedelta(hours=1)
 
+        # Load existing cached social assets to avoid blowing API rate limits (15 RPM)
+        cached_queue = {}
+        queue_path = self.reports_dir / "active_monetized_queue.json"
+        if queue_path.exists():
+            try:
+                import json as _j
+                raw_cached = _j.loads(queue_path.read_text(encoding="utf-8"))
+                for item in raw_cached:
+                    if item.get("tool_slug") and item.get("x_thread") and item.get("linkedin_post"):
+                        cached_queue[item["tool_slug"]] = item
+            except Exception:
+                pass
+
+        newly_generated_count = 0
+
         for i, (tool_slug, aff_url) in enumerate(monetized_tools.items()):
             art_path = self.find_article_for_tool(tool_slug)
             if not art_path:
-                self.log(f"No companion article found for monetized tool '{tool_slug}'", "⚠️")
                 continue
 
             seo_audit = self.audit_seo_and_artwork(art_path, tool_slug)
-            
-            # Construct BlogPost model for SocialGrowthAgent
-            post = BlogPost(
-                title=seo_audit["title"],
-                slug=seo_audit["article_stem"],
-                description=seo_audit["description"],
-                date=str(datetime.now().date()),
-                author="HELIA TECH",
-                category=seo_audit["category"],
-                tags=[tool_slug],
-                image=f"/images/blog/{tool_slug}.svg",
-                readingTime="7 MIN",
-                tool_slug=tool_slug,
-                tldr=seo_audit["tldr"] if isinstance(seo_audit["tldr"], list) else [str(seo_audit["tldr"])],
-                affiliate_cta=AffiliateCTA(
-                    badge="OFFICIAL HELIATECH PARTNERSHIP",
-                    title=f"Access {tool_slug.capitalize()}",
-                    description=f"Explore {tool_slug.capitalize()} enterprise capabilities.",
-                    button_text="Get Started",
-                    url=f"/go/{tool_slug}"
-                ),
-                markdown_content=""
-            )
-
-            self.log(f"Drafting tailored viral assets for monetized asset '{tool_slug}'...", "✍️")
-            x_thread = self.social_agent.craft_viral_x_thread(post)
-            linkedin_post = self.social_agent.craft_linkedin_authority_post(post)
-
-            # Schedule slots (staggered by 24h per tool for maximum reach and zero audience fatigue)
             post_date = base_time + timedelta(days=i)
             x_slot = post_date.replace(hour=9, minute=15).strftime("%Y-%m-%d %H:%M UTC")
             li_slot = post_date.replace(hour=14, minute=30).strftime("%Y-%m-%d %H:%M UTC")
 
-            entry = {
-                "tool_slug": tool_slug,
-                "partner_tracking_url": aff_url,
-                "edge_redirect_url": f"https://heliatech.online/go/{tool_slug}",
-                "article_url": f"https://heliatech.online/blog/{post.slug}",
-                "hero_artwork_url": f"https://heliatech.online/images/blog/{tool_slug}.png",
-                "seo_score": seo_audit["seo_score"],
-                "scheduled_x_time": x_slot,
-                "scheduled_linkedin_time": li_slot,
-                "x_thread": x_thread,
-                "linkedin_post": linkedin_post,
-                "status": "QUEUED_STANDBY"
-            }
-            schedule_queue.append(entry)
+            # 1. Reuse existing verified copy from cache if present
+            if tool_slug in cached_queue:
+                entry = cached_queue[tool_slug]
+                entry["scheduled_x_time"] = x_slot
+                entry["scheduled_linkedin_time"] = li_slot
+                entry["partner_tracking_url"] = aff_url
+                entry["seo_score"] = seo_audit["seo_score"]
+                schedule_queue.append(entry)
+                continue
+
+            # 2. Only draft for newly discovered tools (max 1 per cycle to preserve quota)
+            if newly_generated_count >= 1:
+                # Fast seed fallback
+                entry = {
+                    "tool_slug": tool_slug,
+                    "partner_tracking_url": aff_url,
+                    "edge_redirect_url": f"https://heliatech.online/go/{tool_slug}",
+                    "article_url": f"https://heliatech.online/blog/{art_path.stem}",
+                    "hero_artwork_url": f"https://heliatech.online/images/blog/{tool_slug}.png",
+                    "seo_score": seo_audit["seo_score"],
+                    "scheduled_x_time": x_slot,
+                    "scheduled_linkedin_time": li_slot,
+                    "x_thread": [
+                        f"Scaling modern architectures requires eliminating infrastructure friction. We just audited {tool_slug.title()}.",
+                        f"Read our comprehensive 2026 teardown, empirical benchmarks, and TCO math: https://heliatech.online/blog/{art_path.stem}"
+                    ],
+                    "linkedin_post": f"We just completed an in-depth architectural audit of {tool_slug.title()}.\n\nRead the full investigation on HELIA TECH: https://heliatech.online/blog/{art_path.stem}",
+                    "status": "QUEUED_STANDBY"
+                }
+                schedule_queue.append(entry)
+                continue
+
+            try:
+                post = BlogPost(
+                    title=seo_audit["title"],
+                    slug=seo_audit["article_stem"],
+                    description=seo_audit["description"],
+                    date=str(datetime.now().date()),
+                    author="HELIA TECH",
+                    category=seo_audit["category"],
+                    tags=[tool_slug],
+                    image=f"/images/blog/{tool_slug}.svg",
+                    readingTime="7 MIN",
+                    tool_slug=tool_slug,
+                    tldr=seo_audit["tldr"] if isinstance(seo_audit["tldr"], list) else [str(seo_audit["tldr"])],
+                    affiliate_cta=AffiliateCTA(
+                        badge="OFFICIAL HELIATECH PARTNERSHIP",
+                        title=f"Access {tool_slug.capitalize()}",
+                        description=f"Explore {tool_slug.capitalize()} enterprise capabilities.",
+                        button_text="Get Started",
+                        url=f"/go/{tool_slug}"
+                    ),
+                    markdown_content=""
+                )
+
+                self.log(f"Drafting tailored viral assets for new monetized asset '{tool_slug}'...", "✍️")
+                x_thread = self.social_agent.craft_viral_x_thread(post)
+                linkedin_post = self.social_agent.craft_linkedin_authority_post(post)
+                newly_generated_count += 1
+
+                entry = {
+                    "tool_slug": tool_slug,
+                    "partner_tracking_url": aff_url,
+                    "edge_redirect_url": f"https://heliatech.online/go/{tool_slug}",
+                    "article_url": f"https://heliatech.online/blog/{post.slug}",
+                    "hero_artwork_url": f"https://heliatech.online/images/blog/{tool_slug}.png",
+                    "seo_score": seo_audit["seo_score"],
+                    "scheduled_x_time": x_slot,
+                    "scheduled_linkedin_time": li_slot,
+                    "x_thread": x_thread,
+                    "linkedin_post": linkedin_post,
+                    "status": "QUEUED_STANDBY"
+                }
+                schedule_queue.append(entry)
+            except Exception as ex:
+                self.log(f"Social copy generation fallback for '{tool_slug}': {ex}", "⚠️")
 
         # Write reports/active_monetized_queue.json
         queue_path = self.reports_dir / "active_monetized_queue.json"

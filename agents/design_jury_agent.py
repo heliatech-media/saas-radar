@@ -35,7 +35,7 @@ SITE_DIR = ROOT_DIR / "site"
 REPORTS_DIR = ROOT_DIR / "reports"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-from agents.config import GEMINI_API_KEY, GEMINI_MODEL
+from agents.config import GEMINI_API_KEY, GEMINI_MODEL, call_gemini_with_failover
 from google import genai
 from google.genai import types
 
@@ -165,13 +165,14 @@ Respond ONLY with valid JSON:
 }}
 """
         try:
-            resp = self.client.models.generate_content(
-                model=self.model,
+            resp = call_gemini_with_failover(
+                client=self.client,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     temperature=0.2,
                     response_mime_type="application/json"
-                )
+                ),
+                preferred_model=self.model
             )
 
             from agents.cognitive_core import parse_json_robustly

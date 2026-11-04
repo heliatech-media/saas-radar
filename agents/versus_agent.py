@@ -30,7 +30,7 @@ if str(ROOT_DIR) not in sys.path:
 
 load_dotenv(ROOT_DIR / ".env")
 
-from agents.config import GEMINI_API_KEY, GEMINI_MODEL, BLOG_CONTENT_DIR, DATA_DIR
+from agents.config import GEMINI_API_KEY, GEMINI_MODEL, BLOG_CONTENT_DIR, DATA_DIR, call_gemini_with_failover
 from agents.image_generator_agent import ImageGeneratorAgent
 
 # High-intent B2B rivalry pairs with enormous Google search volume & high buyer intent
@@ -157,12 +157,13 @@ Write the complete markdown article without truncation.
 """
 
         try:
-            response = self.client.models.generate_content(
-                model=self.model,
+            response = call_gemini_with_failover(
+                client=self.client,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     temperature=0.3
-                )
+                ),
+                preferred_model=self.model
             )
             content = response.text.strip()
             

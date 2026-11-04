@@ -19,7 +19,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
         pass
 from google import genai
 from google.genai import types
-from agents.config import GEMINI_API_KEY, GEMINI_MODEL, TARGET_NICHES
+from agents.config import GEMINI_API_KEY, GEMINI_MODEL, TARGET_NICHES, call_gemini_with_failover
 from agents.models import RadarKeyword
 
 
@@ -75,8 +75,8 @@ Provide the output strictly conforming to the requested JSON schema.
 """
 
         try:
-            response = self.client.models.generate_content(
-                model=self.model,
+            response = call_gemini_with_failover(
+                client=self.client,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
@@ -86,21 +86,11 @@ Provide the output strictly conforming to the requested JSON schema.
                     },
                     temperature=0.7,
                 ),
+                preferred_model=self.model
             )
         except Exception as e:
-            print(f"[Helia-Radar] ⚠️ Primary model {self.model} busy ({e}). Switching to high-throughput fallback: gemini-3.5-flash-lite...")
-            response = self.client.models.generate_content(
-                model="gemini-3.5-flash-lite",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_json_schema={
-                        "type": "ARRAY",
-                        "items": RadarKeyword.model_json_schema(),
-                    },
-                    temperature=0.7,
-                ),
-            )
+            print(f"[Helia-Radar] ⚠️ Gemini discovery offline ({e}). Falling back to seed catalog.")
+            return []
 
         try:
             data = json.loads(response.text)
