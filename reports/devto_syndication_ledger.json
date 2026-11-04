@@ -477,6 +477,19 @@
         "makevszapier",
         "comparatif"
       ]
+    },
+    "mcp-protocol-enterprise-stack-revolution-2026": {
+      "id": 4976624,
+      "url": "https://dev.to/heliatech/the-model-context-protocol-mcp-shift-why-anthropic-supabase-changed-enterprise-ai-forever-44hk",
+      "title": "The Model Context Protocol (MCP) Shift: Why Anthropic & Supabase Changed Enterprise AI Forever",
+      "canonical_url": "https://heliatech.online/blog/mcp-protocol-enterprise-stack-revolution-2026",
+      "published": true,
+      "tags": [
+        "breakingnews",
+        "mcp",
+        "modelcontextprotocol",
+        "supabase"
+      ]
     }
   },
   "last_sync": null

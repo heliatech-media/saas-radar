@@ -87,6 +87,16 @@
     "affiliate_url": "https://castmagic.io/?via=heliatech"
   },
   {
+    "name": "Clay",
+    "slug": "clay",
+    "tagline": "The data-driven outbound platform that turns manual research into automated, personalized outreach.",
+    "category": "B2B Sales Automation",
+    "rating": 4.7,
+    "starting_price": "$149/mo",
+    "best_for": "Outbound sales teams, growth marketers, and founder-led sales organizations looking to scale personalized outreach.",
+    "affiliate_url": "https://clay.com"
+  },
+  {
     "name": "ClickUp",
     "slug": "clickup",
     "tagline": "The one app to replace them all with customizable tasks, docs, goals, and chat.",

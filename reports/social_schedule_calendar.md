@@ -1,5 +1,5 @@
 # 🛰️ HELIATECH MONETIZED SOCIAL BROADCAST CALENDAR
-*Generated on 2026-11-04 15:45 • Strategy: 100% Monetized Assets Only*
+*Generated on 2026-11-04 17:14 • Strategy: 100% Monetized Assets Only*
 
 > [!NOTE]
 > Social distribution bandwidth is strictly reserved for high-converting partner tools with verified affiliate tracking URLs.
@@ -7,17 +7,17 @@
 
 | Tool | Affiliate Tracking Hop | SEO Score | X (Twitter) Window | LinkedIn Window | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Elevenlabs** | [`/go/elevenlabs`](https://heliatech.online/go/elevenlabs) | **96.0%** | `2026-11-04 09:15 UTC` | `2026-11-04 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Make** | [`/go/make`](https://heliatech.online/go/make) | **92.0%** | `2026-11-05 09:15 UTC` | `2026-11-05 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Elevenlabs** | [`/go/elevenlabs`](https://heliatech.online/go/elevenlabs) | **92.0%** | `2026-11-04 09:15 UTC` | `2026-11-04 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Make** | [`/go/make`](https://heliatech.online/go/make) | **80.0%** | `2026-11-05 09:15 UTC` | `2026-11-05 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Adcreative-ai** | [`/go/adcreative-ai`](https://heliatech.online/go/adcreative-ai) | **100.0%** | `2026-11-06 09:15 UTC` | `2026-11-06 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Airtable** | [`/go/airtable`](https://heliatech.online/go/airtable) | **96.0%** | `2026-11-07 09:15 UTC` | `2026-11-07 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Apollo-io** | [`/go/apollo-io`](https://heliatech.online/go/apollo-io) | **76.0%** | `2026-11-08 09:15 UTC` | `2026-11-08 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Beehiiv** | [`/go/beehiiv`](https://heliatech.online/go/beehiiv) | **80.0%** | `2026-11-09 09:15 UTC` | `2026-11-09 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Apollo-io** | [`/go/apollo-io`](https://heliatech.online/go/apollo-io) | **96.0%** | `2026-11-08 09:15 UTC` | `2026-11-08 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Beehiiv** | [`/go/beehiiv`](https://heliatech.online/go/beehiiv) | **100.0%** | `2026-11-09 09:15 UTC` | `2026-11-09 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Brevo** | [`/go/brevo`](https://heliatech.online/go/brevo) | **96.0%** | `2026-11-10 09:15 UTC` | `2026-11-10 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Castmagic** | [`/go/castmagic`](https://heliatech.online/go/castmagic) | **100.0%** | `2026-11-11 09:15 UTC` | `2026-11-11 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Clickup** | [`/go/clickup`](https://heliatech.online/go/clickup) | **76.0%** | `2026-11-12 09:15 UTC` | `2026-11-12 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Clickup** | [`/go/clickup`](https://heliatech.online/go/clickup) | **96.0%** | `2026-11-12 09:15 UTC` | `2026-11-12 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Cursor** | [`/go/cursor`](https://heliatech.online/go/cursor) | **100.0%** | `2026-11-13 09:15 UTC` | `2026-11-13 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Heygen** | [`/go/heygen`](https://heliatech.online/go/heygen) | **92.0%** | `2026-11-15 09:15 UTC` | `2026-11-15 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Heygen** | [`/go/heygen`](https://heliatech.online/go/heygen) | **80.0%** | `2026-11-15 09:15 UTC` | `2026-11-15 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Linear** | [`/go/linear`](https://heliatech.online/go/linear) | **100.0%** | `2026-11-16 09:15 UTC` | `2026-11-16 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Lusha** | [`/go/lusha`](https://heliatech.online/go/lusha) | **80.0%** | `2026-11-17 09:15 UTC` | `2026-11-17 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Memberstack** | [`/go/memberstack`](https://heliatech.online/go/memberstack) | **96.0%** | `2026-11-18 09:15 UTC` | `2026-11-18 14:30 UTC` | 🔒 `QUEUED_STANDBY` |

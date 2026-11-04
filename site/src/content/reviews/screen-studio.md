@@ -107,7 +107,7 @@ Screen Studio is a macOS-exclusive screen recorder designed to transform raw des
 ## Key Features & Capabilities
 
 - **Automatic Zoom & Pan**
-- **Cursor Smoothing & Scaling**
+- **[Cursor](/reviews/cursor) Smoothing & Scaling**
 - **Dynamic Backgrounds & Padding**
 - **Selfie Camera Overlay**
 - **Export to MP4, GIF, and ProRes**
