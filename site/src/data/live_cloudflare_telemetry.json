@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-04T05:51:15.158317",
+  "last_synced": "2026-11-04T05:59:08.879263",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11049,
-  "total_requests": 80321,
-  "total_visits": 3425,
-  "total_pageviews": 15579,
+  "total_visitors_network": 11064,
+  "total_requests": 80764,
+  "total_visits": 3429,
+  "total_pageviews": 15596,
   "percent_cached": "56.14%",
-  "data_served_mb": 738.0,
+  "data_served_mb": 739.9,
   "top_pages": [
     {
       "path": "/",
-      "views": 2680
+      "views": 2690
     },
     {
       "path": "/calculator/",
@@ -31,15 +31,15 @@
       "views": 220
     },
     {
-      "path": "/radar/",
-      "views": 190
+      "path": "/blog/",
+      "views": 200
     },
     {
       "path": "/versus/",
       "views": 190
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 190
     },
     {
@@ -51,34 +51,34 @@
       "views": 150
     },
     {
-      "path": "/terms/",
-      "views": 130
-    },
-    {
       "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     },
     {
+      "path": "/terms/",
+      "views": 130
+    },
+    {
+      "path": "/sentinel/",
+      "views": 120
+    },
+    {
+      "path": "/blog/framer-evolution-guide-2026/",
+      "views": 120
+    },
+    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 120
-    },
-    {
-      "path": "/reviews/heygen/",
       "views": 120
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 13970
+      "views": 13980
     },
     {
       "country": "Morocco",
-      "views": 9380
+      "views": 9470
     },
     {
       "country": "Germany",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Singapore",
-      "views": 950
+      "views": 970
     },
     {
       "country": "Belgium",
