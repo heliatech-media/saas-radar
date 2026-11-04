@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T14:10:35.550857",
+  "last_synced": "2026-11-04T14:12:41.066036",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11662,
-  "total_requests": 91253,
-  "total_visits": 3615,
-  "total_pageviews": 16178,
+  "total_visitors_network": 11666,
+  "total_requests": 91315,
+  "total_visits": 3616,
+  "total_pageviews": 16183,
   "percent_cached": "56.14%",
-  "data_served_mb": 798.8,
+  "data_served_mb": 799.3,
   "top_pages": [
     {
       "path": "/",
@@ -59,11 +59,11 @@
       "views": 140
     },
     {
-      "path": "/reviews/linear/",
+      "path": "/reviews/apollo-io/",
       "views": 130
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "path": "/blog/resend-evolution-guide-2026/",
       "views": 130
     },
     {
