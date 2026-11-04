@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-04 23:41:27",
-  "total_pages_audited": 87,
-  "monetized_pages": 84,
-  "total_ctas_tracked": 411,
+  "timestamp": "2026-11-04 21:39:12",
+  "total_pages_audited": 86,
+  "monetized_pages": 83,
+  "total_ctas_tracked": 408,
   "average_cro_score": "88.5/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -13,117 +13,18 @@
   "estimated_rpv_lift": "+38.4%",
   "pages": [
     {
-      "slug": "adcreative-ai-evolution-guide-2026",
+      "slug": "framer-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1129,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "airtable",
-      "type": "blog",
-      "word_count": 1240,
-      "cta_count": 7,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "apollo-io-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1073,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "apollo-io-vs-lusha",
-      "type": "blog",
-      "word_count": 1877,
-      "cta_count": 6,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "beehiiv-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1249,
-      "cta_count": 7,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "beehiiv-vs-brevo",
-      "type": "blog",
-      "word_count": 1985,
-      "cta_count": 4,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "best-apollo-alternatives-2026",
-      "type": "blog",
-      "word_count": 2947,
-      "cta_count": 14,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "best-deel-alternatives-2026",
-      "type": "blog",
-      "word_count": 2984,
-      "cta_count": 14,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "best-elevenlabs-alternatives-2026",
-      "type": "blog",
-      "word_count": 2379,
-      "cta_count": 14,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "best-zapier-alternatives-2026",
-      "type": "blog",
-      "word_count": 2488,
-      "cta_count": 18,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "brevo-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1078,
+      "word_count": 1124,
       "cta_count": 5,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "cal-com-evolution-guide-2026",
+      "slug": "julius-ai-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1148,
-      "cta_count": 3,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "captions-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1104,
+      "word_count": 1044,
       "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -139,10 +40,109 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "clay-evolution-guide-2026",
+      "slug": "memberstack-evolution-guide-2026",
       "type": "blog",
-      "word_count": 776,
+      "word_count": 1278,
+      "cta_count": 2,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "rewardful-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1496,
+      "cta_count": 9,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-apollo-alternatives-2026",
+      "type": "blog",
+      "word_count": 2947,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "salesforce-agentforce-hidden-conversation-credit-pricing-trap",
+      "type": "blog",
+      "word_count": 481,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "klap-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1128,
       "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "captions-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1104,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "zapier-2026-price-shock-webhook-surcharge-make-migration",
+      "type": "blog",
+      "word_count": 954,
+      "cta_count": 8,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "cursor-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1065,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "lovable-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1108,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "retool",
+      "type": "blog",
+      "word_count": 901,
+      "cta_count": 7,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "elevenagents-ai-receptionist-guide",
+      "type": "blog",
+      "word_count": 1293,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-deel-alternatives-2026",
+      "type": "blog",
+      "word_count": 2984,
+      "cta_count": 14,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"

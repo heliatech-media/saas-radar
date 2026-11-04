@@ -1,24 +1,17 @@
 [
   {
-    "timestamp": "2026-11-04 23:45:52",
-    "title": "Cycle Autonome #Instantly.ai",
+    "timestamp": "2026-11-04 21:40:07",
+    "title": "Cycle Autonome #Tally",
     "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Instantly.ai et mis à jour le calendrier social.",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   },
   {
-    "timestamp": "2026-11-04 23:45:01",
+    "timestamp": "2026-11-04 21:39:57",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, papaya-global`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-11-04 21:39:58",
-    "title": "Cycle Autonome #Fathom",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Fathom et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   },
   {
     "timestamp": "2026-11-04 21:39:04",
@@ -348,5 +341,12 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
+  },
+  {
+    "timestamp": "2026-10-30 08:34:48",
+    "title": "Cycle Autonome #Riverside.fm",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Riverside.fm et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

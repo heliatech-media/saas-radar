@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-04 23:41:27 UTC",
+  "last_updated": "2026-11-04 21:39:12 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 60,
-    "total_published_investigations": 148,
-    "reviews_audited": 61,
-    "masterclasses_and_duels": 87,
+    "total_published_investigations": 146,
+    "reviews_audited": 60,
+    "masterclasses_and_duels": 86,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$21,000 USD",
@@ -144,8 +144,8 @@
     },
     {
       "slug": "fathom",
-      "destination": "https://fathom.video",
-      "type": "Catalog Edge Hop"
+      "destination": "https://fathom.video/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "framer",
@@ -314,8 +314,8 @@
     },
     {
       "slug": "supabase",
-      "destination": "https://supabase.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://supabase.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "tally",
@@ -375,13 +375,6 @@
   ],
   "recent_events": [
     {
-      "timestamp": "2026-10-31 08:57:16",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `dumpling-ai, minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
       "timestamp": "2026-10-30 12:45:40",
       "title": "Cycle Autonome #Klaviyo",
       "category": "CYCLE",
@@ -408,6 +401,13 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
+    },
+    {
+      "timestamp": "2026-10-29 20:22:56",
+      "title": "Cycle Autonome #Sanity",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Sanity et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]
 }

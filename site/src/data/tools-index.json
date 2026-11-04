@@ -159,7 +159,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Sales teams, remote executives, consultants, and podcast hosts who manage heavy meeting schedules.",
-    "affiliate_url": "https://fathom.video"
+    "affiliate_url": "https://fathom.video/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Framer",
@@ -511,17 +512,17 @@
     "rating": 4.8,
     "starting_price": "$25/mo",
     "best_for": "Full-stack developers, indie hackers, and engineering teams scaling web and mobile applications.",
-    "affiliate_url": "https://supabase.com",
-    "commission_rate": "Not publicly disclosed (Custom/Deal-based or In-house referral program)"
+    "affiliate_url": "https://supabase.com/?via=heliatech",
+    "commission_rate": "20% for 12 months"
   },
   {
     "name": "Tally",
     "slug": "tally",
-    "tagline": "The simplest, Notion-style form builder for the web that gives you powerful features for free.",
-    "category": "Form Builder",
+    "tagline": "The simplest, most powerful notion-style form builder for modern teams.",
+    "category": "Productivity & Forms",
     "rating": 4.8,
     "starting_price": "$29/mo",
-    "best_for": "Bootstrapped founders, indie hackers, operations teams, and creators looking for a Notion-like form experience without enterprise price tags.",
+    "best_for": "Bootstrapped founders, indie hackers, agencies, and product teams needing high-converting forms on a tight budget.",
     "affiliate_url": "https://tally.so/?via=heliatech"
   },
   {

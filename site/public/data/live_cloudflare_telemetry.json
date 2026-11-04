@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-05T00:04:11.796651",
+  "last_synced": "2026-11-04T21:39:13.705129",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 14954,
-  "total_requests": 107321,
-  "total_visits": 4635,
-  "total_pageviews": 20513,
+  "total_visitors_network": 14532,
+  "total_requests": 105009,
+  "total_visits": 4504,
+  "total_pageviews": 19830,
   "percent_cached": "56.14%",
-  "data_served_mb": 846.7,
+  "data_served_mb": 839.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 3900
+      "views": 3310
     },
     {
       "path": "/",
-      "views": 2810
+      "views": 3110
     },
     {
       "path": "/calculator/",
-      "views": 990
+      "views": 960
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 380
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 260
-    },
-    {
-      "path": "/awards/",
-      "views": 220
+      "views": 340
     },
     {
       "path": "/radar/",
-      "views": 220
+      "views": 240
     },
     {
       "path": "/blog/",
       "views": 210
     },
     {
-      "path": "/versus/",
-      "views": 190
+      "path": "/reviews/clickup/",
+      "views": 180
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "path": "/terms/",
       "views": 180
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 170
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 170
+    },
+    {
+      "path": "/awards/",
+      "views": 160
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 160
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 150
     },
     {
-      "path": "/reviews/make/",
-      "views": 140
+      "path": "/reviews/elevenlabs/",
+      "views": 150
     },
     {
-      "path": "/reviews/linear/",
+      "path": "/sentinel/",
       "views": 140
-    },
-    {
-      "path": "/terms/",
-      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 19090
+      "views": 18080
     },
     {
       "country": "Morocco",
-      "views": 14980
+      "views": 15560
     },
     {
       "country": "Germany",
-      "views": 1240
+      "views": 1360
     },
     {
       "country": "Singapore",
-      "views": 1030
+      "views": 1060
     },
     {
       "country": "Belgium",
-      "views": 560
+      "views": 690
     },
     {
       "country": "United Kingdom",
       "views": 550
     },
     {
-      "country": "Netherlands",
-      "views": 540
-    },
-    {
-      "country": "Canada",
-      "views": 430
+      "country": "CN",
+      "views": 410
     },
     {
       "country": "Brazil",
-      "views": 340
+      "views": 390
     },
     {
       "country": "France",
-      "views": 280
+      "views": 330
+    },
+    {
+      "country": "Canada",
+      "views": 330
     }
   ],
   "top_referrers": [

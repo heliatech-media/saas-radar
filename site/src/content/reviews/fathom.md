@@ -6,7 +6,7 @@ tagline: AI-powered meeting assistant that records, transcribes, highlights, and
 category: Audio/Podcasting
 rating: 4.8
 website_url: https://fathom.video
-affiliate_url: https://fathom.video
+affiliate_url: "https://fathom.video/?via=heliatech"
 summary: Fathom is a robust AI meeting assistant designed to handle Zoom, Microsoft
   Teams, and Google Meet calls. It automatically records audio, generates highly accurate
   transcripts, and extracts key action items so attendees can stay fully engaged during
