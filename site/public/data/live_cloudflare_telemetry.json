@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-04T09:53:32.830684",
+  "last_synced": "2026-11-04T11:08:24.267032",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11536,
-  "total_requests": 86903,
-  "total_visits": 3576,
-  "total_pageviews": 16000,
+  "total_visitors_network": 11546,
+  "total_requests": 87190,
+  "total_visits": 3579,
+  "total_pageviews": 16006,
   "percent_cached": "56.14%",
-  "data_served_mb": 764.0,
+  "data_served_mb": 764.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 3030
+      "views": 2700
     },
     {
       "path": "/calculator/",
-      "views": 910
+      "views": 960
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 320
+      "views": 300
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 260
+    },
+    {
+      "path": "/awards/",
+      "views": 220
     },
     {
       "path": "/radar/",
-      "views": 210
+      "views": 200
     },
     {
       "path": "/blog/",
       "views": 200
     },
     {
-      "path": "/terms/",
-      "views": 170
+      "path": "/versus/",
+      "views": 190
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 170
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 170
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 160
-    },
-    {
-      "path": "/awards/",
-      "views": 150
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 180
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 150
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 150
+      "path": "/blog/resend-evolution-guide-2026/",
+      "views": 130
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 140
+      "path": "/sentinel/",
+      "views": 130
     },
     {
-      "path": "/reviews/resend/",
-      "views": 140
+      "path": "/reviews/linear/",
+      "views": 130
     },
     {
-      "path": "/versus/",
-      "views": 140
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
+      "views": 130
+    },
+    {
+      "path": "/terms/",
+      "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14330
+      "views": 14620
     },
     {
       "country": "Morocco",
-      "views": 11380
+      "views": 10940
     },
     {
       "country": "Germany",
-      "views": 1330
+      "views": 1210
     },
     {
       "country": "Singapore",
-      "views": 960
+      "views": 980
     },
     {
       "country": "Belgium",
-      "views": 680
-    },
-    {
-      "country": "United Kingdom",
       "views": 550
     },
     {
-      "country": "CN",
-      "views": 400
+      "country": "United Kingdom",
+      "views": 530
     },
     {
-      "country": "Brazil",
-      "views": 380
-    },
-    {
-      "country": "France",
-      "views": 320
+      "country": "Netherlands",
+      "views": 520
     },
     {
       "country": "Canada",
+      "views": 430
+    },
+    {
+      "country": "Brazil",
       "views": 320
+    },
+    {
+      "country": "France",
+      "views": 280
     }
   ],
   "top_referrers": [
