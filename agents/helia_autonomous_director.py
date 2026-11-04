@@ -118,6 +118,8 @@ class HeliaAutonomousDirector:
         self.linkedin_syndicator = LinkedInSyndicator()
         self.cloudflare_analytics = CloudflareAnalyticsAgent()
         self.paved = PavedSponsorshipAgent()
+        from agents.cognitive_core import HeliaSwarmCognitiveCoordinator
+        self.cognitive_core = HeliaSwarmCognitiveCoordinator(api_key=api_key)
 
     def log(self, agent_name: str, message: str, icon: str = "⚡"):
         timestamp = datetime.now().strftime("%H:%M:%S")
@@ -196,6 +198,18 @@ class HeliaAutonomousDirector:
         self.log("Helia-LinkWeaver", "Executing semantic internal link weaving across topic cluster...", "🕸️")
         weaver_res = self.weaver.weave_all()
         self.log("Helia-LinkWeaver", f"Internal mesh strengthened: {weaver_res['total_links_added']} hyperlinks active.", "✨")
+
+        # Step 2.95: Sub-Agent SwarmCognitiveCore (Autonomous Self-Training & Heuristic Learning)
+        try:
+            self.log("Helia-CognitiveSwarm", "Initiating autonomous self-training rotation across persistent brain vaults...", "🧠")
+            upskill_res = self.cognitive_core.run_autonomous_cycle_training()
+            if upskill_res.get("status") == "SUCCESS" and upskill_res.get("heuristic"):
+                h = upskill_res["heuristic"]
+                self.log("Helia-CognitiveSwarm", f"Mastered new domain heuristic [{upskill_res['domain'].upper()}]: '{h.get('name')}' (ID: {h.get('id')})", "🎓")
+            else:
+                self.log("Helia-CognitiveSwarm", f"Swarm brain rotation active on domain: {upskill_res.get('domain', 'general')}", "💡")
+        except Exception as e:
+            self.log("Helia-CognitiveSwarm", f"Cognitive training cycle note: {e}", "⚠️")
 
         # Step 3: Sub-Agent TrendScout
         self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")

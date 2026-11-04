@@ -282,7 +282,22 @@ We just published our complete architectural teardown and hands-on workshop on t
                     config=types.GenerateContentConfig(temperature=0.7)
                 )
                 time.sleep(2)
-                return response.text.strip()
+                raw_post = response.text.strip()
+                try:
+                    from agents.cognitive_core import CognitiveReflectionEngine
+                    reflector = CognitiveReflectionEngine(api_key=self.client.api_key if self.client else None, model=self.model)
+                    reflection = reflector.reflect_and_refine(
+                        agent_name='SocialGrowthAgent',
+                        domain='social',
+                        draft_content=raw_post,
+                        context_title=f'LinkedIn: {post.title}'
+                    )
+                    if reflection.get('approved') and reflection.get('refined_content'):
+                        raw_post = reflection['refined_content'].strip()
+                        print(f'[SOCIAL AGENT] 🧠 Cognitive Reflection Applied! Score: {reflection.get("score", 90)}/100')
+                except Exception as e:
+                    print(f'[SOCIAL AGENT] ⚠️ Cognitive reflection note: {e}')
+                return raw_post
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:

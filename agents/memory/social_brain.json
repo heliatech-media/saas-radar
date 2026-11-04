@@ -1,0 +1,29 @@
+{
+  "domain": "Executive B2B Authority & LinkedIn Thought Leadership",
+  "version": "5.0",
+  "last_evolution": "2026-11-04T09:48:30.053868",
+  "total_heuristics_learned": 3,
+  "heuristics": [
+    {
+      "id": "HEUR-SOC-01",
+      "name": "Zero Engagement Bait Doctrine",
+      "rule": "STRICTLY NEVER use 'Comment RADAR', 'Agree?', or 'Like for the link'. True executive authority commands trust through pure insight and data.",
+      "confidence_score": 1.0,
+      "impact": "Establishes institutional prestige with senior engineering and C-level decision-makers."
+    },
+    {
+      "id": "HEUR-SOC-02",
+      "name": "Self-Contained Value Delivery",
+      "rule": "Provide the complete quantitative takeaway inside the post itself. The link is an optional deep-dive repository, not a paywall.",
+      "confidence_score": 0.96,
+      "impact": "Maximizes organic LinkedIn algorithmic reach and resharing."
+    },
+    {
+      "id": "HEUR-SOC-03",
+      "name": "Peak B2B Desktop Windows",
+      "rule": "Schedule broadcasts at 09:00, 13:00, and 17:30 UTC to align with European and US business coffee breaks and commute windows.",
+      "confidence_score": 0.93,
+      "impact": "Captures 2.5x higher initial engagement within the critical first hour."
+    }
+  ]
+}

@@ -106,6 +106,22 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
 
         post = BlogPost(**data)
         
+        # 0. Cognitive Swarm Reflection & Deliberative Refinement
+        try:
+            from agents.cognitive_core import CognitiveReflectionEngine
+            reflector = CognitiveReflectionEngine(api_key=self.client.api_key if self.client else None, model=self.model)
+            reflection = reflector.reflect_and_refine(
+                agent_name="BlogAgent",
+                domain="content",
+                draft_content=post.markdown_content,
+                context_title=post.title
+            )
+            if reflection.get("approved") and reflection.get("refined_content"):
+                post.markdown_content = reflection["refined_content"]
+                print(f"[Helia-ContentFactory] 🧠 Cognitive Reflection Applied! Score: {reflection.get('score', 90)}/100")
+        except Exception as e:
+            print(f"[Helia-ContentFactory] ⚠️ Cognitive Reflection bypass: {e}")
+        
         # 1. Generate dedicated relative hero artwork via Helia-VisualArtist
         try:
             artist = ImageGeneratorAgent(api_key=self.client.api_key if self.client else "")

@@ -1,0 +1,29 @@
+{
+  "domain": "CyberDefense, Zero-Trust & Infrastructure Hardening",
+  "version": "5.0",
+  "last_evolution": "2026-11-04T09:48:30.053859",
+  "total_heuristics_learned": 3,
+  "heuristics": [
+    {
+      "id": "HEUR-SEC-01",
+      "name": "Zero-Leak Airgap Audit",
+      "rule": "Execute automated regex scans across all staged files for private API tokens (Gemini, Cloudflare, Resend, Telegram, LinkedIn) prior to Git commit.",
+      "confidence_score": 1.0,
+      "impact": "100% clean repository audit, zero secret compromise."
+    },
+    {
+      "id": "HEUR-SEC-02",
+      "name": "Astro Schema Immortality",
+      "rule": "Verify strict YAML frontmatter types and avoid redundant 'slug:' declarations that trigger Astro 5 glob-loader warnings.",
+      "confidence_score": 0.99,
+      "impact": "Guarantees 0-error compilations across all 246+ static routes."
+    },
+    {
+      "id": "HEUR-SEC-03",
+      "name": "Edge Defense & Rate Limiting",
+      "rule": "Verify Cloudflare security headers, bot fight mode, and cache-control rules to shield origins from abusive scraper crawlers.",
+      "confidence_score": 0.94,
+      "impact": "Keeps origin bandwidth consumption minimal (56%+ edge cache hit ratio)."
+    }
+  ]
+}

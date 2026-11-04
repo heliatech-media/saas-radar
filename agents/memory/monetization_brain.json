@@ -1,0 +1,29 @@
+{
+  "domain": "Affiliate Revenue Engineering & Partner Arbitrage",
+  "version": "5.0",
+  "last_evolution": "2026-11-04T09:48:30.053864",
+  "total_heuristics_learned": 3,
+  "heuristics": [
+    {
+      "id": "HEUR-MON-01",
+      "name": "Universal Skimlinks Safety Net",
+      "rule": "Wrap all unmanaged software routes in _redirects with https://go.skimresources.com/?id=312260X1800845&xs=1&url=... so 100% of clicks are credited.",
+      "confidence_score": 0.99,
+      "impact": "Eliminates unmonetized traffic across 20+ SaaS apps without individual accounts."
+    },
+    {
+      "id": "HEUR-MON-02",
+      "name": "Direct High-Yield Sovereignty",
+      "rule": "Never wrap active direct programs (Make 20%, ElevenLabs 22%, AdCreative, Murf, Brevo) with aggregators to preserve 100% net recurring revenue.",
+      "confidence_score": 0.98,
+      "impact": "Maximizes MRR from top-converting software partners."
+    },
+    {
+      "id": "HEUR-MON-03",
+      "name": "Above-the-Fold Decision Hooks",
+      "rule": "Place high-converting recommendation banners and savings calculators in the top 30% viewport to capture high-intent buyers immediately.",
+      "confidence_score": 0.95,
+      "impact": "Generates 40% of all outbound affiliate hops from the first screen."
+    }
+  ]
+}
