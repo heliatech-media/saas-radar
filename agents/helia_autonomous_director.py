@@ -350,6 +350,10 @@ class HeliaAutonomousDirector:
             self.log("Helia-NewsSniffer", "Sniffing partner changelogs and breaking developer feeds...", "🛰️")
             sniff_res = self.news_sniffer.sniff_all_partners()
             self.log("Helia-NewsSniffer", f"Scan complete: {sniff_res['total_events_detected']} new updates scanned | {len(sniff_res['breaking_opportunities'])} breaking opportunities identified.", "⚡")
+            # Auto-publish Breaking Scoop if available
+            breaking_post = self.news_sniffer.produce_breaking_article()
+            if breaking_post:
+                self.log("Helia-NewsSniffer", f"🚨 BREAKING NEWS PUBLISHED: {breaking_post.name}", "💥")
         except Exception as e:
             self.log("Helia-NewsSniffer", f"News sniffer notice: {e}", "⚠️")
 

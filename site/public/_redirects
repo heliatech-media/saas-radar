@@ -1,11 +1,9 @@
-# HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh
-# Format: /go/:tool <destination> 302
-
+# Cloudflare Pages Edge Directives - Instant Affiliate Hops
 /go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
 /go/airtable https://airtable.com/?ref=heliatech 302
 /go/apollo-io https://apollo.pxf.io/c/heliatech 302
 /go/beehiiv https://www.beehiiv.com/?via=heliatech 302
-/go/brevo https://www.brevo.com 302
+/go/brevo https://brevo.partnerlinks.io/heliatech 302
 /go/cal-com https://cal.com/?via=heliatech 302
 /go/captions https://www.captions.ai/?via=heliatech 302
 /go/castmagic https://castmagic.io/?via=heliatech 302
@@ -15,8 +13,6 @@
 /go/dumpling-ai https://www.dumpling.ai/?via=heliatech 302
 /go/elevenlabs https://try.elevenlabs.io/ajhd6t7k04dh 302
 /go/framer https://framer.partnerstack.com/heliatech 302
-/go/getimg-ai https://getimg.ai/?via=heliatech 302
-/go/headshotpro https://www.headshotpro.com/?via=heliatech 302
 /go/heygen https://www.heygen.com 302
 /go/jasper-ai https://www.jasper.ai 302
 /go/julius-ai https://julius.ai/?via=heliatech 302
@@ -44,8 +40,8 @@
 /go/resend https://resend.com/?via=heliatech 302
 /go/retool https://retool.com 302
 /go/rewardful https://www.rewardful.com/?via=heliatech 302
-/go/riverside https://riverside.fm/?via=heliatech 302
 /go/riverside-fm https://riverside.fm/?via=heliatech 302
+/go/riverside https://riverside.fm/?via=heliatech 302
 /go/sanity https://www.sanity.io/?ref=heliatech 302
 /go/screen-studio https://screen.studio/?via=heliatech 302
 /go/submagic https://submagic.co/?via=heliatech 302
@@ -53,11 +49,9 @@
 /go/tally https://tally.so/?via=heliatech 302
 /go/tome https://gamma.app 302
 /go/transistor https://transistor.fm/?via=heliatech 302
-/go/transistor-fm https://transistor.fm/?via=heliatech 302
 /go/typeform https://www.typeform.com 302
 /go/v0 https://v0.dev/?via=heliatech 302
 /go/veed https://www.veed.io/?via=heliatech 302
-/go/veed-io https://www.veed.io/?via=heliatech 302
 /go/vercel https://vercel.com/?via=heliatech 302
 /go/voiceflow https://www.voiceflow.com 302
 /go/wati https://www.wati.io/?fp_ref=heliatech 302
