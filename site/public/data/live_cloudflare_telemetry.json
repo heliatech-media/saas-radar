@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T13:10:14.825439",
+  "last_synced": "2026-11-04T13:12:16.452571",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11620,
-  "total_requests": 89843,
-  "total_visits": 3602,
-  "total_pageviews": 16108,
+  "total_visitors_network": 11627,
+  "total_requests": 89934,
+  "total_visits": 3604,
+  "total_pageviews": 16116,
   "percent_cached": "56.14%",
-  "data_served_mb": 775.8,
+  "data_served_mb": 778.4,
   "top_pages": [
     {
       "path": "/",
@@ -48,7 +48,7 @@
     },
     {
       "path": "/blog/make-automation-revolution/",
-      "views": 150
+      "views": 160
     },
     {
       "path": "/sentinel/",
@@ -59,7 +59,7 @@
       "views": 140
     },
     {
-      "path": "/terms/",
+      "path": "/reviews/apollo-io/",
       "views": 130
     },
     {
@@ -67,7 +67,7 @@
       "views": 130
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     }
   ],
