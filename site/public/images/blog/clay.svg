@@ -1,0 +1,364 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" style="background: #030712; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlowPrimary" cx="75%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="bgGlowSecondary" cx="20%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#8b5cf6" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#d946ef" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Metallic & Glow Gradients -->
+    <linearGradient id="clayTitleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#e0f2fe" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="accentCyanViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="accentFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.6" />
+    </linearGradient>
+
+    <linearGradient id="gridLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.0" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="wireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="hyperGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur1" />
+      <feGaussianBlur stdDeviation="30" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Pattern Background -->
+    <pattern id="isoGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 30 L 60 60 L 120 30 Z" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4" />
+      <path d="M 0 30 L 60 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.2" />
+    </pattern>
+
+    <pattern id="dotGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Base Dark Canvas -->
+  <rect width="1200" height="630" fill="#030712" />
+
+  <!-- Ambient Light Orbs -->
+  <rect width="1200" height="630" fill="url(#bgGlowPrimary)" />
+  <rect width="1200" height="630" fill="url(#bgGlowSecondary)" />
+
+  <!-- Overlay Grids -->
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+  
+  <!-- Perspective Geometric Grid Plane (Right Side Visual Anchor) -->
+  <g transform="translate(780, 360) scale(1, 0.5) rotate(45)" opacity="0.5">
+    <rect x="-400" y="-400" width="800" height="800" fill="url(#isoGrid)" />
+    <circle cx="0" cy="0" r="350" fill="none" stroke="url(#accentCyanViolet)" stroke-width="1.5" opacity="0.4" />
+    <circle cx="0" cy="0" r="250" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="8 8" opacity="0.6" />
+  </g>
+
+  <!-- Vector Laser Flow Rays (Background Automation Webhooks) -->
+  <g opacity="0.4" filter="url(#glow)">
+    <path d="M -100 150 Q 300 80 550 250 T 1250 200" fill="none" stroke="url(#accentCyanViolet)" stroke-width="1.5" stroke-dasharray="6 6" />
+    <path d="M -50 450 Q 400 500 700 320 T 1280 400" fill="none" stroke="url(#wireGrad)" stroke-width="2" />
+    <path d="M 400 -50 Q 500 200 850 280 T 1150 700" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- ==================== LEFT COLUMN: TYPOGRAPHY & DOSSIER HEADER ==================== -->
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(80, 56)">
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" stroke="url(#cardBorderGrad)" stroke-width="1.5" />
+    <circle cx="16" cy="16" r="4" fill="#06b6d4" filter="url(#glow)" />
+    <circle cx="16" cy="16" r="2" fill="#ffffff" />
+    <text x="32" y="20.5" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Article Category & Title Block -->
+  <g transform="translate(80, 130)">
+    <!-- Subtitle Category Tag -->
+    <text x="0" y="0" fill="#06b6d4" font-size="13" font-weight="800" letter-spacing="3">ENTERPRISE SOFTWARE INVESTIGATION</text>
+    
+    <!-- Main Title: CLAY -->
+    <text x="-3" y="75" fill="url(#clayTitleGrad)" font-size="84" font-weight="900" letter-spacing="-1" filter="url(#glow)">CLAY</text>
+
+    <!-- Decorative Accent Line below Title -->
+    <rect x="0" y="95" width="440" height="3" rx="1.5" fill="url(#accentCyanViolet)" filter="url(#glow)" />
+
+    <!-- Subtitle / Focus Title -->
+    <text x="0" y="130" fill="#f8fafc" font-size="22" font-weight="700" letter-spacing="-0.2">The Death of Manual Prospecting &amp;</text>
+    <text x="0" y="158" fill="#cbd5e1" font-size="22" font-weight="400" letter-spacing="-0.2">the Rise of the <tspan fill="#38bdf8" font-weight="700">Data-Driven Engine</tspan></text>
+
+    <!-- Narrative Teaser Paragraph -->
+    <text x="0" y="200" fill="#94a3b8" font-size="13" font-weight="400" width="420" line-height="1.6">
+      <tspan x="0" dy="0">An architectural breakdown of Clay's real-time</tspan>
+      <tspan x="0" dy="20">waterfall enrichment matrix, AI-agent synthesis,</tspan>
+      <tspan x="0" dy="20">and automated outbound revenue orchestrations.</tspan>
+    </text>
+
+    <!-- Tech Spec Micro-Badges -->
+    <g transform="translate(0, 275)">
+      <!-- Badge 1 -->
+      <rect x="0" y="0" width="135" height="34" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <text x="12" y="15" fill="#64748b" font-size="9" font-weight="700" letter-spacing="0.5">CATEGORY</text>
+      <text x="12" y="26" fill="#e2e8f0" font-size="11" font-weight="700">B2B Automation</text>
+
+      <!-- Badge 2 -->
+      <rect x="147" y="0" width="135" height="34" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <text x="159" y="15" fill="#64748b" font-size="9" font-weight="700" letter-spacing="0.5">CORE METRIC</text>
+      <text x="159" y="26" fill="#06b6d4" font-size="11" font-weight="700">10x Lead Velocity</text>
+
+      <!-- Badge 3 -->
+      <rect x="294" y="0" width="135" height="34" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <text x="306" y="15" fill="#64748b" font-size="9" font-weight="700" letter-spacing="0.5">ENRICHMENT</text>
+      <text x="306" y="26" fill="#d946ef" font-size="11" font-weight="700">50+ Providers API</text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: 3D VECTOR ISOMETRIC AUTOMATION ENGINE ==================== -->
+
+  <!-- CENTRAL GLOW CORE (Behind Graphic) -->
+  <circle cx="820" cy="330" r="180" fill="url(#coreGlow)" filter="url(#hyperGlow)" />
+
+  <!-- GRAPHIC GROUP (Tilted Perspective Assembly) -->
+  <g id="clay-engine-visual" transform="translate(520, 40)">
+
+    <!-- BACKPLANE: Isometric Database & Matrix Grid -->
+    <g transform="translate(260, 280) rotate(-15) skewX(20)">
+      <!-- Base Outer Glow Rim -->
+      <rect x="-180" y="-140" width="360" height="280" rx="16" fill="none" stroke="url(#accentCyanViolet)" stroke-width="2" opacity="0.6" filter="url(#glow)" />
+      <!-- Dark Glass Base -->
+      <rect x="-180" y="-140" width="360" height="280" rx="16" fill="#090d16" opacity="0.85" stroke="#1e293b" stroke-width="1" />
+      
+      <!-- Table Rows (Visualizing Clay's Spreadsheet UI) -->
+      <g opacity="0.7">
+        <!-- Header Row -->
+        <rect x="-160" y="-120" width="320" height="24" rx="4" fill="#1e293b" />
+        <circle cx="-145" cy="-108" r="4" fill="#ef4444" />
+        <circle cx="-130" cy="-108" r="4" fill="#f59e0b" />
+        <circle cx="-115" cy="-108" r="4" fill="#10b981" />
+        <rect x="-80" y="-113" width="70" height="10" rx="3" fill="#334155" />
+        <rect x="0" y="-113" width="70" height="10" rx="3" fill="#334155" />
+        <rect x="80" y="-113" width="60" height="10" rx="3" fill="#06b6d4" opacity="0.6" />
+
+        <!-- Row 1 -->
+        <rect x="-160" y="-88" width="320" height="32" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="0.5" />
+        <circle cx="-140" cy="-72" r="8" fill="#3b82f6" opacity="0.4" />
+        <rect x="-124" y="-76" width="60" height="8" rx="2" fill="#94a3b8" />
+        <rect x="-50" y="-76" width="90" height="8" rx="2" fill="#38bdf8" />
+        <rect x="50" y="-79" width="45" height="14" rx="7" fill="#06b6d4" opacity="0.2" />
+        <text x="72" y="-69" fill="#06b6d4" font-size="8" font-weight="700" text-anchor="middle">VERIFIED</text>
+
+        <!-- Row 2 -->
+        <rect x="-160" y="-50" width="320" height="32" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="0.5" />
+        <circle cx="-140" cy="-34" r="8" fill="#8b5cf6" opacity="0.4" />
+        <rect x="-124" y="-38" width="75" height="8" rx="2" fill="#94a3b8" />
+        <rect x="-35" y="-38" width="70" height="8" rx="2" fill="#a855f7" />
+        <rect x="50" y="-41" width="45" height="14" rx="7" fill="#8b5cf6" opacity="0.2" />
+        <text x="72" y="-31" fill="#c084fc" font-size="8" font-weight="700" text-anchor="middle">ENRICHED</text>
+
+        <!-- Row 3 -->
+        <rect x="-160" y="-12" width="320" height="32" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="0.5" />
+        <circle cx="-140" cy="4" r="8" fill="#d946ef" opacity="0.4" />
+        <rect x="-124" y="0" width="50" height="8" rx="2" fill="#94a3b8" />
+        <rect x="-60" y="0" width="100" height="8" rx="2" fill="#f472b6" />
+        <rect x="50" y="-3" width="45" height="14" rx="7" fill="#d946ef" opacity="0.2" />
+        <text x="72" y="7" fill="#f472b6" font-size="8" font-weight="700" text-anchor="middle">AI DRAFTED</text>
+
+        <!-- Row 4 -->
+        <rect x="-160" y="26" width="320" height="32" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="0.5" />
+        <circle cx="-140" cy="42" r="8" fill="#10b981" opacity="0.4" />
+        <rect x="-124" y="38" width="80" height="8" rx="2" fill="#94a3b8" />
+        <rect x="-30" y="38" width="65" height="8" rx="2" fill="#34d399" />
+        <rect x="50" y="35" width="45" height="14" rx="7" fill="#10b981" opacity="0.2" />
+        <text x="72" y="45" fill="#34d399" font-size="8" font-weight="700" text-anchor="middle">QUEUED</text>
+      </g>
+    </g>
+
+    <!-- MIDDLE LAYER: Floating Waterfall API Nodes & Connectivity Beziers -->
+    <!-- Curved Pulsing Pipelines -->
+    <path d="M 60 140 C 140 100, 200 220, 290 170" fill="none" stroke="url(#accentCyanViolet)" stroke-width="3" filter="url(#glow)" />
+    <path d="M 120 360 C 220 320, 240 240, 360 260" fill="none" stroke="url(#wireGrad)" stroke-width="2.5" filter="url(#glow)" />
+    
+    <!-- Waterfall Node 1: Clearbit / Data Provider -->
+    <g transform="translate(60, 130)" filter="url(#shadow)">
+      <rect x="-40" y="-25" width="110" height="50" rx="12" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="1.5" />
+      <circle cx="-20" cy="0" r="10" fill="#06b6d4" opacity="0.2" />
+      <path d="M -24 -4 L -16 4 M -16 -4 L -24 4" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" />
+      <text x="0" y="-3" fill="#ffffff" font-size="10" font-weight="700">CLEARBIT</text>
+      <text x="0" y="9" fill="#67e8f9" font-size="8" font-weight="500">Person API</text>
+      <!-- Pulse Light -->
+      <circle cx="55" cy="-15" r="4" fill="#06b6d4" filter="url(#glow)" />
+    </g>
+
+    <!-- Waterfall Node 2: OpenAI / Claygent AI -->
+    <g transform="translate(290, 160)" filter="url(#shadow)">
+      <rect x="-50" y="-30" width="130" height="60" rx="14" fill="#0f172a" stroke="url(#accentFuchsia)" stroke-width="2" />
+      <circle cx="-25" cy="0" r="14" fill="url(#accentFuchsia)" opacity="0.3" filter="url(#glow)" />
+      <!-- AI Spark Icon -->
+      <path d="M -25 -7 L -23 -2 L -18 0 L -23 2 L -25 7 L -27 2 L -32 0 L -27 -2 Z" fill="#d946ef" />
+      <text x="-3" y="-5" fill="#ffffff" font-size="11" font-weight="800">CLAYGENT</text>
+      <text x="-3" y="10" fill="#f472b6" font-size="8" font-weight="600">AI Research Agent</text>
+      <!-- Active Signal -->
+      <rect x="50" y="-20" width="18" height="8" rx="4" fill="#d946ef" />
+    </g>
+
+    <!-- Waterfall Node 3: LinkedIn / Intent Engine -->
+    <g transform="translate(130, 360)" filter="url(#shadow)">
+      <rect x="-45" y="-25" width="120" height="50" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" />
+      <circle cx="-25" cy="0" r="10" fill="#0284c7" opacity="0.3" />
+      <text x="-28" y="4" fill="#38bdf8" font-size="11" font-weight="900">in</text>
+      <text x="-8" y="-3" fill="#ffffff" font-size="10" font-weight="700">SCRAPE INTENT</text>
+      <text x="-8" y="9" fill="#7dd3fc" font-size="8" font-weight="500">Jobs &amp; Growth</text>
+    </g>
+
+    <!-- FOREGROUND HIGH-VALUATION ENRICHED PROSPECT CARD (3D Tilted UI Feature) -->
+    <g transform="translate(220, 250)" filter="url(#shadow)">
+      <!-- Main Card Frame -->
+      <rect x="0" y="0" width="330" height="190" rx="16" fill="url(#cardGrad)" stroke="url(#cardBorderGrad)" stroke-width="2" />
+      <!-- Top Subtle Shimmer Header -->
+      <path d="M 0 16 Q 165 0 330 16 L 330 45 L 0 45 Z" fill="#ffffff" opacity="0.03" />
+
+      <!-- Card Header: Profile Info -->
+      <g transform="translate(20, 20)">
+        <!-- Avatar Ring -->
+        <circle cx="20" cy="20" r="20" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+        <!-- Abstract User Vector Avatar -->
+        <circle cx="20" cy="14" r="7" fill="#38bdf8" />
+        <path d="M 8 32 C 8 25, 14 23, 20 23 C 26 23, 32 25, 32 32" fill="#38bdf8" opacity="0.8" />
+
+        <!-- User Names & Title -->
+        <text x="52" y="16" fill="#ffffff" font-size="15" font-weight="800">Sarah Jenkins</text>
+        <text x="52" y="31" fill="#94a3b8" font-size="11" font-weight="500">VP of Revenue Operations @ ScaleScale</text>
+
+        <!-- Lead Score Pill -->
+        <rect x="210" y="4" width="70" height="24" rx="12" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="1" />
+        <text x="245" y="20" fill="#34d399" font-size="10" font-weight="800" text-anchor="middle">SCORE 98%</text>
+      </g>
+
+      <!-- Divider -->
+      <line x1="20" y1="75" x2="310" y2="75" stroke="#1e293b" stroke-width="1" />
+
+      <!-- Card Body: Waterfall Attributes (Clay Grid Matrix Outputs) -->
+      <g transform="translate(20, 90)">
+        <!-- Attribute 1: Work Email -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="135" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8" />
+          <circle cx="12" cy="15" r="3" fill="#10b981" />
+          <text x="22" y="12" fill="#64748b" font-size="8" font-weight="700">VERIFIED EMAIL</text>
+          <text x="22" y="23" fill="#cbd5e1" font-size="9" font-weight="600">s.jenkins@scalescale.io</text>
+        </g>
+
+        <!-- Attribute 2: Tech Stack -->
+        <g transform="translate(145" y="0")">
+          <rect x="0" y="0" width="145" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8" />
+          <circle cx="12" cy="15" r="3" fill="#06b6d4" />
+          <text x="22" y="12" fill="#64748b" font-size="8" font-weight="700">DETECTED TECH STACK</text>
+          <text x="22" y="23" fill="#38bdf8" font-size="9" font-weight="600">Salesforce, HubSpot, Snowflake</text>
+        </g>
+
+        <!-- Attribute 3: AI Insights / Claygent Summary -->
+        <g transform="translate(0, 38)">
+          <rect x="0" y="0" width="290" height="42" rx="6" fill="#1e1035" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.5" />
+          <path d="M 12 14 L 15 20 L 12 26" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-linecap="round" />
+          <text x="24" y="16" fill="#d946ef" font-size="8" font-weight="800" letter-spacing="0.5">CLAYGENT SYNTHESIS</text>
+          <text x="24" y="30" fill="#e2e8f0" font-size="9" font-weight="400">"Hiring 12 SDRs this Q. Announced Series C 3 weeks ago."</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- FLOATING TOP-RIGHT GRAPHIC: High-Velocity Target Node Matrix -->
+    <g transform="translate(440, 100)" filter="url(#hyperGlow)">
+      <!-- Outer Orbit Ring -->
+      <circle cx="0" cy="0" r="45" fill="none" stroke="url(#accentCyanViolet)" stroke-width="1.5" stroke-dasharray="6 4" />
+      <circle cx="0" cy="0" r="25" fill="url(#accentFuchsia)" opacity="0.4" />
+      <circle cx="0" cy="0" r="12" fill="#06b6d4" />
+      <!-- Pulsing Crosshair Target -->
+      <path d="M -20 0 L 20 0 M 0 -20 L 0 20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Floating Particles & Data Vectors -->
+    <g fill="#38bdf8">
+      <circle cx="180" cy="90" r="2" opacity="0.8" filter="url(#glow)" />
+      <circle cx="480" cy="240" r="3" fill="#d946ef" opacity="0.9" filter="url(#glow)" />
+      <circle cx="150" cy="290" r="2" fill="#06b6d4" opacity="0.6" />
+      <circle cx="390" cy="450" r="2.5" fill="#8b5cf6" opacity="0.7" />
+    </g>
+
+    <!-- Technical Data Tag Overlay (Isometric HUD Decorator) -->
+    <g transform="translate(390, 480)">
+      <rect x="0" y="0" width="160" height="22" rx="4" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <text x="10" y="14" fill="#64748b" font-size="8" font-weight="700" font-family="monospace">OUTBOUND_FLOW // 200 OK</text>
+      <circle cx="145" cy="11" r="3" fill="#10b981" />
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER BARS & TECHNICAL FRAMEWORK ==================== -->
+  
+  <!-- Outer Border Frame -->
+  <rect x="1.5" y="1.5" width="1197" height="627" rx="0" fill="none" stroke="#1e293b" stroke-width="1" />
+  
+  <!-- Bottom Status Bar / Decorative Grid Line -->
+  <line x1="80" y1="585" x2="1120" y2="585" stroke="url(#gridLineGrad)" stroke-width="1" />
+  
+  <g transform="translate(80, 604)">
+    <text x="0" y="0" fill="#475569" font-size="10" font-weight="600" letter-spacing="1">HELIA TECH ARCHITECTURE SERIES</text>
+    <text x="500" y="0" fill="#475569" font-size="10" font-weight="600" letter-spacing="1">SYSTEM ID: CLAY-OUTBOUND-v4.9</text>
+    <text x="940" y="0" fill="#06b6d4" font-size="10" font-weight="700" letter-spacing="1">heliatech.online</text>
+  </g>
+</svg>

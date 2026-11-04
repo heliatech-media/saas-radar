@@ -161,7 +161,8 @@ AFFILIATE_MAP = {
     "screen-studio": "https://screen.studio/?via=heliatech",
     "descript": "https://descript.grsm.io/heliatech",
     "murf-ai": "https://murf.ai/?fp_ref=heliatech",
-    "captions": "https://www.captions.ai/?via=heliatech"
+    "captions": "https://www.captions.ai/?via=heliatech",
+    "clay": "https://clay.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

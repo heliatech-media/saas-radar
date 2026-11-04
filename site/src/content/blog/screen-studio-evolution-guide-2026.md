@@ -73,7 +73,7 @@ Open Screen Studio and select your recording area. Pro tip: Use the 'Window' cap
 Perform your workflow at a natural pace. Don't worry about 'perfect' mouse movements. Click deliberately on the buttons you want the AI to highlight. If you make a mistake, don't stop; just pause for three seconds and repeat the action. You can easily trim the 'dead air' later.
 
 ### Step 3: The AI Refinement
-Once you hit stop, Screen Studio generates the preview. This is where the magic happens. On the right-hand sidebar, adjust the 'Zoom' intensity. If the AI missed a spot, simply click the timeline and add a manual zoom point. Adjust the 'Cursor Size' to 1.5x for better visibility on mobile devices.
+Once you hit stop, Screen Studio generates the preview. This is where the magic happens. On the right-hand sidebar, adjust the 'Zoom' intensity. If the AI missed a spot, simply click the timeline and add a manual zoom point. Adjust the '[Cursor](/reviews/cursor) Size' to 1.5x for better visibility on mobile devices.
 
 ### Step 4: Exporting for Impact
 Choose your preset. For LinkedIn or X (Twitter), use the 4K Desktop preset. For TikTok or YouTube Shorts, use the 'Vertical' layout—Screen Studio will automatically reposition the content to ensure the action stays centered in the 9:16 frame.

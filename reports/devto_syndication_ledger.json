@@ -490,6 +490,19 @@
         "modelcontextprotocol",
         "supabase"
       ]
+    },
+    "memberstack-evolution-guide-2026": {
+      "id": 4977173,
+      "url": "https://dev.to/heliatech/memberstack-the-architectural-evolution-of-gated-web-apps-and-the-hands-on-guide-to-membership-1k80",
+      "title": "Memberstack: The Architectural Evolution of Gated Web Apps and the Hands-On Guide to Membership Velocity",
+      "canonical_url": "https://heliatech.online/blog/memberstack-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "memberstack",
+        "webflow",
+        "stripe",
+        "saas"
+      ]
     }
   },
   "last_sync": null

@@ -6,7 +6,7 @@ tagline: The data-driven outbound platform that turns manual research into autom
 category: B2B Sales Automation
 rating: 4.7
 website_url: https://clay.com
-affiliate_url: https://clay.com
+affiliate_url: "https://clay.com/?via=heliatech"
 summary: Clay is a sophisticated data enrichment and outbound automation platform
   that aggregates signals from hundreds of sources to build highly personalized lead
   lists. It effectively acts as a connective tissue between disparate data providers
