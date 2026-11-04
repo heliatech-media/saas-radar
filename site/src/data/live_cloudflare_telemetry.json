@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T08:01:54.767895",
+  "last_synced": "2026-11-04T08:30:01.923775",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11416,
-  "total_requests": 83204,
-  "total_visits": 3538,
-  "total_pageviews": 15842,
+  "total_visitors_network": 11428,
+  "total_requests": 83808,
+  "total_visits": 3542,
+  "total_pageviews": 15866,
   "percent_cached": "56.14%",
-  "data_served_mb": 751.1,
+  "data_served_mb": 753.0,
   "top_pages": [
     {
       "path": "/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/calculator/",
-      "views": 900
+      "views": 920
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -35,11 +35,11 @@
       "views": 200
     },
     {
-      "path": "/versus/",
+      "path": "/radar/",
       "views": 190
     },
     {
-      "path": "/radar/",
+      "path": "/versus/",
       "views": 190
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 14390
+      "views": 14430
     },
     {
       "country": "Morocco",
-      "views": 9910
+      "views": 10080
     },
     {
       "country": "Germany",
