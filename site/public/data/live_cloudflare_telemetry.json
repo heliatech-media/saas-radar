@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T19:51:31.172132",
+  "last_synced": "2026-11-04T20:01:38.242232",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 13429,
-  "total_requests": 100081,
-  "total_visits": 4162,
-  "total_pageviews": 18240,
+  "total_visitors_network": 13487,
+  "total_requests": 100346,
+  "total_visits": 4180,
+  "total_pageviews": 18319,
   "percent_cached": "56.14%",
-  "data_served_mb": 826.5,
+  "data_served_mb": 827.4,
   "top_pages": [
     {
       "path": "/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 1780
+      "views": 1870
     },
     {
       "path": "/calculator/",
@@ -59,26 +59,26 @@
       "views": 150
     },
     {
-      "path": "/reviews/make/",
-      "views": 140
-    },
-    {
       "path": "/reviews/linear/",
       "views": 140
     },
     {
-      "path": "/terms/",
+      "path": "/reviews/make/",
+      "views": 140
+    },
+    {
+      "path": "/blog/riverside-fm-evolution-guide-2026/",
       "views": 130
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 16870
+      "views": 16960
     },
     {
       "country": "Morocco",
-      "views": 13660
+      "views": 13760
     },
     {
       "country": "Germany",
