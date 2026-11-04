@@ -1,34 +1,26 @@
 {
-  "last_synced": "2026-11-04T12:54:18.843472",
+  "last_synced": "2026-11-04T13:00:08.596932",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 11605,
-  "total_requests": 89465,
-  "total_visits": 3597,
-  "total_pageviews": 16090,
+  "total_visitors_network": 11609,
+  "total_requests": 89605,
+  "total_visits": 3598,
+  "total_pageviews": 16097,
   "percent_cached": "56.14%",
-  "data_served_mb": 773.7,
+  "data_served_mb": 774.5,
   "top_pages": [
     {
       "path": "/",
-      "views": 2710
+      "views": 3040
     },
     {
       "path": "/calculator/",
-      "views": 970
+      "views": 910
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 300
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 260
-    },
-    {
-      "path": "/awards/",
-      "views": 220
+      "views": 320
     },
     {
       "path": "/radar/",
@@ -39,15 +31,23 @@
       "views": 200
     },
     {
-      "path": "/versus/",
-      "views": 190
+      "path": "/terms/",
+      "views": 170
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 180
+      "path": "/reviews/clickup/",
+      "views": 170
     },
     {
-      "path": "/sentinel/",
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 170
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 160
+    },
+    {
+      "path": "/awards/",
       "views": 150
     },
     {
@@ -55,62 +55,62 @@
       "views": 150
     },
     {
-      "path": "/reviews/make/",
+      "path": "/reviews/elevenlabs/",
+      "views": 150
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 140
     },
     {
-      "path": "/blog/resend-evolution-guide-2026/",
-      "views": 130
+      "path": "/reviews/resend/",
+      "views": 140
     },
     {
-      "path": "/terms/",
-      "views": 130
-    },
-    {
-      "path": "/reviews/linear/",
-      "views": 130
+      "path": "/versus/",
+      "views": 140
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 14680
+      "views": 14370
     },
     {
       "country": "Morocco",
-      "views": 11520
+      "views": 12190
     },
     {
       "country": "Germany",
-      "views": 1210
+      "views": 1340
     },
     {
       "country": "Singapore",
-      "views": 980
+      "views": 970
     },
     {
       "country": "Belgium",
-      "views": 550
+      "views": 680
     },
     {
       "country": "United Kingdom",
-      "views": 530
+      "views": 550
     },
     {
-      "country": "Netherlands",
-      "views": 520
-    },
-    {
-      "country": "Canada",
-      "views": 430
+      "country": "CN",
+      "views": 400
     },
     {
       "country": "Brazil",
-      "views": 330
+      "views": 380
     },
     {
       "country": "France",
-      "views": 280
+      "views": 320
+    },
+    {
+      "country": "Canada",
+      "views": 320
     }
   ],
   "top_referrers": [
