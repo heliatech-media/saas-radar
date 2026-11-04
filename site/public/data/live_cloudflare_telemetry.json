@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-04T01:29:42.504245",
+  "last_synced": "2026-11-04T01:47:11.871359",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-07 - 2026-11-04)",
-  "total_visitors_network": 10461,
-  "total_requests": 76161,
-  "total_visits": 3242,
-  "total_pageviews": 15258,
+  "total_visitors_network": 10473,
+  "total_requests": 76514,
+  "total_visits": 3246,
+  "total_pageviews": 15270,
   "percent_cached": "56.14%",
-  "data_served_mb": 724.9,
+  "data_served_mb": 725.5,
   "top_pages": [
     {
       "path": "/",
@@ -20,7 +20,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 270
+      "views": 280
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
@@ -31,11 +31,11 @@
       "views": 220
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 190
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 190
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 160
+      "views": 170
     },
     {
       "path": "/blog/make-automation-revolution/",
@@ -63,11 +63,11 @@
       "views": 120
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/framer-evolution-guide-2026/",
       "views": 120
     },
     {
-      "path": "/blog/framer-evolution-guide-2026/",
+      "path": "/reviews/beehiiv/",
       "views": 120
     }
   ],
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 8320
+      "views": 8400
     },
     {
       "country": "Germany",
