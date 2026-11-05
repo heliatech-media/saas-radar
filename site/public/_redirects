@@ -84,3 +84,8 @@
 /go/workato https://www.workato.com 302
 /go/zapier https://zapier.com/app/register?via=heliatech 302
 /go/zoominfo https://www.zoominfo.com 302
+
+
+# Staging Trailing Slash Canonical Routing
+/templates /templates/ 301!
+/sell /sell/ 301!
