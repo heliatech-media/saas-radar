@@ -11,8 +11,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "AutomateScale Studio",
+      "slug": "automatescale-studio",
       "badge": "Verified Pro Agency",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=AutomateScale"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=AutomateScale",
+      "bio": "Studio d'ingénierie spécialisé dans les architectures n8n haute-performance et l'enrichissement de données B2B sans abonnement SaaS tiers.",
+      "website": "https://automatescale.example.com",
+      "github": "automatescale",
+      "linkedin": "https://linkedin.com/company/automatescale"
     },
     "nodes_count": 18,
     "estimated_hours_saved": 24,
@@ -113,8 +118,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "SaaSGrowth Ops",
+      "slug": "saasgrowth-ops",
       "badge": "Verified Engineer",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=SaaSOps"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=SaaSOps",
+      "bio": "Consultant RevOps & Stripe Billing spécialisé dans l'éradication du churn involontaire et l'automatisation des relances dunning.",
+      "website": "https://saasgrowth.example.com",
+      "github": "saasgrowthops",
+      "linkedin": "https://linkedin.com/company/saasgrowthops"
     },
     "nodes_count": 14,
     "estimated_hours_saved": 16,
@@ -197,8 +207,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "RelationalHQ",
+      "slug": "relational-hq",
       "badge": "Airtable Certified Architect",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=RelationalHQ"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=RelationalHQ",
+      "bio": "Architectes certifiés Airtable & Make.com concevant des operating systems complets pour agences et cabinets de conseil.",
+      "website": "https://relationalhq.example.com",
+      "github": "relationalhq",
+      "linkedin": "https://linkedin.com/company/relationalhq"
     },
     "nodes_count": 8,
     "estimated_hours_saved": 35,
@@ -277,8 +292,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "ContentEngine.ai",
+      "slug": "contentengine-ai",
       "badge": "Automation Lead",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=ContentEngine"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=ContentEngine",
+      "bio": "Collectif d'ingénieurs en automatisation de contenu créant des pipelines IA pour transformer des vidéos en formats viraux multi-canaux.",
+      "website": "https://contentengine.example.com",
+      "github": "contentengine-ai",
+      "linkedin": "https://linkedin.com/company/contentengine"
     },
     "nodes_count": 22,
     "estimated_hours_saved": 18,
@@ -364,8 +384,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "SeniorStack Labs",
+      "slug": "seniorstack-labs",
       "badge": "Principal Architect",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=SeniorStack"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=SeniorStack",
+      "bio": "Équipe de développeurs Full-Stack Next.js & Supabase concevant des règles strictes anti-hallucination pour Cursor et Copilot.",
+      "website": "https://seniorstack.example.com",
+      "github": "seniorstack",
+      "linkedin": "https://linkedin.com/company/seniorstack"
     },
     "nodes_count": 6,
     "estimated_hours_saved": 40,
@@ -444,8 +469,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "PipelinePioneers",
+      "slug": "pipeline-pioneers",
       "badge": "HubSpot Platinum Partner",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=PipelinePioneers"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=PipelinePioneers",
+      "bio": "Partenaire Platinum HubSpot & Make.com automatisant les tunnels de vente, l'onboarding client et la synchronisation CRM.",
+      "website": "https://pipelinepioneers.example.com",
+      "github": "pipelinepioneers",
+      "linkedin": "https://linkedin.com/company/pipelinepioneers"
     },
     "nodes_count": 12,
     "estimated_hours_saved": 14,
@@ -525,8 +555,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "VoiceAgents Pro",
+      "slug": "voiceagents-pro",
       "badge": "AI Voice Specialist",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=VoiceAgents"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=VoiceAgents",
+      "bio": "Pionniers de la voix conversationnelle temps réel combinant ElevenLabs, Twilio et OpenAI pour l'accueil téléphonique autonome.",
+      "website": "https://voiceagents.example.com",
+      "github": "voiceagentspro",
+      "linkedin": "https://linkedin.com/company/voiceagentspro"
     },
     "nodes_count": 26,
     "estimated_hours_saved": 45,
@@ -617,8 +652,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "FintechOps Bureau",
+      "slug": "fintechops-bureau",
       "badge": "Certified CPA Automator",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=FintechOps"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=FintechOps",
+      "bio": "Cabinet d'ingénierie financière automatisant les rapprochements Stripe, QuickBooks et la conformité fiscale internationale.",
+      "website": "https://fintechops.example.com",
+      "github": "fintechops",
+      "linkedin": "https://linkedin.com/company/fintechops"
     },
     "nodes_count": 16,
     "estimated_hours_saved": 20,
@@ -697,8 +737,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "ChatOps Labs",
+      "slug": "chatops-labs",
       "badge": "Meta Tech Provider",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=ChatOps"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=ChatOps",
+      "bio": "Intégrateur officiel Meta WhatsApp Cloud API pour CRM conversationnels et qualification de leads ultra-rapide.",
+      "website": "https://chatops.example.com",
+      "github": "chatopslabs",
+      "linkedin": "https://linkedin.com/company/chatopslabs"
     },
     "nodes_count": 10,
     "estimated_hours_saved": 28,
@@ -777,8 +822,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "IntelScout Systems",
+      "slug": "intelscout-systems",
       "badge": "Data Scraping Specialist",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=IntelScout"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=IntelScout",
+      "bio": "Spécialistes du web scraping headless, du monitoring tarifaire et de l'intelligence concurrentielle automatisée.",
+      "website": "https://intelscout.example.com",
+      "github": "intelscout",
+      "linkedin": "https://linkedin.com/company/intelscout"
     },
     "nodes_count": 24,
     "estimated_hours_saved": 32,
@@ -857,8 +907,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "VectorOps Academy",
+      "slug": "vectorops-academy",
       "badge": "AI Systems Engineer",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=VectorOps"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=VectorOps",
+      "bio": "Ingénieurs backend Python spécialisés dans LangChain v0.3+, FastAPI asynchrone et les bases vectorielles ChromaDB.",
+      "website": "https://vectorops.example.com",
+      "github": "vectorops",
+      "linkedin": "https://linkedin.com/company/vectorops"
     },
     "nodes_count": 5,
     "estimated_hours_saved": 30,
@@ -938,8 +993,13 @@
     "platform_fee_percent": 20,
     "creator": {
       "name": "RetentionLab",
+      "slug": "retentionlab",
       "badge": "Product-Led Growth Specialist",
-      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=RetentionLab"
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=RetentionLab",
+      "bio": "Experts en Product-Led Growth et détection prédictive de désengagement client via télémétrie in-app.",
+      "website": "https://retentionlab.example.com",
+      "github": "retentionlab",
+      "linkedin": "https://linkedin.com/company/retentionlab"
     },
     "nodes_count": 18,
     "estimated_hours_saved": 22,

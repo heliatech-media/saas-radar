@@ -3,20 +3,20 @@ import Layout from '../../layouts/Layout.astro';
 import templates from '../../data/templates_catalog.json';
 
 const pageTitle = "Espace Client & Studio Créateur | HeliaTech Hub (Stealth Staging)";
-const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable achetés, téléchargez vos fichiers .json et pilotez vos ventes avec audit anti-scam certifié.";
+const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airtable, suivez vos gains créateurs à 80% et pilotez vos déploiements avec audit Sentinel Anti-Scam.";
 ---
 
 <Layout title={pageTitle} description={pageDescription} noindex={true}>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-24">
     
     <!-- Stealth Staging Top Notice -->
-    <div class="flex items-center justify-between p-3.5 mb-8 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 mb-8 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono gap-3">
       <div class="flex items-center gap-2.5">
-        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse flex-shrink-0"></span>
         <span class="font-bold uppercase tracking-wider">Mode Stealth / Staging Privé</span>
-        <span class="text-amber-400/70 hidden md:inline">— Espace Client &amp; Studio Créateur avec Scanner Anti-Scam actif.</span>
+        <span class="text-amber-400/70 hidden lg:inline">— Espace Client Acheteur &amp; Studio Vendeur avec Sentinel Anti-Scam actif.</span>
       </div>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
         <a href="/templates/" class="px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/40 font-bold transition-all">
           Catalogue (/templates/) ➔
         </a>
@@ -26,14 +26,15 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       </div>
     </div>
 
-    <!-- Main Header Bar: User Profile & Dynamic Mode Switcher -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 mb-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl">
-      
-      <!-- User Info & Avatar -->
-      <div class="flex items-center gap-4">
+    <!-- Main Header Bar: User Identity & Dynamic Mode Switcher -->
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 mb-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- User Profile & Avatar -->
+      <div class="flex items-center gap-4 relative z-10">
         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-sky-600 to-indigo-600 p-0.5 shadow-glow-cyan flex-shrink-0">
           <div class="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center text-xl font-bold text-white font-mono" id="user-avatar-initials">
-            HT
+            AR
           </div>
         </div>
         <div>
@@ -54,165 +55,713 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       </div>
 
       <!-- Unified Dual-Mode Tabs Switcher -->
-      <div class="flex items-center p-1.5 rounded-2xl bg-slate-950 border border-slate-800 w-full lg:w-auto">
+      <div class="flex items-center p-1.5 rounded-2xl bg-slate-950 border border-slate-800 w-full lg:w-auto relative z-10">
         <button 
           id="btn-buyer-mode" 
-          class="flex-1 lg:flex-none flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-mono text-xs font-bold transition-all bg-cyan-500 text-slate-950 shadow-glow-cyan"
+          class="flex-1 lg:flex-none flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-xl font-mono text-xs font-bold transition-all bg-cyan-500 text-slate-950 shadow-glow-cyan"
         >
-          <span>🛒</span> Espace Acheteur (Mes Blueprints)
+          <span>🛒</span> Espace Acheteur
         </button>
         <button 
           id="btn-seller-mode" 
-          class="flex-1 lg:flex-none flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-mono text-xs font-bold transition-all text-slate-400 hover:text-white"
+          class="flex-1 lg:flex-none flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-xl font-mono text-xs font-bold transition-all text-slate-400 hover:text-white"
         >
-          <span>💼</span> Espace Vendeur (Mon Studio 80%)
+          <span>💼</span> Espace Vendeur (Studio 80%)
         </button>
       </div>
 
     </div>
 
     <!-- ========================================================================= -->
-    <!-- 🛒 1. VUE ACHETEUR (Mes Blueprints, Licences, Factures & Téléchargements) -->
+    <!-- 🛒 1. VUE ACHETEUR (Mes Blueprints, Wishlist, Support, Profil B2B, Deploy) -->
     <!-- ========================================================================= -->
     <div id="buyer-dashboard-view" class="space-y-8">
       
-      <!-- Buyer Telemetry Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-          <div class="text-2xl font-black text-cyan-400 font-mono mb-1" id="stat-buyer-blueprints">2 Blueprints</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Licences Commerciales Actives</div>
+      <!-- Buyer Sub-Navigation Tabs Bar -->
+      <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4">
+        <button id="subtab-buyer-blueprints" class="buyer-subtab px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all flex items-center gap-2 shadow-glow-cyan">
+          <span>📦</span> Mes Blueprints &amp; Licences
+          <span id="badge-buyer-count" class="px-2 py-0.5 rounded-full bg-slate-950 text-cyan-300 text-[10px]">2</span>
+        </button>
+        <button id="subtab-buyer-wishlist" class="buyer-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>💖</span> Ma Wishlist &amp; Favoris
+          <span id="badge-wishlist-count" class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 text-[10px]">2</span>
+        </button>
+        <button id="subtab-buyer-support" class="buyer-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>💬</span> Support &amp; Échanges Créateurs
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        </button>
+        <button id="subtab-buyer-b2b" class="buyer-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>🏢</span> Profil B2B &amp; Facturation
+        </button>
+        <button id="subtab-buyer-deploy" class="buyer-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>🔑</span> Token API Déploiement
+        </button>
+      </div>
+
+      <!-- Sub-Panel 1: Mes Blueprints & Licences -->
+      <div id="panel-buyer-blueprints" class="space-y-8">
+        
+        <!-- Buyer Telemetry Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl font-black text-cyan-400 font-mono mb-1" id="stat-buyer-blueprints">2 Blueprints</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Licences Commerciales Actives</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl font-black text-emerald-400 font-mono mb-1">~48 Heures</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Temps de Dev Économisé</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl font-black text-indigo-400 font-mono mb-1">100% Anti-Scam</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Code Certifié &amp; Sans Fuite API</div>
+          </div>
         </div>
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-          <div class="text-2xl font-black text-emerald-400 font-mono mb-1">~48 Heures</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Temps de Dev Économisé</div>
+
+        <!-- Purchased Blueprints Library -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>📦</span> Vos Blueprints Achetés &amp; Prêts à Déployer
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Téléchargez immédiatement vos fichiers .json certifiés propres, accédez à vos clés de licence commerciale et aux guides d'import.
+              </p>
+            </div>
+            <a href="/templates/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
+              + Parcourir le Catalogue ➔
+            </a>
+          </div>
+
+          <!-- Dynamic Buyer Blueprints Container -->
+          <div id="buyer-blueprints-list" class="space-y-4">
+            <!-- Injected via JavaScript -->
+          </div>
+
         </div>
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-          <div class="text-2xl font-black text-indigo-400 font-mono mb-1">100% Anti-Scam</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Code Certifié &amp; Sans Fuite API</div>
+
+        <!-- Invoices & Transaction History -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/60 border border-slate-800 space-y-4">
+          <h3 class="text-sm font-bold text-white font-mono uppercase tracking-wider flex items-center gap-2">
+            <span>🧾</span> Historique de Facturation &amp; Justificatifs Comptables
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs font-mono">
+              <thead>
+                <tr class="text-slate-400 border-b border-slate-800">
+                  <th class="pb-3">Date</th>
+                  <th class="pb-3">Réf. Facture</th>
+                  <th class="pb-3">Produit</th>
+                  <th class="pb-3">Montant Net</th>
+                  <th class="pb-3">Statut</th>
+                  <th class="pb-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="buyer-invoices-list" class="text-slate-300 divide-y divide-slate-900">
+                <!-- Injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sub-Panel 2: Ma Wishlist & Favoris -->
+      <div id="panel-buyer-wishlist" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>💖</span> Ma Wishlist &amp; Blueprints Mis de Côté
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Activez vos workflows favoris en un clic pour les transférer directement dans votre bibliothèque.
+              </p>
+            </div>
+            <a href="/templates/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
+              + Ajouter depuis le Catalogue ➔
+            </a>
+          </div>
+
+          <div id="buyer-wishlist-container" class="space-y-4">
+            <!-- Dynamic Wishlist Cards -->
+          </div>
+
+          <!-- Wishlist Order Summary Box -->
+          <div id="wishlist-summary-box" class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="text-xs font-mono text-slate-400">Total de votre sélection Wishlist :</div>
+              <div class="text-2xl font-black text-cyan-400 font-mono" id="wishlist-total-price">$0.00 USD</div>
+            </div>
+            <button 
+              id="btn-buy-all-wishlist"
+              class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
+            >
+              Commander toute ma Wishlist en 1-Clic ➔
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Purchased Blueprints Library -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
-          <div>
+      <!-- Sub-Panel 3: Support & Échanges Créateurs -->
+      <div id="panel-buyer-support" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
             <h2 class="text-xl font-bold text-white flex items-center gap-2">
-              <span>📦</span> Vos Blueprints Achetés &amp; Prêts à Déployer
+              <span>💬</span> Centre d'Assistance &amp; Échanges Créateurs
             </h2>
             <p class="text-xs text-slate-400 font-light mt-1">
-              Téléchargez immédiatement vos fichiers .json propres, accédez à vos clés de licence commerciale et aux guides d'import.
+              Posez directement vos questions techniques aux architectes créateurs de vos blueprints achetés.
             </p>
           </div>
-          <a href="/templates/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
-            + Parcourir le Catalogue ➔
-          </a>
-        </div>
 
-        <!-- Buyer Blueprints Container (Dynamic from localStorage or default) -->
-        <div id="buyer-blueprints-list" class="space-y-4">
-          <!-- Rendered dynamically via JavaScript -->
-        </div>
+          <!-- Support Chat Interface -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Left: Blueprint Selector / Conversations -->
+            <div class="space-y-3">
+              <label class="block text-xs font-mono text-slate-400 font-bold uppercase tracking-wider">Sélectionner le Blueprint :</label>
+              <select id="support-blueprint-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none">
+                <!-- Populated dynamically -->
+              </select>
 
+              <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800 space-y-3">
+                <div class="text-xs font-mono text-cyan-400 font-bold flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Architecte Assigné
+                </div>
+                <div class="text-xs text-slate-300 font-mono" id="support-creator-info">
+                  AutomateScale Studio (Délai moyen : &lt; 15 min)
+                </div>
+                <p class="text-[11px] text-slate-400 font-light leading-relaxed">
+                  Support d'intégration inclus à vie dans votre licence commerciale.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: Chat Box -->
+            <div class="lg:col-span-2 space-y-4">
+              <div id="support-chat-messages" class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 h-72 overflow-y-auto space-y-3 font-mono text-xs">
+                <!-- Messages dynamic -->
+              </div>
+
+              <!-- Quick Prompt Pills -->
+              <div class="flex flex-wrap items-center gap-2">
+                <button class="quick-prompt-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] font-mono text-slate-300 transition-all">
+                  ⚙️ Comment connecter mon Webhook ?
+                </button>
+                <button class="quick-prompt-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] font-mono text-slate-300 transition-all">
+                  📦 Compatible avec la version Cloud ?
+                </button>
+                <button class="quick-prompt-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] font-mono text-slate-300 transition-all">
+                  🔑 Où renseigner mes clés API ?
+                </button>
+              </div>
+
+              <!-- Message Input & Send -->
+              <form id="support-message-form" class="flex gap-2">
+                <input 
+                  type="text" 
+                  id="support-message-input" 
+                  placeholder="Tapez votre message ou question technique pour l'architecte..."
+                  class="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+                <button type="submit" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan flex items-center gap-1.5">
+                  <span>Envoyer</span> ➔
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
-      <!-- Invoices & Transaction History -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/60 border border-slate-800 space-y-4">
-        <h3 class="text-sm font-bold text-white font-mono uppercase tracking-wider flex items-center gap-2">
-          <span>🧾</span> Historique de Facturation &amp; Justificatifs Comptables
-        </h3>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs font-mono">
-            <thead>
-              <tr class="text-slate-400 border-b border-slate-800">
-                <th class="pb-3">Date</th>
-                <th class="pb-3">Réf. Facture</th>
-                <th class="pb-3">Produit</th>
-                <th class="pb-3">Montant Net</th>
-                <th class="pb-3">Statut</th>
-                <th class="pb-3 text-right">Action</th>
-              </tr>
-            </thead>
-            <tbody id="buyer-invoices-list" class="text-slate-300 divide-y divide-slate-900">
-              <!-- Rendered via JS -->
-            </tbody>
-          </table>
+      <!-- Sub-Panel 4: Profil B2B & Facturation -->
+      <div id="panel-buyer-b2b" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>🏢</span> Profil Entreprise &amp; Coordonnées de Facturation B2B
+            </h2>
+            <p class="text-xs text-slate-400 font-light mt-1">
+              Renseignez les mentions légales de votre entreprise afin que tous vos reçus et factures PDF soient 100% conformes sur le plan comptable.
+            </p>
+          </div>
+
+          <form id="buyer-b2b-form" class="space-y-5 max-w-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Raison Sociale / Société :</label>
+                <input 
+                  type="text" 
+                  id="b2b-company" 
+                  value="Acme Growth Technologies SAS" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Numéro TVA Intracommunautaire / SIRET :</label>
+                <input 
+                  type="text" 
+                  id="b2b-vat" 
+                  value="FR82910293847" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1.5">Adresse de Facturation Complète :</label>
+              <input 
+                type="text" 
+                id="b2b-address" 
+                value="142 Avenue des Champs-Élysées, 75008 Paris" 
+                class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Pays de Résidence :</label>
+                <select id="b2b-country" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none">
+                  <option value="France">France (FR)</option>
+                  <option value="États-Unis">États-Unis (US)</option>
+                  <option value="Royaume-Uni">Royaume-Uni (UK)</option>
+                  <option value="Belgique">Belgique (BE)</option>
+                  <option value="Suisse">Suisse (CH)</option>
+                  <option value="Canada">Canada (CA)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Email Comptabilité :</label>
+                <input 
+                  type="email" 
+                  id="b2b-email" 
+                  value="comptabilite@acmegrowth.com" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Devise Préférée :</label>
+                <select id="b2b-currency" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none">
+                  <option value="USD">USD ($) Dollar US</option>
+                  <option value="EUR">EUR (€) Euro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button 
+                type="submit" 
+                id="btn-save-b2b"
+                class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+              >
+                Enregistrer mes Coordonnées B2B ➔
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sub-Panel 5: Token API Déploiement -->
+      <div id="panel-buyer-deploy" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>🔑</span> Token Personnel d'Auto-Déploiement (HeliaTech Deploy API)
+            </h2>
+            <p class="text-xs text-slate-400 font-light mt-1">
+              Synchronisez automatiquement vos blueprints achetés vers vos instances de production n8n ou Make self-hosted via API ou CLI.
+            </p>
+          </div>
+
+          <div class="space-y-4 max-w-2xl">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1.5">Votre Clé d'Accès API Secrète :</label>
+              <div class="flex items-center gap-2">
+                <input 
+                  type="password" 
+                  id="deploy-token-field" 
+                  value="hlt_live_deploy_89f0a82b9e71029c3d" 
+                  readonly 
+                  class="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-cyan-400 font-mono text-xs focus:outline-none select-all"
+                />
+                <button id="toggle-token-btn" class="px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-mono text-xs transition-all">
+                  👁️ Afficher
+                </button>
+                <button id="copy-token-btn" class="px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan">
+                  📋 Copier
+                </button>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+              <span class="text-xs font-mono text-slate-300 font-bold block">Exemple d'Intégration cURL :</span>
+              <pre class="p-3 rounded-xl bg-slate-950 text-[11px] font-mono text-cyan-300 overflow-x-auto">curl -X POST https://api.heliatech.online/v1/deploy \
+  -H "Authorization: Bearer hlt_live_deploy_89f0a82b..." \
+  -d '&#123; "blueprint": "n8n-lead-enrichment", "destination": "self-hosted" &#125;'</pre>
+            </div>
+
+            <button id="btn-regen-token" class="text-xs font-mono text-amber-400 hover:underline">
+              🔄 Régénérer un nouveau Token
+            </button>
+          </div>
         </div>
       </div>
 
     </div>
 
     <!-- ========================================================================= -->
-    <!-- 💼 2. VUE VENDEUR (Mon Studio, CRUD Produits, Audit Anti-Scam & Payouts 80%) -->
+    <!-- 💼 2. VUE VENDEUR (CRUD Blueprints, Analytics, Support, Profil, Payouts) -->
     <!-- ========================================================================= -->
     <div id="seller-dashboard-view" class="space-y-8 hidden">
       
-      <!-- Seller Real-time Financial Telemetry -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/40 text-center">
-          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mb-1" id="stat-seller-earnings">$1,420.80</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Vos Gains Nets (80%)</div>
-        </div>
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-          <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1" id="stat-seller-sales">36 Ventes</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Ventes Confirmées</div>
-        </div>
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-          <div class="text-2xl sm:text-3xl font-black text-fuchsia-400 font-mono mb-1" id="stat-seller-rating">4.9 ★</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Note Moyenne Clients</div>
-        </div>
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono mb-1" id="stat-seller-pending">$392.00</div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Prochain Versement (01 Déc)</div>
-        </div>
+      <!-- Seller Sub-Navigation Tabs Bar -->
+      <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4">
+        <button id="subtab-seller-products" class="seller-subtab px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all flex items-center gap-2 shadow-glow-cyan">
+          <span>💼</span> Mes Blueprints en Vente
+          <span id="badge-seller-count" class="px-2 py-0.5 rounded-full bg-slate-950 text-cyan-300 text-[10px]">3</span>
+        </button>
+        <button id="subtab-seller-analytics" class="seller-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>📊</span> Analytics &amp; Ventes Détaillées
+        </button>
+        <button id="subtab-seller-support" class="seller-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>📥</span> Support Clients Reçu
+          <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px]">1 Nouveau</span>
+        </button>
+        <button id="subtab-seller-profile" class="seller-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>👤</span> Profil Studio &amp; Vitrine Publique
+        </button>
+        <button id="subtab-seller-payouts" class="seller-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>🏦</span> Versements &amp; Payouts (80%)
+        </button>
       </div>
 
-      <!-- Seller Blueprints Management & CRUD Table -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
-          <div>
+      <!-- Seller Sub-Panel 1: Mes Blueprints en Vente -->
+      <div id="panel-seller-products" class="space-y-8">
+        
+        <!-- Seller Real-time Financial Telemetry -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/40 text-center">
+            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mb-1" id="stat-seller-earnings">$1,420.80</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Vos Gains Nets (80%)</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1" id="stat-seller-sales">36 Ventes</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Ventes Confirmées</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div class="text-2xl sm:text-3xl font-black text-fuchsia-400 font-mono mb-1" id="stat-seller-rating">4.9 ★</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Note Moyenne Clients</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+            <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono mb-1" id="stat-seller-pending">$392.00</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Prochain Versement (01 Déc)</div>
+          </div>
+        </div>
+
+        <!-- Seller Blueprints Management & CRUD Table -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>💼</span> Vos Blueprints Publiés en Vente
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Gérez votre catalogue, éditez les prix, retéléchargez vos fichiers et consultez le score d'audit Sentinel Anti-Scam.
+              </p>
+            </div>
+            <button 
+              id="open-upload-modal-btn"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+            >
+              <span>⚡</span> + Déposer un Nouveau Template ➔
+            </button>
+          </div>
+
+          <!-- Dynamic Seller Products Cards / Table -->
+          <div id="seller-products-list" class="space-y-4">
+            <!-- Rendered dynamically via JavaScript -->
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Seller Sub-Panel 2: Analytics & Ventes Détaillées -->
+      <div id="panel-seller-analytics" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
             <h2 class="text-xl font-bold text-white flex items-center gap-2">
-              <span>💼</span> Vos Blueprints Publiés en Vente
+              <span>📊</span> Analytics Financiers &amp; Taux de Conversion
             </h2>
             <p class="text-xs text-slate-400 font-light mt-1">
-              Gérez votre catalogue, éditez les prix, retéléchargez vos fichiers et consultez le score d'audit Anti-Scam.
+              Suivi détaillé de vos performances commerciales et ventilation des revenus nets à 80%.
             </p>
           </div>
-          <button 
-            id="open-upload-modal-btn"
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
-          >
-            <span>⚡</span> + Déposer un Nouveau Template ➔
-          </button>
-        </div>
 
-        <!-- Dynamic Seller Products Cards / Table -->
-        <div id="seller-products-list" class="space-y-4">
-          <!-- Rendered dynamically via JavaScript -->
-        </div>
+          <!-- Breakdown KPIs -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-xs font-mono text-slate-400 block mb-1">Volume Brut (GMV) :</span>
+              <span class="text-xl font-black text-white font-mono">$1,776.00</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-xs font-mono text-emerald-400 block mb-1">Votre Part Nette (80%) :</span>
+              <span class="text-xl font-black text-emerald-400 font-mono">$1,420.80</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-xs font-mono text-slate-400 block mb-1">Frais Plateforme HeliaTech (20%) :</span>
+              <span class="text-xl font-black text-slate-300 font-mono">$355.20</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-xs font-mono text-cyan-400 block mb-1">Taux de Conversion :</span>
+              <span class="text-xl font-black text-cyan-400 font-mono">8.4% (Top 5%)</span>
+            </div>
+          </div>
 
+          <!-- Ecosystem Distribution & Geographic Origin -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+              <h3 class="text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">Répartition par Écosystème :</h3>
+              <div class="space-y-3 font-mono text-xs">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-slate-300">🟠 n8n Workflows (62%)</span>
+                    <span class="text-cyan-400 font-bold">$880.80</span>
+                  </div>
+                  <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="bg-cyan-500 h-full rounded-full" style="width: 62%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-slate-300">🟣 Make.com Blueprints (26%)</span>
+                    <span class="text-fuchsia-400 font-bold">$369.40</span>
+                  </div>
+                  <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="bg-fuchsia-500 h-full rounded-full" style="width: 26%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-slate-300">🤖 Cursor Rules (12%)</span>
+                    <span class="text-emerald-400 font-bold">$170.60</span>
+                  </div>
+                  <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div class="bg-emerald-500 h-full rounded-full" style="width: 12%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+              <h3 class="text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">Top Marchés Acheteurs :</h3>
+              <div class="space-y-2.5 font-mono text-xs">
+                <div class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+                  <span class="flex items-center gap-2"><span>🇺🇸</span> États-Unis</span>
+                  <span class="text-emerald-400 font-bold">46% des ventes</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+                  <span class="flex items-center gap-2"><span>🇫🇷</span> France</span>
+                  <span class="text-cyan-400 font-bold">28% des ventes</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+                  <span class="flex items-center gap-2"><span>🇬🇧</span> Royaume-Uni</span>
+                  <span class="text-slate-300 font-bold">15% des ventes</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-xl bg-slate-900 border border-slate-800">
+                  <span class="flex items-center gap-2"><span>🇩🇪</span> Allemagne</span>
+                  <span class="text-slate-400 font-bold">11% des ventes</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Revenue Projection Simulator -->
+          <div class="p-6 rounded-2xl bg-gradient-to-r from-emerald-950/20 to-cyan-950/20 border border-emerald-500/30 space-y-3">
+            <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">📈 Simulateur de Revenu Récurrent Créateur :</span>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">
+              En publiant <strong>1 blueprint optimisé par mois</strong> avec 30 ventes moyennes au prix de $49, vous générez un revenu net de <strong>+$1,176.00 / mois</strong> (split 80% net pour vous).
+            </p>
+          </div>
+
+        </div>
       </div>
 
-      <!-- Payout Settings & Stripe Connect Account -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/60 border border-slate-800 space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <h3 class="text-sm font-bold text-white font-mono uppercase tracking-wider flex items-center gap-2">
-            <span>🏦</span> Paramètres de Versement (Split 80% Créateur / 20% HeliaTech)
-          </h3>
-          <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold w-fit">
-            ✓ Compte Stripe Connect Rattaché
-          </span>
-        </div>
-        <p class="text-xs text-slate-400 font-light">
-          Vos versements sont expédiés automatiquement le 1er de chaque mois directement sur votre compte bancaire (IBAN) ou PayPal.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-2">
-          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-slate-400 block mb-1">Email pour vos Reversements :</span>
-            <span class="text-white font-bold" id="seller-payout-email">alexandre.partner@heliatech.online</span>
+      <!-- Seller Sub-Panel 3: Support Clients Reçu (Inbox) -->
+      <div id="panel-seller-support" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>📥</span> Boîte de Réception &amp; Questions des Acheteurs
+            </h2>
+            <p class="text-xs text-slate-400 font-light mt-1">
+              Répondez aux acheteurs de vos blueprints pour maintenir un score de satisfaction supérieur à 4.8/5.
+            </p>
           </div>
-          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-slate-400 block mb-1">Prochain Virement Programmé :</span>
-            <span class="text-emerald-400 font-bold">$392.00 USD (01 Décembre 2026)</span>
+
+          <div id="seller-inbox-list" class="space-y-4">
+            <!-- Dynamic Seller Tickets -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Seller Sub-Panel 4: Mon Profil Créateur & Vitrine Publique -->
+      <div id="panel-seller-profile" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>👤</span> Fiche Studio &amp; Vitrine Publique Créateur
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Personnalisez la présentation de votre studio d'ingénierie visible par tous les clients sur la marketplace.
+              </p>
+            </div>
+            <a 
+              href="/creator/automatescale-studio/" 
+              id="link-public-storefront"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+            >
+              👁️ Voir ma Vitrine Publique (/creator/...) ➔
+            </a>
+          </div>
+
+          <form id="seller-profile-form" class="space-y-5 max-w-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Nom de votre Studio / Architecte :</label>
+                <input 
+                  type="text" 
+                  id="seller-studio-name" 
+                  value="AutomateScale Studio" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Badge d'Expertise Certifié :</label>
+                <input 
+                  type="text" 
+                  id="seller-studio-badge" 
+                  value="Verified Pro Agency" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-slate-300 mb-1.5">Biographie Technique &amp; Présentation :</label>
+              <textarea 
+                id="seller-studio-bio" 
+                rows="3" 
+                class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+              >Studio d'ingénierie spécialisé dans les architectures n8n haute-performance et l'enrichissement de données B2B sans abonnement SaaS tiers.</textarea>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Site Web Portfolio :</label>
+                <input 
+                  type="url" 
+                  id="seller-studio-website" 
+                  value="https://automatescale.example.com" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Pseudo GitHub :</label>
+                <input 
+                  type="text" 
+                  id="seller-studio-github" 
+                  value="automatescale" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">LinkedIn Entreprise :</label>
+                <input 
+                  type="text" 
+                  id="seller-studio-linkedin" 
+                  value="https://linkedin.com/company/automatescale" 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button 
+                type="submit" 
+                class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+              >
+                Enregistrer mon Profil Studio ➔
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Seller Sub-Panel 5: Versements & Payouts 80% -->
+      <div id="panel-seller-payouts" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>🏦</span> Paramètres de Versement (Split 80% Créateur / 20% HeliaTech)
+            </h2>
+            <p class="text-xs text-slate-400 font-light mt-1">
+              Vos gains nets sont versés automatiquement chaque 1er du mois selon la méthode de votre choix.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-slate-400 text-xs font-mono block mb-1">Méthode Active :</span>
+              <span class="text-emerald-400 font-bold font-mono text-sm">✓ Stripe Connect Express</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-slate-400 text-xs font-mono block mb-1">Prochain Virement :</span>
+              <span class="text-white font-bold font-mono text-sm">$392.00 (01 Déc 2026)</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <span class="text-slate-400 text-xs font-mono block mb-1">Seuil Déclenchement :</span>
+              <span class="text-cyan-400 font-bold font-mono text-sm">$50.00 USD</span>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <label class="block text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">Mode de Versement Préféré :</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+              <label class="p-3.5 rounded-xl bg-slate-900 border border-emerald-500/40 flex items-center gap-2.5 cursor-pointer">
+                <input type="radio" name="payout-type" value="stripe" checked class="text-emerald-400" />
+                <span>Stripe Connect (0% frais)</span>
+              </label>
+              <label class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2.5 cursor-pointer">
+                <input type="radio" name="payout-type" value="sepa" class="text-emerald-400" />
+                <span>Virement SEPA / IBAN</span>
+              </label>
+              <label class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2.5 cursor-pointer">
+                <input type="radio" name="payout-type" value="paypal" class="text-emerald-400" />
+                <span>PayPal Business</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-400">Attestation Fiscale &amp; Récapitulatif Annuel 2026</span>
+            <button id="btn-download-tax-cert" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
+              📄 Télécharger le Récapitulatif (PDF)
+            </button>
           </div>
         </div>
       </div>
@@ -240,7 +789,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 🛡️ MODALS INTERACTIFS (Upload avec Anti-Scam, Édition, Suppression, Facture) -->
+  <!-- 🛡️ MODALS INTERACTIFS (Upload Anti-Scam, Édition, Suppression, Facture B2B, Réponse) -->
   <!-- ========================================================================= -->
 
   <!-- 1. MODAL D'UPLOAD AVEC SCANNER ANTI-SCAM EN TEMPS RÉEL -->
@@ -485,20 +1034,20 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
     </div>
   </div>
 
-  <!-- 5. MODAL FACTURE PDF / JUSTIFICATIF COMPTABLE -->
+  <!-- 5. MODAL FACTURE PDF B2B / JUSTIFICATIF COMPTABLE -->
   <div id="invoice-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
     <div class="bg-slate-950 border border-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-5 shadow-2xl relative">
       <div class="flex items-center justify-between border-b border-slate-800 pb-3">
         <div class="flex items-center gap-2">
           <span class="text-cyan-400 text-xl">🏛️</span>
-          <span class="text-sm font-black text-white font-mono uppercase tracking-wider">HeliaTech Media — Facture Officielle</span>
+          <span class="text-sm font-black text-white font-mono uppercase tracking-wider">HeliaTech Media — Facture Officielle B2B</span>
         </div>
         <button id="close-invoice-modal-btn" class="w-8 h-8 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm font-bold">
           ✕
         </button>
       </div>
       <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs font-mono space-y-3" id="invoice-modal-content">
-        <!-- Injected via JS -->
+        <!-- Injected via JS with B2B Details -->
       </div>
       <button id="print-invoice-btn" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan">
         Imprimer / Sauvegarder en PDF ➔
@@ -541,9 +1090,9 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
           <label class="block text-xs font-mono text-slate-300 mb-1">Votre Rôle / Titre :</label>
           <input 
             type="text" 
-            id="review-role-input"
-            required
-            value="Lead Automation Engineer"
+            id="review-role-input" 
+            required 
+            value="Lead Automation Engineer" 
             class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
           />
         </div>
@@ -551,16 +1100,16 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         <div>
           <label class="block text-xs font-mono text-slate-300 mb-1">Votre Retour d'Expérience :</label>
           <textarea 
-            id="review-comment-input"
-            rows="3"
-            required
+            id="review-comment-input" 
+            rows="3" 
+            required 
             placeholder="Comment ce blueprint a-t-il simplifié vos opérations ? Combien de temps avez-vous économisé ?"
             class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
           ></textarea>
         </div>
 
         <button 
-          type="submit"
+          type="submit" 
           class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
         >
           Publier mon Avis Vérifié ➔
@@ -569,18 +1118,76 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
     </div>
   </div>
 
+  <!-- 7. MODAL RÉPONSE SUPPORT VENDEUR -->
+  <div id="seller-reply-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-950 border border-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-2xl relative">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span>💬</span> Répondre à l'Acheteur
+        </h3>
+        <button id="close-reply-modal-btn" class="w-8 h-8 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm font-bold">
+          ✕
+        </button>
+      </div>
+
+      <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs font-mono text-slate-300" id="reply-ticket-context">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="space-y-2">
+        <label class="block text-xs font-mono text-slate-300">Modèles de Réponse Rapide :</label>
+        <div class="flex flex-wrap gap-1.5">
+          <button type="button" class="canned-reply-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] font-mono text-cyan-300">
+            ✓ Patch v1.2.0 disponible
+          </button>
+          <button type="button" class="canned-reply-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] font-mono text-cyan-300">
+            ⚙️ Guide d'API attaché
+          </button>
+          <button type="button" class="canned-reply-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] font-mono text-cyan-300">
+            🤝 Problème résolu
+          </button>
+        </div>
+      </div>
+
+      <form id="seller-reply-form" class="space-y-4">
+        <input type="hidden" id="reply-ticket-id" />
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Votre Message :</label>
+          <textarea 
+            id="seller-reply-text" 
+            rows="4" 
+            required 
+            class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+            placeholder="Écrivez votre réponse personnalisée à l'acheteur..."
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
+        >
+          Envoyer la Réponse &amp; Clôturer le Ticket ➔
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- ========================================================================= -->
-  <!-- 💻 JAVASCRIPT DU PORTAL (STATE MANAGEMENT LOCALSTORAGE + AUDIT ANTI-SCAM) -->
+  <!-- 💻 JAVASCRIPT DU PORTAL (STATE MANAGEMENT LOCALSTORAGE + SENTINEL SCANNER) -->
   <!-- ========================================================================= -->
   <script is:inline>
-    // --- 1. DEFAULT DATA SEEDS ---
+    // --- 1. DEFAULT INITIAL SEEDS ---
     const DEFAULT_BUYER_PURCHASES = [
       {
         id: "pur-1",
         title: "n8n AI Lead Enrichment & Scoring Waterfall",
+        slug: "n8n-ai-lead-enricher-waterfall",
         ecosystem: "n8n",
         price: 49,
         date: "04 Nov 2026",
+        version: "1.2.0",
+        creator_name: "AutomateScale Studio",
+        creator_slug: "automatescale-studio",
         invoice_id: "HLT-INV-2026-9481",
         license_key: "HLT-N8N-8429-ENTERPRISE-PRO",
         nodes_count: 14,
@@ -589,9 +1196,13 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       {
         id: "pur-2",
         title: "Make.com Stripe Failed Payment Recovery Engine",
+        slug: "make-stripe-churn-rescue-blueprint",
         ecosystem: "make",
         price: 39,
         date: "02 Nov 2026",
+        version: "1.0.0",
+        creator_name: "SaaSGrowth Ops",
+        creator_slug: "saasgrowth-ops",
         invoice_id: "HLT-INV-2026-9320",
         license_key: "HLT-MAK-1940-COMMERCIAL-KEY",
         nodes_count: 8,
@@ -599,10 +1210,32 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       }
     ];
 
+    const DEFAULT_BUYER_WISHLIST = [
+      {
+        id: "wish-1",
+        title: "n8n Autonomous AI Voice Receptionist with ElevenLabs Agents",
+        slug: "n8n-ai-voice-receptionist-elevenlabs",
+        ecosystem: "n8n",
+        price: 69,
+        savings: "$800 / mo vs human front-desk",
+        added_at: "04 Nov 2026"
+      },
+      {
+        id: "wish-2",
+        title: "Cursor Rules Masterpack: Next.js 15, Tailwind & Supabase",
+        slug: "cursor-rules-nextjs-tailwind-supabase-masterpack",
+        ecosystem: "cursor",
+        price: 19,
+        savings: "Save 15h of code-review",
+        added_at: "03 Nov 2026"
+      }
+    ];
+
     const DEFAULT_SELLER_PRODUCTS = [
       {
         id: "prod-1",
         title: "n8n AI Lead Enrichment & Scoring Waterfall",
+        slug: "n8n-ai-lead-enricher-waterfall",
         ecosystem: "n8n",
         price: 49,
         version: "1.2.0",
@@ -616,6 +1249,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       {
         id: "prod-2",
         title: "Cursor AI Rules: Next.js 15, Tailwind & Supabase Masterpack",
+        slug: "cursor-rules-nextjs-tailwind-supabase-masterpack",
         ecosystem: "cursor",
         price: 19,
         version: "2.0.0",
@@ -629,19 +1263,51 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       {
         id: "prod-3",
         title: "Airtable B2B Client Onboarding & Contract OS",
+        slug: "airtable-b2b-client-portal-os",
         ecosystem: "airtable",
         price: 39,
         version: "1.0.0",
         tagline: "Système clé-en-main de gestion de projet client avec portail en lecture seule.",
-        status: "pending_audit",
-        trust_score: 88,
-        sales_count: 0,
-        rating: 0,
+        status: "active",
+        trust_score: 98,
+        sales_count: 5,
+        rating: 4.8,
         filename: "heliatech-airtable-onboarding-os.json"
       }
     ];
 
-    // --- 2. LOCAL STORAGE INITIALIZATION ---
+    const DEFAULT_SELLER_INBOX = [
+      {
+        id: "tick-1",
+        buyer_name: "Alexandre R.",
+        buyer_email: "alexandre.partner@heliatech.online",
+        product_title: "n8n AI Lead Enrichment & Scoring Waterfall",
+        question: "Bonjour, quel est le meilleur moyen de brancher les webhooks vers Airtable sans déclencher de doublons ?",
+        date: "Aujourd'hui à 11:20",
+        status: "open"
+      },
+      {
+        id: "tick-2",
+        buyer_name: "Marc L.",
+        buyer_email: "marc.revops@growthb2b.io",
+        product_title: "Cursor AI Rules Masterpack",
+        question: "Super ruleset ! Est-ce compatible avec le framework Nuxt/Vue ou uniquement Next.js ?",
+        date: "Hier à 16:45",
+        status: "resolved",
+        reply: "Bonjour Marc, ce pack est optimisé pour Next.js 15, mais nous publions la déclinaison Nuxt 3 la semaine prochaine !"
+      }
+    ];
+
+    const DEFAULT_B2B_PROFILE = {
+      company: "Acme Growth Technologies SAS",
+      vat: "FR82910293847",
+      address: "142 Avenue des Champs-Élysées, 75008 Paris",
+      country: "France",
+      email: "comptabilite@acmegrowth.com",
+      currency: "USD"
+    };
+
+    // --- 2. LOCAL STORAGE GETTERS & SETTERS ---
     function getBuyerPurchases() {
       const stored = localStorage.getItem('_ht_buyer_purchases');
       if (stored) {
@@ -654,6 +1320,29 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
     function saveBuyerPurchases(data) {
       localStorage.setItem('_ht_buyer_purchases', JSON.stringify(data));
       renderBuyerDashboard();
+    }
+
+    function getBuyerWishlist() {
+      const stored = localStorage.getItem('_ht_buyer_wishlist');
+      if (stored) {
+        try { return JSON.parse(stored); } catch(e) {}
+      }
+      localStorage.setItem('_ht_buyer_wishlist', JSON.stringify(DEFAULT_BUYER_WISHLIST));
+      return DEFAULT_BUYER_WISHLIST;
+    }
+
+    function saveBuyerWishlist(data) {
+      localStorage.setItem('_ht_buyer_wishlist', JSON.stringify(data));
+      renderBuyerWishlist();
+    }
+
+    function getBuyerB2B() {
+      const stored = localStorage.getItem('_ht_buyer_b2b');
+      if (stored) {
+        try { return JSON.parse(stored); } catch(e) {}
+      }
+      localStorage.setItem('_ht_buyer_b2b', JSON.stringify(DEFAULT_B2B_PROFILE));
+      return DEFAULT_B2B_PROFILE;
     }
 
     function getSellerProducts() {
@@ -670,14 +1359,40 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       renderSellerDashboard();
     }
 
+    function getSellerInbox() {
+      const stored = localStorage.getItem('_ht_seller_inbox');
+      if (stored) {
+        try { return JSON.parse(stored); } catch(e) {}
+      }
+      localStorage.setItem('_ht_seller_inbox', JSON.stringify(DEFAULT_SELLER_INBOX));
+      return DEFAULT_SELLER_INBOX;
+    }
+
+    function saveSellerInbox(data) {
+      localStorage.setItem('_ht_seller_inbox', JSON.stringify(data));
+      renderSellerInbox();
+    }
+
     // --- 3. DYNAMIC RENDERING: BUYER VIEW ---
     function renderBuyerDashboard() {
       const purchases = getBuyerPurchases();
       const listEl = document.getElementById('buyer-blueprints-list');
       const invoicesEl = document.getElementById('buyer-invoices-list');
       const countEl = document.getElementById('stat-buyer-blueprints');
+      const badgeCountEl = document.getElementById('badge-buyer-count');
 
       if (countEl) countEl.textContent = `${purchases.length} Blueprint${purchases.length > 1 ? 's' : ''}`;
+      if (badgeCountEl) badgeCountEl.textContent = purchases.length;
+
+      // Populate Support Blueprint Select
+      const selectBp = document.getElementById('support-blueprint-select');
+      if (selectBp) {
+        selectBp.innerHTML = purchases.map(p => `
+          <option value="${p.id}" data-creator="${p.creator_name || 'AutomateScale Studio'}" data-slug="${p.creator_slug || 'automatescale-studio'}">
+            ${p.title} (${p.creator_name || 'Studio'})
+          </option>
+        `).join('');
+      }
 
       if (listEl) {
         if (purchases.length === 0) {
@@ -695,28 +1410,32 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
             return `
               <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                 <div class="space-y-2">
-                  <div class="flex items-center gap-2.5">
+                  <div class="flex flex-wrap items-center gap-2">
                     <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-mono font-bold">
                       ${ecoBadge}
                     </span>
                     <span class="text-xs text-slate-400 font-mono">Acheté le ${p.date}</span>
-                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold">
                       Licence Commerciale
+                    </span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">
+                      v${p.version || '1.0.0'} • À jour
                     </span>
                   </div>
                   <h3 class="text-lg font-bold text-white">${p.title}</h3>
                   <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-slate-400">
                     <span>Clé Licence : <code class="text-cyan-400 bg-slate-950 px-2 py-1 rounded border border-slate-800">${p.license_key}</code></span>
                     <button class="copy-key-btn text-cyan-400 hover:underline" data-key="${p.license_key}">📋 Copier</button>
+                    ${p.creator_name ? `<span>• Par <a href="/creator/${p.creator_slug || 'automatescale-studio'}/" class="text-slate-300 hover:text-cyan-400 font-bold underline">${p.creator_name}</a></span>` : ''}
                   </div>
                 </div>
 
-                <div class="flex flex-wrap sm:flex-nowrap items-center gap-3">
+                <div class="flex flex-wrap sm:flex-nowrap items-center gap-2.5">
                   <button 
                     class="download-workflow-btn px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan flex items-center gap-2"
                     data-title="${p.title}"
                     data-ecosystem="${p.ecosystem}"
-                    data-filename="${p.filename}"
+                    data-filename="${p.filename || 'blueprint.json'}"
                   >
                     <span>⚡</span> Télécharger le .json
                   </button>
@@ -733,6 +1452,13 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
                   >
                     <span>★</span> Noter
                   </button>
+                  <button 
+                    class="switch-to-support-btn px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-slate-800 text-xs font-mono transition-all"
+                    data-id="${p.id}"
+                    title="Poser une question technique au créateur"
+                  >
+                    💬 Support
+                  </button>
                 </div>
               </div>
             `;
@@ -747,7 +1473,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
             <td class="py-3 text-slate-400">${p.invoice_id}</td>
             <td class="py-3 font-semibold text-white">${p.title}</td>
             <td class="py-3 text-emerald-400 font-bold">$${p.price}.00 USD</td>
-            <td class="py-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px]">Payé & Validé</span></td>
+            <td class="py-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px]">Payé &amp; Validé</span></td>
             <td class="py-3 text-right">
               <button 
                 class="view-invoice-btn text-cyan-400 hover:underline"
@@ -766,12 +1492,133 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       bindBuyerActionButtons();
     }
 
-    // --- 4. DYNAMIC RENDERING: SELLER VIEW ---
+    // --- 4. DYNAMIC RENDERING: BUYER WISHLIST ---
+    function renderBuyerWishlist() {
+      const wishlist = getBuyerWishlist();
+      const container = document.getElementById('buyer-wishlist-container');
+      const badgeCount = document.getElementById('badge-wishlist-count');
+      const totalPriceEl = document.getElementById('wishlist-total-price');
+
+      if (badgeCount) badgeCount.textContent = wishlist.length;
+
+      let total = 0;
+      wishlist.forEach(item => total += (item.price || 0));
+      if (totalPriceEl) totalPriceEl.textContent = `$${total.toFixed(2)} USD`;
+
+      if (container) {
+        if (wishlist.length === 0) {
+          container.innerHTML = `
+            <div class="p-8 text-center border border-dashed border-slate-800 rounded-2xl">
+              <p class="text-xs font-mono text-slate-400 mb-3">Votre wishlist est vide pour l'instant.</p>
+              <a href="/templates/" class="px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold inline-block">
+                Explorer le Catalogue &amp; Sauvegarder des Blueprints ➔
+              </a>
+            </div>
+          `;
+          document.getElementById('wishlist-summary-box')?.classList.add('hidden');
+        } else {
+          document.getElementById('wishlist-summary-box')?.classList.remove('hidden');
+          container.innerHTML = wishlist.map(item => {
+            const ecoBadge = item.ecosystem === 'n8n' ? '🟠 n8n' : (item.ecosystem === 'make' ? '🟣 Make' : (item.ecosystem === 'airtable' ? '🟡 Airtable' : '🤖 Cursor'));
+            return `
+              <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                      ${ecoBadge}
+                    </span>
+                    <span class="text-[11px] font-mono text-emerald-400 font-bold">💰 ${item.savings || 'Rentabilité validée'}</span>
+                  </div>
+                  <h3 class="text-base font-bold text-white hover:text-cyan-300 transition-colors">
+                    <a href="/templates/${item.slug}/">${item.title}</a>
+                  </h3>
+                </div>
+
+                <div class="flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 border-slate-800 pt-3 sm:pt-0">
+                  <div class="text-xl font-black text-white font-mono">$${item.price}.00</div>
+                  <div class="flex items-center gap-2">
+                    <button 
+                      class="buy-wishlist-item-btn px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+                      data-slug="${item.slug}"
+                      data-title="${item.title}"
+                      data-price="${item.price}"
+                      data-eco="${item.ecosystem}"
+                    >
+                      Acheter en 1-Clic ➔
+                    </button>
+                    <button 
+                      class="remove-wishlist-item-btn p-2 rounded-xl bg-slate-900 hover:bg-red-950/60 text-slate-400 hover:text-red-400 border border-slate-800 text-xs font-mono transition-all"
+                      data-slug="${item.slug}"
+                      title="Retirer de la wishlist"
+                    >
+                      🗑️
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+
+          // Bind single buy & remove
+          document.querySelectorAll('.buy-wishlist-item-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const slug = btn.getAttribute('data-slug');
+              const title = btn.getAttribute('data-title');
+              const price = parseFloat(btn.getAttribute('data-price')) || 49;
+              const eco = btn.getAttribute('data-eco') || 'n8n';
+
+              executeBuyerPurchase(title, slug, eco, price);
+
+              // Remove from wishlist
+              let wl = getBuyerWishlist().filter(w => w.slug !== slug);
+              saveBuyerWishlist(wl);
+            });
+          });
+
+          document.querySelectorAll('.remove-wishlist-item-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const slug = btn.getAttribute('data-slug');
+              let wl = getBuyerWishlist().filter(w => w.slug !== slug);
+              saveBuyerWishlist(wl);
+            });
+          });
+        }
+      }
+    }
+
+    function executeBuyerPurchase(title, slug, ecosystem, price) {
+      const purchases = getBuyerPurchases();
+      const newPur = {
+        id: `pur-${Date.now()}`,
+        title: title,
+        slug: slug,
+        ecosystem: ecosystem,
+        price: price,
+        date: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' }),
+        version: "1.0.0",
+        creator_name: "AutomateScale Studio",
+        creator_slug: "automatescale-studio",
+        invoice_id: `HLT-INV-2026-${Math.floor(1000 + Math.random() * 9000)}`,
+        license_key: `HLT-${ecosystem.toUpperCase().slice(0,3)}-${Math.floor(1000 + Math.random() * 9000)}-COMMERCIAL-KEY`,
+        nodes_count: 12,
+        filename: `heliatech-${ecosystem}-${slug}.json`
+      };
+
+      purchases.unshift(newPur);
+      saveBuyerPurchases(purchases);
+
+      alert(`⚡ [Licence Commerciale Activée] :\n"${title}" a été ajouté à votre bibliothèque avec succès !\nVotre fichier .json est immédiatement téléchargeable.`);
+      switchBuyerSubtab('panel-buyer-blueprints', 'subtab-buyer-blueprints');
+    }
+
+    // --- 5. DYNAMIC RENDERING: SELLER VIEW ---
     function renderSellerDashboard() {
       const products = getSellerProducts();
       const listEl = document.getElementById('seller-products-list');
+      const badgeCount = document.getElementById('badge-seller-count');
+
+      if (badgeCount) badgeCount.textContent = products.length;
       
-      // Calculate real stats
       let totalSales = 0;
       let totalGains = 0;
       products.forEach(p => {
@@ -798,11 +1645,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         } else {
           listEl.innerHTML = products.map(prod => {
             const ecoBadge = prod.ecosystem === 'n8n' ? '🟠 n8n' : (prod.ecosystem === 'make' ? '🟣 Make' : (prod.ecosystem === 'airtable' ? '🟡 Airtable' : '🤖 Cursor'));
-            const isPending = prod.status === 'pending_audit';
-            const statusBadge = isPending 
-              ? `<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px] font-mono">🟡 Audit Sentinel en cours</span>`
-              : `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono">🟢 En Ligne (Anti-Scam ${prod.trust_score || 99}/100)</span>`;
-
+            const statusBadge = `<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono">🟢 En Ligne (Anti-Scam ${prod.trust_score || 99}/100)</span>`;
             const creatorGainPerSale = (prod.price * 0.8).toFixed(2);
             const totalProdGains = ((prod.sales_count || 0) * prod.price * 0.8).toFixed(2);
 
@@ -827,7 +1670,6 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
                     <div class="text-xs text-emerald-400 font-mono font-bold">$${totalProdGains} nets</div>
                   </div>
 
-                  <!-- Seller Product Actions: Edit, Delete, Redownload -->
                   <div class="flex items-center gap-1.5">
                     <button 
                       class="redownload-prod-btn p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 text-xs font-mono transition-all"
@@ -853,6 +1695,15 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
                     >
                       🗑️
                     </button>
+                    ${prod.slug ? `
+                      <a 
+                        href="/templates/${prod.slug}/" 
+                        class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-cyan-400 border border-slate-800 text-xs font-mono transition-all"
+                        title="Voir la fiche publique"
+                      >
+                        👁️
+                      </a>
+                    ` : ''}
                   </div>
                 </div>
               </div>
@@ -864,7 +1715,74 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       bindSellerActionButtons();
     }
 
-    // --- 5. BINDING ACTION BUTTONS ---
+    // --- 6. DYNAMIC RENDERING: SELLER INBOX (SUPPORT CLIENTS) ---
+    function renderSellerInbox() {
+      const inbox = getSellerInbox();
+      const listEl = document.getElementById('seller-inbox-list');
+      if (!listEl) return;
+
+      if (inbox.length === 0) {
+        listEl.innerHTML = `<div class="p-8 text-center border border-dashed border-slate-800 rounded-2xl text-xs font-mono text-slate-400">Aucune requête en attente.</div>`;
+        return;
+      }
+
+      listEl.innerHTML = inbox.map(t => {
+        const isResolved = t.status === 'resolved';
+        return `
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold ${isResolved ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-amber-500/10 text-amber-400 border border-amber-500/30'}">
+                  ${isResolved ? '✓ Résolu' : '🟡 En Attente'}
+                </span>
+                <span class="text-xs font-bold text-white">${t.buyer_name}</span>
+                <span class="text-[11px] font-mono text-slate-400">(${t.buyer_email})</span>
+              </div>
+              <span class="text-[11px] font-mono text-slate-500">${t.date}</span>
+            </div>
+
+            <div class="text-xs font-mono text-cyan-300">
+              Concernant : <strong>${t.product_title}</strong>
+            </div>
+
+            <p class="text-xs text-slate-300 font-light leading-relaxed bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
+              "${t.question}"
+            </p>
+
+            ${isResolved && t.reply ? `
+              <div class="text-xs font-mono text-emerald-300 bg-emerald-950/20 border border-emerald-500/30 p-3 rounded-xl">
+                <strong class="text-white block mb-0.5">Votre Réponse :</strong>
+                ${t.reply}
+              </div>
+            ` : ''}
+
+            ${!isResolved ? `
+              <div class="pt-1 flex justify-end">
+                <button 
+                  class="seller-reply-btn px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+                  data-id="${t.id}"
+                  data-name="${t.buyer_name}"
+                  data-question="${t.question}"
+                >
+                  💬 Répondre à l'Acheteur ➔
+                </button>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+
+      document.querySelectorAll('.seller-reply-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          const name = btn.getAttribute('data-name');
+          const question = btn.getAttribute('data-question');
+          openSellerReplyModal(id, name, question);
+        });
+      });
+    }
+
+    // --- 7. BINDING ACTION BUTTONS ---
     function bindBuyerActionButtons() {
       // 1-Click License Copy
       document.querySelectorAll('.copy-key-btn').forEach(btn => {
@@ -920,6 +1838,13 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
           openReviewModal(id, title, btn);
         });
       });
+
+      // Switch to Support Tab
+      document.querySelectorAll('.switch-to-support-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          switchBuyerSubtab('panel-buyer-support', 'subtab-buyer-support');
+        });
+      });
     }
 
     function bindSellerActionButtons() {
@@ -941,7 +1866,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       });
     }
 
-    // --- 6. REAL JSON BLOB DOWNLOAD GENERATOR ---
+    // --- 8. REAL JSON BLOB DOWNLOAD GENERATOR ---
     function triggerDownloadJson(title, ecosystem, filename) {
       let content = {};
       if (ecosystem === 'n8n') {
@@ -1030,7 +1955,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       URL.revokeObjectURL(url);
     }
 
-    // --- 7. MODALS CONTROLLERS ---
+    // --- 9. MODALS CONTROLLERS ---
     // A. Edit Modal
     const editModal = document.getElementById('edit-modal');
     function openEditModal(prodId) {
@@ -1095,7 +2020,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         contentEl.innerHTML = `
           <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
             <strong class="text-white block mb-1">Étape 1 : Téléchargement du .json</strong>
-            Téléchargez le fichier propre certifié anti-scam depuis votre bibliothèque.
+            Téléchargez le fichier certifié anti-scam depuis votre bibliothèque.
           </div>
           <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
             <strong class="text-white block mb-1">Étape 2 : Import dans n8n</strong>
@@ -1115,11 +2040,11 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
           </div>
           <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
             <strong class="text-white block mb-1">Étape 2 : Importer le Blueprint</strong>
-            En bas de la barre d'outils, cliquez sur l'icône <strong>'...'</strong> (More) &gt; <strong>'Import Blueprint'</strong> et sélectionnez le fichier .json.
+            En bas de la barre d'outils, cliquez sur l'icône <strong>'...'</strong> &gt; <strong>'Import Blueprint'</strong> et sélectionnez le fichier .json.
           </div>
           <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
             <strong class="text-white block mb-1">Étape 3 : Associez vos connexions</strong>
-            Sélectionnez vos comptes Stripe / Slack et activez le switch ON.
+            Sélectionnez vos comptes Stripe / Slack et activez le scénario.
           </div>
         `;
       } else {
@@ -1135,19 +2060,30 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       guideModal?.classList.remove('hidden');
     }
 
-    // D. Invoice Modal
+    // D. Invoice Modal with B2B Personalization
     function openInvoiceModal(inv, title, price, date) {
       const invoiceModal = document.getElementById('invoice-modal');
       const contentEl = document.getElementById('invoice-modal-content');
+      const b2b = getBuyerB2B();
 
       contentEl.innerHTML = `
         <div class="flex justify-between border-b border-slate-800 pb-2">
-          <span>Facture : <strong class="text-white">${inv}</strong></span>
+          <span>Facture N° : <strong class="text-white">${inv}</strong></span>
           <span>Date : <strong class="text-slate-300">${date}</strong></span>
         </div>
-        <div class="space-y-1">
-          <div class="text-slate-400">Émetteur : <span class="text-white">HeliaTech Partnerships Media Group</span></div>
-          <div class="text-slate-400">Client : <span class="text-white">Alexandre R. (alexandre.partner@heliatech.online)</span></div>
+        <div class="grid grid-cols-2 gap-3 text-[11px] pt-1">
+          <div>
+            <span class="text-slate-500 block">ÉMETTEUR :</span>
+            <strong class="text-white block">HeliaTech Media Group</strong>
+            <span class="text-slate-400">Siège Paris, France</span>
+            <span class="text-slate-400">TVA : FR74928172938</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">CLIENT / FACTURÉ À :</span>
+            <strong class="text-cyan-300 block">${b2b.company || 'Alexandre R.'}</strong>
+            <span class="text-slate-400">TVA / SIRET : ${b2b.vat || 'FR82910293847'}</span>
+            <span class="text-slate-400">${b2b.address || 'Paris, France'}</span>
+          </div>
         </div>
         <div class="border-t border-b border-slate-800 py-3 space-y-1.5">
           <div class="flex justify-between font-bold text-white">
@@ -1158,13 +2094,13 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
             <span>${title}</span>
             <span>$${price}.00 USD</span>
           </div>
-          <div class="flex justify-between text-[11px] text-slate-500">
-            <span>Split HeliaTech Take (20%) / Créateur Net (80%)</span>
-            <span>TVA : Autoliquidée (B2B)</span>
+          <div class="flex justify-between text-[10px] text-slate-500">
+            <span>Split 80% Créateur / 20% HeliaTech</span>
+            <span>TVA : Autoliquidée (B2B Intracom)</span>
           </div>
         </div>
         <div class="flex justify-between items-center text-sm font-bold text-emerald-400">
-          <span>Total Réglé (Paiement Sécurisé) :</span>
+          <span>Total Net Réglé :</span>
           <span class="text-base font-black">$${price}.00 USD</span>
         </div>
       `;
@@ -1174,7 +2110,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
 
     document.getElementById('close-invoice-modal-btn')?.addEventListener('click', () => document.getElementById('invoice-modal')?.classList.add('hidden'));
     document.getElementById('print-invoice-btn')?.addEventListener('click', () => {
-      alert("✓ Génération du reçu comptable PDF conforme HeliaTech.");
+      alert("✓ Téléchargement du reçu comptable officiel B2B conforme HeliaTech.");
       document.getElementById('invoice-modal')?.classList.add('hidden');
     });
 
@@ -1216,10 +2152,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
 
     document.getElementById('review-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const bpId = document.getElementById('review-blueprint-id').value;
       const rating = document.getElementById('review-rating-val').value;
-      const role = document.getElementById('review-role-input').value;
-      const comment = document.getElementById('review-comment-input').value;
 
       if (currentReviewBtn) {
         currentReviewBtn.textContent = `✓ Noté ${rating}★`;
@@ -1232,7 +2165,44 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       reviewModal?.classList.add('hidden');
     });
 
-    // --- 8. UPLOAD & REAL-TIME ANTI-SCAM SCANNER ENGINE ---
+    // F. Seller Reply Modal
+    const sellerReplyModal = document.getElementById('seller-reply-modal');
+    function openSellerReplyModal(id, buyerName, question) {
+      document.getElementById('reply-ticket-id').value = id;
+      document.getElementById('reply-ticket-context').innerHTML = `
+        <div class="text-white font-bold mb-1">Acheteur : ${buyerName}</div>
+        <p class="text-slate-300">"${question}"</p>
+      `;
+      document.getElementById('seller-reply-text').value = "";
+      sellerReplyModal?.classList.remove('hidden');
+    }
+
+    document.getElementById('close-reply-modal-btn')?.addEventListener('click', () => sellerReplyModal?.classList.add('hidden'));
+
+    document.querySelectorAll('.canned-reply-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('seller-reply-text').value = btn.textContent.trim() + " — N'hésitez pas si vous avez d'autres questions sur l'intégration !";
+      });
+    });
+
+    document.getElementById('seller-reply-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const id = document.getElementById('reply-ticket-id').value;
+      const replyText = document.getElementById('seller-reply-text').value;
+
+      const inbox = getSellerInbox();
+      const idx = inbox.findIndex(t => t.id === id);
+      if (idx !== -1) {
+        inbox[idx].status = 'resolved';
+        inbox[idx].reply = replyText;
+        saveSellerInbox(inbox);
+      }
+
+      alert("✓ Réponse transmise à l'acheteur. Ticket marqué comme résolu !");
+      sellerReplyModal?.classList.add('hidden');
+    });
+
+    // --- 10. UPLOAD & REAL-TIME ANTI-SCAM SCANNER ENGINE ---
     const uploadModal = document.getElementById('upload-modal');
     const uploadPriceInput = document.getElementById('upload-price');
     const uploadNetGain = document.getElementById('upload-net-gain');
@@ -1250,7 +2220,6 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       if (uploadNetGain) uploadNetGain.textContent = `$${(p * 0.8).toFixed(2)}`;
     });
 
-    // Scanner state reset
     function resetAntiScamAudit() {
       document.getElementById('anti-scam-audit-box')?.classList.add('hidden');
       document.getElementById('btn-submit-blueprint').disabled = true;
@@ -1259,7 +2228,6 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       document.getElementById('drop-zone-text').textContent = "Cliquez pour charger un fichier .json ou glissez-déposez";
     }
 
-    // Real client-side Anti-Scam analysis engine
     function runAntiScamAnalysis(rawJsonString) {
       const auditBox = document.getElementById('anti-scam-audit-box');
       const trustBadge = document.getElementById('scanner-trust-badge');
@@ -1287,7 +2255,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         score = 0;
       }
 
-      // 1. Structure AST verification
+      // Structure AST verification
       let hasNodes = false;
       if (isJsonValid && parsed) {
         const nodes = parsed.nodes || parsed.blueprint?.flow || parsed.flow || [];
@@ -1306,7 +2274,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         score -= 50;
       }
 
-      // 2. Phishing & Shortlinks Check
+      // Phishing & Shortlinks Check
       const scamUrlRegex = /(bit\.ly|tinyurl\.com|t\.co|ngrok\-free|discordapp\.com\/api\/webhooks)/i;
       if (scamUrlRegex.test(rawJsonString)) {
         chkPhishing.innerHTML = `<span class="text-red-400 font-bold">✗</span> <span class="text-red-300">ALERTE SCAM : URLs masquées ou webhooks suspects détectés</span>`;
@@ -1316,7 +2284,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         chkPhishing.innerHTML = `<span class="text-emerald-400 font-bold">✓</span> <span class="text-emerald-300">Aucun lien suspect ou redirector de phishing détecté</span>`;
       }
 
-      // 3. Exposed API Keys
+      // Exposed API Keys
       const secretRegex = /(sk-[a-zA-Z0-9]{20,}|sk_live_[a-zA-Z0-9]{24,}|ghp_[a-zA-Z0-9]{30,})/i;
       if (secretRegex.test(rawJsonString)) {
         chkSecrets.innerHTML = `<span class="text-amber-400 font-bold">⚠️</span> <span class="text-amber-300">Clés API exposées détectées — Auto-désinfection appliquée</span>`;
@@ -1325,7 +2293,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         chkSecrets.innerHTML = `<span class="text-emerald-400 font-bold">✓</span> <span class="text-emerald-300">Zéro fuite de clés privées (Code 100% anonymisé)</span>`;
       }
 
-      // 4. Malware & process execution
+      // Malware & Process Execution
       const malwareRegex = /(eval\s*\(|exec\s*\(|child_process|Function\s*\()/i;
       if (malwareRegex.test(rawJsonString)) {
         chkMalware.innerHTML = `<span class="text-red-400 font-bold">✗</span> <span class="text-red-300">ALERTE MALWARE : Injection de code dynamique détectée</span>`;
@@ -1337,7 +2305,6 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
 
       score = Math.max(0, score);
 
-      // Final Verdict
       setTimeout(() => {
         if (score >= 80 && hasNodes) {
           trustBadge.textContent = `Score de Confiance : ${score}/100`;
@@ -1359,8 +2326,6 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       }, 500);
     }
 
-
-
     // File Drop Handling
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
@@ -1376,7 +2341,6 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       }
     });
 
-    // Add new product from form to seller state
     document.getElementById('upload-template-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
       const title = document.getElementById('upload-title').value;
@@ -1388,6 +2352,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       const newProd = {
         id: `prod-${Date.now()}`,
         title,
+        slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
         ecosystem,
         price,
         version,
@@ -1407,7 +2372,185 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       uploadModal?.classList.add('hidden');
     });
 
-    // --- 9. MODE SWITCHER LOGIC ---
+    // --- 11. SUB-TABS NAVIGATION CONTROLLER ---
+    // Buyer sub-tabs
+    function switchBuyerSubtab(panelId, btnId) {
+      document.querySelectorAll('#buyer-dashboard-view > div[id^="panel-buyer"]').forEach(p => p.classList.add('hidden'));
+      document.getElementById(panelId)?.classList.remove('hidden');
+
+      document.querySelectorAll('.buyer-subtab').forEach(b => {
+        b.className = "buyer-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800";
+      });
+      document.getElementById(btnId)?.setAttribute('class', 'buyer-subtab px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all flex items-center gap-2 shadow-glow-cyan');
+    }
+
+    document.getElementById('subtab-buyer-blueprints')?.addEventListener('click', () => switchBuyerSubtab('panel-buyer-blueprints', 'subtab-buyer-blueprints'));
+    document.getElementById('subtab-buyer-wishlist')?.addEventListener('click', () => switchBuyerSubtab('panel-buyer-wishlist', 'subtab-buyer-wishlist'));
+    document.getElementById('subtab-buyer-support')?.addEventListener('click', () => switchBuyerSubtab('panel-buyer-support', 'subtab-buyer-support'));
+    document.getElementById('subtab-buyer-b2b')?.addEventListener('click', () => switchBuyerSubtab('panel-buyer-b2b', 'subtab-buyer-b2b'));
+    document.getElementById('subtab-buyer-deploy')?.addEventListener('click', () => switchBuyerSubtab('panel-buyer-deploy', 'subtab-buyer-deploy'));
+
+    // Seller sub-tabs
+    function switchSellerSubtab(panelId, btnId) {
+      document.querySelectorAll('#seller-dashboard-view > div[id^="panel-seller"]').forEach(p => p.classList.add('hidden'));
+      document.getElementById(panelId)?.classList.remove('hidden');
+
+      document.querySelectorAll('.seller-subtab').forEach(b => {
+        b.className = "seller-subtab px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800";
+      });
+      document.getElementById(btnId)?.setAttribute('class', 'seller-subtab px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all flex items-center gap-2 shadow-glow-cyan');
+    }
+
+    document.getElementById('subtab-seller-products')?.addEventListener('click', () => switchSellerSubtab('panel-seller-products', 'subtab-seller-products'));
+    document.getElementById('subtab-seller-analytics')?.addEventListener('click', () => switchSellerSubtab('panel-seller-analytics', 'subtab-seller-analytics'));
+    document.getElementById('subtab-seller-support')?.addEventListener('click', () => switchSellerSubtab('panel-seller-support', 'subtab-seller-support'));
+    document.getElementById('subtab-seller-profile')?.addEventListener('click', () => switchSellerSubtab('panel-seller-profile', 'subtab-seller-profile'));
+    document.getElementById('subtab-seller-payouts')?.addEventListener('click', () => switchSellerSubtab('panel-seller-payouts', 'subtab-seller-payouts'));
+
+    // --- 12. BUYER SUPPORT & CHAT SIMULATOR ---
+    const chatContainer = document.getElementById('support-chat-messages');
+    const defaultChat = [
+      { sender: 'creator', text: "Bonjour Alexandre ! Merci d'avoir choisi nos blueprints. Je suis disponible si vous avez la moindre question pour le déploiement ou la connexion d'API.", time: "10:14" },
+      { sender: 'buyer', text: "Bonjour ! Est-ce que les webhooks sont compatibles avec un déploiement n8n sur Docker ?", time: "10:18" },
+      { sender: 'creator', text: "Absolument ! Tous nos nœuds utilisent des routes relatives standard. Vous avez juste à configurer votre WEBHOOK_URL dans vos variables d'environnement Docker.", time: "10:20" }
+    ];
+
+    function renderSupportChat() {
+      if (!chatContainer) return;
+      chatContainer.innerHTML = defaultChat.map(m => {
+        const isBuyer = m.sender === 'buyer';
+        return `
+          <div class="flex flex-col ${isBuyer ? 'items-end' : 'items-start'}">
+            <div class="flex items-center gap-1.5 mb-1 text-[10px] text-slate-500">
+              <span>${isBuyer ? 'Vous (Alexandre R.)' : 'AutomateScale Studio'}</span>
+              <span>• ${m.time}</span>
+            </div>
+            <div class="p-3 rounded-2xl max-w-md ${isBuyer ? 'bg-cyan-500 text-slate-950 font-semibold' : 'bg-slate-800 text-slate-200 border border-slate-700'}">
+              ${m.text}
+            </div>
+          </div>
+        `;
+      }).join('');
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    document.getElementById('support-message-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = document.getElementById('support-message-input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      const now = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+      defaultChat.push({ sender: 'buyer', text: val, time: now });
+      renderSupportChat();
+      input.value = "";
+
+      // Realistic instant assistant feedback
+      setTimeout(() => {
+        defaultChat.push({
+          sender: 'creator',
+          text: `Merci pour votre message ! Un architecte certifié examine votre demande technique (${val.slice(0, 30)}...) et vous répond en détail.`,
+          time: new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+        });
+        renderSupportChat();
+      }, 700);
+    });
+
+    document.querySelectorAll('.quick-prompt-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = document.getElementById('support-message-input');
+        if (input) input.value = btn.textContent.trim().replace(/^[^\s]+\s*/, '');
+      });
+    });
+
+    // --- 13. B2B BILLING FORM ---
+    document.getElementById('buyer-b2b-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const b2b = {
+        company: document.getElementById('b2b-company').value,
+        vat: document.getElementById('b2b-vat').value,
+        address: document.getElementById('b2b-address').value,
+        country: document.getElementById('b2b-country').value,
+        email: document.getElementById('b2b-email').value,
+        currency: document.getElementById('b2b-currency').value
+      };
+      localStorage.setItem('_ht_buyer_b2b', JSON.stringify(b2b));
+      alert("✓ Coordonnées d'entreprise B2B enregistrées avec succès !\nElles figureront sur l'ensemble de vos prochaines factures officielles.");
+    });
+
+    // Populate B2B Form from localStorage
+    const savedB2b = getBuyerB2B();
+    if (document.getElementById('b2b-company')) document.getElementById('b2b-company').value = savedB2b.company || '';
+    if (document.getElementById('b2b-vat')) document.getElementById('b2b-vat').value = savedB2b.vat || '';
+    if (document.getElementById('b2b-address')) document.getElementById('b2b-address').value = savedB2b.address || '';
+    if (document.getElementById('b2b-country')) document.getElementById('b2b-country').value = savedB2b.country || 'France';
+    if (document.getElementById('b2b-email')) document.getElementById('b2b-email').value = savedB2b.email || '';
+    if (document.getElementById('b2b-currency')) document.getElementById('b2b-currency').value = savedB2b.currency || 'USD';
+
+    // --- 14. API TOKEN CONTROLLER ---
+    document.getElementById('toggle-token-btn')?.addEventListener('click', () => {
+      const field = document.getElementById('deploy-token-field');
+      const btn = document.getElementById('toggle-token-btn');
+      if (field.type === 'password') {
+        field.type = 'text';
+        btn.textContent = '🔒 Masquer';
+      } else {
+        field.type = 'password';
+        btn.textContent = '👁️ Afficher';
+      }
+    });
+
+    document.getElementById('copy-token-btn')?.addEventListener('click', () => {
+      const field = document.getElementById('deploy-token-field');
+      navigator.clipboard.writeText(field.value);
+      const btn = document.getElementById('copy-token-btn');
+      btn.textContent = '✓ Copié !';
+      setTimeout(() => { btn.textContent = '📋 Copier'; }, 2000);
+    });
+
+    document.getElementById('btn-regen-token')?.addEventListener('click', () => {
+      if (confirm("Générer un nouveau Token de Déploiement API ? L'ancien token sera révoqué.")) {
+        const rand = Array.from(crypto.getRandomValues(new Uint8Array(12))).map(b => b.toString(16).padStart(2, '0')).join('');
+        document.getElementById('deploy-token-field').value = `hlt_live_deploy_${rand}`;
+        alert("✓ Nouveau Token API généré avec succès !");
+      }
+    });
+
+    // Buy all wishlist
+    document.getElementById('btn-buy-all-wishlist')?.addEventListener('click', () => {
+      const wl = getBuyerWishlist();
+      if (wl.length === 0) return;
+
+      if (confirm(`Commander les ${wl.length} blueprints de votre wishlist ?`)) {
+        wl.forEach(item => {
+          executeBuyerPurchase(item.title, item.slug, item.ecosystem, item.price);
+        });
+        localStorage.setItem('_ht_buyer_wishlist', JSON.stringify([]));
+        renderBuyerWishlist();
+      }
+    });
+
+    // --- 15. SELLER PROFILE FORM ---
+    document.getElementById('seller-profile-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const studioProfile = {
+        name: document.getElementById('seller-studio-name').value,
+        badge: document.getElementById('seller-studio-badge').value,
+        bio: document.getElementById('seller-studio-bio').value,
+        website: document.getElementById('seller-studio-website').value,
+        github: document.getElementById('seller-studio-github').value,
+        linkedin: document.getElementById('seller-studio-linkedin').value
+      };
+      localStorage.setItem('_ht_seller_profile', JSON.stringify(studioProfile));
+      alert("✓ Profil Studio Créateur mis à jour ! Votre vitrine publique a été actualisée.");
+    });
+
+    // Tax cert download
+    document.getElementById('btn-download-tax-cert')?.addEventListener('click', () => {
+      alert("✓ Génération de l'attestation fiscale annuelle 2026 (Revenus nets de cession de licences logicielles sous le régime des redevances d'auteur/split 80%).");
+    });
+
+    // --- 16. DUAL-MODE SWITCHER LOGIC ---
     const btnBuyer = document.getElementById('btn-buyer-mode');
     const btnSeller = document.getElementById('btn-seller-mode');
     const buyerView = document.getElementById('buyer-dashboard-view');
@@ -1431,6 +2574,8 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       userInitials.textContent = "AR";
       localStorage.setItem('_ht_portal_role', 'buyer');
       renderBuyerDashboard();
+      renderBuyerWishlist();
+      renderSupportChat();
     }
 
     function setSellerMode() {
@@ -1448,6 +2593,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       userInitials.textContent = "AS";
       localStorage.setItem('_ht_portal_role', 'seller');
       renderSellerDashboard();
+      renderSellerInbox();
     }
 
     btnBuyer?.addEventListener('click', setBuyerMode);
@@ -1458,9 +2604,14 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
     document.getElementById('btn-reset-data')?.addEventListener('click', () => {
       if (confirm("Réinitialiser toutes les données de test à l'état d'origine ?")) {
         localStorage.removeItem('_ht_buyer_purchases');
+        localStorage.removeItem('_ht_buyer_wishlist');
         localStorage.removeItem('_ht_seller_products');
+        localStorage.removeItem('_ht_seller_inbox');
+        localStorage.removeItem('_ht_buyer_b2b');
         renderBuyerDashboard();
+        renderBuyerWishlist();
         renderSellerDashboard();
+        renderSellerInbox();
         alert("✓ Données démo réinitialisées.");
       }
     });

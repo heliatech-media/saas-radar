@@ -200,9 +200,18 @@ const categories = [
                   {tpl.title}
                 </a>
               </h2>
-              <p class="text-xs text-slate-400 font-light leading-relaxed mb-4 line-clamp-2">
+              <p class="text-xs text-slate-400 font-light leading-relaxed mb-3 line-clamp-2">
                 {tpl.tagline}
               </p>
+
+              <!-- Creator Storefront Link -->
+              <div class="flex items-center gap-2 mb-4 text-[11px] font-mono text-slate-400">
+                <img src={tpl.creator.avatar} alt={tpl.creator.name} class="w-4 h-4 rounded-full border border-slate-700 object-cover" />
+                <span class="text-slate-500">Par</span>
+                <a href={`/creator/${tpl.creator.slug || tpl.creator.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} class="text-cyan-400 hover:underline font-bold">
+                  {tpl.creator.name}
+                </a>
+              </div>
 
               <!-- Mini Pipeline Nodes Preview -->
               {tpl.pipeline_steps && tpl.pipeline_steps.length > 0 && (

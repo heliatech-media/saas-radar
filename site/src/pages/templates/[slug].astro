@@ -75,12 +75,15 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
           </p>
         </div>
 
-        <!-- Creator Card -->
-        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-center justify-between">
+        <!-- Creator Card with Storefront Link -->
+        <a 
+          href={`/creator/${template.creator.slug || template.creator.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`} 
+          class="p-4 rounded-2xl bg-slate-900/60 hover:bg-slate-900/90 border border-slate-800 hover:border-cyan-500/40 flex items-center justify-between transition-all group"
+        >
           <div class="flex items-center gap-3">
-            <img src={template.creator.avatar} alt={template.creator.name} class="w-11 h-11 rounded-full border border-slate-700" />
+            <img src={template.creator.avatar} alt={template.creator.name} class="w-11 h-11 rounded-full border border-slate-700 group-hover:border-cyan-500/50 transition-colors" />
             <div>
-              <div class="text-white font-bold text-sm flex items-center gap-2">
+              <div class="text-white group-hover:text-cyan-300 font-bold text-sm flex items-center gap-2 transition-colors">
                 {template.creator.name}
                 <span class="text-[10px] px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono">
                   {template.creator.badge}
@@ -91,7 +94,10 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
               </div>
             </div>
           </div>
-        </div>
+          <span class="text-xs font-mono text-cyan-400 group-hover:translate-x-1 transition-transform flex items-center gap-1">
+            <span>Voir le Studio</span> ➔
+          </span>
+        </a>
 
         <!-- ========================================================================= -->
         <!-- 🎨 INTERACTIVE VISUAL WORKFLOW NODE GRAPH & CODE INSPECTOR -->
@@ -304,13 +310,25 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
             💰 Rentabilité : {template.monthly_savings_estimate}
           </div>
 
-          <!-- Purchase Action Button -->
+          <!-- Purchase Action Button & Wishlist -->
           <div class="space-y-3">
             <button 
               id="checkout-btn"
               class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider text-center transition-all shadow-glow-cyan"
             >
               Acheter &amp; Télécharger le JSON (${template.price_usd}) ➔
+            </button>
+            <button 
+              id="add-wishlist-btn"
+              class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 font-mono text-xs transition-all flex items-center justify-center gap-2"
+              data-id={template.id}
+              data-slug={template.slug}
+              data-title={template.title}
+              data-ecosystem={template.ecosystem}
+              data-price={template.price_usd}
+              data-savings={template.monthly_savings_estimate}
+            >
+              <span>💖</span> Ajouter à ma Wishlist
             </button>
             <p class="text-[10px] text-slate-400 text-center font-mono">
               ⚡ Livraison immédiate du fichier .json sécurisé + tutoriel d'import
@@ -368,6 +386,40 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
         const btn = document.getElementById('copy-code-btn');
         btn.textContent = "✓ Copié !";
         setTimeout(() => { btn.textContent = "📋 Copier l'Extrait"; }, 2000);
+      }
+    });
+
+    // Wishlist Button Handler
+    document.getElementById('add-wishlist-btn')?.addEventListener('click', (e) => {
+      const btn = e.currentTarget;
+      const item = {
+        id: btn.getAttribute('data-id'),
+        slug: btn.getAttribute('data-slug'),
+        title: btn.getAttribute('data-title'),
+        ecosystem: btn.getAttribute('data-ecosystem'),
+        price: parseFloat(btn.getAttribute('data-price')) || 49,
+        savings: btn.getAttribute('data-savings') || '$200/mo',
+        added_at: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })
+      };
+
+      let wishlist = [];
+      try {
+        const stored = localStorage.getItem('_ht_buyer_wishlist');
+        if (stored) wishlist = JSON.parse(stored);
+      } catch(err) {}
+
+      if (!wishlist.some(w => w.slug === item.slug)) {
+        wishlist.push(item);
+        localStorage.setItem('_ht_buyer_wishlist', JSON.stringify(wishlist));
+        btn.innerHTML = "<span>✓</span> Ajouté à votre Wishlist !";
+        btn.classList.add('text-emerald-400', 'border-emerald-500/40');
+        setTimeout(() => {
+          if (confirm("💖 Blueprint sauvegardé dans votre Wishlist !\nVoulez-vous ouvrir votre Espace Client pour le consulter ?")) {
+            window.location.href = '/portal/';
+          }
+        }, 300);
+      } else {
+        alert("Ce blueprint est déjà dans votre Wishlist !");
       }
     });
 

@@ -1,0 +1,176 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import templates from '../../data/templates_catalog.json';
+
+export async function getStaticPaths() {
+  const creatorsMap = new Map();
+
+  templates.forEach((tpl) => {
+    const slug = tpl.creator.slug || tpl.creator.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    if (!creatorsMap.has(slug)) {
+      creatorsMap.set(slug, {
+        creator: tpl.creator,
+        slug: slug,
+        blueprints: []
+      });
+    }
+    creatorsMap.get(slug).blueprints.push(tpl);
+  });
+
+  return Array.from(creatorsMap.values()).map((entry) => ({
+    params: { slug: entry.slug },
+    props: { 
+      creator: entry.creator, 
+      blueprints: entry.blueprints 
+    }
+  }));
+}
+
+const { creator, blueprints } = Astro.props;
+const pageTitle = `${creator.name} — Profil Créateur Vérifié | HeliaTech Marketplace`;
+const pageDescription = creator.bio || `Découvrez les blueprints d'automatisation n8n, Make et Airtable conçus par ${creator.name}.`;
+
+const totalSales = blueprints.reduce((acc, bp) => acc + (bp.sales_count || 0), 0);
+const avgRating = (blueprints.reduce((acc, bp) => acc + (bp.rating || 5.0), 0) / blueprints.length).toFixed(2);
+---
+
+<Layout title={pageTitle} description={pageDescription} noindex={true}>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-24">
+    
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-400 mb-8">
+      <a href="/templates/" class="hover:text-cyan-400 transition-colors">Marketplace</a>
+      <span>/</span>
+      <span class="text-slate-500 uppercase">Créateurs</span>
+      <span>/</span>
+      <span class="text-cyan-300">{creator.name}</span>
+    </nav>
+
+    <!-- Creator Header Banner & Bio Card -->
+    <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border border-slate-800 mb-12 shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-32 -right-32 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+        
+        <div class="flex items-start sm:items-center gap-5">
+          <img 
+            src={creator.avatar} 
+            alt={creator.name} 
+            class="w-20 h-20 rounded-2xl border-2 border-cyan-500/40 shadow-glow-cyan object-cover bg-slate-900 flex-shrink-0"
+          />
+          <div>
+            <div class="flex flex-wrap items-center gap-2.5 mb-2">
+              <h1 class="text-2xl sm:text-3xl font-black text-white">{creator.name}</h1>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold">
+                ✓ {creator.badge}
+              </span>
+            </div>
+            <p class="text-sm text-slate-300 font-light max-w-xl leading-relaxed mb-3">
+              {creator.bio}
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+              {creator.website && (
+                <a href={creator.website} target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 flex items-center gap-1">
+                  🌐 <span>Site Web</span>
+                </a>
+              )}
+              {creator.github && (
+                <span class="flex items-center gap-1 text-slate-400">
+                  🐙 <span>@{creator.github}</span>
+                </span>
+              )}
+              {creator.linkedin && (
+                <a href={creator.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 flex items-center gap-1">
+                  💼 <span>LinkedIn</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Contact Action -->
+        <button 
+          id="contact-creator-btn"
+          class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 text-xs font-mono font-bold transition-all whitespace-nowrap self-stretch md:self-auto text-center"
+        >
+          💬 Contacter le Créateur ➔
+        </button>
+
+      </div>
+
+      <!-- Telemetry Strip -->
+      <div class="grid grid-cols-3 gap-4 pt-8 mt-8 border-t border-slate-800/80 text-center">
+        <div>
+          <div class="text-2xl font-black text-cyan-400 font-mono mb-0.5">{blueprints.length}</div>
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Blueprints Publiés</div>
+        </div>
+        <div>
+          <div class="text-2xl font-black text-emerald-400 font-mono mb-0.5">{totalSales}</div>
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Installations Vérifiées</div>
+        </div>
+        <div>
+          <div class="text-2xl font-black text-amber-400 font-mono mb-0.5">★ {avgRating}</div>
+          <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Note Moyenne Clients</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Creator's Catalog Section -->
+    <div class="space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span>📦</span> Blueprints Conçus par {creator.name}
+          </h2>
+          <p class="text-xs text-slate-400 font-light mt-0.5">
+            Tous les workflows de ce créateur ont passé l'audit Sentinel Anti-Scam et sont certifiés sans fuite de clé.
+          </p>
+        </div>
+        <span class="text-xs font-mono text-cyan-400 font-bold">{blueprints.length} templates disponibles</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blueprints.map((tpl) => (
+          <div class="p-6 rounded-3xl bg-slate-950/70 border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono uppercase font-bold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                  {tpl.ecosystem.toUpperCase()}
+                </span>
+                <span class="text-xs font-mono text-amber-400">★ {tpl.rating}</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                <a href={`/templates/${tpl.slug}/`}>{tpl.title}</a>
+              </h3>
+              <p class="text-xs text-slate-400 font-light line-clamp-2 leading-relaxed">
+                {tpl.tagline}
+              </p>
+              <div class="text-[11px] font-mono text-emerald-400">
+                💰 {tpl.monthly_savings_estimate}
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+              <span class="text-2xl font-black text-white font-mono">${tpl.price_usd}</span>
+              <a 
+                href={`/templates/${tpl.slug}/`}
+                class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan"
+              >
+                Inspecter ➔
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <script is:inline>
+    document.getElementById('contact-creator-btn')?.addEventListener('click', () => {
+      alert("💬 [Messagerie Créateur] : Pour contacter ce créateur au sujet de ses blueprints ou d'une demande sur-mesure, accédez à votre Espace Client (/portal/) onglet 'Support & Échanges'.");
+      window.location.href = '/portal/';
+    });
+  </script>
+</Layout>
