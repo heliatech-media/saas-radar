@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 5,
+  "total_sent": 6,
   "dispatches": [
     {
       "type": "weekly_radar",
@@ -36,15 +36,22 @@
       "recipient": "director@heliatech.online",
       "dispatched_at": "2026-11-04T13:32:11.672412",
       "resend_id": "01a1a68b-9d43-77a5-afad-446e3d9ff258"
+    },
+    {
+      "type": "weekly_radar",
+      "issue": 44,
+      "recipient": "hamzaelfahsi@gmail.com",
+      "dispatched_at": "2026-11-05T01:52:10.468716",
+      "resend_id": "01a1a931-1b7e-7df1-9a58-7f11dd80e576"
     }
   ],
   "active_campaigns": {
     "weekly_radar": {
-      "last_sent": "2026-11-01T02:09:31.619376",
-      "current_issue": 43
+      "last_sent": "2026-11-05T01:52:10.468716",
+      "current_issue": 44
     },
     "pr_outreach": {
-      "last_sent": "2026-11-04T21:40:07.887478",
+      "last_sent": "2026-11-05T01:52:11.109274",
       "sent_brands": [
         "Make",
         "Supabase",

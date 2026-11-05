@@ -5,7 +5,7 @@ tagline: Scale your cold email outreach with unlimited accounts and automated wa
 category: Sales Automation
 rating: 4.8
 website_url: https://instantly.ai
-affiliate_url: https://instantly.ai
+affiliate_url: "https://instantly.ai/?via=heliatech"
 summary: Instantly.ai is a specialized cold email platform designed to solve the deliverability
   and scaling issues inherent in traditional B2B outreach. It pioneered the 'unlimited
   email accounts' pricing model, allowing users to connect hundreds of sender profiles

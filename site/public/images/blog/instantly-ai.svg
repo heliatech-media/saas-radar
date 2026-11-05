@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Dark Cyber Gradients -->
+    <radialGradient id="bg-radial" cx="70%" cy="45%" r="85%" fx="60%" fy="40%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="40%" stop-color="#070c18" />
+      <stop offset="100%" stop-color="#020408" />
+    </radialGradient>
+    
+    <radialGradient id="cyan-glow-orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="fuchsia-glow-orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="core-burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="20%" stop-color="#06b6d4" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients for UI Elements -->
+    <linearGradient id="primary-cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="accent-fuchsia" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <linearGradient id="glass-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="glass-card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="beam-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="beam-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.1" />
+      <stop offset="70%" stop-color="#06b6d4" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="text-metallic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-light" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur1" />
+      <feGaussianBlur stdDeviation="25" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+
+    <!-- Grid Patterns -->
+    <pattern id="cyber-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3" />
+      <circle cx="50" cy="50" r="1.5" fill="#06b6d4" fill-opacity="0.4" />
+    </pattern>
+
+    <pattern id="dots-dense" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- ================= BACKGROUND LAYER ================= -->
+  <rect width="1200" height="630" fill="url(#bg-radial)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  
+  <!-- Ambient Glow Orbs -->
+  <circle cx="850" cy="280" r="380" fill="url(#cyan-glow-orb)" />
+  <circle cx="980" cy="420" r="300" fill="url(#fuchsia-glow-orb)" />
+  <circle cx="300" cy="150" r="250" fill="url(#cyan-glow-orb)" opacity="0.6" />
+
+  <!-- Perspective Vector Lines (Outreach Horizon) -->
+  <g opacity="0.35">
+    <path d="M 550 315 L 1200 80" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 8" />
+    <path d="M 550 315 L 1200 180" stroke="#38bdf8" stroke-width="1" />
+    <path d="M 550 315 L 1200 315" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="12 6" />
+    <path d="M 550 315 L 1200 450" stroke="#06b6d4" stroke-width="1" />
+    <path d="M 550 315 L 1200 560" stroke="#d946ef" stroke-width="1" stroke-dasharray="6 6" />
+  </g>
+
+  <!-- ================= RIGHT SIDE: ISOMETRIC OUTREACH ENGINE & NETWORK ================= -->
+  
+  <!-- Network Vector Connections (Bezier Cables) -->
+  <g fill="none" stroke-linecap="round">
+    <!-- Stream 1: Core to High Deliverability Card -->
+    <path d="M 850 315 C 780 200, 680 220, 640 190" stroke="url(#beam-grad-2)" stroke-width="2.5" filter="url(#glow-light)" />
+    <!-- Stream 2: Core to AI Warmup Node -->
+    <path d="M 850 315 C 960 180, 1040 200, 1060 160" stroke="url(#beam-grad-1)" stroke-width="2" filter="url(#glow-light)" />
+    <!-- Stream 3: Core to Campaign Velocity Node -->
+    <path d="M 850 315 C 980 340, 1020 440, 1080 460" stroke="url(#primary-cyan-violet)" stroke-width="3" filter="url(#glow-light)" />
+    <!-- Stream 4: Core to Lead Intel Matrix -->
+    <path d="M 850 315 C 760 400, 690 420, 630 460" stroke="url(#accent-fuchsia)" stroke-width="2" />
+  </g>
+
+  <!-- Central Hub: The Instantly Engine Core -->
+  <g id="central-engine" transform="translate(850, 315)">
+    <!-- Core Ambient Pulses -->
+    <circle cx="0" cy="0" r="110" fill="url(#core-burst)" />
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.8" />
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#d946ef" stroke-width="1" stroke-dasharray="4 4" />
+
+    <!-- Isometric Rotating Rings / Polygon Core -->
+    <polygon points="0,-45 39,-22 39,22 0,45 -39,22 -39,-22" fill="#090d16" stroke="url(#primary-cyan-violet)" stroke-width="3" filter="url(#glow-light)" />
+    <polygon points="0,-35 30,-17 30,17 0,35 -30,17 -30,-17" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+    
+    <!-- Stylized Dynamic Flame / Lightning Envelope Icon -->
+    <path d="M -8 -15 L 6 -15 L -2 -2 L 10 -2 L -6 18 L -1 5 L -10 5 Z" fill="url(#accent-fuchsia)" filter="url(#glow-light)" />
+
+    <!-- Satellite Orbiting Data Dots -->
+    <circle cx="-39" cy="-22" r="4" fill="#38bdf8" filter="url(#glow-light)" />
+    <circle cx="39" cy="22" r="4" fill="#d946ef" filter="url(#glow-light)" />
+    <circle cx="0" cy="-45" r="5" fill="#06b6d4" filter="url(#glow-light)" />
+    <circle cx="0" cy="45" r="4" fill="#8b5cf6" />
+  </g>
+
+  <!-- FLOATING HUD CARD 1: High Deliverability & Warmup Matrix (Top Left of Core) -->
+  <g transform="translate(560, 110)" filter="url(#card-shadow)">
+    <!-- Card Frame -->
+    <rect width="250" height="130" rx="12" fill="url(#glass-card-bg)" stroke="url(#glass-card-border)" stroke-width="1.5" />
+    <rect width="250" height="130" rx="12" fill="url(#dots-dense)" />
+    
+    <!-- Card Header -->
+    <circle cx="24" cy="24" r="6" fill="#06b6d4" filter="url(#glow-light)" />
+    <text x="38" y="28" font-family="'Inter', 'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1">AI WARMUP PROTOCOL</text>
+    <text x="200" y="28" font-family="monospace" font-size="10" fill="#10b981">99.8%</text>
+
+    <!-- Graph Visualization -->
+    <path d="M 20 95 Q 60 85, 90 65 T 160 55 T 230 40" fill="none" stroke="url(#primary-cyan-violet)" stroke-width="2.5" filter="url(#glow-light)" />
+    <path d="M 20 95 Q 60 85, 90 65 T 160 55 T 230 40 L 230 105 L 20 105 Z" fill="url(#primary-cyan-violet)" opacity="0.15" />
+    
+    <!-- Graph Grid Lines -->
+    <line x1="20" y1="105" x2="230" y2="105" stroke="#334155" stroke-width="1" />
+    <line x1="20" y1="45" x2="230" y2="45" stroke="#334155" stroke-width="1" stroke-dasharray="2 4" />
+
+    <!-- Badges -->
+    <rect x="20" y="112" width="65" height="12" rx="4" fill="#0f172a" />
+    <text x="25" y="121" font-family="monospace" font-size="8" fill="#94a3b8">POOLS: 10K+</text>
+    
+    <rect x="92" y="112" width="75" height="12" rx="4" fill="#0f172a" />
+    <text x="97" y="121" font-family="monospace" font-size="8" fill="#38bdf8">SPAM BYPASS</text>
+  </g>
+
+  <!-- FLOATING HUD CARD 2: Infinite Scale & Rotation Engine (Bottom Right of Core) -->
+  <g transform="translate(930, 380)" filter="url(#card-shadow)">
+    <rect width="230" height="140" rx="12" fill="url(#glass-card-bg)" stroke="url(#glass-card-border)" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <rect x="16" y="16" width="28" height="28" rx="6" fill="#090d16" stroke="#8b5cf6" stroke-width="1" />
+    <path d="M 24 30 L 30 20 L 36 30 Z" fill="#d946ef" />
+    <text x="52" y="28" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#f8fafc">CAMPAIGN SCALE</text>
+    <text x="52" y="40" font-family="'Inter', sans-serif" font-size="9" fill="#64748b">Multi-Account Rotation</text>
+
+    <!-- Stat Display -->
+    <text x="16" y="78" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="800" fill="url(#text-metallic)">500,000</text>
+    <text x="145" y="78" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#06b6d4">EMAILS / DAY</text>
+
+    <!-- Progress Indicator Bar -->
+    <rect x="16" y="92" width="198" height="6" rx="3" fill="#1e293b" />
+    <rect x="16" y="92" width="160" height="6" rx="3" fill="url(#accent-fuchsia)" filter="url(#glow-light)" />
+
+    <!-- Status Tags -->
+    <circle cx="22" cy="118" r="4" fill="#10b981" />
+    <text x="32" y="121" font-family="monospace" font-size="9" fill="#cbd5e1">SMTP / IMAP ACTIVE</text>
+  </g>
+
+  <!-- FLOATING HUD CARD 3: Unification & AI Intent (Bottom Left of Core) -->
+  <g transform="translate(540, 420)" filter="url(#card-shadow)">
+    <rect width="220" height="110" rx="12" fill="url(#glass-card-bg)" stroke="url(#glass-card-border)" stroke-width="1.5" />
+    
+    <text x="16" y="25" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="0.5">UNIFIED INBOX AI</text>
+    
+    <!-- AI Sentiment Node Pill -->
+    <rect x="16" y="38" width="115" height="22" rx="11" fill="#064e3b" stroke="#10b981" stroke-width="1" />
+    <circle cx="27" cy="49" r="4" fill="#34d399" filter="url(#glow-light)" />
+    <text x="37" y="52" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#a7f3d0">POSITIVE INTENT</text>
+
+    <!-- Lead Line Mockup -->
+    <rect x="16" y="72" width="140" height="8" rx="4" fill="#334155" opacity="0.8" />
+    <rect x="16" y="86" width="90" height="8" rx="4" fill="#334155" opacity="0.5" />
+    <circle cx="195" cy="80" r="14" fill="#8b5cf6" opacity="0.2" />
+    <path d="M 191 80 L 194 83 L 200 76" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Micro Node Network Elements -->
+  <!-- Top Right Node -->
+  <g transform="translate(1060, 140)">
+    <circle cx="0" cy="0" r="22" fill="#090d16" stroke="#06b6d4" stroke-width="2" filter="url(#glow-light)" />
+    <path d="M -6 -4 L 0 -10 L 6 -4 L 6 6 L -6 6 Z" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="3" fill="#d946ef" />
+    <text x="30" y="4" font-family="monospace" font-size="10" fill="#94a3b8">NODE_01 // VERIFIED</text>
+  </g>
+
+  <!-- Floating Particles & Data Vectors -->
+  <circle cx="750" cy="180" r="2" fill="#38bdf8" filter="url(#glow-light)" />
+  <circle cx="820" cy="100" r="3" fill="#d946ef" filter="url(#glow-light)" />
+  <circle cx="960" cy="240" r="1.5" fill="#06b6d4" />
+  <circle cx="1020" cy="320" r="2.5" fill="#38bdf8" filter="url(#glow-light)" />
+  <circle cx="790" cy="480" r="2" fill="#8b5cf6" />
+  <circle cx="670" cy="360" r="3" fill="#06b6d4" filter="url(#glow-light)" />
+
+
+  <!-- ================= LEFT SIDE: EDITORIAL & BRANDING CONTENT ================= -->
+
+  <!-- Architectural Dossier Header Badge -->
+  <g transform="translate(80, 75)">
+    <rect width="285" height="30" rx="15" fill="#0f172a" stroke="url(#primary-cyan-violet)" stroke-width="1.5" filter="url(#glow-light)" />
+    <circle cx="18" cy="15" r="4" fill="#06b6d4" filter="url(#glow-light)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="32" y="19" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#f8fafc" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Headline: INSTANTLY.AI -->
+  <g transform="translate(80, 185)">
+    <!-- Tech Spec Metadata Line Above Title -->
+    <text x="0" y="-20" font-family="monospace" font-size="11" fill="#06b6d4" letter-spacing="2">FLAGSHIP SOFTWARE INVESTIGATION // SALES AUTOMATION</text>
+    
+    <!-- Primary Tool Title with Cyber-Glow Effect -->
+    <text x="0" y="45" font-family="'Inter', 'Space Grotesk', sans-serif" font-size="62" font-weight="900" fill="url(#text-metallic)" letter-spacing="-1">INSTANTLY.AI</text>
+    
+    <!-- Secondary Highlight Outline/Glow Accent behind text -->
+    <text x="2" y="47" font-family="'Inter', 'Space Grotesk', sans-serif" font-size="62" font-weight="900" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3">INSTANTLY.AI</text>
+
+    <!-- Dynamic Category / Article Focus Subtitle -->
+    <text x="0" y="90" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="url(#primary-cyan-violet)" letter-spacing="0.5">
+      The Cold Email Revolution &amp; The Blueprint for
+    </text>
+    <text x="0" y="120" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="url(#accent-fuchsia)" letter-spacing="0.5">
+      Infinite Outreach Scalability
+    </text>
+  </g>
+
+  <!-- Narrative Summary Paragraph / Architecture Highlights -->
+  <g transform="translate(80, 345)">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="13" fill="#94a3b8" width="420" stroke="none">
+      <tspan x="0" dy="0">An in-depth technical analysis of Instantly's hyper-distributed</tspan>
+      <tspan x="0" dy="18">sending infrastructure, automated inbox warm-up matrix, and</tspan>
+      <tspan x="0" dy="18">AI-driven sentiment engine engineered for enterprise growth.</tspan>
+    </text>
+  </g>
+
+  <!-- Core Metric Highlights Grid (Bottom Left) -->
+  <g transform="translate(80, 445)">
+    <!-- Metric 1: Scale Capacity -->
+    <g transform="translate(0, 0)">
+      <rect width="130" height="65" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <rect width="130" height="65" rx="8" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3" />
+      <text x="14" y="24" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="0.5">SCALE CAPACITY</text>
+      <text x="14" y="48" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#38bdf8">UNLIMITED</text>
+      <circle cx="110" cy="20" r="3" fill="#06b6d4" />
+    </g>
+
+    <!-- Metric 2: Deliverability Engine -->
+    <g transform="translate(145, 0)">
+      <rect width="145" height="65" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <rect width="145" height="65" rx="8" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.3" />
+      <text x="14" y="24" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="0.5">DELIVERABILITY</text>
+      <text x="14" y="48" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#c084fc">SMART ROTATION</text>
+      <circle cx="125" cy="20" r="3" fill="#8b5cf6" />
+    </g>
+
+    <!-- Metric 3: Optimization -->
+    <g transform="translate(305, 0)">
+      <rect width="130" height="65" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <rect width="130" height="65" rx="8" fill="none" stroke="#d946ef" stroke-width="1" opacity="0.3" />
+      <text x="14" y="24" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="0.5">AI SENTIMENT</text>
+      <text x="14" y="48" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#d946ef">AUTOMATED</text>
+      <circle cx="110" cy="20" r="3" fill="#d946ef" />
+    </g>
+  </g>
+
+  <!-- Technical Dossier Footer Stamp -->
+  <g transform="translate(80, 560)">
+    <line x1="0" y1="0" x2="435" y2="0" stroke="#1e293b" stroke-width="1" />
+    <text x="0" y="18" font-family="monospace" font-size="9" fill="#475569" letter-spacing="1">PUBLISHED BY HELIA TECH // AUTHOR AUTHORITATIVE REVIEW</text>
+    <text x="365" y="18" font-family="monospace" font-size="9" fill="#06b6d4" letter-spacing="1">HT-2025-V4</text>
+  </g>
+
+  <!-- Visual Accent Corner Crosshairs -->
+  <path d="M 30 40 L 45 40 M 30 40 L 30 55" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" />
+  <path d="M 1170 40 L 1155 40 M 1170 40 L 1170 55" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" />
+  <path d="M 30 590 L 45 590 M 30 590 L 30 575" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" />
+  <path d="M 1170 590 L 1155 590 M 1170 590 L 1170 575" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" />
+</svg>

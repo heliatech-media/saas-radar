@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-04T21:39:36.153070",
+  "timestamp": "2026-11-05T01:50:12.131466",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 146,
-    "total_redirects_active": 82,
+    "total_content_files_scanned": 148,
+    "total_redirects_active": 83,
     "new_redirects_healed": 22,
     "internal_links_repaired": 0,
     "external_targets_repaired": 8,
@@ -72,31 +72,6 @@
       "source_file": "best-deel-alternatives-2026.md"
     },
     {
-      "slug": "relay",
-      "target_url": "https://www.relay.app",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "workato",
-      "target_url": "https://www.workato.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "activepieces",
-      "target_url": "https://www.activepieces.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "tray-io",
-      "target_url": "https://tray.ai",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "power-automate",
-      "target_url": "https://powerautomate.microsoft.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
       "source_file": "best-elevenlabs-alternatives-2026.md"
@@ -120,6 +95,31 @@
       "slug": "coqui",
       "target_url": "https://github.com/coqui-ai/TTS",
       "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "relay",
+      "target_url": "https://www.relay.app",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "workato",
+      "target_url": "https://www.workato.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "activepieces",
+      "target_url": "https://www.activepieces.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "tray-io",
+      "target_url": "https://tray.ai",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "power-automate",
+      "target_url": "https://powerautomate.microsoft.com",
+      "source_file": "best-zapier-alternatives-2026.md"
     }
   ],
   "healed_internal_links": [],

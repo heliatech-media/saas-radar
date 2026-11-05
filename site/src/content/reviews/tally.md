@@ -104,7 +104,7 @@ Tally is a radically different form builder that functions like a text document,
 - **Notion-style block-based form builder**
 - **Calculated fields and advanced formula support**
 - **Zero-fee Stripe and PayPal payment collection**
-- **Webhooks, Zapier, and native CRM integrations**
+- **Webhooks, [Zapier](/reviews/zapier), and native CRM integrations**
 - **Multi-page forms with complex conditional logic**
 
 ## Pricing Overview

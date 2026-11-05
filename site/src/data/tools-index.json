@@ -35,13 +35,12 @@
   {
     "name": "Beehiiv",
     "slug": "beehiiv",
-    "tagline": "The newsletter platform built for growth, scaling, and monetization.",
-    "category": "Marketing",
+    "tagline": "The all-in-one newsletter platform built for growth, monetization, and scale.",
+    "category": "Newsletter SaaS",
     "rating": 4.7,
     "starting_price": "$0/mo",
-    "best_for": "Content creators, media startups, and B2B marketers scaling email subscriber bases.",
-    "affiliate_url": "https://www.beehiiv.com/?via=heliatech",
-    "commission_rate": "50% recurring for 12 months"
+    "best_for": "Professional creators, media companies, and B2B brands looking to scale newsletters with built-in growth loops.",
+    "affiliate_url": "https://www.beehiiv.com/?via=heliatech"
   },
   {
     "name": "Brevo",
@@ -192,7 +191,8 @@
     "rating": 4.8,
     "starting_price": "$37/mo",
     "best_for": "Lead generation agencies, high-volume SDR teams, and B2B founders scaling outbound sales.",
-    "affiliate_url": "https://instantly.ai"
+    "affiliate_url": "https://instantly.ai/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Jasper AI",

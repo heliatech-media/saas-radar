@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-04 21:39:57",
-  "total_links_audited": 82,
-  "healthy_links": 80,
+  "timestamp": "2026-11-05 01:51:57",
+  "total_links_audited": 83,
+  "healthy_links": 81,
   "broken_links_count": 2,
   "health_rate": "97.6%",
   "broken_links": [
@@ -11,7 +11,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "notion-ai",
@@ -19,7 +19,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     }
   ],
   "audit_details": [
@@ -138,7 +138,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Q5E2g7NpYpYd1e&gsxid=Q5E2g7NpYpYd1e&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=iVeBdthTBvFqaC&gsxid=iVeBdthTBvFqaC&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -165,8 +165,8 @@
     },
     {
       "slug": "instantly-ai",
-      "target_url": "https://www.instantly-ai.com",
-      "final_url": "https://www.instantly-ai.com/",
+      "target_url": "https://instantly.ai/?via=heliatech",
+      "final_url": "https://instantly.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -195,7 +195,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -267,7 +267,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "monday-com",
@@ -303,7 +303,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
     },
     {
       "slug": "openai-tts",
@@ -330,7 +330,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -343,7 +343,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=D7moCSeLeUnOnC&gsxid=D7moCSeLeUnOnC&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=63ej7XM0AZARfa&gsxid=63ej7XM0AZARfa&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -364,7 +364,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=vYDmFwI478qHZA&gsxid=vYDmFwI478qHZA&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=s8KHeV5qU3UtrF&gsxid=s8KHeV5qU3UtrF&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -574,7 +574,7 @@
     {
       "slug": "wati",
       "target_url": "https://www.wati.io/?fp_ref=heliatech",
-      "final_url": "https://www.wati.io/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/ar/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },

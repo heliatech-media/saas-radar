@@ -163,7 +163,8 @@ AFFILIATE_MAP = {
     "murf-ai": "https://murf.ai/?fp_ref=heliatech",
     "captions": "https://www.captions.ai/?via=heliatech",
     "clay": "https://clay.com/?via=heliatech",
-    "fathom": "https://fathom.video/?via=heliatech"
+    "fathom": "https://fathom.video/?via=heliatech",
+    "instantly-ai": "https://instantly.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
