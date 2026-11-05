@@ -1,18 +1,18 @@
 {
-  "last_synced": "2026-11-05T09:49:26.184265",
+  "last_synced": "2026-11-05T09:59:30.858025",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18073,
-  "total_requests": 114218,
-  "total_visits": 5602,
-  "total_pageviews": 23662,
+  "total_visitors_network": 18091,
+  "total_requests": 114284,
+  "total_visits": 5608,
+  "total_pageviews": 23686,
   "percent_cached": "56.14%",
-  "data_served_mb": 894.6,
+  "data_served_mb": 895.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6240
+      "views": 6250
     },
     {
       "path": "/",
@@ -67,14 +67,14 @@
       "views": 150
     },
     {
-      "path": "/reviews/linear/",
+      "path": "/blog/lovable-evolution-guide-2026/",
       "views": 140
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 21940
+      "views": 21960
     },
     {
       "country": "Morocco",
