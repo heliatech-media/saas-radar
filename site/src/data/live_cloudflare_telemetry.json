@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-05T17:53:12.412706",
+  "last_synced": "2026-11-05T18:13:20.250567",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18622,
-  "total_requests": 117095,
-  "total_visits": 5772,
-  "total_pageviews": 24413,
+  "total_visitors_network": 18636,
+  "total_requests": 117193,
+  "total_visits": 5777,
+  "total_pageviews": 24426,
   "percent_cached": "56.14%",
-  "data_served_mb": 918.6,
+  "data_served_mb": 919.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/",
-      "views": 2900
+      "views": 2910
     },
     {
       "path": "/calculator/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 460
+      "views": 480
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -67,18 +67,18 @@
       "views": 150
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/blog/make-vs-zapier/",
       "views": 140
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 22640
+      "views": 22670
     },
     {
       "country": "Morocco",
-      "views": 16370
+      "views": 16390
     },
     {
       "country": "Germany",
@@ -98,7 +98,7 @@
     },
     {
       "country": "Netherlands",
-      "views": 540
+      "views": 550
     },
     {
       "country": "Canada",
