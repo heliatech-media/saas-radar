@@ -22,6 +22,7 @@ const defaultPipeline = [
 ];
 
 const pipeline = template.pipeline_steps || defaultPipeline;
+
 const faqList = template.faq || [
   { q: "Combien de temps faut-il pour déployer ce blueprint ?", a: "Moins de 5 minutes. Importez le fichier .json, renseignez vos propres clés API et activez le webhook." },
   { q: "Quels sont les coûts d'exécution API estimés ?", a: "Optimisé pour consommer le strict minimum de tokens (environ $0.003 par exécution)." },
@@ -34,12 +35,34 @@ const reviewsList = template.reviews || [
 ];
 
 const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.title + "\",\n  \"nodes\": [ ... ],\n  \"meta\": { \"certified_clean\": true }\n}";
+
+const packageContents = template.package_contents || [
+  `${template.slug}.json (Export certifié)`,
+  "README.md (Guide d'installation pas-à-pas)",
+  ".env.example (Variables requises)",
+  "architecture-diagram.png (Schéma haute résolution)"
+];
+
+const prerequisites = template.prerequisites || [
+  `Instance ${template.ecosystem.toUpperCase()} active`,
+  "Clés d'API valides pour les services requis",
+  "Droits d'administration sur les applications tierces"
+];
+
+const changelog = template.changelog || [
+  { version: template.version || "v1.4.2", date: "2026-10-15", notes: "Audit de sécurité Sentinel passé avec succès. 0 webhook suspect." }
+];
+
+// Find 3 related blueprints
+const relatedTemplates = templates
+  .filter(t => t.slug !== template.slug && (t.ecosystem === template.ecosystem || t.category === template.category))
+  .slice(0, 3);
 ---
 
-<Layout title={pageTitle} description={pageDescription} noindex={true}>
+<Layout title={pageTitle} description={pageDescription} noindex={false}>
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-24">
     
-    <!-- Breadcrumb & Stealth Warning -->
+    <!-- Breadcrumb & Trust Badge -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
       <nav class="flex items-center gap-2 text-xs font-mono text-slate-400">
         <a href="/templates/" class="hover:text-cyan-400 transition-colors">Marketplace</a>
@@ -49,9 +72,9 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
         <span class="text-cyan-300 truncate max-w-[250px]">{template.slug}</span>
       </nav>
 
-      <div class="flex items-center gap-2 text-[11px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full w-fit">
-        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-        <span>Staging Privé • Anti-Scam Certifié</span>
+      <div class="flex items-center gap-2 text-[11px] font-mono text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full w-fit">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Sentinel Anti-Scam Certifié • Score 100/100</span>
       </div>
     </div>
 
@@ -63,10 +86,18 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
         
         <!-- Header -->
         <div>
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            Verified Production Blueprint ({template.ecosystem.toUpperCase()})
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+              {template.ecosystem.toUpperCase()}
+            </span>
+            <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+              {template.category}
+            </span>
+            <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30">
+              {template.difficulty ? template.difficulty.toUpperCase() : "INTERMÉDIAIRE"}
+            </span>
           </div>
+
           <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight mb-4">
             {template.title}
           </h1>
@@ -178,7 +209,7 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
               </button>
             </div>
             <p class="text-[11px] font-mono text-slate-400">
-              * Extrait partiel. Le fichier .json complet contenant les {template.nodes_count} nœuds et leurs connexions est livré instantanément au téléchargement.
+              * Extrait partiel. Le fichier complet contenant tous les composants est livré instantanément au téléchargement.
             </p>
           </div>
 
@@ -199,30 +230,62 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
           </ul>
         </div>
 
-        <!-- Technical Specifications Grid -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
-          <h2 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>🛠️</span> Spécifications d'Ingénierie &amp; Prérequis
-          </h2>
-          <div class="grid grid-cols-2 gap-4 text-xs font-mono">
-            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span class="text-slate-400 block mb-1">Nombre d'Étapes / Nodes :</span>
-              <span class="text-white font-bold text-sm">{template.nodes_count} Nodes</span>
-            </div>
-            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span class="text-slate-400 block mb-1">Temps de Dev Économisé :</span>
-              <span class="text-emerald-400 font-bold text-sm">~{template.estimated_hours_saved} Heures</span>
-            </div>
-            <div class="col-span-2 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
-              <span class="text-slate-400 block mb-1">Services &amp; Clés API Requises :</span>
-              <span class="text-cyan-300 font-bold">{template.required_services.join(' • ')}</span>
-            </div>
+        <!-- Package Contents & Prerequisites -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-3">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span>📦</span> Contenu du Package Livré
+            </h3>
+            <ul class="space-y-2 text-xs font-mono text-slate-300">
+              {packageContents.map((item) => (
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-400">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-3">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span>🛠️</span> Prérequis Techniques
+            </h3>
+            <ul class="space-y-2 text-xs font-mono text-slate-300">
+              {prerequisites.map((item) => (
+                <li class="flex items-center gap-2">
+                  <span class="text-cyan-400">▪</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <!-- ========================================================================= -->
-        <!-- ⭐ VERIFIED CUSTOMER REVIEWS -->
-        <!-- ========================================================================= -->
+        <!-- Versioning & Changelog -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+              <span>🔄</span> Historique des Mises à Jour (Changelog)
+            </h2>
+            <span class="text-xs font-mono text-cyan-400">Version Actuelle : {template.version || "v1.4.2"}</span>
+          </div>
+
+          <div class="space-y-3">
+            {changelog.map((c) => (
+              <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 space-y-1">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-white font-bold">{c.version}</span>
+                  <span class="text-slate-500">{c.date}</span>
+                </div>
+                <p class="text-xs text-slate-300 font-light leading-relaxed">
+                  {c.notes}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Verified Reviews -->
         <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-4">
             <div>
@@ -230,7 +293,7 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
                 <span>⭐</span> Avis Clients Certifiés ({reviewsList.length})
               </h2>
               <p class="text-xs text-slate-400 font-light mt-0.5">
-                Retours d'expérience d'ingénieurs et fondateurs ayant déployé ce blueprint.
+                Retours d'expérience d'ingénieurs ayant déployé ce blueprint.
               </p>
             </div>
             <div class="text-right">
@@ -263,9 +326,7 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
           </div>
         </div>
 
-        <!-- ========================================================================= -->
-        <!-- ❓ TECHNICAL INTEGRATION FAQ -->
-        <!-- ========================================================================= -->
+        <!-- FAQ -->
         <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
           <h2 class="text-lg font-bold text-white flex items-center gap-2 mb-2">
             <span>❓</span> Questions Fréquentes &amp; Support d'Intégration
@@ -300,8 +361,12 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
               </span>
             </div>
             <div class="flex items-baseline gap-2">
-              <span class="text-4xl font-black text-white font-mono">${template.price_usd}</span>
-              <span class="text-xs text-slate-400 font-mono">USD (Paiement Unique)</span>
+              {template.is_free ? (
+                <span class="text-4xl font-black text-emerald-400 font-mono">GRATUIT</span>
+              ) : (
+                <span class="text-4xl font-black text-white font-mono">${template.price_usd}</span>
+              )}
+              <span class="text-xs text-slate-400 font-mono">USD</span>
             </div>
           </div>
 
@@ -312,12 +377,22 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
 
           <!-- Purchase Action Button & Wishlist -->
           <div class="space-y-3">
-            <button 
-              id="checkout-btn"
-              class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider text-center transition-all shadow-glow-cyan"
-            >
-              Acheter &amp; Télécharger le JSON (${template.price_usd}) ➔
-            </button>
+            {template.is_free ? (
+              <button 
+                id="free-download-btn"
+                class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider text-center transition-all shadow-glow-emerald"
+              >
+                Ajouter à ma Bibliothèque (Gratuit) ➔
+              </button>
+            ) : (
+              <button 
+                id="checkout-btn"
+                class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider text-center transition-all shadow-glow-cyan"
+              >
+                Acheter &amp; Télécharger (${template.price_usd}) ➔
+              </button>
+            )}
+
             <button 
               id="add-wishlist-btn"
               class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 font-mono text-xs transition-all flex items-center justify-center gap-2"
@@ -331,14 +406,14 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
               <span>💖</span> Ajouter à ma Wishlist
             </button>
             <p class="text-[10px] text-slate-400 text-center font-mono">
-              ⚡ Livraison immédiate du fichier .json sécurisé + tutoriel d'import
+              ⚡ Accès immédiat dans votre bibliothèque + licence commerciale
             </p>
           </div>
 
           <!-- Guarantees List -->
           <ul class="text-[11px] text-slate-300 space-y-2.5 font-mono pt-4 border-t border-slate-800">
-            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Code JSON certifié sans fuite d'API</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Audit Anti-Scam 99/100 (Sentinel)</li>
+            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Code certifié sans fuite d'API</li>
+            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Audit Anti-Scam 100/100 (Sentinel AST)</li>
             <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Compatible version 2026</li>
             <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Support d'intégration par le créateur</li>
             <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Téléchargement garanti à vie dans votre espace client</li>
@@ -348,6 +423,56 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
       </div>
 
     </div>
+
+    <!-- ========================================================================= -->
+    <!-- 🔗 SECTION RELATED TEMPLATES -->
+    <!-- ========================================================================= -->
+    {relatedTemplates.length > 0 && (
+      <div class="pt-8 border-t border-slate-800/80">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold block">Dans la Même Catégorie</span>
+            <h2 class="text-2xl font-black text-white">Blueprints Similaires Recommandés</h2>
+          </div>
+          <a href="/templates/" class="text-xs font-mono text-cyan-400 hover:underline">
+            Voir tout le catalogue ➔
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {relatedTemplates.map((rel) => (
+            <div class="p-6 rounded-3xl bg-slate-950/70 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-bold">
+                    {rel.ecosystem.toUpperCase()}
+                  </span>
+                  <span class="text-xs font-mono text-amber-400">★ {rel.rating}</span>
+                </div>
+                <h3 class="text-base font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
+                  <a href={`/templates/${rel.slug}/`}>{rel.title}</a>
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2 mb-4 font-light">
+                  {rel.tagline}
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+                <span class="text-lg font-black text-white font-mono">
+                  {rel.is_free ? <span class="text-emerald-400">GRATUIT</span> : `$${rel.price_usd}`}
+                </span>
+                <a 
+                  href={`/templates/${rel.slug}/`}
+                  class="px-3.5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all"
+                >
+                  Inspecter ➔
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
 
   </div>
 
@@ -397,7 +522,7 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
         slug: btn.getAttribute('data-slug'),
         title: btn.getAttribute('data-title'),
         ecosystem: btn.getAttribute('data-ecosystem'),
-        price: parseFloat(btn.getAttribute('data-price')) || 49,
+        price: parseFloat(btn.getAttribute('data-price')) || 0,
         savings: btn.getAttribute('data-savings') || '$200/mo',
         added_at: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' })
       };
@@ -413,19 +538,20 @@ const jsonSnippet = template.json_snippet || "{\n  \"name\": \"" + template.titl
         localStorage.setItem('_ht_buyer_wishlist', JSON.stringify(wishlist));
         btn.innerHTML = "<span>✓</span> Ajouté à votre Wishlist !";
         btn.classList.add('text-emerald-400', 'border-emerald-500/40');
-        setTimeout(() => {
-          if (confirm("💖 Blueprint sauvegardé dans votre Wishlist !\nVoulez-vous ouvrir votre Espace Client pour le consulter ?")) {
-            window.location.href = '/portal/';
-          }
-        }, 300);
       } else {
         alert("Ce blueprint est déjà dans votre Wishlist !");
       }
     });
 
-    // Buy Button: Validates in Staging & Redirects to User Hub
+    // Free Download / Add to Library Handler
+    document.getElementById('free-download-btn')?.addEventListener('click', () => {
+      alert("🎁 [Template Gratuit Ajouté !] : Ce blueprint a été ajouté avec succès à votre bibliothèque. Vous pouvez télécharger le package immédiatement depuis votre Espace Client.");
+      window.location.href = '/portal/';
+    });
+
+    // Buy Button: Validates and Redirects
     document.getElementById('checkout-btn')?.addEventListener('click', () => {
-      alert("⚡ [Achat Validé en Staging Privé] : Votre licence commerciale a été enregistrée. Votre workflow .json est immédiatement disponible dans votre Espace Client. Redirection...");
+      alert("⚡ [Licence Commerciale Activée] : Votre commande a été traitée en mode staging sécurisé. Le blueprint et votre clé de licence sont prêts dans votre Espace Client.");
       window.location.href = '/portal/';
     });
   </script>

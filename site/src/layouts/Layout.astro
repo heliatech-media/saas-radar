@@ -271,6 +271,12 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
               Perks
             </span>
           </a>
+          <a href="/templates" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
+            <span>Templates</span>
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
+              Store
+            </span>
+          </a>
           <a href="/pricing-leaks" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
             <span>Leaks</span>
             <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30">
@@ -316,6 +322,18 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
             <span class="tracking-wider">Index Active</span>
           </div>
 
+          <!-- Marketplace User Account Nav Pill -->
+          <div id="nav-user-account-container" class="hidden sm:flex items-center">
+            <a 
+              id="nav-user-login-btn"
+              href="/portal" 
+              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all"
+            >
+              <span>🔑</span>
+              <span>Mon Espace</span>
+            </a>
+          </div>
+
           <!-- Mobile Menu Toggle Button -->
           <button
             id="mobile-nav-toggle"
@@ -350,6 +368,14 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
         <a href="/deals" class="px-3.5 py-2.5 rounded-xl text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-colors flex items-center justify-between">
           <span>Exclusive Perks & Deals</span>
           <span class="text-[10px] font-mono bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">Active</span>
+        </a>
+        <a href="/templates" class="px-3.5 py-2.5 rounded-xl text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/10 transition-colors flex items-center justify-between">
+          <span>Templates &amp; Blueprints</span>
+          <span class="text-[10px] font-mono bg-cyan-500/20 px-2 py-0.5 rounded-full border border-cyan-500/30">Store</span>
+        </a>
+        <a href="/portal" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
+          <span>Mon Espace Client</span>
+          <span class="text-[10px] font-mono text-cyan-400">Accès</span>
         </a>
         <a href="/pricing-leaks" class="px-3.5 py-2.5 rounded-xl text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 transition-colors flex items-center justify-between">
           <span>Pricing Leaks & Rate Cards</span>
