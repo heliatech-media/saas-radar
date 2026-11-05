@@ -6,7 +6,7 @@ tagline: The fastest way to capture, annotate, and share screen recordings and s
 category: AI Video/Screen Recording
 rating: 4.5
 website_url: https://screenclip.com
-affiliate_url: https://screenclip.com
+affiliate_url: "https://screenclip.com/?via=heliatech"
 summary: ScreenClip is a streamlined screen capture and recording platform designed
   to eliminate communication friction in remote teams. It combines high-speed recording
   with robust annotation tools and instant cloud sharing, making it ideal for bug

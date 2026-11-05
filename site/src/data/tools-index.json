@@ -180,7 +180,8 @@
     "rating": 4.6,
     "starting_price": "$16/mo",
     "best_for": "Customer success teams, product managers, and technical support engineers.",
-    "affiliate_url": "https://www.guidde.com"
+    "affiliate_url": "https://www.guidde.com/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "HeyGen",
@@ -512,7 +513,8 @@
     "rating": 4.5,
     "starting_price": "$9/mo",
     "best_for": "Product managers, QA testers, customer support teams, and remote developers.",
-    "affiliate_url": "https://screenclip.com"
+    "affiliate_url": "https://screenclip.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "ScreenStudio",
@@ -544,6 +546,16 @@
     "best_for": "Full-stack developers, indie hackers, and engineering teams scaling web and mobile applications.",
     "affiliate_url": "https://supabase.com/?via=heliatech",
     "commission_rate": "20% for 12 months"
+  },
+  {
+    "name": "Synthesia",
+    "slug": "synthesia",
+    "tagline": "Turn text into professional AI videos with human-like avatars and multilingual voiceovers in minutes.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$22/mo",
+    "best_for": "Enterprise Learning & Development teams, global enablement managers, and corporate communications specialists requiring scalable video content across multiple languages.",
+    "affiliate_url": "https://www.synthesia.io"
   },
   {
     "name": "Tally",

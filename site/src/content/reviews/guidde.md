@@ -6,7 +6,7 @@ tagline: Create professional video documentation and how-to guides in seconds us
 category: AI Video & Documentation
 rating: 4.6
 website_url: https://www.guidde.com
-affiliate_url: https://www.guidde.com
+affiliate_url: "https://www.guidde.com/?via=heliatech"
 summary: Guidde is an AI-powered platform that captures your browser actions and automatically
   transforms them into structured, annotated video tutorials and step-by-step guides.
   It eliminates the manual drudgery of screen recording, editing, and voiceover production
