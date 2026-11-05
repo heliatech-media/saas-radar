@@ -1,53 +1,61 @@
 {
-  "last_synced": "2026-11-05T19:33:58.350123",
+  "last_synced": "2026-11-05T18:40:07.948918",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18726,
-  "total_requests": 117651,
-  "total_visits": 5805,
-  "total_pageviews": 24555,
+  "total_visitors_network": 18736,
+  "total_requests": 117688,
+  "total_visits": 5808,
+  "total_pageviews": 24569,
   "percent_cached": "56.14%",
-  "data_served_mb": 922.6,
+  "data_served_mb": 924.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6350
+      "views": 5970
     },
     {
       "path": "/",
-      "views": 2910
+      "views": 3180
     },
     {
       "path": "/calculator/",
-      "views": 1100
+      "views": 1050
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 530
+      "views": 560
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 430
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 270
-    },
-    {
-      "path": "/awards/",
-      "views": 260
+      "views": 380
     },
     {
       "path": "/radar/",
-      "views": 230
+      "views": 240
     },
     {
       "path": "/blog/",
-      "views": 210
+      "views": 230
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/clickup/",
+      "views": 200
+    },
+    {
+      "path": "/terms/",
+      "views": 190
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 190
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 190
+    },
+    {
+      "path": "/reviews/elevenlabs/",
       "views": 190
     },
     {
@@ -55,62 +63,54 @@
       "views": 180
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
+      "path": "/awards/",
+      "views": 170
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 150
-    },
-    {
-      "path": "/sentinel/",
-      "views": 150
-    },
-    {
-      "path": "/blog/make-vs-zapier/",
-      "views": 140
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 170
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 22830
+      "views": 22050
     },
     {
       "country": "Morocco",
-      "views": 16460
+      "views": 17750
     },
     {
       "country": "Germany",
-      "views": 1260
+      "views": 1370
     },
     {
       "country": "Singapore",
-      "views": 1240
+      "views": 1310
     },
     {
       "country": "Belgium",
-      "views": 570
+      "views": 690
     },
     {
       "country": "United Kingdom",
-      "views": 570
-    },
-    {
-      "country": "Netherlands",
-      "views": 550
-    },
-    {
-      "country": "Canada",
-      "views": 510
+      "views": 580
     },
     {
       "country": "Brazil",
-      "views": 380
+      "views": 430
+    },
+    {
+      "country": "CN",
+      "views": 420
+    },
+    {
+      "country": "Canada",
+      "views": 400
     },
     {
       "country": "France",
-      "views": 300
+      "views": 370
     }
   ],
   "top_referrers": [

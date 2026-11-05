@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-04T10:55:00.000000",
-  "total_heuristics_stored": 39,
+  "total_heuristics_stored": 40,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -104,6 +104,13 @@
       "domain": "content",
       "heuristic_name": "Recursive Context Inflection Accounting (RCIA)",
       "curriculum_module": "The Information Gain Imperative: Replacing generic SaaS comparison consensus with declassified unit economics ($ per 1,000 tasks)"
+    },
+    {
+      "timestamp": "2026-11-05T18:39:16.689668",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "content",
+      "heuristic_name": "Progressive Dwell Typography & Recursive Inflection Anchoring",
+      "curriculum_module": "Long-form Reader Dwell Optimization: Using progressive disclosure and visual typography to retain technical decision-makers over 3 minutes"
     }
   ]
 }

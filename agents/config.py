@@ -168,7 +168,8 @@ AFFILIATE_MAP = {
     "guidde": "https://www.guidde.com/?via=heliatech",
     "screenclip": "https://screenclip.com/?via=heliatech",
     "screenstudio": "https://www.screen.studio/?via=heliatech",
-    "synthesia": "https://www.synthesia.io/?fpr=heliatech"
+    "synthesia": "https://www.synthesia.io/?fpr=heliatech",
+    "fliki-ai": "https://fliki.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

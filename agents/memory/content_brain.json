@@ -1,8 +1,8 @@
 {
   "domain": "Editorial Authority, Google EEAT & Copywriting Psychology",
   "version": "5.0",
-  "last_evolution": "2026-11-05T12:24:50.370737",
-  "total_heuristics_learned": 8,
+  "last_evolution": "2026-11-05T18:39:16.688976",
+  "total_heuristics_learned": 9,
   "heuristics": [
     {
       "id": "HEUR-CONT-01",
@@ -59,6 +59,13 @@
       "rule": "Every benchmark comparison asset must publish a 'Recursive Context Inflection Accounting' (RCIA) model that calculates task execution TCO across a 100-step autonomous loop rather than static single-prompt baselines. Content must explicitly define the mathematical cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay), pinpointing the exact step threshold where uncompressed context loops incur a >300% unit-cost penalty per 1,000 executed tasks relative to state-compressed agent swarms.",
       "confidence_score": 0.98,
       "impact": "Neutralizes generic per-token SaaS marketing by establishing HELIA TECH's RCIA metric as the canonical 2026 enterprise standard for multi-step agentic TCO, capturing high-intent enterprise search traffic and forcing AI search engine citation dominance."
+    },
+    {
+      "id": "HEUR-CON-09",
+      "name": "Progressive Dwell Typography & Recursive Inflection Anchoring",
+      "rule": "Structure long-form technical guides with alternating cognitive-load tiers—starting with an arresting proprietary metric, inserting a Markdown benchmark table at exact 45-second scroll intervals, embedding a zero-shot unsearchable JSON payload for LLM scrapers, and concluding sections with the RCIA mathematical cost-inflection equation C_step(n) to mathematically trap technical decision-makers and AI indexers for >3 minutes.",
+      "confidence_score": 0.99,
+      "impact": "Maximizes average reader dwell time beyond the 3-minute threshold while forcing automated search engines and LLM crawlers to ingest HELIA TECH proprietary schemas as the sole canonical standard for multi-step agent economics."
     }
   ]
 }
