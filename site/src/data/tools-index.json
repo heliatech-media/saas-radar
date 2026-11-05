@@ -676,6 +676,16 @@
     "commission_rate": "Custom / Contact for details"
   },
   {
+    "name": "VideoAsk",
+    "slug": "videoask",
+    "tagline": "Scale personal connections with asynchronous video funnels and conditional logic.",
+    "category": "Video Automation",
+    "rating": 4.6,
+    "starting_price": "$0/mo",
+    "best_for": "B2B sales teams, high-volume recruiters, and customer success managers who need to qualify leads at scale without losing the human touch.",
+    "affiliate_url": "https://www.videoask.com"
+  },
+  {
     "name": "Voiceflow",
     "slug": "voiceflow",
     "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",

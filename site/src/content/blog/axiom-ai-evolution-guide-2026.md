@@ -123,7 +123,7 @@ While Axiom.ai dramatically lowers the bar for browser-level automation, softwar
 | Feature Vector | Axiom.ai Capability | Operational Context & Considerations |
 | :--- | :--- | :--- |
 | **Interface & Usability** | Visual point-and-click recorder with zero code syntax. | Ideal for fast team onboarding. Non-developers can build robust scripts within hours. |
-| **Data Integration** | Native Google Sheets, Webhooks, Zapier/Make endpoints. | Excellent for standard tabular pipelines; complex relational DBs require intermediate webhooks. |
+| **Data Integration** | Native Google Sheets, Webhooks, [Zapier](/reviews/zapier)/[Make](/reviews/make) endpoints. | Excellent for standard tabular pipelines; complex relational DBs require intermediate webhooks. |
 | **Cost Architecture** | Tiered pricing based on runtime cloud minutes. | Predictable for scheduled tasks, but high-frequency / 24-7 scraping can become expensive rapidly. |
 | **SPA Handling** | Intelligent element selector engine with custom CSS option. | Heavy dynamic JavaScript single-page apps (SPAs) may still require selector fine-tuning. |
 | **Debugging Logs** | Visual run histories and step-by-step failure highlights. | Simplified compared to full developer suites (Puppeteer/Playwright); limited raw network stack logs. |

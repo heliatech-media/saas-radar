@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-05T16:42:31.399432",
+  "timestamp": "2026-11-05T18:49:11.117825",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 167,
-    "total_redirects_active": 97,
+    "total_content_files_scanned": 169,
+    "total_redirects_active": 98,
     "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 10,
@@ -122,9 +122,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "rask-ai",
-      "target_url": "https://www.rask-ai.com",
-      "source_file": "rask-ai-evolution-guide-2026.md"
+      "slug": "videoask",
+      "target_url": "https://www.videoask.com",
+      "source_file": "videoask-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
