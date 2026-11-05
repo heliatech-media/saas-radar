@@ -6,7 +6,7 @@ tagline: A powerful, privacy-focused UI wrapper for LLMs that turns chaotic AI c
 category: AI Productivity
 rating: 4.7
 website_url: https://www.typingmind.com
-affiliate_url: https://www.typingmind.com
+affiliate_url: "https://typingmind.com/?via=heliatech"
 summary: TypingMind is a sophisticated interface layer that sits on top of your own
   API keys, providing a superior UX, folder-based chat organization, and prompt management
   compared to native LLM web interfaces. It is designed for power users who want to

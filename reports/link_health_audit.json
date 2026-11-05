@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-11-05 09:49:01",
-  "total_links_audited": 86,
+  "timestamp": "2026-11-05 12:51:03",
+  "total_links_audited": 87,
   "healthy_links": 83,
-  "broken_links_count": 3,
-  "health_rate": "96.5%",
+  "broken_links_count": 4,
+  "health_rate": "95.4%",
   "broken_links": [
+    {
+      "slug": "gamma-app",
+      "target_url": "https://www.gamma-app.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.gamma-app.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gamma-app.com', port=443) at 0x7f94fbaec2f0>, 'Connection to www.gamma-app.com timed out. (connect timeout=7)'))"
+    },
     {
       "slug": "minicong",
       "target_url": "https://minicong.ai/?via=heliatech",
@@ -146,7 +154,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=oWGLqsO73vZv0I&gsxid=oWGLqsO73vZv0I&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=zCarf4bWUQdzdH&gsxid=zCarf4bWUQdzdH&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -163,6 +171,14 @@
       "final_url": "https://framer.partnerstack.com/heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "gamma-app",
+      "target_url": "https://www.gamma-app.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.gamma-app.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.gamma-app.com', port=443) at 0x7f94fbaec2f0>, 'Connection to www.gamma-app.com timed out. (connect timeout=7)'))"
     },
     {
       "slug": "guidde",
@@ -358,7 +374,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=UxeCV4n8NAlybu&gsxid=UxeCV4n8NAlybu&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=fEB4LCAfgNnmOb&gsxid=fEB4LCAfgNnmOb&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -379,7 +395,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=8bABmGpEB6Qp7V&gsxid=8bABmGpEB6Qp7V&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=FzSN1fTXgfzdjq&gsxid=FzSN1fTXgfzdjq&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -490,8 +506,8 @@
     },
     {
       "slug": "senja",
-      "target_url": "https://www.senja.com",
-      "final_url": "https://www.senja.com/",
+      "target_url": "https://senja.io",
+      "final_url": "https://senja.io/",
       "status_code": 200,
       "healthy": true
     },
@@ -554,8 +570,8 @@
     },
     {
       "slug": "typing-mind",
-      "target_url": "https://www.typingmind.com",
-      "final_url": "https://www.typingmind.com/",
+      "target_url": "https://typingmind.com/?via=heliatech",
+      "final_url": "https://www.typingmind.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

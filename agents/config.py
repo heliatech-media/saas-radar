@@ -165,7 +165,8 @@ AFFILIATE_MAP = {
     "clay": "https://clay.com/?via=heliatech",
     "fathom": "https://fathom.video/?via=heliatech",
     "instantly-ai": "https://instantly.ai/?via=heliatech",
-    "guidde": "https://www.guidde.com/?via=heliatech"
+    "guidde": "https://www.guidde.com/?via=heliatech",
+    "typing-mind": "https://typingmind.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

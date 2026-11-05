@@ -173,6 +173,16 @@
     "commission_rate": "Up to 50% for the first year or 20% recurring depending on the plan"
   },
   {
+    "name": "Gamma",
+    "slug": "gamma-app",
+    "tagline": "A new medium for presenting ideas, powered by AI.",
+    "category": "AI Presentation & Design",
+    "rating": 4.7,
+    "starting_price": "$10/mo",
+    "best_for": "Sales teams, startup founders, and marketing managers who need high-fidelity decks without manual design work.",
+    "affiliate_url": "https://gamma.app"
+  },
+  {
     "name": "Guidde",
     "slug": "guidde",
     "tagline": "Create professional video documentation and how-to guides in seconds using AI.",
@@ -587,7 +597,8 @@
     "rating": 4.7,
     "starting_price": "$39",
     "best_for": "Power users, developers, and AI-driven teams who want to manage multiple LLM providers under one unified, local-first interface.",
-    "affiliate_url": "https://www.typingmind.com"
+    "affiliate_url": "https://typingmind.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "VEED",
