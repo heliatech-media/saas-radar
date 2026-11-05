@@ -50,16 +50,17 @@
     "rating": 4.7,
     "starting_price": "$49/mo",
     "best_for": "E-commerce brands, high-volume content publishers, and SaaS developers building automated reporting or social sharing features.",
-    "affiliate_url": "https://www.bannerbear.com"
+    "affiliate_url": "https://www.bannerbear.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Beehiiv",
     "slug": "beehiiv",
-    "tagline": "The newsletter platform built for growth by the team behind Morning Brew.",
+    "tagline": "The all-in-one newsletter platform built for growth, monetization, and scale.",
     "category": "Newsletter SaaS",
-    "rating": 4.8,
+    "rating": 4.7,
     "starting_price": "$0/mo",
-    "best_for": "Professional creators, media companies, and B2B marketers who prioritize audience growth and monetization over complex automation funnels.",
+    "best_for": "Content creators, media startups, and B2B marketers focused on rapid audience growth and monetization.",
     "affiliate_url": "https://www.beehiiv.com/?via=heliatech"
   },
   {

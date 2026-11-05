@@ -169,7 +169,8 @@ AFFILIATE_MAP = {
     "screenclip": "https://screenclip.com/?via=heliatech",
     "screenstudio": "https://www.screen.studio/?via=heliatech",
     "synthesia": "https://www.synthesia.io/?fpr=heliatech",
-    "gamma-app": "https://gamma.app/signup?r=heliatech"
+    "gamma-app": "https://gamma.app/signup?r=heliatech",
+    "bannerbear": "https://www.bannerbear.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

@@ -6,7 +6,7 @@ tagline: Automate your marketing collateral with an API-first image and video ge
 category: Automation
 rating: 4.7
 website_url: https://www.bannerbear.com
-affiliate_url: https://www.bannerbear.com
+affiliate_url: "https://www.bannerbear.com/?via=heliatech"
 summary: Bannerbear is a robust creative automation platform that allows developers
   and marketers to generate custom images, videos, and PDFs via API or no-code tools.
   It uses a template-based system where dynamic data is injected into pre-designed
@@ -136,7 +136,7 @@ Bannerbear is a robust creative automation platform that allows developers and m
 ### Pros
 - Powerful API-first architecture that integrates seamlessly into custom dev stacks.
 - Intuitive drag-and-drop template editor that separates design from data logic.
-- Extensive no-code support via Zapier, Make.com, and Airtable for non-technical users.
+- Extensive no-code support via [Zapier](/reviews/zapier), [Make](/reviews/make).com, and [Airtable](/reviews/airtable) for non-technical users.
 - Supports multi-media output including static images, animated GIFs, and MP4 videos.
 - Built-in features for auto-detecting faces and smart-cropping to ensure visual consistency.
 

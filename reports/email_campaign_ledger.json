@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 15,
+  "total_sent": 16,
   "dispatches": [
     {
       "type": "weekly_radar",
@@ -106,15 +106,22 @@
       "recipient": "hamzaelfahsi@gmail.com",
       "dispatched_at": "2026-11-05T20:58:17.749267",
       "resend_id": "01a1ad4a-6bd8-7c23-bba6-0c699d83b129"
+    },
+    {
+      "type": "weekly_radar",
+      "issue": 54,
+      "recipient": "hamzaelfahsi@gmail.com",
+      "dispatched_at": "2026-11-05T23:05:07.413856",
+      "resend_id": "01a1adbe-8903-75b1-a140-78653b51b37a"
     }
   ],
   "active_campaigns": {
     "weekly_radar": {
-      "last_sent": "2026-11-05T20:58:17.749267",
-      "current_issue": 53
+      "last_sent": "2026-11-05T23:05:07.413856",
+      "current_issue": 54
     },
     "pr_outreach": {
-      "last_sent": "2026-11-05T20:58:18.522282",
+      "last_sent": "2026-11-05T23:05:08.274096",
       "sent_brands": [
         "Make",
         "Supabase",

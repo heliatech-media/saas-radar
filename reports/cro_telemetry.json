@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-05 20:53:21",
+  "timestamp": "2026-11-05 23:00:47",
   "total_pages_audited": 98,
   "monetized_pages": 95,
-  "total_ctas_tracked": 432,
+  "total_ctas_tracked": 431,
   "average_cro_score": "88.7/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -13,18 +13,45 @@
   "estimated_rpv_lift": "+38.4%",
   "pages": [
     {
-      "slug": "framer-evolution-guide-2026",
+      "slug": "adcreative-ai-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1124,
-      "cta_count": 5,
+      "word_count": 1129,
+      "cta_count": 6,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "julius-ai-evolution-guide-2026",
+      "slug": "airtable",
       "type": "blog",
-      "word_count": 1044,
+      "word_count": 1240,
+      "cta_count": 7,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "apollo-io-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1073,
+      "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "apollo-io-vs-lusha",
+      "type": "blog",
+      "word_count": 1877,
+      "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "axiom-ai-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1410,
       "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -42,26 +69,17 @@
     {
       "slug": "beehiiv-evolution-guide-2026",
       "type": "blog",
-      "word_count": 911,
-      "cta_count": 4,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "memberstack-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1278,
+      "word_count": 746,
       "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "rewardful-evolution-guide-2026",
+      "slug": "beehiiv-vs-brevo",
       "type": "blog",
-      "word_count": 1496,
-      "cta_count": 9,
+      "word_count": 1985,
+      "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -76,19 +94,46 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "salesforce-agentforce-hidden-conversation-credit-pricing-trap",
+      "slug": "best-deel-alternatives-2026",
       "type": "blog",
-      "word_count": 481,
+      "word_count": 2984,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-elevenlabs-alternatives-2026",
+      "type": "blog",
+      "word_count": 2379,
+      "cta_count": 14,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "best-zapier-alternatives-2026",
+      "type": "blog",
+      "word_count": 2488,
+      "cta_count": 18,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "brevo-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1078,
       "cta_count": 5,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "klap-evolution-guide-2026",
+      "slug": "cal-com-evolution-guide-2026",
       "type": "blog",
-      "word_count": 797,
-      "cta_count": 2,
+      "word_count": 1148,
+      "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
