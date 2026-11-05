@@ -154,8 +154,8 @@
     },
     {
       "slug": "fliki-ai",
-      "destination": "https://fliki.ai",
-      "type": "Catalog Edge Hop"
+      "destination": "https://fliki.ai/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "framer",

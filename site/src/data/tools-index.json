@@ -189,7 +189,8 @@
     "rating": 4.5,
     "starting_price": "$28/mo",
     "best_for": "Content marketers, social media managers, and YouTube creators needing high-volume video production.",
-    "affiliate_url": "https://fliki.ai"
+    "affiliate_url": "https://fliki.ai/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Framer",
@@ -282,13 +283,12 @@
   {
     "name": "Klap",
     "slug": "klap",
-    "tagline": "Turn long-form YouTube videos into viral short-form clips with AI in one click.",
+    "tagline": "Turn long-form videos into viral short-form clips automatically using AI",
     "category": "AI Video",
     "rating": 4.6,
-    "starting_price": "$29/mo",
-    "best_for": "Content creators, digital marketing agencies, and podcast hosts scaling short-form social channels.",
-    "affiliate_url": "https://klap.app/?via=heliatech",
-    "commission_rate": "30% recurring"
+    "starting_price": "$29",
+    "best_for": "Content creators, podcasters, marketing agencies, and media brands scaling short-form video pipelines",
+    "affiliate_url": "https://klap.app/?via=heliatech"
   },
   {
     "name": "Klaviyo",

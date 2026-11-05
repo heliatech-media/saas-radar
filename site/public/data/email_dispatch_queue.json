@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-05T15:39:41.653452",
+  "updated_at": "2026-11-05T18:38:43.577445",
   "queue_status": "ACTIVE_DISPATCH_PIPELINE",
   "total_upcoming": 12,
   "next_scheduled_dispatch": "2026-11-12T14:00:00Z",
   "upcoming_dispatches": [
     {
-      "id": "disp_51_radar",
+      "id": "disp_53_radar",
       "type": "Weekly Newsletter",
-      "format": "The Thursday Radar #051",
+      "format": "The Thursday Radar #053",
       "scheduled_date": "2026-11-12T14:00:00Z",
       "scheduled_date_fr": "Thursday, Nov 12, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #051] Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
+      "subject": "⚡ [THE RADAR #053] Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
       "sender": "HeliaTech <partnership@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -23,12 +23,12 @@
       "featured_partner": "Cursor"
     },
     {
-      "id": "disp_52_radar",
+      "id": "disp_54_radar",
       "type": "Weekly Newsletter",
-      "format": "The Thursday Radar #052",
+      "format": "The Thursday Radar #054",
       "scheduled_date": "2026-11-19T14:00:00Z",
       "scheduled_date_fr": "Thursday, Nov 19, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #052] The Zero-Latency Voice Revolution: ElevenLabs Agents Teardown",
+      "subject": "⚡ [THE RADAR #054] The Zero-Latency Voice Revolution: ElevenLabs Agents Teardown",
       "sender": "HeliaTech <partnership@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -41,12 +41,12 @@
       "featured_partner": "ElevenLabs"
     },
     {
-      "id": "disp_53_radar",
+      "id": "disp_55_radar",
       "type": "Weekly Newsletter",
-      "format": "The Thursday Radar #053",
+      "format": "The Thursday Radar #055",
       "scheduled_date": "2026-11-26T14:00:00Z",
       "scheduled_date_fr": "Thursday, Nov 26, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #053] The End of Database Lock-In: Serverless Postgres & Supabase",
+      "subject": "⚡ [THE RADAR #055] The End of Database Lock-In: Serverless Postgres & Supabase",
       "sender": "HeliaTech <partnership@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -59,12 +59,12 @@
       "featured_partner": "Supabase"
     },
     {
-      "id": "disp_54_radar",
+      "id": "disp_56_radar",
       "type": "Weekly Newsletter",
-      "format": "The Thursday Radar #054",
+      "format": "The Thursday Radar #056",
       "scheduled_date": "2026-12-03T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 03, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #054] The Great Workflow Migration: n8n Crushes $2,000/mo Zapier Invoices",
+      "subject": "⚡ [THE RADAR #056] The Great Workflow Migration: n8n Crushes $2,000/mo Zapier Invoices",
       "sender": "HeliaTech <partnership@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -77,12 +77,12 @@
       "featured_partner": "n8n"
     },
     {
-      "id": "disp_55_radar",
+      "id": "disp_57_radar",
       "type": "Weekly Newsletter",
-      "format": "The Thursday Radar #055",
+      "format": "The Thursday Radar #057",
       "scheduled_date": "2026-12-10T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 10, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #055] Apollo.io vs ZoomInfo: The 2026 B2B Prospecting Audit",
+      "subject": "⚡ [THE RADAR #057] Apollo.io vs ZoomInfo: The 2026 B2B Prospecting Audit",
       "sender": "HeliaTech <partnership@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -95,12 +95,12 @@
       "featured_partner": "Apollo.io"
     },
     {
-      "id": "disp_56_radar",
+      "id": "disp_58_radar",
       "type": "Weekly Newsletter",
-      "format": "The Thursday Radar #056",
+      "format": "The Thursday Radar #058",
       "scheduled_date": "2026-12-17T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 17, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #056] Ditching Jira: How Linear Restores 4+ Hours of Focus Per Week",
+      "subject": "⚡ [THE RADAR #058] Ditching Jira: How Linear Restores 4+ Hours of Focus Per Week",
       "sender": "HeliaTech <partnership@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [

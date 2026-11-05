@@ -1,7 +1,7 @@
 {
   "domain": "Autonomous B2B Newsletter Planning, Dispatch Memory & Audience Retention",
   "version": "2.0",
-  "last_evolution": "2026-11-05T15:39:41.642587",
+  "last_evolution": "2026-11-05T18:38:43.576343",
   "heuristics": [
     {
       "id": "HEUR-EMAIL-01",
@@ -33,10 +33,12 @@
     }
   ],
   "brand_cooldowns": {
-    "Resend": "2026-11-05T14:37:38.298669"
+    "Resend": "2026-11-05T14:37:38.298669",
+    "Dynamic": "2026-11-05T18:51:19.215288"
   },
   "brand_frequency": {
-    "Resend": 8
+    "Resend": 8,
+    "Dynamic": 2
   },
   "dispatched_history": [
     {
@@ -94,11 +96,25 @@
       "featured_tool": "Resend",
       "recipient": "hamzaelfahsi@gmail.com",
       "resend_id": "01a1abed-e6a1-71e7-a9f3-e90ed344be77"
+    },
+    {
+      "issue": 51,
+      "dispatched_at": "2026-11-05T16:44:59.093067",
+      "featured_tool": "Dynamic",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1ac62-82d7-79be-acc8-98b469b11e1f"
+    },
+    {
+      "issue": 52,
+      "dispatched_at": "2026-11-05T18:51:19.215288",
+      "featured_tool": "Dynamic",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1acd6-2bc1-71b5-b205-ef95db5eb26b"
     }
   ],
   "editorial_forward_plan": [
     {
-      "issue_number": 51,
+      "issue_number": 53,
       "target_date": "2026-11-12",
       "target_date_human": "Thursday, Nov 12, 2026",
       "status": "NEXT_IN_LINE",
@@ -112,7 +128,7 @@
       "deal_hop_link": "https://heliatech.online/templates/cursor-rules-nextjs-tailwind-supabase-masterpack/"
     },
     {
-      "issue_number": 52,
+      "issue_number": 54,
       "target_date": "2026-11-19",
       "target_date_human": "Thursday, Nov 19, 2026",
       "status": "QUEUED",
@@ -126,7 +142,7 @@
       "deal_hop_link": "https://heliatech.online/templates/n8n-ai-voice-receptionist-elevenlabs/"
     },
     {
-      "issue_number": 53,
+      "issue_number": 55,
       "target_date": "2026-11-26",
       "target_date_human": "Thursday, Nov 26, 2026",
       "status": "QUEUED",
@@ -140,7 +156,7 @@
       "deal_hop_link": "https://heliatech.online/go/supabase"
     },
     {
-      "issue_number": 54,
+      "issue_number": 56,
       "target_date": "2026-12-03",
       "target_date_human": "Thursday, Dec 03, 2026",
       "status": "QUEUED",
@@ -154,7 +170,7 @@
       "deal_hop_link": "https://heliatech.online/templates/n8n-ai-lead-enricher-waterfall/"
     },
     {
-      "issue_number": 55,
+      "issue_number": 57,
       "target_date": "2026-12-10",
       "target_date_human": "Thursday, Dec 10, 2026",
       "status": "QUEUED",
@@ -168,7 +184,7 @@
       "deal_hop_link": "https://heliatech.online/templates/airtable-whatsapp-cloud-api-nurturing-crm/"
     },
     {
-      "issue_number": 56,
+      "issue_number": 58,
       "target_date": "2026-12-17",
       "target_date_human": "Thursday, Dec 17, 2026",
       "status": "QUEUED",
@@ -182,7 +198,7 @@
       "deal_hop_link": "https://heliatech.online/go/linear"
     },
     {
-      "issue_number": 57,
+      "issue_number": 59,
       "target_date": "2026-12-24",
       "target_date_human": "Thursday, Dec 24, 2026",
       "status": "QUEUED",
@@ -196,7 +212,7 @@
       "deal_hop_link": "https://heliatech.online/go/heygen"
     },
     {
-      "issue_number": 58,
+      "issue_number": 60,
       "target_date": "2026-12-31",
       "target_date_human": "Thursday, Dec 31, 2026",
       "status": "QUEUED",
@@ -210,7 +226,7 @@
       "deal_hop_link": "https://heliatech.online/templates/airtable-b2b-client-portal-os/"
     },
     {
-      "issue_number": 59,
+      "issue_number": 61,
       "target_date": "2027-01-07",
       "target_date_human": "Thursday, Jan 07, 2027",
       "status": "QUEUED",
@@ -224,7 +240,7 @@
       "deal_hop_link": "https://heliatech.online/go/lovable"
     },
     {
-      "issue_number": 60,
+      "issue_number": 62,
       "target_date": "2027-01-14",
       "target_date_human": "Thursday, Jan 14, 2027",
       "status": "QUEUED",
@@ -238,7 +254,7 @@
       "deal_hop_link": "https://heliatech.online/templates/make-stripe-churn-rescue-blueprint/"
     },
     {
-      "issue_number": 61,
+      "issue_number": 63,
       "target_date": "2027-01-21",
       "target_date_human": "Thursday, Jan 21, 2027",
       "status": "QUEUED",
@@ -252,7 +268,7 @@
       "deal_hop_link": "https://heliatech.online/go/brevo"
     },
     {
-      "issue_number": 62,
+      "issue_number": 64,
       "target_date": "2027-01-28",
       "target_date_human": "Thursday, Jan 28, 2027",
       "status": "QUEUED",

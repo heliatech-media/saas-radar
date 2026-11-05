@@ -5,7 +5,7 @@ tagline: Transform text into high-quality videos with AI voices in minutes.
 category: AI Video & Audio
 rating: 4.5
 website_url: https://fliki.ai
-affiliate_url: https://fliki.ai
+affiliate_url: "https://fliki.ai/?via=heliatech"
 summary: Fliki is a cloud-based content creation platform that merges text-to-speech
   and text-to-video capabilities. It allows users to convert blog posts, tweets, or
   scripts into polished videos using a massive library of AI voices and stock media

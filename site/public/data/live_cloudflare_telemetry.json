@@ -12,19 +12,19 @@
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6350
+      "views": 5970
     },
     {
       "path": "/",
-      "views": 2910
+      "views": 3180
     },
     {
       "path": "/calculator/",
-      "views": 1100
+      "views": 1050
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 530
+      "views": 560
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -40,14 +40,30 @@
     },
     {
       "path": "/radar/",
-      "views": 230
+      "views": 240
     },
     {
       "path": "/blog/",
-      "views": 210
+      "views": 230
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/clickup/",
+      "views": 200
+    },
+    {
+      "path": "/terms/",
+      "views": 190
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 190
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 190
+    },
+    {
+      "path": "/reviews/elevenlabs/",
       "views": 190
     },
     {
@@ -55,8 +71,8 @@
       "views": 180
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
+      "path": "/awards/",
+      "views": 170
     },
     {
       "path": "/reviews/apollo-io/",
@@ -106,11 +122,19 @@
     },
     {
       "country": "Brazil",
-      "views": 380
+      "views": 430
+    },
+    {
+      "country": "CN",
+      "views": 420
+    },
+    {
+      "country": "Canada",
+      "views": 400
     },
     {
       "country": "France",
-      "views": 300
+      "views": 370
     }
   ],
   "top_referrers": [
