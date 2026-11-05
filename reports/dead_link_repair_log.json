@@ -1,16 +1,21 @@
 {
-  "timestamp": "2026-11-05T12:27:40.193738",
+  "timestamp": "2026-11-05T14:35:31.280196",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 157,
-    "total_redirects_active": 88,
+    "total_content_files_scanned": 159,
+    "total_redirects_active": 89,
     "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 8,
     "content_files_modified": 0
   },
   "healed_redirects": [
+    {
+      "slug": "axiom-ai",
+      "target_url": "https://www.axiom-ai.com",
+      "source_file": "axiom-ai-evolution-guide-2026.md"
+    },
     {
       "slug": "zoominfo",
       "target_url": "https://www.zoominfo.com",
@@ -120,11 +125,6 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "fliki-ai",
-      "target_url": "https://www.fliki-ai.com",
-      "source_file": "fliki-ai-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

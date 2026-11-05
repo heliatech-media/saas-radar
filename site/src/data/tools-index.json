@@ -33,6 +33,16 @@
     "commission_rate": "20% recurring for up to 12 months"
   },
   {
+    "name": "Axiom.ai",
+    "slug": "axiom-ai",
+    "tagline": "Automate any browser-based task without writing a single line of code.",
+    "category": "Automation",
+    "rating": 4.6,
+    "starting_price": "$15/mo",
+    "best_for": "Operations managers, growth marketers, and e-commerce teams who need to bridge the gap between apps without APIs.",
+    "affiliate_url": "https://axiom.ai"
+  },
+  {
     "name": "Beehiiv",
     "slug": "beehiiv",
     "tagline": "The all-in-one newsletter platform built for growth, monetization, and scale.",

@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-05 12:25:37 UTC",
+  "last_updated": "2026-11-05 14:33:40 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 65,
-    "total_published_investigations": 157,
-    "reviews_audited": 66,
-    "masterclasses_and_duels": 91,
+    "total_monetized_tools": 66,
+    "total_published_investigations": 159,
+    "reviews_audited": 67,
+    "masterclasses_and_duels": 92,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$22,750 USD",
+    "projected_monthly_mrr": "$23,100 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -146,6 +146,11 @@
       "slug": "fathom",
       "destination": "https://fathom.video/?via=heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "fliki-ai",
+      "destination": "https://fliki.ai",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "framer",
@@ -400,6 +405,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-02 15:56:20",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-02 12:52:07",
+      "title": "Cycle Autonome #Captions",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Captions et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-02 12:51:43",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -415,20 +434,6 @@
     },
     {
       "timestamp": "2026-11-02 09:58:05",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-01 15:31:17",
-      "title": "Cycle Autonome #Murf.ai",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Murf.ai et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-01 15:31:07",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
