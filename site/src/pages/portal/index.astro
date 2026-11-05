@@ -506,6 +506,69 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
     </div>
   </div>
 
+  <!-- 6. MODAL NOTATION & AVIS CLIENT CERTIFIÉ -->
+  <div id="review-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-950 border border-slate-800 rounded-3xl max-w-md w-full p-6 sm:p-7 space-y-4 shadow-2xl relative">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div>
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <span>⭐</span> Déposer un Avis Certifié
+          </h3>
+          <p class="text-[10px] text-slate-400 font-mono" id="review-modal-subtitle">Blueprint sélectionné</p>
+        </div>
+        <button id="close-review-modal-btn" class="w-8 h-8 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm font-bold">
+          ✕
+        </button>
+      </div>
+
+      <form id="review-form" class="space-y-4">
+        <input type="hidden" id="review-blueprint-id" />
+        
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5">Votre Note Globale :</label>
+          <div class="flex items-center gap-2 text-2xl cursor-pointer" id="star-picker">
+            <span class="star-item text-amber-400" data-val="1">★</span>
+            <span class="star-item text-amber-400" data-val="2">★</span>
+            <span class="star-item text-amber-400" data-val="3">★</span>
+            <span class="star-item text-amber-400" data-val="4">★</span>
+            <span class="star-item text-amber-400" data-val="5">★</span>
+            <span class="text-xs font-mono text-amber-400 font-bold ml-2" id="star-label">5 / 5 Étoiles</span>
+          </div>
+          <input type="hidden" id="review-rating-val" value="5" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Votre Rôle / Titre :</label>
+          <input 
+            type="text" 
+            id="review-role-input"
+            required
+            value="Lead Automation Engineer"
+            class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+          />
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1">Votre Retour d'Expérience :</label>
+          <textarea 
+            id="review-comment-input"
+            rows="3"
+            required
+            placeholder="Comment ce blueprint a-t-il simplifié vos opérations ? Combien de temps avez-vous économisé ?"
+            class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit"
+          class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
+        >
+          Publier mon Avis Vérifié ➔
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- ========================================================================= -->
   <!-- 💻 JAVASCRIPT DU PORTAL (STATE MANAGEMENT LOCALSTORAGE + AUDIT ANTI-SCAM) -->
   <!-- ========================================================================= -->
@@ -661,7 +724,14 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
                     class="open-guide-btn px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono transition-all"
                     data-ecosystem="${p.ecosystem}"
                   >
-                    📖 Guide d'Import
+                    📖 Guide
+                  </button>
+                  <button 
+                    class="open-review-btn px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 border border-slate-800 text-xs font-mono transition-all flex items-center gap-1"
+                    data-id="${p.id}"
+                    data-title="${p.title}"
+                  >
+                    <span>★</span> Noter
                   </button>
                 </div>
               </div>
@@ -839,6 +909,15 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
           const price = btn.getAttribute('data-price');
           const date = btn.getAttribute('data-date');
           openInvoiceModal(inv, title, price, date);
+        });
+      });
+
+      // Open Review Modal
+      document.querySelectorAll('.open-review-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          const title = btn.getAttribute('data-title');
+          openReviewModal(id, title, btn);
         });
       });
     }
@@ -1097,6 +1176,60 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
     document.getElementById('print-invoice-btn')?.addEventListener('click', () => {
       alert("✓ Génération du reçu comptable PDF conforme HeliaTech.");
       document.getElementById('invoice-modal')?.classList.add('hidden');
+    });
+
+    // E. Review Modal Controller
+    const reviewModal = document.getElementById('review-modal');
+    let currentReviewBtn = null;
+
+    function openReviewModal(bpId, title, btn) {
+      document.getElementById('review-blueprint-id').value = bpId;
+      document.getElementById('review-modal-subtitle').textContent = title;
+      currentReviewBtn = btn;
+      setStarRating(5);
+      reviewModal?.classList.remove('hidden');
+    }
+
+    function setStarRating(val) {
+      document.getElementById('review-rating-val').value = val;
+      document.getElementById('star-label').textContent = `${val} / 5 Étoiles`;
+      document.querySelectorAll('.star-item').forEach(star => {
+        const starVal = parseInt(star.getAttribute('data-val'));
+        if (starVal <= val) {
+          star.classList.add('text-amber-400');
+          star.classList.remove('text-slate-600');
+        } else {
+          star.classList.remove('text-amber-400');
+          star.classList.add('text-slate-600');
+        }
+      });
+    }
+
+    document.querySelectorAll('.star-item').forEach(star => {
+      star.addEventListener('click', () => {
+        const val = parseInt(star.getAttribute('data-val'));
+        setStarRating(val);
+      });
+    });
+
+    document.getElementById('close-review-modal-btn')?.addEventListener('click', () => reviewModal?.classList.add('hidden'));
+
+    document.getElementById('review-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const bpId = document.getElementById('review-blueprint-id').value;
+      const rating = document.getElementById('review-rating-val').value;
+      const role = document.getElementById('review-role-input').value;
+      const comment = document.getElementById('review-comment-input').value;
+
+      if (currentReviewBtn) {
+        currentReviewBtn.textContent = `✓ Noté ${rating}★`;
+        currentReviewBtn.classList.remove('text-amber-300');
+        currentReviewBtn.classList.add('text-emerald-400', 'font-bold');
+        currentReviewBtn.disabled = true;
+      }
+
+      alert(`⭐ [Avis Certifié Enregistré] :\nVotre note de ${rating}/5 étoiles pour ce blueprint a été enregistrée avec succès.`);
+      reviewModal?.classList.add('hidden');
     });
 
     // --- 8. UPLOAD & REAL-TIME ANTI-SCAM SCANNER ENGINE ---

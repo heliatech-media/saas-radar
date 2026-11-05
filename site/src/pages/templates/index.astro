@@ -11,30 +11,41 @@ const ecosystemColors: Record<string, string> = {
   airtable: "from-yellow-500/20 to-amber-500/10 border-yellow-500/40 text-yellow-400",
   cursor: "from-cyan-500/20 to-sky-500/10 border-cyan-500/40 text-cyan-400"
 };
+
+const categories = [
+  "Tous",
+  "Lead Gen & Sales",
+  "Fintech & RevOps",
+  "CRM & Sales",
+  "Customer Support",
+  "AI Developer Tools",
+  "Social & Content",
+  "Agency Operations"
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription} noindex={true}>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-24">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-24">
     
-    <!-- Stealth Staging Private Notice -->
+    <!-- Stealth Staging Top Notice -->
     <div class="flex items-center justify-between p-3.5 mb-8 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
       <div class="flex items-center gap-2.5">
         <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
         <span class="font-bold uppercase tracking-wider">Mode Stealth / Staging Privé</span>
-        <span class="text-amber-400/70 hidden sm:inline">— Cette marketplace est en cours d'assemblage sous-marin. Non indexée.</span>
+        <span class="text-amber-400/70 hidden sm:inline">— Catalogue d'ingénierie en pré-lancement. Non indexé.</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="/portal/" class="px-3 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 border border-cyan-500/40 font-bold transition-all">
           Espace Client &amp; Créateur (/portal) ➔
         </a>
-        <a href="/sell/" class="px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/40 font-bold transition-all">
+        <a href="/sell/" class="px-3 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 font-bold transition-all">
           Vendre (/sell) ➔
         </a>
       </div>
     </div>
 
     <!-- Header Section -->
-    <div class="text-center max-w-3xl mx-auto mb-14">
+    <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-6">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
         HeliaTech Automation &amp; AI Stack Exchange
@@ -46,19 +57,19 @@ const ecosystemColors: Record<string, string> = {
         </span>
       </h1>
       <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
-        Stop re-inventing the wheel. Deploy verified <strong>n8n workflows</strong>, <strong>Make.com blueprints</strong>, and <strong>Airtable architectures</strong> built by top engineers. Buy directly or sell your own templates with an 80% creator payout.
+        Arrêtez de réinventer la roue. Déployez des <strong>workflows n8n</strong>, des <strong>blueprints Make.com</strong> et des <strong>architectures Airtable</strong> vérifiés par nos ingénieurs. Téléchargez directement ou vendez vos créations avec 80% de reversement net.
       </p>
     </div>
 
-    <!-- Live Marketplace Stats Telemetry -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <!-- Telemetry Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
       <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
-        <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1">6 Blueprints</div>
-        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Vérifiés en Staging</div>
+        <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1">{templates.length} Blueprints</div>
+        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Vérifiés Anti-Scam</div>
       </div>
       <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
         <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mb-1">80% Payout</div>
-        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Part Créateur Garanti</div>
+        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Part Créateur Nette</div>
       </div>
       <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
         <div class="text-2xl sm:text-3xl font-black text-fuchsia-400 font-mono mb-1">20% Cut</div>
@@ -66,31 +77,92 @@ const ecosystemColors: Record<string, string> = {
       </div>
       <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
         <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono mb-1">100% JSON</div>
-        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Téléchargement 1-Clic</div>
+        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Import 1-Clic Garanti</div>
       </div>
     </div>
 
-    <!-- Filter Buttons (Ecosystem Tabs) -->
-    <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
-      <button class="filter-btn active px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan" data-ecosystem="all">
-        ⚡ Tous ({templates.length})
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="n8n">
-        🟠 n8n Workflows
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="make">
-        🟣 Make.com Blueprints
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="airtable">
-        🟡 Airtable OS
-      </button>
-      <button class="filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="cursor">
-        🤖 Cursor Rules
-      </button>
+    <!-- Live Search & Advanced Filter Controls -->
+    <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 mb-10 space-y-6">
+      
+      <!-- Top Search & Sort Row -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <!-- Search Input -->
+        <div class="relative w-full md:w-2/3">
+          <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-sm">
+            🔍
+          </span>
+          <input 
+            type="text" 
+            id="live-search-input"
+            placeholder="Rechercher par mot-clé (ex: Stripe, Lead, ElevenLabs, QuickBooks, CRM, Claude...)"
+            class="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
+          />
+        </div>
+
+        <!-- Sort Select -->
+        <div class="flex items-center gap-2.5 w-full md:w-auto">
+          <span class="text-xs font-mono text-slate-400 whitespace-nowrap">Trier par :</span>
+          <select 
+            id="sort-select"
+            class="w-full md:w-auto px-3.5 py-3 rounded-2xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+          >
+            <option value="popular">🔥 Plus Populaires (Ventes)</option>
+            <option value="rating">⭐️ Mieux Notés (Notes &amp; Avis)</option>
+            <option value="price-asc">💵 Prix : Moins cher au plus cher</option>
+            <option value="price-desc">💎 Prix : Plus cher au moins cher</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- Ecosystem Filter Tabs -->
+      <div class="space-y-3 pt-2 border-t border-slate-800/80">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Écosystème d'Automatisation :</span>
+          <span id="results-counter" class="text-xs font-mono text-cyan-400 font-bold">
+            Affichage de {templates.length} blueprints
+          </span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <button class="eco-btn active px-3.5 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan" data-ecosystem="all">
+            ⚡ Tous ({templates.length})
+          </button>
+          <button class="eco-btn px-3.5 py-1.5 rounded-xl bg-slate-950 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="n8n">
+            🟠 n8n Workflows
+          </button>
+          <button class="eco-btn px-3.5 py-1.5 rounded-xl bg-slate-950 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="make">
+            🟣 Make.com Blueprints
+          </button>
+          <button class="eco-btn px-3.5 py-1.5 rounded-xl bg-slate-950 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="airtable">
+            🟡 Airtable OS
+          </button>
+          <button class="eco-btn px-3.5 py-1.5 rounded-xl bg-slate-950 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 font-mono text-xs font-bold transition-all" data-ecosystem="cursor">
+            🤖 Cursor Rules
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="space-y-2 pt-2 border-t border-slate-800/60">
+        <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Cas d'Usage &amp; Domaine Métier :</span>
+        <div class="flex flex-wrap items-center gap-2">
+          {categories.map((cat) => (
+            <button 
+              class={`cat-btn px-3 py-1 rounded-lg text-xs font-mono transition-all border ${cat === 'Tous' ? 'bg-slate-800 text-cyan-300 border-cyan-500/40 active' : 'bg-slate-950 text-slate-400 hover:text-white border-slate-800'}`}
+              data-category={cat}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
     </div>
 
     <!-- Template Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div id="templates-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {templates.map((tpl) => {
         const colorClass = ecosystemColors[tpl.ecosystem] || "from-slate-500/20 to-slate-800/10 border-slate-700 text-slate-300";
 
@@ -98,6 +170,13 @@ const ecosystemColors: Record<string, string> = {
           <div 
             class="template-card flex flex-col justify-between p-6 rounded-3xl bg-slate-950/70 border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
             data-ecosystem={tpl.ecosystem}
+            data-category={tpl.category}
+            data-title={tpl.title.toLowerCase()}
+            data-tagline={tpl.tagline.toLowerCase()}
+            data-services={tpl.required_services.join(' ').toLowerCase()}
+            data-price={tpl.price_usd}
+            data-sales={tpl.sales_count}
+            data-rating={tpl.rating}
           >
             <!-- Glow Accents -->
             <div class="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
@@ -105,48 +184,55 @@ const ecosystemColors: Record<string, string> = {
             <div>
               <!-- Top Badges -->
               <div class="flex items-center justify-between gap-2 mb-4">
-                <span class={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider border ${colorClass}`}>
+                <span class={`text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full border bg-gradient-to-r ${colorClass}`}>
                   {tpl.ecosystem.toUpperCase()}
                 </span>
-                <span class="text-xs font-mono font-bold text-slate-400">
-                  {tpl.nodes_count} Nodes • ~{tpl.estimated_hours_saved}h saved
-                </span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-amber-400 text-xs">★</span>
+                  <span class="text-xs font-mono font-bold text-white">{tpl.rating}</span>
+                  <span class="text-[10px] font-mono text-slate-500">({tpl.reviews_count})</span>
+                </div>
               </div>
 
               <!-- Title & Tagline -->
-              <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-2 leading-snug">
+              <h2 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-2 leading-snug">
                 <a href={`/templates/${tpl.slug}/`}>
                   {tpl.title}
                 </a>
-              </h3>
-              <p class="text-xs text-slate-400 font-light leading-relaxed mb-6">
+              </h2>
+              <p class="text-xs text-slate-400 font-light leading-relaxed mb-4 line-clamp-2">
                 {tpl.tagline}
               </p>
 
-              <!-- Value Prop Box -->
-              <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800/80 space-y-2 mb-6">
-                <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center justify-between">
-                  <span>💰 ROI Estimé :</span>
-                  <span>{tpl.monthly_savings_estimate}</span>
+              <!-- Mini Pipeline Nodes Preview -->
+              {tpl.pipeline_steps && tpl.pipeline_steps.length > 0 && (
+                <div class="p-2.5 rounded-xl bg-slate-900/50 border border-slate-800/80 mb-4">
+                  <span class="text-[10px] font-mono text-slate-400 block mb-1.5 font-semibold">Flux d'Exécution :</span>
+                  <div class="flex items-center gap-1.5 overflow-x-auto text-[11px] font-mono text-slate-300 pb-1 scrollbar-none">
+                    {tpl.pipeline_steps.slice(0, 3).map((step, idx) => (
+                      <span class="flex items-center gap-1 px-2 py-0.5 rounded bg-slate-950 border border-slate-800 whitespace-nowrap">
+                        <span>{step.icon}</span> <span>{step.name}</span>
+                        {idx < 2 && <span class="text-slate-600 ml-1">➔</span>}
+                      </span>
+                    ))}
+                    {tpl.pipeline_steps.length > 3 && (
+                      <span class="text-[10px] text-cyan-400 font-mono">+{tpl.pipeline_steps.length - 3}</span>
+                    )}
+                  </div>
                 </div>
-                <div class="text-[10px] font-mono text-slate-400">
-                  Services : {tpl.required_services.join(', ')}
-                </div>
-              </div>
+              )}
 
-              <!-- Creator Info -->
-              <div class="flex items-center gap-2.5 mb-6 pt-4 border-t border-slate-800/80">
-                <img src={tpl.creator.avatar} alt={tpl.creator.name} class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700" />
-                <div class="text-xs">
-                  <div class="text-white font-semibold flex items-center gap-1.5">
-                    {tpl.creator.name}
-                    <span class="text-[9px] px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-400 font-mono">
-                      {tpl.creator.badge}
-                    </span>
-                  </div>
-                  <div class="text-[10px] text-slate-400 font-mono">
-                    ★ {tpl.rating} ({tpl.reviews_count} avis) • {tpl.sales_count} ventes
-                  </div>
+              <!-- Technical ROI Metric Tags -->
+              <div class="space-y-2 mb-5 text-[11px] font-mono">
+                <div class="flex items-center justify-between text-slate-400">
+                  <span>Temps économisé :</span>
+                  <span class="text-emerald-400 font-bold">~{tpl.estimated_hours_saved}h de dev</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-400">
+                  <span>Stack requise :</span>
+                  <span class="text-slate-200 truncate max-w-[170px]" title={tpl.required_services.join(', ')}>
+                    {tpl.required_services.join(' • ')}
+                  </span>
                 </div>
               </div>
             </div>
@@ -154,19 +240,31 @@ const ecosystemColors: Record<string, string> = {
             <!-- Bottom Price & CTA -->
             <div class="flex items-center justify-between pt-4 border-t border-slate-800">
               <div>
-                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Prix Licence</span>
+                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">Licence Commerciale</span>
                 <span class="text-2xl font-black text-white font-mono">${tpl.price_usd}</span>
               </div>
               <a 
                 href={`/templates/${tpl.slug}/`}
                 class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
               >
-                Inspecter ➔
+                Inspecter le Flow ➔
               </a>
             </div>
           </div>
         );
       })}
+    </div>
+
+    <!-- Empty Results Alert (hidden by default) -->
+    <div id="no-results-box" class="p-12 rounded-3xl bg-slate-900/40 border border-slate-800 text-center space-y-4 mb-16 hidden">
+      <div class="text-4xl">🔍</div>
+      <h3 class="text-lg font-bold text-white">Aucun blueprint ne correspond à vos filtres</h3>
+      <p class="text-xs font-mono text-slate-400 max-w-md mx-auto">
+        Essayez d'élargir votre recherche, de sélectionner un autre écosystème ou réinitialisez vos filtres ci-dessous.
+      </p>
+      <button id="reset-filters-btn" class="px-5 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan">
+        Réinitialiser les Filtres
+      </button>
     </div>
 
     <!-- Creator Call-to-Action Banner -->
@@ -194,26 +292,127 @@ const ecosystemColors: Record<string, string> = {
 
   </div>
 
+  <!-- Interactive Client-side Script: Instant Search, Sorting & Multi-Filters -->
   <script is:inline>
-    // Client-side filtering by ecosystem
-    document.querySelectorAll('.filter-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => {
-          b.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
-          b.classList.add('bg-slate-900', 'text-slate-300');
-        });
-        button.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
-        button.classList.remove('bg-slate-900', 'text-slate-300');
+    const searchInput = document.getElementById('live-search-input');
+    const sortSelect = document.getElementById('sort-select');
+    const ecoButtons = document.querySelectorAll('.eco-btn');
+    const catButtons = document.querySelectorAll('.cat-btn');
+    const cards = Array.from(document.querySelectorAll('.template-card'));
+    const grid = document.getElementById('templates-grid');
+    const noResultsBox = document.getElementById('no-results-box');
+    const resultsCounter = document.getElementById('results-counter');
+    const resetBtn = document.getElementById('reset-filters-btn');
 
-        const eco = button.getAttribute('data-ecosystem');
-        document.querySelectorAll('.template-card').forEach(card => {
-          if (eco === 'all' || card.getAttribute('data-ecosystem') === eco) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+    let currentEco = 'all';
+    let currentCat = 'Tous';
+    let searchQuery = '';
+    let currentSort = 'popular';
+
+    function applyFilters() {
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const eco = card.getAttribute('data-ecosystem');
+        const cat = card.getAttribute('data-category');
+        const title = card.getAttribute('data-title') || '';
+        const tagline = card.getAttribute('data-tagline') || '';
+        const services = card.getAttribute('data-services') || '';
+
+        const matchEco = (currentEco === 'all' || eco === currentEco);
+        const matchCat = (currentCat === 'Tous' || cat === currentCat);
+        const matchSearch = (!searchQuery || title.includes(searchQuery) || tagline.includes(searchQuery) || services.includes(searchQuery));
+
+        if (matchEco && matchCat && matchSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
       });
+
+      // Sorting
+      sortCards();
+
+      // UI Counter & Empty State
+      if (resultsCounter) {
+        resultsCounter.textContent = `Affichage de ${visibleCount} blueprint${visibleCount > 1 ? 's' : ''}`;
+      }
+
+      if (visibleCount === 0) {
+        noResultsBox?.classList.remove('hidden');
+        grid?.classList.add('hidden');
+      } else {
+        noResultsBox?.classList.add('hidden');
+        grid?.classList.remove('hidden');
+      }
+    }
+
+    function sortCards() {
+      const sorted = cards.slice().sort((a, b) => {
+        const priceA = parseFloat(a.getAttribute('data-price') || 0);
+        const priceB = parseFloat(b.getAttribute('data-price') || 0);
+        const salesA = parseInt(a.getAttribute('data-sales') || 0);
+        const salesB = parseInt(b.getAttribute('data-sales') || 0);
+        const ratingA = parseFloat(a.getAttribute('data-rating') || 0);
+        const ratingB = parseFloat(b.getAttribute('data-rating') || 0);
+
+        if (currentSort === 'price-asc') return priceA - priceB;
+        if (currentSort === 'price-desc') return priceB - priceA;
+        if (currentSort === 'rating') return ratingB - ratingA;
+        return salesB - salesA; // default popular
+      });
+
+      sorted.forEach(card => grid?.appendChild(card));
+    }
+
+    // Event Listeners
+    searchInput?.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+
+    sortSelect?.addEventListener('change', (e) => {
+      currentSort = e.target.value;
+      applyFilters();
+    });
+
+    ecoButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        ecoButtons.forEach(b => {
+          b.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+          b.classList.add('bg-slate-950', 'text-slate-300');
+        });
+        btn.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+        btn.classList.remove('bg-slate-950', 'text-slate-300');
+        currentEco = btn.getAttribute('data-ecosystem');
+        applyFilters();
+      });
+    });
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => {
+          b.classList.remove('bg-slate-800', 'text-cyan-300', 'border-cyan-500/40');
+          b.classList.add('bg-slate-950', 'text-slate-400');
+        });
+        btn.classList.add('bg-slate-800', 'text-cyan-300', 'border-cyan-500/40');
+        btn.classList.remove('bg-slate-950', 'text-slate-400');
+        currentCat = btn.getAttribute('data-category');
+        applyFilters();
+      });
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      currentEco = 'all';
+      currentCat = 'Tous';
+      searchQuery = '';
+      currentSort = 'popular';
+      if (searchInput) searchInput.value = '';
+      if (sortSelect) sortSelect.value = 'popular';
+      ecoButtons[0]?.click();
+      catButtons[0]?.click();
+      applyFilters();
     });
   </script>
 </Layout>

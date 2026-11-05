@@ -71,10 +71,14 @@ class TemplateCuratorAgent:
 
     def initialize_elite_seed_catalog(self) -> List[Dict[str, Any]]:
         """
-        Populates the marketplace with 6 flagship, battle-tested automation templates
+        Populates the marketplace with 12 flagship, battle-tested automation templates
         ready for the stealth build and testing phase.
         """
-        templates = [
+        try:
+            from scripts.enrich_marketplace_catalog import TEMPLATES
+            templates = TEMPLATES
+        except Exception:
+            templates = [
             {
                 "id": "tpl_n8n_ai_lead_enricher",
                 "slug": "n8n-ai-lead-enricher-waterfall",
