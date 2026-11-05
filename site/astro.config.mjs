@@ -6,5 +6,5 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   site: 'https://heliatech.online',
-  trailingSlash: 'always'
+  trailingSlash: 'ignore'
 });
