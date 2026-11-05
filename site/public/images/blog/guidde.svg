@@ -1,0 +1,358 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Glowing Radial Gradients -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    
+    <radialGradient id="glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-fuchsia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Vectors -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="glass-card-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.65"/>
+    </linearGradient>
+
+    <linearGradient id="glass-card-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="timeline-track" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="play-btn-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="soft-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" opacity="0.6"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" opacity="0.4"/>
+    </pattern>
+
+    <pattern id="dot-matrix" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#06b6d4" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+
+  <!-- Cyber Grid Layer -->
+  <rect width="1200" height="630" fill="url(#cyber-grid)" opacity="0.8"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="280" r="380" fill="url(#glow-cyan)" filter="url(#soft-glow)"/>
+  <circle cx="800" cy="420" r="320" fill="url(#glow-fuchsia)" filter="url(#soft-glow)"/>
+  <circle cx="250" cy="150" r="280" fill="url(#glow-violet)" filter="url(#soft-glow)"/>
+
+  <!-- Decorative Circuit Wave Lines in Background -->
+  <path d="M-100,500 C200,450 350,600 600,520 C850,440 1000,580 1300,490" fill="none" stroke="url(#accent-grad)" stroke-width="1.5" opacity="0.2" stroke-dasharray="8 6"/>
+  <path d="M-100,540 C220,490 370,640 620,560 C870,480 1020,620 1320,530" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.15"/>
+
+  <!-- ==================== LEFT COLUMN: TYPOGRAPHY & METADATA ==================== -->
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(80, 68)" filter="url(#shadow)">
+    <rect width="320" height="32" rx="16" fill="#0f172a" stroke="url(#stroke-grad)" stroke-width="1"/>
+    <circle cx="16" cy="16" r="4" fill="#06b6d4" filter="url(#glow)"/>
+    <text x="30" y="20.5" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Headline Title: GUIDDE -->
+  <g transform="translate(80, 175)">
+    <!-- Decorative Tag above Title -->
+    <text x="0" y="-20" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#d946ef" letter-spacing="3">ENTERPRISE AI DISRUPTION // VOL. 08</text>
+    
+    <!-- Big Title -->
+    <text x="0" y="55" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="74" font-weight="900" fill="url(#title-grad)" letter-spacing="-1.5" filter="url(#shadow)">GUIDDE</text>
+    
+    <!-- Visual Underline Accent -->
+    <rect x="0" y="75" width="440" height="4" rx="2" fill="url(#accent-grad)"/>
+    <rect x="450" y="75" width="12" height="4" rx="2" fill="#d946ef"/>
+    <rect x="467" y="75" width="6" height="4" rx="2" fill="#06b6d4"/>
+  </g>
+
+  <!-- Subtitle Block -->
+  <g transform="translate(80, 285)">
+    <text x="0" y="0" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#f8fafc" letter-spacing="-0.3">
+      The End of the Manual How-To &amp; the Rise
+    </text>
+    <text x="0" y="28" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#38bdf8" letter-spacing="-0.3">
+      of AI-Driven Documentation Velocity
+    </text>
+  </g>
+
+  <!-- Metadata Cards & Feature Metrics -->
+  <g transform="translate(80, 365)">
+    <!-- Feature Pill 1: Category -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="48" rx="10" fill="url(#glass-card-1)" stroke="#1e293b" stroke-width="1"/>
+      <rect width="210" height="48" rx="10" fill="none" stroke="url(#stroke-grad)" stroke-width="1" opacity="0.4"/>
+      <text x="16" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="1">CATEGORY</text>
+      <text x="16" y="36" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">AI Video &amp; Docs</text>
+    </g>
+
+    <!-- Feature Pill 2: Performance Velocity -->
+    <g transform="translate(225, 0)">
+      <rect width="220" height="48" rx="10" fill="url(#glass-card-1)" stroke="#1e293b" stroke-width="1"/>
+      <rect width="220" height="48" rx="10" fill="none" stroke="url(#stroke-grad)" stroke-width="1" opacity="0.4"/>
+      <text x="16" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" letter-spacing="1">DOCUMENTATION SPEED</text>
+      <text x="16" y="36" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#06b6d4">11x Workflow Acceleration</text>
+    </g>
+
+    <!-- Detailed Bullet Cards (Vertical Stack) -->
+    <g transform="translate(0, 68)">
+      <!-- Bullet 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="445" height="40" rx="8" fill="url(#glass-card-2)" stroke="#1e293b" stroke-width="1"/>
+        <circle cx="20" cy="20" r="5" fill="#06b6d4"/>
+        <text x="36" y="24" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Auto-Generates Visual Step-by-Step Guides</text>
+        <text x="390" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">[ 100% ]</text>
+      </g>
+
+      <!-- Bullet 2 -->
+      <g transform="translate(0, 48)">
+        <rect width="445" height="40" rx="8" fill="url(#glass-card-2)" stroke="#1e293b" stroke-width="1"/>
+        <circle cx="20" cy="20" r="5" fill="#8b5cf6"/>
+        <text x="36" y="24" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Neural Voiceover &amp; Dynamic Video Render</text>
+        <text x="395" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#8b5cf6">[ AI-v4 ]</text>
+      </g>
+
+      <!-- Bullet 3 -->
+      <g transform="translate(0, 96)">
+        <rect width="445" height="40" rx="8" fill="url(#glass-card-2)" stroke="#1e293b" stroke-width="1"/>
+        <circle cx="20" cy="20" r="5" fill="#d946ef"/>
+        <text x="36" y="24" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">Instant Browser Capture to Brand-Ready Assets</text>
+        <text x="402" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#d946ef">[ FAST ]</text>
+      </g>
+    </g>
+  </g>
+
+
+  <!-- ==================== RIGHT COLUMN: 3D ISOMETRIC AI VIDEO STUDIO ==================== -->
+
+  <g transform="translate(570, 40)">
+    
+    <!-- Decorative Background Grid Ring/Radar -->
+    <ellipse cx="300" cy="280" rx="260" ry="150" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4 8"/>
+    <ellipse cx="300" cy="280" rx="200" ry="115" fill="none" stroke="url(#accent-grad)" opacity="0.25" stroke-width="1"/>
+    
+    <!-- Floating Light Beams / Connectors -->
+    <path d="M120,180 L220,120 M480,160 L380,240 M200,420 L300,340" stroke="url(#accent-grad)" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4"/>
+
+    <!-- ================= LAYER 1: BASE TIMELINE & WORKFLOW NODE CANVAS (Isometric Tilted Panel) ================= -->
+    <g transform="translate(40, 240) rotate(-12) skewX(18)" filter="url(#shadow)">
+      <!-- Main Canvas Board -->
+      <rect width="440" height="280" rx="16" fill="#090d16" stroke="url(#stroke-grad)" stroke-width="2" opacity="0.9"/>
+      <rect width="440" height="280" rx="16" fill="url(#dot-matrix)" opacity="0.3"/>
+
+      <!-- Inner Grid Interface / Editor Timeline -->
+      <g transform="translate(20, 20)">
+        <!-- Top Toolbar Bar -->
+        <rect width="400" height="28" rx="6" fill="#1e293b" opacity="0.6"/>
+        <circle cx="16" cy="14" r="4" fill="#ef4444"/>
+        <circle cx="30" cy="14" r="4" fill="#f59e0b"/>
+        <circle cx="44" cy="14" r="4" fill="#10b981"/>
+        <rect x="70" y="8" width="140" height="12" rx="3" fill="#0f172a"/>
+        <text x="75" y="17" font-family="'JetBrains Mono', monospace" font-size="8" fill="#38bdf8">guidde-ai-engine://workflow.render</text>
+
+        <!-- Dynamic Timeline Video Tracks -->
+        <!-- Track 1: Video Capture Frames -->
+        <g transform="translate(0, 45)">
+          <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">VIDEO STREAM</text>
+          <rect x="80" y="0" width="320" height="20" rx="4" fill="#0f172a" stroke="#1e293b"/>
+          <rect x="85" y="3" width="60" height="14" rx="2" fill="#06b6d4" opacity="0.7"/>
+          <rect x="150" y="3" width="80" height="14" rx="2" fill="#8b5cf6" opacity="0.7"/>
+          <rect x="235" y="3" width="50" height="14" rx="2" fill="#d946ef" opacity="0.7"/>
+          <rect x="290" y="3" width="105" height="14" rx="2" fill="#38bdf8" opacity="0.5"/>
+        </g>
+
+        <!-- Track 2: AI Neural Voice Envelope Waveform -->
+        <g transform="translate(0, 80)">
+          <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">AI VOICE SYNTH</text>
+          <rect x="80" y="0" width="320" height="20" rx="4" fill="#0f172a" stroke="#1e293b"/>
+          <!-- Waveform Bars -->
+          <path d="M 90 10 L 95 4 L 100 16 L 105 2 L 110 18 L 115 8 L 120 12 L 125 5 L 130 15 L 135 9 L 140 10 
+                   M 155 10 L 160 3 L 165 17 L 170 5 L 175 15 L 180 7 L 185 13 L 190 2 L 195 18 L 200 10
+                   M 240 10 L 245 4 L 250 16 L 255 3 L 260 17 L 265 8 L 270 12 L 275 6 L 280 14" 
+                fill="none" stroke="#d946ef" stroke-width="1.5" stroke-linecap="round"/>
+        </g>
+
+        <!-- Track 3: Document Step Layout Anchors -->
+        <g transform="translate(0, 115)">
+          <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">DOC STEPS</text>
+          <rect x="80" y="0" width="320" height="20" rx="4" fill="#0f172a" stroke="#1e293b"/>
+          <!-- Step Markers -->
+          <rect x="90" y="4" width="30" height="12" rx="3" fill="#06b6d4"/>
+          <rect x="180" y="4" width="30" height="12" rx="3" fill="#8b5cf6"/>
+          <rect x="270" y="4" width="30" height="12" rx="3" fill="#d946ef"/>
+        </g>
+
+        <!-- Isometric Node Connectors inside canvas -->
+        <g transform="translate(20, 150)">
+          <!-- Node 1 -->
+          <rect x="60" y="20" width="80" height="45" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="1"/>
+          <text x="70" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#38bdf8">STEP 01</text>
+          <text x="70" y="52" font-family="'Inter', sans-serif" font-size="7" fill="#94a3b8">Capture Click</text>
+          
+          <!-- Vector Arrow Connector -->
+          <path d="M 140 42 L 180 42" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+          <!-- Node 2 -->
+          <rect x="180" y="20" width="80" height="45" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+          <text x="190" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#8b5cf6">STEP 02</text>
+          <text x="190" y="52" font-family="'Inter', sans-serif" font-size="7" fill="#94a3b8">AI Voiceover</text>
+
+          <!-- Vector Arrow Connector -->
+          <path d="M 260 42 L 300 42" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+          <!-- Node 3 -->
+          <rect x="300" y="20" width="80" height="45" rx="6" fill="#1e293b" stroke="#d946ef" stroke-width="1"/>
+          <text x="310" y="38" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#d946ef">STEP 03</text>
+          <text x="310" y="52" font-family="'Inter', sans-serif" font-size="7" fill="#94a3b8">Publish Video</text>
+        </g>
+
+        <!-- Playhead Laser Line -->
+        <line x1="215" y1="35" x2="215" y2="230" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4 2" filter="url(#glow)"/>
+        <polygon points="210,35 220,35 215,42" fill="#06b6d4"/>
+      </g>
+    </g>
+
+    <!-- ================= LAYER 2: FLOATING 3D GLASS PLAYBACK VIEWPORT (Overlay Panel) ================= -->
+    <g transform="translate(180, 70)" filter="url(#shadow)">
+      <!-- Glass Card Frame -->
+      <rect width="360" height="220" rx="14" fill="url(#glass-card-1)" stroke="url(#stroke-grad)" stroke-width="1.5"/>
+      
+      <!-- Video Window Header -->
+      <path d="M0,14 Q0,0 14,0 L346,0 Q360,0 360,14 L360,32 L0,32 Z" fill="#0f172a"/>
+      <circle cx="16" cy="16" r="4" fill="#38bdf8"/>
+      <circle cx="28" cy="16" r="4" fill="#8b5cf6"/>
+      <circle cx="40" cy="16" r="4" fill="#d946ef"/>
+      <text x="180" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Guidde AI Video Preview — 4K 60fps</text>
+
+      <!-- Video Content Graphic (Abstract UI Capture Scene) -->
+      <g transform="translate(16, 44)">
+        <rect width="328" height="160" rx="8" fill="#030712" stroke="#1e293b"/>
+        
+        <!-- Mockup UI Screen elements inside video preview -->
+        <rect x="15" y="15" width="120" height="12" rx="3" fill="#1e293b"/>
+        <rect x="15" y="35" width="180" height="8" rx="2" fill="#0f172a"/>
+        <rect x="15" y="48" width="140" height="8" rx="2" fill="#0f172a"/>
+        
+        <!-- Video Card Thumbnails inside Preview -->
+        <rect x="15" y="68" width="88" height="55" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="1"/>
+        <circle cx="59" cy="95" r="12" fill="#06b6d4" opacity="0.3"/>
+        <polygon points="56,90 65,95 56,100" fill="#38bdf8"/>
+
+        <rect x="115" y="68" width="88" height="55" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="1"/>
+        <circle cx="159" cy="95" r="12" fill="#8b5cf6" opacity="0.3"/>
+        <polygon points="156,90 165,95 156,100" fill="#8b5cf6"/>
+
+        <rect x="215" y="68" width="98" height="55" rx="6" fill="#0f172a" stroke="#d946ef" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="264" y="99" font-family="'Inter', sans-serif" font-size="9" fill="#d946ef" text-anchor="middle">+ AI Render</text>
+
+        <!-- Mouse Cursor Animated Path Overlay -->
+        <path d="M 240 140 Q 200 110 160 95" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+        <!-- Cyber Glowing Cursor -->
+        <g transform="translate(160, 95) rotate(-25)">
+          <polygon points="0,0 0,16 4,12 8,18 11,16 7,10 13,10" fill="#06b6d4" stroke="#ffffff" stroke-width="1" filter="url(#glow)"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ================= LAYER 3: FLOATING HOLOGRAPHIC 3D ORB & BADGES ================= -->
+    
+    <!-- Big Glowing Central Play Button Orb -->
+    <g transform="translate(360, 180)" filter="url(#soft-glow)">
+      <circle cx="0" cy="0" r="36" fill="url(#play-btn-grad)"/>
+      <circle cx="0" cy="0" r="42" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.6" stroke-dasharray="6 6"/>
+      <polygon points="-8,-14 16,0 -8,14" fill="#ffffff" filter="url(#shadow)"/>
+    </g>
+
+    <!-- Floating AI Tag 1: Automated Audio -->
+    <g transform="translate(100, 110)" filter="url(#shadow)">
+      <rect width="130" height="34" rx="17" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow)"/>
+      <text x="32" y="21" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#f8fafc">AUTO VOICE</text>
+    </g>
+
+    <!-- Floating AI Tag 2: Step Extraction -->
+    <g transform="translate(430, 310)" filter="url(#shadow)">
+      <rect width="145" height="34" rx="17" fill="#0f172a" stroke="#d946ef" stroke-width="1.5"/>
+      <circle cx="18" cy="17" r="5" fill="#d946ef" filter="url(#glow)"/>
+      <text x="32" y="21" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#f8fafc">DOC SYNTHESIS</text>
+    </g>
+
+    <!-- Floating AI Tag 3: Multi-Language Stream -->
+    <g transform="translate(80, 430)" filter="url(#shadow)">
+      <rect width="160" height="34" rx="17" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5"/>
+      <circle cx="18" cy="17" r="5" fill="#8b5cf6" filter="url(#glow)"/>
+      <text x="32" y="21" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#f8fafc">100+ LANGUAGES</text>
+    </g>
+
+    <!-- Orbiting Neural Spark Particles -->
+    <circle cx="140" cy="80" r="3" fill="#38bdf8" filter="url(#glow)"/>
+    <circle cx="510" cy="140" r="2" fill="#d946ef" filter="url(#glow)"/>
+    <circle cx="470" cy="420" r="4" fill="#06b6d4" filter="url(#glow)"/>
+    <circle cx="270" cy="490" r="2.5" fill="#8b5cf6" filter="url(#glow)"/>
+
+  </g>
+
+  <!-- Visual Frame / Border Outline -->
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <rect x="10" y="10" width="1180" height="610" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.15"/>
+</svg>

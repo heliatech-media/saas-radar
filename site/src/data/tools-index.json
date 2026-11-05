@@ -505,6 +505,16 @@
     "affiliate_url": "https://screen.studio/?via=heliatech"
   },
   {
+    "name": "ScreenStudio",
+    "slug": "screenstudio",
+    "tagline": "The gold standard for creating high-end, polished screen recordings in minutes.",
+    "category": "AI Video",
+    "rating": 4.8,
+    "starting_price": "$89",
+    "best_for": "Product managers, SaaS founders, and content creators who need high-quality product demos without a dedicated video editor.",
+    "affiliate_url": "https://www.screen.studio/"
+  },
+  {
     "name": "Submagic",
     "slug": "submagic",
     "tagline": "AI-powered video captioning and editing tool that transforms raw footage into viral short-form clips in minutes.",

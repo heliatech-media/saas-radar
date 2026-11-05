@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-05T03:57:04.237883",
+  "timestamp": "2026-11-05T06:04:01.528755",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 150,
-    "total_redirects_active": 84,
+    "total_content_files_scanned": 152,
+    "total_redirects_active": 85,
     "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 8,
@@ -122,9 +122,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "guidde",
-      "target_url": "https://www.guidde.com",
-      "source_file": "guidde-evolution-guide-2026.md"
+      "slug": "screenstudio",
+      "target_url": "https://www.screenstudio.com",
+      "source_file": "screenstudio-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
