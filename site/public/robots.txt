@@ -1,2 +1,19 @@
 User-agent: *
 Allow: /
+Disallow: /go/
+Disallow: /sentinel/
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /go/
+Disallow: /sentinel/
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /go/
+Disallow: /sentinel/
+Disallow: /api/
+
+Sitemap: https://heliatech.online/sitemap.xml
