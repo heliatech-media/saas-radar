@@ -1,74 +1,74 @@
 {
-  "last_synced": "2026-11-05T15:11:41.430237",
+  "last_synced": "2026-11-05T15:21:43.779041",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18429,
-  "total_requests": 116155,
-  "total_visits": 5712,
-  "total_pageviews": 24142,
+  "total_visitors_network": 18448,
+  "total_requests": 116236,
+  "total_visits": 5718,
+  "total_pageviews": 24168,
   "percent_cached": "56.14%",
-  "data_served_mb": 908.1,
+  "data_served_mb": 908.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 7000
+      "views": 6280
     },
     {
       "path": "/",
-      "views": 3000
-    },
-    {
-      "path": "/reviews/cursor/",
-      "views": 2000
-    },
-    {
-      "path": "/reviews/riverside/",
-      "views": 1000
-    },
-    {
-      "path": "/versus/supabase-vs-firebase/",
-      "views": 1000
-    },
-    {
-      "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
-      "views": 1000
-    },
-    {
-      "path": "/reviews/minicong/",
-      "views": 1000
-    },
-    {
-      "path": "/versus/",
-      "views": 1000
-    },
-    {
-      "path": "/deals/",
-      "views": 1000
-    },
-    {
-      "path": "/versus/airtable-vs-retool/",
-      "views": 1000
+      "views": 2890
     },
     {
       "path": "/calculator/",
-      "views": 1000
+      "views": 1080
     },
     {
-      "path": "/reviews/monday-com/",
-      "views": 1000
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "views": 430
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 1000
+      "path": "/blog/beehiiv-evolution-guide-2026/",
+      "views": 350
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 270
+    },
+    {
+      "path": "/awards/",
+      "views": 260
+    },
+    {
+      "path": "/radar/",
+      "views": 230
+    },
+    {
+      "path": "/blog/",
+      "views": 210
+    },
+    {
+      "path": "/versus/",
+      "views": 190
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 180
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
+      "views": 160
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 150
     },
     {
       "path": "/sentinel/",
-      "views": 1000
+      "views": 150
     },
     {
-      "path": "/blog/printify-evolution-guide-2026/",
-      "views": 1000
+      "path": "/reviews/linear/",
+      "views": 140
     }
   ],
   "top_countries": [
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 16170
+      "views": 16180
     },
     {
       "country": "Germany",
@@ -110,7 +110,7 @@
     },
     {
       "country": "France",
-      "views": 370
+      "views": 300
     }
   ],
   "top_referrers": [
