@@ -1,7 +1,8 @@
 /**
  * Cloudflare Pages Function: /api/marketplace/auth/login
- * Handles user login / registration and issues a signed JWT session cookie
+ * Handles user login / authentication and returns real persistent database profile
  */
+import { getStore } from "../_store.js";
 
 function base64UrlEncode(str) {
   return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
@@ -49,8 +50,8 @@ export async function onRequestPost(context) {
     const body = await context.request.json();
     const email = (body.email || "").trim().toLowerCase();
     const name = (body.name || "").trim() || email.split('@')[0];
-    const requestedRole = (body.role || "").toUpperCase();
     const password = body.password || "";
+    const requestedRole = (body.role || "").toUpperCase();
 
     if (!email || !email.includes('@')) {
       return new Response(JSON.stringify({ error: "Adresse email professionnelle invalide." }), {
@@ -62,25 +63,41 @@ export async function onRequestPost(context) {
     const adminPassword = context.env?.SENTINEL_PASSWORD || "heliatech2026secure";
     const jwtSecret = context.env?.MARKETPLACE_JWT_SECRET || "heliatech_secret_hmac_key_2026_super_secure";
 
-    // Role determination with server-side validation
-    let role = 'USER';
-    let sellerId = null;
+    const store = getStore(context.env);
+
+    // Look up in real database
+    let dbUser = await store.getUserByEmail(email);
+    let role = "USER";
 
     if (password && password === adminPassword) {
-      role = 'ADMIN';
-    } else if (requestedRole === 'SELLER') {
-      role = 'SELLER';
-      sellerId = `seller_${btoa(email).slice(0, 16)}`;
+      role = "ADMIN";
+    } else if (dbUser) {
+      role = dbUser.role || "USER";
+    } else if (requestedRole === "SELLER") {
+      role = "SELLER";
     }
 
-    const userId = `usr_${btoa(email).slice(0, 20)}`;
+    if (!dbUser) {
+      dbUser = await store.createUser({ email, name, role });
+    }
+
+    // Look up seller profile if seller
+    let sellerProfile = null;
+    if (role === "SELLER") {
+      sellerProfile = await store.createOrUpdateSellerProfile({
+        userId: dbUser.id,
+        email: dbUser.email,
+        storeName: `${dbUser.name} Studio`
+      });
+    }
 
     const token = await signJwt({
-      userId,
-      email,
-      name,
+      userId: dbUser.id,
+      email: dbUser.email,
+      name: dbUser.name,
       role,
-      sellerId
+      sellerId: sellerProfile?.id || null,
+      storeName: sellerProfile?.store_name || null
     }, jwtSecret);
 
     const isSecure = context.request.url.startsWith('https:');
@@ -90,11 +107,13 @@ export async function onRequestPost(context) {
       success: true,
       token,
       user: {
-        userId,
-        email,
-        name,
+        userId: dbUser.id,
+        email: dbUser.email,
+        name: dbUser.name,
         role,
-        sellerId
+        sellerId: sellerProfile?.id || null,
+        storeName: sellerProfile?.store_name || null,
+        iban: sellerProfile?.iban || null
       }
     }), {
       status: 200,

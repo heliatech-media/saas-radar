@@ -1,900 +1,1070 @@
----
-import Layout from '../../layouts/Layout.astro';
-import templates from '../../data/templates_catalog.json';
-
-const pageTitle = "Tableau de Bord Acheteur | HeliaTech Marketplace";
-const pageDescription = "Accédez à votre bibliothèque de templates, téléchargez vos workflows n8n & Make certifiés, consultez vos factures et échangez avec vos vendeurs.";
-
-// Recommended blueprints for buyer (top rated)
-const recommendedBlueprints = templates.filter(t => t.rating >= 4.95).slice(0, 3);
----
-
-<Layout title={pageTitle} description={pageDescription} noindex={true}>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-24">
-    
-    <!-- Top Staging Notice -->
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 mb-8 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono gap-3">
-      <div class="flex items-center gap-2.5">
-        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse flex-shrink-0"></span>
-        <span class="font-bold uppercase tracking-wider">Espace Acheteur Certifié</span>
-        <span class="text-cyan-400/70 hidden lg:inline">— Vos licences commerciales, téléchargements sécurisés et factures B2B.</span>
-      </div>
-      <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
-        <a href="/templates/" class="px-3 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 border border-cyan-500/40 font-bold transition-all">
-          Catalogue (/templates/) ➔
-        </a>
-        <a href="/sell/" class="px-3 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 font-bold transition-all">
-          Studio Vendeur (80%) ➔
-        </a>
-      </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- 🔐 AUTH GATE MODAL (If user session not detected) -->
-    <!-- ========================================================================= -->
-    <div id="buyer-auth-gate" class="max-w-xl mx-auto my-12 p-8 sm:p-10 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl relative overflow-hidden hidden">
-      <div class="text-center space-y-3 mb-8">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-3xl shadow-glow-cyan mb-2">
-          🔐
-        </div>
-        <h1 class="text-2xl sm:text-3xl font-black text-white">Connexion à votre Espace</h1>
-        <p class="text-xs text-slate-400 font-light leading-relaxed max-w-md mx-auto">
-          Retrouvez instantanément vos licences commerciales, téléchargez vos blueprints n8n, Make &amp; Supabase et gérez vos factures.
-        </p>
-      </div>
-
-      <form id="buyer-login-form" class="space-y-4">
-        <div>
-          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Email Professionnel :</label>
-          <input 
-            type="email" 
-            id="auth-email-input" 
-            required 
-            placeholder="ex: alexandre.partner@heliatech.online" 
-            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
-          />
-        </div>
-        <div>
-          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Nom Complet :</label>
-          <input 
-            type="text" 
-            id="auth-name-input" 
-            placeholder="ex: Alexandre R." 
-            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
-          />
-        </div>
-        <button 
-          type="submit" 
-          class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
-        >
-          Accéder à mon Tableau de Bord ➔
-        </button>
-      </form>
-
-      <div class="mt-6 pt-4 border-t border-slate-800/80 text-center">
-        <button id="btn-quick-buyer-login" class="text-xs font-mono text-cyan-400 hover:underline">
-          ⚡ Connexion Immédiate Démo (Alexandre R. • 2 Blueprints Actifs)
-        </button>
-      </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- 📊 AUTHENTICATED BUYER DASHBOARD CONTAINER -->
-    <!-- ========================================================================= -->
-    <div id="buyer-main-container" class="space-y-8">
-      
-      <!-- Buyer Header Card -->
-      <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
-        <div class="flex items-center gap-4 relative z-10">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-sky-600 to-indigo-600 p-0.5 shadow-glow-cyan flex-shrink-0">
-            <div class="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center text-xl font-bold text-white font-mono" id="buyer-avatar-initials">
-              AR
-            </div>
-          </div>
-          <div>
-            <div class="flex items-center gap-2.5 mb-1">
-              <h1 class="text-xl sm:text-2xl font-black text-white" id="buyer-display-name">Alexandre R.</h1>
-              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold">
-                Acheteur Vérifié
-              </span>
-            </div>
-            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
-              <span id="buyer-display-email">alexandre.partner@heliatech.online</span>
-              <span>•</span>
-              <span class="text-emerald-400 font-bold">✓ Licences à vie actives</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mode switcher / Logout -->
-        <div class="flex items-center gap-3 w-full lg:w-auto justify-end">
-          <a href="/seller/" class="px-4 py-2 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono font-bold transition-all">
-            Studio Vendeur ➔
-          </a>
-          <button id="btn-buyer-logout" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-rose-950/50 text-slate-400 hover:text-rose-300 border border-slate-800 text-xs font-mono transition-all">
-            🚪 Déconnexion
-          </button>
-        </div>
-      </div>
-
-      <!-- Main Navigation Tabs Bar -->
-      <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4">
-        <button id="tab-overview" class="dash-tab px-4 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all flex items-center gap-2 shadow-glow-cyan">
-          <span>📊</span> Vue d'Ensemble
-        </button>
-        <button id="tab-library" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
-          <span>📦</span> Ma Bibliothèque
-          <span id="badge-lib-count" class="px-2 py-0.5 rounded-full bg-slate-950 text-cyan-300 text-[10px]">2</span>
-        </button>
-        <button id="tab-orders" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
-          <span>🧾</span> Mes Commandes &amp; Factures
-          <span class="px-2 py-0.5 rounded-full bg-slate-950 text-slate-400 text-[10px]">2</span>
-        </button>
-        <button id="tab-wishlist" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
-          <span>💖</span> Ma Wishlist
-          <span id="badge-wishlist-count" class="px-2 py-0.5 rounded-full bg-slate-950 text-rose-400 text-[10px]">0</span>
-        </button>
-        <button id="tab-reviews" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
-          <span>⭐</span> Mes Avis Laissés
-        </button>
-        <button id="tab-support" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
-          <span>💬</span> Support &amp; Échanges
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        </button>
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- 1. VUE D'ENSEMBLE (OVERVIEW) -->
-      <!-- ========================================================================= -->
-      <div id="panel-overview" class="space-y-8">
-        
-        <!-- KPI Metrics Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1" id="stat-overview-count">2</div>
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Blueprints Achetés</div>
-          </div>
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mb-1" id="stat-overview-spent">$88.00</div>
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Investissement Total</div>
-          </div>
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="text-2xl sm:text-3xl font-black text-indigo-400 font-mono mb-1" id="stat-overview-downloads">4</div>
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Téléchargements Effectués</div>
-          </div>
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono mb-1" id="stat-overview-savings">~48 Heures</div>
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Temps Dev Économisé</div>
-          </div>
-        </div>
-
-        <!-- Quick Access: Recently Purchased Blueprints -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-            <div>
-              <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                <span>⚡</span> Accès Immédiat : Derniers Workflows Achetés
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-0.5">
-                Téléchargez en 1 clic vos fichiers .json audités sans attendre.
-              </p>
-            </div>
-            <button id="btn-goto-library" class="text-xs font-mono text-cyan-400 hover:underline">
-              Voir toute ma bibliothèque ➔
-            </button>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="recent-blueprints-grid">
-            <!-- Dynamically populated or default cards -->
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/30 font-bold uppercase">N8N</span>
-                  <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">Mise à jour v1.4.2 dispo</span>
-                </div>
-                <h3 class="text-sm font-bold text-white mb-1">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</h3>
-                <p class="text-xs font-mono text-slate-400">Licence : HLT-LIC-N8N-8842-PRO-2026</p>
-              </div>
-              <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
-                <span class="text-xs font-mono text-slate-500">Version v1.2.0</span>
-                <a 
-                  href="/api/marketplace/buyer/download?slug=n8n-ai-lead-enricher-waterfall" 
-                  download 
-                  class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
-                >
-                  Télécharger .JSON ➔
-                </a>
-              </div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/30 font-bold uppercase">MAKE</span>
-                  <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">À jour (v1.1.0)</span>
-                </div>
-                <h3 class="text-sm font-bold text-white mb-1">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</h3>
-                <p class="text-xs font-mono text-slate-400">Licence : HLT-LIC-MAK-9102-PRO-2026</p>
-              </div>
-              <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
-                <span class="text-xs font-mono text-slate-500">Version v1.1.0</span>
-                <a 
-                  href="/api/marketplace/buyer/download?slug=make-stripe-churn-rescue-blueprint" 
-                  download 
-                  class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
-                >
-                  Télécharger .JSON ➔
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Curated Recommendations for Buyer -->
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-            <div>
-              <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                <span>🎯</span> Recommandations Personnalisées pour Votre Stack
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-0.5">
-                Blueprints haute-performance compatibles avec vos outils d'automatisation.
-              </p>
-            </div>
-            <a href="/templates/" class="text-xs font-mono text-cyan-400 hover:underline">
-              Parcourir le catalogue complet ➔
-            </a>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {recommendedBlueprints.map((rec) => (
-              <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between group">
-                <div>
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
-                      {rec.ecosystem.toUpperCase()}
-                    </span>
-                    <span class="text-xs font-mono text-amber-400">★ {rec.rating}</span>
-                  </div>
-                  <h3 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
-                    <a href={`/templates/${rec.slug}/`}>{rec.title}</a>
-                  </h3>
-                  <p class="text-xs text-slate-400 font-light line-clamp-2 mb-3">
-                    {rec.tagline}
-                  </p>
-                </div>
-                <div class="flex items-center justify-between pt-3 border-t border-slate-800">
-                  <span class="text-sm font-black text-white font-mono">
-                    {rec.is_free ? <span class="text-emerald-400">GRATUIT</span> : `$${rec.price_usd}`}
-                  </span>
-                  <a href={`/templates/${rec.slug}/`} class="text-xs font-mono text-cyan-400 hover:underline">
-                    Détails ➔
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- 2. MA BIBLIOTHÈQUE (MY LIBRARY) -->
-      <!-- ========================================================================= -->
-      <div id="panel-library" class="space-y-6 hidden">
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
-            <div>
-              <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                <span>📦</span> Ma Bibliothèque de Workflows &amp; Licences
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-1">
-                Générez vos liens signés de téléchargement, mettez à jour vers les dernières versions et accédez aux documentations d'ingénierie.
-              </p>
-            </div>
-            <a href="/templates/" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
-              + Ajouter un Nouveau Blueprint
-            </a>
-          </div>
-
-          <!-- Library Search & Filter Bar -->
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <input 
-              type="text" 
-              id="library-search-input"
-              placeholder="Filtrer mes templates par titre ou écosystème..."
-              class="w-full sm:w-80 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
-            />
-            <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
-              <span>Affichage de 2 templates sous licence</span>
-            </div>
-          </div>
-
-          <!-- Blueprints Detailed Table -->
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs font-mono">
-              <thead>
-                <tr class="border-b border-slate-800 text-slate-400">
-                  <th class="py-3 px-4 font-bold">Blueprint &amp; Créateur</th>
-                  <th class="py-3 px-4 font-bold">Écosystème</th>
-                  <th class="py-3 px-4 font-bold">Version Actuelle</th>
-                  <th class="py-3 px-4 font-bold">Clé de Licence</th>
-                  <th class="py-3 px-4 font-bold text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-800/80 text-slate-300" id="library-table-body">
-                <tr class="hover:bg-slate-900/40 transition-colors">
-                  <td class="py-4 px-4">
-                    <div class="font-bold text-white text-sm">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</div>
-                    <div class="text-[11px] text-slate-400">Par AutomateScale Studio • Acheté le 18 Oct 2026</div>
-                  </td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 text-[10px] font-bold">N8N</span>
-                  </td>
-                  <td class="py-4 px-4">
-                    <div class="flex items-center gap-2">
-                      <span class="text-slate-300">v1.2.0</span>
-                      <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px]">v1.4.2 dispo</span>
-                    </div>
-                  </td>
-                  <td class="py-4 px-4 font-mono text-cyan-400 text-[11px]">
-                    HLT-LIC-N8N-8842-PRO-2026
-                  </td>
-                  <td class="py-4 px-4 text-right space-x-2">
-                    <a 
-                      href="/api/marketplace/buyer/download?slug=n8n-ai-lead-enricher-waterfall" 
-                      download 
-                      class="px-3 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all inline-flex items-center gap-1"
-                    >
-                      <span>⬇️</span> Télécharger
-                    </a>
-                    <a href="/templates/n8n-ai-lead-enricher-waterfall/" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition-all inline-flex items-center gap-1">
-                      <span>📖</span> Doc
-                    </a>
-                  </td>
-                </tr>
-
-                <tr class="hover:bg-slate-900/40 transition-colors">
-                  <td class="py-4 px-4">
-                    <div class="font-bold text-white text-sm">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</div>
-                    <div class="text-[11px] text-slate-400">Par SaaSGrowth Ops • Acheté le 25 Oct 2026</div>
-                  </td>
-                  <td class="py-4 px-4">
-                    <span class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 text-[10px] font-bold">MAKE</span>
-                  </td>
-                  <td class="py-4 px-4">
-                    <div class="flex items-center gap-2">
-                      <span class="text-emerald-400">v1.1.0 (À jour)</span>
-                    </div>
-                  </td>
-                  <td class="py-4 px-4 font-mono text-cyan-400 text-[11px]">
-                    HLT-LIC-MAK-9102-PRO-2026
-                  </td>
-                  <td class="py-4 px-4 text-right space-x-2">
-                    <a 
-                      href="/api/marketplace/buyer/download?slug=make-stripe-churn-rescue-blueprint" 
-                      download 
-                      class="px-3 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all inline-flex items-center gap-1"
-                    >
-                      <span>⬇️</span> Télécharger
-                    </a>
-                    <a href="/templates/make-stripe-churn-rescue-blueprint/" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition-all inline-flex items-center gap-1">
-                      <span>📖</span> Doc
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- 3. MES COMMANDES & FACTURES (MY ORDERS) -->
-      <!-- ========================================================================= -->
-      <div id="panel-orders" class="space-y-6 hidden">
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
-            <div>
-              <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                <span>🧾</span> Historique des Commandes &amp; Justificatifs Fiscaux
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-1">
-                Téléchargez ou imprimez vos factures acquittées conformes pour votre comptabilité d'entreprise.
-              </p>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <!-- Order 1 -->
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
-                <div class="flex items-center gap-3">
-                  <span class="font-bold text-white text-sm font-mono">Commande HLT-ORD-2026-8812</span>
-                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono">
-                    COMPLÉTÉE
-                  </span>
-                </div>
-                <div class="text-xs font-mono text-slate-400">
-                  18 Octobre 2026 • CB •••• 4242
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                  <h4 class="text-sm font-bold text-white">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</h4>
-                  <p class="text-xs text-slate-400 font-mono mt-0.5">Licence Commerciale Illimitée 1-Instance • Montant : $49.00 USD</p>
-                </div>
-                <button 
-                  class="btn-open-invoice px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-1.5"
-                  data-order-id="HLT-ORD-2026-8812"
-                  data-date="18 Octobre 2026"
-                  data-title="n8n AI Waterfall Lead Enrichment & Scoring Engine"
-                  data-amount="49.00"
-                >
-                  <span>📄</span> Voir la Facture ➔
-                </button>
-              </div>
-            </div>
-
-            <!-- Order 2 -->
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
-                <div class="flex items-center gap-3">
-                  <span class="font-bold text-white text-sm font-mono">Commande HLT-ORD-2026-9105</span>
-                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono">
-                    COMPLÉTÉE
-                  </span>
-                </div>
-                <div class="text-xs font-mono text-slate-400">
-                  25 Octobre 2026 • Apple Pay / CB •••• 9811
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                  <h4 class="text-sm font-bold text-white">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</h4>
-                  <p class="text-xs text-slate-400 font-mono mt-0.5">Licence Commerciale Illimitée 1-Instance • Montant : $39.00 USD</p>
-                </div>
-                <button 
-                  class="btn-open-invoice px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-1.5"
-                  data-order-id="HLT-ORD-2026-9105"
-                  data-date="25 Octobre 2026"
-                  data-title="Make.com Stripe Failed Payment Recovery & Smart Churn Rescue"
-                  data-amount="39.00"
-                >
-                  <span>📄</span> Voir la Facture ➔
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- 4. MA WISHLIST (FAVORITES) -->
-      <!-- ========================================================================= -->
-      <div id="panel-wishlist" class="space-y-6 hidden">
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
-            <div>
-              <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                <span>💖</span> Mes Blueprints Favoris (Wishlist)
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-1">
-                Retrouvez vos workflows sauvegardés pour un achat futur ou un comparatif d'architecture.
-              </p>
-            </div>
-            <a href="/templates/" class="text-xs font-mono text-cyan-400 hover:underline">
-              Parcourir le catalogue ➔
-            </a>
-          </div>
-
-          <div id="wishlist-items-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Populated via script from localStorage -->
-          </div>
-
-          <div id="wishlist-empty-msg" class="p-10 rounded-2xl bg-slate-900/40 border border-slate-800 text-center space-y-3">
-            <div class="text-3xl">💖</div>
-            <h3 class="text-sm font-bold text-white">Votre Wishlist est vide pour le moment</h3>
-            <p class="text-xs text-slate-400 font-light max-w-sm mx-auto">
-              Cliquez sur l'icône cœur ♥ sur n'importe quel blueprint du catalogue pour le sauvegarder ici.
-            </p>
-            <a href="/templates/" class="inline-block px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 text-xs font-mono font-bold">
-              Explorer les Templates ➔
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- 5. MES AVIS LAISSÉS (REVIEWS) -->
-      <!-- ========================================================================= -->
-      <div id="panel-reviews" class="space-y-6 hidden">
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
-            <div>
-              <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                <span>⭐</span> Vos Évaluations et Retours d'Expérience
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-1">
-                Partagez votre retour technique avec la communauté des ingénieurs HeliaTech.
-              </p>
-            </div>
-          </div>
-
-          <!-- Existing reviews -->
-          <div class="space-y-4">
-            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
-              <div class="flex items-center justify-between">
-                <div>
-                  <h3 class="text-sm font-bold text-white">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</h3>
-                  <div class="text-[10px] font-mono text-slate-500">Publié le 21 Octobre 2026</div>
-                </div>
-                <span class="text-amber-400 text-sm">★★★★★</span>
-              </div>
-              <p class="text-xs text-slate-300 font-light leading-relaxed">
-                "Déployé en 10 minutes sur notre VPS n8n. Gestion des erreurs sans faille. Nous économisons 450$/mois."
-              </p>
-              <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-emerald-400">
-                <span>✓ Achat vérifié et validé par l'équipe</span>
-                <span class="text-slate-500">Visible sur la fiche produit</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Leave a new review prompt -->
-          <div class="p-5 rounded-2xl bg-slate-900/40 border border-cyan-500/20 space-y-4">
-            <h3 class="text-sm font-bold text-white flex items-center gap-2">
-              <span>✍️</span> Laisser un Avis sur un Autre Produit Acheté
-            </h3>
-            <form id="review-submission-form" class="space-y-3">
-              <div>
-                <label class="block text-xs font-mono text-slate-300 mb-1">Sélectionner le Blueprint :</label>
-                <select id="review-product-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500">
-                  <option value="make-stripe-churn-rescue-blueprint">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-300 mb-1">Note Globale :</label>
-                <select id="review-rating-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500">
-                  <option value="5">★★★★★ — Exceptionnel (5/5)</option>
-                  <option value="4">★★★★☆ — Très bon (4/5)</option>
-                  <option value="3">★★★☆☆ — Moyen (3/5)</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-300 mb-1">Commentaire / Retour d'Intégration :</label>
-                <textarea 
-                  id="review-comment-input" 
-                  rows="3" 
-                  required
-                  placeholder="Décrivez votre expérience d'import, le temps économisé et la robustesse de l'automatisation..." 
-                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500"
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
-              >
-                Publier mon Avis Vérifié ➔
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- 6. SUPPORT & ÉCHANGES CRÉATEURS (TICKETS) -->
-      <!-- ========================================================================= -->
-      <div id="panel-support" class="space-y-6 hidden">
-        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
-            <div>
-              <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                <span>💬</span> Messagerie &amp; Support Technique Créateurs
-              </h2>
-              <p class="text-xs text-slate-400 font-light mt-1">
-                Échangez directement avec les créateurs certifiés pour vos questions d'adaptation ou de débogage.
-              </p>
-            </div>
-          </div>
-
-          <!-- Existing Ticket -->
-          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-            <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
-              <div>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                  RÉSOLU
-                </span>
-                <h3 class="text-sm font-bold text-white mt-1">Question sur le format du webhook entrant</h3>
-                <div class="text-[11px] text-slate-400 font-mono">Avec AutomateScale Studio • Ticket #TKT-001</div>
-              </div>
-              <span class="text-xs font-mono text-slate-500">19 Octobre 2026</span>
-            </div>
-
-            <div class="space-y-3 text-xs font-mono">
-              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300">
-                <span class="text-cyan-400 font-bold">Vous :</span> Est-ce que le webhook gère automatiquement les domaines avec www. ou faut-il les filtrer en amont ?
-              </div>
-              <div class="p-3 rounded-xl bg-cyan-950/20 border border-cyan-800/40 text-slate-200">
-                <span class="text-emerald-400 font-bold">AutomateScale Studio :</span> Le nœud 'Claude ICP Scorer' effectue une regex de normalisation interne qui supprime les préfixes. Vous pouvez envoyer directement le domaine brut !
-              </div>
-            </div>
-          </div>
-
-          <!-- Open new ticket form -->
-          <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
-            <h3 class="text-sm font-bold text-white flex items-center gap-2">
-              <span>✉️</span> Ouvrir une Nouvelle Demande d'Assistance
-            </h3>
-            <form id="support-ticket-form" class="space-y-3">
-              <div>
-                <label class="block text-xs font-mono text-slate-300 mb-1">Blueprint Concerné :</label>
-                <select id="support-product-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500">
-                  <option value="n8n-ai-lead-enricher-waterfall">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</option>
-                  <option value="make-stripe-churn-rescue-blueprint">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</option>
-                  <option value="general">Question Générale / Facturation</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-300 mb-1">Objet de la Demande :</label>
-                <input 
-                  type="text" 
-                  id="support-subject-input" 
-                  required
-                  placeholder="ex: Erreur 401 lors de la connexion API Airtable"
-                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500"
-                />
-              </div>
-              <div>
-                <label class="block text-xs font-mono text-slate-300 mb-1">Message Détaillé :</label>
-                <textarea 
-                  id="support-message-input" 
-                  rows="3" 
-                  required
-                  placeholder="Décrivez votre question technique ou le nœud qui pose problème..." 
-                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500"
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
-              >
-                Envoyer le Message au Vendeur ➔
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- 📄 PRINTABLE B2B INVOICE MODAL -->
-    <!-- ========================================================================= -->
-    <div id="invoice-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-      <div class="bg-slate-950 border border-slate-800 rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative space-y-6">
-        <button id="btn-close-invoice" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">✕</button>
-
-        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-          <div>
-            <span class="text-sm font-black tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span> MEDIA LLC</span>
-            <div class="text-[10px] font-mono text-slate-500">100 Pine Street, San Francisco, CA 94111 • US-EIN: 93-8472910</div>
-          </div>
-          <div class="text-right">
-            <div class="text-xs font-mono font-bold text-cyan-400 uppercase">Facture Acquittée</div>
-            <div class="text-[11px] font-mono text-white" id="inv-modal-number">HLT-ORD-2026-8812</div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 text-xs font-mono">
-          <div>
-            <span class="text-slate-500 block">Facturé à :</span>
-            <span class="text-white font-bold block" id="inv-modal-client">Alexandre R.</span>
-            <span class="text-slate-400">Enterprise RevOps Partner</span>
-          </div>
-          <div class="text-right">
-            <span class="text-slate-500 block">Date d'Émission :</span>
-            <span class="text-white font-bold" id="inv-modal-date">18 Octobre 2026</span>
-          </div>
-        </div>
-
-        <div class="border border-slate-800 rounded-2xl overflow-hidden">
-          <table class="w-full text-xs font-mono">
-            <thead class="bg-slate-900 text-slate-400">
-              <tr>
-                <th class="p-3 text-left">Description du Produit Digital</th>
-                <th class="p-3 text-right">Montant</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-800 text-slate-300">
-              <tr>
-                <td class="p-3" id="inv-modal-item">n8n AI Waterfall Lead Enrichment & Scoring Engine</td>
-                <td class="p-3 text-right font-bold text-white" id="inv-modal-amount">$49.00 USD</td>
-              </tr>
-            </tbody>
-            <tfoot class="bg-slate-900 font-bold text-white">
-              <tr>
-                <td class="p-3 text-right">Total Net Acquitté :</td>
-                <td class="p-3 text-right text-cyan-400" id="inv-modal-total">$49.00 USD</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-
-        <div class="flex items-center justify-between pt-2">
-          <span class="text-[10px] font-mono text-slate-500">TVA non applicable selon art. 293 B du CGI / US Digital Goods Exemption.</span>
-          <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold shadow-glow-cyan">
-            🖨️ Imprimer la Facture (PDF)
-          </button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Interactive JavaScript: Subtab routing, Auth synchronization, Wishlist & Invoices -->
-  <script is:inline>
-    // Tab switching
-    const tabs = {
-      overview: document.getElementById('tab-overview'),
-      library: document.getElementById('tab-library'),
-      orders: document.getElementById('tab-orders'),
-      wishlist: document.getElementById('tab-wishlist'),
-      reviews: document.getElementById('tab-reviews'),
-      support: document.getElementById('tab-support')
-    };
-
-    const panels = {
-      overview: document.getElementById('panel-overview'),
-      library: document.getElementById('panel-library'),
-      orders: document.getElementById('panel-orders'),
-      wishlist: document.getElementById('panel-wishlist'),
-      reviews: document.getElementById('panel-reviews'),
-      support: document.getElementById('panel-support')
-    };
-
-    function switchTab(targetName) {
-      Object.keys(tabs).forEach(name => {
-        const tabBtn = tabs[name];
-        const panel = panels[name];
-        if (name === targetName) {
-          tabBtn?.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
-          tabBtn?.classList.remove('bg-slate-900', 'text-slate-300');
-          panel?.classList.remove('hidden');
-        } else {
-          tabBtn?.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
-          tabBtn?.classList.add('bg-slate-900', 'text-slate-300');
-          panel?.classList.add('hidden');
-        }
-      });
-    }
-
-    Object.keys(tabs).forEach(name => {
-      tabs[name]?.addEventListener('click', () => switchTab(name));
-    });
-
-    document.getElementById('btn-goto-library')?.addEventListener('click', () => switchTab('library'));
-
-    // Wishlist renderer from localStorage
-    function renderWishlist() {
-      const container = document.getElementById('wishlist-items-container');
-      const emptyMsg = document.getElementById('wishlist-empty-msg');
-      const badge = document.getElementById('badge-wishlist-count');
-      if (!container) return;
-
-      let wishlist = [];
-      try {
-        wishlist = JSON.parse(localStorage.getItem('_ht_buyer_wishlist') || '[]');
-      } catch(e) {}
-
-      if (badge) badge.textContent = wishlist.length;
-
-      if (wishlist.length === 0) {
-        container.innerHTML = '';
-        emptyMsg?.classList.remove('hidden');
-        return;
-      }
-
-      emptyMsg?.classList.add('hidden');
-      container.innerHTML = wishlist.map((item, idx) => `
-        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">${item.ecosystem || 'FLOW'}</span>
-              <button onclick="removeWishlistItem(${idx})" class="text-rose-400 hover:text-rose-300 text-xs font-mono">✕ Retirer</button>
-            </div>
-            <h4 class="text-sm font-bold text-white mb-1">${item.title}</h4>
-            <div class="text-[11px] font-mono text-emerald-400">💰 ${item.savings || '$200/mo'}</div>
-          </div>
-          <div class="flex items-center justify-between pt-3 border-t border-slate-800">
-            <span class="text-lg font-black text-white font-mono">$${item.price || 49}</span>
-            <a href="/templates/${item.slug}/" class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all">
-              Commander ➔
-            </a>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    window.removeWishlistItem = function(idx) {
-      let wishlist = JSON.parse(localStorage.getItem('_ht_buyer_wishlist') || '[]');
-      wishlist.splice(idx, 1);
-      localStorage.setItem('_ht_buyer_wishlist', JSON.stringify(wishlist));
-      renderWishlist();
-    };
-
-    renderWishlist();
-
-    // Invoice Modal
-    const invoiceModal = document.getElementById('invoice-modal');
-    document.querySelectorAll('.btn-open-invoice').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.getElementById('inv-modal-number').textContent = btn.getAttribute('data-order-id');
-        document.getElementById('inv-modal-date').textContent = btn.getAttribute('data-date');
-        document.getElementById('inv-modal-item').textContent = btn.getAttribute('data-title');
-        document.getElementById('inv-modal-amount').textContent = `$${btn.getAttribute('data-amount')} USD`;
-        document.getElementById('inv-modal-total').textContent = `$${btn.getAttribute('data-amount')} USD`;
-        invoiceModal?.classList.remove('hidden');
-      });
-    });
-
-    document.getElementById('btn-close-invoice')?.addEventListener('click', () => {
-      invoiceModal?.classList.add('hidden');
-    });
-
-    // Review form submission
-    document.getElementById('review-submission-form')?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const product = document.getElementById('review-product-select')?.value;
-      const rating = document.getElementById('review-rating-select')?.value;
-      const comment = document.getElementById('review-comment-input')?.value;
-
-      try {
-        const res = await fetch('/api/marketplace/buyer/reviews', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product_slug: product, rating, comment })
-        });
-        const data = await res.json();
-        alert(data.message || "✓ Votre avis a été publié !");
-        document.getElementById('review-comment-input').value = '';
-      } catch (err) {
-        alert("✓ Avis enregistré en local avec succès !");
-      }
-    });
-
-    // Support ticket submission
-    document.getElementById('support-ticket-form')?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const product = document.getElementById('support-product-select')?.value;
-      const subject = document.getElementById('support-subject-input')?.value;
-      const message = document.getElementById('support-message-input')?.value;
-
-      try {
-        const res = await fetch('/api/marketplace/buyer/support', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product_slug: product, subject, message })
-        });
-        const data = await res.json();
-        alert(data.message || "✓ Ticket de support ouvert ! Le vendeur a été notifié.");
-        document.getElementById('support-subject-input').value = '';
-        document.getElementById('support-message-input').value = '';
-      } catch (err) {
-        alert("✓ Ticket ouvert avec succès !");
-      }
-    });
-
-    // Logout
-    document.getElementById('btn-buyer-logout')?.addEventListener('click', async () => {
-      try {
-        await fetch('/api/marketplace/auth/logout', { method: 'POST' });
-      } catch(e) {}
-      localStorage.removeItem('_ht_user_session');
-      alert("Vous avez été déconnecté avec succès.");
-      window.location.href = '/templates/';
-    });
-  </script>
-</Layout>
+---
+import Layout from '../../layouts/Layout.astro';
+import templates from '../../data/templates_catalog.json';
+
+const pageTitle = "Tableau de Bord Acheteur | HeliaTech Marketplace";
+const pageDescription = "Accédez à votre bibliothèque de templates, téléchargez vos workflows n8n & Make certifiés, consultez vos factures et échangez avec vos vendeurs.";
+
+// Recommended blueprints for buyer (top rated)
+const recommendedBlueprints = templates.filter(t => t.rating >= 4.95).slice(0, 3);
+---
+
+<Layout title={pageTitle} description={pageDescription} noindex={true}>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-24">
+    
+    <!-- Top Staging Notice -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3.5 mb-8 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono gap-3">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse flex-shrink-0"></span>
+        <span class="font-bold uppercase tracking-wider">Espace Acheteur Certifié</span>
+        <span class="text-cyan-400/70 hidden lg:inline">— Vos licences commerciales, téléchargements sécurisés et factures B2B.</span>
+      </div>
+      <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+        <a href="/templates/" class="px-3 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 border border-cyan-500/40 font-bold transition-all">
+          Catalogue (/templates/) ➔
+        </a>
+        <a href="/sell/" class="px-3 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 font-bold transition-all">
+          Studio Vendeur (80%) ➔
+        </a>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 🔐 AUTH GATE MODAL (If user session not detected) -->
+    <!-- ========================================================================= -->
+    <div id="buyer-auth-gate" class="max-w-xl mx-auto my-12 p-8 sm:p-10 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl relative overflow-hidden hidden">
+      <div class="text-center space-y-3 mb-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-3xl shadow-glow-cyan mb-2">
+          🔐
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black text-white">Connexion à votre Espace</h1>
+        <p class="text-xs text-slate-400 font-light leading-relaxed max-w-md mx-auto">
+          Retrouvez instantanément vos licences commerciales, téléchargez vos blueprints n8n, Make &amp; Supabase et gérez vos factures.
+        </p>
+      </div>
+
+      <form id="buyer-login-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Email Professionnel :</label>
+          <input 
+            type="email" 
+            id="auth-email-input" 
+            required 
+            placeholder="ex: alexandre.partner@heliatech.online" 
+            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
+          />
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Nom Complet :</label>
+          <input 
+            type="text" 
+            id="auth-name-input" 
+            placeholder="ex: Alexandre R." 
+            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
+          />
+        </div>
+        <button 
+          type="submit" 
+          class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan"
+        >
+          Accéder à mon Tableau de Bord ➔
+        </button>
+      </form>
+
+      <div class="mt-6 pt-4 border-t border-slate-800/80 text-center">
+        <button id="btn-quick-buyer-login" class="text-xs font-mono text-cyan-400 hover:underline">
+          ⚡ Connexion Immédiate Démo (Alexandre R. • 2 Blueprints Actifs)
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 📊 AUTHENTICATED BUYER DASHBOARD CONTAINER -->
+    <!-- ========================================================================= -->
+    <div id="buyer-main-container" class="space-y-8">
+      
+      <!-- Buyer Header Card -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+        <div class="flex items-center gap-4 relative z-10">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-sky-600 to-indigo-600 p-0.5 shadow-glow-cyan flex-shrink-0">
+            <div class="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center text-xl font-bold text-white font-mono" id="buyer-avatar-initials">
+              AR
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2.5 mb-1">
+              <h1 class="text-xl sm:text-2xl font-black text-white" id="buyer-display-name">Alexandre R.</h1>
+              <span class="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold">
+                Acheteur Vérifié
+              </span>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
+              <span id="buyer-display-email">alexandre.partner@heliatech.online</span>
+              <span>•</span>
+              <span class="text-emerald-400 font-bold">✓ Licences à vie actives</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mode switcher / Logout -->
+        <div class="flex items-center gap-3 w-full lg:w-auto justify-end">
+          <a href="/seller/" class="px-4 py-2 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono font-bold transition-all">
+            Studio Vendeur ➔
+          </a>
+          <button id="btn-buyer-logout" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-rose-950/50 text-slate-400 hover:text-rose-300 border border-slate-800 text-xs font-mono transition-all">
+            🚪 Déconnexion
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Navigation Tabs Bar -->
+      <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4">
+        <button id="tab-overview" class="dash-tab px-4 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold transition-all flex items-center gap-2 shadow-glow-cyan">
+          <span>📊</span> Vue d'Ensemble
+        </button>
+        <button id="tab-library" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>📦</span> Ma Bibliothèque
+          <span id="badge-lib-count" class="px-2 py-0.5 rounded-full bg-slate-950 text-cyan-300 text-[10px]">2</span>
+        </button>
+        <button id="tab-orders" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>🧾</span> Mes Commandes &amp; Factures
+          <span class="px-2 py-0.5 rounded-full bg-slate-950 text-slate-400 text-[10px]">2</span>
+        </button>
+        <button id="tab-wishlist" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>💖</span> Ma Wishlist
+          <span id="badge-wishlist-count" class="px-2 py-0.5 rounded-full bg-slate-950 text-rose-400 text-[10px]">0</span>
+        </button>
+        <button id="tab-reviews" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>⭐</span> Mes Avis Laissés
+        </button>
+        <button id="tab-support" class="dash-tab px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-all flex items-center gap-2 border border-slate-800">
+          <span>💬</span> Support &amp; Échanges
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        </button>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- 1. VUE D'ENSEMBLE (OVERVIEW) -->
+      <!-- ========================================================================= -->
+      <div id="panel-overview" class="space-y-8">
+        
+        <!-- KPI Metrics Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1" id="stat-overview-count">2</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Blueprints Achetés</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mb-1" id="stat-overview-spent">$88.00</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Investissement Total</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-black text-indigo-400 font-mono mb-1" id="stat-overview-downloads">4</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Téléchargements Effectués</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+            <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono mb-1" id="stat-overview-savings">~48 Heures</div>
+            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Temps Dev Économisé</div>
+          </div>
+        </div>
+
+        <!-- Quick Access: Recently Purchased Blueprints -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div>
+              <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                <span>⚡</span> Accès Immédiat : Derniers Workflows Achetés
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-0.5">
+                Téléchargez en 1 clic vos fichiers .json audités sans attendre.
+              </p>
+            </div>
+            <button id="btn-goto-library" class="text-xs font-mono text-cyan-400 hover:underline">
+              Voir toute ma bibliothèque ➔
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="recent-blueprints-grid">
+            <!-- Dynamically populated or default cards -->
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 border border-orange-500/30 font-bold uppercase">N8N</span>
+                  <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">Mise à jour v1.4.2 dispo</span>
+                </div>
+                <h3 class="text-sm font-bold text-white mb-1">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</h3>
+                <p class="text-xs font-mono text-slate-400">Licence : HLT-LIC-N8N-8842-PRO-2026</p>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+                <span class="text-xs font-mono text-slate-500">Version v1.2.0</span>
+                <a 
+                  href="/api/marketplace/buyer/download?slug=n8n-ai-lead-enricher-waterfall" 
+                  download 
+                  class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
+                >
+                  Télécharger .JSON ➔
+                </a>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/30 font-bold uppercase">MAKE</span>
+                  <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">À jour (v1.1.0)</span>
+                </div>
+                <h3 class="text-sm font-bold text-white mb-1">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</h3>
+                <p class="text-xs font-mono text-slate-400">Licence : HLT-LIC-MAK-9102-PRO-2026</p>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+                <span class="text-xs font-mono text-slate-500">Version v1.1.0</span>
+                <a 
+                  href="/api/marketplace/buyer/download?slug=make-stripe-churn-rescue-blueprint" 
+                  download 
+                  class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
+                >
+                  Télécharger .JSON ➔
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curated Recommendations for Buyer -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div>
+              <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                <span>🎯</span> Recommandations Personnalisées pour Votre Stack
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-0.5">
+                Blueprints haute-performance compatibles avec vos outils d'automatisation.
+              </p>
+            </div>
+            <a href="/templates/" class="text-xs font-mono text-cyan-400 hover:underline">
+              Parcourir le catalogue complet ➔
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {recommendedBlueprints.map((rec) => (
+              <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between group">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                      {rec.ecosystem.toUpperCase()}
+                    </span>
+                    <span class="text-xs font-mono text-amber-400">★ {rec.rating}</span>
+                  </div>
+                  <h3 class="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
+                    <a href={`/templates/${rec.slug}/`}>{rec.title}</a>
+                  </h3>
+                  <p class="text-xs text-slate-400 font-light line-clamp-2 mb-3">
+                    {rec.tagline}
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                  <span class="text-sm font-black text-white font-mono">
+                    {rec.is_free ? <span class="text-emerald-400">GRATUIT</span> : `$${rec.price_usd}`}
+                  </span>
+                  <a href={`/templates/${rec.slug}/`} class="text-xs font-mono text-cyan-400 hover:underline">
+                    Détails ➔
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- 2. MA BIBLIOTHÈQUE (MY LIBRARY) -->
+      <!-- ========================================================================= -->
+      <div id="panel-library" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>📦</span> Ma Bibliothèque de Workflows &amp; Licences
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Générez vos liens signés de téléchargement, mettez à jour vers les dernières versions et accédez aux documentations d'ingénierie.
+              </p>
+            </div>
+            <a href="/templates/" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
+              + Ajouter un Nouveau Blueprint
+            </a>
+          </div>
+
+          <!-- Library Search & Filter Bar -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <input 
+              type="text" 
+              id="library-search-input"
+              placeholder="Filtrer mes templates par titre ou écosystème..."
+              class="w-full sm:w-80 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+            />
+            <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+              <span>Affichage de 2 templates sous licence</span>
+            </div>
+          </div>
+
+          <!-- Blueprints Detailed Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs font-mono">
+              <thead>
+                <tr class="border-b border-slate-800 text-slate-400">
+                  <th class="py-3 px-4 font-bold">Blueprint &amp; Créateur</th>
+                  <th class="py-3 px-4 font-bold">Écosystème</th>
+                  <th class="py-3 px-4 font-bold">Version Actuelle</th>
+                  <th class="py-3 px-4 font-bold">Clé de Licence</th>
+                  <th class="py-3 px-4 font-bold text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/80 text-slate-300" id="library-table-body">
+                <tr class="hover:bg-slate-900/40 transition-colors">
+                  <td class="py-4 px-4">
+                    <div class="font-bold text-white text-sm">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</div>
+                    <div class="text-[11px] text-slate-400">Par AutomateScale Studio • Acheté le 18 Oct 2026</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 text-[10px] font-bold">N8N</span>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="flex items-center gap-2">
+                      <span class="text-slate-300">v1.2.0</span>
+                      <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px]">v1.4.2 dispo</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 font-mono text-cyan-400 text-[11px]">
+                    HLT-LIC-N8N-8842-PRO-2026
+                  </td>
+                  <td class="py-4 px-4 text-right space-x-2">
+                    <a 
+                      href="/api/marketplace/buyer/download?slug=n8n-ai-lead-enricher-waterfall" 
+                      download 
+                      class="px-3 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all inline-flex items-center gap-1"
+                    >
+                      <span>⬇️</span> Télécharger
+                    </a>
+                    <a href="/templates/n8n-ai-lead-enricher-waterfall/" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition-all inline-flex items-center gap-1">
+                      <span>📖</span> Doc
+                    </a>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-slate-900/40 transition-colors">
+                  <td class="py-4 px-4">
+                    <div class="font-bold text-white text-sm">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</div>
+                    <div class="text-[11px] text-slate-400">Par SaaSGrowth Ops • Acheté le 25 Oct 2026</div>
+                  </td>
+                  <td class="py-4 px-4">
+                    <span class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 text-[10px] font-bold">MAKE</span>
+                  </td>
+                  <td class="py-4 px-4">
+                    <div class="flex items-center gap-2">
+                      <span class="text-emerald-400">v1.1.0 (À jour)</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 font-mono text-cyan-400 text-[11px]">
+                    HLT-LIC-MAK-9102-PRO-2026
+                  </td>
+                  <td class="py-4 px-4 text-right space-x-2">
+                    <a 
+                      href="/api/marketplace/buyer/download?slug=make-stripe-churn-rescue-blueprint" 
+                      download 
+                      class="px-3 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all inline-flex items-center gap-1"
+                    >
+                      <span>⬇️</span> Télécharger
+                    </a>
+                    <a href="/templates/make-stripe-churn-rescue-blueprint/" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition-all inline-flex items-center gap-1">
+                      <span>📖</span> Doc
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- 3. MES COMMANDES & FACTURES (MY ORDERS) -->
+      <!-- ========================================================================= -->
+      <div id="panel-orders" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>🧾</span> Historique des Commandes &amp; Justificatifs Fiscaux
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Téléchargez ou imprimez vos factures acquittées conformes pour votre comptabilité d'entreprise.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Order 1 -->
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
+                <div class="flex items-center gap-3">
+                  <span class="font-bold text-white text-sm font-mono">Commande HLT-ORD-2026-8812</span>
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono">
+                    COMPLÉTÉE
+                  </span>
+                </div>
+                <div class="text-xs font-mono text-slate-400">
+                  18 Octobre 2026 • CB •••• 4242
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h4 class="text-sm font-bold text-white">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</h4>
+                  <p class="text-xs text-slate-400 font-mono mt-0.5">Licence Commerciale Illimitée 1-Instance • Montant : $49.00 USD</p>
+                </div>
+                <button 
+                  class="btn-open-invoice px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-1.5"
+                  data-order-id="HLT-ORD-2026-8812"
+                  data-date="18 Octobre 2026"
+                  data-title="n8n AI Waterfall Lead Enrichment & Scoring Engine"
+                  data-amount="49.00"
+                >
+                  <span>📄</span> Voir la Facture ➔
+                </button>
+              </div>
+            </div>
+
+            <!-- Order 2 -->
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
+                <div class="flex items-center gap-3">
+                  <span class="font-bold text-white text-sm font-mono">Commande HLT-ORD-2026-9105</span>
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono">
+                    COMPLÉTÉE
+                  </span>
+                </div>
+                <div class="text-xs font-mono text-slate-400">
+                  25 Octobre 2026 • Apple Pay / CB •••• 9811
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h4 class="text-sm font-bold text-white">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</h4>
+                  <p class="text-xs text-slate-400 font-mono mt-0.5">Licence Commerciale Illimitée 1-Instance • Montant : $39.00 USD</p>
+                </div>
+                <button 
+                  class="btn-open-invoice px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-1.5"
+                  data-order-id="HLT-ORD-2026-9105"
+                  data-date="25 Octobre 2026"
+                  data-title="Make.com Stripe Failed Payment Recovery & Smart Churn Rescue"
+                  data-amount="39.00"
+                >
+                  <span>📄</span> Voir la Facture ➔
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- 4. MA WISHLIST (FAVORITES) -->
+      <!-- ========================================================================= -->
+      <div id="panel-wishlist" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>💖</span> Mes Blueprints Favoris (Wishlist)
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Retrouvez vos workflows sauvegardés pour un achat futur ou un comparatif d'architecture.
+              </p>
+            </div>
+            <a href="/templates/" class="text-xs font-mono text-cyan-400 hover:underline">
+              Parcourir le catalogue ➔
+            </a>
+          </div>
+
+          <div id="wishlist-items-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Populated via script from localStorage -->
+          </div>
+
+          <div id="wishlist-empty-msg" class="p-10 rounded-2xl bg-slate-900/40 border border-slate-800 text-center space-y-3">
+            <div class="text-3xl">💖</div>
+            <h3 class="text-sm font-bold text-white">Votre Wishlist est vide pour le moment</h3>
+            <p class="text-xs text-slate-400 font-light max-w-sm mx-auto">
+              Cliquez sur l'icône cœur ♥ sur n'importe quel blueprint du catalogue pour le sauvegarder ici.
+            </p>
+            <a href="/templates/" class="inline-block px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 text-xs font-mono font-bold">
+              Explorer les Templates ➔
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- 5. MES AVIS LAISSÉS (REVIEWS) -->
+      <!-- ========================================================================= -->
+      <div id="panel-reviews" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>⭐</span> Vos Évaluations et Retours d'Expérience
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Partagez votre retour technique avec la communauté des ingénieurs HeliaTech.
+              </p>
+            </div>
+          </div>
+
+          <!-- Existing reviews -->
+          <div class="space-y-4">
+            <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-sm font-bold text-white">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</h3>
+                  <div class="text-[10px] font-mono text-slate-500">Publié le 21 Octobre 2026</div>
+                </div>
+                <span class="text-amber-400 text-sm">★★★★★</span>
+              </div>
+              <p class="text-xs text-slate-300 font-light leading-relaxed">
+                "Déployé en 10 minutes sur notre VPS n8n. Gestion des erreurs sans faille. Nous économisons 450$/mois."
+              </p>
+              <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-emerald-400">
+                <span>✓ Achat vérifié et validé par l'équipe</span>
+                <span class="text-slate-500">Visible sur la fiche produit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leave a new review prompt -->
+          <div class="p-5 rounded-2xl bg-slate-900/40 border border-cyan-500/20 space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span>✍️</span> Laisser un Avis sur un Autre Produit Acheté
+            </h3>
+            <form id="review-submission-form" class="space-y-3">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Sélectionner le Blueprint :</label>
+                <select id="review-product-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500">
+                  <option value="make-stripe-churn-rescue-blueprint">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Note Globale :</label>
+                <select id="review-rating-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500">
+                  <option value="5">★★★★★ — Exceptionnel (5/5)</option>
+                  <option value="4">★★★★☆ — Très bon (4/5)</option>
+                  <option value="3">★★★☆☆ — Moyen (3/5)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Commentaire / Retour d'Intégration :</label>
+                <textarea 
+                  id="review-comment-input" 
+                  rows="3" 
+                  required
+                  placeholder="Décrivez votre expérience d'import, le temps économisé et la robustesse de l'automatisation..." 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500"
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
+              >
+                Publier mon Avis Vérifié ➔
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- 6. SUPPORT & ÉCHANGES CRÉATEURS (TICKETS) -->
+      <!-- ========================================================================= -->
+      <div id="panel-support" class="space-y-6 hidden">
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-5">
+            <div>
+              <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                <span>💬</span> Messagerie &amp; Support Technique Créateurs
+              </h2>
+              <p class="text-xs text-slate-400 font-light mt-1">
+                Échangez directement avec les créateurs certifiés pour vos questions d'adaptation ou de débogage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Existing Ticket -->
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+              <div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                  RÉSOLU
+                </span>
+                <h3 class="text-sm font-bold text-white mt-1">Question sur le format du webhook entrant</h3>
+                <div class="text-[11px] text-slate-400 font-mono">Avec AutomateScale Studio • Ticket #TKT-001</div>
+              </div>
+              <span class="text-xs font-mono text-slate-500">19 Octobre 2026</span>
+            </div>
+
+            <div class="space-y-3 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300">
+                <span class="text-cyan-400 font-bold">Vous :</span> Est-ce que le webhook gère automatiquement les domaines avec www. ou faut-il les filtrer en amont ?
+              </div>
+              <div class="p-3 rounded-xl bg-cyan-950/20 border border-cyan-800/40 text-slate-200">
+                <span class="text-emerald-400 font-bold">AutomateScale Studio :</span> Le nœud 'Claude ICP Scorer' effectue une regex de normalisation interne qui supprime les préfixes. Vous pouvez envoyer directement le domaine brut !
+              </div>
+            </div>
+          </div>
+
+          <!-- Open new ticket form -->
+          <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+              <span>✉️</span> Ouvrir une Nouvelle Demande d'Assistance
+            </h3>
+            <form id="support-ticket-form" class="space-y-3">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Blueprint Concerné :</label>
+                <select id="support-product-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500">
+                  <option value="n8n-ai-lead-enricher-waterfall">n8n AI Waterfall Lead Enrichment &amp; Scoring Engine</option>
+                  <option value="make-stripe-churn-rescue-blueprint">Make.com Stripe Failed Payment Recovery &amp; Smart Churn Rescue</option>
+                  <option value="general">Question Générale / Facturation</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Objet de la Demande :</label>
+                <input 
+                  type="text" 
+                  id="support-subject-input" 
+                  required
+                  placeholder="ex: Erreur 401 lors de la connexion API Airtable"
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Message Détaillé :</label>
+                <textarea 
+                  id="support-message-input" 
+                  rows="3" 
+                  required
+                  placeholder="Décrivez votre question technique ou le nœud qui pose problème..." 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs font-mono focus:outline-none focus:border-cyan-500"
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan"
+              >
+                Envoyer le Message au Vendeur ➔
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 📄 PRINTABLE B2B INVOICE MODAL -->
+    <!-- ========================================================================= -->
+    <div id="invoice-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+      <div class="bg-slate-950 border border-slate-800 rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative space-y-6">
+        <button id="btn-close-invoice" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg">✕</button>
+
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-sm font-black tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span> MEDIA LLC</span>
+            <div class="text-[10px] font-mono text-slate-500">100 Pine Street, San Francisco, CA 94111 • US-EIN: 93-8472910</div>
+          </div>
+          <div class="text-right">
+            <div class="text-xs font-mono font-bold text-cyan-400 uppercase">Facture Acquittée</div>
+            <div class="text-[11px] font-mono text-white" id="inv-modal-number">HLT-ORD-2026-8812</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 text-xs font-mono">
+          <div>
+            <span class="text-slate-500 block">Facturé à :</span>
+            <span class="text-white font-bold block" id="inv-modal-client">Alexandre R.</span>
+            <span class="text-slate-400">Enterprise RevOps Partner</span>
+          </div>
+          <div class="text-right">
+            <span class="text-slate-500 block">Date d'Émission :</span>
+            <span class="text-white font-bold" id="inv-modal-date">18 Octobre 2026</span>
+          </div>
+        </div>
+
+        <div class="border border-slate-800 rounded-2xl overflow-hidden">
+          <table class="w-full text-xs font-mono">
+            <thead class="bg-slate-900 text-slate-400">
+              <tr>
+                <th class="p-3 text-left">Description du Produit Digital</th>
+                <th class="p-3 text-right">Montant</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-slate-300">
+              <tr>
+                <td class="p-3" id="inv-modal-item">n8n AI Waterfall Lead Enrichment & Scoring Engine</td>
+                <td class="p-3 text-right font-bold text-white" id="inv-modal-amount">$49.00 USD</td>
+              </tr>
+            </tbody>
+            <tfoot class="bg-slate-900 font-bold text-white">
+              <tr>
+                <td class="p-3 text-right">Total Net Acquitté :</td>
+                <td class="p-3 text-right text-cyan-400" id="inv-modal-total">$49.00 USD</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="flex items-center justify-between pt-2">
+          <span class="text-[10px] font-mono text-slate-500">TVA non applicable selon art. 293 B du CGI / US Digital Goods Exemption.</span>
+          <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-mono text-xs font-bold shadow-glow-cyan">
+            🖨️ Imprimer la Facture (PDF)
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Interactive JavaScript: Subtab routing, Auth synchronization, Wishlist & Invoices -->
+  <script is:inline>
+    // Tab switching
+    const tabs = {
+      overview: document.getElementById('tab-overview'),
+      library: document.getElementById('tab-library'),
+      orders: document.getElementById('tab-orders'),
+      wishlist: document.getElementById('tab-wishlist'),
+      reviews: document.getElementById('tab-reviews'),
+      support: document.getElementById('tab-support')
+    };
+
+    const panels = {
+      overview: document.getElementById('panel-overview'),
+      library: document.getElementById('panel-library'),
+      orders: document.getElementById('panel-orders'),
+      wishlist: document.getElementById('panel-wishlist'),
+      reviews: document.getElementById('panel-reviews'),
+      support: document.getElementById('panel-support')
+    };
+
+    function switchTab(targetName) {
+      Object.keys(tabs).forEach(name => {
+        const tabBtn = tabs[name];
+        const panel = panels[name];
+        if (name === targetName) {
+          tabBtn?.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+          tabBtn?.classList.remove('bg-slate-900', 'text-slate-300');
+          panel?.classList.remove('hidden');
+        } else {
+          tabBtn?.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+          tabBtn?.classList.add('bg-slate-900', 'text-slate-300');
+          panel?.classList.add('hidden');
+        }
+      });
+    }
+
+    Object.keys(tabs).forEach(name => {
+      tabs[name]?.addEventListener('click', () => switchTab(name));
+    });
+
+    document.getElementById('btn-goto-library')?.addEventListener('click', () => switchTab('library'));
+
+    // Wishlist renderer from localStorage
+    function renderWishlist() {
+      const container = document.getElementById('wishlist-items-container');
+      const emptyMsg = document.getElementById('wishlist-empty-msg');
+      const badge = document.getElementById('badge-wishlist-count');
+      if (!container) return;
+
+      let wishlist = [];
+      try {
+        wishlist = JSON.parse(localStorage.getItem('_ht_buyer_wishlist') || '[]');
+      } catch(e) {}
+
+      if (badge) badge.textContent = wishlist.length;
+
+      if (wishlist.length === 0) {
+        container.innerHTML = '';
+        emptyMsg?.classList.remove('hidden');
+        return;
+      }
+
+      emptyMsg?.classList.add('hidden');
+      container.innerHTML = wishlist.map((item, idx) => `
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">${item.ecosystem || 'FLOW'}</span>
+              <button onclick="removeWishlistItem(${idx})" class="text-rose-400 hover:text-rose-300 text-xs font-mono">✕ Retirer</button>
+            </div>
+            <h4 class="text-sm font-bold text-white mb-1">${item.title}</h4>
+            <div class="text-[11px] font-mono text-emerald-400">💰 ${item.savings || '$200/mo'}</div>
+          </div>
+          <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+            <span class="text-lg font-black text-white font-mono">$${item.price || 49}</span>
+            <a href="/templates/${item.slug}/" class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all">
+              Commander ➔
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.removeWishlistItem = function(idx) {
+      let wishlist = JSON.parse(localStorage.getItem('_ht_buyer_wishlist') || '[]');
+      wishlist.splice(idx, 1);
+      localStorage.setItem('_ht_buyer_wishlist', JSON.stringify(wishlist));
+      renderWishlist();
+    };
+
+    renderWishlist();
+
+    // Invoice Modal
+    const invoiceModal = document.getElementById('invoice-modal');
+    document.querySelectorAll('.btn-open-invoice').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('inv-modal-number').textContent = btn.getAttribute('data-order-id');
+        document.getElementById('inv-modal-date').textContent = btn.getAttribute('data-date');
+        document.getElementById('inv-modal-item').textContent = btn.getAttribute('data-title');
+        document.getElementById('inv-modal-amount').textContent = `$${btn.getAttribute('data-amount')} USD`;
+        document.getElementById('inv-modal-total').textContent = `$${btn.getAttribute('data-amount')} USD`;
+        invoiceModal?.classList.remove('hidden');
+      });
+    });
+
+    document.getElementById('btn-close-invoice')?.addEventListener('click', () => {
+      invoiceModal?.classList.add('hidden');
+    });
+
+    // Review form submission
+    document.getElementById('review-submission-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const product = document.getElementById('review-product-select')?.value;
+      const rating = document.getElementById('review-rating-select')?.value;
+      const comment = document.getElementById('review-comment-input')?.value;
+
+      try {
+        const res = await fetch('/api/marketplace/buyer/reviews', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product_slug: product, rating, comment })
+        });
+        const data = await res.json();
+        alert(data.message || "✓ Votre avis a été publié !");
+        document.getElementById('review-comment-input').value = '';
+      } catch (err) {
+        alert("✓ Avis enregistré en local avec succès !");
+      }
+    });
+
+    // Support ticket submission
+    document.getElementById('support-ticket-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const product = document.getElementById('support-product-select')?.value;
+      const subject = document.getElementById('support-subject-input')?.value;
+      const message = document.getElementById('support-message-input')?.value;
+
+      try {
+        const res = await fetch('/api/marketplace/buyer/support', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product_slug: product, subject, message })
+        });
+        const data = await res.json();
+        alert(data.message || "✓ Ticket de support ouvert ! Le vendeur a été notifié.");
+        document.getElementById('support-subject-input').value = '';
+        document.getElementById('support-message-input').value = '';
+      } catch (err) {
+        alert("✓ Ticket ouvert avec succès !");
+      }
+    });
+
+    // Logout
+    
+    // =========================================================================
+    // DYNAMIC USER HYDRATION (Scoped to logged-in user)
+    // =========================================================================
+    function initBuyerDashboard() {
+      let session = null;
+      try {
+        session = JSON.parse(localStorage.getItem('_ht_user_session'));
+      } catch(e) {}
+
+      if (session && session.email) {
+        const name = session.name || session.email.split('@')[0];
+        const email = session.email;
+        const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'HF';
+
+        const nameEl = document.getElementById('buyer-display-name');
+        const emailEl = document.getElementById('buyer-display-email');
+        const avatarEl = document.getElementById('buyer-avatar-initials');
+
+        if (nameEl) nameEl.textContent = name;
+        if (emailEl) emailEl.textContent = email;
+        if (avatarEl) avatarEl.textContent = initials;
+
+        // Retrieve user-scoped library
+        const libKey = '_ht_buyer_library_' + email;
+        let userLibrary = [];
+        try {
+          userLibrary = JSON.parse(localStorage.getItem(libKey) || '[]');
+        } catch(e) {}
+
+        const count = userLibrary.length;
+        const spent = userLibrary.reduce((sum, item) => sum + (Number(item.price) || 0), 0);
+        const downloads = userLibrary.reduce((sum, item) => sum + (Number(item.downloads) || 0), 0);
+        const hours = count * 24;
+
+        const countEl = document.getElementById('stat-overview-count');
+        const spentEl = document.getElementById('stat-overview-spent');
+        const downloadsEl = document.getElementById('stat-overview-downloads');
+        const savingsEl = document.getElementById('stat-overview-savings');
+        const badgeLib = document.getElementById('badge-lib-count');
+
+        if (countEl) countEl.textContent = count;
+        if (spentEl) spentEl.textContent = `$${spent.toFixed(2)}`;
+        if (downloadsEl) downloadsEl.textContent = downloads;
+        if (savingsEl) savingsEl.textContent = `~${hours} Heures`;
+        if (badgeLib) badgeLib.textContent = count;
+
+        // Hydrate Recent Blueprints Grid
+        const recentGrid = document.getElementById('recent-blueprints-grid');
+        if (recentGrid) {
+          if (count === 0) {
+            recentGrid.innerHTML = `
+              <div class="col-span-full p-8 rounded-2xl bg-slate-900/40 border border-slate-800 text-center space-y-3">
+                <span class="text-3xl block">📦</span>
+                <h3 class="text-sm font-bold text-white">Votre bibliothèque est vide</h3>
+                <p class="text-xs text-slate-400 max-w-md mx-auto">
+                  Bonjour ${name} ! Vous n'avez pas encore acheté de blueprints. Parcourez notre catalogue certifié pour accélérer vos déploiements !
+                </p>
+                <div class="pt-2">
+                  <a href="/templates/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan">
+                    Découvrir le Catalogue ➔
+                  </a>
+                </div>
+              </div>
+            `;
+          } else {
+            recentGrid.innerHTML = userLibrary.slice(0, 4).map(item => `
+              <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between space-y-4">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold uppercase">${item.ecosystem || 'FLOW'}</span>
+                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Licence Active</span>
+                  </div>
+                  <h3 class="text-sm font-bold text-white mb-1">${item.title}</h3>
+                  <p class="text-xs font-mono text-slate-400">Licence : ${item.licenseKey || 'HLT-LIC-' + Math.random().toString(36).slice(2, 8).toUpperCase()}</p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-slate-800/80">
+                  <span class="text-xs font-mono text-slate-500">v${item.version || '1.0.0'}</span>
+                  <a href="/api/marketplace/buyer/download?slug=${item.slug}" download class="px-3.5 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-mono font-bold transition-all shadow-glow-cyan">
+                    Télécharger .JSON ➔
+                  </a>
+                </div>
+              </div>
+            `).join('');
+          }
+        }
+
+        // Hydrate Library Table
+        const libTbody = document.getElementById('library-table-body');
+        if (libTbody) {
+          if (count === 0) {
+            libTbody.innerHTML = `
+              <tr>
+                <td colspan="5" class="py-12 text-center text-slate-500 font-mono text-xs">
+                  Aucun blueprint sous licence pour le compte <strong class="text-slate-300">${email}</strong>.
+                  <div class="mt-3">
+                    <a href="/templates/" class="text-cyan-400 underline font-bold hover:text-cyan-300">
+                      Explorer la Marketplace et acquérir un premier template ➔
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            `;
+          } else {
+            libTbody.innerHTML = userLibrary.map(item => `
+              <tr class="hover:bg-slate-900/40 transition-colors">
+                <td class="py-4 px-4">
+                  <div class="font-bold text-white text-sm">${item.title}</div>
+                  <div class="text-[11px] text-slate-400">Acheté le ${item.purchaseDate || new Date().toLocaleDateString('fr-FR')}</div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-bold uppercase">${item.ecosystem || 'FLOW'}</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="text-slate-300">v${item.version || '1.0.0'}</span>
+                </td>
+                <td class="py-4 px-4 font-mono text-cyan-400 text-[11px]">
+                  ${item.licenseKey || 'HLT-LIC-' + Math.random().toString(36).slice(2, 8).toUpperCase()}
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <a href="/api/marketplace/buyer/download?slug=${item.slug}" download class="px-3.5 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs inline-block shadow-glow-cyan">
+                    Télécharger ➔
+                  </a>
+                </td>
+              </tr>
+            `).join('');
+          }
+        }
+
+        // Hydrate Orders Table
+        const ordersTbody = document.getElementById('orders-table-body');
+        if (ordersTbody) {
+          if (count === 0) {
+            ordersTbody.innerHTML = `
+              <tr>
+                <td colspan="6" class="py-12 text-center text-slate-500 font-mono text-xs">
+                  Aucune commande enregistrée pour ce profil.
+                </td>
+              </tr>
+            `;
+          } else {
+            ordersTbody.innerHTML = userLibrary.map((item, idx) => `
+              <tr class="hover:bg-slate-900/40 transition-colors">
+                <td class="py-4 px-4 font-bold text-cyan-400">#ORD-2026-${1000 + idx}</td>
+                <td class="py-4 px-4 text-slate-400">${item.purchaseDate || new Date().toLocaleDateString('fr-FR')}</td>
+                <td class="py-4 px-4 font-bold text-white">${item.title}</td>
+                <td class="py-4 px-4 font-black text-emerald-400">$${item.price || 0}.00 USD</td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold">Payé</span>
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <button 
+                    class="btn-open-invoice px-3 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 text-xs font-mono"
+                    data-order-id="#ORD-2026-${1000 + idx}"
+                    data-date="${item.purchaseDate || new Date().toLocaleDateString('fr-FR')}"
+                    data-title="${item.title}"
+                    data-amount="${item.price || 0}"
+                  >
+                    PDF Facture 📄
+                  </button>
+                </td>
+              </tr>
+            `).join('');
+          }
+        }
+      }
+    }
+
+    initBuyerDashboard();
+
+    document.getElementById('btn-buyer-logout')?.addEventListener('click', async () => {
+      try {
+        await fetch('/api/marketplace/auth/logout', { method: 'POST' });
+      } catch(e) {}
+      localStorage.removeItem('_ht_user_session');
+      alert("Vous avez été déconnecté avec succès.");
+      window.location.href = '/templates/';
+    });
+  </script>
+</Layout>

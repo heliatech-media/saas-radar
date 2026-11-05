@@ -1,7 +1,70 @@
 /**
  * Cloudflare Pages Edge Function: /api/marketplace/seller/overview
- * Seller Studio analytics, 80% net revenue split, and payout balances
+ * Real Seller Studio analytics, 80% net revenue split, and payout balances
+ * Connected to persistent Database Store
  */
+import { getStore } from "../_store.js";
+
+function base64UrlDecode(str) {
+  str = str.replace(/-/g, '+').replace(/_/g, '/');
+  while (str.length % 4) str += '=';
+  return atob(str);
+}
+
+async function verifyJwt(token, secret) {
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+    const [headerB64, payloadB64, signatureB64] = parts;
+    const dataToVerify = `${headerB64}.${payloadB64}`;
+    const enc = new TextEncoder();
+
+    const key = await crypto.subtle.importKey(
+      'raw',
+      enc.encode(secret),
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['verify']
+    );
+
+    const binarySignature = atob(signatureB64.replace(/-/g, '+').replace(/_/g, '/'));
+    const sigBytes = new Uint8Array(binarySignature.length);
+    for (let i = 0; i < binarySignature.length; i++) {
+      sigBytes[i] = binarySignature.charCodeAt(i);
+    }
+
+    const isValid = await crypto.subtle.verify('HMAC', key, sigBytes, enc.encode(dataToVerify));
+    if (!isValid) return null;
+
+    const payload = JSON.parse(base64UrlDecode(payloadB64));
+    if (payload.exp && payload.exp < Math.floor(Date.now() / 1000)) return null;
+
+    return payload;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function getAuthSeller(context) {
+  const jwtSecret = context.env?.MARKETPLACE_JWT_SECRET || "heliatech_secret_hmac_key_2026_super_secure";
+  let token = null;
+
+  const authHeader = context.request.headers.get("Authorization");
+  if (authHeader && authHeader.startsWith("Bearer ")) {
+    token = authHeader.substring(7);
+  }
+
+  if (!token) {
+    const cookieHeader = context.request.headers.get("Cookie");
+    if (cookieHeader) {
+      const match = cookieHeader.match(/ht_session=([^;]+)/);
+      if (match) token = match[1];
+    }
+  }
+
+  if (!token) return null;
+  return await verifyJwt(token, jwtSecret);
+}
 
 export async function onRequestOptions() {
   return new Response(null, {
@@ -16,74 +79,48 @@ export async function onRequestOptions() {
 
 export async function onRequestGet(context) {
   try {
-    const overview = {
-      store_name: "AutomateScale Studio",
-      badge: "Verified Pro Agency",
-      currency: "USD",
-      payout_split_percent: 80,
-      platform_cut_percent: 20,
-      total_gross_revenue: 6958.00,
-      total_net_revenue: 5566.40, // 80%
-      monthly_gross_revenue: 1840.00,
-      monthly_net_revenue: 1472.00, // 80%
-      available_payout_balance: 1472.00,
-      pending_payout_balance: 320.00,
-      total_sales_count: 142,
-      average_rating: 4.95,
-      conversion_rate_percent: 4.8,
-      sales_chart: [
-        { period: "Semaine 1", sales: 18, net_usd: 705.60 },
-        { period: "Semaine 2", sales: 24, net_usd: 940.80 },
-        { period: "Semaine 3", sales: 31, net_usd: 1215.20 },
-        { period: "Semaine 4", sales: 42, net_usd: 1646.40 }
-      ],
-      recent_sales: [
-        {
-          id: "sale_8812",
-          product_title: "n8n AI Waterfall Lead Enrichment & Scoring Engine",
-          date: "18 Octobre 2026",
-          gross_usd: 49.00,
-          platform_cut_usd: 9.80, // 20%
-          net_payout_usd: 39.20, // 80%
-          buyer_email_masked: "al***@heliatech.online",
-          status: "PAID"
-        },
-        {
-          id: "sale_8810",
-          product_title: "n8n AI Waterfall Lead Enrichment & Scoring Engine",
-          date: "17 Octobre 2026",
-          gross_usd: 49.00,
-          platform_cut_usd: 9.80,
-          net_payout_usd: 39.20,
-          buyer_email_masked: "ma***@saasgrowth.io",
-          status: "PAID"
-        },
-        {
-          id: "sale_8805",
-          product_title: "n8n AI Waterfall Lead Enrichment & Scoring Engine",
-          date: "16 Octobre 2026",
-          gross_usd: 49.00,
-          platform_cut_usd: 9.80,
-          net_payout_usd: 39.20,
-          buyer_email_masked: "sa***@cloudscale.co",
-          status: "PAID"
-        }
-      ],
-      alerts: [
-        {
-          type: "INFO",
-          message: "Compte Stripe Connect / SEPA vérifié et prêt pour les versements automatiques."
-        },
-        {
-          type: "UPDATE_RECOMMENDED",
-          message: "Le nœud Anthropic v1 a été mis à jour par n8n. Pensez à publier la version v1.5.0 de votre blueprint."
-        }
-      ]
-    };
+    const session = await getAuthSeller(context);
+    const store = getStore(context.env);
+
+    if (!session || !session.email) {
+      return new Response(JSON.stringify({
+        error: "Session vendeur non authentifiée.",
+        is_authenticated: false
+      }), {
+        status: 401,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+
+    const profile = await store.getSellerByEmail(session.email) || await store.createOrUpdateSellerProfile({
+      userId: session.userId || `usr_${btoa(session.email).slice(0, 10)}`,
+      email: session.email,
+      storeName: session.storeName || `${session.name || session.email.split('@')[0]} Studio`
+    });
+
+    const products = await store.getProductsBySellerId(profile.id);
+
+    const balanceUsd = (profile.balance_cents || 0) / 100;
+    const totalSalesUsd = (profile.total_sales_cents || 0) / 100;
+    const netRevenueUsd = totalSalesUsd * 0.8;
 
     return new Response(JSON.stringify({
       success: true,
-      overview
+      store_name: profile.store_name,
+      email: profile.email,
+      iban: profile.iban,
+      badge: "Vendeur Partenaire 80% Net",
+      currency: "USD",
+      payout_split_percent: 80,
+      platform_cut_percent: 20,
+      total_gross_revenue: totalSalesUsd,
+      total_net_revenue: netRevenueUsd,
+      available_payout_balance: balanceUsd,
+      pending_payout_balance: 0.00,
+      total_sales_count: profile.sales_count || 0,
+      average_rating: profile.average_rating || 5.0,
+      products_count: products.length,
+      recent_sales: []
     }), {
       status: 200,
       headers: {
@@ -92,13 +129,10 @@ export async function onRequestGet(context) {
       }
     });
 
-  } catch (error) {
-    return new Response(JSON.stringify({
-      success: false,
-      error: error.message || "Failed to fetch seller overview"
-    }), {
+  } catch (err) {
+    return new Response(JSON.stringify({ error: `Erreur interne: ${err.message}` }), {
       status: 500,
-      headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+      headers: { "Content-Type": "application/json" }
     });
   }
 }
