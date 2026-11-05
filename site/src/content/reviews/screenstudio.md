@@ -96,7 +96,7 @@ ScreenStudio is a macOS-native screen recording application that automatically a
 
 - **Auto-zoom and pan based on cursor movement**
 - **Dynamic background generation with blur and gradient options**
-- **Cursor smoothing and highlight effects**
+- **[Cursor](/reviews/cursor) smoothing and highlight effects**
 - **High-resolution export up to 4K**
 - **Automatic window resizing and framing**
 
@@ -125,7 +125,7 @@ ScreenStudio is a macOS-native screen recording application that automatically a
 
 ScreenStudio is a specialized tool that solves a specific pain point: the 'boring' screen recording. By automating the tedious process of zooming into UI elements and smoothing out shaky mouse movements, it allows non-editors to produce content that looks like it came from a professional motion graphics studio. The software is incredibly performant on Apple Silicon, and the 'one-time purchase' model is a refreshing change from the industry-standard subscription fatigue.
 
-However, it is not a replacement for a full-featured NLE (Non-Linear Editor) like Premiere Pro or DaVinci Resolve. If your workflow requires complex multi-camera setups, heavy color grading, or intricate audio sound design, you will find ScreenStudio limiting. It is designed for speed and aesthetic polish, not deep narrative editing.
+However, it is not a replacement for a full-featured NLE (Non-[Linear](/reviews/linear) Editor) like Premiere Pro or DaVinci Resolve. If your workflow requires complex multi-camera setups, heavy color grading, or intricate audio sound design, you will find ScreenStudio limiting. It is designed for speed and aesthetic polish, not deep narrative editing.
 
 For SaaS founders and product marketers, the ROI is immediate. You stop spending 2-3 hours editing a 60-second demo and start spending 5 minutes. If your time is worth more than $50/hour, this tool pays for itself within the first two videos you produce.
 

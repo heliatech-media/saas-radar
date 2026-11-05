@@ -1,0 +1,357 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#02040a"/>
+    </linearGradient>
+
+    <radialGradient id="glow-cyan" cx="80%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-violet" cx="40%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-fuchsia" cx="70%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Theme Gradients -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="accent-cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="accent-fuchsia-violet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="glass-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <linearGradient id="timeline-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feGaussianBlur stdDeviation="4" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="drop-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+      <circle cx="50" cy="0" r="1" fill="#38bdf8" fill-opacity="0.3"/>
+    </pattern>
+
+    <pattern id="dots-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#475569" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-base)"/>
+  <rect width="1200" height="630" fill="url(#cyber-grid)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="250" r="350" fill="url(#glow-cyan)"/>
+  <circle cx="450" cy="450" r="400" fill="url(#glow-violet)"/>
+  <circle cx="850" cy="400" r="280" fill="url(#glow-fuchsia)"/>
+
+  <!-- Ambient Decorative Tech Grid Vectors -->
+  <g opacity="0.15">
+    <circle cx="900" cy="315" r="260" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 8"/>
+    <circle cx="900" cy="315" r="310" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+    <line x1="900" y1="20" x2="900" y2="610" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="2 4"/>
+    <line x1="500" y1="315" x2="1180" y2="315" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- ==================== LEFT SIDE: TYPOGRAPHY & BRANDING ==================== -->
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(80, 60)">
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" fill-opacity="0.8" stroke="url(#glass-border)" stroke-width="1.5"/>
+    <circle cx="16" cy="16" r="5" fill="#06b6d4" filter="url(#glow-soft)"/>
+    <circle cx="16" cy="16" r="2" fill="#ffffff"/>
+    <text x="32" y="20.5" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="800" fill="#38bdf8" letter-spacing="2.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Article Title & Category -->
+  <g transform="translate(80, 140)">
+    <!-- Subtitle / Category -->
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="800" fill="#d946ef" letter-spacing="4">FLAGSHIP SYSTEM INVESTIGATION • AI VIDEO</text>
+    
+    <!-- Title -->
+    <text x="0" y="48" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="52" font-weight="900" fill="url(#title-grad)" letter-spacing="-1.5" filter="url(#drop-shadow)">
+      SCREENSTUDIO
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="82" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="400" fill="#94a3b8" letter-spacing="0.5">
+      The Cinematic Evolution of Screen Recording
+    </text>
+    <text x="0" y="108" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="300" fill="#64748b">
+      &amp; the 15-Minute Path to Professional Motion Graphics
+    </text>
+  </g>
+
+  <!-- Feature Metric Badges / Tech Highlights -->
+  <g transform="translate(80, 310)">
+    <!-- Feature 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="url(#glass-card)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="none" stroke="url(#glass-border)" stroke-width="1" opacity="0.6"/>
+      <text x="16" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">AUTO-ZOOM ENGINE</text>
+      <text x="16" y="40" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#38bdf8">3D Keyframe AI</text>
+      <circle cx="165" cy="27" r="8" fill="#06b6d4" fill-opacity="0.15"/>
+      <polyline points="161,27 164,30 169,24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Feature 2 -->
+    <g transform="translate(206, 0)">
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="url(#glass-card)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="none" stroke="url(#glass-border)" stroke-width="1" opacity="0.6"/>
+      <text x="16" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">MOTION CURVE</text>
+      <text x="16" y="40" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#8b5cf6">60 FPS Inertia</text>
+      <circle cx="165" cy="27" r="8" fill="#8b5cf6" fill-opacity="0.15"/>
+      <path d="M160,30 C162,22 166,32 170,23" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Feature 3 -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="url(#glass-card)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="none" stroke="url(#glass-border)" stroke-width="1" opacity="0.6"/>
+      <text x="16" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">RENDER QUALITY</text>
+      <text x="16" y="40" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#d946ef">4K HDR / 60fps</text>
+      <circle cx="165" cy="27" r="8" fill="#d946ef" fill-opacity="0.15"/>
+      <text x="160" y="30" font-family="system-ui, sans-serif" font-size="9" font-weight="900" fill="#d946ef">4K</text>
+    </g>
+
+    <!-- Feature 4 -->
+    <g transform="translate(206, 68)">
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="url(#glass-card)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="0" width="190" height="54" rx="12" fill="none" stroke="url(#glass-border)" stroke-width="1" opacity="0.6"/>
+      <text x="16" y="22" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">TIME TO EXPORT</text>
+      <text x="16" y="40" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#10b981">15 Mins Workflow</text>
+      <circle cx="165" cy="27" r="8" fill="#10b981" fill-opacity="0.15"/>
+      <circle cx="165" cy="27" r="5" fill="none" stroke="#10b981" stroke-width="1.5"/>
+      <polyline points="165,24 165,27 167,27" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Architectural Meta Info Line -->
+  <g transform="translate(80, 525)">
+    <line x1="0" y1="0" x2="396" y2="0" stroke="#1e293b" stroke-width="1"/>
+    <text x="0" y="22" font-family="monospace" font-size="11" fill="#475569">SYSTEM.VER: 4.8.0-NEURAL</text>
+    <text x="210" y="22" font-family="monospace" font-size="11" fill="#475569">CAM.PATH: DYNAMIC_BEZIER</text>
+  </g>
+
+
+  <!-- ==================== RIGHT SIDE: 3D ISOMETRIC / MOTION GRAPHICS STACK ==================== -->
+
+  <!-- Isometric Graphic Group with Transformation -->
+  <g transform="translate(820, 310) rotate(-10) skewX(12)" filter="url(#drop-shadow)">
+
+    <!-- BACKDROP / BASE PLATFORM (3D Canvas Shadow Frame) -->
+    <rect x="-260" y="-180" width="480" height="320" rx="20" fill="#090d16" stroke="#1e293b" stroke-width="2"/>
+    <rect x="-260" y="-180" width="480" height="320" rx="20" fill="url(#dots-pattern)" opacity="0.5"/>
+
+    <!-- LEVEL 1: RECORDING INTERFACE / CODE & UI WINDOW -->
+    <g transform="translate(-230, -150)">
+      <!-- Glass Window Frame -->
+      <rect x="0" y="0" width="420" height="260" rx="14" fill="#0f172a" fill-opacity="0.9" stroke="url(#glass-border)" stroke-width="1.5"/>
+      
+      <!-- UI Header -->
+      <path d="M 0,14 A 14,14 0 0,1 14,0 L 406,0 A 14,14 0 0,1 420,14 L 420,32 L 0,32 Z" fill="#1e293b" fill-opacity="0.8"/>
+      <circle cx="18" cy="16" r="5" fill="#ef4444"/>
+      <circle cx="34" cy="16" r="5" fill="#f59e0b"/>
+      <circle cx="50" cy="16" r="5" fill="#10b981"/>
+      <rect x="140" y="8" width="140" height="16" rx="8" fill="#090d16" fill-opacity="0.6"/>
+      <text x="168" y="20" font-family="monospace" font-size="9" fill="#64748b">app.screenstudio.main</text>
+
+      <!-- Simulated IDE / Code Canvas inside recording -->
+      <g transform="translate(20, 48)">
+        <!-- Syntax Code Lines -->
+        <rect x="0" y="0" width="120" height="8" rx="4" fill="#38bdf8" opacity="0.8"/>
+        <rect x="130" y="0" width="60" height="8" rx="4" fill="#8b5cf6" opacity="0.8"/>
+        <rect x="0" y="16" width="80" height="8" rx="4" fill="#d946ef" opacity="0.7"/>
+        <rect x="90" y="16" width="140" height="8" rx="4" fill="#475569" opacity="0.5"/>
+        <rect x="20" y="32" width="180" height="8" rx="4" fill="#06b6d4" opacity="0.9"/>
+        <rect x="210" y="32" width="40" height="8" rx="4" fill="#f59e0b" opacity="0.8"/>
+        <rect x="20" y="48" width="90" height="8" rx="4" fill="#64748b" opacity="0.5"/>
+        
+        <!-- UI Component Boxes -->
+        <rect x="0" y="70" width="250" height="110" rx="10" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-dasharray="4 4"/>
+        <rect x="16" y="86" width="100" height="30" rx="6" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4"/>
+        <rect x="126" y="86" width="100" height="30" rx="6" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6"/>
+        <rect x="16" y="126" width="210" height="40" rx="6" fill="#0f172a" stroke="#475569" stroke-width="0.8"/>
+        <circle cx="36" cy="146" r="10" fill="#d946ef"/>
+        <rect x="56" y="142" width="120" height="8" rx="4" fill="#e2e8f0"/>
+      </g>
+    </g>
+
+    <!-- LEVEL 2: DYNAMIC AUTO-ZOOM FOCUS FRAME (FLOATING ABOVE) -->
+    <!-- Zoom Box 1: Focal Region -->
+    <g transform="translate(-80, -40)" filter="url(#glow-soft)">
+      <rect x="-10" y="-10" width="180" height="130" rx="12" fill="none" stroke="#d946ef" stroke-width="2.5" stroke-dasharray="8 4"/>
+      <!-- Target Corner Brackets -->
+      <path d="M -10,10 L -10,-10 L 10,-10" fill="none" stroke="#ffffff" stroke-width="4"/>
+      <path d="M 150,-10 L 170,-10 L 170,10" fill="none" stroke="#ffffff" stroke-width="4"/>
+      <path d="M -10,100 L -10,120 L 10,120" fill="none" stroke="#ffffff" stroke-width="4"/>
+      <path d="M 170,100 L 170,120 L 150,120" fill="none" stroke="#ffffff" stroke-width="4"/>
+      
+      <!-- Auto Zoom Tag -->
+      <rect x="25" y="-24" width="120" height="20" rx="10" fill="#d946ef"/>
+      <text x="85" y="-10" font-family="system-ui, sans-serif" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">AUTO-ZOOM 2.4X</text>
+    </g>
+
+    <!-- LEVEL 3: 3D CURSOR TRAJECTORY & SMOOTH MOTION SPLINE -->
+    <!-- Curved Neon Motion Trail -->
+    <path d="M -200,80 C -120,-30 -40,110 70,-10 C 110,-60 140,20 180,-20" fill="none" stroke="url(#accent-cyan-violet)" stroke-width="4" filter="url(#glow-intense)"/>
+    <path d="M -200,80 C -120,-30 -40,110 70,-10 C 110,-60 140,20 180,-20" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+    <!-- Keyframe Motion Nodes along Path -->
+    <g transform="translate(-120, 25)" filter="url(#glow-soft)">
+      <polygon points="0,-8 7,0 0,8 -7,0" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+      <line x1="0" y1="8" x2="0" y2="60" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+    </g>
+
+    <g transform="translate(70, -10)" filter="url(#glow-intense)">
+      <polygon points="0,-10 9,0 0,10 -9,0" fill="#d946ef" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="0" cy="0" r="16" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="4 2"/>
+      <line x1="0" y1="10" x2="0" y2="100" stroke="#d946ef" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+    </g>
+
+    <!-- Stylized Futuristic Cursor -->
+    <g transform="translate(180, -20) rotate(-25)" filter="url(#glow-intense)">
+      <path d="M 0,0 L 0,28 L 8,22 L 15,35 L 21,32 L 14,19 L 23,18 Z" fill="#06b6d4" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+    </g>
+
+    <!-- LEVEL 4: MOTION GRAPHICS TIMELINE TRACKS (FLOATING IN FRONT) -->
+    <g transform="translate(-220, 130)" filter="url(#drop-shadow)">
+      <!-- Timeline Base Plate -->
+      <rect x="0" y="0" width="440" height="90" rx="12" fill="#090d16" fill-opacity="0.95" stroke="url(#glass-border)" stroke-width="1.5"/>
+
+      <!-- Track 1: Smooth Zoom Wave Envelope -->
+      <text x="16" y="22" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#38bdf8" letter-spacing="1">ZOOM INERTIA CURVE</text>
+      <path d="M 120,25 Q 160,25 180,8 T 240,25 L 320,25 Q 350,5 380,25 L 420,25 L 420,30 L 120,30 Z" fill="url(#timeline-wave)"/>
+      <path d="M 120,25 Q 160,25 180,8 T 240,25 L 320,25 Q 350,5 380,25 L 420,25" fill="none" stroke="#06b6d4" stroke-width="2"/>
+
+      <!-- Track 2: Audio/Video Motion Blocks -->
+      <text x="16" y="52" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#8b5cf6" letter-spacing="1">VIDEO TRACK</text>
+      <rect x="120" y="42" width="80" height="14" rx="4" fill="#8b5cf6" fill-opacity="0.4" stroke="#8b5cf6" stroke-width="1"/>
+      <rect x="206" y="42" width="130" height="14" rx="4" fill="#d946ef" fill-opacity="0.4" stroke="#d946ef" stroke-width="1"/>
+      <rect x="342" y="42" width="78" height="14" rx="4" fill="#06b6d4" fill-opacity="0.4" stroke="#06b6d4" stroke-width="1"/>
+
+      <!-- Track 3: Sound Energy Waveform -->
+      <text x="16" y="76" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#64748b" letter-spacing="1">AUDIO SYNC</text>
+      <g transform="translate(120, 72)" fill="#38bdf8" opacity="0.7">
+        <rect x="0" y="-6" width="3" height="12" rx="1.5"/>
+        <rect x="5" y="-10" width="3" height="20" rx="1.5"/>
+        <rect x="10" y="-4" width="3" height="8" rx="1.5"/>
+        <rect x="15" y="-12" width="3" height="24" rx="1.5"/>
+        <rect x="20" y="-8" width="3" height="16" rx="1.5"/>
+        <rect x="25" y="-14" width="3" height="28" rx="1.5"/>
+        <rect x="30" y="-5" width="3" height="10" rx="1.5"/>
+        <rect x="35" y="-9" width="3" height="18" rx="1.5"/>
+        <!-- Repeated Wave visual bars -->
+        <rect x="50" y="-12" width="3" height="24" rx="1.5" fill="#d946ef"/>
+        <rect x="55" y="-16" width="3" height="32" rx="1.5" fill="#d946ef"/>
+        <rect x="60" y="-8" width="3" height="16" rx="1.5" fill="#d946ef"/>
+        <rect x="65" y="-14" width="3" height="28" rx="1.5" fill="#d946ef"/>
+        <rect x="80" y="-6" width="3" height="12" rx="1.5"/>
+        <rect x="85" y="-10" width="3" height="20" rx="1.5"/>
+        <rect x="90" y="-15" width="3" height="30" rx="1.5"/>
+        <rect x="95" y="-7" width="3" height="14" rx="1.5"/>
+        <rect x="100" y="-3" width="3" height="6" rx="1.5"/>
+      </g>
+
+      <!-- Playhead Red Line with Glow -->
+      <g transform="translate(270, -10)" filter="url(#glow-intense)">
+        <line x1="0" y1="0" x2="0" y2="95" stroke="#f43f5e" stroke-width="2"/>
+        <polygon points="-6,0 6,0 0,8" fill="#f43f5e"/>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ==================== HOLOGRAPHIC FLOATING HUD ACCENTS ==================== -->
+
+  <!-- Top Right Camera Lens HUD Overlay -->
+  <g transform="translate(1040, 100)" opacity="0.8">
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="12 6"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#8b5cf6" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="6" fill="#06b6d4" filter="url(#glow-soft)"/>
+    <path d="M -55,0 L -45,0 M 45,0 L 55,0 M 0,-55 L 0,-45 M 0,45 L 0,55" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="50" y="-20" font-family="monospace" font-size="10" fill="#38bdf8">REC ● 00:14:29</text>
+    <text x="50" y="-6" font-family="monospace" font-size="9" fill="#64748b">3840x2160 FPS:60</text>
+  </g>
+
+  <!-- Floating Sparkles / Light Nodes -->
+  <g filter="url(#glow-intense)">
+    <circle cx="620" cy="140" r="3" fill="#38bdf8"/>
+    <circle cx="750" cy="480" r="4" fill="#d946ef"/>
+    <circle cx="1120" cy="420" r="3" fill="#06b6d4"/>
+    <circle cx="540" cy="380" r="2" fill="#ffffff"/>
+    <circle cx="980" cy="560" r="3.5" fill="#8b5cf6"/>
+  </g>
+
+  <!-- Render Vector Nodes Floating Overlay -->
+  <g transform="translate(620, 220)" filter="url(#glow-soft)">
+    <rect x="0" y="0" width="110" height="28" rx="14" fill="#0f172a" stroke="#06b6d4" stroke-width="1" opacity="0.9"/>
+    <circle cx="14" cy="14" r="4" fill="#10b981"/>
+    <text x="26" y="18" font-family="sans-serif" font-size="10" font-weight="700" fill="#e2e8f0">NEURAL PAN</text>
+  </g>
+
+  <g transform="translate(520, 440)" filter="url(#glow-soft)">
+    <rect x="0" y="0" width="130" height="28" rx="14" fill="#0f172a" stroke="#d946ef" stroke-width="1" opacity="0.9"/>
+    <circle cx="14" cy="14" r="4" fill="#d946ef"/>
+    <text x="26" y="18" font-family="sans-serif" font-size="10" font-weight="700" fill="#e2e8f0">BEZIER SMOOTH</text>
+  </g>
+
+</svg>

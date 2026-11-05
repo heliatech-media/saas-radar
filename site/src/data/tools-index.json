@@ -505,6 +505,16 @@
     "affiliate_url": "https://screen.studio/?via=heliatech"
   },
   {
+    "name": "ScreenClip",
+    "slug": "screenclip",
+    "tagline": "The fastest way to capture, annotate, and share screen recordings and screenshots for professional teams.",
+    "category": "AI Video/Screen Recording",
+    "rating": 4.5,
+    "starting_price": "$9/mo",
+    "best_for": "Product managers, QA testers, customer support teams, and remote developers.",
+    "affiliate_url": "https://screenclip.com"
+  },
+  {
     "name": "ScreenStudio",
     "slug": "screenstudio",
     "tagline": "The gold standard for creating high-end, polished screen recordings in minutes.",
