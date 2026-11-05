@@ -1,30 +1,30 @@
 {
-  "last_synced": "2026-11-05T21:04:29.569118",
+  "last_synced": "2026-11-05T21:14:31.551696",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18883,
-  "total_requests": 118343,
-  "total_visits": 5853,
-  "total_pageviews": 24692,
+  "total_visitors_network": 18893,
+  "total_requests": 118481,
+  "total_visits": 5856,
+  "total_pageviews": 24713,
   "percent_cached": "56.14%",
-  "data_served_mb": 932.5,
+  "data_served_mb": 933.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 5970
+      "views": 6350
     },
     {
       "path": "/",
-      "views": 3180
+      "views": 2910
     },
     {
       "path": "/calculator/",
-      "views": 1050
+      "views": 1100
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 560
+      "views": 540
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -40,30 +40,14 @@
     },
     {
       "path": "/radar/",
-      "views": 240
-    },
-    {
-      "path": "/blog/",
       "views": 230
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 200
+      "path": "/blog/",
+      "views": 210
     },
     {
-      "path": "/terms/",
-      "views": 190
-    },
-    {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 190
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 190
-    },
-    {
-      "path": "/reviews/elevenlabs/",
+      "path": "/versus/",
       "views": 190
     },
     {
@@ -71,12 +55,12 @@
       "views": 180
     },
     {
-      "path": "/awards/",
-      "views": 170
+      "path": "/reviews/apollo-io/",
+      "views": 160
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 150
+      "path": "/blog/make-automation-revolution/",
+      "views": 160
     },
     {
       "path": "/sentinel/",
@@ -90,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 22890
+      "views": 22930
     },
     {
       "country": "Morocco",
@@ -122,19 +106,11 @@
     },
     {
       "country": "Brazil",
-      "views": 430
-    },
-    {
-      "country": "CN",
-      "views": 420
-    },
-    {
-      "country": "Canada",
-      "views": 400
+      "views": 380
     },
     {
       "country": "France",
-      "views": 370
+      "views": 300
     }
   ],
   "top_referrers": [
