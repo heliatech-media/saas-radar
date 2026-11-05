@@ -169,8 +169,8 @@ const avgRating = (blueprints.reduce((acc, bp) => acc + (bp.rating || 5.0), 0) /
 
   <script is:inline>
     document.getElementById('contact-creator-btn')?.addEventListener('click', () => {
-      alert("💬 [Messagerie Créateur] : Pour contacter ce créateur au sujet de ses blueprints ou d'une demande sur-mesure, accédez à votre Espace Client (/portal/) onglet 'Support & Échanges'.");
-      window.location.href = '/portal/';
+      alert("💬 [Messagerie Créateur] : Pour contacter ce créateur au sujet de ses blueprints ou d'une demande sur-mesure, accédez à votre Espace Client (/dashboard/) onglet 'Support & Échanges'.");
+      window.location.href = '/dashboard/';
     });
   </script>
 </Layout>

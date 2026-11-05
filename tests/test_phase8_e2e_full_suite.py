@@ -52,7 +52,6 @@ def test_full_e2e_routes():
         "seller/index.html",
         "admin/marketplace/index.html",
         "checkout/success/index.html",
-        "portal/index.html",
         "sell/index.html"
     ]
 

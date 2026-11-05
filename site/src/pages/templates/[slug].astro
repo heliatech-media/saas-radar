@@ -546,13 +546,13 @@ const relatedTemplates = templates
     // Free Download / Add to Library Handler
     document.getElementById('free-download-btn')?.addEventListener('click', () => {
       alert("🎁 [Template Gratuit Ajouté !] : Ce blueprint a été ajouté avec succès à votre bibliothèque. Vous pouvez télécharger le package immédiatement depuis votre Espace Client.");
-      window.location.href = '/portal/';
+      window.location.href = '/dashboard/';
     });
 
     // Buy Button: Validates and Redirects
     document.getElementById('checkout-btn')?.addEventListener('click', () => {
       alert("⚡ [Licence Commerciale Activée] : Votre commande a été traitée en mode staging sécurisé. Le blueprint et votre clé de licence sont prêts dans votre Espace Client.");
-      window.location.href = '/portal/';
+      window.location.href = '/dashboard/';
     });
   </script>
 </Layout>
