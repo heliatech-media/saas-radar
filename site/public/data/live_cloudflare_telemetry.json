@@ -1,12 +1,12 @@
 {
-  "last_synced": "2026-11-05T17:12:53.060820",
+  "last_synced": "2026-11-05T17:22:58.647280",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18577,
-  "total_requests": 116882,
-  "total_visits": 5758,
-  "total_pageviews": 24357,
+  "total_visitors_network": 18593,
+  "total_requests": 116925,
+  "total_visits": 5763,
+  "total_pageviews": 24365,
   "percent_cached": "56.14%",
   "data_served_mb": 916.4,
   "top_pages": [
@@ -24,7 +24,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 430
+      "views": 440
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -67,18 +67,18 @@
       "views": 150
     },
     {
-      "path": "/blog/make-vs-zapier/",
+      "path": "/reviews/make/",
       "views": 140
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 22590
+      "views": 22600
     },
     {
       "country": "Morocco",
-      "views": 16330
+      "views": 16340
     },
     {
       "country": "Germany",
