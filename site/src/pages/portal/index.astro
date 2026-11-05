@@ -26,6 +26,114 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
       </div>
     </div>
 
+    <!-- ========================================================================= -->
+    <!-- 🔐 0. ÉCRAN D'AUTHENTIFICATION & CONNEXION SÉCURISÉE (AUTH GATE) -->
+    <!-- ========================================================================= -->
+    <div id="portal-auth-gate" class="max-w-xl mx-auto my-12 p-8 sm:p-10 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl relative overflow-hidden hidden">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="text-center space-y-3 mb-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-3xl shadow-glow-cyan mb-2">
+          🔐
+        </div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-bold uppercase tracking-wider">
+          Portail Sécurisé HeliaTech
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black text-white">
+          Connexion à votre Espace
+        </h1>
+        <p class="text-xs text-slate-400 font-light leading-relaxed max-w-md mx-auto">
+          Retrouvez vos licences commerciales, téléchargez vos blueprints n8n &amp; Make, accédez à vos factures et pilotez votre studio créateur.
+        </p>
+      </div>
+
+      <!-- Formulaire de Connexion Directe -->
+      <form id="portal-login-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Email Professionnel :</label>
+          <input 
+            type="email" 
+            id="auth-input-email" 
+            required 
+            placeholder="ex: alexandre.dupont@entreprise.com" 
+            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
+          />
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Nom Complet / Titulaire :</label>
+          <input 
+            type="text" 
+            id="auth-input-name" 
+            placeholder="ex: Alexandre R." 
+            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 text-xs font-mono focus:border-cyan-500 focus:outline-none transition-all"
+          />
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5 font-bold">Espace de Démarrage Souhaité :</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:border-cyan-500/50 transition-all text-xs font-mono">
+              <input type="radio" name="auth-role" value="buyer" checked class="text-cyan-500 focus:ring-0" />
+              <span class="text-white font-bold">🛒 Acheteur</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition-all text-xs font-mono">
+              <input type="radio" name="auth-role" value="seller" class="text-emerald-500 focus:ring-0" />
+              <span class="text-white font-bold">💼 Vendeur 80%</span>
+            </label>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-glow-cyan flex items-center justify-center gap-2 mt-2"
+        >
+          <span>⚡</span> Se Connecter à mon Espace ➔
+        </button>
+      </form>
+
+      <!-- Séparateur ou Accès Rapide Démo 1-Clic -->
+      <div class="relative my-6 text-center">
+        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-800"></div></div>
+        <span class="relative px-3 bg-slate-900 text-[10px] font-mono text-slate-500 uppercase tracking-wider">Ou Connexion Immédiate Démo (1-Clic)</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button 
+          type="button"
+          id="btn-quick-login-buyer"
+          class="p-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono transition-all text-left flex items-center gap-2"
+        >
+          <span class="text-base">🛒</span>
+          <div>
+            <div class="font-bold text-white">Alexandre R.</div>
+            <div class="text-[10px] text-cyan-400">Compte Acheteur Démo</div>
+          </div>
+        </button>
+
+        <button 
+          type="button"
+          id="btn-quick-login-seller"
+          class="p-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono transition-all text-left flex items-center gap-2"
+        >
+          <span class="text-base">💼</span>
+          <div>
+            <div class="font-bold text-white">AutomateScale Studio</div>
+            <div class="text-[10px] text-emerald-400">Compte Vendeur 80%</div>
+          </div>
+        </button>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-500">
+        <span>🔒 Chiffrement SSL 256-Bit</span>
+        <span>⚡ Enregistrement Automatique</span>
+        <span>🛡️ Zéro Cookie Tiers</span>
+      </div>
+    </div>
+
+    <!-- Conteneur Authentifié Principal -->
+    <div id="portal-main-dashboard" class="space-y-8">
+
     <!-- Main Header Bar: User Identity & Dynamic Mode Switcher -->
     <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 mb-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
       <div class="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -44,12 +152,14 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
               Acheteur Vérifié
             </span>
           </div>
-          <div class="flex items-center gap-3 text-xs text-slate-400 font-mono">
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
             <span id="user-email">alexandre.partner@heliatech.online</span>
             <span>•</span>
-            <span class="text-emerald-400 flex items-center gap-1 font-semibold">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Session Sécurisée
-            </span>
+            <!-- Live Auto-Save Indicator -->
+            <div id="autosave-pill" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold transition-all">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span id="autosave-label">✓ Modifications enregistrées en temps réel</span>
+            </div>
           </div>
         </div>
       </div>
@@ -67,6 +177,13 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
           class="flex-1 lg:flex-none flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-xl font-mono text-xs font-bold transition-all text-slate-400 hover:text-white"
         >
           <span>💼</span> Espace Vendeur (Studio 80%)
+        </button>
+        <button 
+          id="btn-portal-logout" 
+          class="flex items-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-rose-950/50 text-slate-400 hover:text-rose-300 border border-slate-800 hover:border-rose-800/50 font-mono text-xs transition-all ml-1"
+          title="Se déconnecter"
+        >
+          <span>🚪</span> Déconnexion
         </button>
       </div>
 
@@ -292,7 +409,26 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
           </div>
 
           <form id="buyer-b2b-form" class="space-y-5 max-w-2xl">
+            <!-- Real-Time Auto-Save Banner -->
+            <div class="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between text-xs font-mono text-emerald-300">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="b2b-autosave-msg">✓ Profil B2B enregistré automatiquement à chaque frappe.</span>
+              </span>
+              <span class="text-[10px] text-emerald-400/80 font-bold">Auto-Save Actif</span>
+            </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1.5">Nom et Prénom du Titulaire :</label>
+                <input 
+                  type="text" 
+                  id="b2b-contact-name" 
+                  value="Alexandre R." 
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs font-mono focus:border-cyan-500 focus:outline-none"
+                  required
+                />
+              </div>
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1.5">Raison Sociale / Société :</label>
                 <input 
@@ -638,6 +774,15 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
           </div>
 
           <form id="seller-profile-form" class="space-y-5 max-w-2xl">
+            <!-- Real-Time Auto-Save Banner -->
+            <div class="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between text-xs font-mono text-emerald-300">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="seller-autosave-msg">✓ Fiche Studio enregistrée automatiquement à chaque frappe.</span>
+              </span>
+              <span class="text-[10px] text-emerald-400/80 font-bold">Auto-Save Actif</span>
+            </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1.5">Nom de votre Studio / Architecte :</label>
@@ -785,6 +930,8 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
         </button>
       </div>
     </div>
+
+    </div> <!-- Close #portal-main-dashboard -->
 
   </div>
 
@@ -2463,23 +2610,78 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
       });
     });
 
-    // --- 13. B2B BILLING FORM ---
+    // --- 13. REAL-TIME AUTO-SAVE ENGINE & B2B BILLING FORM ---
+    function flashAutoSave(targetMsgId) {
+      const timeStr = new Date().toLocaleTimeString('fr-FR');
+      const topPill = document.getElementById('autosave-indicator-text');
+      if (topPill) topPill.textContent = `✓ Modifications enregistrées à ${timeStr}`;
+
+      const targetEl = document.getElementById(targetMsgId);
+      if (targetEl) targetEl.textContent = `✓ Enregistré automatiquement à ${timeStr}`;
+    }
+
+    function autoSaveBuyerB2B() {
+      const contactNameEl = document.getElementById('b2b-contact-name');
+      const companyEl = document.getElementById('b2b-company');
+      const vatEl = document.getElementById('b2b-vat');
+      const addressEl = document.getElementById('b2b-address');
+      const countryEl = document.getElementById('b2b-country');
+      const emailEl = document.getElementById('b2b-email');
+      const currencyEl = document.getElementById('b2b-currency');
+
+      const b2b = {
+        name: contactNameEl?.value || 'Alexandre R.',
+        company: companyEl?.value || '',
+        vat: vatEl?.value || '',
+        address: addressEl?.value || '',
+        country: countryEl?.value || 'France',
+        email: emailEl?.value || '',
+        currency: currencyEl?.value || 'USD'
+      };
+
+      localStorage.setItem('_ht_buyer_b2b', JSON.stringify(b2b));
+
+      // Update active session name & email
+      const session = getAuthSession();
+      if (session.logged_in) {
+        if (b2b.name) session.name = b2b.name;
+        if (b2b.email) session.email = b2b.email;
+        localStorage.setItem('_ht_user_session', JSON.stringify(session));
+
+        // Update live user header
+        const userDisplayName = document.getElementById('user-display-name');
+        const userEmail = document.getElementById('user-email');
+        const userInitials = document.getElementById('user-avatar-initials');
+
+        if (userDisplayName && session.role !== 'seller') userDisplayName.textContent = session.name;
+        if (userEmail) userEmail.textContent = session.email;
+        if (userInitials && session.name) {
+          const parts = session.name.trim().split(/\s+/);
+          userInitials.textContent = (parts[0][0] + (parts[1] ? parts[1][0] : '')).toUpperCase();
+        }
+      }
+
+      flashAutoSave('b2b-autosave-msg');
+    }
+
+    // Attach real-time input & change listeners on ALL B2B fields
+    ['b2b-contact-name', 'b2b-company', 'b2b-vat', 'b2b-address', 'b2b-country', 'b2b-email', 'b2b-currency'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', autoSaveBuyerB2B);
+        el.addEventListener('change', autoSaveBuyerB2B);
+      }
+    });
+
     document.getElementById('buyer-b2b-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const b2b = {
-        company: document.getElementById('b2b-company').value,
-        vat: document.getElementById('b2b-vat').value,
-        address: document.getElementById('b2b-address').value,
-        country: document.getElementById('b2b-country').value,
-        email: document.getElementById('b2b-email').value,
-        currency: document.getElementById('b2b-currency').value
-      };
-      localStorage.setItem('_ht_buyer_b2b', JSON.stringify(b2b));
-      alert("✓ Coordonnées d'entreprise B2B enregistrées avec succès !\nElles figureront sur l'ensemble de vos prochaines factures officielles.");
+      autoSaveBuyerB2B();
+      alert("✓ Toutes vos modifications sont enregistrées en temps réel et sécurisées dans votre profil !");
     });
 
     // Populate B2B Form from localStorage
     const savedB2b = getBuyerB2B();
+    if (document.getElementById('b2b-contact-name')) document.getElementById('b2b-contact-name').value = savedB2b.name || 'Alexandre R.';
     if (document.getElementById('b2b-company')) document.getElementById('b2b-company').value = savedB2b.company || '';
     if (document.getElementById('b2b-vat')) document.getElementById('b2b-vat').value = savedB2b.vat || '';
     if (document.getElementById('b2b-address')) document.getElementById('b2b-address').value = savedB2b.address || '';
@@ -2530,19 +2732,47 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
       }
     });
 
-    // --- 15. SELLER PROFILE FORM ---
-    document.getElementById('seller-profile-form')?.addEventListener('submit', (e) => {
-      e.preventDefault();
+    // --- 15. SELLER PROFILE REAL-TIME AUTO-SAVE ---
+    function autoSaveSellerProfile() {
+      const nameEl = document.getElementById('seller-studio-name');
+      const badgeEl = document.getElementById('seller-studio-badge');
+      const bioEl = document.getElementById('seller-studio-bio');
+      const webEl = document.getElementById('seller-studio-website');
+      const gitEl = document.getElementById('seller-studio-github');
+      const inEl = document.getElementById('seller-studio-linkedin');
+
       const studioProfile = {
-        name: document.getElementById('seller-studio-name').value,
-        badge: document.getElementById('seller-studio-badge').value,
-        bio: document.getElementById('seller-studio-bio').value,
-        website: document.getElementById('seller-studio-website').value,
-        github: document.getElementById('seller-studio-github').value,
-        linkedin: document.getElementById('seller-studio-linkedin').value
+        name: nameEl?.value || 'AutomateScale Studio',
+        badge: badgeEl?.value || 'Verified Pro Agency',
+        bio: bioEl?.value || '',
+        website: webEl?.value || '',
+        github: gitEl?.value || '',
+        linkedin: inEl?.value || ''
       };
       localStorage.setItem('_ht_seller_profile', JSON.stringify(studioProfile));
-      alert("✓ Profil Studio Créateur mis à jour ! Votre vitrine publique a été actualisée.");
+
+      // Update header if seller mode
+      const session = getAuthSession();
+      if (session.logged_in && session.role === 'seller') {
+        const userDisplayName = document.getElementById('user-display-name');
+        if (userDisplayName) userDisplayName.textContent = `${studioProfile.name} (Studio)`;
+      }
+
+      flashAutoSave('seller-autosave-msg');
+    }
+
+    ['seller-studio-name', 'seller-studio-badge', 'seller-studio-bio', 'seller-studio-website', 'seller-studio-github', 'seller-studio-linkedin'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', autoSaveSellerProfile);
+        el.addEventListener('change', autoSaveSellerProfile);
+      }
+    });
+
+    document.getElementById('seller-profile-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      autoSaveSellerProfile();
+      alert("✓ Profil Studio Créateur enregistré automatiquement en temps réel !");
     });
 
     // Tax cert download
@@ -2550,7 +2780,100 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
       alert("✓ Génération de l'attestation fiscale annuelle 2026 (Revenus nets de cession de licences logicielles sous le régime des redevances d'auteur/split 80%).");
     });
 
-    // --- 16. DUAL-MODE SWITCHER LOGIC ---
+    // --- 16. AUTHENTICATION GATE & SESSION CONTROLLER ---
+    function getAuthSession() {
+      try {
+        const stored = localStorage.getItem('_ht_user_session');
+        if (stored) return JSON.parse(stored);
+      } catch(e) {}
+      return {
+        logged_in: true,
+        name: "Alexandre R.",
+        email: "alexandre.partner@heliatech.online",
+        role: localStorage.getItem('_ht_portal_role') || "buyer"
+      };
+    }
+
+    function saveAuthSession(session) {
+      localStorage.setItem('_ht_user_session', JSON.stringify(session));
+      applyAuthSession();
+    }
+
+    function applyAuthSession() {
+      const session = getAuthSession();
+      const authGate = document.getElementById('portal-auth-gate');
+      const mainDashboard = document.getElementById('portal-main-dashboard');
+      const userDisplayName = document.getElementById('user-display-name');
+      const userEmail = document.getElementById('user-email');
+      const userInitials = document.getElementById('user-avatar-initials');
+
+      if (!session.logged_in) {
+        authGate?.classList.remove('hidden');
+        mainDashboard?.classList.add('hidden');
+        return;
+      }
+
+      authGate?.classList.add('hidden');
+      mainDashboard?.classList.remove('hidden');
+
+      if (userDisplayName) userDisplayName.textContent = session.name || "Alexandre R.";
+      if (userEmail) userEmail.textContent = session.email || "alexandre.partner@heliatech.online";
+      if (userInitials && session.name) {
+        const parts = session.name.trim().split(/\s+/);
+        userInitials.textContent = (parts[0][0] + (parts[1] ? parts[1][0] : '')).toUpperCase();
+      }
+
+      if (session.role === 'seller') {
+        setSellerMode();
+      } else {
+        setBuyerMode();
+      }
+    }
+
+    // Login Form Submit
+    document.getElementById('portal-login-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('auth-input-email').value.trim();
+      const name = document.getElementById('auth-input-name').value.trim() || email.split('@')[0];
+      const role = document.querySelector('input[name="auth-role"]:checked')?.value || 'buyer';
+
+      saveAuthSession({
+        logged_in: true,
+        name: name,
+        email: email,
+        role: role
+      });
+    });
+
+    // Quick 1-Click Login buttons on Auth Gate
+    document.getElementById('btn-quick-login-buyer')?.addEventListener('click', () => {
+      saveAuthSession({
+        logged_in: true,
+        name: "Alexandre R.",
+        email: "alexandre.partner@heliatech.online",
+        role: "buyer"
+      });
+    });
+
+    document.getElementById('btn-quick-login-seller')?.addEventListener('click', () => {
+      saveAuthSession({
+        logged_in: true,
+        name: "AutomateScale Studio",
+        email: "studio@automatescale.example.com",
+        role: "seller"
+      });
+    });
+
+    // Logout button
+    document.getElementById('btn-portal-logout')?.addEventListener('click', () => {
+      if (confirm("Voulez-vous vous déconnecter de votre espace client ?")) {
+        const s = getAuthSession();
+        s.logged_in = false;
+        saveAuthSession(s);
+      }
+    });
+
+    // --- 17. DUAL-MODE SWITCHER LOGIC ---
     const btnBuyer = document.getElementById('btn-buyer-mode');
     const btnSeller = document.getElementById('btn-seller-mode');
     const buyerView = document.getElementById('buyer-dashboard-view');
@@ -2568,11 +2891,19 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
       buyerView.classList.remove('hidden');
       sellerView.classList.add('hidden');
 
-      userDisplayName.textContent = "Alexandre R.";
+      const s = getAuthSession();
+      s.role = 'buyer';
+      localStorage.setItem('_ht_user_session', JSON.stringify(s));
+      localStorage.setItem('_ht_portal_role', 'buyer');
+
+      const b2b = getBuyerB2B();
+      userDisplayName.textContent = b2b.name || s.name || "Alexandre R.";
       userRoleBadge.textContent = "Acheteur Vérifié";
       userRoleBadge.className = "text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-bold";
-      userInitials.textContent = "AR";
-      localStorage.setItem('_ht_portal_role', 'buyer');
+      
+      const parts = (b2b.name || s.name || "AR").trim().split(/\s+/);
+      userInitials.textContent = (parts[0][0] + (parts[1] ? parts[1][0] : '')).toUpperCase();
+
       renderBuyerDashboard();
       renderBuyerWishlist();
       renderSupportChat();
@@ -2587,11 +2918,17 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
       sellerView.classList.remove('hidden');
       buyerView.classList.add('hidden');
 
-      userDisplayName.textContent = "Alexandre R. (Studio Créateur)";
+      const s = getAuthSession();
+      s.role = 'seller';
+      localStorage.setItem('_ht_user_session', JSON.stringify(s));
+      localStorage.setItem('_ht_portal_role', 'seller');
+
+      const studio = JSON.parse(localStorage.getItem('_ht_seller_profile') || '{"name":"AutomateScale Studio"}');
+      userDisplayName.textContent = `${studio.name} (Studio Créateur)`;
       userRoleBadge.textContent = "Architecte Vendeur (80% Net)";
       userRoleBadge.className = "text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold";
       userInitials.textContent = "AS";
-      localStorage.setItem('_ht_portal_role', 'seller');
+
       renderSellerDashboard();
       renderSellerInbox();
     }
@@ -2608,6 +2945,9 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
         localStorage.removeItem('_ht_seller_products');
         localStorage.removeItem('_ht_seller_inbox');
         localStorage.removeItem('_ht_buyer_b2b');
+        localStorage.removeItem('_ht_seller_profile');
+        localStorage.removeItem('_ht_user_session');
+        applyAuthSession();
         renderBuyerDashboard();
         renderBuyerWishlist();
         renderSellerDashboard();
@@ -2617,10 +2957,6 @@ const pageDescription = "Gérez vos licences d'automatisation n8n, Make et Airta
     });
 
     // Boot on load
-    if (localStorage.getItem('_ht_portal_role') === 'seller') {
-      setSellerMode();
-    } else {
-      setBuyerMode();
-    }
+    applyAuthSession();
   </script>
 </Layout>
