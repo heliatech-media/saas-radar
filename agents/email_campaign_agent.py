@@ -128,16 +128,183 @@ class EmailCampaignAgent:
             html = html.replace("{{" + key + "}}", str(val))
         return html
 
+    EDITORIAL_ROTATION_POOL = [
+        {
+            "tool_name": "Cursor",
+            "subject_tagline": "Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
+            "headline": "The Autonomous IDE Shift: Why High-Velocity Teams Are Leaving Copilot for Cursor",
+            "summary": "We analyzed 450+ multi-file refactoring workflows across engineering teams. Here is how Cursor's context indexer cuts PR review cycles by 40%.",
+            "verdict_title": "Context-Engineered Development & The End of Shallow Autocomplete",
+            "teardown_summary": "Standard inline autocompletion is obsolete. Cursor's deep multi-file repository graph indexing allows developers to write production full-stack code in minutes with zero context fragmentation.",
+            "score_roi": "98%",
+            "score_friction": "Low (9.5/10)",
+            "score_overall": "9.9 / 10",
+            "review_slug": "cursor",
+            "duel_title": "Cursor vs GitHub Copilot (2026 Developer Velocity Showdown)",
+            "duel_takeaway": "Copilot struggles with multi-file architectures and hallucinated imports, while Cursor edits 10+ files simultaneously with strict TypeScript adherence.",
+            "duel_winner_reason": "Cursor wins decisively with 3.2x faster task resolution and native .cursorrules enforcement.",
+            "duel_url": "https://heliatech.online/versus/cursor-vs-github-copilot/",
+            "deal_headline": "Cursor Rules Masterpack: Next.js 15, Tailwind & Supabase ($19)",
+            "deal_description": "Download the audited blueprint ruleset used by leading agencies to eliminate 90% of boilerplate errors.",
+            "deal_hop_link": "https://heliatech.online/templates/cursor-rules-nextjs-tailwind-supabase-masterpack/"
+        },
+        {
+            "tool_name": "ElevenLabs",
+            "subject_tagline": "The Zero-Latency Voice Revolution: ElevenLabs Agents Teardown",
+            "headline": "The Zero-Latency Voice Revolution: Replacing 10-Agent Call Centers with ElevenLabs",
+            "summary": "Conversational Voice AI has crossed the uncanny valley with sub-300ms latency. Here is how modern businesses are deploying autonomous voice receptionists.",
+            "verdict_title": "Voice AI v4 & Instant Conversational Agent Orchestration",
+            "teardown_summary": "ElevenLabs conversational engine drops voice synthesis delay under human response thresholds, enabling turnkey phone support and outbound qualification at 1/10th the cost.",
+            "score_roi": "94%",
+            "score_friction": "Low (9/10)",
+            "score_overall": "9.7 / 10",
+            "review_slug": "elevenlabs",
+            "duel_title": "ElevenLabs vs HeyGen (Voice Synthesis vs Video Avatars)",
+            "duel_takeaway": "While HeyGen excels in visual marketing avatars, ElevenLabs dominates bidirectional real-time audio conversations with human emotional inflections.",
+            "duel_winner_reason": "ElevenLabs wins on voice realism, latency, and enterprise API stability.",
+            "duel_url": "https://heliatech.online/versus/elevenlabs-vs-heygen/",
+            "deal_headline": "n8n AI Voice Receptionist with ElevenLabs Agents (Production Blueprint)",
+            "deal_description": "Deploy an autonomous AI receptionist in 5 minutes with our certified anti-scam workflow blueprint.",
+            "deal_hop_link": "https://heliatech.online/templates/n8n-ai-voice-receptionist-elevenlabs/"
+        },
+        {
+            "tool_name": "Supabase",
+            "subject_tagline": "The End of Database Lock-In: Serverless Postgres & Supabase",
+            "headline": "The End of Database Lock-In: Migrating Production Workloads to Serverless Postgres",
+            "summary": "We audited database migration costs from Firebase and DynamoDB to Supabase. Teams save up to 72% on monthly infrastructure bills with SQL portability.",
+            "verdict_title": "PostgreSQL 16, pgvector & Native Model Context Protocol (MCP)",
+            "teardown_summary": "Supabase combines the raw power of standard relational Postgres with serverless auto-scaling, real-time Row-Level Security, and instant vector search.",
+            "score_roi": "97%",
+            "score_friction": "Low (9/10)",
+            "score_overall": "9.8 / 10",
+            "review_slug": "supabase",
+            "duel_title": "Supabase vs Firebase (2026 Architectural Duel)",
+            "duel_takeaway": "Firebase's nested NoSQL document model leads to massive query costs and complex data synchronization, whereas Supabase delivers clean relational joins.",
+            "duel_winner_reason": "Supabase wins with zero vendor lock-in, standard SQL, and 60% lower total cost of ownership.",
+            "duel_url": "https://heliatech.online/versus/supabase-vs-firebase/",
+            "deal_headline": "Supabase Enterprise Credits: $250 Partner Credit + Team Migration Kit",
+            "deal_description": "Claim verified HeliaTech partner credits to launch serverless Postgres with instant vector indexing.",
+            "deal_hop_link": "https://heliatech.online/go/supabase"
+        },
+        {
+            "tool_name": "n8n",
+            "subject_tagline": "The Great Workflow Migration: n8n Crushes $2,000/mo Zapier Invoices",
+            "headline": "The Great Workflow Migration: How n8n Crushes $2,000/mo Zapier Invoices",
+            "summary": "High-volume growth agencies are migrating hundreds of automated pipelines from metered cloud platforms to self-hosted n8n instances with infinite executions.",
+            "verdict_title": "Enterprise Visual Automation with Zero Per-Task Metering",
+            "teardown_summary": "n8n provides fair-code, self-hostable workflow automation capable of processing millions of executions per month on modest cloud instances.",
+            "score_roi": "99%",
+            "score_friction": "Medium (8.5/10)",
+            "score_overall": "9.9 / 10",
+            "review_slug": "n8n",
+            "duel_title": "Zapier vs n8n (The High-Volume Automation Showdown)",
+            "duel_takeaway": "Zapier's pricing model penalizes growing companies by charging per task step, while n8n scales freely on your own infrastructure.",
+            "duel_winner_reason": "n8n delivers over 10x cost reduction for workloads exceeding 50,000 operations per month.",
+            "duel_url": "https://heliatech.online/versus/zapier-vs-n8n/",
+            "deal_headline": "n8n AI Waterfall Lead Enrichment & Scoring Blueprint ($49)",
+            "deal_description": "Bypasses expensive Clay credits via direct multi-provider API cascade with certified anti-scam audit.",
+            "deal_hop_link": "https://heliatech.online/templates/n8n-ai-lead-enricher-waterfall/"
+        },
+        {
+            "tool_name": "Apollo.io",
+            "subject_tagline": "Apollo.io vs ZoomInfo: The 2026 B2B Prospecting Audit",
+            "headline": "The Modern Outbound Playbook: High-Accuracy Prospecting Without $15,000 Contracts",
+            "summary": "We stress-tested B2B contact verification across 10,000 enterprise profiles. Here is why modern go-to-market teams are abandoning legacy ZoomInfo contracts.",
+            "verdict_title": "Unified B2B Intelligence, Waterfall Enrichment & Native Sequences",
+            "teardown_summary": "Apollo combines verified phone and email coverage with automated multichannel sequencing, replacing 3 separate SaaS tools into a single platform.",
+            "score_roi": "95%",
+            "score_friction": "Low (9/10)",
+            "score_overall": "9.6 / 10",
+            "review_slug": "apollo-io",
+            "duel_title": "Apollo.io vs ZoomInfo (Enterprise ROI Benchmark)",
+            "duel_takeaway": "ZoomInfo locks buyers into opaque multi-year contracts, while Apollo offers month-to-month flexibility and API enrichment at 1/5th the price.",
+            "duel_winner_reason": "Apollo wins on pricing transparency, modern API developer access, and all-in-one execution.",
+            "duel_url": "https://heliatech.online/versus/apollo-io-vs-zoominfo/",
+            "deal_headline": "Airtable WhatsApp Cloud API & CRM Nurturing OS ($39)",
+            "deal_description": "Automated high-conversion conversational lead nurturing base with live webhook pipeline.",
+            "deal_hop_link": "https://heliatech.online/templates/airtable-whatsapp-cloud-api-nurturing-crm/"
+        },
+        {
+            "tool_name": "Make.com",
+            "subject_tagline": "Recovering 40% of Failed Stripe Payments on Autopilot",
+            "headline": "The SaaS Cashflow Guard: Automated Dunning & Smart Payment Retries",
+            "summary": "Failed credit card renewals are the silent killer of B2B recurring revenue. We evaluated automated rescue workflows recovering tens of thousands of dollars.",
+            "verdict_title": "Visual Multi-Branch Routing & Webhook Event Ingestion",
+            "teardown_summary": "Make.com delivers unparalleled visual branching logic, enabling complex dunning cadences, Slack escalations, and automated invoice reconciliation.",
+            "score_roi": "96%",
+            "score_friction": "Low (9/10)",
+            "score_overall": "9.7 / 10",
+            "review_slug": "make",
+            "duel_title": "Make.com vs Zapier (Enterprise Routing Showdown)",
+            "duel_takeaway": "Make's visual router handles complex fallback loops and multi-step data mapping far more elegantly than linear Zapier chains.",
+            "duel_winner_reason": "Make provides superior visual error-handling and 4.8x cost savings at scale.",
+            "duel_url": "https://heliatech.online/versus/make-vs-zapier/",
+            "deal_headline": "Make.com Stripe Failed Payment Recovery Blueprint ($39)",
+            "deal_description": "Certified anti-scam workflow recovering up to 42% of churned subscriptions without manual effort.",
+            "deal_hop_link": "https://heliatech.online/templates/make-stripe-churn-rescue-blueprint/"
+        },
+        {
+            "tool_name": "Linear",
+            "subject_tagline": "Ditching Jira: How Linear Restores 4+ Hours of Focus Per Week",
+            "headline": "The Engineering Ergonomics Manifesto: Why Modern Tech Companies Build on Linear",
+            "summary": "Jira ticket overhead burns thousands of developer hours each quarter. We analyzed teams that switched to Linear's keyboard-first architecture.",
+            "verdict_title": "Sub-50ms Sync, Keyboard Navigation & Zero Admin Bloat",
+            "teardown_summary": "Linear strips away enterprise bureaucracy with instantaneous local-first caching, git branch automation, and seamless cycle planning.",
+            "score_roi": "97%",
+            "score_friction": "Very Low (10/10)",
+            "score_overall": "9.9 / 10",
+            "review_slug": "linear",
+            "duel_title": "ClickUp vs Linear (Developer Productivity Duel)",
+            "duel_takeaway": "ClickUp attempts to be everything for everyone, creating sluggish UIs, while Linear focuses relentlessly on software development speed.",
+            "duel_winner_reason": "Linear wins hands down for engineering teams that value focus, speed, and clean code.",
+            "duel_url": "https://heliatech.online/versus/clickup-vs-linear/",
+            "deal_headline": "Linear Enterprise Team Trial & Integration Playbook",
+            "deal_description": "Unlock high-velocity cycle tracking and GitHub/GitLab bi-directional auto-closing workflows.",
+            "deal_hop_link": "https://heliatech.online/go/linear"
+        },
+        {
+            "tool_name": "Resend",
+            "subject_tagline": "The Death of Legacy SMTP & The Rise of React Email",
+            "headline": "The Great SaaS Consolidation: Why Engineering Teams Are Ditching Fragmented 2024 Stacks",
+            "summary": "We evaluated over 120 workflow integrations across modern cloud dev stacks. Here is where enterprise budgets are migrating.",
+            "verdict_title": "Component-Driven React Email & Instant Edge Delivery",
+            "teardown_summary": "Legacy email infrastructure burns 40+ engineering hours per month in SMTP debugging. Resend cuts integration from 3 days to under 12 minutes.",
+            "score_roi": "96%",
+            "score_friction": "Low (9/10)",
+            "score_overall": "9.8 / 10",
+            "review_slug": "resend",
+            "duel_title": "Resend vs Brevo (Developer DX vs Legacy Marketing Automation)",
+            "duel_takeaway": "Resend focuses on type-safe React email templates and modern APIs, while Brevo is an all-in-one legacy marketing suite.",
+            "duel_winner_reason": "Resend wins on developer ergonomics, API reliability, and modern component tooling.",
+            "duel_url": "https://heliatech.online/versus/resend-vs-brevo/",
+            "deal_headline": "Make.com: 3 Months Free Pro Tier + 10,000 Operations",
+            "deal_description": "Exclusive partnership access for HeliaTech subscribers to unlock high-concurrency enterprise automation pipelines.",
+            "deal_hop_link": "https://heliatech.online/go/make"
+        }
+    ]
+
     def dispatch_weekly_radar(self, force: bool = False) -> Dict:
         """
         Autonomous Thursday Newsletter Broadcast.
-        Compiles the latest reviews, duels, and partner deals and broadcasts to list.
+        Rotates through our curated editorial catalog with strict 6-day cooldown.
         """
         ledger = self._get_ledger()
         weekly_meta = ledger["active_campaigns"]["weekly_radar"]
         now = datetime.now()
 
-        # Check if Thursday or force
+        # 1. Frequency Guard: Prevent multiple dispatches within the same week
+        last_sent_str = weekly_meta.get("last_sent")
+        if last_sent_str and not force:
+            try:
+                last_sent_dt = datetime.fromisoformat(last_sent_str)
+                # If sent within the last 6 days (518,400 seconds), SKIP!
+                if (now - last_sent_dt).total_seconds() < 6 * 24 * 3600:
+                    logger.info(f"The Thursday Radar already dispatched this week ({last_sent_str}). Next dispatch scheduled for next Thursday.")
+                    return {"status": "SKIPPED", "reason": f"Already broadcasted this week on {last_sent_str}"}
+            except Exception as e:
+                logger.warning(f"Error parsing last_sent: {e}")
+
+        # 2. Check if Thursday or force
         is_thursday = now.weekday() == 3
         if not (is_thursday or force):
             logger.info("Today is not Thursday. Skipping autonomous weekly radar broadcast (use force=True to override).")
@@ -146,37 +313,36 @@ class EmailCampaignAgent:
         issue_num = weekly_meta.get("current_issue", 42) + 1
         publish_date = now.strftime("%A, %b %d, %Y")
 
-        # Discover top recent tools from active queue
-        teardown_tool = "Resend"
-        duel_title = "Make.com vs Zapier (2026 Enterprise Showdown)"
-        deal_headline = "Make.com: 3 Months Free Pro Tier + 10,000 Operations"
+        # 3. Dynamic Rotation Engine: Select fresh edition based on issue number
+        pool_len = len(self.EDITORIAL_ROTATION_POOL)
+        edition = self.EDITORIAL_ROTATION_POOL[(issue_num - 1) % pool_len]
 
         context = {
             "issue_number": f"{issue_num:03d}",
             "publish_date": publish_date,
-            "issue_title": f"Issue #{issue_num:03d}: The Great SaaS Consolidation",
-            "issue_headline": "The Great SaaS Consolidation: Why Engineering Teams Are Ditching Fragmented 2024 Stacks",
-            "executive_summary": "We evaluated over 120 workflow integrations across modern cloud dev stacks. Here is where enterprise budgets are migrating.",
-            "teardown_tool_name": teardown_tool,
-            "teardown_tool_verdict_title": "The Death of Legacy SMTP & The Rise of React Email",
-            "teardown_summary": "Legacy email infrastructure burns 40+ engineering hours per month in SMTP debugging. Resend cuts integration from 3 days to under 12 minutes.",
-            "score_roi": "96%",
-            "score_friction": "Low (9/10)",
-            "score_overall": "9.8 / 10",
-            "teardown_review_url": f"https://heliatech.online/reviews/{teardown_tool.lower()}/",
-            "duel_title": duel_title,
-            "duel_takeaway": "When scaling past 100,000 operations per month, Zapier's pricing model acts as a direct margin penalty compared to Make's visual router execution.",
-            "duel_winner_reason": "Make delivers 4.8x cost savings at scale with vastly superior branch logic control.",
-            "duel_url": "https://heliatech.online/versus/make-vs-zapier/",
-            "deal_headline": deal_headline,
-            "deal_description": "Exclusive partnership access for HeliaTech subscribers to unlock high-concurrency enterprise automation pipelines.",
-            "deal_hop_link": "https://heliatech.online/go/make",
+            "issue_title": f"Issue #{issue_num:03d}: {edition['headline']}",
+            "issue_headline": edition["headline"],
+            "executive_summary": edition["summary"],
+            "teardown_tool_name": edition["tool_name"],
+            "teardown_tool_verdict_title": edition["verdict_title"],
+            "teardown_summary": edition["teardown_summary"],
+            "score_roi": edition["score_roi"],
+            "score_friction": edition["score_friction"],
+            "score_overall": edition["score_overall"],
+            "teardown_review_url": f"https://heliatech.online/reviews/{edition['review_slug']}/",
+            "duel_title": edition["duel_title"],
+            "duel_takeaway": edition["duel_takeaway"],
+            "duel_winner_reason": edition["duel_winner_reason"],
+            "duel_url": edition["duel_url"],
+            "deal_headline": edition["deal_headline"],
+            "deal_description": edition["deal_description"],
+            "deal_hop_link": edition["deal_hop_link"],
             "email": DIRECTOR_EMAIL,
             "unsubscribe_url": f"https://heliatech.online/unsubscribe?email={DIRECTOR_EMAIL}"
         }
 
         html = self.render_template("weekly_confidential", context)
-        subject = f"⚡ [THE RADAR #{issue_num:03d}] The Great SaaS Consolidation Teardown"
+        subject = f"⚡ [THE RADAR #{issue_num:03d}] {edition['subject_tagline']}"
 
         # Broadcast to Director first
         dispatch_id = self.send_via_resend(DIRECTOR_EMAIL, subject, html)
@@ -188,6 +354,7 @@ class EmailCampaignAgent:
             ledger["dispatches"].append({
                 "type": "weekly_radar",
                 "issue": issue_num,
+                "featured_tool": edition["tool_name"],
                 "recipient": DIRECTOR_EMAIL,
                 "dispatched_at": now.isoformat(),
                 "resend_id": dispatch_id
@@ -199,8 +366,8 @@ class EmailCampaignAgent:
                 f"📬 *NEWSLETTER HEBDOMADAIRE EXPÉDIÉE !*\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
                 f"🗞️ *Édition :* The Thursday Radar #{issue_num:03d}\n"
-                f"🎯 *Focus :* {teardown_tool} & {duel_title}\n"
-                f"💎 *Offre :* {deal_headline}\n"
+                f"🎯 *Focus :* {edition['tool_name']} & {edition['duel_title']}\n"
+                f"💎 *Offre :* {edition['deal_headline']}\n"
                 f"📧 *Expéditeur :* {DEFAULT_SENDER}\n"
                 f"⚡ *Statut :* Livré avec succès via Resend"
             )

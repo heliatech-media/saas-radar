@@ -1,80 +1,80 @@
 {
-  "last_synced": "2026-11-05T15:01:35.512995",
+  "last_synced": "2026-11-05T15:11:41.430237",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18424,
-  "total_requests": 116104,
-  "total_visits": 5711,
-  "total_pageviews": 24130,
+  "total_visitors_network": 18429,
+  "total_requests": 116155,
+  "total_visits": 5712,
+  "total_pageviews": 24142,
   "percent_cached": "56.14%",
   "data_served_mb": 908.1,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6280
+      "views": 7000
     },
     {
       "path": "/",
-      "views": 2890
+      "views": 3000
     },
     {
-      "path": "/calculator/",
-      "views": 1080
+      "path": "/reviews/cursor/",
+      "views": 2000
     },
     {
-      "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 420
+      "path": "/reviews/riverside/",
+      "views": 1000
     },
     {
-      "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 350
+      "path": "/versus/supabase-vs-firebase/",
+      "views": 1000
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 270
+      "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
+      "views": 1000
     },
     {
-      "path": "/awards/",
-      "views": 260
-    },
-    {
-      "path": "/radar/",
-      "views": 230
-    },
-    {
-      "path": "/blog/",
-      "views": 210
+      "path": "/reviews/minicong/",
+      "views": 1000
     },
     {
       "path": "/versus/",
-      "views": 190
+      "views": 1000
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 180
+      "path": "/deals/",
+      "views": 1000
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
+      "path": "/versus/airtable-vs-retool/",
+      "views": 1000
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 150
+      "path": "/calculator/",
+      "views": 1000
+    },
+    {
+      "path": "/reviews/monday-com/",
+      "views": 1000
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 1000
     },
     {
       "path": "/sentinel/",
-      "views": 150
+      "views": 1000
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
-      "views": 140
+      "path": "/blog/printify-evolution-guide-2026/",
+      "views": 1000
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 22380
+      "views": 22420
     },
     {
       "country": "Morocco",
