@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-05T04:37:03.019341",
+  "last_synced": "2026-11-05T03:43:11.100702",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 17142,
-  "total_requests": 111846,
-  "total_visits": 5314,
-  "total_pageviews": 22649,
+  "total_visitors_network": 17169,
+  "total_requests": 111897,
+  "total_visits": 5322,
+  "total_pageviews": 22676,
   "percent_cached": "56.14%",
-  "data_served_mb": 875.8,
+  "data_served_mb": 875.9,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 5610
+      "views": 5460
     },
     {
       "path": "/",
-      "views": 2830
+      "views": 3120
     },
     {
       "path": "/calculator/",
-      "views": 1040
+      "views": 1000
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 380
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 270
-    },
-    {
-      "path": "/awards/",
-      "views": 250
+      "views": 360
     },
     {
       "path": "/radar/",
-      "views": 230
+      "views": 240
     },
     {
       "path": "/blog/",
-      "views": 210
+      "views": 230
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/elevenlabs/",
       "views": 190
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "path": "/reviews/clickup/",
+      "views": 190
+    },
+    {
+      "path": "/reviews/beehiiv/",
       "views": 180
+    },
+    {
+      "path": "/terms/",
+      "views": 180
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 170
+    },
+    {
+      "path": "/awards/",
+      "views": 170
+    },
+    {
+      "path": "/versus/",
+      "views": 160
+    },
+    {
+      "path": "/reviews/resend/",
+      "views": 160
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 160
-    },
-    {
-      "path": "/reviews/apollo-io/",
-      "views": 150
-    },
-    {
-      "path": "/sentinel/",
-      "views": 150
-    },
-    {
-      "path": "/reviews/make/",
-      "views": 140
-    },
-    {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 140
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 20980
+      "views": 20520
     },
     {
       "country": "Morocco",
-      "views": 15460
+      "views": 16710
     },
     {
       "country": "Germany",
-      "views": 1250
+      "views": 1360
     },
     {
       "country": "Singapore",
-      "views": 1130
-    },
-    {
-      "country": "United Kingdom",
-      "views": 570
+      "views": 1170
     },
     {
       "country": "Belgium",
-      "views": 560
+      "views": 690
     },
     {
-      "country": "Netherlands",
-      "views": 540
-    },
-    {
-      "country": "Canada",
-      "views": 460
+      "country": "United Kingdom",
+      "views": 580
     },
     {
       "country": "Brazil",
-      "views": 370
+      "views": 420
+    },
+    {
+      "country": "CN",
+      "views": 410
     },
     {
       "country": "France",
-      "views": 300
+      "views": 370
+    },
+    {
+      "country": "Canada",
+      "views": 340
     }
   ],
   "top_referrers": [

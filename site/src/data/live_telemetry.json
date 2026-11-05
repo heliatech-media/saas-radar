@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-05 03:55:10 UTC",
+  "last_updated": "2026-11-05 03:43:10 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 61,
-    "total_published_investigations": 150,
-    "reviews_audited": 62,
-    "masterclasses_and_duels": 88,
+    "total_monetized_tools": 62,
+    "total_published_investigations": 152,
+    "reviews_audited": 63,
+    "masterclasses_and_duels": 89,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$21,350 USD",
+    "projected_monthly_mrr": "$21,700 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -151,6 +151,11 @@
       "slug": "framer",
       "destination": "https://framer.partnerstack.com/heliatech",
       "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "guidde",
+      "destination": "https://www.guidde.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "heygen",
@@ -380,6 +385,13 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-01 09:24:38",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-10-31 13:13:52",
       "title": "Cycle Autonome #Kit",
       "category": "CYCLE",
@@ -406,13 +418,6 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `dumpling-ai, minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
-    },
-    {
-      "timestamp": "2026-10-30 12:45:40",
-      "title": "Cycle Autonome #Klaviyo",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klaviyo et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]
 }

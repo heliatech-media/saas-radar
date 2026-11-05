@@ -180,7 +180,8 @@
     "rating": 4.6,
     "starting_price": "$16/mo",
     "best_for": "Customer success teams, product managers, and technical support engineers.",
-    "affiliate_url": "https://www.guidde.com"
+    "affiliate_url": "https://www.guidde.com/?via=heliatech",
+    "commission_rate": "30% recurring for up to 12 months"
   },
   {
     "name": "HeyGen",
@@ -567,6 +568,16 @@
     "best_for": "Marketers, HR professionals, and growth teams focused on high-conversion lead capture and user research.",
     "affiliate_url": "https://www.typeform.com",
     "commission_rate": "20% to 30% recurring"
+  },
+  {
+    "name": "TypingMind",
+    "slug": "typing-mind",
+    "tagline": "A powerful, privacy-focused UI wrapper for LLMs that turns chaotic AI chats into a structured workspace.",
+    "category": "AI Productivity",
+    "rating": 4.7,
+    "starting_price": "$39",
+    "best_for": "Power users, developers, and AI-driven teams who want to manage multiple LLM providers under one unified, local-first interface.",
+    "affiliate_url": "https://www.typingmind.com"
   },
   {
     "name": "VEED",
