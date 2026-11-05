@@ -1,0 +1,269 @@
+{
+  "domain": "Autonomous B2B Newsletter Planning, Dispatch Memory & Audience Retention",
+  "version": "2.0",
+  "last_evolution": "2026-11-05T15:39:41.642587",
+  "heuristics": [
+    {
+      "id": "HEUR-EMAIL-01",
+      "name": "Strict Weekly Cadence & Cooldown Guard",
+      "rule": "Never dispatch The Thursday Radar more than once within a 6-day window (minimum 518,400 seconds). Prevents duplicate broadcasts.",
+      "confidence_score": 1.0,
+      "impact": "Eliminates subscriber fatigue and avoids duplicate delivery."
+    },
+    {
+      "id": "HEUR-EMAIL-02",
+      "name": "Brand Saturation Cooldown (60-Day Window)",
+      "rule": "Never feature the same software brand in the Architectural Teardown slot within 60 days of its last dispatch.",
+      "confidence_score": 0.99,
+      "impact": "Maintains high open rates and continuous content freshness."
+    },
+    {
+      "id": "HEUR-EMAIL-03",
+      "name": "Pilier 3 Marketplace Monetization Coupling",
+      "rule": "Every newsletter edition must feature a verified marketplace blueprint (80/20 creator split) or an exclusive high-yield partner offer.",
+      "confidence_score": 0.98,
+      "impact": "Converts newsletter readership into direct digital goods gross merchandise value (GMV)."
+    },
+    {
+      "id": "HEUR-EMAIL-04",
+      "name": "Cross-Category Wave Balancing",
+      "rule": "Rotate topics across 6 key pillars (AI IDEs, Voice AI, Databases, Automation, Outbound CRM, Product Ops) in non-consecutive succession.",
+      "confidence_score": 0.97,
+      "impact": "Ensures broad appeal across technical CTOs, RevOps heads, and engineering managers."
+    }
+  ],
+  "brand_cooldowns": {
+    "Resend": "2026-11-05T14:37:38.298669"
+  },
+  "brand_frequency": {
+    "Resend": 8
+  },
+  "dispatched_history": [
+    {
+      "issue": 43,
+      "dispatched_at": "2026-11-01T02:09:31.619376",
+      "featured_tool": "Resend",
+      "recipient": "director@heliatech.online",
+      "resend_id": "01a194a7-8cf6-79a8-b193-be15a9cd816d"
+    },
+    {
+      "issue": 44,
+      "dispatched_at": "2026-11-05T01:52:10.468716",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1a931-1b7e-7df1-9a58-7f11dd80e576"
+    },
+    {
+      "issue": 45,
+      "dispatched_at": "2026-11-05T03:59:01.109687",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1a9a5-3dcc-7cfb-b0e2-0e05dbfafddf"
+    },
+    {
+      "issue": 46,
+      "dispatched_at": "2026-11-05T06:06:01.009361",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1aa19-80ef-711e-9106-e4d3a3e8aef7"
+    },
+    {
+      "issue": 47,
+      "dispatched_at": "2026-11-05T08:12:30.390587",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1aa8d-4e80-77cf-a4b8-43cbf184aaf5"
+    },
+    {
+      "issue": 48,
+      "dispatched_at": "2026-11-05T10:22:14.779893",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1ab04-15c1-78ce-afd9-16b0fbe1c233"
+    },
+    {
+      "issue": 49,
+      "dispatched_at": "2026-11-05T12:30:02.918051",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1ab79-1715-7353-b66a-dc80dedd83cb"
+    },
+    {
+      "issue": 50,
+      "dispatched_at": "2026-11-05T14:37:38.298669",
+      "featured_tool": "Resend",
+      "recipient": "hamzaelfahsi@gmail.com",
+      "resend_id": "01a1abed-e6a1-71e7-a9f3-e90ed344be77"
+    }
+  ],
+  "editorial_forward_plan": [
+    {
+      "issue_number": 51,
+      "target_date": "2026-11-12",
+      "target_date_human": "Thursday, Nov 12, 2026",
+      "status": "NEXT_IN_LINE",
+      "tool_name": "Cursor",
+      "category": "Developer Tools & AI IDE",
+      "subject_tagline": "Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
+      "headline": "The Autonomous IDE Shift: Why High-Velocity Teams Are Leaving Copilot for Cursor",
+      "duel_title": "Cursor vs GitHub Copilot (2026 Developer Velocity Showdown)",
+      "deal_headline": "Cursor Rules Masterpack: Next.js 15, Tailwind & Supabase ($19)",
+      "monetization_type": "Marketplace Blueprint (Pilier 3)",
+      "deal_hop_link": "https://heliatech.online/templates/cursor-rules-nextjs-tailwind-supabase-masterpack/"
+    },
+    {
+      "issue_number": 52,
+      "target_date": "2026-11-19",
+      "target_date_human": "Thursday, Nov 19, 2026",
+      "status": "QUEUED",
+      "tool_name": "ElevenLabs",
+      "category": "Voice AI & Conversational Agents",
+      "subject_tagline": "The Zero-Latency Voice Revolution: ElevenLabs Agents Teardown",
+      "headline": "The Zero-Latency Voice Revolution: Replacing 10-Agent Call Centers with ElevenLabs",
+      "duel_title": "ElevenLabs vs HeyGen (Voice Synthesis vs Video Avatars)",
+      "deal_headline": "n8n AI Voice Receptionist with ElevenLabs Agents (Production Blueprint - $69)",
+      "monetization_type": "Marketplace Blueprint (Pilier 3)",
+      "deal_hop_link": "https://heliatech.online/templates/n8n-ai-voice-receptionist-elevenlabs/"
+    },
+    {
+      "issue_number": 53,
+      "target_date": "2026-11-26",
+      "target_date_human": "Thursday, Nov 26, 2026",
+      "status": "QUEUED",
+      "tool_name": "Supabase",
+      "category": "Data Infrastructure & Cloud Database",
+      "subject_tagline": "The End of Database Lock-In: Serverless Postgres & Supabase",
+      "headline": "The End of Database Lock-In: Migrating Production Workloads to Serverless Postgres",
+      "duel_title": "Supabase vs Firebase (2026 Architectural Duel)",
+      "deal_headline": "Supabase Enterprise Credits: $250 Partner Credit + Team Migration Kit",
+      "monetization_type": "Direct Partner Credit & Migration Kit",
+      "deal_hop_link": "https://heliatech.online/go/supabase"
+    },
+    {
+      "issue_number": 54,
+      "target_date": "2026-12-03",
+      "target_date_human": "Thursday, Dec 03, 2026",
+      "status": "QUEUED",
+      "tool_name": "n8n",
+      "category": "Workflow Automation & Enterprise Orchestration",
+      "subject_tagline": "The Great Workflow Migration: n8n Crushes $2,000/mo Zapier Invoices",
+      "headline": "The Great Workflow Migration: How n8n Crushes $2,000/mo Zapier Invoices",
+      "duel_title": "Zapier vs n8n (The High-Volume Automation Showdown)",
+      "deal_headline": "n8n AI Waterfall Lead Enrichment & Scoring Blueprint ($49)",
+      "monetization_type": "Marketplace Blueprint (Pilier 3)",
+      "deal_hop_link": "https://heliatech.online/templates/n8n-ai-lead-enricher-waterfall/"
+    },
+    {
+      "issue_number": 55,
+      "target_date": "2026-12-10",
+      "target_date_human": "Thursday, Dec 10, 2026",
+      "status": "QUEUED",
+      "tool_name": "Apollo.io",
+      "category": "B2B Sales Intelligence & Lead Gen",
+      "subject_tagline": "Apollo.io vs ZoomInfo: The 2026 B2B Prospecting Audit",
+      "headline": "The Modern Outbound Playbook: High-Accuracy Prospecting Without $15,000 Contracts",
+      "duel_title": "Apollo.io vs ZoomInfo (Enterprise ROI Benchmark)",
+      "deal_headline": "Airtable WhatsApp Cloud API & CRM Nurturing OS ($39)",
+      "monetization_type": "Marketplace Blueprint (Pilier 3)",
+      "deal_hop_link": "https://heliatech.online/templates/airtable-whatsapp-cloud-api-nurturing-crm/"
+    },
+    {
+      "issue_number": 56,
+      "target_date": "2026-12-17",
+      "target_date_human": "Thursday, Dec 17, 2026",
+      "status": "QUEUED",
+      "tool_name": "Linear",
+      "category": "Engineering Productivity & Issue Tracking",
+      "subject_tagline": "Ditching Jira: How Linear Restores 4+ Hours of Focus Per Week",
+      "headline": "The Engineering Ergonomics Manifesto: Why Modern Tech Companies Build on Linear",
+      "duel_title": "ClickUp vs Linear (Developer Productivity Duel)",
+      "deal_headline": "Linear Enterprise Team Trial & Integration Playbook",
+      "monetization_type": "Enterprise Affiliate Partnership",
+      "deal_hop_link": "https://heliatech.online/go/linear"
+    },
+    {
+      "issue_number": 57,
+      "target_date": "2026-12-24",
+      "target_date_human": "Thursday, Dec 24, 2026",
+      "status": "QUEUED",
+      "tool_name": "HeyGen",
+      "category": "Generative Video & Global Localization",
+      "subject_tagline": "HeyGen vs Synthesia: Photorealistic Avatar Showdown 2026",
+      "headline": "Zero-Studio Video Production: Scaling Enterprise Video Marketing in 40+ Languages",
+      "duel_title": "HeyGen vs Synthesia (Enterprise Video Duel)",
+      "deal_headline": "HeyGen Pro Studio: Free Enterprise Trial & Instant Avatar Generation",
+      "monetization_type": "Direct Partner Referral Program",
+      "deal_hop_link": "https://heliatech.online/go/heygen"
+    },
+    {
+      "issue_number": 58,
+      "target_date": "2026-12-31",
+      "target_date_human": "Thursday, Dec 31, 2026",
+      "status": "QUEUED",
+      "tool_name": "Airtable",
+      "category": "Relational Databases & No-Code Operations",
+      "subject_tagline": "Airtable vs Retool: Building Mission-Critical Internal OS",
+      "headline": "Beyond Simple Spreadsheets: How Fast-Growing Startups Run Their Operations on Airtable",
+      "duel_title": "Airtable vs Retool (Internal Tools Duel)",
+      "deal_headline": "Airtable B2B Client Onboarding & Contract OS ($39)",
+      "monetization_type": "Marketplace Blueprint (Pilier 3)",
+      "deal_hop_link": "https://heliatech.online/templates/airtable-b2b-client-portal-os/"
+    },
+    {
+      "issue_number": 59,
+      "target_date": "2027-01-07",
+      "target_date_human": "Thursday, Jan 07, 2027",
+      "status": "QUEUED",
+      "tool_name": "Lovable",
+      "category": "AI Fullstack Application Builders",
+      "subject_tagline": "Lovable vs Cursor: The 10-Minute SaaS Prototype Duel",
+      "headline": "From Idea to Deployed Full-Stack App in 10 Minutes: The Lovable AI Paradigm",
+      "duel_title": "Cursor vs Lovable (AI App Development Showdown)",
+      "deal_headline": "Lovable Pro Pass: Deploy Your First Production SaaS in 24 Hours",
+      "monetization_type": "Direct Partner Referral Program",
+      "deal_hop_link": "https://heliatech.online/go/lovable"
+    },
+    {
+      "issue_number": 60,
+      "target_date": "2027-01-14",
+      "target_date_human": "Thursday, Jan 14, 2027",
+      "status": "QUEUED",
+      "tool_name": "Make.com",
+      "category": "Fintech Automation & Dunning Workflows",
+      "subject_tagline": "Recovering 40% of Failed Stripe Payments on Autopilot",
+      "headline": "The SaaS Cashflow Guard: Automated Dunning & Smart Payment Retries",
+      "duel_title": "Make.com vs Zapier (Enterprise Routing Showdown)",
+      "deal_headline": "Make.com Stripe Failed Payment Recovery Blueprint ($39)",
+      "monetization_type": "Marketplace Blueprint (Pilier 3)",
+      "deal_hop_link": "https://heliatech.online/templates/make-stripe-churn-rescue-blueprint/"
+    },
+    {
+      "issue_number": 61,
+      "target_date": "2027-01-21",
+      "target_date_human": "Thursday, Jan 21, 2027",
+      "status": "QUEUED",
+      "tool_name": "Brevo",
+      "category": "Multichannel B2B CRM & Transactional Routing",
+      "subject_tagline": "Beehiiv vs Brevo: The 2026 Newsletter & Email Showdown",
+      "headline": "All-in-One Customer Communication: Scaling Email, SMS & WhatsApp Without Tier Penalties",
+      "duel_title": "Beehiiv vs Brevo (Editorial Newsletters vs B2B Marketing Suite)",
+      "deal_headline": "Brevo Starter & Enterprise Pass: 20,000 Free Monthly Emails",
+      "monetization_type": "Direct Partner Referral Program",
+      "deal_hop_link": "https://heliatech.online/go/brevo"
+    },
+    {
+      "issue_number": 62,
+      "target_date": "2027-01-28",
+      "target_date_human": "Thursday, Jan 28, 2027",
+      "status": "QUEUED",
+      "tool_name": "Postman",
+      "category": "API Governance & Enterprise Testing",
+      "subject_tagline": "The API Testing Evolution: Postman Collections & CI/CD Verification",
+      "headline": "Zero-Defect API Governance: How Modern Teams Automate Regression Testing",
+      "duel_title": "Postman vs Insomnia (API Client & Governance Benchmark)",
+      "deal_headline": "Postman Enterprise API Governance Suite",
+      "monetization_type": "Enterprise Sponsorship Slot",
+      "deal_hop_link": "https://heliatech.online/sponsor"
+    }
+  ]
+}
