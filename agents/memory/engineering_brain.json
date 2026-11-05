@@ -7,7 +7,7 @@
     {
       "id": "HEUR-ENG-01",
       "name": "Zero-Broken Link Invariant",
-      "rule": "Every single /go/[slug] outbound redirect must exist in site/public/_redirects with a valid destination (direct affiliate URL or Skimlinks Universal Wrapper). Zero 404 or dead-end redirects allowed.",
+      "rule": "Every single /go/[slug] outbound redirect must exist in site/public/_redirects with a valid destination (direct sovereign partner URL, official canonical target, or internal review/marketplace route). Zero 404 or dead-end redirects allowed.",
       "confidence_score": 1.0,
       "impact": "Guarantees 100% traffic monetization and protects institutional domain trust."
     },
