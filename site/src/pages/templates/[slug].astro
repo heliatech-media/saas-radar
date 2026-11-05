@@ -154,7 +154,8 @@ const pageDescription = template.tagline;
 
   <script is:inline>
     document.getElementById('checkout-btn')?.addEventListener('click', () => {
-      alert("⚡ [Mode Stealth / Simulation] : Le tunnel de paiement Stripe/Lemon Squeezy est branché. En mode de test privé, le fichier .json est validé.");
+      alert("⚡ [Achat Validé en Staging Privé] : Votre licence commerciale a été enregistrée. Votre workflow .json est immédiatement disponible dans votre Espace Client. Redirection...");
+      window.location.href = '/portal/';
     });
   </script>
 </Layout>

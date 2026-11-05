@@ -89,3 +89,4 @@
 # Staging Trailing Slash Canonical Routing
 /templates /templates/ 301!
 /sell /sell/ 301!
+/portal /portal/ 301!

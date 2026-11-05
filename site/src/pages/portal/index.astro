@@ -1,0 +1,550 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import templates from '../../data/templates_catalog.json';
+
+const pageTitle = "Espace Client & Studio Créateur | HeliaTech Hub (Stealth Staging)";
+const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable achetés, téléchargez vos fichiers .json et suivez vos gains de vente à 80%.";
+---
+
+<Layout title={pageTitle} description={pageDescription} noindex={true}>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-24">
+    
+    <!-- Stealth Staging Notice -->
+    <div class="flex items-center justify-between p-3.5 mb-8 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+        <span class="font-bold uppercase tracking-wider">Mode Stealth / Staging Privé</span>
+        <span class="text-amber-400/70 hidden sm:inline">— Espace Client &amp; Vendeur en pré-lancement.</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="/templates/" class="px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/40 font-bold transition-all">
+          Catalogue (/templates/) ➔
+        </a>
+        <a href="/sell/" class="px-3 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 font-bold transition-all">
+          Vendre (/sell/) ➔
+        </a>
+      </div>
+    </div>
+
+    <!-- User Header & Role Switcher -->
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      
+      <!-- User Info -->
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-sky-600 to-indigo-600 p-0.5 shadow-glow-cyan">
+          <div class="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center text-xl font-bold text-white font-mono" id="user-avatar-initials">
+            HT
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <h1 class="text-xl sm:text-2xl font-black text-white" id="user-display-name">Alexandre R.</h1>
+            <span id="user-role-badge" class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+              Acheteur Vérifié
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 font-mono" id="user-email">alexandre.partner@heliatech.online</p>
+        </div>
+      </div>
+
+      <!-- Unified Mode Switcher Tabs -->
+      <div class="flex items-center p-1.5 rounded-2xl bg-slate-950 border border-slate-800 w-full md:w-auto">
+        <button 
+          id="btn-buyer-mode" 
+          class="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-mono text-xs font-bold transition-all bg-cyan-500 text-slate-950 shadow-glow-cyan"
+        >
+          <span>🛒</span> Espace Acheteur (Mes Blueprints)
+        </button>
+        <button 
+          id="btn-seller-mode" 
+          class="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-mono text-xs font-bold transition-all text-slate-400 hover:text-white"
+        >
+          <span>💼</span> Espace Vendeur (Studio 80%)
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 1. BUYER DASHBOARD VIEW (Mes Blueprints & Licences) -->
+    <!-- ========================================================================= -->
+    <div id="buyer-dashboard-view" class="space-y-8">
+      
+      <!-- Buyer Quick Stats -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl font-black text-cyan-400 font-mono mb-1" id="stat-buyer-blueprints">2 Blueprints</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Licences Actives Détenues</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl font-black text-emerald-400 font-mono mb-1">~48 Heures</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Temps de Dev Économisé</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+          <div class="text-2xl font-black text-indigo-400 font-mono mb-1">100% Garanti</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Code Certifié Anti-Fuite Clés</div>
+        </div>
+      </div>
+
+      <!-- Library of Purchased Blueprints -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>📦</span> Vos Blueprints Prêts au Déploiement
+            </h2>
+            <p class="text-xs text-slate-400 font-light mt-1">
+              Téléchargez immédiatement vos fichiers .json sanitizés et accédez à vos clés de licence commerciale.
+            </p>
+          </div>
+          <a href="/templates/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-mono font-bold transition-all">
+            + Explorer le Catalogue ➔
+          </a>
+        </div>
+
+        <!-- Blueprint Purchased Cards -->
+        <div class="space-y-4">
+          
+          <!-- Item 1: n8n Waterfall -->
+          <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div class="space-y-2">
+              <div class="flex items-center gap-2.5">
+                <span class="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 text-[10px] font-mono font-bold">
+                  🟠 n8n Workflow (.json)
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Acheté le 04 Nov 2026</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                  Licence Commerciale Illimitée
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-white">n8n AI Lead Enrichment &amp; Scoring Waterfall</h3>
+              <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+                <span>Clé Licence : <code class="text-cyan-400 bg-slate-950 px-2 py-1 rounded border border-slate-800">HLT-N8N-8429-PRO-LICENSE</code></span>
+                <button class="copy-key-btn text-cyan-400 hover:underline" data-key="HLT-N8N-8429-PRO-LICENSE">📋 Copier la Clé</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap sm:flex-nowrap items-center gap-3">
+              <button 
+                class="download-btn px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan flex items-center gap-2"
+                data-workflow="n8n-lead-enrichment"
+              >
+                <span>⚡</span> Télécharger le .json
+              </button>
+              <button 
+                class="show-guide-btn px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono transition-all"
+                data-guide="n8n"
+              >
+                📖 Guide d'Import
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 2: Make.com Stripe Recovery -->
+          <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div class="space-y-2">
+              <div class="flex items-center gap-2.5">
+                <span class="px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 text-[10px] font-mono font-bold">
+                  🟣 Make.com Blueprint (.json)
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Acheté le 02 Nov 2026</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                  Licence Commerciale Illimitée
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Make.com Stripe Failed Payment Recovery Engine</h3>
+              <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+                <span>Clé Licence : <code class="text-cyan-400 bg-slate-950 px-2 py-1 rounded border border-slate-800">HLT-MAK-1940-STRIPE-RECOVERY</code></span>
+                <button class="copy-key-btn text-cyan-400 hover:underline" data-key="HLT-MAK-1940-STRIPE-RECOVERY">📋 Copier la Clé</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap sm:flex-nowrap items-center gap-3">
+              <button 
+                class="download-btn px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-white font-mono text-xs font-bold transition-all shadow-glow-cyan flex items-center gap-2"
+                data-workflow="make-stripe-recovery"
+              >
+                <span>⚡</span> Télécharger le .json
+              </button>
+              <button 
+                class="show-guide-btn px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-mono transition-all"
+                data-guide="make"
+              >
+                📖 Guide d'Import
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Transaction Invoices History -->
+      <div class="p-6 rounded-3xl bg-slate-950/60 border border-slate-800 space-y-4">
+        <h3 class="text-sm font-bold text-white font-mono uppercase tracking-wider flex items-center gap-2">
+          <span>🧾</span> Historique de Facturation &amp; Reçus
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs font-mono">
+            <thead>
+              <tr class="text-slate-400 border-b border-slate-800">
+                <th class="pb-3">Date</th>
+                <th class="pb-3">Numéro Facture</th>
+                <th class="pb-3">Produit</th>
+                <th class="pb-3">Montant</th>
+                <th class="pb-3">Statut</th>
+                <th class="pb-3 text-right">Reçu</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-300 divide-y divide-slate-900">
+              <tr>
+                <td class="py-3">04 Nov 2026</td>
+                <td class="py-3 text-slate-400">HLT-INV-2026-9481</td>
+                <td class="py-3 font-semibold text-white">n8n AI Lead Enrichment</td>
+                <td class="py-3 text-emerald-400 font-bold">$49.00 USD</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px]">Payé</span></td>
+                <td class="py-3 text-right"><button class="view-invoice-btn text-cyan-400 hover:underline">PDF / Reçu</button></td>
+              </tr>
+              <tr>
+                <td class="py-3">02 Nov 2026</td>
+                <td class="py-3 text-slate-400">HLT-INV-2026-9320</td>
+                <td class="py-3 font-semibold text-white">Make.com Stripe Recovery</td>
+                <td class="py-3 text-emerald-400 font-bold">$39.00 USD</td>
+                <td class="py-3"><span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px]">Payé</span></td>
+                <td class="py-3 text-right"><button class="view-invoice-btn text-cyan-400 hover:underline">PDF / Reçu</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 2. SELLER / CREATOR DASHBOARD VIEW (Mon Studio & Payouts 80%) -->
+    <!-- ========================================================================= -->
+    <div id="seller-dashboard-view" class="space-y-8 hidden">
+      
+      <!-- Creator Telemetry Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/40 text-center">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mb-1" id="stat-seller-earnings">$1,420.80</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Vos Gains Nets (80%)</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+          <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono mb-1">36 Ventes</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Téléchargements Payants</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+          <div class="text-2xl sm:text-3xl font-black text-fuchsia-400 font-mono mb-1">4.9 ★</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Avis Clients Certifiés</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-center">
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-mono mb-1">$392.00</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Prochain Versement (01 Déc)</div>
+        </div>
+      </div>
+
+      <!-- Creator Blueprints Management -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>💼</span> Vos Blueprints Publiés en Vente
+            </h2>
+            <p class="text-xs text-slate-400 font-light mt-1">
+              Surveillez le statut d'approbation par le Sentinel de sécurité et les revenus générés par chaque template.
+            </p>
+          </div>
+          <a href="/sell/" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-mono text-xs font-bold transition-all shadow-glow-cyan">
+            + Déposer un Nouveau Blueprint ➔
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Creator Item 1 -->
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="text-xs font-mono text-emerald-400 font-bold uppercase">En Ligne &amp; Certifié</span>
+                <span class="text-xs text-slate-500 font-mono">• 🟠 n8n</span>
+              </div>
+              <h3 class="text-base font-bold text-white">n8n AI Lead Enrichment &amp; Scoring Waterfall</h3>
+              <p class="text-xs text-slate-400 font-mono">Prix : $49.00 | Votre part : <span class="text-emerald-400 font-bold">$39.20 (80%)</span></p>
+            </div>
+            <div class="flex items-center gap-6 text-right">
+              <div>
+                <div class="text-lg font-black text-white font-mono">24 ventes</div>
+                <div class="text-xs text-emerald-400 font-mono">$940.80 générés</div>
+              </div>
+              <a href="/templates/n8n-ai-lead-enricher-waterfall/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 hover:text-white transition-all">
+                Voir Fiche ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Creator Item 2 -->
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="text-xs font-mono text-emerald-400 font-bold uppercase">En Ligne &amp; Certifié</span>
+                <span class="text-xs text-slate-500 font-mono">• 🤖 Cursor</span>
+              </div>
+              <h3 class="text-base font-bold text-white">Cursor Rules Next.js 15, Tailwind &amp; Supabase Masterpack</h3>
+              <p class="text-xs text-slate-400 font-mono">Prix : $19.00 | Votre part : <span class="text-emerald-400 font-bold">$15.20 (80%)</span></p>
+            </div>
+            <div class="flex items-center gap-6 text-right">
+              <div>
+                <div class="text-lg font-black text-white font-mono">12 ventes</div>
+                <div class="text-emerald-400 font-mono text-xs">$182.40 générés</div>
+              </div>
+              <a href="/templates/cursor-rules-nextjs-tailwind-supabase-masterpack/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 hover:text-white transition-all">
+                Voir Fiche ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Creator Item 3 -->
+          <div class="p-5 rounded-2xl bg-slate-900/50 border border-amber-500/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span class="text-xs font-mono text-amber-300 font-bold uppercase">Scan de Sécurité Sentinel en cours</span>
+                <span class="text-xs text-slate-500 font-mono">• 🟡 Airtable</span>
+              </div>
+              <h3 class="text-base font-bold text-white">Airtable B2B Client Onboarding &amp; Contract OS</h3>
+              <p class="text-xs text-slate-400 font-mono">Prix souhaité : $39.00 | Analyse automatique anti-fuite de clé API active.</p>
+            </div>
+            <div class="flex items-center gap-6 text-right">
+              <div>
+                <div class="text-xs font-mono text-amber-300">En cours de vérification</div>
+                <div class="text-[10px] text-slate-500 font-mono">Estimation : ~5 minutes</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Payout Settings & Stripe Connect Account -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-950/60 border border-slate-800 space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-white font-mono uppercase tracking-wider flex items-center gap-2">
+            <span>🏦</span> Paramètres de Versement (80% Creator Net Payout)
+          </h3>
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-bold">
+            Compte Stripe Connect Lié
+          </span>
+        </div>
+        <p class="text-xs text-slate-400 font-light">
+          Vos versements sont expédiés automatiquement le 1er de chaque mois directement sur votre compte bancaire ou PayPal.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-2">
+          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+            <span class="text-slate-400 block mb-1">Email de Versement :</span>
+            <span class="text-white font-bold">alexandre.partner@heliatech.online</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+            <span class="text-slate-400 block mb-1">Prochain Virement Automatique :</span>
+            <span class="text-emerald-400 font-bold">$392.00 USD (01 Déc 2026)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick Switcher Bar (For Seamless Staging Demos) -->
+    <div class="mt-12 p-4 rounded-2xl bg-slate-900/40 border border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+      <div class="text-slate-400">
+        <span class="text-cyan-400 font-bold">💡 Simulateur d'Espace Client :</span> Basculez instantanément pour tester les deux perspectives.
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="quick-demo-buyer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">
+          Vue Acheteur (2 Blueprints)
+        </button>
+        <button id="quick-demo-seller" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">
+          Vue Créateur ($1,420 de gains)
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Interactive Client-side Script -->
+  <script is:inline>
+    const btnBuyer = document.getElementById('btn-buyer-mode');
+    const btnSeller = document.getElementById('btn-seller-mode');
+    const buyerView = document.getElementById('buyer-dashboard-view');
+    const sellerView = document.getElementById('seller-dashboard-view');
+    const userDisplayName = document.getElementById('user-display-name');
+    const userRoleBadge = document.getElementById('user-role-badge');
+    const userInitials = document.getElementById('user-avatar-initials');
+
+    function setBuyerMode() {
+      btnBuyer.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+      btnBuyer.classList.remove('text-slate-400');
+      btnSeller.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+      btnSeller.classList.add('text-slate-400');
+
+      buyerView.classList.remove('hidden');
+      sellerView.classList.add('hidden');
+
+      userDisplayName.textContent = "Alexandre R.";
+      userRoleBadge.textContent = "Acheteur Vérifié";
+      userRoleBadge.className = "text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30";
+      userInitials.textContent = "AR";
+      localStorage.setItem('_ht_portal_role', 'buyer');
+    }
+
+    function setSellerMode() {
+      btnSeller.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+      btnSeller.classList.remove('text-slate-400');
+      btnBuyer.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-glow-cyan');
+      btnBuyer.classList.add('text-slate-400');
+
+      sellerView.classList.remove('hidden');
+      buyerView.classList.add('hidden');
+
+      userDisplayName.textContent = "Alexandre R. (Studio)";
+      userRoleBadge.textContent = "Architecte Créateur (80%)";
+      userRoleBadge.className = "text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
+      userInitials.textContent = "AS";
+      localStorage.setItem('_ht_portal_role', 'seller');
+    }
+
+    btnBuyer?.addEventListener('click', setBuyerMode);
+    btnSeller?.addEventListener('click', setSellerMode);
+    document.getElementById('quick-demo-buyer')?.addEventListener('click', setBuyerMode);
+    document.getElementById('quick-demo-seller')?.addEventListener('click', setSellerMode);
+
+    // Check saved state
+    if (localStorage.getItem('_ht_portal_role') === 'seller') {
+      setSellerMode();
+    }
+
+    // 1-Click License Key Copy
+    document.querySelectorAll('.copy-key-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-key');
+        if (key) {
+          navigator.clipboard.writeText(key);
+          const original = btn.textContent;
+          btn.textContent = "✓ Clé Copiée !";
+          btn.classList.add('text-emerald-400');
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('text-emerald-400');
+          }, 2000);
+        }
+      });
+    });
+
+    // 1-Click Real JSON Workflow File Download Generation
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const wf = btn.getAttribute('data-workflow');
+        let filename = "heliatech-blueprint.json";
+        let content = {};
+
+        if (wf === 'n8n-lead-enrichment') {
+          filename = "heliatech-n8n-lead-enricher-v1.json";
+          content = {
+            "name": "HeliaTech n8n AI Lead Enrichment & Scoring Waterfall",
+            "nodes": [
+              {
+                "parameters": { "path": "webhook-lead", "responseMode": "onReceived" },
+                "name": "Webhook Inbound Lead",
+                "type": "n8n-nodes-base.webhook",
+                "typeVersion": 1,
+                "position": [250, 300]
+              },
+              {
+                "parameters": {
+                  "model": "gpt-4o-mini",
+                  "prompt": "Evaluate this lead against B2B ideal customer profile: {{$json.body.email}}"
+                },
+                "name": "AI Lead Scoring Engine",
+                "type": "n8n-nodes-base.openAi",
+                "typeVersion": 1,
+                "position": [450, 300]
+              },
+              {
+                "parameters": {
+                  "resource": "record",
+                  "operation": "append",
+                  "application": "appLeadTracker"
+                },
+                "name": "Sync to Airtable CRM",
+                "type": "n8n-nodes-base.airtable",
+                "typeVersion": 1,
+                "position": [650, 300]
+              }
+            ],
+            "connections": {
+              "Webhook Inbound Lead": { "main": [[{ "node": "AI Lead Scoring Engine", "type": "main", "index": 0 }]] },
+              "AI Lead Scoring Engine": { "main": [[{ "node": "Sync to Airtable CRM", "type": "main", "index": 0 }]] }
+            },
+            "meta": {
+              "generator": "HeliaTech Security Sanitizer v2026.1",
+              "certified_clean": true,
+              "license": "Commercial Unlimited"
+            }
+          };
+        } else {
+          filename = "heliatech-make-stripe-recovery-v1.json";
+          content = {
+            "name": "HeliaTech Make.com Stripe Failed Payment Recovery Engine",
+            "blueprint": {
+              "name": "Stripe Churn Recovery Waterfall",
+              "flow": [
+                { "id": 1, "module": "stripe:WatchEvents", "version": 1 },
+                { "id": 2, "module": "resend:SendEmail", "version": 1 },
+                { "id": 3, "module": "slack:CreateMessage", "version": 1 }
+              ]
+            },
+            "meta": {
+              "generator": "HeliaTech Security Sanitizer v2026.1",
+              "certified_clean": true,
+              "license": "Commercial Unlimited"
+            }
+          };
+        }
+
+        const blob = new Blob([JSON.stringify(content, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    });
+
+    // Quick Guide Dialog
+    document.querySelectorAll('.show-guide-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const guide = btn.getAttribute('data-guide');
+        if (guide === 'n8n') {
+          alert("📘 GUIDE D'IMPORTATION n8n EN 3 ÉTAPES :\n\n1. Ouvrez votre instance n8n (Cloud ou Self-Hosted).\n2. Cliquez sur 'Add Workflow' puis sélectionnez 'Import from File...'.\n3. Chargez le fichier .json téléchargé. Vos nodes et connexions sont immédiatement configurés !");
+        } else {
+          alert("📘 GUIDE D'IMPORTATION MAKE.COM EN 3 ÉTAPES :\n\n1. Ouvrez votre tableau de bord Make.com.\n2. Créez un nouveau scénario, cliquez sur les 3 petits points (...) en bas et choisissez 'Import Blueprint'.\n3. Sélectionnez le fichier .json téléchargé pour importer la logique complète.");
+        }
+      });
+    });
+
+    // View Invoice Dialog
+    document.querySelectorAll('.view-invoice-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert("🧾 REÇU DE PAIEMENT HELIATECH (SIMULATION) :\n\n• Statut : Payé & Validé\n• TVA : Autoliquidée (B2B)\n• Payout Split : 80% Créateur / 20% HeliaTech\n• Ce reçu tient lieu de justificatif comptable pour votre entreprise.");
+      });
+    });
+  </script>
+</Layout>
