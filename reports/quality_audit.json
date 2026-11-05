@@ -3,7 +3,7 @@
   "total_articles_scanned": 159,
   "average_authenticity_score": "92.5/100",
   "honest_tradeoffs_coverage": "100.0%",
-  "total_cliches_detected": 8,
+  "total_cliches_detected": 9,
   "status": "APPROVED_HIGH_INTEGRITY",
   "enforced_standards": [
     "Strict blacklisting of generic AI filler vocabulary",

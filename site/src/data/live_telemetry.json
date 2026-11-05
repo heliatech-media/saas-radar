@@ -354,8 +354,8 @@
     },
     {
       "slug": "tome",
-      "destination": "https://gamma.app",
-      "type": "Catalog Edge Hop"
+      "destination": "https://tome.app/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "transistor",
@@ -364,8 +364,13 @@
     },
     {
       "slug": "typeform",
-      "destination": "https://www.typeform.com",
-      "type": "Catalog Edge Hop"
+      "destination": "https://typeform.grsm.io/heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "typing-mind",
+      "destination": "https://typingmind.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "v0",

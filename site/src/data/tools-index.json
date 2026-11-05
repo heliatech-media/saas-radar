@@ -45,11 +45,11 @@
   {
     "name": "Beehiiv",
     "slug": "beehiiv",
-    "tagline": "The all-in-one newsletter platform built for growth, monetization, and scale.",
+    "tagline": "The newsletter platform built for growth by the team behind Morning Brew.",
     "category": "Newsletter SaaS",
-    "rating": 4.7,
+    "rating": 4.8,
     "starting_price": "$0/mo",
-    "best_for": "Professional creators, media companies, and B2B brands looking to scale newsletters with built-in growth loops.",
+    "best_for": "Professional creators, media companies, and B2B marketers who prioritize audience growth and monetization over complex automation funnels.",
     "affiliate_url": "https://www.beehiiv.com/?via=heliatech"
   },
   {
@@ -191,6 +191,16 @@
     "best_for": "UI/UX designers, marketing agencies, and high-growth startups seeking custom, lightning-fast web experiences.",
     "affiliate_url": "https://framer.partnerstack.com/heliatech",
     "commission_rate": "Up to 50% for the first year or 20% recurring depending on the plan"
+  },
+  {
+    "name": "Gamma",
+    "slug": "gamma-app",
+    "tagline": "A new medium for presenting ideas, powered by AI.",
+    "category": "AI Presentation & Design",
+    "rating": 4.7,
+    "starting_price": "$10/mo",
+    "best_for": "Sales teams, startup founders, and marketing managers who need high-fidelity decks without manual design work.",
+    "affiliate_url": "https://gamma.app"
   },
   {
     "name": "Guidde",
@@ -597,8 +607,8 @@
     "rating": 4.5,
     "starting_price": "$16/mo",
     "best_for": "Startups, sales teams, and marketers needing rapid, highly polished pitch decks and presentations.",
-    "affiliate_url": "https://gamma.app",
-    "commission_rate": "Undisclosed / Custom"
+    "affiliate_url": "https://tome.app/?via=heliatech",
+    "commission_rate": "Undisclosed / Custom Referral Program"
   },
   {
     "name": "Transistor",
@@ -619,8 +629,19 @@
     "rating": 4.5,
     "starting_price": "$25/mo",
     "best_for": "Marketers, HR professionals, and growth teams focused on high-conversion lead capture and user research.",
-    "affiliate_url": "https://www.typeform.com",
-    "commission_rate": "20% to 30% recurring"
+    "affiliate_url": "https://typeform.grsm.io/heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
+  },
+  {
+    "name": "TypingMind",
+    "slug": "typing-mind",
+    "tagline": "A powerful, privacy-focused UI wrapper for LLMs that turns chaotic AI chats into a structured workspace.",
+    "category": "AI Productivity",
+    "rating": 4.7,
+    "starting_price": "$39",
+    "best_for": "Power users, developers, and AI-driven teams who want to manage multiple LLM providers under one unified, local-first interface.",
+    "affiliate_url": "https://typingmind.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "VEED",

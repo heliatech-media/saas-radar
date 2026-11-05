@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <circle cx="950" cy="300" r="280" fill="#06b6d4" opacity="0.12" filter="blur(50px)" />
+  <circle cx="250" cy="400" r="220" fill="#d946ef" opacity="0.1" filter="blur(60px)" />
+  <g transform="translate(100, 140)">
+    <rect width="240" height="32" rx="16" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-width="1" />
+    <circle cx="18" cy="16" r="4" fill="#06b6d4" />
+    <text x="32" y="21" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1.5">HELIATECH DOSSIER</text>
+  </g>
+  <text x="100" y="260" fill="#ffffff" font-family="sans-serif" font-size="64" font-weight="900" letter-spacing="-1">SENJA</text>
+  <text x="100" y="320" fill="url(#neon)" font-family="monospace" font-size="24" font-weight="bold" letter-spacing="2">MARKETING AUTOMATION & SOCIAL PROOF</text>
+  <line x1="100" y1="360" x2="1100" y2="360" stroke="#334155" stroke-width="1.5" />
+  <text x="100" y="420" fill="#94a3b8" font-family="sans-serif" font-size="20">Enterprise Software Teardown &amp; Hands-on Engineering Masterclass</text>
+  <g transform="translate(100, 480)">
+    <text x="0" y="20" fill="#06b6d4" font-family="monospace" font-size="14" font-weight="bold">BENCHMARK GRADE: VERIFIED ✦ 2026 EDITION</text>
+  </g>
+</svg>
