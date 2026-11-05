@@ -84,7 +84,7 @@ While Senja is a market leader in agility, it is important to weigh its capabili
 | Feature | Strength | Limitation |
 | :--- | :--- | :--- |
 | **Performance** | Ultra-fast loading; zero impact on Core Web Vitals. | Custom CSS requires advanced knowledge for pixel-perfection. |
-| **Automation** | Deep integrations with Zapier and native SaaS tools. | Advanced triggers are locked behind the Business tier. |
+| **Automation** | Deep integrations with [Zapier](/reviews/zapier) and native SaaS tools. | Advanced triggers are locked behind the Business tier. |
 | **Branding** | Clean, modern UI that fits most SaaS aesthetics. | Free tier includes visible 'Powered by Senja' branding. |
 | **Video** | No-login recording is a game-changer for conversion. | Limited video editing tools within the platform itself. |
 | **Ease of Use** | Setup to deployment in under 10 minutes. | Granular permission settings for large teams could be deeper. |

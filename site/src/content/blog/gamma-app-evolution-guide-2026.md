@@ -11,7 +11,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: gamma-app
 image: /images/blog/gamma-app.svg
 tldr:
@@ -29,7 +29,6 @@ affiliate_cta:
   button_text: Claim Your Free Gamma Account ➔
   url: /go/gamma-app
 ---
-
 D
 eath by PowerPoint is not just a corporate cliché; it is a measurable drain on global productivity. For three decades, the business world has been trapped in a 4:3 or 16:9 box, forcing professionals to spend 20% of their time on content and 80% on the soul-crushing logistics of alignment, font consistency, and image cropping. The friction between a brilliant idea and a shareable deck has historically been a graveyard for innovation. We have been using digital versions of physical transparencies, ignoring the fact that the modern workforce consumes information on everything from ultrawide monitors to smartphones. This is the fragmentation that Gamma set out to solve.
 

@@ -474,6 +474,16 @@
     "commission_rate": "10% commission on sales for 12 months"
   },
   {
+    "name": "Rask AI",
+    "slug": "rask-ai",
+    "tagline": "Automated video localization and dubbing for global content scaling.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$49/mo",
+    "best_for": "Marketing agencies, EdTech platforms, and high-volume YouTube creators scaling to international markets.",
+    "affiliate_url": "https://www.rask.ai"
+  },
+  {
     "name": "Resend",
     "slug": "resend",
     "tagline": "Modern email infrastructure designed for developers, not marketers.",

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-05 14:33:40",
-  "total_pages_audited": 92,
-  "monetized_pages": 89,
-  "total_ctas_tracked": 419,
+  "timestamp": "2026-11-05 16:40:21",
+  "total_pages_audited": 96,
+  "monetized_pages": 93,
+  "total_ctas_tracked": 427,
   "average_cro_score": "88.6/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -13,7 +13,7 @@
   "estimated_rpv_lift": "+38.4%",
   "pages": [
     {
-      "slug": "framer-evolution-guide-2026",
+      "slug": "adcreative-ai-evolution-guide-2026",
       "type": "blog",
       "word_count": 1129,
       "cta_count": 6,
@@ -60,7 +60,7 @@
     {
       "slug": "beehiiv-evolution-guide-2026",
       "type": "blog",
-      "word_count": 789,
+      "word_count": 816,
       "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
@@ -121,9 +121,18 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "julius-ai-evolution-guide-2026",
+      "slug": "cal-com-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1044,
+      "word_count": 1148,
+      "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "captions-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1104,
       "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,

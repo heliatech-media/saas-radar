@@ -131,7 +131,7 @@ Axiom.ai is a powerful browser automation tool that uses a Chrome extension to r
 - Robust cloud scheduling that runs bots without keeping your computer on.
 - Seamless native integration with Google Sheets for data input and output.
 - Advanced logic features like loops and conditional branching for complex workflows.
-- Excellent handling of 'last-mile' automation where Zapier or Make cannot reach.
+- Excellent handling of 'last-mile' automation where [Zapier](/reviews/zapier) or [Make](/reviews/make) cannot reach.
 
 ### Cons
 - Pricing is based on runtime minutes, which can scale poorly for high-frequency tasks.
