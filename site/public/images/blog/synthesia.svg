@@ -1,0 +1,360 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Dark Cyber Gradients -->
+    <linearGradient id="bg-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#02040a" />
+    </linearGradient>
+
+    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#070d19" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="panel-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyan-violet-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="green-screen-disrupt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#059669" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="synth-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <radialGradient id="glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-fuchsia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="glow-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3" />
+    </pattern>
+
+    <pattern id="dot-matrix" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#94a3b8" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="630" fill="url(#bg-base)" />
+
+  <!-- Grid Overlay -->
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-matrix)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="850" cy="220" r="380" fill="url(#glow-cyan)" />
+  <circle cx="950" cy="420" r="320" fill="url(#glow-violet)" />
+  <circle cx="450" cy="350" r="280" fill="url(#glow-fuchsia)" />
+
+  <!-- Perspective Floor Grid (Visualizing Generative Space) -->
+  <g opacity="0.35">
+    <path d="M 0 520 L 1200 520" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4" />
+    <path d="M 0 570 L 1200 570" stroke="#8b5cf6" stroke-width="1.5" />
+    <path d="M 150 630 L 400 520" stroke="#1e293b" stroke-width="1" />
+    <path d="M 350 630 L 520 520" stroke="#1e293b" stroke-width="1" />
+    <path d="M 600 630 L 640 520" stroke="#1e293b" stroke-width="1" />
+    <path d="M 850 630 L 760 520" stroke="#1e293b" stroke-width="1" />
+    <path d="M 1050 630 L 880 520" stroke="#1e293b" stroke-width="1" />
+  </g>
+
+  <!-- LEFT BRANDING / TYPOGRAPHY BLOCK -->
+  <g id="Header-and-Titles">
+    <!-- Top Pill Badge -->
+    <g id="Pill-Badge" transform="translate(60, 50)">
+      <rect width="320" height="30" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.5" />
+      <circle cx="16" cy="15" r="5" fill="#06b6d4" filter="url(#glow-filter)" />
+      <text x="30" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Tool Title -->
+    <text x="60" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="900" fill="url(#title-grad)" letter-spacing="3" filter="url(#glow-filter)">SYNTHESIA</text>
+
+    <!-- Subtitle / Investigation Headline -->
+    <g id="Subtitle-Block" transform="translate(60, 155)">
+      <text x="0" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#10b981" letter-spacing="1.5">
+        THE DEATH OF THE GREEN SCREEN
+      </text>
+      <text x="0" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#e2e8f0" letter-spacing="1">
+        &amp; THE RISE OF THE GENERATIVE VIDEO ENTERPRISE
+      </text>
+    </g>
+
+    <!-- Meta Pill Badges -->
+    <g transform="translate(60, 225)">
+      <!-- Category Badge -->
+      <rect width="140" height="26" rx="6" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1" />
+      <text x="12" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#c084fc" letter-spacing="1">CATEGORY: AI VIDEO</text>
+
+      <!-- Status Badge -->
+      <rect x="150" y="0" width="170" height="26" rx="6" fill="#06202a" stroke="#06b6d4" stroke-width="1" />
+      <text x="162" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#67e8f9" letter-spacing="1">FLAGSHIP INVESTIGATION</text>
+    </g>
+  </g>
+
+  <!-- DECONSTRUCTING GREEN SCREEN METAPHOR (Mid-Left Visual Area) -->
+  <g id="Green-Screen-Disruption" transform="translate(60, 290)">
+    <!-- Old Paradigm: Fracturing Green Screen Mesh -->
+    <g opacity="0.85">
+      <!-- Angled Wireframe Grid Screen -->
+      <polygon points="0,40 180,10 180,210 0,240" fill="url(#green-screen-disrupt)" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6 3" />
+      <path d="M 45,32 L 45,232 M 90,24 L 90,224 M 135,16 L 135,216" stroke="#10b981" stroke-opacity="0.4" stroke-width="1" />
+      <path d="M 0,90 L 180,60 M 0,140 L 180,110 M 0,190 L 180,160" stroke="#10b981" stroke-opacity="0.4" stroke-width="1" />
+
+      <!-- Shattering Polygons / Dissolving Pixels -->
+      <polygon points="180,30 210,15 225,45 195,55" fill="#10b981" opacity="0.8" />
+      <polygon points="190,90 230,80 240,110 205,120" fill="#34d399" opacity="0.6" />
+      <polygon points="185,150 215,140 235,175 195,185" fill="#059669" opacity="0.7" />
+      
+      <circle cx="240" cy="40" r="3" fill="#10b981" filter="url(#glow-filter)" />
+      <circle cx="260" cy="95" r="4" fill="#34d399" filter="url(#glow-filter)" />
+      <circle cx="275" cy="160" r="2.5" fill="#6ee7b7" />
+      
+      <!-- Deprecated Tag -->
+      <rect x="10" y="200" width="140" height="22" rx="4" fill="#042f2e" stroke="#10b981" stroke-width="1" />
+      <text x="18" y="215" font-family="monospace" font-size="10" fill="#34d399" font-weight="bold">CHROMA KEY: OBSOLETE</text>
+    </g>
+
+    <!-- Transition Stream (Arrow/Data flow to AI Viewport) -->
+    <path d="M 230,125 Q 310,125 360,140" fill="none" stroke="url(#cyan-violet-grad)" stroke-width="3" stroke-dasharray="8 4" filter="url(#glow-filter)" />
+    <polygon points="365,140 350,132 352,148" fill="#8b5cf6" />
+  </g>
+
+  <!-- MAIN GENERATIVE AI STUDIO VIEWPORT (Center-Right Visual Stage) -->
+  <g id="Generative-Studio-Viewport" transform="translate(450, 70)">
+    <!-- Viewport Container Shadow/Glow Base -->
+    <rect x="0" y="0" width="690" height="440" rx="16" fill="url(#panel-bg)" stroke="url(#panel-border)" stroke-width="2" filter="url(#glow-filter)" />
+
+    <!-- Window Top Header Bar -->
+    <path d="M 0,16 Q 0,0 16,0 L 674,0 Q 690,0 690,16 L 690,42 L 0,42 Z" fill="#0b1329" />
+    <line x1="0" y1="42" x2="690" y2="42" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Window Control Buttons -->
+    <circle cx="24" cy="21" r="5" fill="#ef4444" opacity="0.8" />
+    <circle cx="40" cy="21" r="5" fill="#f59e0b" opacity="0.8" />
+    <circle cx="56" cy="21" r="5" fill="#10b981" opacity="0.8" />
+
+    <!-- Viewport Title HUD -->
+    <text x="80" y="25" font-family="monospace" font-size="11" fill="#94a3b8" letter-spacing="1">SYNTHESIA NEURAL VIDEO ENGINE v4.5 // REAL-TIME RENDER</text>
+    <rect x="560" y="12" width="115" height="18" rx="9" fill="#06202a" stroke="#06b6d4" stroke-width="1" />
+    <circle cx="572" cy="21" r="3" fill="#06b6d4" filter="url(#glow-filter)" />
+    <text x="582" y="24" font-family="sans-serif" font-size="9" font-weight="bold" fill="#67e8f9" letter-spacing="1">AI LIVE SYNTH</text>
+
+    <!-- LEFT INSIDE PANEL: 3D Neural Facial Mesh / Avatar Render Stage -->
+    <g id="Avatar-Neural-Stage" transform="translate(25, 60)">
+      <!-- Stage Background Grid Card -->
+      <rect x="0" y="0" width="310" height="350" rx="10" fill="#030712" stroke="#1e293b" stroke-width="1" />
+      
+      <!-- Camera Target Reticle Overlay -->
+      <circle cx="155" cy="150" r="110" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+      <circle cx="155" cy="150" r="80" fill="none" stroke="#06b6d4" stroke-opacity="0.2" stroke-width="1" />
+      <line x1="155" y1="30" x2="155" y2="270" stroke="#06b6d4" stroke-opacity="0.15" stroke-dasharray="2 2" />
+      <line x1="35" y1="150" x2="275" y2="150" stroke="#06b6d4" stroke-opacity="0.15" stroke-dasharray="2 2" />
+
+      <!-- Vector Neural Facial Mesh Representation -->
+      <g id="Neural-Head-Lattice" transform="translate(155, 140)">
+        <!-- Outer Silhouette Glow Head Shape -->
+        <path d="M -50,-60 Q 0,-90 50,-60 Q 70,-10 55,40 Q 30,85 0,90 Q -30,85 -55,40 Q -70,-10 -50,-60 Z" fill="none" stroke="url(#cyan-violet-grad)" stroke-width="2" filter="url(#glow-filter)" />
+
+        <!-- Structural Facial Mesh Wireframe Lines -->
+        <!-- Eyes Line -->
+        <path d="M -45,-15 L 45,-15" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1" />
+        <!-- Nose Line -->
+        <path d="M 0,-50 L 0,25 M -15,25 L 15,25" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1" />
+        <!-- Mouth Bounds -->
+        <path d="M -25,45 Q 0,60 25,45 Q 0,35 -25,45 Z" fill="#8b5cf6" fill-opacity="0.2" stroke="#d946ef" stroke-width="1.5" />
+
+        <!-- Key Tracking Points (Neural Nodes) -->
+        <circle cx="-22" cy="-15" r="4" fill="#06b6d4" filter="url(#glow-filter)" />
+        <circle cx="22" cy="-15" r="4" fill="#06b6d4" filter="url(#glow-filter)" />
+        <circle cx="0" cy="-35" r="3" fill="#38bdf8" />
+        <circle cx="0" cy="10" r="3" fill="#38bdf8" />
+        <circle cx="-25" cy="45" r="3" fill="#d946ef" />
+        <circle cx="25" cy="45" r="3" fill="#d946ef" />
+        <circle cx="0" cy="52" r="3.5" fill="#d946ef" filter="url(#glow-filter)" />
+        <circle cx="0" cy="90" r="4" fill="#8b5cf6" />
+
+        <!-- Triangulated Poly Meshes (Top Face) -->
+        <polygon points="-50,-60 -22,-15 0,-50" fill="none" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="0.75" />
+        <polygon points="50,-60 22,-15 0,-50" fill="none" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="0.75" />
+        <polygon points="-22,-15 0,-15 0,-35" fill="none" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="0.75" />
+        <polygon points="22,-15 0,-15 0,-35" fill="none" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="0.75" />
+        <polygon points="-22,-15 0,10 -25,45" fill="none" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="0.75" />
+        <polygon points="22,-15 0,10 25,45" fill="none" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="0.75" />
+      </g>
+
+      <!-- Bounding Box / HUD Tracking Brackets -->
+      <path d="M 60,40 L 40,40 L 40,60" fill="none" stroke="#06b6d4" stroke-width="2" />
+      <path d="M 250,40 L 270,40 L 270,60" fill="none" stroke="#06b6d4" stroke-width="2" />
+      <path d="M 60,260 L 40,260 L 40,240" fill="none" stroke="#06b6d4" stroke-width="2" />
+      <path d="M 250,260 L 270,260 L 270,240" fill="none" stroke="#06b6d4" stroke-width="2" />
+
+      <!-- Sub-label -->
+      <rect x="75" y="310" width="160" height="24" rx="12" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+      <text x="92" y="326" font-family="monospace" font-size="10" fill="#38bdf8">AVATAR: ELEANOR_v4 (4K)</text>
+    </g>
+
+    <!-- RIGHT INSIDE PANEL: Multimodal Controls & Generative Waveforms -->
+    <g id="Generative-Controls" transform="translate(355, 60)">
+      
+      <!-- Card 1: Text-to-Speech & Voice Synthesis Envelopes -->
+      <rect x="0" y="0" width="310" height="110" rx="10" fill="#030712" stroke="#1e293b" stroke-width="1" />
+      <text x="15" y="22" font-family="sans-serif" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">VOICE SYNTHESIS &amp; AUDIO ENVELOPE</text>
+      <text x="240" y="22" font-family="monospace" font-size="10" fill="#d946ef">120+ LGS</text>
+
+      <!-- Holographic Audio Waveforms -->
+      <g transform="translate(15, 35)">
+        <!-- Background Spectral Bars -->
+        <rect x="0" y="15" width="4" height="25" rx="2" fill="#8b5cf6" opacity="0.4" />
+        <rect x="8" y="5" width="4" height="45" rx="2" fill="#d946ef" opacity="0.6" />
+        <rect x="16" y="20" width="4" height="15" rx="2" fill="#06b6d4" opacity="0.5" />
+        <rect x="24" y="0" width="4" height="55" rx="2" fill="#38bdf8" filter="url(#glow-filter)" />
+        <rect x="32" y="10" width="4" height="35" rx="2" fill="#8b5cf6" opacity="0.7" />
+        <rect x="40" y="22" width="4" height="10" rx="2" fill="#94a3b8" opacity="0.3" />
+
+        <!-- Continuous Vector Waveform Overlays -->
+        <path d="M 50,28 Q 75,-10 100,28 T 150,28 T 200,28 T 250,28 L 280,28" fill="none" stroke="url(#synth-wave)" stroke-width="2.5" filter="url(#glow-filter)" />
+        <path d="M 50,28 Q 75,60 100,28 T 150,28 T 200,28 T 250,28 L 280,28" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.6" />
+      </g>
+      <text x="15" y="98" font-family="monospace" font-size="9" fill="#64748b">EMBEDDING: NEURAL_ELEVEN_LABS_V2 // LATENCY &lt; 8ms</text>
+
+      <!-- Card 2: Script / Prompt Input Orchestration -->
+      <rect x="0" y="120" width="310" height="110" rx="10" fill="#030712" stroke="#1e293b" stroke-width="1" />
+      <text x="15" y="142" font-family="sans-serif" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">PROMPT TO SCENE ORCHESTRATION</text>
+
+      <!-- Prompt Script HUD -->
+      <rect x="15" y="152" width="280" height="66" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+      <text x="25" y="172" font-family="monospace" font-size="10" fill="#38bdf8">&gt; "Welcome to the Synthesia Enterprise</text>
+      <text x="37" y="187" font-family="monospace" font-size="10" fill="#e2e8f0"> Architecture Dossier. Generating video...</text>
+      <text x="37" y="202" font-family="monospace" font-size="10" fill="#8b5cf6">[Auto-Translating to 42 Localizations]</text>
+      <circle cx="278" cy="200" r="4" fill="#10b981" filter="url(#glow-filter)" />
+
+      <!-- Card 3: Enterprise Micro-Metrics -->
+      <g transform="translate(0, 240)">
+        <rect width="148" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1" />
+        <text x="12" y="22" font-family="sans-serif" font-size="9" font-weight="700" fill="#64748b">COST REDUCTION</text>
+        <text x="12" y="48" font-family="sans-serif" font-size="22" font-weight="900" fill="#10b981" filter="url(#glow-filter)">-85%</text>
+        <text x="75" y="46" font-family="sans-serif" font-size="9" fill="#94a3b8">vs Traditional Studio</text>
+
+        <rect x="162" y="0" width="148" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1" />
+        <text x="174" y="22" font-family="sans-serif" font-size="9" font-weight="700" fill="#64748b">RENDER SPEED</text>
+        <text x="174" y="48" font-family="sans-serif" font-size="22" font-weight="900" fill="#38bdf8" filter="url(#glow-filter)">60 FPS</text>
+        <text x="248" y="46" font-family="sans-serif" font-size="9" fill="#94a3b8">Real-time 4K</text>
+      </g>
+
+    </g>
+
+    <!-- BOTTOM PANEL: Timeline & Keyframe Nodes (Generative Render Track) -->
+    <g id="Video-Timeline-Track" transform="translate(25, 420)">
+      <rect x="0" y="0" width="640" height="70" rx="10" fill="#030712" stroke="#1e293b" stroke-width="1" />
+      
+      <!-- Track Header Icons & Controls -->
+      <circle cx="25" cy="35" r="12" fill="#1e293b" />
+      <polygon points="22,29 31,35 22,41" fill="#38bdf8" />
+      
+      <text x="48" y="32" font-family="sans-serif" font-size="10" font-weight="700" fill="#e2e8f0">TIMELINE TRACK 01</text>
+      <text x="48" y="46" font-family="monospace" font-size="9" fill="#64748b">00:00:14:22 / 00:02:30:00</text>
+
+      <!-- Track Background Bars -->
+      <rect x="180" y="18" width="440" height="34" rx="6" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+      
+      <!-- Video Keyframe Blocks -->
+      <rect x="185" y="22" width="110" height="26" rx="4" fill="#06b6d4" fill-opacity="0.25" stroke="#06b6d4" stroke-width="1" />
+      <text x="195" y="38" font-family="sans-serif" font-size="9" font-weight="bold" fill="#67e8f9">SCENE 01: INTRO</text>
+
+      <rect x="300" y="22" width="160" height="26" rx="4" fill="#8b5cf6" fill-opacity="0.25" stroke="#8b5cf6" stroke-width="1" />
+      <text x="310" y="38" font-family="sans-serif" font-size="9" font-weight="bold" fill="#c084fc">SCENE 02: AI AVATAR TALK</text>
+
+      <rect x="465" y="22" width="145" height="26" rx="4" fill="#d946ef" fill-opacity="0.25" stroke="#d946ef" stroke-width="1" />
+      <text x="475" y="38" font-family="sans-serif" font-size="9" font-weight="bold" fill="#f472b6">SCENE 03: LOCALIZATION</text>
+
+      <!-- Playhead Needle -->
+      <line x1="370" y1="10" x2="370" y2="60" stroke="#f43f5e" stroke-width="2" filter="url(#glow-filter)" />
+      <polygon points="364,10 376,10 370,18" fill="#f43f5e" />
+      <circle cx="370" cy="35" r="4" fill="#ffffff" filter="url(#glow-intense)" />
+    </g>
+
+  </g> <!-- End Viewport Group -->
+
+  <!-- FLOATING DATA NODES & HUD CONNECTORS (Visual Polish) -->
+  <g id="HUD-Nodes" opacity="0.75">
+    <!-- Top Right Corner Tech Specs -->
+    <g transform="translate(1030, 25)">
+      <line x1="0" y1="0" x2="110" y2="0" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
+      <circle cx="110" cy="0" r="2" fill="#38bdf8" />
+      <text x="0" y="15" font-family="monospace" font-size="9" fill="#64748b" text-anchor="start">SYSTEM: ONLINE</text>
+      <text x="0" y="28" font-family="monospace" font-size="9" fill="#38bdf8" text-anchor="start">NODE: US-EAST-GEN</text>
+    </g>
+
+    <!-- Bottom Left Tech Overlay -->
+    <g transform="translate(60, 560)">
+      <line x1="0" y1="0" x2="280" y2="0" stroke="#1e293b" stroke-width="1" />
+      <circle cx="0" cy="0" r="3" fill="#8b5cf6" />
+      <text x="0" y="18" font-family="monospace" font-size="9" fill="#64748b">HELIATECH RESEARCH DIVISION // ENTERPRISE AI REPORT</text>
+    </g>
+    
+    <!-- Floating Connection Nodes -->
+    <g transform="translate(400, 240)" filter="url(#glow-filter)">
+      <circle cx="0" cy="0" r="6" fill="#0f172a" stroke="#06b6d4" stroke-width="2" />
+      <circle cx="0" cy="0" r="2" fill="#06b6d4" />
+      <line x1="6" y1="0" x2="50" y2="-30" stroke="#06b6d4" stroke-width="1" stroke-dasharray="2 2" />
+    </g>
+
+    <g transform="translate(420, 480)" filter="url(#glow-filter)">
+      <circle cx="0" cy="0" r="6" fill="#0f172a" stroke="#d946ef" stroke-width="2" />
+      <circle cx="0" cy="0" r="2" fill="#d946ef" />
+      <line x1="6" y1="0" x2="30" y2="-20" stroke="#d946ef" stroke-width="1" stroke-dasharray="2 2" />
+    </g>
+  </g>
+</svg>

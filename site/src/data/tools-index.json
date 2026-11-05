@@ -162,6 +162,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Fliki",
+    "slug": "fliki-ai",
+    "tagline": "Transform text into high-quality videos with AI voices in minutes.",
+    "category": "AI Video & Audio",
+    "rating": 4.5,
+    "starting_price": "$28/mo",
+    "best_for": "Content marketers, social media managers, and YouTube creators needing high-volume video production.",
+    "affiliate_url": "https://fliki.ai"
+  },
+  {
     "name": "Framer",
     "slug": "framer",
     "tagline": "Design and publish stunning, production-ready responsive websites with the power of a canvas and React under the hood.",
@@ -524,7 +534,8 @@
     "rating": 4.8,
     "starting_price": "$89",
     "best_for": "Product managers, SaaS founders, and content creators who need high-quality product demos without a dedicated video editor.",
-    "affiliate_url": "https://www.screen.studio/"
+    "affiliate_url": "https://www.screen.studio/?via=heliatech",
+    "commission_rate": "30% per sale"
   },
   {
     "name": "Submagic",
@@ -555,7 +566,8 @@
     "rating": 4.6,
     "starting_price": "$22/mo",
     "best_for": "Enterprise Learning & Development teams, global enablement managers, and corporate communications specialists requiring scalable video content across multiple languages.",
-    "affiliate_url": "https://www.synthesia.io"
+    "affiliate_url": "https://www.synthesia.io/?fpr=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Tally",

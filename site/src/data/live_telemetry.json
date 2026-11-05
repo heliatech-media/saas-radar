@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-05 10:16:36 UTC",
+  "last_updated": "2026-11-05 12:25:37 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 64,
-    "total_published_investigations": 155,
-    "reviews_audited": 65,
-    "masterclasses_and_duels": 90,
+    "total_monetized_tools": 65,
+    "total_published_investigations": 157,
+    "reviews_audited": 66,
+    "masterclasses_and_duels": 91,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$22,400 USD",
+    "projected_monthly_mrr": "$22,750 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -324,8 +324,8 @@
     },
     {
       "slug": "screenstudio",
-      "destination": "https://www.screen.studio/",
-      "type": "Catalog Edge Hop"
+      "destination": "https://www.screen.studio/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "submagic",
@@ -335,6 +335,11 @@
     {
       "slug": "supabase",
       "destination": "https://supabase.com/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "synthesia",
+      "destination": "https://www.synthesia.io/?fpr=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -395,6 +400,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-02 12:51:43",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-02 09:58:30",
+      "title": "Cycle Autonome #Tally",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-02 09:58:05",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -414,20 +433,6 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
-    },
-    {
-      "timestamp": "2026-11-01 13:39:20",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-01 09:25:36",
-      "title": "Cycle Autonome #Descript",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]
 }

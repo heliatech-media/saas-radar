@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-11-05 12:29:27",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-05 10:22:38",
+    "title": "Cycle Autonome #Synthesia",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Synthesia et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-11-05 10:20:35",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
@@ -334,19 +348,5 @@
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Murf.ai et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-01 15:31:07",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-01 13:39:20",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]

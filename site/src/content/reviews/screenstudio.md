@@ -5,7 +5,7 @@ tagline: The gold standard for creating high-end, polished screen recordings in 
 category: AI Video
 rating: 4.8
 website_url: https://www.screen.studio/
-affiliate_url: https://www.screen.studio/
+affiliate_url: "https://www.screen.studio/?via=heliatech"
 summary: ScreenStudio is a macOS-native screen recording application that automatically
   adds professional motion graphics, zoom-ins, and cursor smoothing to your raw captures.
   It eliminates the need for manual video editing by applying high-quality production

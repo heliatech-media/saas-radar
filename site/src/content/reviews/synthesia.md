@@ -6,7 +6,7 @@ tagline: Turn text into professional AI videos with human-like avatars and multi
 category: AI Video
 rating: 4.6
 website_url: https://www.synthesia.io
-affiliate_url: https://www.synthesia.io
+affiliate_url: "https://www.synthesia.io/?fpr=heliatech"
 summary: Synthesia is an enterprise-grade AI video generation platform that converts
   text scripts into professional video presentations featuring hyper-realistic digital
   avatars. Designed primarily for corporate learning and development, internal communications,

@@ -13,7 +13,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: synthesia
 image: /images/blog/synthesia.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Synthesia Account ➔
   url: /go/synthesia
 ---
-
 F**or decades, the corporate video production cycle was a graveyard of productivity.** If a Chief Learning Officer wanted to update a compliance video, they faced a logistical nightmare: booking a studio, hiring an actor, setting up lighting, and spending weeks in post-production. If a single line of the script changed six months later, the entire process had to be repeated. This friction didn't just cost money; it ensured that institutional knowledge remained trapped in dry, unread PDFs. Then came Synthesia.
 
 Synthesia didn't just iterate on video editing; it fundamentally re-engineered how humans communicate at scale. By decoupling the 'messenger' from the 'message' through generative AI, they have effectively turned video production into a software problem rather than a hardware one.

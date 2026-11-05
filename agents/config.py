@@ -166,7 +166,9 @@ AFFILIATE_MAP = {
     "fathom": "https://fathom.video/?via=heliatech",
     "instantly-ai": "https://instantly.ai/?via=heliatech",
     "guidde": "https://www.guidde.com/?via=heliatech",
-    "screenclip": "https://screenclip.com/?via=heliatech"
+    "screenclip": "https://screenclip.com/?via=heliatech",
+    "screenstudio": "https://www.screen.studio/?via=heliatech",
+    "synthesia": "https://www.synthesia.io/?fpr=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

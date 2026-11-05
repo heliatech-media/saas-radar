@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-05 10:20:35",
-  "total_links_audited": 87,
-  "healthy_links": 85,
+  "timestamp": "2026-11-05 12:29:27",
+  "total_links_audited": 88,
+  "healthy_links": 86,
   "broken_links_count": 2,
   "health_rate": "97.7%",
   "broken_links": [
@@ -138,7 +138,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=OCYFHZCJ4nttxl&gsxid=OCYFHZCJ4nttxl&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=vAbWG8ae3klKw1&gsxid=vAbWG8ae3klKw1&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -146,6 +146,13 @@
       "slug": "fathom",
       "target_url": "https://fathom.video/?via=heliatech",
       "final_url": "https://www.fathom.ai/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "fliki-ai",
+      "target_url": "https://www.fliki-ai.com",
+      "final_url": "https://fliki-ai.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -350,7 +357,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xJbPphBYgZMIXY&gsxid=xJbPphBYgZMIXY&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ukKUAtgSciKi5i&gsxid=ukKUAtgSciKi5i&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -371,7 +378,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=qdXqJHbQCdeQ4N&gsxid=qdXqJHbQCdeQ4N&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=q0re3TsLePRclf&gsxid=q0re3TsLePRclf&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -489,8 +496,8 @@
     },
     {
       "slug": "screenstudio",
-      "target_url": "https://www.screen.studio/",
-      "final_url": "https://screen.studio/",
+      "target_url": "https://www.screen.studio/?via=heliatech",
+      "final_url": "https://screen.studio/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -517,8 +524,8 @@
     },
     {
       "slug": "synthesia",
-      "target_url": "https://www.synthesia.io",
-      "final_url": "https://www.synthesia.io/",
+      "target_url": "https://www.synthesia.io/?fpr=heliatech",
+      "final_url": "https://www.synthesia.io/?fpr=heliatech",
       "status_code": 200,
       "healthy": true
     },

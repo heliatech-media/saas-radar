@@ -1,12 +1,12 @@
 {
-  "last_synced": "2026-11-05T12:20:29.275291",
+  "last_synced": "2026-11-05T12:25:39.341599",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 18252,
-  "total_requests": 115260,
-  "total_visits": 5658,
-  "total_pageviews": 23881,
+  "total_visitors_network": 18257,
+  "total_requests": 115271,
+  "total_visits": 5659,
+  "total_pageviews": 23885,
   "percent_cached": "56.14%",
   "data_served_mb": 900.9,
   "top_pages": [
@@ -67,7 +67,7 @@
       "views": 150
     },
     {
-      "path": "/blog/lovable-evolution-guide-2026/",
+      "path": "/reviews/linear/",
       "views": 140
     }
   ],
