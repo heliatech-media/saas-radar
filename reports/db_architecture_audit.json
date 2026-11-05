@@ -1,6 +1,6 @@
 {
   "evaluator": "Helia-DatabaseArchitect",
-  "evaluated_at": "2026-11-05T02:01:35.898050",
+  "evaluated_at": "2026-11-05T02:28:43.858500",
   "target": "HeliaTech Automation Marketplace Schema v1.0",
   "scores": {
     "relational_integrity": 100,
