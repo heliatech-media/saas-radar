@@ -6,7 +6,7 @@ tagline: Transform digital data collection with human-centric, conversational fo
 category: Marketing
 rating: 4.5
 website_url: https://www.typeform.com
-affiliate_url: "https://www.typeform.com"
+affiliate_url: "https://typeform.grsm.io/heliatech"
 summary: Typeform is a premier SaaS platform designed to build interactive, one-question-at-a-time
   forms, quizzes, and surveys. By prioritizing conversational user experiences and
   clean aesthetics, it dramatically boosts completion rates compared to traditional

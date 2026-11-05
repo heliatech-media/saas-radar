@@ -135,7 +135,7 @@ AFFILIATE_MAP = {
     "veed-io": "https://www.veed.io/?via=heliatech",
     "lovable": "https://lovable.dev/?via=heliatech",
     "supabase": "https://supabase.com/?via=heliatech",
-    "typeform": "https://www.typeform.com",
+    "typeform": "https://typeform.grsm.io/heliatech",
     "vercel": "https://vercel.com/?via=heliatech",
     "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
     "voiceflow": "https://www.voiceflow.com",

@@ -1,30 +1,34 @@
 {
-  "last_synced": "2026-11-05T06:54:07.008731",
+  "last_synced": "2026-11-05T09:48:09.782685",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 17882,
-  "total_requests": 113506,
-  "total_visits": 5543,
-  "total_pageviews": 23424,
+  "total_visitors_network": 18160,
+  "total_requests": 114548,
+  "total_visits": 5629,
+  "total_pageviews": 23773,
   "percent_cached": "56.14%",
-  "data_served_mb": 885.4,
+  "data_served_mb": 898.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 5880
+      "views": 5900
     },
     {
       "path": "/",
-      "views": 3140
+      "views": 3150
     },
     {
       "path": "/calculator/",
-      "views": 1000
+      "views": 1010
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 370
+    },
+    {
+      "path": "/blog/beehiiv-evolution-guide-2026/",
+      "views": 250
     },
     {
       "path": "/radar/",
@@ -36,22 +40,22 @@
     },
     {
       "path": "/reviews/clickup/",
-      "views": 190
+      "views": 200
     },
     {
       "path": "/reviews/elevenlabs/",
       "views": 190
     },
     {
-      "path": "/reviews/beehiiv/",
-      "views": 180
-    },
-    {
       "path": "/terms/",
       "views": 180
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
+      "path": "/reviews/beehiiv/",
+      "views": 180
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 170
     },
     {
@@ -59,12 +63,8 @@
       "views": 170
     },
     {
-      "path": "/versus/",
-      "views": 160
-    },
-    {
-      "path": "/reviews/resend/",
-      "views": 160
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 170
     },
     {
       "path": "/blog/make-automation-revolution/",
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 21080
+      "views": 21340
     },
     {
       "country": "Morocco",
-      "views": 17050
+      "views": 17290
     },
     {
       "country": "Germany",
@@ -86,7 +86,7 @@
     },
     {
       "country": "Singapore",
-      "views": 1200
+      "views": 1260
     },
     {
       "country": "Belgium",
@@ -105,12 +105,12 @@
       "views": 410
     },
     {
-      "country": "France",
-      "views": 370
+      "country": "Canada",
+      "views": 400
     },
     {
-      "country": "Canada",
-      "views": 350
+      "country": "France",
+      "views": 370
     }
   ],
   "top_referrers": [

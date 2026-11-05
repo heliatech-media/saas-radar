@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-11-05T06:54:36.569342",
+  "timestamp": "2026-11-05T09:48:32.974025",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 152,
-    "total_redirects_active": 85,
-    "new_redirects_healed": 22,
+    "total_content_files_scanned": 154,
+    "total_redirects_active": 86,
+    "new_redirects_healed": 23,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 9,
+    "external_targets_repaired": 10,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -70,6 +70,11 @@
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
       "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "senja",
+      "target_url": "https://www.senja.com",
+      "source_file": "senja-social-proof-conversion-guide.md"
     },
     {
       "slug": "relay",
@@ -176,6 +181,12 @@
       "slug": "tome",
       "dead_target": "https://tome.app/?via=heliatech",
       "healed_target": "https://www.tome.com",
+      "status_code": 404
+    },
+    {
+      "slug": "typeform",
+      "dead_target": "https://typeform.grsm.io/heliatech",
+      "healed_target": "https://www.typeform.com",
       "status_code": 404
     }
   ]

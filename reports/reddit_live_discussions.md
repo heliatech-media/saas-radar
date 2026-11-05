@@ -10,14 +10,41 @@
 
 ### High-Karma Response Script:
 ```markdown
-Having migrated multiple client stacks through this exact issue, here is the raw engineering breakdown:
+Zapier’s pricing model is a legacy tax on simple loops. They charge enterprise-tier margins for what is fundamentally a state-machine that parses JSON payloads and fires HTTP requests. Once you cross 10k tasks and need multi-branch conditional logic, their tiers scale horizontally with your usage while feature sets stay artificially gated. 
 
-* **The Core Bottleneck:** Users being forced to pay $299 - $599/mo for simple webhook tasks.
-* **The Numbers:** $29/mo on Make vs $299/mo on Zapier at 50,000 tasks. Visual error branching vs linear steps.
+Here is the actual engineering math and the operational reality of moving off Zapier.
 
-We did an empirical load benchmark testing this across production workloads: https://heliatech.online/blog/make-vs-zapier
+### The Math: Zapier vs. Make at 50,000 Tasks
 
-Key takeaway: optimize for your operational ceiling before signing annual contracts.
+Let’s look at the baseline at scale (roughly 50k operations/month with complex payloads):
+
+*   **Zapier:** To get anything resembling advanced error handling, custom webhooks at scale, and multi-step paths, you are shoved into their Team or Company tiers. That’s sitting comfortably between **$299 and $599/month**.
+*   **Make (Integromat):** Their comparable mid-to-high tiers handle equivalent volume, data mapping, and execution depth for around **$29 to $105/month**. 
+
+The pricing discrepancy comes down to how they count "tasks." Zapier counts every single step in a linear execution path as a task. If your zaps require looping through 10 line items, Zapier bills you for 10 individual tasks. Make handles arrays and iterators natively, meaning payload chunking doesn’t obliterate your monthly billing quota.
+
+If you want a granular breakdown of the structural differences in execution limits, error handling caps, and data payloads, skim through this [Make vs Zapier technical breakdown](https://heliatech.online/blog/make-vs-zapier). If you're trying to figure out your exact projected burn rate based on your volume and branching complexity, plug your numbers into this [interactive cost calculator](https://heliatech.online/versus) to see the cliff where Zapier stops making financial sense.
+
+---
+
+### The Reality: Pros and Cons of Migrating
+
+Moving off Zapier isn't a free lunch. You are trading one set of architectural compromises for another.
+
+**Pros:**
+*   **Visual Error Branching:** Unlike Zapier’s rigid linear paths, tools like Make give you true DAG (Directed Acyclic Graph) execution flows. You can route failed API responses to specific fallback branches, build granular try/catch blocks visually, and inspect historical payload states step-by-step without digging through raw logs.
+*   **Payload Manipulation:** Native JSON mapping, regex parsing, and array aggregation mean you stop burning steps trying to awkwardly transform data via built-in formatters.
+
+**Cons / Production Battle Scars:**
+*   **Steeper Learning Curve:** Your team will spend the first week breaking things. Make's canvas assumes you understand data structures, arrays, collections, and basic typing. It’s not "drag-and-drop a Google Sheet to Slack" simple.
+*   **Migration Debt:** If you have 200+ zaps running, rewriting them is pure technical debt. Webhook signatures, auth tokens, and payload schemas *will* break during the port. 
+*   **Concurrency Limits:** If you are slamming an endpoint with massive concurrent batch jobs, you will hit rate limits faster on alternative platforms because their queuing infrastructure isn't as robust as AWS SQS/Lambda setups.
+
+### When to skip low-code entirely
+
+If you are running more than 100k tasks/month and doing heavy data transformation, stop using Zapier and Make entirely. Spin up an instance of **n8n** self-hosted on a $20 DigitalOcean droplet or AWS ECS, or write lightweight serverless functions (Node.js/Python) sitting behind API Gateway. 
+
+At a certain volume, paying a SaaS middleman to pass JSON back and forth is just architectural negligence.
 ```
 ---
 

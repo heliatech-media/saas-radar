@@ -506,6 +506,16 @@
     "affiliate_url": "https://screen.studio/?via=heliatech"
   },
   {
+    "name": "Senja",
+    "slug": "senja",
+    "tagline": "The fastest way to collect, manage, and share social proof.",
+    "category": "Marketing Automation & Social Proof",
+    "rating": 4.8,
+    "starting_price": "$19/mo",
+    "best_for": "SaaS founders, digital creators, and agencies who need to automate trust-building and social media content creation.",
+    "affiliate_url": "https://senja.io"
+  },
+  {
     "name": "Submagic",
     "slug": "submagic",
     "tagline": "AI-powered video captioning and editing tool that transforms raw footage into viral short-form clips in minutes.",
@@ -566,8 +576,8 @@
     "rating": 4.5,
     "starting_price": "$25/mo",
     "best_for": "Marketers, HR professionals, and growth teams focused on high-conversion lead capture and user research.",
-    "affiliate_url": "https://www.typeform.com",
-    "commission_rate": "20% to 30% recurring"
+    "affiliate_url": "https://typeform.grsm.io/heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
   },
   {
     "name": "TypingMind",

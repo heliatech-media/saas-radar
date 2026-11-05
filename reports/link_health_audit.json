@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-05 06:55:07",
-  "total_links_audited": 85,
-  "healthy_links": 82,
+  "timestamp": "2026-11-05 09:49:01",
+  "total_links_audited": 86,
+  "healthy_links": 83,
   "broken_links_count": 3,
   "health_rate": "96.5%",
   "broken_links": [
@@ -146,7 +146,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Nphq9fjinVEwMa&gsxid=Nphq9fjinVEwMa&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=oWGLqsO73vZv0I&gsxid=oWGLqsO73vZv0I&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -358,7 +358,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=4atTLkHYB65yi1&gsxid=4atTLkHYB65yi1&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=UxeCV4n8NAlybu&gsxid=UxeCV4n8NAlybu&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -379,7 +379,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=1DnpzWYTTWowcg&gsxid=1DnpzWYTTWowcg&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=8bABmGpEB6Qp7V&gsxid=8bABmGpEB6Qp7V&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -485,6 +485,13 @@
       "slug": "screen-studio",
       "target_url": "https://screen.studio/?via=heliatech",
       "final_url": "https://screen.studio/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "senja",
+      "target_url": "https://www.senja.com",
+      "final_url": "https://www.senja.com/",
       "status_code": 200,
       "healthy": true
     },
