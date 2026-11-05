@@ -1,16 +1,21 @@
 {
-  "timestamp": "2026-11-05T18:49:11.117825",
+  "timestamp": "2026-11-05T20:55:35.495315",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 169,
-    "total_redirects_active": 98,
+    "total_content_files_scanned": 171,
+    "total_redirects_active": 95,
     "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 10,
     "content_files_modified": 0
   },
   "healed_redirects": [
+    {
+      "slug": "bannerbear",
+      "target_url": "https://www.bannerbear.com",
+      "source_file": "bannerbear-evolution-guide-2026.md"
+    },
     {
       "slug": "zoominfo",
       "target_url": "https://www.zoominfo.com",
@@ -120,11 +125,6 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "videoask",
-      "target_url": "https://www.videoask.com",
-      "source_file": "videoask-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-05 18:47:15 UTC",
+  "last_updated": "2026-11-05 20:53:21 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 75,
-    "total_published_investigations": 169,
-    "reviews_audited": 72,
-    "masterclasses_and_duels": 97,
+    "total_monetized_tools": 72,
+    "total_published_investigations": 171,
+    "reviews_audited": 73,
+    "masterclasses_and_duels": 98,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$26,250 USD",
+    "projected_monthly_mrr": "$25,200 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -164,22 +164,12 @@
     },
     {
       "slug": "gamma-app",
-      "destination": "https://gamma.app",
-      "type": "Catalog Edge Hop"
-    },
-    {
-      "slug": "getimg-ai",
-      "destination": "https://getimg.ai/?via=heliatech",
+      "destination": "https://gamma.app/signup?r=heliatech",
       "type": "Commission Partner"
     },
     {
       "slug": "guidde",
       "destination": "https://www.guidde.com/?via=heliatech",
-      "type": "Commission Partner"
-    },
-    {
-      "slug": "headshotpro",
-      "destination": "https://www.headshotpro.com/?via=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -328,12 +318,12 @@
       "type": "Commission Partner"
     },
     {
-      "slug": "riverside",
+      "slug": "riverside-fm",
       "destination": "https://riverside.fm/?via=heliatech",
       "type": "Commission Partner"
     },
     {
-      "slug": "riverside-fm",
+      "slug": "riverside",
       "destination": "https://riverside.fm/?via=heliatech",
       "type": "Commission Partner"
     },
@@ -393,11 +383,6 @@
       "type": "Commission Partner"
     },
     {
-      "slug": "transistor-fm",
-      "destination": "https://transistor.fm/?via=heliatech",
-      "type": "Commission Partner"
-    },
-    {
       "slug": "typeform",
       "destination": "https://typeform.grsm.io/heliatech",
       "type": "Commission Partner"
@@ -418,14 +403,14 @@
       "type": "Commission Partner"
     },
     {
-      "slug": "veed-io",
-      "destination": "https://www.veed.io/?via=heliatech",
-      "type": "Commission Partner"
-    },
-    {
       "slug": "vercel",
       "destination": "https://vercel.com/?via=heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "videoask",
+      "destination": "https://www.videoask.com",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "voiceflow",
@@ -450,6 +435,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-03 06:58:35",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-03 03:51:51",
+      "title": "Cycle Autonome #Tally",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-03 03:51:41",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -465,20 +464,6 @@
     },
     {
       "timestamp": "2026-11-02 21:43:41",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-02 15:56:30",
-      "title": "Cycle Autonome #Descript",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-02 15:56:20",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",

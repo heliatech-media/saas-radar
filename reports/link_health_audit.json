@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-05 18:50:58",
-  "total_links_audited": 98,
-  "healthy_links": 95,
+  "timestamp": "2026-11-05 20:57:28",
+  "total_links_audited": 95,
+  "healthy_links": 92,
   "broken_links_count": 3,
-  "health_rate": "96.9%",
+  "health_rate": "96.8%",
   "broken_links": [
     {
       "slug": "minicong",
@@ -63,6 +63,13 @@
       "slug": "axiom-ai",
       "target_url": "https://axiom.ai",
       "final_url": "https://axiom.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "bannerbear",
+      "target_url": "https://www.bannerbear.com",
+      "final_url": "https://www.bannerbear.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -153,7 +160,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LCHSzGsQ7y38ij&gsxid=LCHSzGsQ7y38ij&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=PZX3N9Rj8iXzNF&gsxid=PZX3N9Rj8iXzNF&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -180,29 +187,15 @@
     },
     {
       "slug": "gamma-app",
-      "target_url": "https://gamma.app",
-      "final_url": "https://gamma.app/",
+      "target_url": "https://gamma.app/signup?r=heliatech",
+      "final_url": "https://gamma.app/signup?r=heliatech",
       "status_code": 403,
-      "healthy": true
-    },
-    {
-      "slug": "getimg-ai",
-      "target_url": "https://getimg.ai/?via=heliatech",
-      "final_url": "https://getimg.ai/?via=heliatech",
-      "status_code": 200,
       "healthy": true
     },
     {
       "slug": "guidde",
       "target_url": "https://www.guidde.com/?via=heliatech",
       "final_url": "https://www.guidde.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
-    },
-    {
-      "slug": "headshotpro",
-      "target_url": "https://www.headshotpro.com/?via=heliatech",
-      "final_url": "https://www.headshotpro.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -393,7 +386,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=RZ6vPT8SRoEdty&gsxid=RZ6vPT8SRoEdty&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=y5qEl9pjVMryMt&gsxid=y5qEl9pjVMryMt&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -414,7 +407,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Pbzh49rXPEm1wC&gsxid=Pbzh49rXPEm1wC&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=UPc2F63WDQetIR&gsxid=UPc2F63WDQetIR&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -449,7 +442,7 @@
     {
       "slug": "rask-ai",
       "target_url": "https://www.rask.ai",
-      "final_url": "https://www.rask.ai/home",
+      "final_url": "https://www.rask.ai/",
       "status_code": 200,
       "healthy": true
     },
@@ -602,13 +595,6 @@
       "healthy": true
     },
     {
-      "slug": "transistor-fm",
-      "target_url": "https://transistor.fm/?via=heliatech",
-      "final_url": "https://transistor.fm/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
-    },
-    {
       "slug": "tray-io",
       "target_url": "https://tray.ai",
       "final_url": "https://tray.ai/",
@@ -645,13 +631,6 @@
     },
     {
       "slug": "veed",
-      "target_url": "https://www.veed.io/?via=heliatech",
-      "final_url": "https://www.veed.io/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
-    },
-    {
-      "slug": "veed-io",
       "target_url": "https://www.veed.io/?via=heliatech",
       "final_url": "https://www.veed.io/?via=heliatech",
       "status_code": 200,

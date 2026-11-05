@@ -43,6 +43,16 @@
     "affiliate_url": "https://axiom.ai"
   },
   {
+    "name": "Bannerbear",
+    "slug": "bannerbear",
+    "tagline": "Automate your marketing collateral with an API-first image and video generation engine.",
+    "category": "Automation",
+    "rating": 4.7,
+    "starting_price": "$49/mo",
+    "best_for": "E-commerce brands, high-volume content publishers, and SaaS developers building automated reporting or social sharing features.",
+    "affiliate_url": "https://www.bannerbear.com"
+  },
+  {
     "name": "Beehiiv",
     "slug": "beehiiv",
     "tagline": "The newsletter platform built for growth by the team behind Morning Brew.",
@@ -200,7 +210,8 @@
     "rating": 4.7,
     "starting_price": "$10/mo",
     "best_for": "Sales teams, startup founders, and marketing managers who need high-fidelity decks without manual design work.",
-    "affiliate_url": "https://gamma.app"
+    "affiliate_url": "https://gamma.app/signup?r=heliatech",
+    "commission_rate": "200 Credits per signup + 20% recurring commission for partners"
   },
   {
     "name": "Guidde",

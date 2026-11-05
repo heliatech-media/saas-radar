@@ -5,7 +5,7 @@ tagline: A new medium for presenting ideas, powered by AI.
 category: AI Presentation & Design
 rating: 4.7
 website_url: https://gamma.app
-affiliate_url: https://gamma.app
+affiliate_url: "https://gamma.app/signup?r=heliatech"
 summary: Gamma is an AI-native workspace that generates professional presentations,
   documents, and webpages from simple text prompts or outlines. Unlike traditional
   slide software, it uses a fluid, responsive 'card' system that automatically handles

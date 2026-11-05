@@ -147,7 +147,7 @@ We recommend VideoAsk for teams that have already optimized their top-of-funnel 
 
 ### Does VideoAsk work with my CRM?
 
-Yes, VideoAsk has native integrations with HubSpot, Salesforce, and Zapier, allowing you to map video responses and transcripts directly to lead records.
+Yes, VideoAsk has native integrations with HubSpot, Salesforce, and [Zapier](/reviews/zapier), allowing you to map video responses and transcripts directly to lead records.
 
 ### What happens if I go over my monthly minute limit?
 

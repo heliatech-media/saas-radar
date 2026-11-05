@@ -619,6 +619,19 @@
         "saas",
         "automation"
       ]
+    },
+    "podcastle": {
+      "id": 4984057,
+      "url": "https://dev.to/heliatech/podcastle-the-ai-studio-revolution-and-the-enterprise-guide-to-scalable-audio-production-2n8n",
+      "title": "Podcastle: The AI Studio Revolution and the Enterprise Guide to Scalable Audio Production",
+      "canonical_url": "https://heliatech.online/blog/podcastle",
+      "published": true,
+      "tags": [
+        "podcastle",
+        "productivity",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null

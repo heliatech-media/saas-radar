@@ -13,7 +13,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: videoask
 image: /images/blog/videoask.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free VideoAsk Account ➔
   url: /go/videoask
 ---
-
 ## The Death of the Static Form
 
 **W**e live in an era of digital fatigue. Your prospects are drowning in a sea of sterile, text-based lead forms that feel more like administrative hurdles than opportunities for connection. For years, B2B companies have treated customers like data points, funneling them through rigid, soul-crushing surveys that bleed conversion rates dry. Enter VideoAsk, the disruptor that finally brings the human element back to the digital frontier.

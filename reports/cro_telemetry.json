@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-05 18:47:15",
-  "total_pages_audited": 97,
-  "monetized_pages": 94,
-  "total_ctas_tracked": 430,
+  "timestamp": "2026-11-05 20:53:21",
+  "total_pages_audited": 98,
+  "monetized_pages": 95,
+  "total_ctas_tracked": 432,
   "average_cro_score": "88.7/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -53,6 +53,15 @@
       "type": "blog",
       "word_count": 1410,
       "cta_count": 3,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "bannerbear-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 724,
+      "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -134,15 +143,6 @@
       "type": "blog",
       "word_count": 1104,
       "cta_count": 3,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "castmagic-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 911,
-      "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
