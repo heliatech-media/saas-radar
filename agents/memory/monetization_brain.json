@@ -1,13 +1,13 @@
 {
   "domain": "Affiliate Revenue Engineering & Partner Arbitrage",
-  "version": "6.0",
-  "last_evolution": "2026-11-05T21:10:00.000000",
+  "version": "6.1",
+  "last_evolution": "2026-11-05T21:25:00.000000",
   "total_heuristics_learned": 5,
   "heuristics": [
     {
       "id": "HEUR-MON-01",
-      "name": "Direct Sovereign Partner Routing & Marketplace Funneling",
-      "rule": "Decommission aggregator wrappers (Skimlinks) to eliminate the 25% middleman penalty. Route Tier-1 software directly to primary partner endpoints (Make 20% recurring, ElevenLabs 22%, Brevo, PartnerStack). Route unmanaged SaaS tools to internal technical reviews (/reviews/[slug]/) or matched automation blueprints (/templates/[slug]/), ensuring 100% margin retention and zero third-party dependency.",
+      "name": "Direct Sovereign Partner Routing & Internal Authority",
+      "rule": "Decommission aggregator wrappers (Skimlinks) to eliminate the 25% middleman penalty. Route Tier-1 software directly to approved sovereign partner endpoints (Make 20% recurring, ElevenLabs 22%, Brevo, PartnerStack). Route unmanaged SaaS tools to internal technical reviews (/reviews/[slug]/) or alternative Tier-1 partners. Enforce strict stealth mode for the marketplace (no public routing or public links until explicit launch order).",
       "confidence_score": 0.99,
       "impact": "Secures 100% direct revenue attribution without 25% aggregator deductions or third-party approval hurdles."
     },
@@ -27,10 +27,10 @@
     },
     {
       "id": "HEUR-MON-04",
-      "name": "Marketplace Blueprint Conversion Engine",
-      "rule": "When inbound traffic navigates non-partner comparisons or unmonetized vendor pages, inject targeted contextual recommendations for vetted HeliaTech Automation Blueprints (/templates/). Convert high-intent evaluation traffic into direct marketplace blueprint purchases where HeliaTech captures 20% platform commission with 80% creator payout on 100% sovereign rails.",
+      "name": "Direct Sovereign Alternative Arbitrage",
+      "rule": "When inbound traffic navigates non-partner comparisons or unmonetized vendor pages (e.g., Zapier, legacy SMTP), dynamically inject high-converting contextual recommendations for our direct Tier-1 sovereign partners (e.g., Make.com 20% recurring, Brevo, ElevenLabs). The marketplace remains strictly locked in stealth staging (zero public links, zero automated promotion) until user activation.",
       "confidence_score": 0.99,
-      "impact": "Monetizes long-tail comparison queries into proprietary marketplace transactions, yielding 4.2x higher effective EPC than generic affiliate wrappers."
+      "impact": "Maximizes conversion toward approved direct high-margin recurring programs with zero dilution and zero premature marketplace exposure."
     },
     {
       "id": "HEUR-MON-05",
