@@ -148,7 +148,7 @@ AFFILIATE_MAP = {
     "resend": "https://resend.com/?via=heliatech",
     "riverside": "https://riverside.fm/?via=heliatech",
     "tally": "https://tally.so/?via=heliatech",
-    "tome": "https://gamma.app",
+    "tome": "https://tome.app/?via=heliatech",
     "veed": "https://www.veed.io/?via=heliatech",
     "klap": "https://klap.app/?via=heliatech",
     "v0": "https://v0.dev/?via=heliatech",
