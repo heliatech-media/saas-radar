@@ -1,84 +1,84 @@
 {
-  "last_synced": "2026-11-05T04:37:03.019341",
+  "last_synced": "2026-11-05T04:47:09.079378",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-08 - 2026-11-05)",
-  "total_visitors_network": 17142,
-  "total_requests": 111846,
-  "total_visits": 5314,
-  "total_pageviews": 22649,
+  "total_visitors_network": 17188,
+  "total_requests": 111931,
+  "total_visits": 5328,
+  "total_pageviews": 22696,
   "percent_cached": "56.14%",
-  "data_served_mb": 875.8,
+  "data_served_mb": 876.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 5610
+      "views": 4900
     },
     {
       "path": "/",
-      "views": 2830
+      "views": 3500
     },
     {
       "path": "/calculator/",
-      "views": 1040
+      "views": 1000
+    },
+    {
+      "path": "/reviews/riverside/",
+      "views": 400
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 380
+      "views": 400
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 270
-    },
-    {
-      "path": "/awards/",
-      "views": 250
-    },
-    {
-      "path": "/radar/",
-      "views": 230
-    },
-    {
-      "path": "/blog/",
-      "views": 210
-    },
-    {
-      "path": "/versus/",
-      "views": 190
-    },
-    {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 180
-    },
-    {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
-    },
-    {
-      "path": "/reviews/apollo-io/",
-      "views": 150
-    },
-    {
-      "path": "/sentinel/",
-      "views": 150
+      "path": "/reviews/cursor/",
+      "views": 400
     },
     {
       "path": "/reviews/make/",
-      "views": 140
+      "views": 300
     },
     {
-      "path": "/blog/riverside-fm-evolution-guide-2026/",
-      "views": 140
+      "path": "/blog/beehiiv-vs-brevo/",
+      "views": 300
+    },
+    {
+      "path": "/reviews/supabase/",
+      "views": 300
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 300
+    },
+    {
+      "path": "/versus/airtable-vs-retool/",
+      "views": 300
+    },
+    {
+      "path": "/versus/",
+      "views": 300
+    },
+    {
+      "path": "/versus/make-vs-zapier/",
+      "views": 200
+    },
+    {
+      "path": "/reviews/n8n/",
+      "views": 200
+    },
+    {
+      "path": "/media-kit/",
+      "views": 200
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 20980
+      "views": 21010
     },
     {
       "country": "Morocco",
-      "views": 15460
+      "views": 15480
     },
     {
       "country": "Germany",
