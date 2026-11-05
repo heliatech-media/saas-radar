@@ -1,0 +1,28 @@
+{
+  "domain": "Zero-Trust Marketplace Security, Sandbox Auditing & Secret Scrubbing",
+  "version": "1.0",
+  "last_evolution": "2026-11-05T02:01:36.531150",
+  "heuristics": [
+    {
+      "id": "HEUR-SEC-01",
+      "name": "Zero Leaked Secrets in Uploaded Workflows",
+      "rule": "Every uploaded n8n or Make JSON must be scanned with entropy and regex checkers for OpenAI keys (sk-), Anthropic keys, AWS credentials, and Stripe secret tokens. If detected, reject or auto-scrub with env placeholder (e.g. {{OPENAI_API_KEY}}).",
+      "confidence_score": 1.0,
+      "impact": "Protects community creators from accidental catastrophic credential theft."
+    },
+    {
+      "id": "HEUR-SEC-02",
+      "name": "SSRF & Internal Subnet Airgap",
+      "rule": "All HTTP request nodes inside workflows must be verified against private IP ranges (127.0.0.1, 10.0.0.0/8, 192.168.0.0/16, 169.254.169.254) to block Server-Side Request Forgery.",
+      "confidence_score": 0.99,
+      "impact": "Prevents malicious users from deploying exploit workflows."
+    },
+    {
+      "id": "HEUR-SEC-03",
+      "name": "HMAC Signed Download Token Gate",
+      "rule": "Digital goods download endpoints must require cryptographically signed HMAC-SHA256 tokens expiring in 24 hours, restricted to 5 downloads per transaction.",
+      "confidence_score": 1.0,
+      "impact": "Eliminates unpaid piracy and hotlinking of digital assets."
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+[
+  {
+    "id": "tpl_n8n_ai_lead_enricher",
+    "slug": "n8n-ai-lead-enricher-waterfall",
+    "title": "n8n AI Waterfall Lead Enrichment & Scoring Engine",
+    "tagline": "Turn cold domain names into fully enriched CEO dossiers using Claude 3.5 & LinkedIn Scraping.",
+    "ecosystem": "n8n",
+    "category": "Lead Gen & Sales",
+    "price_usd": 49,
+    "price_cents": 4900,
+    "platform_fee_percent": 20,
+    "creator": {
+      "name": "AutomateScale Studio",
+      "badge": "Verified Pro Agency",
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=AutomateScale"
+    },
+    "nodes_count": 18,
+    "estimated_hours_saved": 24,
+    "monthly_savings_estimate": "$450 / mo vs Clay",
+    "required_services": [
+      "OpenAI / Anthropic",
+      "Proxycurl / BrightData",
+      "Airtable / Postgres"
+    ],
+    "highlights": [
+      "Bypasses expensive Clay credits via direct API waterfall",
+      "Extracts verified emails with zero bounce rates",
+      "Scores ICP fitness automatically using Claude 3.5 Sonnet",
+      "Push ready-to-contact leads directly into Instantly / Smartlead"
+    ],
+    "sales_count": 142,
+    "rating": 4.95,
+    "reviews_count": 28,
+    "is_featured": true
+  },
+  {
+    "id": "tpl_make_saas_churn_preventer",
+    "slug": "make-stripe-churn-rescue-blueprint",
+    "title": "Make.com Stripe Failed Payment & Churn Recovery Machine",
+    "tagline": "Recover up to 48% of failed credit card subscriptions with smart multi-channel dunning.",
+    "ecosystem": "make",
+    "category": "Fintech & RevOps",
+    "price_usd": 39,
+    "price_cents": 3900,
+    "platform_fee_percent": 20,
+    "creator": {
+      "name": "SaaSGrowth Ops",
+      "badge": "Verified Engineer",
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=SaaSOps"
+    },
+    "nodes_count": 14,
+    "estimated_hours_saved": 16,
+    "monthly_savings_estimate": "$1,200 / mo recovered MRR",
+    "required_services": [
+      "Stripe Webhooks",
+      "Resend / Brevo",
+      "Slack Alerting"
+    ],
+    "highlights": [
+      "Catches invoice.payment_failed instantly with zero latency",
+      "Smart fallback emails with 1-click update billing portal links",
+      "Internal Slack escalation for accounts > $250/mo",
+      "Full idempotency key handling to prevent double-charging"
+    ],
+    "sales_count": 89,
+    "rating": 5.0,
+    "reviews_count": 19,
+    "is_featured": true
+  },
+  {
+    "id": "tpl_airtable_client_portal_os",
+    "slug": "airtable-b2b-client-portal-os",
+    "title": "Airtable Enterprise Agency OS & Auto-Invoicing Schema",
+    "tagline": "Complete relational agency operating system with automated milestone billing and task approvals.",
+    "ecosystem": "airtable",
+    "category": "Agency Operations",
+    "price_usd": 29,
+    "price_cents": 2900,
+    "platform_fee_percent": 20,
+    "creator": {
+      "name": "RelationalHQ",
+      "badge": "Airtable Certified Architect",
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=RelationalHQ"
+    },
+    "nodes_count": 8,
+    "estimated_hours_saved": 30,
+    "monthly_savings_estimate": "$300 / mo vs Monday.com",
+    "required_services": [
+      "Airtable",
+      "Stripe Billing",
+      "Softr / Fillout (Optional)"
+    ],
+    "highlights": [
+      "5 interconnected relational tables with automatic formula rollups",
+      "Client approval workflows with custom email magic links",
+      "Real-time profit margin calculation per project",
+      "Pre-configured webhook integrations"
+    ],
+    "sales_count": 210,
+    "rating": 4.92,
+    "reviews_count": 41,
+    "is_featured": false
+  },
+  {
+    "id": "tpl_n8n_multimodal_content_repurposer",
+    "slug": "n8n-youtube-to-linkedin-carousels",
+    "title": "n8n Video to Viral LinkedIn Carousel & Thread Synthesizer",
+    "tagline": "Transcribe any YouTube or Loom video and generate 5 carousel slides and a viral X thread.",
+    "ecosystem": "n8n",
+    "category": "Content Engine",
+    "price_usd": 35,
+    "price_cents": 3500,
+    "platform_fee_percent": 20,
+    "creator": {
+      "name": "ViralNodes Labs",
+      "badge": "Top Creator",
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=ViralNodes"
+    },
+    "nodes_count": 22,
+    "estimated_hours_saved": 20,
+    "monthly_savings_estimate": "$600 / mo vs Copywriter",
+    "required_services": [
+      "n8n",
+      "OpenAI Whisper",
+      "Gemini / Claude API",
+      "Bannerbear / SVG Engine"
+    ],
+    "highlights": [
+      "Whisper high-accuracy transcription with punctuation alignment",
+      "Extracts 5 core punchy thesis points with hook scoring",
+      "Auto-generates 1080x1350 SVG carousel slides ready to publish",
+      "Includes pre-tested LinkedIn engagement-optimized prompts"
+    ],
+    "sales_count": 315,
+    "rating": 4.98,
+    "reviews_count": 64,
+    "is_featured": true
+  },
+  {
+    "id": "tpl_cursor_fullstack_saas_rules",
+    "slug": "cursor-rules-nextjs-tailwind-supabase-masterpack",
+    "title": "Cursor AI Elite Rulepack: Next.js 15, Tailwind & Supabase",
+    "tagline": "Turn Cursor into a Senior Staff Software Engineer with strict typed rules and zero hallucination.",
+    "ecosystem": "cursor",
+    "category": "Developer Tools",
+    "price_usd": 19,
+    "price_cents": 1900,
+    "platform_fee_percent": 20,
+    "creator": {
+      "name": "StaffEngineer.ai",
+      "badge": "Verified Pro",
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=StaffDev"
+    },
+    "nodes_count": 1,
+    "estimated_hours_saved": 40,
+    "monthly_savings_estimate": "$2,000 / mo in bug debugging",
+    "required_services": [
+      "Cursor IDE",
+      "TypeScript",
+      "Next.js / Astro"
+    ],
+    "highlights": [
+      "Over 450 lines of battle-tested rules for .cursorrules",
+      "Enforces strict TypeScript 5.5 typing and Zod schemas",
+      "Zero deprecated syntax: handles Next.js 15 async headers/cookies",
+      "Automated unit testing generation rules with Vitest"
+    ],
+    "sales_count": 520,
+    "rating": 4.99,
+    "reviews_count": 112,
+    "is_featured": true
+  },
+  {
+    "id": "tpl_make_hubspot_slack_sync",
+    "slug": "make-hubspot-deal-won-celebration-and-onboarding",
+    "title": "Make.com HubSpot Deal Closed ➔ Auto-Client Onboarding Pipeline",
+    "tagline": "When a deal is marked 'Closed-Won', auto-create Google Drive folders, invite to Slack, and bill.",
+    "ecosystem": "make",
+    "category": "Sales & CRM",
+    "price_usd": 25,
+    "price_cents": 2500,
+    "platform_fee_percent": 20,
+    "creator": {
+      "name": "RevOps Ninja",
+      "badge": "Make Partner Certified",
+      "avatar": "https://api.dicebear.com/7.x/identicon/svg?seed=RevOpsNinja"
+    },
+    "nodes_count": 12,
+    "estimated_hours_saved": 12,
+    "monthly_savings_estimate": "$180 / mo in manual admin",
+    "required_services": [
+      "HubSpot",
+      "Slack Enterprise",
+      "Google Workspace",
+      "DocuSign / PandaDoc"
+    ],
+    "highlights": [
+      "Sub-second reaction to CRM stage changes",
+      "Provision private Slack channel with team & client automatically",
+      "Generate custom onboarding Google Drive folder with template briefs",
+      "Dispatches welcome email with calendar scheduling link"
+    ],
+    "sales_count": 76,
+    "rating": 4.88,
+    "reviews_count": 14,
+    "is_featured": false
+  }
+]

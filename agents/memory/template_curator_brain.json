@@ -1,0 +1,21 @@
+{
+  "domain": "Template Quality Assurance, Workflow Curation & ROI Modeling",
+  "version": "1.0",
+  "last_evolution": "2026-11-05T02:01:36.941871",
+  "heuristics": [
+    {
+      "id": "HEUR-CUR-01",
+      "name": "Minimum 10x ROI Value Gate",
+      "rule": "Every paid template must save at least 10 hours of manual engineering or $300/mo in equivalent SaaS fees. Templates offering trivial single-step actions must be offered for free as lead magnets.",
+      "confidence_score": 0.99,
+      "impact": "Maintains 5-star marketplace rating and eliminates refund requests."
+    },
+    {
+      "id": "HEUR-CUR-02",
+      "name": "Deterministic Node & Error-Handling Validation",
+      "rule": "Every n8n and Make blueprint must include explicit error-handling branches (e.g. retry on rate-limit, fallback alerting node) before being approved for public sale.",
+      "confidence_score": 0.98,
+      "impact": "Guarantees production reliability for buyers."
+    }
+  ]
+}

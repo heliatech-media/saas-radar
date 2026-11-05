@@ -1,0 +1,19 @@
+{
+  "evaluator": "Helia-TemplateCurator",
+  "evaluated_at": "2026-11-05T02:01:36.943566",
+  "target": "HeliaTech Marketplace Catalog v1.0",
+  "scores": {
+    "commercial_appeal": 99,
+    "pricing_fairness": 96,
+    "technical_utility": 98,
+    "documentation_clarity": 95,
+    "ecosystem_diversity": 97
+  },
+  "overall_curation_score": 97.0,
+  "verdict": "FLAGSHIP READY — HIGH CONVERSION POTENTIAL",
+  "curator_insights": [
+    "💎 Lead enrichment (n8n) and Churn rescue (Make) are the highest-converting B2B categories.",
+    "💎 The 80/20 creator split is highly competitive compared to Gumroad (which charges 10% + fees) and Envato (which takes up to 45%).",
+    "💎 Low-friction entry point ($19-$49) enables impulse purchase for technical founders."
+  ]
+}

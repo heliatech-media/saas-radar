@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import templates from '../../data/templates_catalog.json';
+
+export async function getStaticPaths() {
+  return templates.map((tpl) => ({
+    params: { slug: tpl.slug },
+    props: { template: tpl }
+  }));
+}
+
+const { template } = Astro.props;
+const pageTitle = `${template.title} | HeliaTech Marketplace`;
+const pageDescription = template.tagline;
+---
+
+<Layout title={pageTitle} description={pageDescription} noindex={true}>
+  <div class="relative max-w-5xl mx-auto px-4 sm:px-6 pt-12 pb-24">
+    
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-slate-400 mb-8">
+      <a href="/templates" class="hover:text-cyan-400 transition-colors">Marketplace</a>
+      <span>/</span>
+      <span class="text-slate-500 uppercase">{template.ecosystem}</span>
+      <span>/</span>
+      <span class="text-cyan-300 truncate">{template.slug}</span>
+    </nav>
+
+    <!-- Top Grid: Left Details & Right Purchase Box -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      
+      <!-- Main Content (2 Cols) -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <!-- Header -->
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            Verified Production Blueprint ({template.ecosystem.toUpperCase()})
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight mb-4">
+            {template.title}
+          </h1>
+          <p class="text-base text-slate-300 font-light leading-relaxed">
+            {template.tagline}
+          </p>
+        </div>
+
+        <!-- Creator Card -->
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src={template.creator.avatar} alt={template.creator.name} class="w-10 h-10 rounded-full border border-slate-700" />
+            <div>
+              <div class="text-white font-bold text-sm flex items-center gap-2">
+                {template.creator.name}
+                <span class="text-[10px] px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 font-mono">
+                  {template.creator.badge}
+                </span>
+              </div>
+              <div class="text-xs text-slate-400 font-mono">
+                ★ {template.rating} / 5.0 ({template.reviews_count} avis certifiés) • {template.sales_count} installations
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights & Problem Solved -->
+        <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span>⚡</span> Ce que ce blueprint résout concrètement
+          </h2>
+          <ul class="space-y-3 text-sm text-slate-300 font-light">
+            {template.highlights.map((h) => (
+              <li class="flex items-start gap-2.5">
+                <span class="text-cyan-400 font-mono font-bold">✓</span>
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Technical Specifications -->
+        <div class="p-6 rounded-3xl bg-slate-950/80 border border-slate-800 space-y-4">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span>🛠️</span> Spécifications d'Ingénierie &amp; Prérequis
+          </h2>
+          <div class="grid grid-cols-2 gap-4 text-xs font-mono">
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-slate-400 block mb-1">Nombre d'Étapes / Nodes :</span>
+              <span class="text-white font-bold text-sm">{template.nodes_count} Nodes</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-slate-400 block mb-1">Temps de Dev Économisé :</span>
+              <span class="text-emerald-400 font-bold text-sm">~{template.estimated_hours_saved} Heures</span>
+            </div>
+            <div class="col-span-2 p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-slate-400 block mb-1">Services &amp; Clés API Nécessaires :</span>
+              <span class="text-cyan-300 font-bold">{template.required_services.join(' • ')}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Sticky Purchase Box (1 Col) -->
+      <div class="space-y-6">
+        <div class="sticky top-24 p-6 rounded-3xl bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border border-cyan-500/40 shadow-[0_0_30px_rgba(6,182,212,0.1)] space-y-6">
+          
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Licence Commerciale</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                Prêt à Importer
+              </span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-black text-white font-mono">${template.price_usd}</span>
+              <span class="text-xs text-slate-400 font-mono">USD (Paiement Unique)</span>
+            </div>
+          </div>
+
+          <!-- ROI Badge -->
+          <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold text-center">
+            💰 Rentabilité : {template.monthly_savings_estimate}
+          </div>
+
+          <!-- Purchase Action Button -->
+          <div class="space-y-3">
+            <button 
+              id="checkout-btn"
+              class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider text-center transition-all shadow-glow-cyan"
+            >
+              Acheter &amp; Télécharger le JSON (${template.price_usd}) ➔
+            </button>
+            <p class="text-[10px] text-slate-400 text-center font-mono">
+              ⚡ Livraison immédiate du fichier .json sécurisé + tutoriel d'import
+            </p>
+          </div>
+
+          <!-- Guarantees List -->
+          <ul class="text-[11px] text-slate-300 space-y-2 font-mono pt-4 border-t border-slate-800">
+            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Code JSON certifié sans fuite d'API</li>
+            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Compatible version 2026</li>
+            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Support d'intégration par le créateur</li>
+            <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> Téléchargement garanti en 1 clic</li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script is:inline>
+    document.getElementById('checkout-btn')?.addEventListener('click', () => {
+      alert("⚡ [Mode Stealth / Simulation] : Le tunnel de paiement Stripe/Lemon Squeezy est branché. En mode de test privé, le fichier .json est validé.");
+    });
+  </script>
+</Layout>

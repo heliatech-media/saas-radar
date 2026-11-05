@@ -1,5 +1,12 @@
 [
   {
+    "timestamp": "2026-11-05 01:53:19",
+    "title": "Cycle Autonome #Beehiiv",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Beehiiv et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
     "timestamp": "2026-11-05 01:51:57",
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
@@ -341,12 +348,5 @@
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klaviyo et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-10-30 12:44:43",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]
