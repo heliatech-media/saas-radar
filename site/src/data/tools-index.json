@@ -173,6 +173,16 @@
     "commission_rate": "Up to 50% for the first year or 20% recurring depending on the plan"
   },
   {
+    "name": "Guidde",
+    "slug": "guidde",
+    "tagline": "Create professional video documentation and how-to guides in seconds using AI.",
+    "category": "AI Video & Documentation",
+    "rating": 4.6,
+    "starting_price": "$16/mo",
+    "best_for": "Customer success teams, product managers, and technical support engineers.",
+    "affiliate_url": "https://www.guidde.com"
+  },
+  {
     "name": "HeyGen",
     "slug": "heygen",
     "tagline": "AI-powered video generation platform for creating hyper-realistic talking avatar videos at scale.",

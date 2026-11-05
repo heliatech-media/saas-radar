@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-05 01:48:17",
-  "total_pages_audited": 87,
-  "monetized_pages": 84,
-  "total_ctas_tracked": 406,
+  "timestamp": "2026-11-05 03:55:10",
+  "total_pages_audited": 88,
+  "monetized_pages": 85,
+  "total_ctas_tracked": 408,
   "average_cro_score": "88.5/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",

@@ -1,6 +1,6 @@
 {
-  "last_scan": "2026-11-05T01:52:00.913146",
-  "total_events_detected": 3,
+  "last_scan": "2026-11-05T03:58:51.406272",
+  "total_events_detected": 0,
   "breaking_opportunities": [],
   "processed_urls": [
     "https://supabase.com/blog/getting-started-with-the-supabase-dotnet-sdk",
@@ -16,11 +16,11 @@
     "https://supabase.com/blog/scope-your-personal-access-tokens",
     "https://openai.com/index/openai-cut-incident-investigation",
     "https://openai.com/index/qodo-codex-plugin",
+    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "https://openai.com/index/retell-ai",
     "https://openai.com/index/oracle-apps-in-chatgpt",
     "https://supabase.com/blog/introducing-dbarena",
     "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-    "https://openai.com/index/retell-ai",
-    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
     "https://supabase.com/blog/operate-with-confidence-check-production-with-your-coding-agent",
     "https://openai.com/index/the-future-of-the-firm",
     "https://supabase.com/blog/how-a-new-branch-gets-its-config-migrations-and-functions",
@@ -40,9 +40,9 @@
     "https://openai.com/index/cisco-cyber",
     "https://supabase.com/blog/multigres-private-alpha",
     "https://openai.com/index/introducing-images-2-6",
-    "https://openai.com/index/openai-to-acquire-pierre",
     "https://supabase.com/blog/introducing-the-unified-supabase-net-sdk",
     "https://openai.com/index/daybreak-red-aws-govcloud",
+    "https://openai.com/index/decisions-api",
     "https://openai.com/index/grid-protectors-program",
     "https://openai.com/index/lifeval",
     "https://openai.com/index/forward-deployed-engineering-means",
@@ -55,6 +55,6 @@
     "https://openai.com/index/building-scientific-understanding-with-academic-communities",
     "https://supabase.com/blog/orioledb-public-beta",
     "https://openai.com/index/introducing-gpt-6-1-terra",
-    "https://openai.com/index/decisions-api"
+    "https://openai.com/index/openai-to-acquire-pierre"
   ]
 }

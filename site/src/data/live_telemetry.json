@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-05 01:48:17 UTC",
+  "last_updated": "2026-11-05 03:55:10 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 61,
-    "total_published_investigations": 148,
-    "reviews_audited": 61,
-    "masterclasses_and_duels": 87,
+    "total_published_investigations": 150,
+    "reviews_audited": 62,
+    "masterclasses_and_duels": 88,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$21,350 USD",
@@ -380,6 +380,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-10-31 13:13:52",
+      "title": "Cycle Autonome #Kit",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Kit et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-10-31 13:12:58",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `dumpling-ai, minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-10-31 08:58:21",
       "title": "Cycle Autonome #Tally",
       "category": "CYCLE",
@@ -398,20 +412,6 @@
       "title": "Cycle Autonome #Klaviyo",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klaviyo et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-10-30 12:44:43",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-10-30 08:34:48",
-      "title": "Cycle Autonome #Riverside.fm",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Riverside.fm et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

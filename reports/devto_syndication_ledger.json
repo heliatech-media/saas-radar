@@ -528,6 +528,19 @@
       "url": "https://dev.to/monday-com-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/monday-com-evolution-guide-2026",
       "status": "already_published"
+    },
+    "murf-ai-evolution-guide-2026": {
+      "id": 4978893,
+      "url": "https://dev.to/heliatech/murfai-the-audio-revolution-and-enterprise-blueprint-for-studio-quality-voiceovers-in-2026-3laf",
+      "title": "Murf.ai: The Audio Revolution and Enterprise Blueprint for Studio-Quality Voiceovers in 2026",
+      "canonical_url": "https://heliatech.online/blog/murf-ai-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "murfai",
+        "productivity",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null
