@@ -321,25 +321,15 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
         <!-- File Upload Drag & Drop Area -->
         <div>
           <label class="block text-xs font-mono text-slate-300 mb-1.5">Fichier Workflow (.json) :</label>
-          <div id="drop-zone" class="p-6 border-2 border-dashed border-slate-800 hover:border-cyan-500/50 rounded-2xl bg-slate-900/40 text-center transition-all cursor-pointer">
-            <div class="text-3xl mb-1.5">📦</div>
+          <div id="drop-zone" class="p-8 border-2 border-dashed border-slate-800 hover:border-cyan-500/50 rounded-2xl bg-slate-900/40 text-center transition-all cursor-pointer">
+            <div class="text-3xl mb-2">📦</div>
             <p class="text-xs font-mono text-slate-300 font-semibold mb-1" id="drop-zone-text">
-              Cliquez pour charger un fichier .json ou glissez-déposez
+              Cliquez pour parcourir vos fichiers ou glissez votre workflow .json ici
             </p>
             <p class="text-[10px] font-mono text-slate-500">
-              Ou cliquez ci-dessous pour tester avec un blueprint valide ou un exemple corrompu.
+              Formats supportés : .json (n8n, Make.com, Airtable, Cursor). Audit automatique anti-scam et désinfection de clés inclus.
             </p>
             <input type="file" id="file-input" accept=".json,.txt" class="hidden" />
-          </div>
-
-          <!-- Quick Test Buttons -->
-          <div class="flex items-center justify-center gap-2 mt-2">
-            <button type="button" id="btn-load-sample-valid" class="text-[11px] font-mono px-3 py-1 rounded bg-slate-900 hover:bg-slate-800 text-cyan-400 border border-slate-800">
-              ✓ Charger Blueprint Valide (Test)
-            </button>
-            <button type="button" id="btn-load-sample-scam" class="text-[11px] font-mono px-3 py-1 rounded bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800">
-              ⚠️ Tester Détection Scam (Test)
-            </button>
           </div>
         </div>
 
@@ -1236,36 +1226,7 @@ const pageDescription = "Gérez vos licences de workflows n8n, Make et Airtable 
       }, 500);
     }
 
-    // Quick Test Buttons
-    document.getElementById('btn-load-sample-valid')?.addEventListener('click', () => {
-      document.getElementById('upload-title').value = "n8n AI Multi-Agent Research Waterfall";
-      document.getElementById('upload-tagline').value = "Orchestre 3 agents LLM pour analyser les leads entrants et rédiger un pitch sur-mesure.";
-      document.getElementById('drop-zone-text').textContent = "✓ Fichier test 'valid-n8n-multi-agent.json' chargé";
 
-      const validJson = JSON.stringify({
-        "name": "n8n AI Multi-Agent Research Waterfall",
-        "nodes": [
-          { "parameters": { "path": "inbound" }, "name": "Webhook", "type": "n8n-nodes-base.webhook" },
-          { "parameters": { "model": "gpt-4o" }, "name": "AI Researcher", "type": "n8n-nodes-base.openAi" },
-          { "parameters": { "operation": "append" }, "name": "CRM Sync", "type": "n8n-nodes-base.airtable" }
-        ],
-        "connections": {}
-      });
-      runAntiScamAnalysis(validJson);
-    });
-
-    document.getElementById('btn-load-sample-scam')?.addEventListener('click', () => {
-      document.getElementById('upload-title').value = "Faux Blueprint Incomplet (Exemple de Scam)";
-      document.getElementById('upload-tagline').value = "Contient un lien suspect bit.ly et seulement 1 nœud vide.";
-      document.getElementById('drop-zone-text').textContent = "⚠️ Fichier test 'scam-dummy.json' chargé";
-
-      const scamJson = JSON.stringify({
-        "dummy": true,
-        "nodes": [{ "name": "FakeNode" }],
-        "redirect_url": "https://bit.ly/fake-stealer-url"
-      });
-      runAntiScamAnalysis(scamJson);
-    });
 
     // File Drop Handling
     const dropZone = document.getElementById('drop-zone');
