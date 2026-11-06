@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-06 12:45:34",
+  "timestamp": "2026-11-06 15:35:39",
   "total_pages_audited": 100,
   "monetized_pages": 97,
   "total_ctas_tracked": 435,
@@ -87,7 +87,7 @@
     {
       "slug": "hubspot-enterprise-pricing-rate-card-leaks-2026",
       "type": "blog",
-      "word_count": 768,
+      "word_count": 883,
       "cta_count": 0,
       "has_monetized_hop": false,
       "cro_score": 60,

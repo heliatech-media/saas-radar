@@ -15,7 +15,7 @@ tags:
 - B2B Software
 readingTime: 8 MIN
 tool_slug: cursor
-image: /images/blog/cursor-vs-github-copilot.svg
+image: /images/blog/cursor.svg
 tldr:
 - Cursor dominates developer velocity for greenfield projects and modern microservices
   with its native Composer multi-file agent and local semantic indexing.

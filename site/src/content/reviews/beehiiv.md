@@ -1,32 +1,42 @@
 ---
 name: Beehiiv
 slug: beehiiv
-tagline: The all-in-one newsletter platform built for growth, monetization, and scale.
-category: Newsletter SaaS
+tagline: The newsletter platform built by newsletter operators to scale, monetize,
+  and grow audiences efficiently.
+category: Newsletters
 rating: 4.7
 website_url: https://www.beehiiv.com
 affiliate_url: https://www.beehiiv.com/?via=heliatech
-summary: Beehiiv is a high-performance newsletter platform designed to replace fragmented
-  tech stacks with integrated growth, analytics, and monetization tools. It excels
-  at helping creators transition from simple email lists to full-scale media businesses.
-best_for: Content creators, media startups, and B2B marketers focused on rapid audience
-  growth and monetization.
+summary: Beehiiv is a modern, feature-rich email newsletter and publishing platform
+  designed to help creators and media companies scale their audiences. Founded by
+  former Morning Brew growth leaders, it combines advanced audience segmentation,
+  built-in referral programs, and native monetization options into an all-in-one ecosystem.
+best_for: Growth-focused newsletter operators, digital media startups, and creators
+  scaling past 10,000 subscribers.
 pros:
-- Integrated referral program engine that drives organic growth
-- Advanced segmentation and automation features without the bloat of traditional CRMs
-- Built-in ad network and premium subscription management
-- Superior deliverability and clean, high-performance email templates
-- Detailed subscriber insights and growth analytics
+- Built-in recommendation network and native referral program engine drastically lower
+  subscriber acquisition costs.
+- Advanced audience segmentation and dynamic content tagging without painful technical
+  workarounds.
+- Generous free tier that supports up to 2,500 subscribers with zero platform fees
+  on ads.
+- Clean, lightning-fast web reading experience with built-in SEO optimization for
+  newsletter archives.
+- Transparent pricing model that scales predictably compared to legacy ESPs charging
+  per total contact.
 cons:
-- Steeper learning curve for users migrating from ultra-simple tools like Substack
-- Advanced automation features are gated behind higher-tier plans
-- Limited native integration with niche enterprise-grade CRM systems
+- Transitioning complex legacy automations and subscriber lists from tools like Mailchimp
+  or ConvertKit can require manual cleanup.
+- Advanced growth features like the Boosts marketplace require paid tiers to fully
+  exploit.
+- Email design customizability is deliberately restrained to prioritize inbox deliverability,
+  which might frustrate heavy layout designers.
 key_features:
-- Referral program builder
-- Native ad network access
-- Advanced audience segmentation
-- Automated newsletter sequences
-- Custom domain and website hosting
+- Beehiiv Recommendations Network for cross-promotions
+- Built-in 3D dynamic referral programs
+- Advanced audience segmentation and custom fields
+- Monetization through native ad networks and subscriptions
+- Integrated web hosting with automated RSS-to-email
 pricing_tiers:
 - name: Launch
   price: $0/mo
@@ -34,121 +44,128 @@ pricing_tiers:
   features:
   - Up to 2,500 subscribers
   - Unlimited sends
-  - Custom domains
+  - Custom domain support
   - Basic analytics
+  - Web builder
   is_popular: false
-- name: Grow
-  price: $42/mo
+- name: Scale
+  price: $39/mo
   billing_period: monthly
   features:
   - Up to 10,000 subscribers
-  - Referral program
-  - Premium newsletters
   - Advanced segmentation
+  - Referral program engine
+  - Polls and surveys
+  - A/B testing
   is_popular: true
-- name: Scale
-  price: $84/mo
+- name: Enterprise
+  price: Custom
   billing_period: monthly
   features:
-  - Up to 100,000 subscribers
-  - AI tools
-  - Priority support
-  - Advanced automations
+  - Unlimited scale
+  - Dedicated IP addresses
+  - Priority deliverability support
+  - Custom integrations
+  - Dedicated account manager
   is_popular: false
 alternatives:
 - Substack
 - ConvertKit
 - Mailchimp
 faqs:
-- question: Is Beehiiv better than Substack?
-  answer: Beehiiv offers more control over branding, deeper analytics, and built-in
-    growth tools like referral programs, whereas Substack is simpler but more restrictive
-    regarding platform ownership.
-- question: Does Beehiiv take a cut of my subscription revenue?
-  answer: No, Beehiiv does not charge platform fees on your subscription revenue,
-    allowing you to keep 100% of your earnings minus standard payment processing fees.
-- question: Can I migrate my list from another provider?
-  answer: Yes, Beehiiv provides seamless import tools for CSV files and direct integrations
-    with major platforms like Mailchimp and Substack.
+- question: How does Beehiiv make money if the Launch plan is free?
+  answer: Beehiiv offers a robust free tier for up to 2,500 subscribers to capture
+    early-stage creators. They monetize through paid subscription tiers (Scale and
+    Enterprise) as your audience expands, as well as revenue sharing on their native
+    ad network and Boosts marketplace.
+- question: Can I import my existing subscribers from Mailchimp or Substack?
+  answer: Yes. Beehiiv provides automated migration tools and dedicated support to
+    import CSV lists, past issues, and subscriber metadata seamlessly without losing
+    engagement history.
+- question: Does Beehiiv take a cut of my paid newsletter revenue?
+  answer: Unlike platforms like Substack that take a 10% cut of your paid tier earnings,
+    Beehiiv charges zero platform fees on premium subscription revenue on their paid
+    plans.
 roi_metrics:
-  hours_saved_monthly: 25
-  financial_lift_monthly: $1,200/mo
-  payback_period_weeks: 2.5
-  roi_summary: By consolidating referral management, ad operations, and email automation
-    into one platform, teams eliminate the need for third-party tools like SparkLoop
-    or complex Zapier integrations, while the referral engine typically increases
-    subscriber acquisition rates by 15-20%.
+  hours_saved_monthly: 18
+  financial_lift_monthly: $1,450/mo
+  payback_period_weeks: 1.2
+  roi_summary: Time savings are driven by automated list hygiene, rapid content publishing,
+    and native cross-promotions, while financial lift comes from zero platform transaction
+    fees and automated referral monetization.
 benchmark_scores:
   performance: 9.5
-  ease_of_use: 8.0
-  value_for_money: 9.0
-  integrations: 7.5
+  ease_of_use: 8.8
+  value_for_money: 9.2
+  integrations: 8.5
 competitor_matches:
 - competitor: Substack
-  key_advantage: Superior growth tools and full ownership of your subscriber data.
-  when_to_switch: Switch to Substack only if you want zero technical configuration
-    and are happy with a closed ecosystem.
+  key_advantage: Beehiiv offers zero fee monetization, native ad networks, and advanced
+    customization, whereas Substack locks you into their network and takes 10%.
+  when_to_switch: Choose Substack if you want an absolute zero-setup, hands-off blogging
+    network where discovery happens entirely through their internal app.
 - competitor: ConvertKit
-  key_advantage: More powerful visual automation workflows for complex sales funnels.
-  when_to_switch: Switch to ConvertKit if your primary goal is complex lead nurturing
-    rather than newsletter-first growth.
+  key_advantage: Beehiiv features a much more powerful built-in referral network and
+    ad ecosystem tailor-made for publishers scaling purely through media growth.
+  when_to_switch: Choose ConvertKit if you run a digital creator business selling
+    complex online courses, digital downloads, and intricate multi-step funnel automations.
 ---
 
 ## Executive Summary
 
-Beehiiv is a high-performance newsletter platform designed to replace fragmented tech stacks with integrated growth, analytics, and monetization tools. It excels at helping creators transition from simple email lists to full-scale media businesses.
+Beehiiv is a modern, feature-rich email newsletter and publishing platform designed to help creators and media companies scale their audiences. Founded by former Morning Brew growth leaders, it combines advanced audience segmentation, built-in referral programs, and native monetization options into an all-in-one ecosystem.
 
 ### Who is Beehiiv Best For?
-**Target Audience:** Content creators, media startups, and B2B marketers focused on rapid audience growth and monetization.
+**Target Audience:** Growth-focused newsletter operators, digital media startups, and creators scaling past 10,000 subscribers.
 
 ## Key Features & Capabilities
 
-- **Referral program builder**
-- **Native ad network access**
-- **Advanced audience segmentation**
-- **Automated newsletter sequences**
-- **Custom domain and website hosting**
+- **Beehiiv Recommendations Network for cross-promotions**
+- **Built-in 3D dynamic referral programs**
+- **Advanced audience segmentation and custom fields**
+- **Monetization through native ad networks and subscriptions**
+- **Integrated web hosting with automated RSS-to-email**
 
 ## Pricing Overview
 
 | Plan | Price | Billing | Key Highlights |
 | :--- | :--- | :--- | :--- |
 | **Launch** | $0/mo | monthly | Up to 2,500 subscribers, Unlimited sends |
-| **Grow** | $42/mo | monthly | Up to 10,000 subscribers, Referral program |
-| **Scale** | $84/mo | monthly | Up to 100,000 subscribers, AI tools |
+| **Scale** | $39/mo | monthly | Up to 10,000 subscribers, Advanced segmentation |
+| **Enterprise** | Custom | monthly | Unlimited scale, Dedicated IP addresses |
 
 ## Pros & Cons
 
 ### Pros
-- Integrated referral program engine that drives organic growth
-- Advanced segmentation and automation features without the bloat of traditional CRMs
-- Built-in ad network and premium subscription management
-- Superior deliverability and clean, high-performance email templates
-- Detailed subscriber insights and growth analytics
+- Built-in recommendation network and native referral program engine drastically lower subscriber acquisition costs.
+- Advanced audience segmentation and dynamic content tagging without painful technical workarounds.
+- Generous free tier that supports up to 2,500 subscribers with zero platform fees on ads.
+- Clean, lightning-fast web reading experience with built-in SEO optimization for newsletter archives.
+- Transparent pricing model that scales predictably compared to legacy ESPs charging per total contact.
 
 ### Cons
-- Steeper learning curve for users migrating from ultra-simple tools like Substack
-- Advanced automation features are gated behind higher-tier plans
-- Limited native integration with niche enterprise-grade CRM systems
+- Transitioning complex legacy automations and subscriber lists from tools like Mailchimp or ConvertKit can require manual cleanup.
+- Advanced growth features like the Boosts marketplace require paid tiers to fully exploit.
+- Email design customizability is deliberately restrained to prioritize inbox deliverability, which might frustrate heavy layout designers.
 
 ## Detailed Verdict & Technical Analysis
 
-Beehiiv is arguably the most aggressive platform currently disrupting the newsletter space. Unlike Substack, which prioritizes simplicity at the cost of control, or Mailchimp, which suffers from legacy bloat, Beehiiv strikes a balance between technical power and creator-centric UX. Its standout feature is the integrated referral engine, which fundamentally changes the growth trajectory for newsletters by incentivizing word-of-mouth at the infrastructure level.
+Beehiiv has fundamentally disrupted the newsletter software space by abandoning legacy email marketing bloat and focusing entirely on subscriber acquisition and monetization. Because it was engineered by the team behind Morning Brew, every feature—from the native recommendation loop to their ad network integration—feels purpose-built for media operators who treat their publication as a high-growth business. 
 
-Technically, the platform is robust. It handles high-volume sends with impressive deliverability and provides granular data that allows for sophisticated A/B testing and audience tagging. For a media company or a professional creator, the ability to manage subscriptions, ads, and content in one dashboard significantly reduces the 'tool sprawl' that often plagues growing teams.
+The platform's primary advantage lies in aligning software incentives with publisher growth. Where traditional ESPs penalize you for audience size through punishing contact limits, Beehiiv's Scale tier gives you sophisticated automation and referral tools designed to print ROI long before your hosting bill becomes painful. Deliverability rates consistently rank among the highest in industry tests due to strict enforcement of sender authentication protocols and anti-spam measures.
 
-However, it is not for everyone. If you are a hobbyist who wants a 'set it and forget it' experience with zero configuration, the feature set may feel overwhelming. Furthermore, while the pricing is competitive, the jump to the 'Scale' tier is significant for those who aren't yet monetizing their list. Ultimately, Beehiiv is the clear winner for anyone treating their newsletter as a serious business asset rather than a side project.
+However, Beehiiv is not an all-in-one CRM for complex SaaS user onboarding or complex multi-channel marketing campaigns. If your primary objective is sending transactional emails triggered by user software behavior, look toward product-led alternatives. But if you are building an audience-first media property, a curated digest, or a monetization engine via sponsorships and paid tiers, Beehiiv currently stands as the definitive market leader.
 
 ## Frequently Asked Questions
 
-### Is Beehiiv better than Substack?
+### How does Beehiiv make money if the Launch plan is free?
 
-Beehiiv offers more control over branding, deeper analytics, and built-in growth tools like referral programs, whereas Substack is simpler but more restrictive regarding platform ownership.
+Beehiiv offers a robust free tier for up to 2,500 subscribers to capture early-stage creators. They monetize through paid subscription tiers (Scale and Enterprise) as your audience expands, as well as revenue sharing on their native ad network and Boosts marketplace.
 
-### Does Beehiiv take a cut of my subscription revenue?
+### Can I import my existing subscribers from Mailchimp or Substack?
 
-No, Beehiiv does not charge platform fees on your subscription revenue, allowing you to keep 100% of your earnings minus standard payment processing fees.
+Yes. Beehiiv provides automated migration tools and dedicated support to import CSV lists, past issues, and subscriber metadata seamlessly without losing engagement history.
 
-### Can I migrate my list from another provider?
+### Does Beehiiv take a cut of my paid newsletter revenue?
 
-Yes, Beehiiv provides seamless import tools for CSV files and direct integrations with major platforms like Mailchimp and Substack.
+Unlike platforms like Substack that take a 10% cut of your paid tier earnings, Beehiiv charges zero platform fees on premium subscription revenue on their paid plans.

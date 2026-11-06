@@ -32,7 +32,7 @@ affiliate_cta:
     voice agent that answers every call and books appointments around the clock.
   button_text: Launch ElevenAgents on ElevenLabs ➔
   url: /go/elevenlabs
-image: /images/blog/elevenagents-ai-receptionist-guide.svg
+image: /images/blog/elevenlabs.svg
 ---
 *Affiliate Disclosure: This article contains verified partner links. #ad #ElevenAgentsPartner*
 

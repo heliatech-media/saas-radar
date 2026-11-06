@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-04T10:55:00.000000",
-  "total_heuristics_stored": 45,
+  "total_heuristics_stored": 46,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -146,6 +146,13 @@
       "domain": "content",
       "heuristic_name": "Cognitive-Tiered Scroll Trap & RCIA Injection",
       "curriculum_module": "Long-form Reader Dwell Optimization: Using progressive disclosure and visual typography to retain technical decision-makers over 3 minutes"
+    },
+    {
+      "timestamp": "2026-11-06T15:35:24.474830",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "cro",
+      "heuristic_name": "Neural-Pulsed Affordance Vectoring",
+      "curriculum_module": "Visual Affordance Hierarchy: High-contrast glowing accents and official recommendation badges that double click-through rates"
     }
   ]
 }

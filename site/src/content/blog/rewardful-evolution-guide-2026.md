@@ -22,7 +22,7 @@ affiliate_cta:
     MRR like HeadshotPro and OpusClip. Start your free trial.
   button_text: Start Free 14-Day Trial on Rewardful ➔
   url: /go/rewardful
-image: /images/blog/rewardful-evolution-guide-2026.svg
+image: /images/blog/rewardful.svg
 tldr:
 - Building in-house affiliate tracking on top of Stripe Billing leads to catastrophic
   edge-case bugs around prorations, downgrades, and refunds.
