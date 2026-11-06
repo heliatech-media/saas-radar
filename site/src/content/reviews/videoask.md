@@ -6,7 +6,7 @@ tagline: Scale personal connections with asynchronous video funnels and conditio
 category: Video Automation
 rating: 4.6
 website_url: https://www.videoask.com
-affiliate_url: https://www.videoask.com
+affiliate_url: "https://www.videoask.com/?via=heliatech"
 summary: VideoAsk, a Typeform product, transforms static lead forms and support tickets
   into interactive, face-to-face video conversations. It uses a branching logic engine
   to route users through custom paths based on their video, audio, or text responses.

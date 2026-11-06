@@ -138,7 +138,7 @@ AFFILIATE_MAP = {
     "typeform": "https://typeform.grsm.io/heliatech",
     "vercel": "https://vercel.com/?via=heliatech",
     "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
-    "voiceflow": "https://www.voiceflow.com",
+    "voiceflow": "https://voiceflow.grsm.io/heliatech",
     "wati": "https://www.wati.io/?fp_ref=heliatech",
     "webflow": "https://webflow.com",
     "zapier": "https://zapier.com/app/register?via=heliatech",
@@ -175,7 +175,8 @@ AFFILIATE_MAP = {
     "munch": "https://www.getmunch.com/?via=heliatech",
     "rask-ai": "https://rask.ai/?via=heliatech",
     "perplexity-enterprise": "https://www.perplexity.ai/?via=heliatech",
-    "senja": "https://senja.io/?via=heliatech"
+    "senja": "https://senja.io/?via=heliatech",
+    "videoask": "https://www.videoask.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

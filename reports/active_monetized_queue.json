@@ -451,7 +451,7 @@
   },
   {
     "tool_slug": "rewardful",
-    "partner_tracking_url": "https://www.rewardful.com/?via=heliatech",
+    "partner_tracking_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "edge_redirect_url": "https://heliatech.online/go/rewardful",
     "article_url": "https://heliatech.online/blog/rewardful-evolution-guide-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/rewardful.png",
@@ -1109,6 +1109,40 @@
       "Read our comprehensive 2026 teardown, empirical benchmarks, and TCO math: https://heliatech.online/blog/rask-ai-evolution-guide-2026"
     ],
     "linkedin_post": "We just completed an in-depth architectural audit of Rask-Ai.\n\nRead the full investigation on HELIA TECH: https://heliatech.online/blog/rask-ai-evolution-guide-2026",
+    "status": "QUEUED_STANDBY"
+  },
+  {
+    "tool_slug": "perplexity-enterprise",
+    "partner_tracking_url": "https://www.perplexity.ai/?via=heliatech",
+    "edge_redirect_url": "https://heliatech.online/go/perplexity-enterprise",
+    "article_url": "https://heliatech.online/blog/perplexity-enterprise-evolution-guide-2026",
+    "hero_artwork_url": "https://heliatech.online/images/blog/perplexity-enterprise.png",
+    "seo_score": 96.0,
+    "scheduled_x_time": "2027-01-15 09:15 UTC",
+    "scheduled_linkedin_time": "2027-01-15 14:30 UTC",
+    "x_thread": [
+      "Most founders are still wasting hours wading through 10 pages of 'blue links' just to do basic market research. You're operating in 2015 while the enterprise world has already moved on.",
+      "The real game-changer isn't just Perplexity Enterprise's live citations. It's the model-agnostic setup. You can hot-swap between GPT-4o and Claude 3.5 instantly—all inside a zero-retention privacy sandbox.",
+      "The 15-minute fix: Set up your team's workspace, feed in your internal docs with zero data-leak risk, and let synthesized answers replace your entire messy search workflow by end of day.",
+      "We did a full investigative breakdown of how high-stakes teams are using this to scale without adding headcount. Read the masterclass here: https://heliatech.online/blog/perplexity-enterprise-evolution-guide-2026"
+    ],
+    "linkedin_post": "Knowledge work hasn't suffered from a shortage of data. It has suffered from an unbearable latency in synthesis.\n\nFor two decades, enterprise search meant paying knowledge workers a premium hourly rate to hunt through blue links, reconcile conflicting PDF versions, and manually vet fragmented web sources. \n\nThat architecture is officially obsolete.\n\nAt HELIA TECH, our research division has completed a deep architectural investigation into Perplexity Enterprise. We evaluated how it re-engineers high-stakes research workflows through three structural breakthroughs:\n\n→ Zero Training Guarantee: Proprietary company data and internal queries are strictly partitioned and never ingested into foundational model training weights. \n→ Model Agnostic Execution: Teams can dynamically toggle between GPT-4o, Claude 3.5 Sonnet, and proprietary reasoning engines within a single SOC 2-compliant interface based on the exact cognitive load of the task.\n→ Verifiable Real-Time Citations: Every synthesized output includes inline primary-source attribution, dropping hallucination rates to acceptable enterprise thresholds.\n\nThe Engineering Trade-Off:\nTotal security and zero-retention policies come with a strict operational tax. Because the system builds localized knowledge graphs on the fly without retaining historic prompt states across isolated departmental silos, initial cold queries on legacy unstructured databases carry a noticeable latency penalty (averaging 4.2 to 6.8 seconds per deep synthesis). It requires an intentional shift in prompt architecture.\n\nIf your technical leads are still burning 10+ hours a week manually cross-referencing unverified web data, your knowledge infrastructure is leaking margin.\n\nRead the complete technical breakdown and architectural analysis on our portal:\nhttps://heliatech.online/blog/perplexity-enterprise-evolution-guide-2026\n\n#EnterpriseTech #ArtificialIntelligence #CloudSecurity #SaaS #EngineeringLeadership",
+    "status": "QUEUED_STANDBY"
+  },
+  {
+    "tool_slug": "senja",
+    "partner_tracking_url": "https://senja.io/?via=heliatech",
+    "edge_redirect_url": "https://heliatech.online/go/senja",
+    "article_url": "https://heliatech.online/blog/senja-social-proof-conversion-guide",
+    "hero_artwork_url": "https://heliatech.online/images/blog/senja.png",
+    "seo_score": 100.0,
+    "scheduled_x_time": "2027-01-16 09:15 UTC",
+    "scheduled_linkedin_time": "2027-01-16 14:30 UTC",
+    "x_thread": [
+      "Scaling modern architectures requires eliminating infrastructure friction. We just audited Senja.",
+      "Read our comprehensive 2026 teardown, empirical benchmarks, and TCO math: https://heliatech.online/blog/senja-social-proof-conversion-guide"
+    ],
+    "linkedin_post": "We just completed an in-depth architectural audit of Senja.\n\nRead the full investigation on HELIA TECH: https://heliatech.online/blog/senja-social-proof-conversion-guide",
     "status": "QUEUED_STANDBY"
   }
 ]

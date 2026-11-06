@@ -143,11 +143,11 @@
   {
     "name": "Descript",
     "slug": "descript",
-    "tagline": "The all-in-one audio and video editor that works like a word processor.",
+    "tagline": "The AI-powered audio and video editor that lets you edit media by editing text.",
     "category": "Audio/Podcasting",
     "rating": 4.6,
     "starting_price": "$12/mo",
-    "best_for": "Podcasters, video creators, remote content teams, and marketers looking to streamline production workflows.",
+    "best_for": "Podcasters, video content creators, corporate communication teams, and educators",
     "affiliate_url": "https://descript.grsm.io/heliatech"
   },
   {
@@ -697,7 +697,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "B2B sales teams, high-volume recruiters, and customer success managers who need to qualify leads at scale without losing the human touch.",
-    "affiliate_url": "https://www.videoask.com"
+    "affiliate_url": "https://www.videoask.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Voiceflow",
@@ -707,8 +708,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.voiceflow.com",
-    "commission_rate": "20% recurring"
+    "affiliate_url": "https://voiceflow.grsm.io/heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
   },
   {
     "name": "WATI",

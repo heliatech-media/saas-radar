@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-06 03:42:33",
+  "timestamp": "2026-11-06 06:54:39",
   "total_links_audited": 97,
   "healthy_links": 93,
   "broken_links_count": 4,
@@ -168,7 +168,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bcHSuTZy9G721R&gsxid=bcHSuTZy9G721R&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=si5uxFhk2U92z9&gsxid=si5uxFhk2U92z9&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -401,7 +401,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=29wxzX24Ejeitc&gsxid=29wxzX24Ejeitc&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=OLfYdcBGlfXOBx&gsxid=OLfYdcBGlfXOBx&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -429,7 +429,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cAweSW98BjRAaL&gsxid=cAweSW98BjRAaL&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cItgafSK873A3g&gsxid=cItgafSK873A3g&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -675,8 +675,8 @@
     },
     {
       "slug": "videoask",
-      "target_url": "https://www.videoask.com",
-      "final_url": "https://www.videoask.com/",
+      "target_url": "https://www.videoask.com/?via=heliatech",
+      "final_url": "https://www.videoask.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
