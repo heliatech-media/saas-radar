@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-06T15:35:39.665010",
+  "last_synced": "2026-11-06T17:02:40.696068",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20419,
-  "total_requests": 125740,
-  "total_visits": 6329,
-  "total_pageviews": 26445,
+  "total_visitors_network": 20428,
+  "total_requests": 125839,
+  "total_visits": 6332,
+  "total_pageviews": 26466,
   "percent_cached": "56.14%",
-  "data_served_mb": 1029.7,
+  "data_served_mb": 1031.5,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6050
+      "views": 6390
     },
     {
       "path": "/",
-      "views": 3380
+      "views": 3150
     },
     {
       "path": "/calculator/",
-      "views": 1110
+      "views": 1140
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 860
+      "views": 820
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 450
+      "views": 520
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 280
+    },
+    {
+      "path": "/awards/",
+      "views": 260
     },
     {
       "path": "/radar/",
-      "views": 250
+      "views": 240
     },
     {
       "path": "/blog/",
-      "views": 250
+      "views": 240
     },
     {
-      "path": "/reviews/elevenlabs/",
+      "path": "/versus/",
       "views": 220
-    },
-    {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 220
-    },
-    {
-      "path": "/reviews/clickup/",
-      "views": 210
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 210
-    },
-    {
-      "path": "/reviews/beehiiv/",
       "views": 200
     },
     {
-      "path": "/terms/",
-      "views": 200
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 180
     },
     {
       "path": "/deals/",
-      "views": 190
+      "views": 180
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 180
+      "path": "/sentinel/",
+      "views": 170
+    },
+    {
+      "path": "/reviews/apollo-io/",
+      "views": 160
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 23430
+      "views": 24210
     },
     {
       "country": "Morocco",
-      "views": 19240
+      "views": 18070
     },
     {
       "country": "Singapore",
-      "views": 1410
-    },
-    {
-      "country": "Germany",
       "views": 1400
     },
     {
-      "country": "Belgium",
-      "views": 690
+      "country": "Germany",
+      "views": 1300
     },
     {
       "country": "United Kingdom",
-      "views": 600
+      "views": 590
+    },
+    {
+      "country": "Belgium",
+      "views": 580
+    },
+    {
+      "country": "Canada",
+      "views": 560
+    },
+    {
+      "country": "Netherlands",
+      "views": 550
     },
     {
       "country": "Brazil",
       "views": 520
     },
     {
-      "country": "CN",
-      "views": 430
-    },
-    {
-      "country": "Canada",
-      "views": 420
-    },
-    {
       "country": "France",
-      "views": 400
+      "views": 340
     }
   ],
   "top_referrers": [
