@@ -143,11 +143,11 @@
   {
     "name": "Descript",
     "slug": "descript",
-    "tagline": "The AI-powered audio and video editor that lets you edit media by editing text.",
-    "category": "Audio/Podcasting",
+    "tagline": "The all-in-one audio and video editor that works like a word processor",
+    "category": "Video Automation",
     "rating": 4.6,
-    "starting_price": "$12/mo",
-    "best_for": "Podcasters, video content creators, corporate communication teams, and educators",
+    "starting_price": "$15/mo",
+    "best_for": "Podcasters, content marketers, remote interviewers, and video production teams looking to scale output without multiplying overhead.",
     "affiliate_url": "https://descript.grsm.io/heliatech"
   },
   {
@@ -730,7 +730,7 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "UI/UX designers, marketing agencies, and scaling tech companies needing bespoke web experiences",
-    "affiliate_url": "https://webflow.com",
+    "affiliate_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
     "commission_rate": "50% recurring for the first year"
   },
   {

@@ -140,7 +140,7 @@ AFFILIATE_MAP = {
     "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
     "voiceflow": "https://voiceflow.grsm.io/heliatech",
     "wati": "https://www.wati.io/?fp_ref=heliatech",
-    "webflow": "https://webflow.com",
+    "webflow": "https://webflow.pxf.io/c/4923491/1231885/15172",
     "zapier": "https://zapier.com/app/register?via=heliatech",
     "transistor": "https://transistor.fm/?via=heliatech",
     "podcastle": "https://podcastle.ai/?via=heliatech",

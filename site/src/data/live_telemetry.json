@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-06 06:53:39 UTC",
+  "last_updated": "2026-11-06 09:51:19 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
@@ -429,7 +429,7 @@
     },
     {
       "slug": "webflow",
-      "destination": "https://webflow.com",
+      "destination": "https://webflow.pxf.io/c/4923491/1231885/15172",
       "type": "Catalog Edge Hop"
     },
     {
@@ -439,6 +439,20 @@
     }
   ],
   "recent_events": [
+    {
+      "timestamp": "2026-11-04 09:54:52",
+      "title": "Cycle Autonome #Descript",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-04 09:54:27",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 1 lien(s) d'affiliation en anomalie :\n• `minicong`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
     {
       "timestamp": "2026-11-03 19:17:58",
       "title": "Cycle Autonome #Resend",
@@ -458,20 +472,6 @@
       "title": "Cycle Autonome #Tally",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-03 15:57:10",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-03 12:55:20",
-      "title": "Cycle Autonome #Descript",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

@@ -690,6 +690,12 @@
       "url": "https://dev.to/gamma-app-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/gamma-app-evolution-guide-2026",
       "status": "already_published"
+    },
+    "guidde-evolution-guide-2026": {
+      "id": "already_published",
+      "url": "https://dev.to/guidde-evolution-guide-2026",
+      "canonical_url": "https://heliatech.online/blog/guidde-evolution-guide-2026",
+      "status": "already_published"
     }
   },
   "last_sync": null

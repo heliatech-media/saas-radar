@@ -300,7 +300,14 @@
       "title": "Clay: The Death of Manual Prospecting and the Rise of the Data-Driven Outbound Engine",
       "tool_slug": "clay",
       "canonical_url": "https://heliatech.online/blog/clay-evolution-guide-2026"
+    },
+    "gamma-app-evolution-guide-2026": {
+      "published_at": "2026-11-06T09:52:47.444485",
+      "share_urn": "urn:li:share:7524408431441547264",
+      "title": "Gamma: The Death of the Slide and the Rise of the Generative Workspace",
+      "tool_slug": "gamma-app",
+      "canonical_url": "https://heliatech.online/blog/gamma-app-evolution-guide-2026"
     }
   },
-  "last_publish": "2026-11-06T06:55:05.126829"
+  "last_publish": "2026-11-06T09:52:47.444498"
 }
