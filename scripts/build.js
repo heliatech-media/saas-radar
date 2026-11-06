@@ -50,7 +50,7 @@ if (fs.existsSync(redirectsSource)) {
       return false;
     }
     return true;
-  });
+  }).map(line => line.replace(/(\s+\d{3})!/g, '$1'));
   const sanitized = cleanedLines.join('\n');
   fs.writeFileSync(path.join(rootDist, '_redirects'), sanitized, 'utf-8');
   fs.writeFileSync(path.join(siteDist, '_redirects'), sanitized, 'utf-8');

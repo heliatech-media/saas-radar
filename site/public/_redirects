@@ -66,7 +66,7 @@
 /go/resemble-ai https://www.resemble.ai 302
 /go/resend https://resend.com/?via=heliatech 302
 /go/retool https://retool.com/?fpr=heliatech 302
-/go/rewardful https://www.rewardful.com/?via=heliatech/?via=heliatech 302
+/go/rewardful https://www.rewardful.com/?via=heliatech 302
 /go/rippling https://www.rippling.com 302
 /go/riverside https://riverside.fm/?via=heliatech 302
 /go/riverside-fm https://riverside.fm/?via=heliatech 302
@@ -99,22 +99,22 @@
 /go/zoominfo https://www.zoominfo.com 302
 
 
-# Stealth Guard: Force redirect (301!) at Cloudflare Edge to completely override static assets on production
-/templates/* / 301!
-/templates / 301!
-/dashboard/* / 301!
-/dashboard / 301!
-/seller/* / 301!
-/seller / 301!
-/sell/* / 301!
-/sell / 301!
-/register/* / 301!
-/register / 301!
-/login/* / 301!
-/login / 301!
-/creator/* / 301!
-/creator / 301!
-/checkout/* / 301!
-/checkout / 301!
-/admin/marketplace/* / 301!
-/admin/marketplace / 301!
+# Stealth Guard: Force redirect (301) at Cloudflare Edge to completely override static assets on production
+/templates/* / 301
+/templates / 301
+/dashboard/* / 301
+/dashboard / 301
+/seller/* / 301
+/seller / 301
+/sell/* / 301
+/sell / 301
+/register/* / 301
+/register / 301
+/login/* / 301
+/login / 301
+/creator/* / 301
+/creator / 301
+/checkout/* / 301
+/checkout / 301
+/admin/marketplace/* / 301
+/admin/marketplace / 301
