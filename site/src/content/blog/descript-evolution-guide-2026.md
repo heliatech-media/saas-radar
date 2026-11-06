@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Video Editing
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: descript
 image: /images/blog/descript.svg
 tldr:
@@ -31,8 +31,7 @@ affiliate_cta:
   button_text: Claim Your Free Descript Account ➔
   url: https://descript.grsm.io/heliatech
 ---
-
-For decades, professional video and audio editing remained bound by an unyielding dogma: the multi-track timeline. To fix a spoken sentence, delete an errant stutter, or rearrange a narrative arc, creators were forced to dive deep into complex, heavyweight Non-Linear Editors (NLEs). They spent countless hours meticulously slicing waveforms, wrestling with razor tools, nudging keyframes, and squinting at microscopic visual tracks. It was a friction-filled bottleneck that treated spoken-word media as a purely mechanical craft rather than what it actually is: a linear thought process translated into speech. 
+For decades, professional video and audio editing remained bound by an unyielding dogma: the multi-track timeline. To fix a spoken sentence, delete an errant stutter, or rearrange a narrative arc, creators were forced to dive deep into complex, heavyweight Non-[Linear](/reviews/linear) Editors (NLEs). They spent countless hours meticulously slicing waveforms, wrestling with razor tools, nudging keyframes, and squinting at microscopic visual tracks. It was a friction-filled bottleneck that treated spoken-word media as a purely mechanical craft rather than what it actually is: a linear thought process translated into speech. 
 
 > [!NOTE]
 > **Executive Takeaway:** "We stopped editing audio and video the way we think about writing. Descript bridged the chasm between text and timeline, turning content creation into a document workflow."

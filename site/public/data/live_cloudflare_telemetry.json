@@ -1,22 +1,22 @@
 {
-  "last_synced": "2026-11-06T09:51:21.664672",
+  "last_synced": "2026-11-06T12:45:36.179841",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20264,
-  "total_requests": 124179,
-  "total_visits": 6281,
-  "total_pageviews": 26222,
+  "total_visitors_network": 20356,
+  "total_requests": 124847,
+  "total_visits": 6310,
+  "total_pageviews": 26338,
   "percent_cached": "56.14%",
-  "data_served_mb": 1011.8,
+  "data_served_mb": 1019.1,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6020
+      "views": 6040
     },
     {
       "path": "/",
-      "views": 3320
+      "views": 3360
     },
     {
       "path": "/calculator/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 840
+      "views": 860
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -39,6 +39,10 @@
       "views": 250
     },
     {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 220
+    },
+    {
       "path": "/reviews/elevenlabs/",
       "views": 220
     },
@@ -47,19 +51,15 @@
       "views": 210
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 200
-    },
-    {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 200
-    },
-    {
       "path": "/terms/",
       "views": 200
     },
     {
       "path": "/reviews/beehiiv/",
+      "views": 200
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 200
     },
     {
@@ -74,19 +74,19 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 23220
+      "views": 23350
     },
     {
       "country": "Morocco",
-      "views": 18790
-    },
-    {
-      "country": "Germany",
-      "views": 1390
+      "views": 18950
     },
     {
       "country": "Singapore",
-      "views": 1390
+      "views": 1410
+    },
+    {
+      "country": "Germany",
+      "views": 1400
     },
     {
       "country": "Belgium",
@@ -98,7 +98,7 @@
     },
     {
       "country": "Brazil",
-      "views": 500
+      "views": 520
     },
     {
       "country": "CN",
@@ -106,7 +106,7 @@
     },
     {
       "country": "Canada",
-      "views": 410
+      "views": 420
     },
     {
       "country": "France",

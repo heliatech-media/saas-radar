@@ -143,11 +143,11 @@
   {
     "name": "Descript",
     "slug": "descript",
-    "tagline": "The all-in-one audio and video editor that works like a word processor",
-    "category": "Video Automation",
+    "tagline": "The all-in-one audio and video editor that works like a word processor.",
+    "category": "Audio/Podcasting",
     "rating": 4.6,
-    "starting_price": "$15/mo",
-    "best_for": "Podcasters, content marketers, remote interviewers, and video production teams looking to scale output without multiplying overhead.",
+    "starting_price": "$12/mo",
+    "best_for": "Podcasters, content marketers, educators, and remote video production teams",
     "affiliate_url": "https://descript.grsm.io/heliatech"
   },
   {
