@@ -37,6 +37,20 @@ if (fs.existsSync(siteFunctions)) {
   fs.cpSync(siteFunctions, rootFunctions, { recursive: true });
 }
 
+// 3.6 Compile Pages Functions into _worker.js for Cloudflare Pages / Workers API routing
+if (fs.existsSync(rootFunctions)) {
+  console.log('⚡ Compiling functions into _worker.js for edge worker dynamic routing...');
+  try {
+    execSync('npx wrangler pages functions build functions --outdir dist', { cwd: rootDir, stdio: 'inherit' });
+    if (fs.existsSync(path.join(rootDist, '_worker.js'))) {
+      fs.copyFileSync(path.join(rootDist, '_worker.js'), path.join(siteDist, '_worker.js'));
+      console.log('✓ Compiled and mirrored _worker.js to dist and site/dist');
+    }
+  } catch (err) {
+    console.warn('⚠️ [Cloudflare Build Bridge] Notice on _worker.js build:', err.message);
+  }
+}
+
 // 4. Verify _headers and _redirects in both dist folders
 const headersSource = path.join(siteDir, 'public', '_headers');
 const redirectsSource = path.join(siteDir, 'public', '_redirects');
