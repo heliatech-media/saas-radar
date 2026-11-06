@@ -13,7 +13,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: munch
 image: /images/blog/munch.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Munch Account ➔
   url: /go/munch
 ---
-
 Harnessing the power of the attention economy has become the single most expensive endeavor for modern marketing departments. For years, the workflow was a grueling, manual slog: record a sixty-minute podcast, hand it to a junior editor, wait forty-eight hours for a rough cut, and hope—by some stroke of luck—that the chosen thirty-second clip resonates with the TikTok algorithm. This fragmentation of effort and outcome created a massive human bottleneck. Companies were sitting on mountains of long-form gold but lacked the machinery to refine it into the high-velocity currency of short-form video. Enter Munch, the AI-driven powerhouse that didn't just build a better editor; it built a brain for content repurposing.
 
 ## 1. The Genesis & Evolution: From Manual Splicing to Contextual Intelligence

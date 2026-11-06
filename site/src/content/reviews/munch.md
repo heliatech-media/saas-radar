@@ -6,7 +6,7 @@ tagline: Transform long-form content into viral social media clips using AI-driv
 category: AI Video Automation
 rating: 4.4
 website_url: https://www.getmunch.com
-affiliate_url: https://www.getmunch.com
+affiliate_url: "https://www.getmunch.com/?via=heliatech"
 summary: Munch is an AI-powered content repurposing platform that automatically identifies
   key moments in long-form videos and converts them into optimized, captioned short-form
   clips. It excels at analyzing trends and context to ensure the generated clips have

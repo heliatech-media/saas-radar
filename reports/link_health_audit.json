@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-06 01:11:47",
-  "total_links_audited": 96,
-  "healthy_links": 91,
-  "broken_links_count": 5,
-  "health_rate": "94.8%",
+  "timestamp": "2026-11-06 00:37:11",
+  "total_links_audited": 97,
+  "healthy_links": 93,
+  "broken_links_count": 4,
+  "health_rate": "95.9%",
   "broken_links": [
     {
       "slug": "minicong",
@@ -11,15 +11,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
-    },
-    {
-      "slug": "munch",
-      "target_url": "https://www.munch.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.munch.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.munch.com', port=443): Failed to resolve 'www.munch.com' ([Errno 11001] getaddrinfo failed)\"))"
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "notion-ai",
@@ -27,7 +19,15 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "perplexity-enterprise",
+      "target_url": "https://www.perplexity-enterprise.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.perplexity-enterprise.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.perplexity-enterprise.com', port=443): Failed to resolve 'www.perplexity-enterprise.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tome",
@@ -35,15 +35,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno 11002] getaddrinfo failed)\"))"
-    },
-    {
-      "slug": "zoominfo",
-      "target_url": "https://www.zoominfo.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.zoominfo.com', port=443): Read timed out. (read timeout=7)"
+      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno -3] Temporary failure in name resolution)\"))"
     }
   ],
   "audit_details": [
@@ -77,8 +69,8 @@
     },
     {
       "slug": "axiom-ai",
-      "target_url": "https://axiom.ai",
-      "final_url": "https://axiom.ai/",
+      "target_url": "https://axiom.ai/?via=heliatech",
+      "final_url": "https://axiom.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -176,7 +168,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9g62StKuLsshCu&gsxid=9g62StKuLsshCu&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9mMAWsEUm4LFgn&gsxid=9mMAWsEUm4LFgn&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -254,7 +246,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -326,7 +318,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno 11001] getaddrinfo failed)\"))"
+      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "monday-com",
@@ -344,11 +336,10 @@
     },
     {
       "slug": "munch",
-      "target_url": "https://www.munch.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.munch.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.munch.com', port=443): Failed to resolve 'www.munch.com' ([Errno 11001] getaddrinfo failed)\"))"
+      "target_url": "https://www.getmunch.com/?via=heliatech",
+      "final_url": "https://www.munchstudio.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "murf-ai",
@@ -370,7 +361,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno 11001] getaddrinfo failed)\"))"
+      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "openai-tts",
@@ -397,7 +388,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -410,9 +401,17 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0TxI3GRXlmorUz&gsxid=0TxI3GRXlmorUz&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=T931P1fFHKKeGP&gsxid=T931P1fFHKKeGP&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "perplexity-enterprise",
+      "target_url": "https://www.perplexity-enterprise.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.perplexity-enterprise.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.perplexity-enterprise.com', port=443): Failed to resolve 'www.perplexity-enterprise.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "phantombuster",
@@ -431,7 +430,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ZHgYSGVhowlOA4&gsxid=ZHgYSGVhowlOA4&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xwHtqL9HqoewcA&gsxid=xwHtqL9HqoewcA&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -465,8 +464,8 @@
     },
     {
       "slug": "rask-ai",
-      "target_url": "https://www.rask.ai",
-      "final_url": "https://www.rask.ai/home",
+      "target_url": "https://rask.ai/?via=heliatech",
+      "final_url": "https://www.rask.ai/home?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -507,8 +506,8 @@
     },
     {
       "slug": "rewardful",
-      "target_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
-      "final_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
+      "target_url": "https://www.rewardful.com/?via=heliatech",
+      "final_url": "https://www.rewardful.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -609,7 +608,7 @@
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno 11002] getaddrinfo failed)\"))"
+      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno -3] Temporary failure in name resolution)\"))"
     },
     {
       "slug": "transistor",
@@ -691,7 +690,7 @@
     {
       "slug": "wati",
       "target_url": "https://www.wati.io/?fp_ref=heliatech",
-      "final_url": "https://www.wati.io/ar/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -719,10 +718,9 @@
     {
       "slug": "zoominfo",
       "target_url": "https://www.zoominfo.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.zoominfo.com', port=443): Read timed out. (read timeout=7)"
+      "final_url": "https://www.zoominfo.com/",
+      "status_code": 200,
+      "healthy": true
     }
   ]
 }

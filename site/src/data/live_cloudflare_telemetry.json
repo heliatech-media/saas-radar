@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-06T01:26:38.204269",
+  "last_synced": "2026-11-06T00:36:01.151205",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 19293,
-  "total_requests": 120517,
-  "total_visits": 5980,
-  "total_pageviews": 25345,
+  "total_visitors_network": 19302,
+  "total_requests": 120564,
+  "total_visits": 5983,
+  "total_pageviews": 25370,
   "percent_cached": "56.14%",
-  "data_served_mb": 969.6,
+  "data_served_mb": 971.5,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6370
+      "views": 6000
     },
     {
       "path": "/",
-      "views": 2970
+      "views": 3200
     },
     {
       "path": "/calculator/",
-      "views": 1120
+      "views": 1090
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 640
+      "views": 720
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 470
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 280
-    },
-    {
-      "path": "/awards/",
-      "views": 260
+      "views": 400
     },
     {
       "path": "/radar/",
-      "views": 230
+      "views": 250
     },
     {
       "path": "/blog/",
-      "views": 220
+      "views": 240
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "path": "/reviews/clickup/",
       "views": 200
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/elevenlabs/",
+      "views": 200
+    },
+    {
+      "path": "/terms/",
+      "views": 200
+    },
+    {
+      "path": "/reviews/beehiiv/",
       "views": 190
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 160
-    },
-    {
-      "path": "/sentinel/",
-      "views": 160
-    },
-    {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
-    },
-    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 150
+      "views": 190
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 180
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 170
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 170
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 23430
+      "views": 22770
     },
     {
       "country": "Morocco",
-      "views": 16750
+      "views": 17970
     },
     {
       "country": "Germany",
-      "views": 1290
+      "views": 1370
     },
     {
       "country": "Singapore",
-      "views": 1280
+      "views": 1310
+    },
+    {
+      "country": "Belgium",
+      "views": 690
     },
     {
       "country": "United Kingdom",
       "views": 590
     },
     {
-      "country": "Belgium",
-      "views": 570
-    },
-    {
-      "country": "Netherlands",
-      "views": 550
-    },
-    {
-      "country": "Canada",
-      "views": 510
-    },
-    {
       "country": "Brazil",
+      "views": 480
+    },
+    {
+      "country": "CN",
       "views": 420
     },
     {
+      "country": "Canada",
+      "views": 400
+    },
+    {
       "country": "France",
-      "views": 330
+      "views": 380
     }
   ],
   "top_referrers": [

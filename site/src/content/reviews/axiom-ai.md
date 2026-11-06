@@ -5,7 +5,7 @@ tagline: Automate any browser-based task without writing a single line of code.
 category: Automation
 rating: 4.6
 website_url: https://axiom.ai
-affiliate_url: https://axiom.ai
+affiliate_url: "https://axiom.ai/?via=heliatech"
 summary: Axiom.ai is a powerful browser automation tool that uses a Chrome extension
   to record and execute UI-based workflows. It allows users to scrape data, fill forms,
   and navigate complex web applications by mimicking human actions, either locally

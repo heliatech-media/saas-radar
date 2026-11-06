@@ -1,16 +1,66 @@
 {
-  "timestamp": "2026-11-06T01:09:39.893471",
+  "timestamp": "2026-11-06T00:36:35.706176",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 173,
-    "total_redirects_active": 96,
+    "total_content_files_scanned": 175,
+    "total_redirects_active": 97,
     "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 10,
     "content_files_modified": 0
   },
   "healed_redirects": [
+    {
+      "slug": "playht",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "resemble-ai",
+      "target_url": "https://www.resemble.ai",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "openai-tts",
+      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "speechify",
+      "target_url": "https://speechify.com",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "coqui",
+      "target_url": "https://github.com/coqui-ai/TTS",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "relay",
+      "target_url": "https://www.relay.app",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "workato",
+      "target_url": "https://www.workato.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "activepieces",
+      "target_url": "https://www.activepieces.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "tray-io",
+      "target_url": "https://tray.ai",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "power-automate",
+      "target_url": "https://powerautomate.microsoft.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
     {
       "slug": "zoominfo",
       "target_url": "https://www.zoominfo.com",
@@ -72,59 +122,9 @@
       "source_file": "best-deel-alternatives-2026.md"
     },
     {
-      "slug": "playht",
-      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "resemble-ai",
-      "target_url": "https://www.resemble.ai",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "openai-tts",
-      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "speechify",
-      "target_url": "https://speechify.com",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "coqui",
-      "target_url": "https://github.com/coqui-ai/TTS",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "relay",
-      "target_url": "https://www.relay.app",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "workato",
-      "target_url": "https://www.workato.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "activepieces",
-      "target_url": "https://www.activepieces.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "tray-io",
-      "target_url": "https://tray.ai",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "power-automate",
-      "target_url": "https://powerautomate.microsoft.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "munch",
-      "target_url": "https://www.munch.com",
-      "source_file": "munch-evolution-guide-2026.md"
+      "slug": "perplexity-enterprise",
+      "target_url": "https://www.perplexity-enterprise.com",
+      "source_file": "perplexity-enterprise-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

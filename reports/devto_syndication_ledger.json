@@ -658,6 +658,19 @@
         "saas",
         "automation"
       ]
+    },
+    "bannerbear-evolution-guide-2026": {
+      "id": 4985015,
+      "url": "https://dev.to/heliatech/bannerbear-the-death-of-manual-design-and-the-api-first-blueprint-for-scalable-visual-assets-2m38",
+      "title": "Bannerbear: The Death of Manual Design and the API-First Blueprint for Scalable Visual Assets",
+      "canonical_url": "https://heliatech.online/blog/bannerbear-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "bannerbear",
+        "productivity",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null

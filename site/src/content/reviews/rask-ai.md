@@ -5,7 +5,7 @@ tagline: Automated video localization and dubbing for global content scaling.
 category: AI Video
 rating: 4.6
 website_url: https://www.rask.ai
-affiliate_url: https://www.rask.ai
+affiliate_url: "https://rask.ai/?via=heliatech"
 summary: Rask AI is a comprehensive localization platform that utilizes advanced AI
   to dub videos, clone voices, and generate subtitles in over 130 languages. It is
   designed to replace traditional, expensive dubbing studios by providing high-fidelity

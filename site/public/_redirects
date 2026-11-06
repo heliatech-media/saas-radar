@@ -5,7 +5,7 @@
 /go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
 /go/airtable https://airtable.com/?ref=heliatech 302
 /go/apollo-io https://www.apollo.io/?ref=heliatech 302
-/go/axiom-ai https://axiom.ai 302
+/go/axiom-ai https://axiom.ai/?via=heliatech 302
 /go/bannerbear https://www.bannerbear.com/?via=heliatech 302
 /go/beehiiv https://www.beehiiv.com/?via=heliatech 302
 /go/brevo https://www.brevo.com 302
@@ -43,7 +43,7 @@
 /go/minicong https://minicong.ai/?via=heliatech 302
 /go/monday-com https://monday.com/?ref=heliatech 302
 /go/multiplier https://www.usemultiplier.com 302
-/go/munch https://www.munch.com 302
+/go/munch https://www.getmunch.com/?via=heliatech 302
 /go/murf-ai https://murf.ai/?fp_ref=heliatech 302
 /go/n8n https://n8n.io/?via=heliatech 302
 /go/notion-ai https://affiliates.notion.so/heliatech 302
@@ -53,6 +53,7 @@
 /go/papaya-global https://www.papayaglobal.com/?ref=heliatech 302
 /go/partnerstack https://partnerstack.com/?via=heliatech 302
 /go/peripety https://try.elevenlabs.io/ajhd6t7k04dh 302
+/go/perplexity-enterprise https://www.perplexity-enterprise.com 302
 /go/phantombuster https://phantombuster.com/?via=heliatech 302
 /go/plane https://plane.so 302
 /go/playht https://try.elevenlabs.io/ajhd6t7k04dh 302
@@ -60,13 +61,13 @@
 /go/podia https://www.podia.com/?via=heliatech 302
 /go/power-automate https://powerautomate.microsoft.com 302
 /go/printify https://www.printify.com 302
-/go/rask-ai https://www.rask.ai 302
+/go/rask-ai https://rask.ai/?via=heliatech 302
 /go/relay https://www.relay.app 302
 /go/remote https://remote.com 302
 /go/resemble-ai https://www.resemble.ai 302
 /go/resend https://resend.com/?via=heliatech 302
 /go/retool https://retool.com/?fpr=heliatech 302
-/go/rewardful https://www.rewardful.com/?via=heliatech/?via=heliatech 302
+/go/rewardful https://www.rewardful.com/?via=heliatech 302
 /go/rippling https://www.rippling.com 302
 /go/riverside https://riverside.fm/?via=heliatech 302
 /go/riverside-fm https://riverside.fm/?via=heliatech 302
@@ -97,22 +98,3 @@
 /go/workato https://www.workato.com 302
 /go/zapier https://zapier.com/app/register?via=heliatech 302
 /go/zoominfo https://www.zoominfo.com 302
-
-
-# Stealth Guard: Completely lock down marketplace routes on Cloudflare Pages until preproduction is complete
-/templates/* / 302
-/templates / 302
-/dashboard/* / 302
-/dashboard / 302
-/seller/* / 302
-/seller / 302
-/sell/* / 302
-/sell / 302
-/register/* / 302
-/register / 302
-/login/* / 302
-/login / 302
-/creator/* / 302
-/creator / 302
-/checkout/* / 302
-/checkout / 302
