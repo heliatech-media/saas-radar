@@ -7,6 +7,64 @@
  * Synchronized with HeliaTech Methodology Protocol v2.4 (48-hour verification cadence).
  */
 
+// =============================================================================
+// LISTE BLANCHE DES DOMAINES PARTENAIRES & PROTECTION ANTI-SSRF STRICTE (P0)
+// =============================================================================
+const ALLOWED_PARTNER_HOSTS = new Set([
+  "www.make.com", "make.com",
+  "try.elevenlabs.io", "elevenlabs.io",
+  "www.rewardful.com", "rewardful.com",
+  "www.cursor.com", "cursor.com",
+  "codeium.com", "windsurf.ai",
+  "resend.com", "www.resend.com",
+  "www.descript.com", "descript.com",
+  "www.typeform.com", "typeform.com",
+  "tally.so",
+  "supabase.com", "www.supabase.com",
+  "lovable.dev", "www.lovable.dev",
+  "www.hubspot.com", "hubspot.com",
+  "heliatech.online"
+]);
+
+function validateUrlForSsrf(urlString) {
+  let url;
+  try {
+    url = new URL(urlString);
+  } catch (e) {
+    return { valid: false, error: "Format d'URL invalide ou mal formé." };
+  }
+
+  // 1. Strict HTTPS only (aucun protocole non sécurisé ou interne)
+  if (url.protocol !== "https:") {
+    return { valid: false, error: `Protocole interdit : "${url.protocol}". Seul https:// est autorisé.` };
+  }
+
+  const hostname = url.hostname.toLowerCase();
+
+  // 2. Interdiction absolue des adresses IP directes (privées, locales, loopback, cloud metadata)
+  const ipv4Regex = /^(\d{1,3}\.){3}\d{1,3}$/;
+  const ipv6Regex = /^(\[?[a-f0-9:]+\]?)$/i;
+  if (ipv4Regex.test(hostname) || ipv6Regex.test(hostname) || hostname === "0.0.0.0") {
+    return { valid: false, error: "Les adresses IP directes sont strictement interdites (Protection anti-SSRF P0)." };
+  }
+
+  // 3. Interdiction des domaines locaux ou sous-réseaux privés
+  if (hostname === "localhost" || hostname.endsWith(".local") || hostname.endsWith(".internal") || hostname.endsWith(".arpa")) {
+    return { valid: false, error: "Les domaines locaux ou internes sont strictement interdits." };
+  }
+
+  // 4. Validation contre la liste blanche des domaines partenaires officiels
+  const isAllowed = Array.from(ALLOWED_PARTNER_HOSTS).some(allowed => 
+    hostname === allowed || hostname.endsWith("." + allowed)
+  );
+
+  if (!isAllowed) {
+    return { valid: false, error: `Domaine non autorisé pour la sonde : "${hostname}". Seuls les partenaires certifiés sont sondables.` };
+  }
+
+  return { valid: true, url };
+}
+
 const REDIRECTS_MAP = {
   "make": "https://www.make.com/en/register?pc=heliatechmake",
   "elevenlabs": "https://try.elevenlabs.io/ajhd6t7k04dh",
@@ -245,36 +303,82 @@ export async function onRequestPost(context) {
     if (action === "probe_link") {
       const targetUrl = REDIRECTS_MAP[deal_slug] || `https://heliatech.online/go/${deal_slug}`;
       const startTime = Date.now();
-      
+
+      // P0 Anti-SSRF : Validation préliminaire de l'URL cible
+      const ssrfCheck = validateUrlForSsrf(targetUrl);
+      if (!ssrfCheck.valid) {
+        return new Response(JSON.stringify({
+          success: false,
+          deal_slug,
+          target_url: targetUrl,
+          error: `Rejet de sécurité P0 (SSRF) : ${ssrfCheck.error}`,
+          link_status: "LINK_BROKEN"
+        }), { status: 400, headers: { "Content-Type": "application/json" } });
+      }
+
+      let currentUrl = targetUrl;
       let httpCode = 0;
       let latencyMs = 0;
       let isReachable = false;
       let failureReason = null;
+      let redirectCount = 0;
+      const MAX_REDIRECTS = 3;
 
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 6000);
 
-        const probeRes = await fetch(targetUrl, {
-          method: "GET",
-          headers: {
-            "User-Agent": "HeliaTech-LinkHealthInspector/2.4 (+https://heliatech.online/methodology; B2B Partner Probe)"
-          },
-          signal: controller.signal
-        });
-        clearTimeout(timeoutId);
+        while (redirectCount <= MAX_REDIRECTS) {
+          // Sondage épuré : AUCUN en-tête d'authentification, cookies ou tokens internes transmis
+          const probeRes = await fetch(currentUrl, {
+            method: "GET",
+            redirect: "manual", // Maîtrise manuelle des redirections pour valider chaque saut
+            headers: {
+              "User-Agent": "HeliaTech-PublicPartnerProbe/2.4 (+https://heliatech.online/methodology; B2B Health Probe)"
+            },
+            signal: controller.signal
+          });
 
-        latencyMs = Date.now() - startTime;
-        httpCode = probeRes.status;
+          httpCode = probeRes.status;
 
-        if (probeRes.ok || [200, 301, 302, 307, 308].includes(probeRes.status)) {
-          isReachable = true;
-        } else {
-          failureReason = `Code HTTP renvoyé anormal : ${probeRes.status}`;
+          // Gestion sécurisée des redirections 3xx
+          if ([301, 302, 307, 308].includes(httpCode)) {
+            const location = probeRes.headers.get("Location");
+            if (!location) {
+              failureReason = `Redirection HTTP ${httpCode} sans en-tête Location.`;
+              break;
+            }
+
+            const resolvedNextUrl = new URL(location, currentUrl).toString();
+            // P0 Anti-SSRF : Vérification stricte du domaine de destination avant de suivre
+            const nextSsrfCheck = validateUrlForSsrf(resolvedNextUrl);
+            if (!nextSsrfCheck.valid) {
+              failureReason = `Tentative de redirection suspecte bloquée (SSRF) : ${nextSsrfCheck.error}`;
+              break;
+            }
+
+            currentUrl = resolvedNextUrl;
+            redirectCount++;
+            if (redirectCount > MAX_REDIRECTS) {
+              failureReason = `Nombre maximum de redirections (${MAX_REDIRECTS}) dépassé.`;
+              break;
+            }
+            continue;
+          }
+
+          if (probeRes.ok || httpCode === 200) {
+            isReachable = true;
+          } else {
+            failureReason = `Code HTTP final anormal : ${httpCode}`;
+          }
+          break;
         }
+
+        clearTimeout(timeoutId);
+        latencyMs = Date.now() - startTime;
       } catch (err) {
         latencyMs = Date.now() - startTime;
-        failureReason = err.name === 'AbortError' ? 'Délai dépassé (timeout 6000ms)' : `Erreur réseau : ${err.message}`;
+        failureReason = err.name === 'AbortError' ? 'Délai d'attente dépassé (timeout 6000ms)' : `Erreur réseau : ${err.message}`;
       }
 
       const linkStatus = isReachable ? "LINK_REACHABLE" : "LINK_BROKEN";
@@ -288,12 +392,12 @@ export async function onRequestPost(context) {
 
         await db.prepare(`
           INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-          VALUES (datetime('now'), ?, 'owner', ?, ?, ?, 'UNCHECKED', ?, 'sig_probe_link')
+          VALUES (datetime('now'), ?, 'owner', ?, ?, ?, 'UNCHECKED', ?, 'sig_probe_link_ssrf_safe')
         `).bind(
           actorEmail,
           isReachable ? "DEAL_LINK_PROBE_SUCCESS" : "DEAL_LINK_PROBE_FAILED",
           `deal:${deal_slug}`,
-          JSON.stringify({ targetUrl, httpCode, latencyMs, failureReason }),
+          JSON.stringify({ targetUrl, finalUrl: currentUrl, httpCode, latencyMs, redirectCount, failureReason }),
           linkStatus
         ).run();
       }
@@ -302,12 +406,14 @@ export async function onRequestPost(context) {
         success: isReachable,
         deal_slug,
         target_url: targetUrl,
+        final_url: currentUrl,
         link_status: linkStatus,
         http_code: httpCode,
         latency_ms: latencyMs,
+        redirects_followed: redirectCount,
         checked_at: nowIso,
         message: isReachable 
-          ? `Disponibilité technique confirmée : HTTP ${httpCode} en ${latencyMs}ms. Attention : la validité des conditions de l'offre (code promo/réduction) reste sous la responsabilité d'un audit humain.`
+          ? `Disponibilité technique confirmée : HTTP ${httpCode} en ${latencyMs}ms (${redirectCount} redirections vérifiées). Protection SSRF active. Attention : l'offre commerciale reste sous la responsabilité d'un audit humain.`
           : `Échec du lien technique : ${failureReason}. Statut marqué LINK_BROKEN.`
       }), {
         status: isReachable ? 200 : 422,
@@ -320,29 +426,49 @@ export async function onRequestPost(context) {
     // Réarme la cadence de 48h de validité commerciale de l'offre.
     // =========================================================================
     if (action === "verify_offer") {
-      const { proof_url, terms_notes, owner_confirmation, no_purchase_tested } = body;
+      const { proof_url, terms_notes, owner_confirmation, conditions_audited, coupon_code_tested, no_purchase_tested } = body;
 
-      if (!proof_url || typeof proof_url !== "string" || !proof_url.startsWith("http")) {
+      // P1 : Validation stricte du domaine de proof_url (doit appartenir au partenaire)
+      if (!proof_url || typeof proof_url !== "string") {
         return new Response(JSON.stringify({ 
-          error: "URL de preuve obligatoire : Vous devez fournir une URL publique valide (page de tarification ou annonce officielle)." 
+          error: "URL de preuve obligatoire : Renseignez l'URL officielle du partenaire." 
+        }), { status: 400 });
+      }
+
+      const proofCheck = validateUrlForSsrf(proof_url);
+      if (!proofCheck.valid) {
+        return new Response(JSON.stringify({ 
+          error: `URL de preuve non conforme : ${proofCheck.error} (L'URL doit provenir du domaine officiel du partenaire).` 
         }), { status: 400 });
       }
 
       if (!terms_notes || typeof terms_notes !== "string" || terms_notes.trim().length < 10) {
         return new Response(JSON.stringify({ 
-          error: "Notes d'audit obligatoires : Décrivez précisément les conditions de l'offre (au moins 10 caractères : remise testée, coupon, conditions)." 
+          error: "Notes d'audit obligatoires : Décrivez précisément les conditions de l'offre (au moins 10 caractères)." 
+        }), { status: 400 });
+      }
+
+      if (!conditions_audited) {
+        return new Response(JSON.stringify({ 
+          error: "Audit des conditions requis : Cochez la case confirmant que vous avez lu et audité visuellement les conditions publiques et la tarification." 
+        }), { status: 400 });
+      }
+
+      if (!coupon_code_tested) {
+        return new Response(JSON.stringify({ 
+          error: "Validation du code requise : Cochez la case confirmant que le code promo ou l'essai a été testé sans achat payant." 
+        }), { status: 400 });
+      }
+
+      if (!no_purchase_tested) {
+        return new Response(JSON.stringify({ 
+          error: "Protocole éthique impératif : Vous devez certifier qu'aucun achat réel, carte bancaire ou souscription payante n'a été exécuté." 
         }), { status: 400 });
       }
 
       if (!owner_confirmation) {
         return new Response(JSON.stringify({ 
           error: "Confirmation Owner requise : L'approbation explicite de l'Owner est obligatoire." 
-        }), { status: 400 });
-      }
-
-      if (!no_purchase_tested) {
-        return new Response(JSON.stringify({ 
-          error: "Protocole éthique requis : Vous devez certifier qu'aucun achat réel, carte bancaire ou souscription payante n'a été exécuté." 
         }), { status: 400 });
       }
 
