@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-06T22:14:51.028665",
+  "last_synced": "2026-11-06T21:28:40.454784",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20674,
-  "total_requests": 126861,
-  "total_visits": 6408,
-  "total_pageviews": 26730,
+  "total_visitors_network": 20684,
+  "total_requests": 126949,
+  "total_visits": 6412,
+  "total_pageviews": 26755,
   "percent_cached": "56.14%",
-  "data_served_mb": 1054.4,
+  "data_served_mb": 1055.5,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6420
+      "views": 6060
     },
     {
       "path": "/",
-      "views": 3190
+      "views": 3400
     },
     {
       "path": "/calculator/",
-      "views": 1140
+      "views": 1120
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 860
+      "views": 880
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 550
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 280
-    },
-    {
-      "path": "/awards/",
-      "views": 260
+      "views": 480
     },
     {
       "path": "/blog/",
-      "views": 240
+      "views": 270
     },
     {
       "path": "/radar/",
-      "views": 240
+      "views": 250
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 220
-    },
-    {
-      "path": "/versus/",
-      "views": 220
+      "views": 230
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 180
+      "views": 220
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 220
+    },
+    {
+      "path": "/terms/",
+      "views": 210
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 210
     },
     {
       "path": "/deals/",
-      "views": 180
+      "views": 200
     },
     {
-      "path": "/sentinel/",
-      "views": 170
+      "path": "/reviews/beehiiv/",
+      "views": 200
     },
     {
-      "path": "/reviews/apollo-io/",
-      "views": 160
+      "path": "/awards/",
+      "views": 190
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 24470
+      "views": 23670
     },
     {
       "country": "Morocco",
-      "views": 18200
+      "views": 19530
     },
     {
       "country": "Singapore",
-      "views": 1410
+      "views": 1450
     },
     {
       "country": "Germany",
-      "views": 1310
-    },
-    {
-      "country": "United Kingdom",
-      "views": 600
+      "views": 1400
     },
     {
       "country": "Belgium",
-      "views": 590
+      "views": 690
     },
     {
-      "country": "Canada",
-      "views": 560
-    },
-    {
-      "country": "Netherlands",
-      "views": 550
+      "country": "United Kingdom",
+      "views": 610
     },
     {
       "country": "Brazil",
-      "views": 520
+      "views": 530
     },
     {
       "country": "France",
-      "views": 390
+      "views": 450
+    },
+    {
+      "country": "CN",
+      "views": 430
+    },
+    {
+      "country": "Canada",
+      "views": 420
     }
   ],
   "top_referrers": [
