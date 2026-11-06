@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-06T04:38:25.367383",
+  "last_synced": "2026-11-06T04:58:33.092499",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20014,
-  "total_requests": 122780,
-  "total_visits": 6204,
-  "total_pageviews": 25921,
+  "total_visitors_network": 20038,
+  "total_requests": 122961,
+  "total_visits": 6211,
+  "total_pageviews": 25966,
   "percent_cached": "56.14%",
-  "data_served_mb": 996.0,
+  "data_served_mb": 998.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/",
-      "views": 3030
+      "views": 3050
     },
     {
       "path": "/calculator/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 690
+      "views": 710
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -39,11 +39,11 @@
       "views": 260
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 240
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 240
     },
     {
@@ -67,22 +67,22 @@
       "views": 170
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/reviews/apollo-io/",
       "views": 160
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 23630
+      "views": 23710
     },
     {
       "country": "Morocco",
-      "views": 17110
+      "views": 17140
     },
     {
       "country": "Singapore",
-      "views": 1310
+      "views": 1320
     },
     {
       "country": "Germany",
@@ -94,7 +94,7 @@
     },
     {
       "country": "Belgium",
-      "views": 570
+      "views": 580
     },
     {
       "country": "Netherlands",
