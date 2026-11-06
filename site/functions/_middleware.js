@@ -52,8 +52,9 @@ export async function onRequest(context) {
     const authHeader = context.request.headers.get('Authorization');
     const cookieHeader = context.request.headers.get('Cookie') || '';
 
-    // Authorized if valid Cloudflare Access assertion header is present
-    const hasCfAccess = !!(cfJwt || cfEmail);
+    // Authorized if valid Cloudflare Access assertion header is present or authenticated cookie / referer
+    const hasSameOriginReferer = !!(context.request.headers.get('referer')?.includes('/sentinel/admin'));
+    const hasCfAccess = !!(cfJwt || cfEmail || cookieHeader.includes('CF_Authorization') || hasSameOriginReferer);
     // Authorized if bearer token matches director secret or session cookie is present
     const hasBearer = !!(authHeader && authHeader.startsWith('Bearer ') && authHeader.length > 15);
     const hasSessionCookie = cookieHeader.includes('_helia_sentinel_auth=1') || cookieHeader.includes('_helia_sentinel_auth_token=');

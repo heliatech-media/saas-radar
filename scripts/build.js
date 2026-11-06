@@ -29,6 +29,14 @@ if (fs.existsSync(rootDist)) {
 }
 fs.cpSync(siteDist, rootDist, { recursive: true });
 
+// 3.5 Mirror site/functions to root/functions for Cloudflare Pages serverless routing
+const siteFunctions = path.join(siteDir, 'functions');
+const rootFunctions = path.join(rootDir, 'functions');
+if (fs.existsSync(siteFunctions)) {
+  console.log('⚡ Mirroring site/functions to root/functions for Cloudflare Pages API routing...');
+  fs.cpSync(siteFunctions, rootFunctions, { recursive: true });
+}
+
 // 4. Verify _headers and _redirects in both dist folders
 const headersSource = path.join(siteDir, 'public', '_headers');
 const redirectsSource = path.join(siteDir, 'public', '_redirects');

@@ -398,7 +398,7 @@ export async function onRequestPost(context) {
         latencyMs = Date.now() - startTime;
       } catch (err) {
         latencyMs = Date.now() - startTime;
-        failureReason = err.name === 'AbortError' ? 'Délai d'attente dépassé (timeout 6000ms)' : `Erreur réseau : ${err.message}`;
+        failureReason = err.name === 'AbortError' ? "Délai d'attente dépassé (timeout 6000ms)" : `Erreur réseau : ${err.message}`;
       }
 
       const linkStatus = isReachable ? "LINK_REACHABLE" : "LINK_BROKEN";
