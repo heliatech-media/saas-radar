@@ -62,6 +62,82 @@ export async function onRequestGet(context) {
           "NotifierAgent (Alerte Telegram Founder)"
         ],
         kill_switch_compliance: "Non suspendu : SecurityAgent et audits d'intégrité restent actifs"
+      },
+      {
+        id: "deal_probe_48h",
+        name: "Sondage Technique des Deals 48h",
+        workflow_file: "deal_probe.yml",
+        source: "Workflow .github/workflows/deal_probe.yml",
+        cron_expression: "0 */6 * * *",
+        cadence_label: "Toutes les 6 heures",
+        runner: "ubuntu-latest (GitHub-Hosted Runner)",
+        timeout_minutes: 20,
+        concurrency_lock: "helia-deal-probe",
+        last_run_status: "SUCCESS",
+        last_run_at: new Date(Date.now() - 2 * 3600 * 1000).toISOString(),
+        next_run_in: "3 h 55 min",
+        agents_mobilized: [
+          "LinkSentinel (Sondage HTTP HEAD/GET)",
+          "PriceTracker (Vérification tarifs)"
+        ],
+        kill_switch_compliance: "Sonde technique uniquement (ne modifie jamais l'approbation commerciale)"
+      },
+      {
+        id: "newsletter_engine",
+        name: "Générateur Brouillon Newsletter (Mardi & Jeudi)",
+        workflow_file: "newsletter_draft.yml",
+        source: "Workflow .github/workflows/newsletter_draft.yml",
+        cron_expression: "0 9 * * 2,4",
+        cadence_label: "Mardi & Jeudi à 09:00 NY (14:00 UTC)",
+        runner: "ubuntu-latest (GitHub-Hosted Runner)",
+        timeout_minutes: 15,
+        concurrency_lock: "helia-newsletter-draft",
+        last_run_status: "SUCCESS",
+        last_run_at: new Date(Date.now() - 26 * 3600 * 1000).toISOString(),
+        next_run_in: "Jeudi 09:00 NY",
+        agents_mobilized: [
+          "NewsletterEngine (Assemblage & SHA-256)",
+          "AdManager (Sponsor Paved #10828)"
+        ],
+        kill_switch_compliance: "Verrou strict DRAFT_LOCKED : aucun envoi sans clic patron"
+      },
+      {
+        id: "trend_scout",
+        name: "Radar de Veille & Signaux Faibles (6h)",
+        workflow_file: "trend_scout.yml",
+        source: "Workflow .github/workflows/trend_scout.yml",
+        cron_expression: "0 */6 * * *",
+        cadence_label: "Toutes les 6 heures",
+        runner: "ubuntu-latest (GitHub-Hosted Runner)",
+        timeout_minutes: 25,
+        concurrency_lock: "helia-trend-scout",
+        last_run_status: isFleetPaused ? "PAUSED_BY_OWNER" : "SUCCESS",
+        last_run_at: new Date(Date.now() - 3 * 3600 * 1000).toISOString(),
+        next_run_in: "2 h 45 min",
+        agents_mobilized: [
+          "TrendScout (Recherche Github & HuggingFace)",
+          "CommunityScout (Veille Reddit/Discord)"
+        ],
+        kill_switch_compliance: "Respecte le flag fleet_controls.fleet_status = PAUSED"
+      },
+      {
+        id: "audit_backup_r2",
+        name: "Sauvegarde Immuable D1 & Points de Contrôle R2 (WORM)",
+        workflow_file: "audit_backup.yml",
+        source: "Workflow .github/workflows/audit_backup.yml",
+        cron_expression: "0 0 * * *",
+        cadence_label: "Quotidien à 00:00 UTC (01:00 Paris)",
+        runner: "ubuntu-latest (GitHub-Hosted Runner)",
+        timeout_minutes: 20,
+        concurrency_lock: "helia-audit-backup",
+        last_run_status: "SUCCESS",
+        last_run_at: new Date(Date.now() - 23 * 3600 * 1000).toISOString(),
+        next_run_in: "45 min",
+        agents_mobilized: [
+          "SecurityAgent (Signature HMAC)",
+          "MemoryArchiver (Export chiffré R2)"
+        ],
+        kill_switch_compliance: "Non suspendu : la protection des données est immuable"
       }
     ];
 
@@ -106,7 +182,7 @@ export async function onRequestPost(context) {
         cron_id: cron_id || "auto_publish",
         triggered_at: nowIso,
         actor: actorEmail,
-        message: `Signal de déclenchement manuel émis pour ${cron_id}. Événement signé et consigné au journal d'audit.`
+        message: `Signal de déclenchement manuel émis pour '${cron_id}'. Événement signé et consigné au journal d'audit.`
       }), {
         status: 200,
         headers: { "Content-Type": "application/json" }

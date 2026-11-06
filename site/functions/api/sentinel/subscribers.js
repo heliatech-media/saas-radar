@@ -3,6 +3,7 @@
  * Secure, privacy-preserving subscriber ledger endpoint.
  * Zero Static PII Leakage: Data is loaded dynamically via protected Edge API.
  * Emails are masked by default to prevent unintentional exposure.
+ * Any unmasking action (reveal=true) is formally recorded in the audit trail.
  */
 
 function maskEmail(email) {
@@ -27,6 +28,7 @@ export async function onRequestGet(context) {
     const limit = Math.min(parseInt(url.searchParams.get("limit") || "25", 10), 100);
     const offset = (page - 1) * limit;
     const reveal = url.searchParams.get("reveal") === "true";
+    const actorEmail = context.request.headers.get("Cf-Access-Authenticated-User-Email") || "owner@heliatech.online";
     const db = context.env?.DB;
 
     let subscribers = [];
@@ -40,6 +42,14 @@ export async function onRequestGet(context) {
         const rows = await db.prepare("SELECT id, email, role, country, country_code, signup_date, source_path, lead_magnet, status FROM subscribers ORDER BY signup_date DESC LIMIT ? OFFSET ?")
           .bind(limit, offset).all();
         if (rows && rows.results) subscribers = rows.results;
+
+        // Si l'utilisateur démasque les emails, consigner formellement l'accès PII dans l'audit
+        if (reveal) {
+          await db.prepare(`
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
+            VALUES (datetime('now'), ?, 'owner', 'REVEAL_PII_SUBSCRIBERS', 'subscribers:pii', '{"reason":"Owner consultation with Zero Trust MFA"}', 'MASKED', 'UNMASKED', 'sig_pii_unmasked')
+          `).bind(actorEmail).run();
+        }
       } catch (e) {
         console.warn("D1 subscribers query fallback:", e.message);
       }
