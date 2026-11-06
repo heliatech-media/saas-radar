@@ -1252,14 +1252,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           <div class="flex items-start gap-2.5">
             <input type="checkbox" id="verify-offer-coupon-check" class="mt-0.5 rounded border-slate-700 bg-slate-950 text-cyan-500 focus:ring-0" />
             <label for="verify-offer-coupon-check" class="text-slate-300 text-[10px] leading-tight cursor-pointer">
-              <strong>2. Code validé :</strong> J'ai testé la saisie du code promo sur le formulaire sans effectuer d'achat payant.
+              <strong>2. Code validé (Action manuelle exclusive de l'Owner) :</strong> J'ai testé manuellement la saisie du code promo sur le formulaire. Aucun agent n'est autorisé à automatiser ce test.
             </label>
           </div>
 
           <div class="flex items-start gap-2.5">
             <input type="checkbox" id="verify-offer-no-purchase-check" class="mt-0.5 rounded border-slate-700 bg-slate-950 text-cyan-500 focus:ring-0" />
             <label for="verify-offer-no-purchase-check" class="text-slate-300 text-[10px] leading-tight cursor-pointer text-amber-300/90 font-medium">
-              <strong>3. Protocole éthique :</strong> Aucun paiement, aucune carte bancaire ni souscription payante n'a été exécuté.
+              <strong>3. Protocole éthique renforcé :</strong> Aucun paiement, aucune carte bancaire, aucune création de compte et aucune donnée personnelle n'ont été utilisés pour cet audit.
             </label>
           </div>
         </div>
@@ -1681,7 +1681,10 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             owner_confirmation: true,
             conditions_audited: true,
             coupon_code_tested: true,
-            no_purchase_tested: true
+            no_purchase_tested: true,
+            manual_owner_action: true,
+            no_account_no_personal_data: true,
+            is_automated_agent: false
           })
         });
         const data = await res.json();

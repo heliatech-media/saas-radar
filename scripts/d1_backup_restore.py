@@ -49,6 +49,7 @@ TABLES_TO_BACKUP = [
     "subscribers",
     "owner_approvals",
     "sentinel_audit_logs",
+    "d1_usage_audit_log",
     "newsletter_editions",
     "newsletter_dispatches",
     "deals_registry",
@@ -243,6 +244,7 @@ def test_restore_d1_sandbox(backup_file: Path, sandbox_db_id: str) -> dict:
     """
     print(f"\n[D1 SANDBOX TEST] Initiating live Cloudflare D1 restore against sandbox ID: {sandbox_db_id}...")
     client = D1Client(database_id=sandbox_db_id)
+    client.is_restore_mode = True
 
     with open(backup_file, "r", encoding="utf-8") as f:
         sql_content = f.read()

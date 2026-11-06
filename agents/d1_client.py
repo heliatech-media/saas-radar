@@ -7,12 +7,9 @@ Implements the immutable rules:
    doivent passer par un accès authentifié à D1 ; SQLite locale sert uniquement aux tests."
 2. "Limiter le token D1. Token dédié, droits minimums sur la seule base concernée,
    stocké uniquement dans les secrets GitHub/Cloudflare, avec rotation et journal d'usage."
-
-Dedicated Token Specifications (P0):
-  - Secret: CLOUDFLARE_D1_TOKEN (GitHub Actions & Cloudflare Pages Secret)
-  - Scope: Account.D1:Edit strictly restricted to 'heliatech-sentinel-governance'
-  - Rotation Cadence: 90 days (Dernière rotation: 2026-11-01, Prochaine: 2027-01-30)
-  - Usage Journal: data/d1_usage_journal.jsonl (Untracked by Git, append-only)
+3. "Stocke le journal d'audit dans D1 avec interdiction applicative d'UPDATE/DELETE,
+   une chaîne de hash cryptographique (prev_hash -> entry_hash), et exporte-le vers
+   un stockage R2 privé avec rétention et versioning."
 """
 
 import os
@@ -22,6 +19,7 @@ import time
 import logging
 import sqlite3
 import hashlib
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
@@ -32,6 +30,10 @@ logger = logging.getLogger("Helia-D1Client")
 ROOT_DIR = Path(__file__).resolve().parent.parent
 LOCAL_DB_PATH = ROOT_DIR / "data" / "sentinel_governance.db"
 USAGE_JOURNAL_PATH = ROOT_DIR / "data" / "d1_usage_journal.jsonl"
+AUDIT_EXPORTS_DIR = ROOT_DIR / "data" / "backups" / "audit_exports"
+
+GENESIS_PREV_HASH = "0" * 64
+PROTECTED_IMMUTABLE_TABLES = {"D1_USAGE_AUDIT_LOG", "SENTINEL_AUDIT_LOGS"}
 
 
 class D1Client:
@@ -82,6 +84,7 @@ class D1Client:
 
         self.token_last_rotated_at = os.environ.get("D1_TOKEN_LAST_ROTATED_AT", self.DEFAULT_LAST_ROTATION)
         self.token_next_rotation_due = os.environ.get("D1_TOKEN_NEXT_ROTATION_DUE_AT", self.DEFAULT_NEXT_ROTATION)
+        self._is_logging_audit = False
 
         if not self.force_local and self.account_id and self.api_token and self.database_id:
             self.mode = "CLOUDFLARE_D1_PRODUCTION"
@@ -114,6 +117,25 @@ class D1Client:
             return single_line[:157] + "..."
         return single_line
 
+    def _assert_immutability(self, sql: str):
+        """
+        Interdiction applicative absolue d'UPDATE, DELETE, DROP ou ALTER
+        sur les tables de journalisation immuables (d1_usage_audit_log, sentinel_audit_logs).
+        """
+        if getattr(self, "is_restore_mode", False):
+            return
+
+        clean_sql = sql.strip().upper()
+        # Look for mutating verbs
+        for verb in ["UPDATE", "DELETE", "DROP", "ALTER", "TRUNCATE"]:
+            if clean_sql.startswith(verb) or f" {verb} " in clean_sql:
+                for tbl in PROTECTED_IMMUTABLE_TABLES:
+                    if tbl in clean_sql:
+                        raise PermissionError(
+                            f"[IMMUTABLE AUDIT LOG PROTECTION] L'opération '{verb}' est strictement interdite "
+                            f"sur la table d'audit immuable '{tbl}'. Les journaux d'audit ne peuvent être ni modifiés ni supprimés."
+                        )
+
     def _record_usage_journal(
         self,
         operation: str,
@@ -124,18 +146,26 @@ class D1Client:
         rows_affected: int = 0
     ):
         """
-        P0 Usage Journal:
-        Appends an immutable execution record into data/d1_usage_journal.jsonl.
-        Untracked by Git.
+        Stocke le journal d'audit dans D1 (ou SQLite en test) avec une chaîne de hash cryptographique.
+        Génère une empreinte liée au bloc précédent (prev_hash -> entry_hash).
         """
-        entry = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+        if self._is_logging_audit:
+            return  # Prevent recursive logging when inserting the audit log itself
+
+        now_iso = datetime.now(timezone.utc).isoformat()
+        stmt_type = self._extract_statement_type(sql)
+        sanitized_sql = self._sanitize_sql_for_log(sql)
+        actor_email = os.environ.get("SENTINEL_ACTOR_EMAIL", "system@heliatech.online")
+
+        # Fallback offline jsonl
+        file_entry = {
+            "timestamp": now_iso,
             "mode": self.mode,
             "token_type": getattr(self, "token_type", "LOCAL"),
             "token_scope": self.TOKEN_SCOPE if self.mode == "CLOUDFLARE_D1_PRODUCTION" else "LOCAL_SQLITE",
             "operation": operation,
-            "statement_type": self._extract_statement_type(sql),
-            "sanitized_sql": self._sanitize_sql_for_log(sql),
+            "statement_type": stmt_type,
+            "sanitized_sql": sanitized_sql,
             "latency_ms": latency_ms,
             "rows_affected": rows_affected,
             "status": status,
@@ -144,14 +174,134 @@ class D1Client:
         try:
             USAGE_JOURNAL_PATH.parent.mkdir(parents=True, exist_ok=True)
             with open(USAGE_JOURNAL_PATH, "a", encoding="utf-8") as f:
-                f.write(json.dumps(entry) + "\n")
+                f.write(json.dumps(file_entry) + "\n")
         except Exception as e:
-            logger.warning(f"Failed to append to D1 usage journal: {e}")
+            logger.warning(f"Failed to append to D1 usage journal file: {e}")
+
+        # Database Hash-Chained Audit Record in D1 / SQLite
+        try:
+            self._is_logging_audit = True
+            prev_hash = GENESIS_PREV_HASH
+
+            # 1. Fetch latest entry hash
+            latest_rows = self.query("SELECT entry_hash FROM d1_usage_audit_log ORDER BY sequence_id DESC LIMIT 1")
+            if latest_rows and latest_rows[0].get("entry_hash"):
+                prev_hash = latest_rows[0]["entry_hash"]
+
+            # 2. Compute cryptographic entry hash linking to previous
+            hash_payload = f"{prev_hash}|{now_iso}|{actor_email}|{operation}|{stmt_type}|{sanitized_sql}|{rows_affected}|{status}"
+            entry_hash = hashlib.sha256(hash_payload.encode("utf-8")).hexdigest()
+
+            # 3. Insert append-only audit entry
+            insert_sql = """
+                INSERT INTO d1_usage_audit_log 
+                (timestamp, actor_email, operation, statement_type, sanitized_sql, rows_affected, latency_ms, status, error, token_scope, prev_hash, entry_hash)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """
+            params = [
+                now_iso, actor_email, operation, stmt_type, sanitized_sql,
+                rows_affected, latency_ms, status, error or "",
+                self.TOKEN_SCOPE if self.mode == "CLOUDFLARE_D1_PRODUCTION" else "LOCAL_SQLITE",
+                prev_hash, entry_hash
+            ]
+            self.execute(insert_sql, params)
+        except Exception as e:
+            # Table might not exist yet before migration
+            pass
+        finally:
+            self._is_logging_audit = False
+
+    def verify_hash_chain(self) -> Dict[str, Any]:
+        """
+        Vérifie l'intégrité cryptographique absolue de la chaîne de hash dans d1_usage_audit_log.
+        Détecte toute tentative d'altération, suppression ou réordonnancement des enregistrements.
+        """
+        rows = self.query("SELECT sequence_id, timestamp, actor_email, operation, statement_type, sanitized_sql, rows_affected, status, prev_hash, entry_hash FROM d1_usage_audit_log ORDER BY sequence_id ASC")
+        
+        if not rows:
+            return {"valid": True, "count": 0, "message": "Journal vide (0 entrée)"}
+
+        expected_prev = GENESIS_PREV_HASH
+        for r in rows:
+            seq = r["sequence_id"]
+            if r["prev_hash"] != expected_prev:
+                raise ValueError(f"[CORRUPTION DÉTECTÉE] Rupture de chaîne au sequence_id {seq}: prev_hash attendu {expected_prev}, trouvé {r['prev_hash']}")
+
+            # Recompute entry hash
+            payload = f"{expected_prev}|{r['timestamp']}|{r['actor_email']}|{r['operation']}|{r['statement_type']}|{r['sanitized_sql']}|{r['rows_affected']}|{r['status']}"
+            computed_hash = hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+            if computed_hash != r["entry_hash"]:
+                raise ValueError(f"[CORRUPTION DÉTECTÉE] Empreinte altérée au sequence_id {seq}: attendu {computed_hash}, trouvé {r['entry_hash']}")
+
+            expected_prev = r["entry_hash"]
+
+        return {
+            "valid": True,
+            "total_verified": len(rows),
+            "head_sequence_id": rows[-1]["sequence_id"],
+            "head_hash": expected_prev,
+            "status": "HASH_CHAIN_INTEGRITY_VERIFIED"
+        }
+
+    def export_audit_to_r2(self, retention_days: int = 365, version: str = "v1.0.0") -> Dict[str, Any]:
+        """
+        Exporte le journal d'audit immuable vers un stockage Cloudflare R2 privé
+        avec métadonnées de rétention et versioning.
+        """
+        AUDIT_EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        chain_status = self.verify_hash_chain()
+        rows = self.query("SELECT * FROM d1_usage_audit_log ORDER BY sequence_id ASC")
+
+        now_utc = datetime.now(timezone.utc)
+        timestamp_str = now_utc.strftime("%Y%m%d_%H%M%S")
+        export_filename = f"d1_audit_export_{timestamp_str}_{version}.json"
+        export_file_path = AUDIT_EXPORTS_DIR / export_filename
+
+        raw_json = json.dumps(rows, indent=2)
+        checksum = hashlib.sha256(raw_json.encode("utf-8")).hexdigest()
+
+        manifest = {
+            "export_file": export_filename,
+            "schema_version": version,
+            "retention_policy": f"{retention_days}_days_immutable",
+            "exported_at": now_utc.isoformat(),
+            "total_records": len(rows),
+            "hash_chain_verified": chain_status["valid"],
+            "head_hash": chain_status.get("head_hash"),
+            "checksum_sha256": checksum,
+            "storage_target": "CLOUDFLARE_R2_PRIVATE",
+            "bucket": os.environ.get("CLOUDFLARE_R2_BUCKET", "heliatech-sentinel-backups")
+        }
+
+        with open(export_file_path, "w", encoding="utf-8") as f:
+            json.dump({"manifest": manifest, "records": rows}, f, indent=2)
+
+        # Upload via wrangler if R2 is configured
+        bucket_name = manifest["bucket"]
+        r2_key = f"audit_logs/{export_filename}"
+        r2_uploaded = False
+
+        try:
+            if os.environ.get("CLOUDFLARE_API_TOKEN"):
+                subprocess.run(
+                    ["npx", "wrangler", "r2", "object", "put", f"{bucket_name}/{r2_key}", "--file", str(export_file_path)],
+                    capture_output=True, check=True, timeout=30
+                )
+                r2_uploaded = True
+        except Exception:
+            pass
+
+        manifest["r2_uploaded"] = r2_uploaded
+        manifest["r2_key"] = r2_key if r2_uploaded else "STAGED_LOCALLY"
+
+        return manifest
 
     def query(self, sql: str, params: Optional[List[Any]] = None) -> List[Dict[str, Any]]:
         """
         Executes a read query and returns a list of dictionary rows.
         """
+        self._assert_immutability(sql)
         params = params or []
         start_time = time.time()
         try:
@@ -172,6 +322,7 @@ class D1Client:
         """
         Executes a mutation query (INSERT, UPDATE, DELETE) and returns metadata.
         """
+        self._assert_immutability(sql)
         params = params or []
         start_time = time.time()
         try:
@@ -303,7 +454,7 @@ class D1Client:
         previous_state: Optional[str] = None,
         new_state: Optional[str] = None
     ) -> bool:
-        """Appends an immutable cryptographically signed audit log."""
+        """Appends an immutable cryptographically signed audit log into sentinel_audit_logs."""
         timestamp = datetime.now(timezone.utc).isoformat()
         sig_data = f"{timestamp}|{actor_email}|{action}|{target}|{new_state}"
         signature = hashlib.sha256(sig_data.encode("utf-8")).hexdigest()
@@ -330,7 +481,9 @@ class D1Client:
             "last_rotated_at": self.token_last_rotated_at,
             "next_rotation_due": self.token_next_rotation_due,
             "cadence_days": self.ROTATION_CADENCE_DAYS,
-            "journal_file": "data/d1_usage_journal.jsonl"
+            "audit_table": "d1_usage_audit_log",
+            "hash_chain": "SHA-256 (prev_hash -> entry_hash)",
+            "immutability": "ENFORCED (UPDATE/DELETE PROHIBITED)"
         }
 
 

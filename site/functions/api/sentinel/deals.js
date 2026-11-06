@@ -22,8 +22,7 @@ const ALLOWED_PARTNER_HOSTS = new Set([
   "tally.so",
   "supabase.com", "www.supabase.com",
   "lovable.dev", "www.lovable.dev",
-  "www.hubspot.com", "hubspot.com",
-  "heliatech.online"
+  "www.hubspot.com", "hubspot.com"
 ]);
 
 function validateUrlForSsrf(urlString) {
@@ -51,6 +50,19 @@ function validateUrlForSsrf(urlString) {
   // 3. Interdiction des domaines locaux ou sous-réseaux privés
   if (hostname === "localhost" || hostname.endsWith(".local") || hostname.endsWith(".internal") || hostname.endsWith(".arpa")) {
     return { valid: false, error: "Les domaines locaux ou internes sont strictement interdits." };
+  }
+
+  // 3b. Restriction stricte d'auto-sondage sur heliatech.online
+  // Empêche la récursion, les boucles de redirection et le sondage involontaire de routes internes.
+  // Seule la route de santé publique /healthz est admise.
+  if (hostname.endsWith("heliatech.online")) {
+    if (hostname === "heliatech.online" && url.pathname === "/healthz" && !url.search && !url.hash) {
+      return { valid: true, url };
+    }
+    return {
+      valid: false,
+      error: `Auto-sondage interdit sur "${hostname}". Seule l'URL https://heliatech.online/healthz (domaine principal strict) est admise comme sonde de santé publique afin d'empêcher les boucles récursives et le scan de sous-domaines internes.`
+    };
   }
 
   // 4. Validation contre la liste blanche des domaines partenaires officiels
@@ -301,7 +313,15 @@ export async function onRequestPost(context) {
     // Ne modifie JAMAIS la validité commerciale de l'offre (offer_status).
     // =========================================================================
     if (action === "probe_link") {
-      const targetUrl = REDIRECTS_MAP[deal_slug] || `https://heliatech.online/go/${deal_slug}`;
+      const targetUrl = REDIRECTS_MAP[deal_slug];
+      if (!targetUrl) {
+        return new Response(JSON.stringify({
+          success: false,
+          deal_slug,
+          error: "Outil inconnu dans la table des redirections partenaires. L'auto-sondage sur des routes non cartographiées est interdit.",
+          link_status: "LINK_BROKEN"
+        }), { status: 400, headers: { "Content-Type": "application/json" } });
+      }
       const startTime = Date.now();
 
       // P0 Anti-SSRF : Validation préliminaire de l'URL cible
@@ -454,9 +474,30 @@ export async function onRequestPost(context) {
         }), { status: 400 });
       }
 
+      const { manual_owner_action, no_account_no_personal_data, is_automated_agent } = body;
+
+      // Rejet immédiat de toute automatisation par agent
+      if (is_automated_agent || body.agent_id) {
+        return new Response(JSON.stringify({ 
+          error: "Action manuelle exclusive requise : La validation d'un code promo ne peut JAMAIS être automatisée par un agent. Le test doit être exécuté manuellement par le Propriétaire (Owner)." 
+        }), { status: 403 });
+      }
+
       if (!coupon_code_tested) {
         return new Response(JSON.stringify({ 
-          error: "Validation du code requise : Cochez la case confirmant que le code promo ou l'essai a été testé sans achat payant." 
+          error: "Validation du code requise : Cochez la case confirmant que le code promo ou l'essai a été testé manuellement sans achat payant." 
+        }), { status: 400 });
+      }
+
+      if (!manual_owner_action) {
+        return new Response(JSON.stringify({ 
+          error: "Certification manuelle requise : Vous devez certifier qu'il s'agit d'une action manuelle directe de l'Owner sans intervention d'un agent." 
+        }), { status: 400 });
+      }
+
+      if (!no_account_no_personal_data) {
+        return new Response(JSON.stringify({ 
+          error: "Protocole éthique renforcé : Vous devez certifier que le test a été réalisé manuellement sans création de compte, sans donnée personnelle et sans carte bancaire." 
         }), { status: 400 });
       }
 
