@@ -658,20 +658,18 @@ class EmailCampaignAgent:
             NewsletterEngine, NoValidatedEditionError, EditionValidationError, SlotAlreadyReservedError
         )
         engine = NewsletterEngine()
-        now = datetime.now()
+        from zoneinfo import ZoneInfo
+        ny_tz = ZoneInfo("America/New_York")
+        ny_now = datetime.now(ny_tz)
 
-        weekday = now.weekday()
-        if weekday == 3:  # Thursday
-            edition_type = "thursday"
-        elif weekday == 1:  # Tuesday
-            edition_type = "tuesday"
-        else:
-            if not force:
-                logger.info("Today is neither Tuesday nor Thursday. Skipping autonomous dispatch.")
-                return {"status": "SKIPPED", "reason": "Not Tuesday or Thursday"}
-            edition_type = "thursday"
+        # Enforce America/New_York 09:00 AM window check
+        is_open, window_msg = engine.is_dispatch_window_open(ny_now)
+        if not is_open and not force:
+            logger.info(f"Newsletter dispatch skipped: {window_msg}")
+            return {"status": "SKIPPED", "reason": window_msg}
 
-        today_date = now.strftime("%Y-%m-%d")
+        edition_type = "thursday" if ny_now.weekday() == 3 else "tuesday"
+        today_date = ny_now.strftime("%Y-%m-%d")
         slot_key = engine.compute_slot_key(today_date, edition_type)
 
         # 1. Check if already dispatched for this slot

@@ -29,6 +29,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 from difflib import SequenceMatcher
 from contextlib import contextmanager
+from zoneinfo import ZoneInfo
 
 logger = logging.getLogger("Helia-NewsletterEngine")
 
@@ -134,20 +135,84 @@ class NewsletterEngine:
         return f"{dt}:{etype}"
 
     @staticmethod
-    def normalize_text(text: str) -> str:
-        """Strips HTML tags, collapses whitespace, converts to lowercase."""
-        no_html = re.sub(r"<[^>]+>", " ", text)
-        collapsed = re.sub(r"\s+", " ", no_html).strip().lower()
+    def is_dispatch_window_open(dt: Optional[datetime] = None) -> Tuple[bool, str]:
+        """
+        Validates if current or provided datetime falls within the official B2B broadcast window:
+        - Tuesday or Thursday in America/New_York timezone
+        - Scheduled around 09:00 AM America/New_York (window: 08:30 to 12:00 PM America/New_York).
+        Returns: (is_open: bool, message: str)
+        """
+        ny_tz = ZoneInfo("America/New_York")
+        if dt is None:
+            ny_now = datetime.now(ny_tz)
+        else:
+            if dt.tzinfo is None:
+                ny_now = dt.replace(tzinfo=ny_tz)
+            else:
+                ny_now = dt.astimezone(ny_tz)
+
+        weekday = ny_now.weekday()
+        day_name = ny_now.strftime("%A")
+        time_str = ny_now.strftime("%H:%M %Z")
+
+        if weekday not in (1, 3):  # 1 = Tuesday, 3 = Thursday
+            return False, f"Today is {day_name} ({time_str}). Broadcast only permitted on Tuesday or Thursday."
+
+        # Target 09:00 AM America/New_York window (08:30 - 12:00)
+        decimal_hour = ny_now.hour + (ny_now.minute / 60.0)
+        if decimal_hour < 8.5 or decimal_hour > 12.0:
+            return False, f"Outside 09:00 America/New_York window ({time_str}). Permitted window: 08:30 - 12:00 NY."
+
+        return True, f"Window OPEN: {day_name} {time_str} (09:00 America/New_York Broadcast Window)"
+
+    @staticmethod
+    def normalize_html_content(text: str) -> str:
+        """
+        Robust content normalization for duplicate detection:
+        1. Strips dynamic personalization tokens: {{email}}, {{unsubscribe_url}}, etc.
+        2. Strips issue number variations (#054, ISSUE #..., etc.) to prevent cosmetic renumbering evasion.
+        3. Strips URL query tracking parameters (utm_*, ref, via, fpr, timestamps).
+        4. Strips HTML markup tags.
+        5. Strips punctuation variations and collapses all whitespace into lowercase tokens.
+        """
+        # Remove template/personalization tokens
+        clean = re.sub(r"\{\{[^}]+\}\}", " ", text)
+        # Remove issue numbering variations
+        clean = re.sub(r"#[0-9]{3,4}", " ", clean)
+        clean = re.sub(r"issue\s*#?[0-9]+", " ", clean, flags=re.IGNORECASE)
+        # Strip URL query parameters (tracking, UTMs, referral IDs)
+        clean = re.sub(r"\?[\w=&_.\-%]+", " ", clean)
+        # Strip HTML tags
+        clean = re.sub(r"<[^>]+>", " ", clean)
+        # Strip punctuation variations
+        clean = re.sub(r"[^\w\s]", " ", clean)
+        # Collapse whitespace & lowercase
+        collapsed = re.sub(r"\s+", " ", clean).strip().lower()
         return collapsed
 
     @classmethod
-    def compute_content_hash(cls, subject: str, body_html: str, selected_items: Dict[str, str]) -> str:
+    def normalize_text(cls, text: str) -> str:
+        """Alias for backward compatibility with existing callers."""
+        return cls.normalize_html_content(text)
+
+    @classmethod
+    def compute_content_hash(cls, subject: str, body_html: str, selected_items: Dict[str, Any]) -> str:
         """
-        Computes SHA-256(normalized_subject + normalized_body + selected_item_ids).
+        Computes deterministic SHA-256 hash:
+        - Normalized subject (stripped of issue numbers and punctuation)
+        - Normalized body HTML (stripped of tags, tokens, tracking query params)
+        - Sorted and canonicalized editorial blocks (keys & values sorted, whitespace stripped, lowercased)
         """
-        norm_subj = cls.normalize_text(subject)
-        norm_body = cls.normalize_text(body_html)
-        items_str = json.dumps(selected_items, sort_keys=True)
+        norm_subj = cls.normalize_html_content(subject)
+        norm_body = cls.normalize_html_content(body_html)
+
+        # Canonicalize editorial blocks: strictly sorted keys, lowercased stripped string values
+        canonical_items = {}
+        for k in sorted(selected_items.keys()):
+            val = selected_items[k]
+            canonical_items[str(k).strip().lower()] = str(val).strip().lower() if val is not None else ""
+
+        items_str = json.dumps(canonical_items, sort_keys=True, separators=(",", ":"))
         payload = f"{norm_subj}__HELIA_DELIM__{norm_body}__HELIA_DELIM__{items_str}"
         return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
@@ -233,8 +298,8 @@ class NewsletterEngine:
             if not draft:
                 raise ValueError(f"No edition found for slot '{slot_key}'.")
 
-            if draft["status"] == "validated":
-                logger.info(f"Slot '{slot_key}' is already validated (Issue #{draft['issue_number']}).")
+            if draft["status"] in ("validated", "sent"):
+                logger.info(f"Slot '{slot_key}' is already {draft['status']} (Issue #{draft['issue_number']}).")
                 return dict(draft)
 
             if draft["status"] not in ("draft", "blocked"):
@@ -371,12 +436,21 @@ class NewsletterEngine:
 
         with self._get_connection() as conn:
             for sub in subscribers:
-                sub_id = str(sub.get("id") or sub.get("email")).strip().lower()
-                sub_email = str(sub.get("email")).strip().lower()
+                # 1. Strict email normalization: remove all whitespace, convert to lowercase
+                raw_email = sub.get("email") or ""
+                sub_email = re.sub(r"\s+", "", str(raw_email)).strip().lower()
 
                 if not sub_email or "@" not in sub_email:
                     ignored_count += 1
                     continue
+
+                # 2. Strict non-null deterministic subscriber_id: guaranteed never empty, never None
+                raw_id = sub.get("id")
+                if raw_id and str(raw_id).strip() and str(raw_id).strip().lower() != "none":
+                    sub_id = re.sub(r"\s+", "", str(raw_id)).strip().lower()
+                else:
+                    # Deterministic fallback based on canonical email SHA-256
+                    sub_id = f"sub_{hashlib.sha256(sub_email.encode('utf-8')).hexdigest()[:16]}"
 
                 # DOUBLE-PROTECTION CHECK: (slot_key + subscriber_id) or (slot_key + subscriber_email)
                 existing = conn.execute("""
@@ -386,7 +460,7 @@ class NewsletterEngine:
 
                 if existing:
                     blocked_count += 1
-                    logger.info(f"BLOCKED DUPLICATE: subscriber '{sub_email}' already received slot '{slot_key}'.")
+                    logger.info(f"BLOCKED DUPLICATE: subscriber '{sub_email}' (id: '{sub_id}') already received slot '{slot_key}'.")
                     continue
 
                 # Execute dispatch

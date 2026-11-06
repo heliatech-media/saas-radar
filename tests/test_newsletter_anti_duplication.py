@@ -298,5 +298,139 @@ class TestNewsletterAntiDuplication(unittest.TestCase):
         self.assertIsNotNone(val2["issue_number"])
 
 
+
+    def test_11_dispatch_window_america_new_york(self):
+        """Vérification stricte de la fenêtre horaire America/New_York (mardi/jeudi à 09:00)."""
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+        ny_tz = ZoneInfo("America/New_York")
+
+        # 1. Jeudi 09:15 AM New York -> OPEN
+        thu_0915 = datetime(2026, 11, 12, 9, 15, tzinfo=ny_tz)
+        is_open, msg = self.engine.is_dispatch_window_open(thu_0915)
+        self.assertTrue(is_open, f"Should be open: {msg}")
+
+        # 2. Mardi 10:00 AM New York -> OPEN
+        tue_1000 = datetime(2026, 11, 10, 10, 0, tzinfo=ny_tz)
+        is_open, msg = self.engine.is_dispatch_window_open(tue_1000)
+        self.assertTrue(is_open, f"Should be open: {msg}")
+
+        # 3. Mercredi 09:00 AM New York -> CLOSED (mauvais jour)
+        wed_0900 = datetime(2026, 11, 11, 9, 0, tzinfo=ny_tz)
+        is_open, msg = self.engine.is_dispatch_window_open(wed_0900)
+        self.assertFalse(is_open, "Wednesday should be blocked")
+
+        # 4. Jeudi 04:00 AM New York -> CLOSED (trop tôt, hors créneau 09:00)
+        thu_0400 = datetime(2026, 11, 12, 4, 0, tzinfo=ny_tz)
+        is_open, msg = self.engine.is_dispatch_window_open(thu_0400)
+        self.assertFalse(is_open, "04:00 AM NY should be blocked")
+
+    def test_12_content_hash_robust_against_item_reordering_and_tracking_params(self):
+        """Calcul de content_hash insensible à l'ordre des blocs, UTMs et tokens dynamiques."""
+        subject1 = "⚡ [THE RADAR #054] Cursor Teardown & Benchmark"
+        subject2 = "⚡ [THE RADAR] Cursor Teardown & Benchmark!"
+
+        body1 = '<p>Check <a href="https://heliatech.online/reviews/cursor/?utm_source=radar&utm_medium=email">Cursor review</a> for {{email}}.</p>'
+        body2 = '<p>Check <a href="https://heliatech.online/reviews/cursor/?utm_source=twitter&ref=newsletter">Cursor review</a> for {{email}}.</p>'
+
+        items_ordered = {"featureArticleId": "cursor", "versusId": "make-vs-zapier", "dealId": "make-pro"}
+        items_reversed = {"dealId": "make-pro", "versusId": "make-vs-zapier", "featureArticleId": "cursor"}
+
+        hash1 = self.engine.compute_content_hash(subject1, body1, items_ordered)
+        hash2 = self.engine.compute_content_hash(subject2, body2, items_reversed)
+
+        self.assertEqual(hash1, hash2, "Content hashes must match regardless of block ordering, tracking URLs or issue tokens.")
+
+    def test_13_subscriber_email_and_id_normalization(self):
+        """Normalisation des emails (minuscules, sans espaces) et génération déterministe d'ID."""
+        slot_date = "2026-11-26"
+        items = {"featureArticleId": "tome", "versusId": "tome-vs-gamma", "dealId": "tome-perk"}
+
+        draft = self.engine.create_draft(
+            scheduled_date=slot_date,
+            edition_type="thursday",
+            subject="AI Presentation Teardown",
+            body_html="<p>Slide intelligence.</p>",
+            selected_items=items
+        )
+        self.engine.validate_draft(draft["slot_key"])
+
+        # Subscribers with casing, whitespace, and None id variations
+        subscribers = [
+            {"id": None, "email": "  Director@HeliaTech.Online  "},
+            {"id": "", "email": "director@heliatech.online"},
+            {"id": "sub_dir", "email": "DIRECTOR@HELIATECH.ONLINE"}
+        ]
+
+        res = self.engine.dispatch_slot(draft["slot_key"], test_mode=True, subscribers=subscribers)
+        # Exactly 1 should be sent, 2 should be blocked as duplicates
+        self.assertEqual(res["recipients_sent"], 1)
+        self.assertEqual(res["duplicates_blocked"], 2)
+
+    def test_14_revalidation_preserves_issue_number(self):
+        """Une édition validée ou envoyée conserve son numéro d'issue et ne crée jamais #055."""
+        slot_date = "2026-12-03"
+        items = {"featureArticleId": "n8n", "versusId": "make-vs-n8n", "dealId": "n8n-cloud"}
+
+        draft = self.engine.create_draft(
+            scheduled_date=slot_date,
+            edition_type="thursday",
+            subject="n8n Self-Hosted Automation",
+            body_html="<p>Self hosting vs cloud.</p>",
+            selected_items=items
+        )
+        val1 = self.engine.validate_draft(draft["slot_key"])
+        assigned_issue = val1["issue_number"]
+        self.assertIsNotNone(assigned_issue)
+
+        # Re-running validation on same slot MUST return the exact same issue number
+        val2 = self.engine.validate_draft(draft["slot_key"])
+        self.assertEqual(val2["issue_number"], assigned_issue)
+
+        # Dispatch
+        self.engine.dispatch_slot(draft["slot_key"], test_mode=True, subscribers=[{"email": "test@test.com"}])
+
+        # Re-validating after dispatch MUST still preserve the same issue number
+        val3 = self.engine.validate_draft(draft["slot_key"])
+        self.assertEqual(val3["issue_number"], assigned_issue)
+
+    def test_15_multiprocess_cloud_simulation(self):
+        """Simulation multi-processus : deux processus OS indépendants tentent de réserver le même créneau."""
+        import subprocess
+        import sys
+
+        slot_date = "2026-12-10"
+        slot_type = "thursday"
+
+        script = f"""
+import sys
+from pathlib import Path
+from agents.newsletter_engine import NewsletterEngine, SlotAlreadyReservedError
+engine = NewsletterEngine(db_path=Path(r'{self.db_path}'), export_supervision=False)
+try:
+    engine.create_draft(
+        scheduled_date='{slot_date}',
+        edition_type='{slot_type}',
+        subject='Process Race Subject',
+        body_html='<p>Race body.</p>',
+        selected_items={{'featureArticleId': 'race', 'versusId': 'a-vs-b', 'dealId': 'deal'}}
+    )
+    sys.exit(0)
+except SlotAlreadyReservedError:
+    sys.exit(42)
+"""
+
+        # Spawn two separate OS processes simultaneously
+        p1 = subprocess.Popen([sys.executable, "-c", script])
+        p2 = subprocess.Popen([sys.executable, "-c", script])
+
+        p1.wait()
+        p2.wait()
+
+        codes = {p1.returncode, p2.returncode}
+        # Exactly one process exited with 0 (created draft), and exactly one with 42 (SlotAlreadyReservedError)
+        self.assertEqual(codes, {0, 42}, f"Expected one success (0) and one collision (42), got: {codes}")
+
+
 if __name__ == "__main__":
     unittest.main()

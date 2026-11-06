@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-06T17:22:48.666864",
+  "last_synced": "2026-11-06T17:32:50.708129",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20440,
-  "total_requests": 125940,
-  "total_visits": 6336,
-  "total_pageviews": 26492,
+  "total_visitors_network": 20444,
+  "total_requests": 125979,
+  "total_visits": 6337,
+  "total_pageviews": 26498,
   "percent_cached": "56.14%",
-  "data_served_mb": 1033.5,
+  "data_served_mb": 1033.7,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -28,7 +28,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 520
+      "views": 530
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 24220
+      "views": 24240
     },
     {
       "country": "Morocco",
