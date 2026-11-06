@@ -128,26 +128,14 @@ class HeliaAutonomousDirector:
         print(f"[{timestamp}] [{agent_name}] {icon} {message}")
 
     def get_governance_controls(self) -> dict:
-        """Reads real-time operational state from the private transactional governance database."""
-        db_path = ROOT_DIR / "data" / "sentinel_governance.db"
-        if not db_path.exists():
-            return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
+        """Reads real-time operational state from Cloudflare D1 in production, or SQLite in local tests."""
         try:
-            import sqlite3
-            import json
-            conn = sqlite3.connect(db_path)
-            conn.row_factory = sqlite3.Row
-            row = conn.execute("SELECT fleet_status, newsletter_emergency_stop, suspended_agents FROM fleet_controls WHERE id = 1").fetchone()
-            conn.close()
-            if row:
-                suspended = json.loads(row["suspended_agents"]) if row["suspended_agents"] else []
-                return {
-                    "fleet_status": row["fleet_status"],
-                    "newsletter_emergency_stop": row["newsletter_emergency_stop"],
-                    "suspended_agents": suspended
-                }
+            from agents.d1_client import get_d1_client
+            client = get_d1_client()
+            return client.get_governance_controls()
         except Exception as e:
-            self.log("Helia-Governance", f"Error reading governance DB: {e}", "⚠️")
+            self.log("Helia-Governance", f"Error querying D1/governance client: {e}", "⚠️")
+            return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
         return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
 
     def execute_autonomous_growth_cycle(self, auto_push: bool = True):

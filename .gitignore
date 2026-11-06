@@ -7,13 +7,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
-# SQLite Databases (Private operational & governance state - never in Git)
+# SQLite Databases & Backups (Private operational & governance state - never in Git)
 *.db
 *.sqlite
 *.sqlite3
 data/*.db
 data/*.sqlite
 data/*.sqlite3
+data/backups/
 *.db-wal
 *.db-shm
 .venv/

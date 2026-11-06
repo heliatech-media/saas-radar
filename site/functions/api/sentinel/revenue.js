@@ -1,7 +1,10 @@
 /**
  * Cloudflare Pages Function: /api/sentinel/revenue
  * Phase 3 : Supervision des Revenus d'Affiliation & Régie de Sponsoring Paved.
- * Toutes les métriques sont rigoureusement sourcées et étiquetées.
+ * Règle impérative : Aucune métrique n'est qualifiée de "certifiée" sans données brutes bancaires auditées.
+ * - $8,050/mois est étiqueté [PROJECTION]
+ * - RPV est étiqueté [ESTIMATION INTERNE]
+ * - Cohorte abonnés : déclarative et non auditée individuellement (zéro affirmation non prouvée).
  */
 
 export async function onRequestGet(context) {
@@ -19,14 +22,20 @@ export async function onRequestGet(context) {
       rpv: {
         value_display: "$18.40 / an",
         value_raw: 18.40,
-        cohort: "141 Directeurs Techniques & Responsables Infrastructure",
-        source: "Calcul TCO HeliaTech 2026 sur la cohorte d'abonnés qualifiés"
+        badge: "ESTIMATION INTERNE",
+        classification: "Non audité / Données bancaires non réconciliées",
+        cohort: "141 inscrits (données déclaratives non auditées nominativement)",
+        formula: "Moyenne modélisée des économies TCO estimées / base d'inscrits déclaratifs",
+        source: "Estimation interne théorique non auditée tant que les revenus réels d'affiliation et les abonnés correspondants ne sont pas prouvés par des relevés bancaires/Stripe."
       },
       projections: {
         projected_mrr: "$8,050 / mois",
-        target_visitors: "100,000 Visiteurs Uniques / mois",
+        badge: "PROJECTION",
+        classification: "Hypothèse de modélisation non contractuelle",
+        target_visitors: "100 000 Visiteurs Uniques / mois",
         modeled_rpm: "$80.50 RPM",
-        source: "Modélisation Financière Helia-Visionary 2026"
+        formula: "(100 000 VU / 1 000) * $80.50 RPM théorique",
+        source: "Modélisation Financière Helia-Visionary (Hypothèse théorique. Données brutes non certifiées)."
       },
       affiliate_portfolio: {
         total_links: 96,

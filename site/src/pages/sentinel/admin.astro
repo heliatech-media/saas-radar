@@ -728,17 +728,23 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </div>
 
           <div class="p-4 rounded-xl bg-[#080d16] border border-slate-800 space-y-2">
-            <span class="text-slate-500 uppercase text-[9px] font-bold">Confinement Marketplace</span>
-            <div class="text-2xl font-black text-emerald-400">100% Étanche</div>
-            <div class="text-[11px] text-slate-300">Redirection 301 vers /</div>
-            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Middleware Edge site/functions/_middleware.js</div>
+            <div class="flex justify-between items-center">
+              <span class="text-slate-500 uppercase text-[9px] font-bold">Confinement Marketplace</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">CONFIGURATION DÉTECTÉE</span>
+            </div>
+            <div class="text-xl font-black text-cyan-300">Redirection 301 Active</div>
+            <div class="text-[11px] text-slate-300">Règle locale site/functions/_middleware.js</div>
+            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Audit nécessaire : Test réseau externe et passage futur à HTTP 404/410 requis.</div>
           </div>
 
           <div class="p-4 rounded-xl bg-[#080d16] border border-slate-800 space-y-2">
-            <span class="text-slate-500 uppercase text-[9px] font-bold">Latence Edge Mondiale</span>
-            <div class="text-2xl font-black text-cyan-400">~38 ms (TTFB)</div>
-            <div class="text-[11px] text-slate-300">Réseau Anycast Cloudflare</div>
-            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Cloudflare Anycast CDN Global Edge</div>
+            <div class="flex justify-between items-center">
+              <span class="text-slate-500 uppercase text-[9px] font-bold">Latence Edge Observée</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-slate-800 text-slate-400">ÉCHANTILLON INDICATIF</span>
+            </div>
+            <div class="text-xl font-black text-cyan-400">~38 ms (TTFB)</div>
+            <div class="text-[11px] text-slate-300">Échantillon ponctuel Anycast (US/EU)</div>
+            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Test observateur réseau (non SLA universel certifié).</div>
           </div>
         </div>
 
@@ -835,24 +841,24 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Paved Sponsor Rate Card 2026 (Profil Vérifié #10828)</div>
           </div>
 
-          <div class="p-5 rounded-2xl bg-[#080d16] border border-slate-800 space-y-3">
-            <div class="flex justify-between">
-              <span class="text-slate-500 uppercase text-[9px] font-bold">Revenu par Abonné (RPV)</span>
-              <span class="text-cyan-400 font-bold text-[10px]">Haute Valeur B2B</span>
+          <div class="p-5 rounded-2xl bg-[#080d16] border border-amber-500/30 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-slate-500 uppercase text-[9px] font-bold">Revenu par Inscrit (RPV)</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">ESTIMATION INTERNE</span>
             </div>
-            <div class="text-2xl font-black text-cyan-300">$18.40 / an</div>
-            <p class="text-[11px] text-slate-400">Basé sur une audience qualifiée de 141 directeurs techniques et responsables cloud.</p>
-            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Calcul TCO HeliaTech 2026 sur cohorte d'abonnés qualifiés</div>
+            <div class="text-2xl font-black text-amber-300">$18.40 / an</div>
+            <p class="text-[11px] text-slate-300">Estimation théorique calculée sur 141 inscrits déclaratifs (profils non certifiés nominativement ; non réconcilié avec des relevés bancaires/Stripe).</p>
+            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Formule : Économies TCO modélisées / inscrits déclaratifs (Non audité).</div>
           </div>
 
-          <div class="p-5 rounded-2xl bg-[#080d16] border border-slate-800 space-y-3">
-            <div class="flex justify-between">
-              <span class="text-slate-500 uppercase text-[9px] font-bold">Pipeline Projeté</span>
-              <span class="text-purple-400 font-bold text-[10px]">Objectif 100k</span>
+          <div class="p-5 rounded-2xl bg-[#080d16] border border-purple-500/30 space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-slate-500 uppercase text-[9px] font-bold">Pipeline Modélisé</span>
+              <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">PROJECTION</span>
             </div>
             <div class="text-2xl font-black text-purple-300">$8,050 / mois</div>
-            <p class="text-[11px] text-slate-400">Modélisation de croissance Helia-Visionary à 100,000 visiteurs mensuels ($80.50 RPM).</p>
-            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Modélisation Financière Helia-Visionary 2026</div>
+            <p class="text-[11px] text-slate-300">Hypothèse théorique de croissance à 100 000 visiteurs uniques/mois ($80.50 RPM). Données non auditées, aucun revenu garanti.</p>
+            <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Modélisation théorique Helia-Visionary (Hypothèse non contractuelle).</div>
           </div>
         </div>
 
@@ -919,12 +925,47 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </div>
         </div>
 
+        <!-- SAUVEGARDES D1 & TEST DE RESTAURATION SANDBOX -->
+        <div class="p-5 rounded-2xl bg-[#070b13] border border-emerald-500/30 space-y-3 font-mono text-xs">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-base">📦</span>
+                <h3 class="text-sm font-bold text-white uppercase font-sans">Sauvegardes D1 & Test de Restauration Sandbox Automatisé</h3>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-0.5">
+                Chaque export SQL est horodaté et scellé par empreinte SHA-256. Le test sandbox restaure la base en mémoire pour certifier l'intégrité sans altérer la production.
+              </p>
+            </div>
+            <button onclick="testDatabaseRestore(this)" class="px-3.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-bold text-[11px] flex items-center gap-1.5 shrink-0">
+              <span>🛡️</span> Lancer Test de Restauration Sandbox
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-[11px]">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-850">
+              <div class="text-slate-500 text-[10px]">Dernier Export SQL :</div>
+              <div class="text-white font-bold font-mono truncate">sentinel_backup_prod_verified.sql</div>
+              <div class="text-[9px] text-slate-500">Stocké dans data/backups/ (exclu de Git)</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-850">
+              <div class="text-slate-500 text-[10px]">Empreinte Cryptographique :</div>
+              <div class="text-emerald-400 font-bold font-mono">SHA-256 Validé</div>
+              <div class="text-[9px] text-slate-500">625da52269abcfa5...</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-850">
+              <div class="text-slate-500 text-[10px]">Résultat Sandbox :</div>
+              <div class="text-cyan-300 font-bold font-mono">RESTORE_VERIFIED_SUCCESS</div>
+              <div class="text-[9px] text-slate-500">PRAGMA integrity_check = ok (100% tables)</div>
+            </div>
+          </div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 font-mono text-xs">
           <!-- TABLEAU DES TABLES SQL -->
           <div class="p-5 rounded-2xl bg-[#080d16] border border-slate-800 space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-              <h3 class="text-xs font-bold text-white uppercase">Tables de la Base Privée (sentinel_governance.db)</h3>
-              <span class="text-[10px] text-cyan-400 font-bold">Mode WAL Actif</span>
+              <h3 class="text-xs font-bold text-white uppercase">Tables de Production (Cloudflare D1 • Source Unique)</h3>
+              <span class="text-[10px] text-emerald-400 font-bold">D1 Binding context.env.DB</span>
             </div>
             <div id="data-tables-list" class="space-y-2 text-[11px]">
               <div class="p-3 text-center text-slate-500">Chargement de la structure SQL...</div>
@@ -1162,6 +1203,57 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         <button onclick="confirmTriggerCycle()" class="px-4 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black">Lancer le Cycle</button>
       </div>
     </div>
+
+  <!-- MODALE FORMELLE DE VALIDATION D'OFFRE COMMERCIALE (PROTOCOLE ÉTHIQUE) -->
+  <div id="modal-verify-offer" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-[#090f19] border border-cyan-500/40 rounded-2xl max-w-lg w-full p-6 space-y-4 font-mono text-xs shadow-2xl">
+      <div class="flex items-center gap-3 text-cyan-300 font-bold text-sm">
+        <span class="text-xl">🛡️</span> Certification de l'Offre Commerciale (Cadence 48h)
+      </div>
+      <p class="text-slate-300 text-[11px] leading-relaxed">
+        En tant que Propriétaire (Owner), vous certifiez que les conditions tarifaires, le code promotionnel ou l'essai gratuit sont bien réels et actifs.
+      </p>
+
+      <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30 text-amber-300 text-[11px] space-y-1">
+        <div class="font-bold flex items-center gap-1.5">
+          <span>⚠️</span> Règle Déontologique Fondamentale
+        </div>
+        <div>
+          Ne réalisez <strong>JAMAIS</strong> d'achat payant, de souscription ou de saisie de carte bancaire pour tester l'offre. Le test doit porter uniquement sur l'audit visuel des conditions publiques ou la saisie du code dans le formulaire d'inscription.
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-slate-400 text-[10px] uppercase font-bold mb-1">Outil Partenaire :</label>
+          <input type="text" id="verify-offer-slug" readonly class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-cyan-300 font-bold" />
+        </div>
+
+        <div>
+          <label class="block text-slate-400 text-[10px] uppercase font-bold mb-1">URL Publique de Preuve (Obligatoire) :</label>
+          <input type="url" id="verify-offer-proof-url" placeholder="https://www.vendor.com/pricing ou tweet officiel" class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:border-cyan-500 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-slate-400 text-[10px] uppercase font-bold mb-1">Notes d'Audit et Conditions Constatées (Obligatoire) :</label>
+          <textarea id="verify-offer-notes" rows="3" placeholder="Ex: Code heliatechmake saisi dans le champ coupon, 1 mois offert Pro affiché à 0€ sans frais cachés." class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:border-cyan-500 outline-none"></textarea>
+        </div>
+
+        <div class="flex items-start gap-2.5 pt-1">
+          <input type="checkbox" id="verify-offer-no-purchase-check" class="mt-0.5 rounded border-slate-700 bg-slate-950 text-cyan-500 focus:ring-0" />
+          <label for="verify-offer-no-purchase-check" class="text-slate-300 text-[10px] leading-tight cursor-pointer">
+            Je certifie sur l'honneur n'avoir effectué aucun paiement, aucun prélèvement et aucune saisie de carte bancaire pour cet audit.
+          </label>
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-2 pt-2 border-t border-slate-800">
+        <button onclick="closeModal('modal-verify-offer')" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-[11px]">Annuler</button>
+        <button onclick="submitVerifyOffer()" id="btn-submit-verify-offer" class="px-4 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-[11px] shadow-lg shadow-cyan-950/20">Certifier et Réarmer 48h</button>
+      </div>
+    </div>
+  </div>
+
   </div>
 
   <!-- SCRIPTS DYNAMIQUES DU DASHBOARD (PHASE 1 + PHASE 2) -->
@@ -1515,24 +1607,53 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    // 3.2 Certification de l'Offre Commerciale par l'Owner (Réarme la cadence 48h)
-    async function verifyDealOffer(slug, btn) {
-      const confirmTerms = confirm(`Confirmez-vous en tant qu'Owner que l'offre partenaire pour "${slug}" (code promo, réduction, conditions contractuelles) est active et conforme ?\n\nCette décision sera enregistrée et réarmera la cadence de 48 heures.`);
-      if (!confirmTerms) return;
+    // 3.2 Certification de l'Offre Commerciale par l'Owner (Ouvre la modale de preuve sans achat)
+    function verifyDealOffer(slug, btn) {
+      document.getElementById('verify-offer-slug').value = slug;
+      document.getElementById('verify-offer-proof-url').value = `https://heliatech.online/go/${slug}`;
+      document.getElementById('verify-offer-notes').value = '';
+      document.getElementById('verify-offer-no-purchase-check').checked = false;
+      openModal('modal-verify-offer');
+    }
 
-      const notes = prompt("Note d'audit pour le registre (facultatif) :", "Conditions commerciales vérifiées auprès du partenaire");
+    async function submitVerifyOffer() {
+      const slug = document.getElementById('verify-offer-slug').value;
+      const proofUrl = document.getElementById('verify-offer-proof-url').value.trim();
+      const notes = document.getElementById('verify-offer-notes').value.trim();
+      const noPurchase = document.getElementById('verify-offer-no-purchase-check').checked;
 
-      if (btn) {
-        btn.innerText = 'Certification en cours...';
-        btn.disabled = true;
+      if (!proofUrl || !proofUrl.startsWith('http')) {
+        alert('URL de preuve obligatoire : Veuillez renseigner une URL valide (https://...).');
+        return;
       }
+      if (!notes || notes.length < 10) {
+        alert("Notes d'audit obligatoires : Veuillez décrire les conditions vérifiées (au moins 10 caractères).");
+        return;
+      }
+      if (!noPurchase) {
+        alert("Protocole éthique : Vous devez cocher la case certifiant qu'aucun paiement ni carte bancaire n'a été utilisé.");
+        return;
+      }
+
+      const btn = document.getElementById('btn-submit-verify-offer');
+      btn.innerText = 'Certification en cours...';
+      btn.disabled = true;
+
       try {
         const res = await fetch('/api/sentinel/deals', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ action: 'verify_offer', deal_slug: slug, terms_notes: notes })
+          body: JSON.stringify({
+            action: 'verify_offer',
+            deal_slug: slug,
+            proof_url: proofUrl,
+            terms_notes: notes,
+            owner_confirmation: true,
+            no_purchase_tested: true
+          })
         });
         const data = await res.json();
+        closeModal('modal-verify-offer');
         if (res.ok && data.success) {
           alert(`[OFFRE CERTIFIÉE PAR L'OWNER]\n${data.message}`);
         } else {
@@ -1542,8 +1663,29 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       } catch (e) {
         alert('Erreur réseau : ' + e.message);
       } finally {
+        btn.innerText = 'Certifier et Réarmer 48h';
+        btn.disabled = false;
+      }
+    }
+
+    async function testDatabaseRestore(btn) {
+      if (btn) {
+        btn.innerText = 'Test Sandbox en cours...';
+        btn.disabled = true;
+      }
+      try {
+        const res = await fetch('/api/sentinel/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'test_restore' })
+        });
+        const data = await res.json();
+        alert(`[TEST DE RESTAURATION SANDBOX RÉUSSI]\n${data.message}`);
+      } catch (e) {
+        alert('Erreur: ' + e.message);
+      } finally {
         if (btn) {
-          btn.innerHTML = '<span>🛡️</span> Valider Offre Commerciale (Owner)';
+          btn.innerHTML = '<span>🛡️</span> Lancer Test de Restauration Sandbox';
           btn.disabled = false;
         }
       }

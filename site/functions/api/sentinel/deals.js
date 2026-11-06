@@ -320,14 +320,40 @@ export async function onRequestPost(context) {
     // Réarme la cadence de 48h de validité commerciale de l'offre.
     // =========================================================================
     if (action === "verify_offer") {
-      const verifiedNotes = terms_notes || "Conditions commerciales, code promo et remise certifiés actifs par le Propriétaire.";
+      const { proof_url, terms_notes, owner_confirmation, no_purchase_tested } = body;
+
+      if (!proof_url || typeof proof_url !== "string" || !proof_url.startsWith("http")) {
+        return new Response(JSON.stringify({ 
+          error: "URL de preuve obligatoire : Vous devez fournir une URL publique valide (page de tarification ou annonce officielle)." 
+        }), { status: 400 });
+      }
+
+      if (!terms_notes || typeof terms_notes !== "string" || terms_notes.trim().length < 10) {
+        return new Response(JSON.stringify({ 
+          error: "Notes d'audit obligatoires : Décrivez précisément les conditions de l'offre (au moins 10 caractères : remise testée, coupon, conditions)." 
+        }), { status: 400 });
+      }
+
+      if (!owner_confirmation) {
+        return new Response(JSON.stringify({ 
+          error: "Confirmation Owner requise : L'approbation explicite de l'Owner est obligatoire." 
+        }), { status: 400 });
+      }
+
+      if (!no_purchase_tested) {
+        return new Response(JSON.stringify({ 
+          error: "Protocole éthique requis : Vous devez certifier qu'aucun achat réel, carte bancaire ou souscription payante n'a été exécuté." 
+        }), { status: 400 });
+      }
+
+      const verifiedNotes = terms_notes.trim();
 
       if (db) {
         await db.prepare(`
           UPDATE deals_registry 
-          SET offer_status = 'OFFER_VERIFIED', offer_verified_at = ?, offer_verified_by = ?, offer_terms_notes = ?, verified_at = ?, status = 'ACTIVE'
+          SET offer_status = 'OFFER_VERIFIED', offer_verified_at = ?, offer_verified_by = ?, offer_terms_notes = ?, proof_url = ?, verified_at = ?, status = 'ACTIVE'
           WHERE tool_slug = ?
-        `).bind(nowIso, actorEmail, verifiedNotes, nowIso, deal_slug).run();
+        `).bind(nowIso, actorEmail, verifiedNotes, proof_url, nowIso, deal_slug).run();
 
         await db.prepare(`
           INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
@@ -335,7 +361,14 @@ export async function onRequestPost(context) {
         `).bind(
           actorEmail,
           `deal:${deal_slug}`,
-          JSON.stringify({ actorEmail, notes: verifiedNotes, cadence: "48h", verified_at: nowIso })
+          JSON.stringify({ 
+            actorEmail, 
+            proof_url, 
+            notes: verifiedNotes, 
+            cadence: "48h", 
+            verified_at: nowIso,
+            ethical_protocol: "Protocole éthique certifié : Aucun achat réel, carte bancaire ou souscription payante n'a été exécuté."
+          })
         ).run();
       }
 
@@ -345,8 +378,9 @@ export async function onRequestPost(context) {
         offer_status: "OFFER_VERIFIED",
         offer_verified_at: nowIso,
         offer_verified_by: actorEmail,
+        proof_url,
         notes: verifiedNotes,
-        message: `Offre commerciale certifiée par l'Owner (${actorEmail}). Cadence de 48 heures réarmée avec succès.`
+        message: `Offre commerciale certifiée par l'Owner (${actorEmail}) avec preuve (${proof_url}). Protocole sans achat payant respecté. Cadence de 48h réarmée.`
       }), {
         status: 200,
         headers: { "Content-Type": "application/json" }
