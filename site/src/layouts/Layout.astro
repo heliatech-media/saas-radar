@@ -44,20 +44,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '');
 
 const canonicalUrl = canonical || (currentPath === '' ? 'https://heliatech.online/' : `https://heliatech.online${currentPath}/`);
 
-// Automatically detect marketplace routes for noindex and stealth isolation
-const isMarketplaceRoute = [
-  '/templates',
-  '/dashboard',
-  '/seller',
-  '/sell',
-  '/register',
-  '/login',
-  '/creator',
-  '/checkout',
-  '/admin/marketplace'
-].some(r => currentPath === r || currentPath.startsWith(r + '/'));
-
-const effectiveNoindex = noindex || isMarketplaceRoute;
+const effectiveNoindex = noindex;
 
 // Social networks (LinkedIn, Twitter/X) do not support SVG for OpenGraph cards.
 
@@ -105,36 +92,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
     </script>
 
-    <!-- Strict Production Stealth Access Gate for Marketplace Pages -->
-    <script is:inline>
-      (function() {
-        var host = location.hostname;
-        var isLocal = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
-        if (isLocal) return; // Unrestricted access in local development
-
-        var stealthRoutes = [
-          '/templates',
-          '/dashboard',
-          '/seller',
-          '/sell',
-          '/register',
-          '/login',
-          '/creator',
-          '/checkout',
-          '/admin/marketplace'
-        ];
-
-        var path = location.pathname.toLowerCase().replace(/\/+$/, '') || '/';
-        var isMarketplace = stealthRoutes.some(function(r) {
-          return path === r || path.startsWith(r + '/');
-        });
-
-        if (isMarketplace) {
-          // Strict Production Lockdown: Redirect all marketplace routes to home immediately
-          location.replace('/');
-        }
-      })();
-    </script>
+    
 
     <meta name='impact-site-verification' value='9697164e-ba4e-419f-b31c-3655b58d67d0' />
 
@@ -538,17 +496,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
           </a>
 
-          <a id="ht-nav-templates-link" href="/templates" class="hidden group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 items-center gap-1.5">
-
-            <span>Templates</span>
-
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
-
-              Store
-
-            </span>
-
-          </a>
+          
 
           <a href="/pricing-leaks" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
 
@@ -634,43 +582,6 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
           </div>
 
-          <!-- Marketplace User Account Nav Pill -->
-
-          <!-- Marketplace User Account Nav Pill (Stealth Hidden on Production) -->
-          <div id="nav-user-account-container" class="hidden items-center gap-2">
-
-            <a 
-
-              id="nav-user-login-btn"
-
-              href="/login/" 
-
-              class="px-2.5 py-1 text-slate-400 hover:text-white text-xs font-mono font-medium transition-colors"
-
-            >
-
-              Connexion
-
-            </a>
-
-            <a 
-
-              id="nav-user-register-btn"
-
-              href="/register/" 
-
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/35 text-xs font-mono font-bold transition-all shadow-sm shadow-cyan-500/10"
-
-            >
-
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-
-              <span>S'inscrire</span>
-
-            </a>
-
-          </div>
-
           <!-- Mobile Menu Toggle Button -->
 
           <button
@@ -738,39 +649,6 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
           <span class="text-[10px] font-mono bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">Active</span>
 
         </a>
-
-        <!-- Stealth Cloaked Marketplace Links in Mobile Drawer -->
-        <a id="ht-mobile-templates-link" href="/templates" class="hidden px-3.5 py-2.5 rounded-xl text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/10 transition-colors items-center justify-between">
-
-          <span>Templates &amp; Blueprints</span>
-
-          <span class="text-[10px] font-mono bg-cyan-500/20 px-2 py-0.5 rounded-full border border-cyan-500/30">Store</span>
-
-        </a>
-
-        <a id="ht-mobile-dashboard-link" href="/dashboard/" class="hidden px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors items-center justify-between">
-
-          <span>Mon Espace Client</span>
-
-          <span class="text-[10px] font-mono text-cyan-400">Accès</span>
-
-        </a>
-
-        <div id="ht-mobile-auth-container" class="hidden pt-2 border-t border-slate-800/80 items-center gap-2">
-
-          <a href="/login/" class="flex-1 text-center py-2 rounded-xl text-slate-300 hover:text-white bg-slate-900 border border-slate-800 text-xs font-mono">
-
-            Connexion
-
-          </a>
-
-          <a href="/register/" class="flex-1 text-center py-2 rounded-xl text-white bg-cyan-500/20 border border-cyan-500/40 text-xs font-mono font-bold">
-
-            ✦ S'inscrire
-
-          </a>
-
-        </div>
 
         <a href="/pricing-leaks" class="px-3.5 py-2.5 rounded-xl text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 transition-colors flex items-center justify-between">
 
@@ -977,46 +855,6 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
           }, { passive: true });
 
         }
-
-        // 0. Stealth Nav Reveal for Localhost ONLY (Never revealed on production)
-        try {
-          var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-
-          if (isLocal) {
-            var deskLink = document.getElementById('ht-nav-templates-link');
-            if (deskLink) { deskLink.classList.remove('hidden'); deskLink.classList.add('flex'); }
-
-            var mobLink = document.getElementById('ht-mobile-templates-link');
-            if (mobLink) { mobLink.classList.remove('hidden'); mobLink.classList.add('flex'); }
-
-            var mobDash = document.getElementById('ht-mobile-dashboard-link');
-            if (mobDash) { mobDash.classList.remove('hidden'); mobDash.classList.add('flex'); }
-
-            var mobAuth = document.getElementById('ht-mobile-auth-container');
-            if (mobAuth) { mobAuth.classList.remove('hidden'); mobAuth.classList.add('flex'); }
-
-            var container = document.getElementById('nav-user-account-container');
-            if (container) {
-              container.classList.remove('hidden');
-              container.classList.add('sm:flex');
-
-              // Check if logged in user session exists
-              var sessionRaw = localStorage.getItem('_ht_user_session');
-              if (sessionRaw) {
-                var session = JSON.parse(sessionRaw);
-                if (session && session.name) {
-                  var targetUrl = session.role === 'SELLER' ? '/seller/' : (session.role === 'ADMIN' ? '/admin/marketplace/' : '/dashboard/');
-                  container.innerHTML = `
-                    <a href="${targetUrl}" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-bold transition-all shadow-sm">
-                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                      <span>${session.name.slice(0, 14)}</span>
-                    </a>
-                  `;
-                }
-              }
-            }
-          }
-        } catch (e) {}
 
         // 2. Linear-Style Mouse-Follow Radial Spotlight
 

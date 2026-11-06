@@ -99,22 +99,22 @@
 /go/zoominfo https://www.zoominfo.com 302
 
 
-# Stealth Guard: Force redirect (302!) at Cloudflare Edge to completely override static assets on production
-/templates/* / 302!
-/templates / 302!
-/dashboard/* / 302!
-/dashboard / 302!
-/seller/* / 302!
-/seller / 302!
-/sell/* / 302!
-/sell / 302!
-/register/* / 302!
-/register / 302!
-/login/* / 302!
-/login / 302!
-/creator/* / 302!
-/creator / 302!
-/checkout/* / 302!
-/checkout / 302!
-/admin/marketplace/* / 302!
-/admin/marketplace / 302!
+# Stealth Guard: Force redirect (301!) at Cloudflare Edge to completely override static assets on production
+/templates/* / 301!
+/templates / 301!
+/dashboard/* / 301!
+/dashboard / 301!
+/seller/* / 301!
+/seller / 301!
+/sell/* / 301!
+/sell / 301!
+/register/* / 301!
+/register / 301!
+/login/* / 301!
+/login / 301!
+/creator/* / 301!
+/creator / 301!
+/checkout/* / 301!
+/checkout / 301!
+/admin/marketplace/* / 301!
+/admin/marketplace / 301!
