@@ -43,6 +43,7 @@
 /go/minicong https://minicong.ai/?via=heliatech 302
 /go/monday-com https://monday.com/?ref=heliatech 302
 /go/multiplier https://www.usemultiplier.com 302
+/go/munch https://www.munch.com 302
 /go/murf-ai https://murf.ai/?fp_ref=heliatech 302
 /go/n8n https://n8n.io/?via=heliatech 302
 /go/notion-ai https://affiliates.notion.so/heliatech 302
@@ -65,7 +66,7 @@
 /go/resemble-ai https://www.resemble.ai 302
 /go/resend https://resend.com/?via=heliatech 302
 /go/retool https://retool.com/?fpr=heliatech 302
-/go/rewardful https://www.rewardful.com/?via=heliatech 302
+/go/rewardful https://www.rewardful.com/?via=heliatech/?via=heliatech 302
 /go/rippling https://www.rippling.com 302
 /go/riverside https://riverside.fm/?via=heliatech 302
 /go/riverside-fm https://riverside.fm/?via=heliatech 302
@@ -96,3 +97,22 @@
 /go/workato https://www.workato.com 302
 /go/zapier https://zapier.com/app/register?via=heliatech 302
 /go/zoominfo https://www.zoominfo.com 302
+
+
+# Stealth Guard: Completely lock down marketplace routes on Cloudflare Pages until preproduction is complete
+/templates/* / 302
+/templates / 302
+/dashboard/* / 302
+/dashboard / 302
+/seller/* / 302
+/seller / 302
+/sell/* / 302
+/sell / 302
+/register/* / 302
+/register / 302
+/login/* / 302
+/login / 302
+/creator/* / 302
+/creator / 302
+/checkout/* / 302
+/checkout / 302

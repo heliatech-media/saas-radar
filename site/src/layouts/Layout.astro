@@ -24,6 +24,21 @@ const {
 // Determine clean canonical URL with trailing slash normalized
 const currentPath = Astro.url.pathname.replace(/\/+$/, '');
 const canonicalUrl = canonical || (currentPath === '' ? 'https://heliatech.online/' : `https://heliatech.online${currentPath}/`);
+// Automatically detect marketplace routes for noindex and stealth isolation
+const isMarketplaceRoute = [
+  '/templates',
+  '/dashboard',
+  '/seller',
+  '/sell',
+  '/register',
+  '/login',
+  '/creator',
+  '/checkout',
+  '/admin/marketplace'
+].some(r => currentPath === r || currentPath.startsWith(r + '/'));
+
+const effectiveNoindex = noindex || isMarketplaceRoute;
+
 
 // Social networks (LinkedIn, Twitter/X) do not support SVG for OpenGraph cards.
 // Automatically route og:image to high-resolution 1200x630 PNG.
@@ -49,6 +64,55 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
         }
       })();
     </script>
+    <!-- Strict Production Stealth Access Gate for Marketplace Pages -->
+    <script is:inline>
+      (function() {
+        var host = location.hostname;
+        var isLocal = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
+        if (isLocal) return; // Unrestricted access in local development
+
+        var stealthRoutes = [
+          '/templates',
+          '/dashboard',
+          '/seller',
+          '/sell',
+          '/register',
+          '/login',
+          '/creator',
+          '/checkout',
+          '/admin/marketplace'
+        ];
+
+        var path = location.pathname.toLowerCase().replace(/\/+$/, '') || '/';
+        var isMarketplace = stealthRoutes.some(function(r) {
+          return path === r || path.startsWith(r + '/');
+        });
+
+        if (isMarketplace) {
+          // Check for owner secret key query parameter
+          var params = new URLSearchParams(location.search);
+          var key = params.get('preview') || params.get('secret') || params.get('stealth_pass');
+          if (key === 'heliatech2026' || key === 'helia_preview') {
+            try {
+              localStorage.setItem('_ht_stealth_preview', 'unlocked');
+            } catch(e) {}
+            return; // Authorized owner preview
+          }
+
+          // Check if owner already unlocked this browser
+          try {
+            if (localStorage.getItem('_ht_stealth_preview') === 'unlocked') {
+              return; // Authorized
+            }
+          } catch(e) {}
+
+          // Public visitor trying to access unreleased marketplace on production:
+          // Immediately redirect to homepage!
+          location.replace('/');
+        }
+      })();
+    </script>
+
     <meta name='impact-site-verification' value='9697164e-ba4e-419f-b31c-3655b58d67d0' />
     <meta name="impact-site-verification" content="9697164e-ba4e-419f-b31c-3655b58d67d0" />
     <meta name="google-adsense-account" content="ca-pub-4334705198476561" />
@@ -76,7 +140,8 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <meta name="twitter:title" content={`${title} | HeliaTech`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
-    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="robots" content={effectiveNoindex ? "noindex, nofollow" : "index, follow"} />
+
 
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -271,7 +336,8 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
               Perks
             </span>
           </a>
-          <a href="/templates" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
+          <a id="ht-nav-templates-link" href="/templates" class="hidden group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 items-center gap-1.5">
+
             <span>Templates</span>
             <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
               Store
@@ -323,7 +389,9 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
           </div>
 
           <!-- Marketplace User Account Nav Pill -->
-          <div id="nav-user-account-container" class="hidden sm:flex items-center gap-2">
+          <!-- Marketplace User Account Nav Pill (Stealth Hidden on Production) -->
+          <div id="nav-user-account-container" class="hidden items-center gap-2">
+
             <a 
               id="nav-user-login-btn"
               href="/login/" 
@@ -376,15 +444,19 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
           <span>Exclusive Perks & Deals</span>
           <span class="text-[10px] font-mono bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">Active</span>
         </a>
-        <a href="/templates" class="px-3.5 py-2.5 rounded-xl text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/10 transition-colors flex items-center justify-between">
+        <!-- Stealth Cloaked Marketplace Links in Mobile Drawer -->
+        <a id="ht-mobile-templates-link" href="/templates" class="hidden px-3.5 py-2.5 rounded-xl text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/10 transition-colors items-center justify-between">
+
           <span>Templates &amp; Blueprints</span>
           <span class="text-[10px] font-mono bg-cyan-500/20 px-2 py-0.5 rounded-full border border-cyan-500/30">Store</span>
         </a>
-        <a href="/dashboard/" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
+        <a id="ht-mobile-dashboard-link" href="/dashboard/" class="hidden px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors items-center justify-between">
+
           <span>Mon Espace Client</span>
           <span class="text-[10px] font-mono text-cyan-400">Accès</span>
         </a>
-        <div class="pt-2 border-t border-slate-800/80 flex items-center gap-2">
+        <div id="ht-mobile-auth-container" class="hidden pt-2 border-t border-slate-800/80 items-center gap-2">
+
           <a href="/login/" class="flex-1 text-center py-2 rounded-xl text-slate-300 hover:text-white bg-slate-900 border border-slate-800 text-xs font-mono">
             Connexion
           </a>
@@ -503,23 +575,52 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
           }, { passive: true });
         }
 
-        // 0. Dynamic Navbar User State
-        try {
-          const sessionRaw = localStorage.getItem('_ht_user_session');
-          if (sessionRaw) {
-            const session = JSON.parse(sessionRaw);
-            const container = document.getElementById('nav-user-account-container');
-            if (container && session && session.name) {
-              const targetUrl = session.role === 'SELLER' ? '/seller/' : (session.role === 'ADMIN' ? '/admin/marketplace/' : '/dashboard/');
-              container.innerHTML = `
-                <a href="${targetUrl}" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-bold transition-all shadow-sm">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span>${session.name.slice(0, 14)}</span>
-                </a>
-              `;
-            }
-          }
-        } catch (e) {}
+        // 0. Stealth Nav Reveal for Localhost / Authorized Owner Only
+        try {
+          var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+          var isUnlocked = false;
+          try {
+            if (localStorage.getItem('_ht_stealth_preview') === 'unlocked') {
+              isUnlocked = true;
+            }
+          } catch(e) {}
+
+          if (isLocal || isUnlocked) {
+            var deskLink = document.getElementById('ht-nav-templates-link');
+            if (deskLink) { deskLink.classList.remove('hidden'); deskLink.classList.add('flex'); }
+
+            var mobLink = document.getElementById('ht-mobile-templates-link');
+            if (mobLink) { mobLink.classList.remove('hidden'); mobLink.classList.add('flex'); }
+
+            var mobDash = document.getElementById('ht-mobile-dashboard-link');
+            if (mobDash) { mobDash.classList.remove('hidden'); mobDash.classList.add('flex'); }
+
+            var mobAuth = document.getElementById('ht-mobile-auth-container');
+            if (mobAuth) { mobAuth.classList.remove('hidden'); mobAuth.classList.add('flex'); }
+
+            var container = document.getElementById('nav-user-account-container');
+            if (container) {
+              container.classList.remove('hidden');
+              container.classList.add('sm:flex');
+
+              // Check if logged in user session exists
+              var sessionRaw = localStorage.getItem('_ht_user_session');
+              if (sessionRaw) {
+                var session = JSON.parse(sessionRaw);
+                if (session && session.name) {
+                  var targetUrl = session.role === 'SELLER' ? '/seller/' : (session.role === 'ADMIN' ? '/admin/marketplace/' : '/dashboard/');
+                  container.innerHTML = `
+                    <a href="${targetUrl}" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-bold transition-all shadow-sm">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span>${session.name.slice(0, 14)}</span>
+                    </a>
+                  `;
+                }
+              }
+            }
+          }
+        } catch (e) {}
+
 
         // 2. Linear-Style Mouse-Follow Radial Spotlight
         if (window.matchMedia('(pointer: fine)').matches) {
