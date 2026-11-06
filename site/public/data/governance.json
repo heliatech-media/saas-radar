@@ -1,0 +1,37 @@
+{
+  "sentinel": {
+    "version": "Sentinel™ v2.4",
+    "version_code": "2.4",
+    "methodology_url": "/methodology/",
+    "audit_cadence_hours": 48,
+    "audit_cadence_label": "48h Audit Cycle",
+    "tco_tolerance": "±15%",
+    "tco_tolerance_label": "TCO Uncertainty: ±15%",
+    "monitored_architectures": 70,
+    "monitored_architectures_label": "70+ Monitored Systems",
+    "disclaimer": "Evaluations are non-contractual benchmarks conducted under Sentinel v2.4 protocol. Software vendors retain right of response within 48 hours."
+  },
+  "newsletter": {
+    "frequency": "Weekly",
+    "day_en": "Thursday",
+    "day_fr": "Jeudi",
+    "time": "09:00 EST / 15:00 CET",
+    "name": "The HeliaTech Confidential Briefing",
+    "tagline": "Curated technical intelligence, pricing leaks, and architecture benchmarks delivered every Thursday."
+  },
+  "deals": {
+    "edition": "November 2026",
+    "edition_fr": "Novembre 2026",
+    "audit_cadence_hours": 48,
+    "audit_cadence_label": "48h Audit Cycle",
+    "verified_label": "Verified Nov 2026",
+    "updated_label": "Updated for November 2026",
+    "policy": "Continuous synthetic and manual re-verification every 48 hours. Zero unverified coupons."
+  },
+  "editorial": {
+    "edition": "November 2026",
+    "edition_fr": "Novembre 2026",
+    "curation_standard": "Forensic Software Intelligence",
+    "canonical_domain": "https://heliatech.online"
+  }
+}

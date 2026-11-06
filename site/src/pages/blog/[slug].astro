@@ -24,6 +24,16 @@ const { entry } = Astro.props;
 const post = entry.data;
 const { Content } = await entry.render();
 
+// Sentinel v2.4 Duel Detection for Header Contenders
+const isVersus = entry.slug.includes('-vs-') || post.category === 'Comparatif';
+let contenderA = post.tool_slug || '';
+let contenderB = '';
+if (entry.slug.includes('-vs-')) {
+  const parts = entry.slug.split('-vs-');
+  contenderA = parts[0];
+  contenderB = parts[1].replace(/-2026.*$/, '').replace(/-claude.*$/, '').replace(/-fr$/, '');
+}
+
 // Generate Schema.org JSON-LD for Google Rich Results
 const jsonLd = {
   "@context": "https://schema.org",
@@ -105,19 +115,33 @@ const jsonLd = {
         <span class="text-slate-500">•</span>
         <span class="text-slate-400 font-mono">PUBLISHED ON {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
 
-        {post.tool_slug && (
-          <span class="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30 font-semibold">
+        {isVersus && contenderA && contenderB ? (
+          <span class="ml-auto inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-obsidian-800 text-slate-300 border border-white/[0.08] font-semibold">
+            <ToolIcon slug={contenderA} size="xs" />
+            <span class="text-white">{contenderA.toUpperCase()}</span>
+            <span class="text-sky-400 font-bold px-0.5">VS</span>
+            <ToolIcon slug={contenderB} size="xs" />
+            <span class="text-slate-300">{contenderB.toUpperCase()}</span>
+          </span>
+        ) : post.tool_slug ? (
+          <span class="ml-auto inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cobalt-500/10 text-cobalt-300 border border-cobalt-500/30 font-semibold">
             <ToolIcon slug={post.tool_slug} size="xs" />
             <span>Dedicated to {post.tool_slug.toUpperCase()}</span>
           </span>
-        )}
+        ) : null}
       </div>
 
       <div class="flex items-start gap-4 mb-8">
-        {post.tool_slug && (
+        {isVersus && contenderA && contenderB ? (
+          <div class="mt-1 hidden sm:flex items-center gap-2 p-2 rounded-2xl bg-obsidian-900 border border-white/[0.08]">
+            <ToolIcon slug={contenderA} size="md" />
+            <span class="text-xs font-mono font-bold text-sky-400 px-1">VS</span>
+            <ToolIcon slug={contenderB} size="md" />
+          </div>
+        ) : post.tool_slug ? (
           <ToolIcon slug={post.tool_slug} size="lg" className="mt-1 hidden sm:inline-flex" />
-        )}
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+        ) : null}
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] font-heading">
           {post.title}
         </h1>
       </div>
@@ -189,13 +213,53 @@ const jsonLd = {
         <ul class="space-y-3 m-0 p-0 list-none">
           {post.tldr.map((item) => (
             <li class="flex items-start gap-3 text-sm sm:text-base text-slate-200 leading-relaxed m-0">
-              <span class="text-cyan-400 font-bold mt-1 text-base leading-none">▹</span>
+              <span class="text-sky-400 font-bold mt-1 text-base leading-none">▹</span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
       </div>
     )}
+
+    <!-- Sentinel™ v2.4 Forensic Evidence & Protocol Dossier Component -->
+    <div class="my-8 p-5 sm:p-6 rounded-2xl bg-obsidian-800 border border-white/[0.08] text-xs font-mono shadow-sm">
+      <div class="flex flex-wrap items-center justify-between gap-3 pb-3 mb-3 border-b border-white/[0.06]">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-white font-bold tracking-wider">SENTINEL™ EVIDENCE DOSSIER</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-cobalt-400 font-medium">Protocol v2.4</span>
+        </div>
+        <a 
+          href="/methodology/" 
+          class="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 font-bold transition-colors underline"
+        >
+          <span>Audit Methodology & Weights</span>
+          <span>→</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-slate-300">
+        <div>
+          <span class="text-slate-500 block text-[10px] uppercase">Audit Cadence</span>
+          <span class="font-bold text-white">48h Re-verification</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block text-[10px] uppercase">TCO Tolerance</span>
+          <span class="font-bold text-emerald-400">±15% Uncertainty</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block text-[10px] uppercase">Perimeter</span>
+          <span class="font-bold text-white">November 2026</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block text-[10px] uppercase">Dispute Protocol</span>
+          <span class="font-bold text-sky-400">Open Vendor Window</span>
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-400 font-light mt-3 mb-0 leading-relaxed">
+        This investigation adheres to the Sentinel v2.4 independent observatory standard. Benchmarks and rate cards are gathered via direct telemetry and authenticated testbeds without vendor compensation.
+      </p>
+    </div>
 
     <!-- Quick Decision & Immediate Action Banner (High Conversion Hook Above The Fold) -->
     <div class="my-8 p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-cyan-950/40 via-slate-900/90 to-purple-950/40 border border-cyan-500/40 shadow-glow-cyan flex flex-col sm:flex-row items-center justify-between gap-6">

@@ -123,3 +123,17 @@
 
 /reviews/riverside-fm /reviews/riverside 301
 /reviews/screenstudio /reviews/screen-studio 301
+
+# Canonical Blog Deduplication (Sentinel Forensic Integrity)
+/blog/riverside /blog/riverside-evolution-guide-2026/ 301
+/blog/riverside/ /blog/riverside-evolution-guide-2026/ 301
+/blog/riverside-fm-evolution-guide-2026 /blog/riverside-evolution-guide-2026/ 301
+/blog/riverside-fm-evolution-guide-2026/ /blog/riverside-evolution-guide-2026/ 301
+/blog/tally /blog/tally-evolution-guide-2026/ 301
+/blog/tally/ /blog/tally-evolution-guide-2026/ 301
+/blog/descript /blog/descript-evolution-guide-2026/ 301
+/blog/descript/ /blog/descript-evolution-guide-2026/ 301
+/blog/resend /blog/resend-evolution-guide-2026/ 301
+/blog/resend/ /blog/resend-evolution-guide-2026/ 301
+/blog/screenstudio-evolution-guide-2026 /blog/screen-studio-evolution-guide-2026/ 301
+/blog/screenstudio-evolution-guide-2026/ /blog/screen-studio-evolution-guide-2026/ 301

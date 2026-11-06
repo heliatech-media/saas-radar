@@ -448,7 +448,7 @@
     },
     "toolB": {
       "name": "ZoomInfo",
-      "slug": "lusha",
+      "slug": "zoominfo",
       "tagline": "The legacy enterprise sales database with deep org chart mapping and proprietary intent signals.",
       "startingPrice": "$15,000/yr (Base Entry)",
       "pricingModel": "Annual Enterprise Contract Lock-in",
@@ -737,7 +737,7 @@
     },
     "toolB": {
       "name": "Synthesia",
-      "slug": "veed",
+      "slug": "synthesia",
       "tagline": "The veteran enterprise video training platform with deep corporate LMS integrations.",
       "startingPrice": "$29/mo",
       "pricingModel": "Video Minutes / Tiers",
@@ -923,7 +923,7 @@
     },
     "toolB": {
       "name": "Firebase",
-      "slug": "supabase",
+      "slug": "firebase",
       "tagline": "Google's real-time NoSQL mobile and web backend platform.",
       "startingPrice": "$0 (Spark) / Pay-as-you-go (Blaze)",
       "pricingModel": "Per Read/Write Operation",
@@ -1119,7 +1119,7 @@
     },
     "toolB": {
       "name": "Substack",
-      "slug": "beehiiv",
+      "slug": "substack",
       "tagline": "The minimalist subscription platform for independent journalists and essayists.",
       "startingPrice": "$0 upfront",
       "pricingModel": "10% Cut of All Paid Subscription Revenue",
