@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-05 23:00:47 UTC",
+  "last_updated": "2026-11-06 01:07:24 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 73,
-    "total_published_investigations": 171,
-    "reviews_audited": 73,
-    "masterclasses_and_duels": 98,
+    "total_published_investigations": 173,
+    "reviews_audited": 74,
+    "masterclasses_and_duels": 99,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$25,550 USD",
@@ -319,7 +319,7 @@
     },
     {
       "slug": "rewardful",
-      "destination": "https://www.rewardful.com/?via=heliatech",
+      "destination": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
       "type": "Commission Partner"
     },
     {
@@ -440,6 +440,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-03 12:54:51",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-03 09:53:09",
+      "title": "Cycle Autonome #Tally",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-03 09:52:43",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -455,20 +469,6 @@
     },
     {
       "timestamp": "2026-11-03 06:58:35",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-03 03:51:51",
-      "title": "Cycle Autonome #Tally",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Tally et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-03 03:51:41",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 5 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, peripety, podcastle, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",

@@ -128,7 +128,7 @@ AFFILIATE_MAP = {
     "podia": "https://www.podia.com/?via=heliatech",
     "printify": "https://printify.pxf.io/c/heliatech",
     "retool": "https://retool.com/?fpr=heliatech",
-    "rewardful": "https://www.rewardful.com/?via=heliatech",
+    "rewardful": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "tweethunter": "https://tweethunter.io/?via=helia",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
     "transistor-fm": "https://transistor.fm/?via=heliatech",

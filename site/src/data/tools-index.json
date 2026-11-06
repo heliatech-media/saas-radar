@@ -389,6 +389,16 @@
     "commission_rate": "22% recurring for the first year"
   },
   {
+    "name": "Munch",
+    "slug": "munch",
+    "tagline": "Transform long-form content into viral social media clips using AI-driven context analysis.",
+    "category": "AI Video Automation",
+    "rating": 4.4,
+    "starting_price": "$49/mo",
+    "best_for": "Content creators, social media managers, and digital marketing agencies looking to scale presence across TikTok, Reels, and Shorts.",
+    "affiliate_url": "https://www.getmunch.com"
+  },
+  {
     "name": "Murf.ai",
     "slug": "murf-ai",
     "tagline": "Transform text into studio-quality voiceovers with human-like AI voices in minutes.",
