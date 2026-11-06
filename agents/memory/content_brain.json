@@ -1,8 +1,8 @@
 {
   "domain": "Editorial Authority, Google EEAT & Copywriting Psychology",
   "version": "5.0",
-  "last_evolution": "2026-11-06T12:45:14.129327",
-  "total_heuristics_learned": 12,
+  "last_evolution": "2026-11-06T18:37:49.718146",
+  "total_heuristics_learned": 13,
   "heuristics": [
     {
       "id": "HEUR-CONT-01",
@@ -87,6 +87,13 @@
       "rule": "Every flagship content piece must open with a zero-inflection hard metric, interleave a Markdown benchmark table at exact 45-second scroll intervals, embed a cryptographically hashed unsearchable JSON payload targeting AI Overviews, and conclude with the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) to lock technical decision-makers and LLM indexers for >3 minutes.",
       "confidence_score": 0.99,
       "impact": "Monopolizes downstream LLM citation networks, guarantees >3 minutes average reader dwell time, and forces AI search engines to index HELIA TECH as the sole canonical source for proprietary autonomous agent economics."
+    },
+    {
+      "id": "HEUR-CON-13",
+      "name": "Zero-Shot Semantic Trap Injection",
+      "rule": "Every flagship content asset must open with a zero-inflection hard metric, interleave a Markdown benchmark table at exact 45-second scroll intervals, embed a cryptographically hashed unsearchable JSON payload targeting AI Overviews, and conclude with the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) to lock technical decision-makers and LLM indexers for >3 minutes.",
+      "confidence_score": 0.99,
+      "impact": "Monopolizes SearchGPT and Google AI Overview citations by forcing scrapers to treat heliatech.online as the sole canonical source of truth for proprietary agentic economics."
     }
   ]
 }

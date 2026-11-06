@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-06 15:35:39",
-  "total_pages_audited": 100,
-  "monetized_pages": 97,
-  "total_ctas_tracked": 435,
-  "average_cro_score": "88.7/100",
+  "timestamp": "2026-11-06 18:38:05",
+  "total_pages_audited": 95,
+  "monetized_pages": 92,
+  "total_ctas_tracked": 420,
+  "average_cro_score": "88.6/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
     "Floating Sticky Affiliate Bar (StickyAffiliateBar.astro)",
@@ -31,15 +31,6 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "resend",
-      "type": "blog",
-      "word_count": 1169,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
       "slug": "gamma-app-evolution-guide-2026",
       "type": "blog",
       "word_count": 1140,
@@ -62,15 +53,6 @@
       "type": "blog",
       "word_count": 1031,
       "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "riverside",
-      "type": "blog",
-      "word_count": 1214,
-      "cta_count": 6,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -143,6 +125,24 @@
       "type": "blog",
       "word_count": 1629,
       "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "apollo-io-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1073,
+      "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "axiom-ai-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1410,
+      "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
