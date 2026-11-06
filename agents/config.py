@@ -128,7 +128,7 @@ AFFILIATE_MAP = {
     "podia": "https://www.podia.com/?via=heliatech",
     "printify": "https://printify.pxf.io/c/heliatech",
     "retool": "https://retool.com/?fpr=heliatech",
-    "rewardful": "https://www.rewardful.com/?via=heliatech",
+    "rewardful": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "tweethunter": "https://tweethunter.io/?via=helia",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
     "transistor-fm": "https://transistor.fm/?via=heliatech",
@@ -173,7 +173,9 @@ AFFILIATE_MAP = {
     "bannerbear": "https://www.bannerbear.com/?via=heliatech",
     "axiom-ai": "https://axiom.ai/?via=heliatech",
     "munch": "https://www.getmunch.com/?via=heliatech",
-    "rask-ai": "https://rask.ai/?via=heliatech"
+    "rask-ai": "https://rask.ai/?via=heliatech",
+    "perplexity-enterprise": "https://www.perplexity.ai/?via=heliatech",
+    "senja": "https://senja.io/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

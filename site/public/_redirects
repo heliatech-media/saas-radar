@@ -5,7 +5,7 @@
 /go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
 /go/airtable https://airtable.com/?ref=heliatech 302
 /go/apollo-io https://www.apollo.io/?ref=heliatech 302
-/go/axiom-ai https://axiom.ai 302
+/go/axiom-ai https://axiom.ai/?via=heliatech 302
 /go/bannerbear https://www.bannerbear.com/?via=heliatech 302
 /go/beehiiv https://www.beehiiv.com/?via=heliatech 302
 /go/brevo https://www.brevo.com 302
@@ -43,7 +43,7 @@
 /go/minicong https://minicong.ai/?via=heliatech 302
 /go/monday-com https://monday.com/?ref=heliatech 302
 /go/multiplier https://www.usemultiplier.com 302
-/go/munch https://www.munch.com 302
+/go/munch https://www.getmunch.com/?via=heliatech 302
 /go/murf-ai https://murf.ai/?fp_ref=heliatech 302
 /go/n8n https://n8n.io/?via=heliatech 302
 /go/notion-ai https://affiliates.notion.so/heliatech 302
@@ -53,6 +53,7 @@
 /go/papaya-global https://www.papayaglobal.com/?ref=heliatech 302
 /go/partnerstack https://partnerstack.com/?via=heliatech 302
 /go/peripety https://try.elevenlabs.io/ajhd6t7k04dh 302
+/go/perplexity-enterprise https://www.perplexity.ai/?via=heliatech 302
 /go/phantombuster https://phantombuster.com/?via=heliatech 302
 /go/plane https://plane.so 302
 /go/playht https://try.elevenlabs.io/ajhd6t7k04dh 302
@@ -60,21 +61,21 @@
 /go/podia https://www.podia.com/?via=heliatech 302
 /go/power-automate https://powerautomate.microsoft.com 302
 /go/printify https://www.printify.com 302
-/go/rask-ai https://www.rask.ai 302
+/go/rask-ai https://rask.ai/?via=heliatech 302
 /go/relay https://www.relay.app 302
 /go/remote https://remote.com 302
 /go/resemble-ai https://www.resemble.ai 302
 /go/resend https://resend.com/?via=heliatech 302
 /go/retool https://retool.com/?fpr=heliatech 302
-/go/rewardful https://www.rewardful.com/?via=heliatech 302
+/go/rewardful https://www.rewardful.com/?via=heliatech/?via=heliatech 302
 /go/rippling https://www.rippling.com 302
 /go/riverside https://riverside.fm/?via=heliatech 302
-/go/riverside-fm https://riverside.fm/?via=heliatech 302
+/go/riverside-fm https://www.riverside-fm.com 302
 /go/sanity https://www.sanity.io/?ref=heliatech 302
 /go/screen-studio https://screen.studio/?via=heliatech 302
 /go/screenclip https://screenclip.com/?via=heliatech 302
-/go/screenstudio https://www.screen.studio/?via=heliatech 302
-/go/senja https://senja.io 302
+/go/screenstudio https://www.screenstudio.com 302
+/go/senja https://senja.io/?via=heliatech 302
 /go/speechify https://speechify.com 302
 /go/submagic https://submagic.co/?via=heliatech 302
 /go/supabase https://supabase.com/?via=heliatech 302
@@ -97,27 +98,3 @@
 /go/workato https://www.workato.com 302
 /go/zapier https://zapier.com/app/register?via=heliatech 302
 /go/zoominfo https://www.zoominfo.com 302
-
-
-# Stealth Guard: Force redirect (301) at Cloudflare Edge to completely override static assets on production
-/templates/* / 301
-/templates / 301
-/dashboard/* / 301
-/dashboard / 301
-/seller/* / 301
-/seller / 301
-/sell/* / 301
-/sell / 301
-/register/* / 301
-/register / 301
-/login/* / 301
-/login / 301
-/creator/* / 301
-/creator / 301
-/checkout/* / 301
-/checkout / 301
-/admin/marketplace/* / 301
-/admin/marketplace / 301
-
-/reviews/riverside-fm /reviews/riverside 301
-/reviews/screenstudio /reviews/screen-studio 301

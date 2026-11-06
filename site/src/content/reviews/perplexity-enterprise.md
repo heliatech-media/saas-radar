@@ -6,7 +6,7 @@ tagline: An enterprise-grade conversational AI search engine designed for rapid,
 category: AI Research & Productivity
 rating: 4.7
 website_url: https://www.perplexity.ai
-affiliate_url: https://www.perplexity.ai
+affiliate_url: "https://www.perplexity.ai/?via=heliatech"
 summary: Perplexity Enterprise transforms traditional keyword queries into deeply
   researched, synthesized answers complete with real-time web citations. Built for
   teams requiring high-speed information gathering, it guarantees enterprise-grade

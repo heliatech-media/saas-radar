@@ -1,10 +1,10 @@
 {
-  "last_synced": "2026-11-06T04:38:25.367383",
+  "last_synced": "2026-11-06T03:41:19.880875",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20014,
-  "total_requests": 122780,
+  "total_visitors_network": 20015,
+  "total_requests": 122783,
   "total_visits": 6204,
   "total_pageviews": 25921,
   "percent_cached": "56.14%",
@@ -12,105 +12,105 @@
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6370
+      "views": 6010
     },
     {
       "path": "/",
-      "views": 3030
+      "views": 3280
     },
     {
       "path": "/calculator/",
-      "views": 1130
+      "views": 1090
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 690
+      "views": 780
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 470
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 280
-    },
-    {
-      "path": "/awards/",
-      "views": 260
+      "views": 410
     },
     {
       "path": "/radar/",
-      "views": 240
+      "views": 250
     },
     {
       "path": "/blog/",
-      "views": 240
+      "views": 250
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/clickup/",
       "views": 210
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 200
+      "path": "/reviews/elevenlabs/",
+      "views": 210
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 170
+      "views": 200
     },
     {
-      "path": "/sentinel/",
-      "views": 170
+      "path": "/terms/",
+      "views": 200
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 200
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 190
     },
     {
       "path": "/deals/",
-      "views": 170
+      "views": 190
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
+      "path": "/awards/",
+      "views": 170
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 23630
+      "views": 22930
     },
     {
       "country": "Morocco",
-      "views": 17110
-    },
-    {
-      "country": "Singapore",
-      "views": 1310
+      "views": 18540
     },
     {
       "country": "Germany",
-      "views": 1300
+      "views": 1370
     },
     {
-      "country": "United Kingdom",
-      "views": 590
+      "country": "Singapore",
+      "views": 1340
     },
     {
       "country": "Belgium",
-      "views": 570
+      "views": 690
     },
     {
-      "country": "Netherlands",
-      "views": 550
-    },
-    {
-      "country": "Canada",
-      "views": 530
+      "country": "United Kingdom",
+      "views": 600
     },
     {
       "country": "Brazil",
-      "views": 460
+      "views": 480
+    },
+    {
+      "country": "CN",
+      "views": 420
+    },
+    {
+      "country": "Canada",
+      "views": 410
     },
     {
       "country": "France",
-      "views": 340
+      "views": 400
     }
   ],
   "top_referrers": [

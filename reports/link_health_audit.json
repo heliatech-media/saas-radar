@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-06 00:37:11",
+  "timestamp": "2026-11-06 03:42:33",
   "total_links_audited": 97,
   "healthy_links": 93,
   "broken_links_count": 4,
@@ -22,12 +22,12 @@
       "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
     },
     {
-      "slug": "perplexity-enterprise",
-      "target_url": "https://www.perplexity-enterprise.com",
+      "slug": "riverside-fm",
+      "target_url": "https://www.riverside-fm.com",
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.perplexity-enterprise.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.perplexity-enterprise.com', port=443): Failed to resolve 'www.perplexity-enterprise.com' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='www.riverside-fm.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.riverside-fm.com', port=443): Failed to resolve 'www.riverside-fm.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tome",
@@ -168,7 +168,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9mMAWsEUm4LFgn&gsxid=9mMAWsEUm4LFgn&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bcHSuTZy9G721R&gsxid=bcHSuTZy9G721R&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -401,17 +401,16 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=T931P1fFHKKeGP&gsxid=T931P1fFHKKeGP&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=29wxzX24Ejeitc&gsxid=29wxzX24Ejeitc&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "perplexity-enterprise",
-      "target_url": "https://www.perplexity-enterprise.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.perplexity-enterprise.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.perplexity-enterprise.com', port=443): Failed to resolve 'www.perplexity-enterprise.com' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://www.perplexity.ai/?via=heliatech",
+      "final_url": "https://www.perplexity.ai/?via=heliatech",
+      "status_code": 403,
+      "healthy": true
     },
     {
       "slug": "phantombuster",
@@ -430,7 +429,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xwHtqL9HqoewcA&gsxid=xwHtqL9HqoewcA&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cAweSW98BjRAaL&gsxid=cAweSW98BjRAaL&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -506,8 +505,8 @@
     },
     {
       "slug": "rewardful",
-      "target_url": "https://www.rewardful.com/?via=heliatech",
-      "final_url": "https://www.rewardful.com/?via=heliatech",
+      "target_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
+      "final_url": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -527,10 +526,11 @@
     },
     {
       "slug": "riverside-fm",
-      "target_url": "https://riverside.fm/?via=heliatech",
-      "final_url": "https://riverside.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://www.riverside-fm.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.riverside-fm.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.riverside-fm.com', port=443): Failed to resolve 'www.riverside-fm.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "sanity",
@@ -555,15 +555,15 @@
     },
     {
       "slug": "screenstudio",
-      "target_url": "https://www.screen.studio/?via=heliatech",
-      "final_url": "https://screen.studio/?via=heliatech",
+      "target_url": "https://www.screenstudio.com",
+      "final_url": "https://screen.studio/",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "senja",
-      "target_url": "https://senja.io",
-      "final_url": "https://senja.io/",
+      "target_url": "https://senja.io/?via=heliatech",
+      "final_url": "https://senja.io/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
