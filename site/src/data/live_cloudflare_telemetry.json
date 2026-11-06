@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-06T04:08:10.747629",
+  "last_synced": "2026-11-06T04:28:18.814417",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 19987,
-  "total_requests": 122400,
-  "total_visits": 6195,
-  "total_pageviews": 25871,
+  "total_visitors_network": 20002,
+  "total_requests": 122683,
+  "total_visits": 6200,
+  "total_pageviews": 25906,
   "percent_cached": "56.14%",
-  "data_served_mb": 991.8,
+  "data_served_mb": 994.9,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 670
+      "views": 680
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -39,12 +39,12 @@
       "views": 260
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 240
     },
     {
-      "path": "/blog/",
-      "views": 220
+      "path": "/radar/",
+      "views": 240
     },
     {
       "path": "/versus/",
@@ -55,16 +55,16 @@
       "views": 200
     },
     {
-      "path": "/deals/",
-      "views": 170
-    },
-    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 170
     },
     {
-      "path": "/blog/make-automation-revolution/",
-      "views": 160
+      "path": "/deals/",
+      "views": 170
+    },
+    {
+      "path": "/sentinel/",
+      "views": 170
     },
     {
       "path": "/reviews/apollo-io/",
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 23600
+      "views": 23610
     },
     {
       "country": "Morocco",
-      "views": 17040
+      "views": 17110
     },
     {
       "country": "Singapore",
@@ -106,7 +106,7 @@
     },
     {
       "country": "Brazil",
-      "views": 450
+      "views": 460
     },
     {
       "country": "France",
