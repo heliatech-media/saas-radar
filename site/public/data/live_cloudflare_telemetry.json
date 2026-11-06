@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-06T22:04:45.441301",
+  "last_synced": "2026-11-06T22:14:51.028665",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20672,
-  "total_requests": 126833,
+  "total_visitors_network": 20674,
+  "total_requests": 126861,
   "total_visits": 6408,
-  "total_pageviews": 26722,
+  "total_pageviews": 26730,
   "percent_cached": "56.14%",
-  "data_served_mb": 1054.1,
+  "data_served_mb": 1054.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/",
-      "views": 3180
+      "views": 3190
     },
     {
       "path": "/calculator/",
@@ -28,7 +28,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 540
+      "views": 550
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
@@ -47,12 +47,12 @@
       "views": 240
     },
     {
-      "path": "/versus/",
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 220
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 210
+      "path": "/versus/",
+      "views": 220
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 24460
+      "views": 24470
     },
     {
       "country": "Morocco",
@@ -82,7 +82,7 @@
     },
     {
       "country": "Singapore",
-      "views": 1400
+      "views": 1410
     },
     {
       "country": "Germany",
