@@ -1,29 +1,49 @@
----
-import '../styles/global.css';
-import LeadMagnetDrawer from '../components/LeadMagnetDrawer.astro';
-import SpotlightCommandPalette from '../components/SpotlightCommandPalette.astro';
-
-interface Props {
-  title: string;
-  description?: string;
-  jsonLd?: Record<string, any>;
-  image?: string;
-  canonical?: string;
-  noindex?: boolean;
-}
-
-const { 
-  title, 
-  description = "Independent software intelligence and tech media: comprehensive benchmarks, exhaustive guides, and forensic teardowns of top B2B software and cloud systems.",
-  jsonLd,
-  image = "/images/blog/cursor.png",
-  canonical,
-  noindex = false
-} = Astro.props;
-
-// Determine clean canonical URL with trailing slash normalized
-const currentPath = Astro.url.pathname.replace(/\/+$/, '');
-const canonicalUrl = canonical || (currentPath === '' ? 'https://heliatech.online/' : `https://heliatech.online${currentPath}/`);
+---
+
+import '../styles/global.css';
+
+import LeadMagnetDrawer from '../components/LeadMagnetDrawer.astro';
+
+import SpotlightCommandPalette from '../components/SpotlightCommandPalette.astro';
+
+interface Props {
+
+  title: string;
+
+  description?: string;
+
+  jsonLd?: Record<string, any>;
+
+  image?: string;
+
+  canonical?: string;
+
+  noindex?: boolean;
+
+}
+
+const { 
+
+  title, 
+
+  description = "Independent software intelligence and tech media: comprehensive benchmarks, exhaustive guides, and forensic teardowns of top B2B software and cloud systems.",
+
+  jsonLd,
+
+  image = "/images/blog/cursor.png",
+
+  canonical,
+
+  noindex = false
+
+} = Astro.props;
+
+// Determine clean canonical URL with trailing slash normalized
+
+const currentPath = Astro.url.pathname.replace(/\/+$/, '');
+
+const canonicalUrl = canonical || (currentPath === '' ? 'https://heliatech.online/' : `https://heliatech.online${currentPath}/`);
+
 // Automatically detect marketplace routes for noindex and stealth isolation
 const isMarketplaceRoute = [
   '/templates',
@@ -39,31 +59,52 @@ const isMarketplaceRoute = [
 
 const effectiveNoindex = noindex || isMarketplaceRoute;
 
-
-// Social networks (LinkedIn, Twitter/X) do not support SVG for OpenGraph cards.
-// Automatically route og:image to high-resolution 1200x630 PNG.
-const socialImage = image.replace(/\.svg$/, '.png');
-const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://heliatech.online${socialImage}`;
----
-
-<!doctype html>
-<html lang="en" class="scroll-smooth antialiased selection:bg-cyan-500/30 selection:text-cyan-100" style="background-color: #030303; color-scheme: dark;">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    
-    <!-- Strict HTTPS & Apex Domain Client Enforcement Guard -->
-    <script is:inline>
-      (function() {
-        if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-          if (location.protocol === 'http:') {
-            location.replace('https://' + location.hostname + location.pathname + location.search + location.hash);
-          } else if (location.hostname.startsWith('www.')) {
-            location.replace('https://' + location.hostname.replace(/^www\./, '') + location.pathname + location.search + location.hash);
-          }
-        }
-      })();
-    </script>
+// Social networks (LinkedIn, Twitter/X) do not support SVG for OpenGraph cards.
+
+// Automatically route og:image to high-resolution 1200x630 PNG.
+
+const socialImage = image.replace(/\.svg$/, '.png');
+
+const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://heliatech.online${socialImage}`;
+
+---
+
+<!doctype html>
+
+<html lang="en" class="scroll-smooth antialiased selection:bg-cyan-500/30 selection:text-cyan-100" style="background-color: #030303; color-scheme: dark;">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+    
+
+    <!-- Strict HTTPS & Apex Domain Client Enforcement Guard -->
+
+    <script is:inline>
+
+      (function() {
+
+        if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+
+          if (location.protocol === 'http:') {
+
+            location.replace('https://' + location.hostname + location.pathname + location.search + location.hash);
+
+          } else if (location.hostname.startsWith('www.')) {
+
+            location.replace('https://' + location.hostname.replace(/^www\./, '') + location.pathname + location.search + location.hash);
+
+          }
+
+        }
+
+      })();
+
+    </script>
+
     <!-- Strict Production Stealth Access Gate for Marketplace Pages -->
     <script is:inline>
       (function() {
@@ -89,503 +130,859 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
         });
 
         if (isMarketplace) {
-          // Check for owner secret key query parameter
-          var params = new URLSearchParams(location.search);
-          var key = params.get('preview') || params.get('secret') || params.get('stealth_pass');
-          if (key === 'heliatech2026' || key === 'helia_preview') {
-            try {
-              localStorage.setItem('_ht_stealth_preview', 'unlocked');
-            } catch(e) {}
-            return; // Authorized owner preview
-          }
-
-          // Check if owner already unlocked this browser
-          try {
-            if (localStorage.getItem('_ht_stealth_preview') === 'unlocked') {
-              return; // Authorized
-            }
-          } catch(e) {}
-
-          // Public visitor trying to access unreleased marketplace on production:
-          // Immediately redirect to homepage!
+          // Strict Production Lockdown: Redirect all marketplace routes to home immediately
           location.replace('/');
         }
       })();
     </script>
 
-    <meta name='impact-site-verification' value='9697164e-ba4e-419f-b31c-3655b58d67d0' />
-    <meta name="impact-site-verification" content="9697164e-ba4e-419f-b31c-3655b58d67d0" />
-    <meta name="google-adsense-account" content="ca-pub-4334705198476561" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4334705198476561" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={canonicalUrl} />
-    
-    <!-- Ultra-Fast Typography: Preconnect & Non-Blocking Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title} | HeliaTech</title>
-    <meta name="description" content={description} />
-    <meta property="og:title" content={`${title} | HeliaTech`} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${title} | HeliaTech`} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name='impact-site-verification' value='9697164e-ba4e-419f-b31c-3655b58d67d0' />
+
+    <meta name="impact-site-verification" content="9697164e-ba4e-419f-b31c-3655b58d67d0" />
+
+    <meta name="google-adsense-account" content="ca-pub-4334705198476561" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4334705198476561" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="canonical" href={canonicalUrl} />
+
+    
+
+    <!-- Ultra-Fast Typography: Preconnect & Non-Blocking Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} | HeliaTech</title>
+
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={`${title} | HeliaTech`} />
+
+    <meta property="og:description" content={description} />
+
+    <meta property="og:url" content={canonicalUrl} />
+
+    <meta property="og:type" content="article" />
+
+    <meta property="og:image" content={ogImageUrl} />
+
+    <meta property="og:image:type" content="image/png" />
+
+    <meta property="og:image:width" content="1200" />
+
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:title" content={`${title} | HeliaTech`} />
+
+    <meta name="twitter:description" content={description} />
+
+    <meta name="twitter:image" content={ogImageUrl} />
+
     <meta name="robots" content={effectiveNoindex ? "noindex, nofollow" : "index, follow"} />
 
-
-    {jsonLd && (
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    )}
-
-
-
-    <!-- Stealth Privacy-Preserving Telemetry Core (For Helia Sentinel) -->
-    <!-- Excludes Admins, Internal Bots, Crawlers, and Headless Agents -->
-    <script is:inline>
-      (function() {
-        try {
-          const path = window.location.pathname;
-          if (path.startsWith('/sentinel')) return;
-          
-          // 1. STRICT EXCLUSION: Admin & Internal Owners
-          if (localStorage.getItem('_ht_admin_device') === 'true' || sessionStorage.getItem('_helia_sentinel_auth_token')) {
-            return; // Completely bypass telemetry for site owners/admins
-          }
-
-          // 2. STRICT EXCLUSION: Automated Bots, Crawlers, Headless Browsers
-          if (navigator.webdriver) return;
-          const userAgent = (navigator.userAgent || '').toLowerCase();
-          const botPatterns = ['bot', 'crawler', 'spider', 'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot', 'facebookexternalhit', 'headless', 'phantomjs', 'selenium', 'puppeteer'];
-          if (botPatterns.some(bp => userAgent.includes(bp))) return;
-
-          // 3. HUMAN VERIFICATION: Verify human presence before committing visit
-          let visitRecorded = false;
-          const startTime = Date.now();
-          const storeKey = '_ht_telemetry_v1';
-
-          function commitRealVisit() {
-            if (visitRecorded) return;
-            visitRecorded = true;
-
-            let store = {};
-            try {
-              store = JSON.parse(localStorage.getItem(storeKey) || '{"total_visits":0,"total_hops":0,"pages":{},"recent_events":[]}');
-            } catch(e) {
-              store = { total_visits: 0, total_hops: 0, pages: {}, recent_events: [] };
-            }
-
-            store.total_visits = (store.total_visits || 0) + 1;
-            if (!store.pages) store.pages = {};
-            if (!store.pages[path]) {
-              store.pages[path] = { views: 0, dwell_ms: 0, hops: 0 };
-            }
-            store.pages[path].views = (store.pages[path].views || 0) + 1;
-
-            // Log event
-            if (!store.recent_events) store.recent_events = [];
-            store.recent_events.unshift({
-              type: 'VISIT',
-              path: path,
-              title: document.title.replace(' | HeliaTech', ''),
-              device: window.innerWidth < 768 ? 'Mobile' : (window.innerWidth < 1024 ? 'Tablet' : 'Desktop'),
-              lang: (navigator.language || 'en').toUpperCase().split('-')[0],
-              timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
-            });
-            if (store.recent_events.length > 50) store.recent_events.pop();
-
-            localStorage.setItem(storeKey, JSON.stringify(store));
-          }
-
-          // Trigger on genuine human interaction (scroll, click, touch, mousemove) or 3s dwell
-          ['scroll', 'mousemove', 'click', 'touchstart'].forEach(ev => {
-            window.addEventListener(ev, commitRealVisit, { once: true, passive: true });
-          });
-          setTimeout(commitRealVisit, 3000);
-
-          // Record dwell time when user leaves or switches tab
-          function recordDwell() {
-            const elapsed = Date.now() - startTime;
-            if (elapsed > 1000) {
-              try {
-                const current = JSON.parse(localStorage.getItem(storeKey) || '{}');
-                if (current.pages && current.pages[path]) {
-                  current.pages[path].dwell_ms = (current.pages[path].dwell_ms || 0) + elapsed;
-                  localStorage.setItem(storeKey, JSON.stringify(current));
-                }
-              } catch(e) {}
-            }
-          }
-
-          window.addEventListener('visibilitychange', function() {
-            if (document.visibilityState === 'hidden') recordDwell();
-          });
-          window.addEventListener('pagehide', recordDwell);
-
-          // Track clicks on affiliate hops
-          document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (link && link.href && (link.href.includes('/go/') || (link.rel && link.rel.includes('sponsored')))) {
-              try {
-                const current = JSON.parse(localStorage.getItem(storeKey) || '{}');
-                current.total_hops = (current.total_hops || 0) + 1;
-                
-                const toolSlug = link.href.split('/go/')[1] || path;
-                if (!current.pages) current.pages = {};
-                if (!current.pages[path]) current.pages[path] = { views: 1, dwell_ms: 0, hops: 0 };
-                current.pages[path].hops = (current.pages[path].hops || 0) + 1;
-
-                if (!current.recent_events) current.recent_events = [];
-                current.recent_events.unshift({
-                  type: 'HOP',
-                  path: `/go/${toolSlug}`,
-                  title: `Affiliate Hop: ${toolSlug.toUpperCase()}`,
-                  device: window.innerWidth < 768 ? 'Mobile' : 'Desktop',
-                  lang: (navigator.language || 'en').toUpperCase().split('-')[0],
-                  timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
-                });
-                if (current.recent_events.length > 50) current.recent_events.pop();
-
-                localStorage.setItem(storeKey, JSON.stringify(current));
-
-                // Dispatch Global Edge Beacon & Instant Telegram Alert to Executive Desk
-                try {
-                  const hopMsg = 
-                    '⚡ CLIC SORTANT QUALIFIÉ (AFFILIATE HOP) !\n' +
-                    '━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
-                    '🚀 Outil : ' + (toolSlug || 'Unknown').toUpperCase() + '\n' +
-                    '📄 Page source : ' + path + '\n' +
-                    '🔗 Referrer : ' + (document.referrer || 'Direct / Organic') + '\n' +
-                    '📱 Appareil : ' + (window.innerWidth < 768 ? 'Mobile' : 'Desktop') + '\n' +
-                    '⏰ Heure : ' + new Date().toLocaleTimeString();
-
-                  fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                      chat_id: '8819768123',
-                      text: hopMsg
-                    }),
-                    keepalive: true
-                  }).catch(() => {});
-                } catch(bErr) {}
-              } catch(e) {}
-            }
-          });
-        } catch(e) {}
-      })();
-    </script>
-  </head>
-  <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
-    <!-- Reading & Scroll Progress Indicator (Linear / Awwwards Standard) -->
-    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 z-[100] transition-[width] duration-75 pointer-events-none"></div>
-    <!-- Ambient Cyber Glows (Mobile-GPU Optimized: Lightweight on phones, rich on desktop) -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      <!-- Top Ambient Cyan/Fuchsia Aurora -->
-      <div class="hidden sm:block absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[650px] bg-gradient-to-b from-cyan-500/12 via-fuchsia-500/8 to-transparent blur-[120px] rounded-full"></div>
-      <div class="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-full h-[320px] bg-gradient-to-b from-cyan-500/10 via-fuchsia-500/5 to-transparent"></div>
-      <!-- Side Flares: Desktop only to prevent mobile frame drops & GPU drain -->
-      <div class="hidden md:block absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-fuchsia-600/8 blur-[130px] rounded-full"></div>
-      <div class="hidden md:block absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-cyan-600/8 blur-[130px] rounded-full"></div>
-      <!-- Geometric Cyber Grid Lines -->
-      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
-    </div>
-
-    <!-- World-Class Luxury Cyber-Minimalist Navbar (Linear / Vercel / Awwwards Standard) -->
-    <div class="sticky top-4 z-50 px-4 sm:px-6 max-w-5xl mx-auto">
-      <header class="relative backdrop-blur-2xl bg-[#08090d]/85 border border-white/[0.08] shadow-[0_10px_35px_-5px_rgba(0,0,0,0.8),0_0_20px_0_rgba(6,182,212,0.08)] rounded-full px-5 py-2.5 flex items-center justify-between transition-all duration-300 hover:border-white/[0.16]">
-        
-        <!-- Left: Precision Geometric Vector Monogram & Wordmark -->
-        <a href="/" class="flex items-center gap-2.5 group shrink-0" aria-label="HeliaTech Homepage">
-          <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600 p-[1px] shadow-[0_0_15px_rgba(6,182,212,0.35)] transition-transform duration-300 group-hover:scale-105">
-            <div class="w-full h-full bg-[#030508] rounded-[7px] flex items-center justify-center">
-              <svg class="w-3.5 h-3.5 text-cyan-400 transition-transform duration-300 group-hover:rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-            </div>
-          </div>
-          <div class="flex items-center tracking-tight text-sm font-bold">
-            <span class="text-white font-extrabold tracking-wide">HELIA</span>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 font-extrabold tracking-wider">TECH</span>
-          </div>
-        </a>
-
-        <!-- Center: Refined Luxury Typography Navigation (Zero Childish Emojis) -->
-        <nav class="hidden md:flex items-center gap-1 text-[13px] font-medium tracking-normal text-slate-300">
-          <a href="/radar" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-            Radar
-          </a>
-          <a href="/versus" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-            Versus
-          </a>
-          <a href="/awards" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-            Awards
-          </a>
-          <a href="/deals" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
-            <span>Deals</span>
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              Perks
-            </span>
-          </a>
+    {jsonLd && (
+
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    )}
+
+    <!-- Stealth Privacy-Preserving Telemetry Core (For Helia Sentinel) -->
+
+    <!-- Excludes Admins, Internal Bots, Crawlers, and Headless Agents -->
+
+    <script is:inline>
+
+      (function() {
+
+        try {
+
+          const path = window.location.pathname;
+
+          if (path.startsWith('/sentinel')) return;
+
+          
+
+          // 1. STRICT EXCLUSION: Admin & Internal Owners
+
+          if (localStorage.getItem('_ht_admin_device') === 'true' || sessionStorage.getItem('_helia_sentinel_auth_token')) {
+
+            return; // Completely bypass telemetry for site owners/admins
+
+          }
+
+          // 2. STRICT EXCLUSION: Automated Bots, Crawlers, Headless Browsers
+
+          if (navigator.webdriver) return;
+
+          const userAgent = (navigator.userAgent || '').toLowerCase();
+
+          const botPatterns = ['bot', 'crawler', 'spider', 'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandexbot', 'facebookexternalhit', 'headless', 'phantomjs', 'selenium', 'puppeteer'];
+
+          if (botPatterns.some(bp => userAgent.includes(bp))) return;
+
+          // 3. HUMAN VERIFICATION: Verify human presence before committing visit
+
+          let visitRecorded = false;
+
+          const startTime = Date.now();
+
+          const storeKey = '_ht_telemetry_v1';
+
+          function commitRealVisit() {
+
+            if (visitRecorded) return;
+
+            visitRecorded = true;
+
+            let store = {};
+
+            try {
+
+              store = JSON.parse(localStorage.getItem(storeKey) || '{"total_visits":0,"total_hops":0,"pages":{},"recent_events":[]}');
+
+            } catch(e) {
+
+              store = { total_visits: 0, total_hops: 0, pages: {}, recent_events: [] };
+
+            }
+
+            store.total_visits = (store.total_visits || 0) + 1;
+
+            if (!store.pages) store.pages = {};
+
+            if (!store.pages[path]) {
+
+              store.pages[path] = { views: 0, dwell_ms: 0, hops: 0 };
+
+            }
+
+            store.pages[path].views = (store.pages[path].views || 0) + 1;
+
+            // Log event
+
+            if (!store.recent_events) store.recent_events = [];
+
+            store.recent_events.unshift({
+
+              type: 'VISIT',
+
+              path: path,
+
+              title: document.title.replace(' | HeliaTech', ''),
+
+              device: window.innerWidth < 768 ? 'Mobile' : (window.innerWidth < 1024 ? 'Tablet' : 'Desktop'),
+
+              lang: (navigator.language || 'en').toUpperCase().split('-')[0],
+
+              timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
+
+            });
+
+            if (store.recent_events.length > 50) store.recent_events.pop();
+
+            localStorage.setItem(storeKey, JSON.stringify(store));
+
+          }
+
+          // Trigger on genuine human interaction (scroll, click, touch, mousemove) or 3s dwell
+
+          ['scroll', 'mousemove', 'click', 'touchstart'].forEach(ev => {
+
+            window.addEventListener(ev, commitRealVisit, { once: true, passive: true });
+
+          });
+
+          setTimeout(commitRealVisit, 3000);
+
+          // Record dwell time when user leaves or switches tab
+
+          function recordDwell() {
+
+            const elapsed = Date.now() - startTime;
+
+            if (elapsed > 1000) {
+
+              try {
+
+                const current = JSON.parse(localStorage.getItem(storeKey) || '{}');
+
+                if (current.pages && current.pages[path]) {
+
+                  current.pages[path].dwell_ms = (current.pages[path].dwell_ms || 0) + elapsed;
+
+                  localStorage.setItem(storeKey, JSON.stringify(current));
+
+                }
+
+              } catch(e) {}
+
+            }
+
+          }
+
+          window.addEventListener('visibilitychange', function() {
+
+            if (document.visibilityState === 'hidden') recordDwell();
+
+          });
+
+          window.addEventListener('pagehide', recordDwell);
+
+          // Track clicks on affiliate hops
+
+          document.addEventListener('click', function(e) {
+
+            const link = e.target.closest('a');
+
+            if (link && link.href && (link.href.includes('/go/') || (link.rel && link.rel.includes('sponsored')))) {
+
+              try {
+
+                const current = JSON.parse(localStorage.getItem(storeKey) || '{}');
+
+                current.total_hops = (current.total_hops || 0) + 1;
+
+                
+
+                const toolSlug = link.href.split('/go/')[1] || path;
+
+                if (!current.pages) current.pages = {};
+
+                if (!current.pages[path]) current.pages[path] = { views: 1, dwell_ms: 0, hops: 0 };
+
+                current.pages[path].hops = (current.pages[path].hops || 0) + 1;
+
+                if (!current.recent_events) current.recent_events = [];
+
+                current.recent_events.unshift({
+
+                  type: 'HOP',
+
+                  path: `/go/${toolSlug}`,
+
+                  title: `Affiliate Hop: ${toolSlug.toUpperCase()}`,
+
+                  device: window.innerWidth < 768 ? 'Mobile' : 'Desktop',
+
+                  lang: (navigator.language || 'en').toUpperCase().split('-')[0],
+
+                  timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
+
+                });
+
+                if (current.recent_events.length > 50) current.recent_events.pop();
+
+                localStorage.setItem(storeKey, JSON.stringify(current));
+
+                // Dispatch Global Edge Beacon & Instant Telegram Alert to Executive Desk
+
+                try {
+
+                  const hopMsg = 
+
+                    '⚡ CLIC SORTANT QUALIFIÉ (AFFILIATE HOP) !\n' +
+
+                    '━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+
+                    '🚀 Outil : ' + (toolSlug || 'Unknown').toUpperCase() + '\n' +
+
+                    '📄 Page source : ' + path + '\n' +
+
+                    '🔗 Referrer : ' + (document.referrer || 'Direct / Organic') + '\n' +
+
+                    '📱 Appareil : ' + (window.innerWidth < 768 ? 'Mobile' : 'Desktop') + '\n' +
+
+                    '⏰ Heure : ' + new Date().toLocaleTimeString();
+
+                  fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
+
+                    method: 'POST',
+
+                    headers: { 'Content-Type': 'application/json' },
+
+                    body: JSON.stringify({
+
+                      chat_id: '8819768123',
+
+                      text: hopMsg
+
+                    }),
+
+                    keepalive: true
+
+                  }).catch(() => {});
+
+                } catch(bErr) {}
+
+              } catch(e) {}
+
+            }
+
+          });
+
+        } catch(e) {}
+
+      })();
+
+    </script>
+
+  </head>
+
+  <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
+
+    <!-- Reading & Scroll Progress Indicator (Linear / Awwwards Standard) -->
+
+    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 z-[100] transition-[width] duration-75 pointer-events-none"></div>
+
+    <!-- Ambient Cyber Glows (Mobile-GPU Optimized: Lightweight on phones, rich on desktop) -->
+
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+
+      <!-- Top Ambient Cyan/Fuchsia Aurora -->
+
+      <div class="hidden sm:block absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[650px] bg-gradient-to-b from-cyan-500/12 via-fuchsia-500/8 to-transparent blur-[120px] rounded-full"></div>
+
+      <div class="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-full h-[320px] bg-gradient-to-b from-cyan-500/10 via-fuchsia-500/5 to-transparent"></div>
+
+      <!-- Side Flares: Desktop only to prevent mobile frame drops & GPU drain -->
+
+      <div class="hidden md:block absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-fuchsia-600/8 blur-[130px] rounded-full"></div>
+
+      <div class="hidden md:block absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-cyan-600/8 blur-[130px] rounded-full"></div>
+
+      <!-- Geometric Cyber Grid Lines -->
+
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
+
+    </div>
+
+    <!-- World-Class Luxury Cyber-Minimalist Navbar (Linear / Vercel / Awwwards Standard) -->
+
+    <div class="sticky top-4 z-50 px-4 sm:px-6 max-w-5xl mx-auto">
+
+      <header class="relative backdrop-blur-2xl bg-[#08090d]/85 border border-white/[0.08] shadow-[0_10px_35px_-5px_rgba(0,0,0,0.8),0_0_20px_0_rgba(6,182,212,0.08)] rounded-full px-5 py-2.5 flex items-center justify-between transition-all duration-300 hover:border-white/[0.16]">
+
+        
+
+        <!-- Left: Precision Geometric Vector Monogram & Wordmark -->
+
+        <a href="/" class="flex items-center gap-2.5 group shrink-0" aria-label="HeliaTech Homepage">
+
+          <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600 p-[1px] shadow-[0_0_15px_rgba(6,182,212,0.35)] transition-transform duration-300 group-hover:scale-105">
+
+            <div class="w-full h-full bg-[#030508] rounded-[7px] flex items-center justify-center">
+
+              <svg class="w-3.5 h-3.5 text-cyan-400 transition-transform duration-300 group-hover:rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+
+              </svg>
+
+            </div>
+
+          </div>
+
+          <div class="flex items-center tracking-tight text-sm font-bold">
+
+            <span class="text-white font-extrabold tracking-wide">HELIA</span>
+
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 font-extrabold tracking-wider">TECH</span>
+
+          </div>
+
+        </a>
+
+        <!-- Center: Refined Luxury Typography Navigation (Zero Childish Emojis) -->
+
+        <nav class="hidden md:flex items-center gap-1 text-[13px] font-medium tracking-normal text-slate-300">
+
+          <a href="/radar" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
+
+            Radar
+
+          </a>
+
+          <a href="/versus" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
+
+            Versus
+
+          </a>
+
+          <a href="/awards" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
+
+            Awards
+
+          </a>
+
+          <a href="/deals" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
+
+            <span>Deals</span>
+
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+
+              Perks
+
+            </span>
+
+          </a>
+
           <a id="ht-nav-templates-link" href="/templates" class="hidden group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 items-center gap-1.5">
 
-            <span>Templates</span>
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
-              Store
-            </span>
-          </a>
-          <a href="/pricing-leaks" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
-            <span>Leaks</span>
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30">
-              New
-            </span>
-          </a>
-          <a href="/advisor" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
-            <span>Advisor</span>
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
-              AI
-            </span>
-          </a>
-          <a href="/calculator" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-            Calculator
-          </a>
-          <a href="/blog" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-            Guides
-          </a>
-        </nav>
-
-        <!-- Right: High-End Live Observatory Pill & Action Trigger -->
-        <div class="flex items-center gap-3">
-          <!-- Spotlight Quick Search Trigger (Ctrl+K / ⌘K) -->
-          <button
-            type="button"
-            data-spotlight-trigger
-            class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-500/40 text-xs font-mono text-slate-300 hover:text-white transition-all cursor-pointer shadow-sm group"
-            aria-label="Search software (Ctrl+K)"
-          >
-            <svg class="w-3.5 h-3.5 text-cyan-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            <span class="hidden lg:inline text-[11px] text-slate-300">Search</span>
-            <kbd class="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-slate-900 border border-slate-700/80 rounded text-slate-400 group-hover:text-cyan-300">⌘K</kbd>
-          </button>
-
-          <!-- Live Index Status (Discrete Pulse) -->
-          <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] font-mono text-slate-400">
-            <span class="relative flex h-1.5 w-1.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
-            </span>
-            <span class="tracking-wider">Index Active</span>
-          </div>
-
-          <!-- Marketplace User Account Nav Pill -->
+            <span>Templates</span>
+
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
+
+              Store
+
+            </span>
+
+          </a>
+
+          <a href="/pricing-leaks" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
+
+            <span>Leaks</span>
+
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30">
+
+              New
+
+            </span>
+
+          </a>
+
+          <a href="/advisor" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
+
+            <span>Advisor</span>
+
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
+
+              AI
+
+            </span>
+
+          </a>
+
+          <a href="/calculator" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
+
+            Calculator
+
+          </a>
+
+          <a href="/blog" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
+
+            Guides
+
+          </a>
+
+        </nav>
+
+        <!-- Right: High-End Live Observatory Pill & Action Trigger -->
+
+        <div class="flex items-center gap-3">
+
+          <!-- Spotlight Quick Search Trigger (Ctrl+K / ⌘K) -->
+
+          <button
+
+            type="button"
+
+            data-spotlight-trigger
+
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-500/40 text-xs font-mono text-slate-300 hover:text-white transition-all cursor-pointer shadow-sm group"
+
+            aria-label="Search software (Ctrl+K)"
+
+          >
+
+            <svg class="w-3.5 h-3.5 text-cyan-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+
+            </svg>
+
+            <span class="hidden lg:inline text-[11px] text-slate-300">Search</span>
+
+            <kbd class="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono bg-slate-900 border border-slate-700/80 rounded text-slate-400 group-hover:text-cyan-300">⌘K</kbd>
+
+          </button>
+
+          <!-- Live Index Status (Discrete Pulse) -->
+
+          <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] font-mono text-slate-400">
+
+            <span class="relative flex h-1.5 w-1.5">
+
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+
+            </span>
+
+            <span class="tracking-wider">Index Active</span>
+
+          </div>
+
+          <!-- Marketplace User Account Nav Pill -->
+
           <!-- Marketplace User Account Nav Pill (Stealth Hidden on Production) -->
           <div id="nav-user-account-container" class="hidden items-center gap-2">
 
-            <a 
-              id="nav-user-login-btn"
-              href="/login/" 
-              class="px-2.5 py-1 text-slate-400 hover:text-white text-xs font-mono font-medium transition-colors"
-            >
-              Connexion
-            </a>
-            <a 
-              id="nav-user-register-btn"
-              href="/register/" 
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/35 text-xs font-mono font-bold transition-all shadow-sm shadow-cyan-500/10"
-            >
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-              <span>S'inscrire</span>
-            </a>
-          </div>
-
-          <!-- Mobile Menu Toggle Button -->
-          <button
-            id="mobile-nav-toggle"
-            type="button"
-            class="md:hidden p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors"
-            aria-label="Toggle Navigation Menu"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path id="menu-icon-bars" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
-
-      <!-- Mobile Glass Dropdown Drawer -->
-      <div
-        id="mobile-nav-drawer"
-        class="hidden md:hidden mt-2 p-3 rounded-2xl backdrop-blur-2xl bg-[#08090d]/95 border border-white/[0.08] shadow-2xl flex flex-col gap-1 text-sm font-medium animate-in fade-in slide-in-from-top-2 duration-200"
-      >
-        <a href="/radar" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors">
-          SaaS Radar
-        </a>
-        <a href="/versus" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
-          <span>Versus Arena</span>
-          <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">1v1</span>
-        </a>
-        <a href="/awards" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
-          <span>Awards 2026</span>
-          <span class="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded-full border border-pink-500/20">Accredited</span>
-        </a>
-        <a href="/deals" class="px-3.5 py-2.5 rounded-xl text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-colors flex items-center justify-between">
-          <span>Exclusive Perks & Deals</span>
-          <span class="text-[10px] font-mono bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">Active</span>
-        </a>
+            <a 
+
+              id="nav-user-login-btn"
+
+              href="/login/" 
+
+              class="px-2.5 py-1 text-slate-400 hover:text-white text-xs font-mono font-medium transition-colors"
+
+            >
+
+              Connexion
+
+            </a>
+
+            <a 
+
+              id="nav-user-register-btn"
+
+              href="/register/" 
+
+              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/35 text-xs font-mono font-bold transition-all shadow-sm shadow-cyan-500/10"
+
+            >
+
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+
+              <span>S'inscrire</span>
+
+            </a>
+
+          </div>
+
+          <!-- Mobile Menu Toggle Button -->
+
+          <button
+
+            id="mobile-nav-toggle"
+
+            type="button"
+
+            class="md:hidden p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.06] transition-colors"
+
+            aria-label="Toggle Navigation Menu"
+
+          >
+
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+              <path id="menu-icon-bars" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+
+              <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+
+            </svg>
+
+          </button>
+
+        </div>
+
+      </header>
+
+      <!-- Mobile Glass Dropdown Drawer -->
+
+      <div
+
+        id="mobile-nav-drawer"
+
+        class="hidden md:hidden mt-2 p-3 rounded-2xl backdrop-blur-2xl bg-[#08090d]/95 border border-white/[0.08] shadow-2xl flex flex-col gap-1 text-sm font-medium animate-in fade-in slide-in-from-top-2 duration-200"
+
+      >
+
+        <a href="/radar" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors">
+
+          SaaS Radar
+
+        </a>
+
+        <a href="/versus" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
+
+          <span>Versus Arena</span>
+
+          <span class="text-[10px] font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">1v1</span>
+
+        </a>
+
+        <a href="/awards" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
+
+          <span>Awards 2026</span>
+
+          <span class="text-[10px] font-mono text-pink-400 bg-pink-500/10 px-2 py-0.5 rounded-full border border-pink-500/20">Accredited</span>
+
+        </a>
+
+        <a href="/deals" class="px-3.5 py-2.5 rounded-xl text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 transition-colors flex items-center justify-between">
+
+          <span>Exclusive Perks & Deals</span>
+
+          <span class="text-[10px] font-mono bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">Active</span>
+
+        </a>
+
         <!-- Stealth Cloaked Marketplace Links in Mobile Drawer -->
         <a id="ht-mobile-templates-link" href="/templates" class="hidden px-3.5 py-2.5 rounded-xl text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/10 transition-colors items-center justify-between">
 
-          <span>Templates &amp; Blueprints</span>
-          <span class="text-[10px] font-mono bg-cyan-500/20 px-2 py-0.5 rounded-full border border-cyan-500/30">Store</span>
-        </a>
+          <span>Templates &amp; Blueprints</span>
+
+          <span class="text-[10px] font-mono bg-cyan-500/20 px-2 py-0.5 rounded-full border border-cyan-500/30">Store</span>
+
+        </a>
+
         <a id="ht-mobile-dashboard-link" href="/dashboard/" class="hidden px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors items-center justify-between">
 
-          <span>Mon Espace Client</span>
-          <span class="text-[10px] font-mono text-cyan-400">Accès</span>
-        </a>
+          <span>Mon Espace Client</span>
+
+          <span class="text-[10px] font-mono text-cyan-400">Accès</span>
+
+        </a>
+
         <div id="ht-mobile-auth-container" class="hidden pt-2 border-t border-slate-800/80 items-center gap-2">
 
-          <a href="/login/" class="flex-1 text-center py-2 rounded-xl text-slate-300 hover:text-white bg-slate-900 border border-slate-800 text-xs font-mono">
-            Connexion
-          </a>
-          <a href="/register/" class="flex-1 text-center py-2 rounded-xl text-white bg-cyan-500/20 border border-cyan-500/40 text-xs font-mono font-bold">
-            ✦ S'inscrire
-          </a>
-        </div>
-        <a href="/pricing-leaks" class="px-3.5 py-2.5 rounded-xl text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 transition-colors flex items-center justify-between">
-          <span>Pricing Leaks & Rate Cards</span>
-          <span class="text-[10px] font-mono bg-rose-500/20 px-2 py-0.5 rounded-full border border-rose-500/30">Declassified</span>
-        </a>
-        <a href="/calculator" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
-          <span>TCO Calculator & Audit</span>
-          <span class="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/20">Free</span>
-        </a>
-        <a href="/blog" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors">
-          Editorial Guides
-        </a>
-      </div>
-    </div>
-
-    <!-- Main Dynamic Content -->
-    <main class="relative z-10 flex-grow">
-      <slot />
-    </main>
-
-    <!-- Ultra-Clean Cyber Dark Footer -->
-    <footer class="relative z-10 border-t border-slate-800 bg-[#030303]/90 backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div>
-          <div class="flex items-center gap-2 mb-2">
-            <span class="font-black text-sm tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
-            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">INDEPENDENT BENCHMARKS</span>
-          </div>
-          <p class="max-w-md text-slate-400 text-xs leading-relaxed">
-            Leading tech media and programmatic software observatory delivering rigorous benchmarks, hands-on masterclasses, and pricing forensics for modern enterprises.
-          </p>
-          <div class="flex flex-wrap items-center gap-3 mt-4 text-xs font-mono">
-            <a href="/radar" class="text-slate-400 hover:text-cyan-400 transition-colors">Radar</a>
-            <span class="text-slate-700">•</span>
-            <a href="/deals" class="text-slate-400 hover:text-emerald-400 transition-colors">SaaS Deals & Perks</a>
-            <span class="text-slate-700">•</span>
-            <a href="/pricing-leaks" class="text-slate-400 hover:text-rose-400 transition-colors">Pricing Leaks</a>
-            <span class="text-slate-700">•</span>
-            <a href="/calculator" class="text-slate-400 hover:text-cyan-400 transition-colors">TCO Calculator</a>
-            <span class="text-slate-700">•</span>
-            <a href="/versus" class="text-slate-400 hover:text-amber-400 transition-colors">Versus Arena</a>
-            <span class="text-slate-700">•</span>
-            <a href="/awards" class="text-slate-400 hover:text-pink-400 transition-colors">Awards 2026</a>
-            <span class="text-slate-700">•</span>
-            <a href="/blog" class="text-slate-400 hover:text-fuchsia-400 transition-colors">Blog & Guides</a>
-            <span class="text-slate-700">•</span>
-            <a href="/terms" class="text-slate-400 hover:text-cyan-400 transition-colors">Terms of Use</a>
-
-            <span class="text-slate-700">•</span>
-            <a href="/sponsor" class="text-cyan-400 hover:text-cyan-300 font-bold transition-colors">Sponsor & Advertise</a>
-            <span class="text-slate-700">•</span>
-            <a href="/media-kit" class="text-slate-400 hover:text-fuchsia-400 transition-colors">Media Kit</a>
-          </div>
-        </div>
-
-        <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-slate-800 pl-4 md:pl-0 md:pr-4">
-          <p class="font-mono text-cyan-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures</p>
-          <p class="text-[11px] leading-relaxed">
-            All benchmarks, technical teardowns, and performance assessments are independently evaluated by the HeliaTech research desk. Qualifying outbound partner links may yield performance-based royalties without altering user price.
-          </p>
-        </div>
-      </div>
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-500">
-        <span>© 2026 HELIATECH MEDIA — ALL RIGHTS RESERVED</span>
-        <span class="text-slate-400 font-mono">GLOBAL SOFTWARE BENCHMARK OBSERVATORY</span>
-      </div>
-    </footer>
-
-    <!-- Mobile Navigation Toggle Script -->
-    <script is:inline>
-      document.addEventListener('DOMContentLoaded', () => {
-        const toggle = document.getElementById('mobile-nav-toggle');
-        const drawer = document.getElementById('mobile-nav-drawer');
-        const iconBars = document.getElementById('menu-icon-bars');
-        const iconClose = document.getElementById('menu-icon-close');
-        if (toggle && drawer) {
-          toggle.addEventListener('click', () => {
-            const isHidden = drawer.classList.contains('hidden');
-            if (isHidden) {
-              drawer.classList.remove('hidden');
-              iconBars?.classList.add('hidden');
-              iconClose?.classList.remove('hidden');
-            } else {
-              drawer.classList.add('hidden');
-              iconBars?.classList.remove('hidden');
-              iconClose?.classList.add('hidden');
-            }
-          });
-        }
-      });
-    </script>
-
-    <!-- Cloudflare Web Analytics (Official Zero-Cookie Privacy-Preserving Telemetry) -->
-    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c3360d131e3241459e695ed9dd51a825"}'></script>
-    <!-- End Cloudflare Web Analytics -->
-    <SpotlightCommandPalette />
-    <LeadMagnetDrawer />
-
-    <!-- Reading Progress & Mouse-Follow Spotlight Runtime Core -->
-    <script is:inline>
-      (function() {
-        // 1. Reading Progress Bar
-        const bar = document.getElementById('scroll-progress-bar');
-        if (bar) {
-          window.addEventListener('scroll', function() {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            bar.style.width = Math.min(progress, 100) + '%';
-          }, { passive: true });
-        }
-
-        // 0. Stealth Nav Reveal for Localhost / Authorized Owner Only
+          <a href="/login/" class="flex-1 text-center py-2 rounded-xl text-slate-300 hover:text-white bg-slate-900 border border-slate-800 text-xs font-mono">
+
+            Connexion
+
+          </a>
+
+          <a href="/register/" class="flex-1 text-center py-2 rounded-xl text-white bg-cyan-500/20 border border-cyan-500/40 text-xs font-mono font-bold">
+
+            ✦ S'inscrire
+
+          </a>
+
+        </div>
+
+        <a href="/pricing-leaks" class="px-3.5 py-2.5 rounded-xl text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 transition-colors flex items-center justify-between">
+
+          <span>Pricing Leaks & Rate Cards</span>
+
+          <span class="text-[10px] font-mono bg-rose-500/20 px-2 py-0.5 rounded-full border border-rose-500/30">Declassified</span>
+
+        </a>
+
+        <a href="/calculator" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
+
+          <span>TCO Calculator & Audit</span>
+
+          <span class="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/20">Free</span>
+
+        </a>
+
+        <a href="/blog" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors">
+
+          Editorial Guides
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- Main Dynamic Content -->
+
+    <main class="relative z-10 flex-grow">
+
+      <slot />
+
+    </main>
+
+    <!-- Ultra-Clean Cyber Dark Footer -->
+
+    <footer class="relative z-10 border-t border-slate-800 bg-[#030303]/90 backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
+
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+
+        <div>
+
+          <div class="flex items-center gap-2 mb-2">
+
+            <span class="font-black text-sm tracking-widest text-white">HELIA<span class="text-cyan-400">TECH</span></span>
+
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">INDEPENDENT BENCHMARKS</span>
+
+          </div>
+
+          <p class="max-w-md text-slate-400 text-xs leading-relaxed">
+
+            Leading tech media and programmatic software observatory delivering rigorous benchmarks, hands-on masterclasses, and pricing forensics for modern enterprises.
+
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 mt-4 text-xs font-mono">
+
+            <a href="/radar" class="text-slate-400 hover:text-cyan-400 transition-colors">Radar</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/deals" class="text-slate-400 hover:text-emerald-400 transition-colors">SaaS Deals & Perks</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/pricing-leaks" class="text-slate-400 hover:text-rose-400 transition-colors">Pricing Leaks</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/calculator" class="text-slate-400 hover:text-cyan-400 transition-colors">TCO Calculator</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/versus" class="text-slate-400 hover:text-amber-400 transition-colors">Versus Arena</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/awards" class="text-slate-400 hover:text-pink-400 transition-colors">Awards 2026</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/blog" class="text-slate-400 hover:text-fuchsia-400 transition-colors">Blog & Guides</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/terms" class="text-slate-400 hover:text-cyan-400 transition-colors">Terms of Use</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/sponsor" class="text-cyan-400 hover:text-cyan-300 font-bold transition-colors">Sponsor & Advertise</a>
+
+            <span class="text-slate-700">•</span>
+
+            <a href="/media-kit" class="text-slate-400 hover:text-fuchsia-400 transition-colors">Media Kit</a>
+
+          </div>
+
+        </div>
+
+        <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-slate-800 pl-4 md:pl-0 md:pr-4">
+
+          <p class="font-mono text-cyan-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures</p>
+
+          <p class="text-[11px] leading-relaxed">
+
+            All benchmarks, technical teardowns, and performance assessments are independently evaluated by the HeliaTech research desk. Qualifying outbound partner links may yield performance-based royalties without altering user price.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-500">
+
+        <span>© 2026 HELIATECH MEDIA — ALL RIGHTS RESERVED</span>
+
+        <span class="text-slate-400 font-mono">GLOBAL SOFTWARE BENCHMARK OBSERVATORY</span>
+
+      </div>
+
+    </footer>
+
+    <!-- Mobile Navigation Toggle Script -->
+
+    <script is:inline>
+
+      document.addEventListener('DOMContentLoaded', () => {
+
+        const toggle = document.getElementById('mobile-nav-toggle');
+
+        const drawer = document.getElementById('mobile-nav-drawer');
+
+        const iconBars = document.getElementById('menu-icon-bars');
+
+        const iconClose = document.getElementById('menu-icon-close');
+
+        if (toggle && drawer) {
+
+          toggle.addEventListener('click', () => {
+
+            const isHidden = drawer.classList.contains('hidden');
+
+            if (isHidden) {
+
+              drawer.classList.remove('hidden');
+
+              iconBars?.classList.add('hidden');
+
+              iconClose?.classList.remove('hidden');
+
+            } else {
+
+              drawer.classList.add('hidden');
+
+              iconBars?.classList.remove('hidden');
+
+              iconClose?.classList.add('hidden');
+
+            }
+
+          });
+
+        }
+
+      });
+
+    </script>
+
+    <!-- Cloudflare Web Analytics (Official Zero-Cookie Privacy-Preserving Telemetry) -->
+
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c3360d131e3241459e695ed9dd51a825"}'></script>
+
+    <!-- End Cloudflare Web Analytics -->
+
+    <SpotlightCommandPalette />
+
+    <LeadMagnetDrawer />
+
+    <!-- Reading Progress & Mouse-Follow Spotlight Runtime Core -->
+
+    <script is:inline>
+
+      (function() {
+
+        // 1. Reading Progress Bar
+
+        const bar = document.getElementById('scroll-progress-bar');
+
+        if (bar) {
+
+          window.addEventListener('scroll', function() {
+
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+            bar.style.width = Math.min(progress, 100) + '%';
+
+          }, { passive: true });
+
+        }
+
+        // 0. Stealth Nav Reveal for Localhost ONLY (Never revealed on production)
         try {
           var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-          var isUnlocked = false;
-          try {
-            if (localStorage.getItem('_ht_stealth_preview') === 'unlocked') {
-              isUnlocked = true;
-            }
-          } catch(e) {}
 
-          if (isLocal || isUnlocked) {
+          if (isLocal) {
             var deskLink = document.getElementById('ht-nav-templates-link');
             if (deskLink) { deskLink.classList.remove('hidden'); deskLink.classList.add('flex'); }
 
@@ -621,28 +1018,51 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
           }
         } catch (e) {}
 
-
-        // 2. Linear-Style Mouse-Follow Radial Spotlight
-        if (window.matchMedia('(pointer: fine)').matches) {
-          document.addEventListener('mousemove', function(e) {
-            const cards = document.querySelectorAll('.spotlight-card');
-            cards.forEach(card => {
-              const rect = card.getBoundingClientRect();
-              if (
-                e.clientX >= rect.left - 100 &&
-                e.clientX <= rect.right + 100 &&
-                e.clientY >= rect.top - 100 &&
-                e.clientY <= rect.bottom + 100
-              ) {
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', x + 'px');
-                card.style.setProperty('--mouse-y', y + 'px');
-              }
-            });
-          }, { passive: true });
-        }
-      })();
-    </script>
-  </body>
-</html>
+        // 2. Linear-Style Mouse-Follow Radial Spotlight
+
+        if (window.matchMedia('(pointer: fine)').matches) {
+
+          document.addEventListener('mousemove', function(e) {
+
+            const cards = document.querySelectorAll('.spotlight-card');
+
+            cards.forEach(card => {
+
+              const rect = card.getBoundingClientRect();
+
+              if (
+
+                e.clientX >= rect.left - 100 &&
+
+                e.clientX <= rect.right + 100 &&
+
+                e.clientY >= rect.top - 100 &&
+
+                e.clientY <= rect.bottom + 100
+
+              ) {
+
+                const x = e.clientX - rect.left;
+
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', x + 'px');
+
+                card.style.setProperty('--mouse-y', y + 'px');
+
+              }
+
+            });
+
+          }, { passive: true });
+
+        }
+
+      })();
+
+    </script>
+
+  </body>
+
+</html>
+
