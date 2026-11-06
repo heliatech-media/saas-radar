@@ -12,7 +12,7 @@ tags:
 - Automation & No-Code
 readingTime: 12 MIN
 tool_slug: make
-image: /images/blog/best-zapier-alternatives-2026.svg
+image: /images/blog/make.svg
 tldr:
 - Zapier's linear task-based pricing model heavily penalizes high-volume scaling,
   making multi-branch orchestration economically unsustainable.

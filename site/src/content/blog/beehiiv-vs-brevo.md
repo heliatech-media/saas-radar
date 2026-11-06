@@ -21,7 +21,7 @@ tldr:
   an edge when executing complex SMS, WhatsApp, and lifecycle automation workflows.
 - Economic scaling breakdown reveals up to 70% cost variation between both platforms
   at scale depending on send volume versus subscriber footprint.
-image: /images/blog/beehiiv-vs-brevo.svg
+image: /images/blog/beehiiv.svg
 ---
 # Beehiiv vs Brevo: Newsletter Monetization vs Multi-Channel CRM
 

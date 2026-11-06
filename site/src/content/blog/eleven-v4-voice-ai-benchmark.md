@@ -32,7 +32,7 @@ affiliate_cta:
     and instant voice cloning on the official ElevenLabs platform.
   button_text: Launch Eleven v4 on ElevenLabs ➔
   url: /go/elevenlabs
-image: /images/blog/eleven-v4-voice-ai-benchmark.svg
+image: /images/blog/elevenlabs.svg
 ---
 The transition from conventional Text-to-Speech (TTS) to real-time generative audio entered a decisive new era with the launch of **[ElevenLabs](/reviews/elevenlabs) Eleven v4**. 
 

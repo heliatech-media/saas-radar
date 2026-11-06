@@ -22,7 +22,7 @@ tldr:
   optimization.
 - Economic scaling breakdown reveals up to 70% cost variation between both platforms
   at scale due to differing consumption-metering mechanics.
-image: /images/blog/make-vs-zapier.svg
+image: /images/blog/make.svg
 ---
 # Duel: Make vs Zapier: The 2026 Enterprise Automation Teardown
 
