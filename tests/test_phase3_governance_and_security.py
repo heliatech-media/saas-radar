@@ -173,6 +173,30 @@ class TestPhase3SecurityAndGovernance(unittest.TestCase):
         with self.assertRaises(PermissionError):
             self.client.execute("DROP TABLE d1_usage_audit_log")
 
+    def test_signed_checkpoint_creation_and_tampering_detection(self):
+        """P1: Signed checkpoints with R2 Bucket Lock must detect any historical rewrite or tampering."""
+        # 1. Create a valid signed checkpoint
+        chk = self.client.create_signed_checkpoint("owner@heliatech.online")
+        self.assertIn("checkpoint_id", chk)
+        self.assertIn("signature", chk)
+        self.assertTrue(chk["bucket_lock"]["active"])
+        self.assertEqual(chk["bucket_lock"]["prefix"], "audit_checkpoints/")
+
+        # 2. Verify signature on authentic checkpoint
+        is_valid, msg = self.client.verify_signed_checkpoint(chk)
+        self.assertTrue(is_valid, f"Authentic checkpoint should verify: {msg}")
+
+        # 3. Simulate attacker modifying head_hash to cover track
+        tampered_chk = dict(chk)
+        tampered_chk["head_hash"] = "deadbeef" * 8
+        is_valid_t, msg_t = self.client.verify_signed_checkpoint(tampered_chk)
+        self.assertFalse(is_valid_t, "Tampered head_hash must be rejected!")
+        self.assertIn("Signature HMAC invalide", msg_t)
+
+        # 4. Assert immutability of checkpoints table
+        with self.assertRaises(PermissionError):
+            self.client.execute(f"DELETE FROM d1_audit_checkpoints WHERE checkpoint_id = '{chk['checkpoint_id']}'")
+
     def test_d1_audit_export_to_r2(self):
         """Reservation 1: D1 audit log must export to R2 with retention and versioning manifest."""
         manifest = self.client.export_audit_to_r2(retention_days=365, version="v1.0.0")

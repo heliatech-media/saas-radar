@@ -1,5 +1,26 @@
 [
   {
+    "timestamp": "2026-11-06 21:37:12",
+    "title": "[ALERTE CRITIQUE] INTÉGRITÉ D'AUDIT COMPROMISE",
+    "category": "CRITICAL",
+    "message": "ALERTE SÉCURITÉ SENTINEL — RUPTURE D'INTÉGRITÉ DÉTECTÉE\n\nDate : 2026-11-06 20:37:12 UTC\nAnomalie : Test simulé de falsification de base de données d1_usage_audit_log\n\nDétails Techniques :\n• Séquence : 42\n• Checkpoint R2 : sim_chk_001\n• Empreinte R2 attendue : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...\n• Empreinte D1 constatée : bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb...\n\nAction requise : Geler les déploiements, inspecter Cloudflare Zero Trust et vérifier les accès D1.",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-06 21:36:54",
+    "title": "[ALERTE CRITIQUE] INTÉGRITÉ D'AUDIT COMPROMISE",
+    "category": "CRITICAL",
+    "message": "ALERTE SÉCURITÉ SENTINEL — RUPTURE D'INTÉGRITÉ DÉTECTÉE\n\nDate : 2026-11-06 20:36:54 UTC\nAnomalie : Test simulé de falsification de base de données d1_usage_audit_log\n\nDétails Techniques :\n• Séquence : 42\n• Checkpoint R2 : sim_chk_001\n• Empreinte R2 attendue : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...\n• Empreinte D1 constatée : bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb...\n\nAction requise : Geler les déploiements, inspecter Cloudflare Zero Trust et vérifier les accès D1.",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-06 21:36:33",
+    "title": "🚨 [ALERTE CRITIQUE] INTÉGRITÉ D'AUDIT COMPROMISE",
+    "category": "CRITICAL",
+    "message": "⚠️ **ALERTE SÉCURITÉ SENTINEL — RUPTURE D'INTÉGRITÉ DÉTECTÉE**\n\n📅 **Date :** 2026-11-06 20:36:33 UTC\n❌ **Anomalie :** Test simulé de falsification de base de données d1_usage_audit_log\n\n🔍 **Détails Techniques :**\n• Séquence : `42`\n• Checkpoint R2 : `sim_chk_001`\n• Empreinte R2 attendue : `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`\n• Empreinte D1 constatée : `bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb`\n\n🛡️ **Action immédiate recommandée :**\nGeler les déploiements, inspecter les journaux Cloudflare Zero Trust et vérifier les accès D1 directs.",
+    "link": null
+  },
+  {
     "timestamp": "2026-11-06 15:37:24",
     "title": "Cycle Autonome #Beehiiv",
     "category": "CYCLE",
@@ -327,26 +348,5 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-11-04 13:32:54",
-    "title": "Cycle Autonome #Sanity",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Sanity et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-04 13:31:35",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-04 12:23:20",
-    "title": "Cycle Autonome #Resend",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Resend et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

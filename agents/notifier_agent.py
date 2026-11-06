@@ -63,6 +63,10 @@ class NotifierAgent:
                     "parse_mode": "Markdown"
                 }
                 res = requests.post(tg_url, json=payload, timeout=8)
+                if res.status_code != 200 and "parse entities" in res.text:
+                    payload.pop("parse_mode", None)
+                    res = requests.post(tg_url, json=payload, timeout=8)
+
                 if res.status_code == 200:
                     logger.info("✅ Telegram alert successfully delivered to founder.")
                     sent_anywhere = True

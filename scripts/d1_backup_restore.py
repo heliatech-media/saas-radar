@@ -50,6 +50,7 @@ TABLES_TO_BACKUP = [
     "owner_approvals",
     "sentinel_audit_logs",
     "d1_usage_audit_log",
+    "d1_audit_checkpoints",
     "newsletter_editions",
     "newsletter_dispatches",
     "deals_registry",

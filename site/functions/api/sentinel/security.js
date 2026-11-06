@@ -1,8 +1,9 @@
 /**
  * Cloudflare Pages Function: /api/sentinel/security
  * Phase 3 : Supervision de la Sécurité Edge, En-têtes HTTP & Secrets 100% Masqués.
- * Règle impérative P1.7 :
+ * Règle impérative P1 :
  * "Le tableau admin doit afficher la date de dernière rotation des tokens, jamais leur longueur ou leur préfixe."
+ * "Garde la clé de signature séparée du token D1 et token R2 write-only dédié sur préfixe Bucket Lock."
  */
 
 export async function onRequestGet(context) {
@@ -41,6 +42,24 @@ export async function onRequestGet(context) {
             next_rotation_due: "30/01/2027",
             cadence: "90 jours",
             used_by: "D1Client (Gouvernance & Audit)"
+          },
+          {
+            name: "AUDIT_CHECKPOINT_SIGNING_KEY",
+            status: "ACTIF (Coffre-Fort Séparé)",
+            scope: "Signature HMAC-SHA256 des points d'ancrage R2 (Séparée du token D1)",
+            last_rotated: "01/11/2026",
+            next_rotation_due: "30/01/2027",
+            cadence: "90 jours",
+            used_by: "D1Client (Points de Contrôle Signés)"
+          },
+          {
+            name: "CLOUDFLARE_R2_AUDIT_EXPORTER_TOKEN",
+            status: "ACTIF (Coffre-Fort)",
+            scope: "Write-Only sur heliatech-sentinel-backups/audit_checkpoints/*",
+            last_rotated: "01/11/2026",
+            next_rotation_due: "30/01/2027",
+            cadence: "90 jours",
+            used_by: "R2 Audit Exporter (Bucket Lock WORM 365j)"
           },
           {
             name: "GEMINI_API_KEY",

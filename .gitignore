@@ -17,6 +17,7 @@ data/*.sqlite3
 data/backups/
 data/*.jsonl
 data/d1_usage_journal.*
+data/audit_*.json
 *.db-wal
 *.db-shm
 .venv/
