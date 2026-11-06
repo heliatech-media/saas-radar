@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: perplexity-enterprise
 image: /images/blog/perplexity-enterprise.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Perplexity Enterprise Account ➔
   url: /go/perplexity-enterprise
 ---
-
 # Perplexity Enterprise: The End of Search and the Dawn of the Answer Engine for High-Stakes Teams
 
 F**or decades, the search bar was a slot machine.** You entered a keyword, pulled the lever, and prayed the first page of Google wasn't a minefield of SEO-optimized blog spam and sponsored distractions. For the modern knowledge worker, this "search and rescue" mission for data consumed up to 20% of the workweek. But the paradigm has shifted. We have moved past the era of the "Search Engine" and entered the era of the "Answer Engine."

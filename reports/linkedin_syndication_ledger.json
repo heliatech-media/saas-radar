@@ -286,7 +286,28 @@
       "title": "Bannerbear: The Death of Manual Design and the API-First Blueprint for Scalable Visual Assets",
       "tool_slug": "bannerbear",
       "canonical_url": "https://heliatech.online/blog/bannerbear-evolution-guide-2026"
+    },
+    "axiom-ai-evolution-guide-2026": {
+      "published_at": "2026-11-06T03:42:59.405924",
+      "share_urn": "urn:li:share:7524315368329228289",
+      "title": "Axiom.ai: Conquering the Last-Mile of Web Automation Without Writing Code",
+      "tool_slug": "axiom-ai",
+      "canonical_url": "https://heliatech.online/blog/axiom-ai-evolution-guide-2026"
+    },
+    "clay-evolution-guide-2026": {
+      "published_at": "2026-11-06T06:55:05.126814",
+      "share_urn": "urn:li:share:7524363710631608321",
+      "title": "Clay: The Death of Manual Prospecting and the Rise of the Data-Driven Outbound Engine",
+      "tool_slug": "clay",
+      "canonical_url": "https://heliatech.online/blog/clay-evolution-guide-2026"
+    },
+    "gamma-app-evolution-guide-2026": {
+      "published_at": "2026-11-06T09:52:47.444485",
+      "share_urn": "urn:li:share:7524408431441547264",
+      "title": "Gamma: The Death of the Slide and the Rise of the Generative Workspace",
+      "tool_slug": "gamma-app",
+      "canonical_url": "https://heliatech.online/blog/gamma-app-evolution-guide-2026"
     }
   },
-  "last_publish": "2026-11-06T00:37:57.639124"
+  "last_publish": "2026-11-06T09:52:47.444498"
 }

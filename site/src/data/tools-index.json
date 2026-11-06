@@ -143,13 +143,12 @@
   {
     "name": "Descript",
     "slug": "descript",
-    "tagline": "The all-in-one video and podcast editing software that treats your media like a text document.",
+    "tagline": "The all-in-one audio and video editor that works like a word processor.",
     "category": "Audio/Podcasting",
     "rating": 4.6,
     "starting_price": "$12/mo",
-    "best_for": "Podcasters, content creators, internal communications teams, and video editors looking to speed up rough cuts.",
-    "affiliate_url": "https://descript.grsm.io/heliatech",
-    "commission_rate": "15% recurring for up to 12 months"
+    "best_for": "Podcasters, content marketers, educators, and remote video production teams",
+    "affiliate_url": "https://descript.grsm.io/heliatech"
   },
   {
     "name": "Dumpling AI",
@@ -462,7 +461,8 @@
     "rating": 4.7,
     "starting_price": "$20/mo",
     "best_for": "Market researchers, product managers, engineers, and executive teams requiring fast, verified insights.",
-    "affiliate_url": "https://www.perplexity.ai"
+    "affiliate_url": "https://www.perplexity.ai/?via=heliatech",
+    "commission_rate": "Not publicly disclosed / Enterprise custom pricing"
   },
   {
     "name": "PhantomBuster",
@@ -697,7 +697,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "B2B sales teams, high-volume recruiters, and customer success managers who need to qualify leads at scale without losing the human touch.",
-    "affiliate_url": "https://www.videoask.com"
+    "affiliate_url": "https://www.videoask.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Voiceflow",
@@ -707,8 +708,8 @@
     "rating": 4.8,
     "starting_price": "$19/mo",
     "best_for": "Growth-stage startups, modern remote agencies, and tech-forward teams looking to optimize operations.",
-    "affiliate_url": "https://www.voiceflow.com",
-    "commission_rate": "20% recurring"
+    "affiliate_url": "https://voiceflow.grsm.io/heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
   },
   {
     "name": "WATI",
@@ -729,7 +730,7 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "UI/UX designers, marketing agencies, and scaling tech companies needing bespoke web experiences",
-    "affiliate_url": "https://webflow.com",
+    "affiliate_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
     "commission_rate": "50% recurring for the first year"
   },
   {

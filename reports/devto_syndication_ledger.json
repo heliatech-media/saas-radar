@@ -671,6 +671,37 @@
         "saas",
         "automation"
       ]
+    },
+    "axiom-ai-evolution-guide-2026": {
+      "id": 4985669,
+      "url": "https://dev.to/heliatech/axiomai-conquering-the-last-mile-of-web-automation-without-writing-code-5h23",
+      "title": "Axiom.ai: Conquering the Last-Mile of Web Automation Without Writing Code",
+      "canonical_url": "https://heliatech.online/blog/axiom-ai-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "axiomai",
+        "productivity",
+        "saas",
+        "automation"
+      ]
+    },
+    "gamma-app-evolution-guide-2026": {
+      "id": "already_published",
+      "url": "https://dev.to/gamma-app-evolution-guide-2026",
+      "canonical_url": "https://heliatech.online/blog/gamma-app-evolution-guide-2026",
+      "status": "already_published"
+    },
+    "guidde-evolution-guide-2026": {
+      "id": "already_published",
+      "url": "https://dev.to/guidde-evolution-guide-2026",
+      "canonical_url": "https://heliatech.online/blog/guidde-evolution-guide-2026",
+      "status": "already_published"
+    },
+    "instantly-ai-evolution-guide-2026": {
+      "id": "already_published",
+      "url": "https://dev.to/instantly-ai-evolution-guide-2026",
+      "canonical_url": "https://heliatech.online/blog/instantly-ai-evolution-guide-2026",
+      "status": "already_published"
     }
   },
   "last_sync": null

@@ -5,7 +5,7 @@ tagline: The fastest way to collect, manage, and share social proof.
 category: Marketing Automation & Social Proof
 rating: 4.8
 website_url: https://senja.io
-affiliate_url: https://senja.io
+affiliate_url: "https://senja.io/?via=heliatech"
 summary: Senja is an all-in-one social proof platform designed to automate the collection
   of text and video testimonials. It provides a centralized dashboard to manage reviews
   from multiple sources and offers high-performance widgets to display them across

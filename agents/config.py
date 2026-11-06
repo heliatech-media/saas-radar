@@ -128,7 +128,7 @@ AFFILIATE_MAP = {
     "podia": "https://www.podia.com/?via=heliatech",
     "printify": "https://printify.pxf.io/c/heliatech",
     "retool": "https://retool.com/?fpr=heliatech",
-    "rewardful": "https://www.rewardful.com/?via=heliatech",
+    "rewardful": "https://www.rewardful.com/?via=heliatech/?via=heliatech",
     "tweethunter": "https://tweethunter.io/?via=helia",
     "riverside-fm": "https://riverside.fm/?via=heliatech",
     "transistor-fm": "https://transistor.fm/?via=heliatech",
@@ -138,9 +138,9 @@ AFFILIATE_MAP = {
     "typeform": "https://typeform.grsm.io/heliatech",
     "vercel": "https://vercel.com/?via=heliatech",
     "jasper-ai": "https://partnerstack.com/jasper?via=heliatech",
-    "voiceflow": "https://www.voiceflow.com",
+    "voiceflow": "https://voiceflow.grsm.io/heliatech",
     "wati": "https://www.wati.io/?fp_ref=heliatech",
-    "webflow": "https://webflow.com",
+    "webflow": "https://webflow.pxf.io/c/4923491/1231885/15172",
     "zapier": "https://zapier.com/app/register?via=heliatech",
     "transistor": "https://transistor.fm/?via=heliatech",
     "podcastle": "https://podcastle.ai/?via=heliatech",
@@ -173,7 +173,10 @@ AFFILIATE_MAP = {
     "bannerbear": "https://www.bannerbear.com/?via=heliatech",
     "axiom-ai": "https://axiom.ai/?via=heliatech",
     "munch": "https://www.getmunch.com/?via=heliatech",
-    "rask-ai": "https://rask.ai/?via=heliatech"
+    "rask-ai": "https://rask.ai/?via=heliatech",
+    "perplexity-enterprise": "https://www.perplexity.ai/?via=heliatech",
+    "senja": "https://senja.io/?via=heliatech",
+    "videoask": "https://www.videoask.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
