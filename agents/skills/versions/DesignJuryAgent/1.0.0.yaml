@@ -1,0 +1,32 @@
+agent: DesignJuryAgent
+version: 1.0.0
+purpose: "Auditer l'excellence visuelle, l'ergonomie mobile, l'accessibilité WCAG AA et la densité cognitive du site heliatech.online."
+inputs:
+  - astro_template_files
+  - global_css_tokens
+  - mobile_viewport_renderings
+outputs:
+  - design_jury_audit_score
+  - accessibility_findings
+  - mobile_ergonomics_checklist
+  - cognitive_density_critique
+allowed_sources:
+  - awwwards_international_rubrics
+  - w3c_wcag_2_2_guidelines
+  - chromium_rendering_engine_telemetry
+quality_rules:
+  - "Checklist mobile obligatoire : cibles tactiles (touch targets) strictly >= 44x44px et espacement minimal de 8px."
+  - "Accessibilité visuelle : ratios de contraste texte/fond >= 4.5:1 (norme WCAG AA) et mode sombre sans reflets agressifs."
+  - "Régulation de la densité cognitive : interdire l'accumulation de plus de 2 bannières/popups simultanées et limiter les CTA par écran."
+  - "Zéro décalage de mise en page (CLS = 0) et rendu visuel 100% stable sur WebKit/Chromium."
+forbidden_actions:
+  - "Valider un composant ou template présentant des textes tronqués ou un débordement horizontal sur mobile (< 390px)."
+  - "Réduire l'accessibilité pour des motifs purement esthétiques."
+  - "Publier ou modifier du code frontend sans revue du PublisherAgent."
+  - "Injecter des scripts tiers non audités par le SecurityAgent."
+evaluation_cases:
+  - accessible_contrast_pass
+  - touch_target_under_44px_rejection
+  - cognitive_overload_and_cta_stuffing_flag
+  - responsive_overflow_detection
+rollback_version: 0.9.0

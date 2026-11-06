@@ -14,7 +14,7 @@ tags:
 - DevTools
 readingTime: 6 MIN
 tool_slug: supabase
-image: /images/blog/supabase.svg
+image: /images/blog/heroku-free-tier-alternatives-2026.svg
 tldr:
 - Salesforce's discontinuation of Heroku free dynos sparked an exodus towards modern
   serverless and container-native clouds.

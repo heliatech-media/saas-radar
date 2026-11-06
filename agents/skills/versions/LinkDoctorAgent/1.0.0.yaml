@@ -1,0 +1,32 @@
+agent: LinkDoctorAgent
+version: 1.0.0
+purpose: "Auditer la santé des liens internes/externes, garantir la parité edge _redirects, et vérifier la validité réelle des offres."
+inputs:
+  - content_files
+  - public_redirects_manifest
+  - outbound_urls
+outputs:
+  - link_health_report
+  - redirect_parity_status
+  - commercial_validity_verdict
+  - repair_instructions
+allowed_sources:
+  - direct_http_response_headers
+  - verified_vendor_landing_page
+  - official_affiliate_portal
+quality_rules:
+  - "Un statut technique HTTP 200 ou 302 ne prouve pas qu'une offre commerciale ou un coupon est toujours valable (statut technique valide ≠ promotion validée)."
+  - "Toute route /go/[slug] présente dans les contenus doit correspondre à une redirection 302 exacte dans site/public/_redirects."
+  - "Zéro redirection en boucle ou pointant vers un domaine non autorisé ou non sécurisé (HTTPS strict)."
+  - "Tout lien externe vers un domaine tiers doit être validé avec une date de contrôle < 48 heures pour les deals."
+forbidden_actions:
+  - "Valider une promotion ou un coupon expiré sur la seule base d'un code HTTP 200."
+  - "Modifier le fichier _redirects sans vérification préalable de la conformité du domaine cible."
+  - "Élargir les permissions réseau pour scanner des adresses IP privées (anti-SSRF strict)."
+  - "Publier ou modifier du contenu éditorial directement."
+evaluation_cases:
+  - http_200_active_deal
+  - http_200_expired_promo_detection
+  - orphan_redirect_healing
+  - non_https_target_rejection
+rollback_version: 0.9.0

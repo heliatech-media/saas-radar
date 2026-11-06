@@ -64,14 +64,11 @@ La divergence fondamentale entre Make et Zapier réside dans leur mode d'exécut
 ### Zapier : Le pipeline séquentiel
 Zapier fonctionne selon un paradigme strictement linéaire. Un "Zap" est fondamentalement une file d'attente séquentielle : **Déclencheur $\rightarrow$ Action 1 $\rightarrow$ Action 2 $\rightarrow$ Action *N***.
 
-```
-[ Déclencheur : Nouveau lead CRM ] 
-              ↓
-[ Action 1 : Enrichissement des données ] 
-              ↓
-[ Action 2 : Alerte Slack ] 
-              ↓
-[ Action 3 : Mise à jour de la BDD ]
+```mermaid
+flowchart TD
+    A[Déclencheur : Nouveau lead CRM] --> B[Action 1 : Enrichissement des données]
+    B --> C[Action 2 : Alerte Slack Ops]
+    C --> D[Action 3 : Mise à jour PostgreSQL]
 ```
 
 *   **Le goulet d'étranglement architectural :** Bien que Zapier ait introduit des chemins (paths) et des sous-étapes, le traitement de données nécessitant une logique conditionnelle complexe, des boucles ou l'agrégation de payloads JSON hétérogènes entraîne des acrobaties structurelles. Si vous devez évaluer un tableau de 50 lignes d'une facture e-commerce, appliquer des remises conditionnelles à chacune et les écrire dans des tables relationnelles distinctes, un pipeline Zapier linéaire devient lourd, difficile à déboguer et enclin à casser sur les cas limites.
@@ -80,10 +77,12 @@ Zapier fonctionne selon un paradigme strictement linéaire. Un "Zap" est fondame
 ### Make : Le canevas nodal visuel (DAG)
 Make utilise un canevas de type Graphe Orienté Acyclic (DAG). Les workflows sont cartographiés spatialement, permettant aux données de circuler simultanément à travers des nœuds de routage complexes, des agrégateurs, des filtres et des itérateurs.
 
-```
-                         ┌─→ [ Branche A : CRM Entreprise ]
-[ Déclencheur : Webhook ] ┼─→ [ Branche B : Moteur de facturation ]
-                         └─→ [ Branche C : BDD Analytics ]
+```mermaid
+flowchart LR
+    A[Déclencheur : Webhook Ingestion] --> B{Routeur Nodal Make}
+    B -->|Branche A| C[CRM Entreprise]
+    B -->|Branche B| D[Moteur de facturation]
+    B -->|Branche C| E[Base de Données Analytics]
 ```
 
 *   **Le triomphe architectural :** Make traite les données sous forme de "paquets" (bundles) circulant dans les chemins d'exécution. Vous pouvez ingérer un payload JSON profondément imbriqué et le manipuler avec une précision chirurgicale sans saturer la mémoire.

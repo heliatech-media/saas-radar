@@ -15,7 +15,7 @@ tags:
 - 2026 Benchmarks
 readingTime: 5 MIN
 tool_slug: brevo
-image: /images/blog/brevo.svg
+image: /images/blog/salesforce-agentforce.svg
 tldr:
 - Forensic verification confirms unannounced 2026 contract updates that penalize scaling
   enterprises with exponential overage fees.

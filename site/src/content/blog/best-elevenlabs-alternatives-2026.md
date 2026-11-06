@@ -13,7 +13,7 @@ tags:
 - AI Voice & Audio Infrastructure
 readingTime: 11 MIN
 tool_slug: heygen
-image: /images/blog/heygen.svg
+image: /images/blog/best-elevenlabs-alternatives-2026.svg
 tldr:
 - ElevenLabs faces severe churn in 2026 due to aggressive credit throttling, opaque
   payload limits, and a lack of native 4K video avatar pipelines.

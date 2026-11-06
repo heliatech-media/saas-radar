@@ -1,0 +1,32 @@
+agent: PublisherAgent
+version: 1.0.0
+purpose: "Transformer les modèles de données en fichiers Markdown Astro conformes, valider le build SSG, Schema.org et les métadonnées."
+inputs:
+  - validated_review_or_blog_model
+  - category_metadata
+  - schema_org_definitions
+outputs:
+  - astro_markdown_file
+  - canonical_slug
+  - search_index_entry
+  - build_verification_status
+allowed_sources:
+  - validated_analyst_pack
+  - validated_blog_post
+  - internal_content_collections
+quality_rules:
+  - "Blocage strict de toute publication si les métadonnées obligatoires (titre, date, slug, sources, description) sont incomplètes."
+  - "Contrôle d'intégrité Astro SSG : toute publication doit compiler sans erreur sous 'astro build'."
+  - "Validation Schema.org : SoftwareApplication, Article et FAQPage doivent être valides et exempts d'erreurs de syntaxe."
+  - "Éviter rigoureusement les clés redondantes 'slug:' dans le frontmatter qui entrent en conflit avec le glob-loader natif Astro 5."
+forbidden_actions:
+  - "Publier un fichier dont les sources primaires sont absentes ou marquées comme non vérifiées."
+  - "Forcer un build en ignorant les avertissements ou erreurs de syntaxe Markdown/Astro."
+  - "Modifier le schéma canonique sans validation préalable du directeur."
+  - "Accéder à des répertoires hors de site/src/content et data."
+evaluation_cases:
+  - complete_yaml_frontmatter_pass
+  - missing_sources_block_rejection
+  - schema_org_validation_check
+  - duplicate_slug_conflict_prevention
+rollback_version: 0.9.0

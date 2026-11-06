@@ -111,12 +111,16 @@ const clusters = [
 
             <!-- Featured Hero Artwork Preview -->
             <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950/80 shadow-2xl relative">
-              <img 
-                src={featuredPost.data.image || `/images/blog/${featuredPost.data.tool_slug || featuredPost.slug}.svg`} 
-                alt={`${featuredPost.data.title} hero artwork`}
-                class="w-full h-auto aspect-[1200/630] object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="eager"
-              />
+              <picture>
+                <source srcset={featuredPost.data.image || `/images/blog/${featuredPost.data.tool_slug || featuredPost.slug}.svg`} type="image/svg+xml" />
+                <img 
+                  src={(featuredPost.data.image || `/images/blog/${featuredPost.data.tool_slug || featuredPost.slug}.svg`).replace(/\.svg$/, '.png')} 
+                  alt={`${featuredPost.data.title} hero artwork`}
+                  class="w-full h-auto aspect-[1200/630] object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="eager"
+                  onerror="this.onerror=null; this.src='/images/blog/cursor.png';"
+                />
+              </picture>
             </div>
           </div>
         </a>
@@ -206,12 +210,16 @@ const clusters = [
           <div>
             <!-- Card Hero Visual Thumbnail -->
             <div class="w-full aspect-[1200/630] bg-slate-950/80 overflow-hidden border-b border-slate-800/80 relative">
-              <img 
-                src={post.data.image || `/images/blog/${post.data.tool_slug || post.slug}.svg`} 
-                alt={`${post.data.title} thumbnail`}
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset={post.data.image || `/images/blog/${post.data.tool_slug || post.slug}.svg`} type="image/svg+xml" />
+                <img 
+                  src={(post.data.image || `/images/blog/${post.data.tool_slug || post.slug}.svg`).replace(/\.svg$/, '.png')} 
+                  alt={`${post.data.title} thumbnail`}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='/images/blog/cursor.png';"
+                />
+              </picture>
               <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
                 <span class="px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-cyan-300 border border-cyan-500/30 text-[10px] font-mono font-semibold">
                   {post.data.category}

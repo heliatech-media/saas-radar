@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070B"/>
+      <stop offset="60%" stop-color="#080C14"/>
+      <stop offset="100%" stop-color="#14090E"/>
+    </linearGradient>
+    <linearGradient id="glow-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.7" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Ambient Warning Lighting -->
+  <circle cx="280" cy="260" r="340" fill="url(#glow-amber)"/>
+  <circle cx="940" cy="380" r="300" fill="url(#glow-rose)"/>
+
+  <!-- Top Accreditation Pill -->
+  <g transform="translate(600, 95)">
+    <rect x="-210" y="-18" width="420" height="36" rx="18" fill="#0B101B" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.6"/>
+    <circle cx="-180" cy="0" r="4" fill="#fbbf24"/>
+    <text x="-160" y="5" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#fbbf24" letter-spacing="2">BREAKING INVESTIGATION • RATE CARD LEAK</text>
+  </g>
+
+  <!-- Central Intelligence Card -->
+  <g transform="translate(600, 280)">
+    <rect x="-480" y="-115" width="960" height="230" rx="20" fill="#0B101B" fill-opacity="0.9" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"/>
+    
+    <text x="0" y="-45" font-family="'Space Grotesk', system-ui, sans-serif" font-size="16" font-weight="700" fill="#fb7185" text-anchor="middle" letter-spacing="3.5">CONVERSATIONAL AI BILLING FORENSICS</text>
+    <text x="0" y="15" font-family="'Space Grotesk', system-ui, sans-serif" font-size="44" font-weight="800" fill="#F8FAFC" text-anchor="middle">SALESFORCE AGENTFORCE</text>
+    <text x="0" y="60" font-family="'Inter', sans-serif" font-size="15" font-weight="400" fill="#94A3B8" text-anchor="middle">The $2.00 / Conversation Billing Trap • Hidden API Overhead • TCO Shock</text>
+  </g>
+
+  <!-- Bottom Metric Pods -->
+  <g transform="translate(240, 480)">
+    <rect x="0" y="0" width="220" height="68" rx="12" fill="#05070B" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
+    <text x="110" y="28" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#fb7185" text-anchor="middle">$2.00 / CONV</text>
+    <text x="110" y="48" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B" text-anchor="middle">Base Conversation Rate</text>
+  </g>
+
+  <g transform="translate(490, 480)">
+    <rect x="0" y="0" width="220" height="68" rx="12" fill="#05070B" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
+    <text x="110" y="28" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#fbbf24" text-anchor="middle">ATLAS ENGINE</text>
+    <text x="110" y="48" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B" text-anchor="middle">Reasoning &amp; Execution Unit</text>
+  </g>
+
+  <g transform="translate(740, 480)">
+    <rect x="0" y="0" width="220" height="68" rx="12" fill="#05070B" stroke="#ffffff" stroke-width="1" stroke-opacity="0.08"/>
+    <text x="110" y="28" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#38bdf8" text-anchor="middle">+340% SURCHARGE</text>
+    <text x="110" y="48" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748B" text-anchor="middle">vs Decoupled LLM Stack</text>
+  </g>
+</svg>

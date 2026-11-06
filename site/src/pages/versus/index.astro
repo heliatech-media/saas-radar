@@ -26,14 +26,16 @@ const jsonLd = {
     
     <!-- Hero Header -->
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 text-xs font-mono font-bold tracking-widest uppercase mb-6 shadow-glow-amber">
-        <span>⚔️</span>
-        <span>HELIA FORENSIC SHOWDOWNS • 2026 BENCHMARK</span>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-obsidian-800 border border-white/[0.08] text-xs font-mono mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-cobalt-400"></span>
+        <span class="text-slate-300 font-medium">SENTINEL™ 1v1 BENCHMARK</span>
+        <span class="text-slate-600">|</span>
+        <span class="text-cobalt-400 font-bold">2026 EDITION</span>
       </div>
       
-      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1] mb-6">
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1] mb-6 font-heading">
         The B2B Software <br class="hidden sm:block"/>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-cyan-400 to-amber-300">Versus Arena</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-sky-400">Versus Arena</span>
       </h1>
       
       <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-8">
@@ -44,16 +46,16 @@ const jsonLd = {
       <div class="flex flex-wrap items-center justify-center gap-3">
         <a 
           href="/calculator"
-          class="px-4 py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold transition-all flex items-center gap-2"
+          class="min-h-[44px] px-4 py-2.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-slate-200 border border-white/[0.1] text-xs font-mono font-bold transition-all flex items-center gap-2"
         >
-          <span>📊 SaaS Waste & TCO Calculator</span>
+          <span>SaaS Waste & TCO Calculator</span>
           <span>→</span>
         </a>
         <a 
           href="/calculator/ai-pricing"
-          class="px-4 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-mono font-bold transition-all flex items-center gap-2"
+          class="min-h-[44px] px-4 py-2.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-sky-300 border border-sky-500/30 text-xs font-mono font-bold transition-all flex items-center gap-2"
         >
-          <span>🎙️ AI Audio & Video Pricing Calculator</span>
+          <span>AI Audio & Video Pricing Calculator</span>
           <span>→</span>
         </a>
       </div>
@@ -67,7 +69,7 @@ const jsonLd = {
           type="text" 
           id="duel-search" 
           placeholder="Filter 32+ shootouts (e.g., 'cursor', 'zapier', 'audio', 'sales')..."
-          class="w-full px-5 py-3.5 pl-11 rounded-2xl bg-slate-900/80 border border-slate-800 text-white placeholder-slate-500 text-sm font-mono focus:outline-none focus:border-cyan-400 transition-all backdrop-blur-xl"
+          class="w-full px-5 py-3.5 pl-11 rounded-xl bg-obsidian-900 border border-white/[0.1] text-white placeholder-slate-500 text-sm font-mono focus:outline-none focus:border-cobalt-500 transition-all backdrop-blur-xl min-h-[44px]"
         />
         <svg class="w-4 h-4 text-slate-500 absolute left-4 top-1/2 -translate-y-1/2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
@@ -79,7 +81,7 @@ const jsonLd = {
       <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
         <button 
           type="button" 
-          class="cat-filter-btn px-3 py-1.5 rounded-full text-xs font-mono font-bold transition-all bg-cyan-500 text-slate-950 border border-cyan-400"
+          class="cat-filter-btn min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold transition-all bg-cobalt-600 text-white border border-cobalt-500"
           data-category="all"
         >
           All Showdowns ({duelsData.length})
@@ -87,7 +89,7 @@ const jsonLd = {
         {categories.map((cat) => (
           <button 
             type="button" 
-            class="cat-filter-btn px-3 py-1.5 rounded-full text-xs font-mono font-semibold transition-all bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800"
+            class="cat-filter-btn min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-obsidian-800 hover:bg-obsidian-700 text-slate-400 hover:text-white border border-white/[0.08]"
             data-category={cat}
           >
             {cat}
@@ -100,7 +102,7 @@ const jsonLd = {
     <div id="duels-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {duelsData.map((d) => (
         <article 
-          class="duel-card p-6 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between backdrop-blur-xl"
+          class="duel-card p-6 rounded-2xl bg-obsidian-800 border border-white/[0.08] hover:border-cobalt-500/40 transition-all duration-300 hover:-translate-y-0.5 group flex flex-col justify-between backdrop-blur-xl"
           data-slug={d.slug}
           data-category={d.category}
           data-text={`${d.slug} ${d.toolA.name} ${d.toolB.name} ${d.category} ${d.headline}`.toLowerCase()}
@@ -108,7 +110,7 @@ const jsonLd = {
           <div>
             <!-- Header Badges -->
             <div class="flex items-center justify-between gap-2 mb-4 text-xs font-mono">
-              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-semibold uppercase tracking-wider text-[10px]">
+              <span class="px-2.5 py-1 rounded bg-white/[0.04] text-slate-300 border border-white/[0.08] font-semibold uppercase tracking-wider text-[10px]">
                 {d.category}
               </span>
               {d.winner === 'toolA' && (
@@ -123,18 +125,18 @@ const jsonLd = {
               )}
               {d.winner === 'tie' && (
                 <span class="text-[10px] font-mono text-amber-400 font-bold">
-                  ⚖️ Split Verdict
+                  Split Verdict
                 </span>
               )}
             </div>
 
             <!-- Contenders Faceoff Bar -->
-            <div class="flex items-center justify-between gap-2 mb-4 p-3 rounded-2xl bg-slate-950/80 border border-slate-800/80">
+            <div class="flex items-center justify-between gap-2 mb-4 p-3 rounded-xl bg-obsidian-950 border border-white/[0.06]">
               <div class="flex items-center gap-2 min-w-0">
                 <ToolIcon slug={d.toolA.slug} size="sm" />
                 <span class="text-xs font-mono font-bold text-white truncate">{d.toolA.name}</span>
               </div>
-              <span class="text-[10px] font-mono font-black text-amber-400 px-1.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 shrink-0">VS</span>
+              <span class="text-[10px] font-mono font-bold text-sky-400 px-1.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/20 shrink-0">VS</span>
               <div class="flex items-center gap-2 min-w-0">
                 <ToolIcon slug={d.toolB.slug} size="sm" />
                 <span class="text-xs font-mono font-bold text-slate-300 truncate">{d.toolB.name}</span>
@@ -142,7 +144,7 @@ const jsonLd = {
             </div>
 
             <!-- Title -->
-            <h2 class="text-lg font-black text-white tracking-tight leading-snug mb-3 group-hover:text-cyan-300 transition-colors">
+            <h2 class="text-lg font-bold text-white tracking-tight leading-snug mb-3 group-hover:text-sky-300 transition-colors font-heading">
               <a href={`/versus/${d.slug}`}>
                 {d.headline}
               </a>
@@ -154,10 +156,10 @@ const jsonLd = {
             </p>
 
             <!-- TCO Math Preview -->
-            <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80 mb-6 text-[11px] font-mono text-slate-400">
+            <div class="p-3 rounded-xl bg-obsidian-950 border border-white/[0.06] mb-6 text-[11px] font-mono text-slate-400">
               <div class="flex justify-between items-center text-slate-300 mb-1">
-                <span>{d.toolA.name}: <strong class="text-cyan-400">{d.toolA.startingPrice}</strong></span>
-                <span>{d.toolB.name}: <strong class="text-amber-400">{d.toolB.startingPrice}</strong></span>
+                <span>{d.toolA.name}: <strong class="text-sky-400">{d.toolA.startingPrice}</strong></span>
+                <span>{d.toolB.name}: <strong class="text-slate-300">{d.toolB.startingPrice}</strong></span>
               </div>
               <p class="text-slate-500 line-clamp-2 m-0 mt-1">
                 Scale: {d.tcoBreakdown.scale}
@@ -166,11 +168,11 @@ const jsonLd = {
           </div>
 
           <!-- Bottom CTA -->
-          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
             <span class="text-xs font-mono text-slate-500">Forensic Specs</span>
             <a 
               href={`/versus/${d.slug}`}
-              class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-cyan-500 text-slate-300 hover:text-slate-950 text-xs font-mono font-bold transition-all flex items-center gap-1.5 group-hover:bg-cyan-400 group-hover:text-slate-950"
+              class="min-h-[44px] px-3.5 py-1.5 rounded-xl bg-cobalt-600 hover:bg-cobalt-500 text-white text-xs font-mono font-medium transition-all flex items-center justify-center gap-1.5"
             >
               <span>Explore Shootout</span>
               <span>→</span>

@@ -9,26 +9,49 @@
 }
 
 :root {
-  --background: #030303;
-  --foreground: #f4f4f5;
+  --background: #05070B;
+  --foreground: #f8fafc;
+  --bg-obsidian: #05070B;
+  --surface-card: #0B101B;
+  --surface-elevated: #111726;
+  --accent-cobalt: #0284C7;
+  --data-cyan: #38BDF8;
+  --status-emerald: #10B981;
+  --status-amber: #F59E0B;
+  --border-subtle: rgba(255, 255, 255, 0.08);
   color-scheme: dark;
 }
 
 html {
-  background-color: #030303 !important;
-  color: #f4f4f5;
+  background-color: #05070B !important;
+  color: #f8fafc;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #030303 !important;
-  color: #f4f4f5;
+  background-color: #05070B !important;
+  color: #f8fafc;
   min-height: 100vh;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
-/* Elite Article & Editorial Markdown Styling (TechPulse Theme) */
+/* WCAG 2.2 AA Keyboard Navigation & Focus */
+*:focus-visible {
+  outline: 2px solid #0284C7;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Elite Article & Editorial Markdown Styling (Forensic Intelligence Theme) */
 .elite-article {
   color: #cbd5e1;
   font-size: 1.05rem;
@@ -49,10 +72,7 @@ body {
   line-height: 0.85;
   margin-right: 0.85rem;
   margin-top: 0.25rem;
-  color: transparent;
-  background: linear-gradient(135deg, #06b6d4, #d946ef);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #0284c7;
 }
 
 @media (min-width: 640px) {
@@ -77,18 +97,15 @@ body {
   margin-top: 3.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(to right, #ffffff, #94a3b8);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
 }
 
 .elite-article h3 {
   font-size: 1.45rem;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: #22d3ee;
+  color: #38bdf8;
 }
 
 .elite-article p {
@@ -96,42 +113,37 @@ body {
 }
 
 .elite-article a {
-  color: #22d3ee;
+  color: #38bdf8;
   font-weight: 600;
-  text-decoration: none;
-  background-image: linear-gradient(to right, #22d3ee, #d946ef);
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  transition: all 0.25s ease;
+  text-decoration: underline;
+  text-decoration-color: rgba(2, 132, 199, 0.4);
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
 }
 
 .elite-article a:hover {
   color: #ffffff;
-  background-size: 100% 100%;
-  border-radius: 4px;
-  padding: 0 4px;
-  margin: 0 -4px;
+  text-decoration-color: #0284c7;
 }
 
 .elite-article strong {
   color: #ffffff;
   font-weight: 700;
-  background: linear-gradient(120deg, rgba(6, 182, 212, 0.15) 0%, rgba(217, 70, 239, 0.15) 100%);
-  padding: 0 4px;
-  border-radius: 4px;
 }
 
 .elite-article blockquote {
-  border-left: 4px solid #d946ef;
-  background: linear-gradient(to right, rgba(217, 70, 239, 0.10), rgba(15, 23, 42, 0.5));
+  border-left: 3px solid #0284c7;
+  background: rgba(11, 16, 27, 0.75);
   padding: 1.25rem 1.75rem;
   margin: 2.5rem 0;
-  border-radius: 0 16px 16px 0;
+  border-radius: 0 12px 12px 0;
   font-size: 1.05rem;
   color: #f1f5f9;
   line-height: 1.7;
   position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 /* Callout Alert Variants */
@@ -314,8 +326,8 @@ netlify-feedback,
   border-radius: inherit;
   background: radial-gradient(
     450px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px),
-    rgba(6, 182, 212, 0.35),
-    rgba(217, 70, 239, 0.15),
+    rgba(2, 132, 199, 0.25),
+    rgba(56, 189, 248, 0.10),
     transparent 65%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);

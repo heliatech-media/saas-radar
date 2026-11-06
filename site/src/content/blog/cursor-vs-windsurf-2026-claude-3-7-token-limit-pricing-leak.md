@@ -51,6 +51,28 @@ When analyzing enterprise contracts executed across high-scale deployments, the 
 
 ---
 
+
+### 📐 Architectural Workflow: Cursor Fast Pool vs Windsurf Cascade Engine
+
+```mermaid
+flowchart TD
+    subgraph Cursor ["Cursor 2026 Architecture"]
+        A1[Codebase Repo] --> B1[Local Shadow Indexer]
+        B1 --> C1[Vector Embeddings + Merkle Tree]
+        C1 --> D1[500 Fast Requests Pool]
+        D1 --> E1{Fast Pool Exhausted?}
+        E1 -- No --> F1[Sub-2s Sonnet 3.7 Inference]
+        E1 -- Yes --> G1[Slow Queue or Usage-Based Metering]
+    end
+
+    subgraph Windsurf ["Windsurf Cascade Engine"]
+        A2[Multi-file Workspace] --> B2[Cascade Flow Graph]
+        B2 --> C2[Real-time AST & Tool Execution]
+        C2 --> D2[Dynamic Context Compaction]
+        D2 --> E2[Single Cohesive Execution Loop]
+    end
+```
+
 ## 🛠️ The Strategic Transition Blueprint
 
 Technical organizations can no longer afford to absorb silent annual cost escalations. By implementing modern distributed architecture, engineering leaders can reclaim budget runway and accelerate delivery.

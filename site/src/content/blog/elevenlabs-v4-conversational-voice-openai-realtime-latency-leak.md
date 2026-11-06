@@ -51,6 +51,21 @@ When analyzing enterprise contracts executed across high-scale deployments, the 
 
 ---
 
+
+### ⚡ Conversational Latency Breakdown: Turbo v4 vs OpenAI Realtime
+
+```mermaid
+flowchart LR
+    A[User Audio Stream] --> B[VAD & Speech Turn Detection
+< 20ms]
+    B --> C[Streaming WebSocket Transport
+Edge Layer]
+    C --> D[Conversational LLM Context Engine]
+    D --> E[ElevenLabs Turbo v4 Synthesis
+TTFB ~95ms]
+    E --> F[Continuous Audio Playback Buffer]
+```
+
 ## 🛠️ The Strategic Transition Blueprint
 
 Technical organizations can no longer afford to absorb silent annual cost escalations. By implementing modern distributed architecture, engineering leaders can reclaim budget runway and accelerate delivery.

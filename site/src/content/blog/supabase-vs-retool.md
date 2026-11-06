@@ -23,7 +23,7 @@ tldr:
   APIs.
 - Economic scaling breakdown reveals up to 70% cost variation between both platforms
   at scale depending on seat count versus database storage throughput.
-image: /images/blog/supabase.svg
+image: /images/blog/supabase-vs-retool.svg
 ---
 # Supabase vs Retool: Open-Source Backend vs Rapid Internal App Builder
 

@@ -58,7 +58,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
 <!doctype html>
 
-<html lang="en" class="scroll-smooth antialiased selection:bg-cyan-500/30 selection:text-cyan-100" style="background-color: #030303; color-scheme: dark;">
+<html lang="en" class="scroll-smooth antialiased selection:bg-cobalt-600 selection:text-white" style="background-color: #05070B; color-scheme: dark;">
 
   <head>
 
@@ -398,39 +398,33 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
   </head>
 
-  <body class="min-h-screen bg-[#030303] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #030303;">
+  <body class="min-h-screen bg-[#05070B] text-slate-200 font-sans relative overflow-x-hidden" style="background-color: #05070B;">
 
-    <!-- Reading & Scroll Progress Indicator (Linear / Awwwards Standard) -->
+    <!-- Reading & Scroll Progress Indicator (Forensic Cobalt Standard) -->
 
-    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400 z-[100] transition-[width] duration-75 pointer-events-none"></div>
+    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[2px] w-0 bg-gradient-to-r from-sky-400 to-cobalt-600 z-[100] transition-[width] duration-75 pointer-events-none"></div>
 
-    <!-- Ambient Cyber Glows (Mobile-GPU Optimized: Lightweight on phones, rich on desktop) -->
+    <!-- Ambient Forensic Illumination (Cold & Rigorous: Low GPU overhead) -->
 
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
 
-      <!-- Top Ambient Cyan/Fuchsia Aurora -->
+      <!-- Top Subtle Cobalt Glow -->
 
-      <div class="hidden sm:block absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[650px] bg-gradient-to-b from-cyan-500/12 via-fuchsia-500/8 to-transparent blur-[120px] rounded-full"></div>
+      <div class="hidden sm:block absolute -top-[25%] left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-sky-500/[0.04] to-transparent blur-[120px] rounded-full"></div>
 
-      <div class="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-full h-[320px] bg-gradient-to-b from-cyan-500/10 via-fuchsia-500/5 to-transparent"></div>
+      <div class="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-full h-[240px] bg-gradient-to-b from-sky-500/[0.03] to-transparent"></div>
 
-      <!-- Side Flares: Desktop only to prevent mobile frame drops & GPU drain -->
+      <!-- Geometric Forensic Grid Lines -->
 
-      <div class="hidden md:block absolute top-[25%] -right-[15%] w-[600px] h-[600px] bg-fuchsia-600/8 blur-[130px] rounded-full"></div>
-
-      <div class="hidden md:block absolute top-[50%] -left-[15%] w-[600px] h-[600px] bg-cyan-600/8 blur-[130px] rounded-full"></div>
-
-      <!-- Geometric Cyber Grid Lines -->
-
-      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]"></div>
 
     </div>
 
-    <!-- World-Class Luxury Cyber-Minimalist Navbar (Linear / Vercel / Awwwards Standard) -->
+    <!-- World-Class Forensic Software Intelligence Navbar -->
 
     <div class="sticky top-4 z-50 px-4 sm:px-6 max-w-5xl mx-auto">
 
-      <header class="relative backdrop-blur-2xl bg-[#08090d]/85 border border-white/[0.08] shadow-[0_10px_35px_-5px_rgba(0,0,0,0.8),0_0_20px_0_rgba(6,182,212,0.08)] rounded-full px-5 py-2.5 flex items-center justify-between transition-all duration-300 hover:border-white/[0.16]">
+      <header class="relative backdrop-blur-2xl bg-[#0B101B]/90 border border-white/[0.08] shadow-[0_10px_35px_-5px_rgba(0,0,0,0.8),0_0_20px_0_rgba(2,132,199,0.06)] rounded-full px-5 py-2.5 flex items-center justify-between transition-all duration-300 hover:border-white/[0.16]">
 
         
 
@@ -496,7 +490,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
-            <div class="absolute right-0 sm:left-0 mt-2 w-56 p-2 rounded-2xl bg-[#08090d]/95 backdrop-blur-2xl border border-white/[0.1] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col gap-1">
+            <div class="absolute right-0 sm:left-0 mt-2 w-56 p-2 rounded-2xl bg-[#0B101B]/95 backdrop-blur-2xl border border-white/[0.1] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col gap-1">
               <a href="/pricing-leaks" class="px-3 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-rose-400 hover:bg-white/[0.05] flex items-center justify-between transition-colors">
                 <span>Pricing Leaks</span>
                 <span class="text-[9px] font-mono text-rose-400 bg-rose-500/10 px-1.5 py-0.5 rounded border border-rose-500/25">New</span>
@@ -598,7 +592,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
         id="mobile-nav-drawer"
 
-        class="hidden md:hidden mt-2 p-3 rounded-2xl backdrop-blur-2xl bg-[#08090d]/95 border border-white/[0.08] shadow-2xl flex flex-col gap-1 text-sm font-medium animate-in fade-in slide-in-from-top-2 duration-200"
+        class="hidden md:hidden mt-2 p-3 rounded-2xl backdrop-blur-2xl bg-[#0B101B]/95 border border-white/[0.08] shadow-2xl flex flex-col gap-1 text-sm font-medium animate-in fade-in slide-in-from-top-2 duration-200"
 
       >
 
@@ -671,9 +665,9 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
     </main>
 
-    <!-- Ultra-Clean Cyber Dark Footer -->
+    <!-- Forensic Software Intelligence Dark Footer -->
 
-    <footer class="relative z-10 border-t border-slate-800 bg-[#030303]/90 backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
+    <footer class="relative z-10 border-t border-white/[0.08] bg-[#05070B] backdrop-blur-xl mt-32 text-xs text-slate-500 py-16">
 
       <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
 

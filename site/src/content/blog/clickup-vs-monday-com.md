@@ -22,7 +22,7 @@ tldr:
   is paramount.
 - Economic scaling breakdown reveals up to 70% cost variation between both platforms
   at scale depending on user seat inflation and API operation frequencies.
-image: /images/blog/clickup.svg
+image: /images/blog/clickup-vs-monday-com.svg
 ---
 ## Executive Verdict: The 30-Second Summary
 

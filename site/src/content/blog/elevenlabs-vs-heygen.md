@@ -21,7 +21,7 @@ tldr:
   providing an edge when scaling multilingual visual presentations.
 - Economic scaling breakdown reveals up to 70% cost variation between both platforms
   at scale.
-image: /images/blog/elevenlabs.svg
+image: /images/blog/elevenlabs-vs-heygen.svg
 ---
 # ElevenLabs vs HeyGen: Voice Synthesis vs AI Avatar Dominance
 

@@ -259,40 +259,40 @@ const jsonLd = {
   <!-- Hero Section -->
   <section class="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
     <!-- Live Pill -->
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/40 shadow-glow-cyan text-xs font-mono text-cyan-300 mb-6">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-obsidian-800 border border-white/[0.08] text-xs font-mono text-slate-300 mb-6">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>100% HAND-VERIFIED PARTNER PERKS • UPDATED FOR NOVEMBER 2026</span>
+      <span>VERIFIED ENTERPRISE TERMS & PERKS • UPDATED FOR NOVEMBER 2026</span>
     </div>
 
     <!-- Main Title -->
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight">
-      Exclusive SaaS Deals &
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-fuchsia-400">
-        Extended Partner Perks
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight font-heading">
+      Exclusive Enterprise SaaS &
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-sky-400">
+        Verified Partner Terms
       </span>
     </h1>
 
     <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-      Stop wasting hours on spam coupon aggregators with expired codes. Every perk below is established through official developer partnership agreements and verified live weekly.
+      Audited developer partnership terms and verified enterprise credits. Every agreement below is validated directly through official vendor agreements under our 48-hour health scanning cycle.
     </p>
 
     <!-- Trust Stats Matrix -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto mt-10">
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
+      <div class="p-4 rounded-xl bg-obsidian-800 border border-white/[0.08] text-center">
         <span class="block text-2xl font-black text-white font-mono">$0.00</span>
-        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Expired Spam</span>
+        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Expired Codes</span>
       </div>
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
-        <span class="block text-2xl font-black text-cyan-400 font-mono">100%</span>
+      <div class="p-4 rounded-xl bg-obsidian-800 border border-white/[0.08] text-center">
+        <span class="block text-2xl font-black text-emerald-400 font-mono">100%</span>
         <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Direct Verified</span>
       </div>
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
-        <span class="block text-2xl font-black text-fuchsia-400 font-mono">10,000+</span>
+      <div class="p-4 rounded-xl bg-obsidian-800 border border-white/[0.08] text-center">
+        <span class="block text-2xl font-black text-sky-400 font-mono">10,000+</span>
         <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Free Ops / Credits</span>
       </div>
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-center">
-        <span class="block text-2xl font-black text-emerald-400 font-mono">Weekly</span>
-        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Health Scanned</span>
+      <div class="p-4 rounded-xl bg-obsidian-800 border border-white/[0.08] text-center">
+        <span class="block text-2xl font-black text-white font-mono">48h</span>
+        <span class="text-xs text-slate-400 font-mono uppercase tracking-wider">Audit Cycle</span>
       </div>
     </div>
   </section>
@@ -303,10 +303,10 @@ const jsonLd = {
       {categories.map((cat, idx) => (
         <button
           type="button"
-          class={`deals-filter-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 border ${
+          class={`deals-filter-btn min-h-[44px] px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 border ${
             idx === 0
-              ? "bg-cyan-500/20 text-cyan-300 border-cyan-500/50 shadow-glow-cyan"
-              : "bg-slate-900/80 text-slate-400 border-slate-800 hover:text-slate-200 hover:border-slate-700"
+              ? "bg-cobalt-600/20 text-cobalt-300 border-cobalt-500/50 shadow-sm"
+              : "bg-obsidian-800 text-slate-400 border-white/[0.08] hover:text-slate-200 hover:border-white/[0.16]"
           }`}
           data-category={cat}
         >
@@ -321,14 +321,13 @@ const jsonLd = {
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="deals-container">
       {deals.map((deal) => (
         <article
-          class="deal-card group relative rounded-2xl bg-slate-900/60 border border-slate-800/80 p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-slate-700 hover:shadow-2xl flex flex-col justify-between"
+          class="deal-card group relative rounded-2xl bg-obsidian-800 border border-white/[0.08] p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 hover:border-cobalt-500/40 flex flex-col justify-between"
           data-category={deal.category}
-          style={`box-shadow: 0 0 40px -10px ${deal.glowColor};`}
         >
           <div>
             <!-- Header Badges -->
             <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-              <span class={`px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider uppercase text-white bg-gradient-to-r ${deal.badgeColor} shadow-sm`}>
+              <span class="px-2.5 py-1 rounded bg-white/[0.05] border border-white/[0.1] text-[10px] font-mono font-bold tracking-wider uppercase text-slate-300">
                 {deal.badge}
               </span>
               <span class="inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400">
@@ -341,7 +340,7 @@ const jsonLd = {
             <div class="flex items-center justify-between gap-3 mb-3">
               <div class="flex items-center gap-3">
                 <ToolIcon name={deal.toolName} slug={deal.toolSlug} size="md" />
-                <h2 class="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                <h2 class="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-300 transition-colors font-heading">
                   {deal.toolName}
                 </h2>
               </div>
@@ -351,12 +350,12 @@ const jsonLd = {
             </div>
 
             <!-- Perk Headline -->
-            <h3 class="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300 mb-3">
+            <h3 class="text-lg font-bold text-slate-200 mb-3 font-heading">
               {deal.perkTitle}
             </h3>
 
             <!-- Description -->
-            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+            <p class="text-sm text-slate-400 leading-relaxed mb-6 font-light">
               {deal.description}
             </p>
 
@@ -364,7 +363,7 @@ const jsonLd = {
             <ul class="space-y-2 mb-6">
               {deal.highlights.map((item) => (
                 <li class="flex items-start gap-2.5 text-xs text-slate-300">
-                  <span class="text-cyan-400 font-bold leading-none mt-0.5">✓</span>
+                  <span class="text-emerald-400 font-bold leading-none mt-0.5">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -372,18 +371,18 @@ const jsonLd = {
           </div>
 
           <!-- Bottom Action Area -->
-          <div class="pt-6 border-t border-slate-800/80 mt-2 flex flex-col gap-3">
+          <div class="pt-6 border-t border-white/[0.08] mt-2 flex flex-col gap-3">
             {deal.partnerCode ? (
-              <div class="flex items-center justify-between p-2.5 rounded-xl bg-black/40 border border-slate-800 mb-1">
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-obsidian-950 border border-white/[0.08] mb-1">
                 <div class="flex items-center gap-2 pl-2">
                   <span class="text-[10px] font-mono text-slate-500 uppercase">Promo Code:</span>
-                  <code class="text-xs font-mono font-bold text-fuchsia-300 tracking-wider">
+                  <code class="text-xs font-mono font-bold text-sky-300 tracking-wider">
                     {deal.partnerCode}
                   </code>
                 </div>
                 <button
                   type="button"
-                  class="copy-code-btn px-3 py-1.5 rounded-lg text-[11px] font-mono bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-500/40 hover:bg-fuchsia-500/30 transition-colors"
+                  class="copy-code-btn px-3 py-1.5 rounded-lg text-[11px] font-mono bg-white/[0.05] text-slate-200 border border-white/[0.1] hover:bg-white/[0.1] transition-colors"
                   data-code={deal.partnerCode}
                 >
                   Copy Code
@@ -397,16 +396,16 @@ const jsonLd = {
                 href={deal.affiliateUrl}
                 target="_blank"
                 rel="sponsored noopener noreferrer"
-                class="flex-1 py-3 px-5 rounded-xl text-center text-xs font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-glow-cyan transition-all duration-200 flex items-center justify-center gap-2 group-hover:scale-[1.01]"
+                class="min-h-[44px] flex-1 py-3 px-5 rounded-xl text-center text-xs font-bold text-white bg-cobalt-600 hover:bg-cobalt-500 transition-all duration-200 flex items-center justify-center gap-2"
               >
-                <span>Claim Verified Perk</span>
+                <span>Claim Verified Terms</span>
                 <span class="text-sm">→</span>
               </a>
 
               {deal.reviewUrl ? (
                 <a
                   href={deal.reviewUrl}
-                  class="px-4 py-3 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800/80 border border-slate-700 hover:border-slate-500 transition-colors whitespace-nowrap"
+                  class="min-h-[44px] px-4 py-3 rounded-xl text-xs font-semibold text-slate-300 bg-obsidian-900 border border-white/[0.1] hover:border-white/[0.2] transition-colors whitespace-nowrap flex items-center justify-center"
                 >
                   Review
                 </a>
@@ -415,7 +414,7 @@ const jsonLd = {
               {deal.teardownUrl ? (
                 <a
                   href={deal.teardownUrl}
-                  class="px-4 py-3 rounded-xl text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-800/50 hover:border-cyan-600 transition-colors whitespace-nowrap hidden sm:inline-block"
+                  class="min-h-[44px] px-4 py-3 rounded-xl text-xs font-semibold text-sky-400 bg-obsidian-900 border border-sky-500/30 hover:border-sky-500/50 transition-colors whitespace-nowrap hidden sm:flex items-center justify-center"
                 >
                   Teardown
                 </a>

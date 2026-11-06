@@ -39,16 +39,24 @@ Below is the declassified 2026 enterprise rate card, forensic contact scaling ma
 
 Extracted from verified enterprise Master Services Agreements (MSAs) and vendor rate sheets executed for 2026 deployments:
 
-```
-+------------------------------------------+-----------------------+---------------------------------------------+
-| Product Hub / Tier                       | Published Base Rate   | Real Enterprise Unit Economics (Annual)     |
-+------------------------------------------+-----------------------+---------------------------------------------+
-| Marketing Hub Enterprise (10k contacts)  | $3,600 / month        | $43,200/yr baseline + $3,500 mandatory setup|
-| Additional Marketing Contacts (+5k tier) | $100 / month          | $1,200/yr per 5k contacts (compounding cliff|
-| Sales Hub Enterprise (per seat)          | $150 / seat / month   | Requires 10-seat minimum commit ($18,000/yr)|
-| Service Hub Enterprise (per seat)        | $130 / seat / month   | Requires 5-seat minimum commit ($7,800/yr)  |
-| Mandatory Enterprise Onboarding Fee      | $3,500 – $6,000 (one) | Non-negotiable unless contested by CFO      |
-+------------------------------------------+-----------------------+---------------------------------------------+
+| Product Hub / Tier | Published Base Rate | Real Enterprise Unit Economics (Annual) | Procurement Vulnerability |
+| :--- | :--- | :--- | :--- |
+| **Marketing Hub Enterprise** (10k contacts) | $3,600 / month | $43,200/yr baseline + $3,500 mandatory setup | 30% discount at quarter-end |
+| **Additional Marketing Contacts** (+5k tier) | $100 / month | $1,200/yr per 5k contacts (compounding cliff) | Waivable to +10k free band |
+| **Sales Hub Enterprise** (per seat) | $150 / seat / month | Requires 10-seat minimum commit ($18,000/yr) | Seat minimum negotiable to 5 |
+| **Service Hub Enterprise** (per seat) | $130 / seat / month | Requires 5-seat minimum commit ($7,800/yr) | Bundleable with Sales Hub |
+| **Mandatory Enterprise Onboarding Fee** | $3,500 – $6,000 (one-time) | Non-negotiable on paper | Slashed to $0 via readiness charter |
+
+### 🧭 HubSpot Enterprise Procurement Negotiation Path
+
+```mermaid
+flowchart TD
+    A[Initial HubSpot Enterprise Quote] --> B{Procurement Audit}
+    B -->|Flag 1| C[Challenge $3,500 Onboarding Fee with Readiness Charter]
+    B -->|Flag 2| D[Cap Annual Price Escalation at 3% CPI]
+    B -->|Flag 3| E[Counter Seat Lock-in with Decoupled Stack Threat: Apollo + Brevo]
+    C & D & E --> F[Quarter-End Closing Leverage (March / June / Sept / Dec)]
+    F --> G[Final Executed MSA: 35% Savings + $0 Onboarding Fee]
 ```
 
 ---

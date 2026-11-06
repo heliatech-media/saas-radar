@@ -21,7 +21,7 @@ tldr:
   providing an edge for enterprise account executives.
 - Economic scaling breakdown reveals up to 70% cost variation between both platforms
   at scale.
-image: /images/blog/apollo-io.svg
+image: /images/blog/apollo-io-vs-lusha.svg
 ---
 # Apollo.io vs Lusha: Direct Phone & Email Enrichment Battle
 

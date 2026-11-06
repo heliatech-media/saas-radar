@@ -1,0 +1,51 @@
+{
+  "agent": "LinkDoctorAgent",
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "http_200_active_deal",
+      "type": "valid",
+      "payload": {
+        "url": "https://active-partner.example.com/promo",
+        "http_status": 200,
+        "page_content": "November 2026 Black Friday deal: 20% off verified active.",
+        "redirect_target": "https://active-partner.example.com"
+      },
+      "expected_decision": "APPROVE",
+      "rule_tested": "Statut technique HTTP 200 avec offre vérifiée active."
+    },
+    {
+      "id": "http_200_expired_promo_detection",
+      "type": "contradictory",
+      "payload": {
+        "url": "https://expired-deal.example.com/offer",
+        "http_status": 200,
+        "page_content": "This promotional campaign ended on October 31, 2024. Return to homepage.",
+        "redirect_target": "https://expired-deal.example.com"
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Statut technique valide (200) != promotion validée."
+    },
+    {
+      "id": "orphan_redirect_healing",
+      "type": "incomplete",
+      "payload": {
+        "slug": "missing-tool",
+        "found_in_content": true,
+        "found_in_redirects": false
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Toute route /go/ doit exister dans _redirects."
+    },
+    {
+      "id": "non_https_target_rejection",
+      "type": "insecure",
+      "payload": {
+        "url": "http://insecure-vendor.example.com",
+        "http_status": 200
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Protocole HTTPS strict obligatoire."
+    }
+  ]
+}

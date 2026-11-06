@@ -23,7 +23,7 @@
     <text x="32" y="21" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1.5">HELIATECH DOSSIER</text>
   </g>
   <text x="100" y="260" fill="#ffffff" font-family="sans-serif" font-size="64" font-weight="900" letter-spacing="-1">SENJA</text>
-  <text x="100" y="320" fill="url(#neon)" font-family="monospace" font-size="24" font-weight="bold" letter-spacing="2">MARKETING AUTOMATION & SOCIAL PROOF</text>
+  <text x="100" y="320" fill="url(#neon)" font-family="monospace" font-size="24" font-weight="bold" letter-spacing="2">MARKETING AUTOMATION &amp; SOCIAL PROOF</text>
   <line x1="100" y1="360" x2="1100" y2="360" stroke="#334155" stroke-width="1.5" />
   <text x="100" y="420" fill="#94a3b8" font-family="sans-serif" font-size="20">Enterprise Software Teardown &amp; Hands-on Engineering Masterclass</text>
   <g transform="translate(100, 480)">

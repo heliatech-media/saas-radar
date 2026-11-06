@@ -15,7 +15,7 @@ tags:
 - Enterprise
 readingTime: 7 MIN
 tool_slug: papaya-global
-image: /images/blog/papaya-global.svg
+image: /images/blog/papaya-global-2026-pricing-rate-card-leaks.svg
 tldr:
 - Papaya Global replaces legacy multi-country payroll providers with licensed Tier-1
   banking rails, eliminating intermediary correspondent bank delays.

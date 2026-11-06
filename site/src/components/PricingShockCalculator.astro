@@ -19,18 +19,18 @@ const affiliateHop = `/go/${cheaperToolSlug}`;
 ---
 
 <!-- Helia-Lupin: Pricing Shock & Overcharge Simulator -->
-<div class="my-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-red-950/40 via-slate-950 to-slate-900 border border-red-500/30 shadow-2xl relative overflow-hidden">
+<div class="my-12 p-6 sm:p-8 rounded-2xl bg-obsidian-800 border border-white/[0.08] shadow-xl relative overflow-hidden">
   
-  <div class="absolute -right-20 -top-20 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -right-20 -top-20 w-64 h-64 bg-sky-500/[0.03] rounded-full blur-3xl pointer-events-none"></div>
 
   <!-- Header -->
-  <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+  <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-white/[0.08]">
     <div class="flex items-center gap-3">
       <ToolIcon name={cheaperTool} slug={cheaperToolSlug} size="md" />
       <div>
-        <h3 class="text-lg font-black text-white tracking-tight flex items-center gap-2">
+        <h3 class="text-lg font-bold text-white tracking-tight flex items-center gap-2 font-heading">
           <span>{expensiveTool} Overcharge & Markup Simulator</span>
-          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-red-500/20 text-red-300 font-bold border border-red-500/30">FINANCIAL AUDIT</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-400 font-bold border border-amber-500/25">FINANCIAL AUDIT</span>
         </h3>
         <p class="text-xs text-slate-400 font-mono">Calculate wasted annual capital on linear markups vs modern {cheaperTool} execution</p>
       </div>
@@ -46,7 +46,7 @@ const affiliateHop = `/go/${cheaperToolSlug}`;
       <div>
         <div class="flex justify-between items-center text-xs font-mono mb-2">
           <span class="text-slate-300">Monthly Tasks / Automated Operations</span>
-          <span id="shock-volume-val" class="text-red-400 font-bold">50,000 ops / mo</span>
+          <span id="shock-volume-val" class="text-sky-400 font-bold">50,000 ops / mo</span>
         </div>
         <input 
           type="range" 
@@ -55,7 +55,7 @@ const affiliateHop = `/go/${cheaperToolSlug}`;
           max="250000" 
           step="5000" 
           value="50000"
-          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-400"
+          class="w-full h-2 bg-obsidian-950 rounded-lg appearance-none cursor-pointer accent-cobalt-600"
         />
         <div class="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
           <span>5,000</span>
@@ -66,17 +66,17 @@ const affiliateHop = `/go/${cheaperToolSlug}`;
 
       <!-- Cost Breakdown Cards -->
       <div class="grid grid-cols-2 gap-3 text-xs font-mono">
-        <div class="p-3.5 rounded-xl bg-red-950/30 border border-red-500/30 flex items-center justify-between">
+        <div class="p-3.5 rounded-xl bg-obsidian-950 border border-white/[0.06] flex items-center justify-between">
           <div>
-            <span class="text-[10px] text-red-400 uppercase block mb-1">Estimated {expensiveTool} Cost</span>
-            <span id="expensive-cost" class="text-xl font-black text-white">$299 / mo</span>
+            <span class="text-[10px] text-slate-400 uppercase block mb-1">Estimated {expensiveTool} Cost</span>
+            <span id="expensive-cost" class="text-xl font-bold text-amber-400">$299 / mo</span>
           </div>
           <ToolIcon name={expensiveTool} slug={expensiveToolSlug} size="sm" />
         </div>
-        <div class="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-500/30 flex items-center justify-between">
+        <div class="p-3.5 rounded-xl bg-obsidian-950 border border-white/[0.06] flex items-center justify-between">
           <div>
-            <span class="text-[10px] text-emerald-400 uppercase block mb-1">TCO on {cheaperTool}</span>
-            <span id="cheaper-cost" class="text-xl font-black text-emerald-300">$29 / mo</span>
+            <span class="text-[10px] text-slate-400 uppercase block mb-1">TCO on {cheaperTool}</span>
+            <span id="cheaper-cost" class="text-xl font-bold text-emerald-400">$29 / mo</span>
           </div>
           <ToolIcon name={cheaperTool} slug={cheaperToolSlug} size="sm" />
         </div>
@@ -84,11 +84,11 @@ const affiliateHop = `/go/${cheaperToolSlug}`;
     </div>
 
     <!-- Right: Big Overcharge Counter & CTA -->
-    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 text-center flex flex-col justify-between h-full">
-      <span class="text-xs font-mono text-red-400 uppercase tracking-wider block mb-1">Recoverable Annual Overcharge</span>
+    <div class="p-6 rounded-xl bg-obsidian-950 border border-white/[0.06] text-center flex flex-col justify-between h-full">
+      <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-1">Recoverable Annual Overcharge</span>
       
       <div class="my-3">
-        <span id="overcharge-val" class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-emerald-400">
+        <span id="overcharge-val" class="text-4xl sm:text-5xl font-bold text-emerald-400 font-heading">
           $3,240
         </span>
         <span class="text-xs font-mono text-slate-500 block mt-1">/ year wasted on linear markups</span>
@@ -98,7 +98,7 @@ const affiliateHop = `/go/${cheaperToolSlug}`;
         href={affiliateHop}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        class="w-full py-3.5 px-6 rounded-xl font-black font-mono text-xs uppercase tracking-wider text-slate-950 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-300 hover:from-emerald-300 hover:to-cyan-300 shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+        class="min-h-[44px] w-full py-3.5 px-6 rounded-xl font-medium font-mono text-xs uppercase tracking-wider text-white bg-cobalt-600 hover:bg-cobalt-500 transition-all flex items-center justify-center gap-2"
       >
         <ToolIcon name={cheaperTool} slug={cheaperToolSlug} size="xs" />
         <span>Stop Overpaying: Switch to {cheaperTool}</span>

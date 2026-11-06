@@ -1,0 +1,44 @@
+{
+  "agent": "TemplateCurator",
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "certified_production_blueprint_pass",
+      "type": "valid",
+      "payload": {
+        "title": "Stripe to QuickBooks Enterprise Reconciliation",
+        "price": "$49",
+        "estimated_savings_hours": 14,
+        "estimated_savings_usd": 420,
+        "has_error_handling": true,
+        "raw_json_safe": true
+      },
+      "expected_decision": "APPROVE",
+      "rule_tested": "Garantie ROI 10x minimale et gestion d'erreurs complète."
+    },
+    {
+      "id": "trivial_action_monetization_rejection",
+      "type": "incomplete",
+      "payload": {
+        "title": "Send Email on Google Form Submit",
+        "price": "$29",
+        "estimated_savings_hours": 0.5,
+        "estimated_savings_usd": 15,
+        "has_error_handling": false
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Les blueprints réalisant des actions triviales doivent être gratuits."
+    },
+    {
+      "id": "hardcoded_credentials_in_workflow_flag",
+      "type": "insecure",
+      "payload": {
+        "title": "Airtable to Slack Notifier",
+        "price": "$0",
+        "workflow_content": "Authorization: Bearer sk-ant-api03-live998877665544332211"
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Validation de sécurité stricte : zéro token hardcodé."
+    }
+  ]
+}

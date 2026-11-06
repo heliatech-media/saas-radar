@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-11-06T02:37:15.204945+00:00",
+  "total_active_skills": 6,
+  "priority_skills_monitored": [
+    "AnalystAgent",
+    "LinkDoctorAgent",
+    "BlogAgent",
+    "PublisherAgent",
+    "DesignJuryAgent",
+    "TemplateCurator"
+  ],
+  "active_skills_matrix": {
+    "AnalystAgent": {
+      "agent": "AnalystAgent",
+      "version": "1.0.0",
+      "purpose": "Vérifier et auditer les analyses techniques, prix, scores Sentinel v2.4, calculs TCO et sources primaires.",
+      "quality_rules_count": 4,
+      "forbidden_actions_count": 4,
+      "rollback_version": "0.9.0",
+      "file_path": "agents\\skills\\active\\AnalystAgent.yaml",
+      "last_synced": "2026-11-06T02:37:15.180990+00:00"
+    },
+    "BlogAgent": {
+      "agent": "BlogAgent",
+      "version": "1.0.0",
+      "purpose": "Rédiger des masterclasses et analyses éditoriales B2B approfondies, captivantes et rigoureusement étayées.",
+      "quality_rules_count": 4,
+      "forbidden_actions_count": 4,
+      "rollback_version": "0.9.0",
+      "file_path": "agents\\skills\\active\\BlogAgent.yaml",
+      "last_synced": "2026-11-06T02:37:15.183075+00:00"
+    },
+    "DesignJuryAgent": {
+      "agent": "DesignJuryAgent",
+      "version": "1.0.0",
+      "purpose": "Auditer l'excellence visuelle, l'ergonomie mobile, l'accessibilité WCAG AA et la densité cognitive du site heliatech.online.",
+      "quality_rules_count": 4,
+      "forbidden_actions_count": 4,
+      "rollback_version": "0.9.0",
+      "file_path": "agents\\skills\\active\\DesignJuryAgent.yaml",
+      "last_synced": "2026-11-06T02:37:15.185177+00:00"
+    },
+    "LinkDoctorAgent": {
+      "agent": "LinkDoctorAgent",
+      "version": "1.0.0",
+      "purpose": "Auditer la santé des liens internes/externes, garantir la parité edge _redirects, et vérifier la validité réelle des offres.",
+      "quality_rules_count": 4,
+      "forbidden_actions_count": 4,
+      "rollback_version": "0.9.0",
+      "file_path": "agents\\skills\\active\\LinkDoctorAgent.yaml",
+      "last_synced": "2026-11-06T02:37:15.187300+00:00"
+    },
+    "PublisherAgent": {
+      "agent": "PublisherAgent",
+      "version": "1.0.0",
+      "purpose": "Transformer les modèles de données en fichiers Markdown Astro conformes, valider le build SSG, Schema.org et les métadonnées.",
+      "quality_rules_count": 4,
+      "forbidden_actions_count": 4,
+      "rollback_version": "0.9.0",
+      "file_path": "agents\\skills\\active\\PublisherAgent.yaml",
+      "last_synced": "2026-11-06T02:37:15.191302+00:00"
+    },
+    "TemplateCurator": {
+      "agent": "TemplateCurator",
+      "version": "1.0.0",
+      "purpose": "Auditer, certifier, étalonner et classifier les templates d'automatisation (n8n, Make, Airtable, Cursor) avec garantie de ROI.",
+      "quality_rules_count": 4,
+      "forbidden_actions_count": 4,
+      "rollback_version": "0.9.0",
+      "file_path": "agents\\skills\\active\\TemplateCurator.yaml",
+      "last_synced": "2026-11-06T02:37:15.196423+00:00"
+    }
+  },
+  "proposals_summary": {
+    "total": 0,
+    "by_status": {
+      "draft": 0,
+      "awaiting_review": 0,
+      "approved": 0,
+      "active": 0,
+      "rejected": 0,
+      "rolled_back": 0
+    },
+    "pending_human_approval": 0
+  },
+  "recent_rollbacks_count": 0,
+  "governance_status": "100%_EVIDENCE_GATED_AND_TESTABLE"
+}

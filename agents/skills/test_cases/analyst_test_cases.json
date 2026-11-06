@@ -1,0 +1,57 @@
+{
+  "agent": "AnalystAgent",
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "valid_pricing_source",
+      "type": "valid",
+      "payload": {
+        "tool_name": "Synthetix AI",
+        "pricing": "$49/mo",
+        "source": "https://synthetix.example.com/pricing",
+        "verified_at": "2026-11-01",
+        "sentinel_scores": {"performance": 8.5, "ease": 8.0, "value": 9.0, "integrations": 8.5, "ecosystem": 8.0},
+        "has_uncertainty_range": true
+      },
+      "expected_decision": "APPROVE",
+      "rule_tested": "Toute donnée chiffrée doit avoir une source et une date."
+    },
+    {
+      "id": "outdated_pricing_claim",
+      "type": "outdated",
+      "payload": {
+        "tool_name": "LegacyFlow",
+        "pricing": "$19/mo",
+        "source": "https://legacyflow.example.com/pricing",
+        "verified_at": "2023-04-12",
+        "has_uncertainty_range": false
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Toute donnée chiffrée doit avoir une date récente (<90 jours)."
+    },
+    {
+      "id": "unsupported_roi_assertion",
+      "type": "incomplete",
+      "payload": {
+        "tool_name": "HyperScale AI",
+        "claim": "Saves $150,000 monthly for any startup",
+        "source": null,
+        "verified_at": null
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Une absence de preuve bloque la publication."
+    },
+    {
+      "id": "phantom_discount_rejection",
+      "type": "contradictory",
+      "payload": {
+        "tool_name": "PhantomTool",
+        "discount": "95% lifetime discount",
+        "source": "unverified_forum",
+        "verified_at": "2026-11-06"
+      },
+      "expected_decision": "REJECT",
+      "rule_tested": "Inventer ou relayer un rabais sans confirmation officielle est interdit."
+    }
+  ]
+}
