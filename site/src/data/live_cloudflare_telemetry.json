@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-06T23:15:15.863882",
+  "last_synced": "2026-11-06T23:45:25.698048",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-09 - 2026-11-06)",
-  "total_visitors_network": 20740,
-  "total_requests": 127207,
-  "total_visits": 6429,
-  "total_pageviews": 26840,
+  "total_visitors_network": 20761,
+  "total_requests": 127308,
+  "total_visits": 6435,
+  "total_pageviews": 26862,
   "percent_cached": "56.14%",
-  "data_served_mb": 1064.2,
+  "data_served_mb": 1065.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -28,7 +28,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 550
+      "views": 560
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
@@ -39,11 +39,11 @@
       "views": 260
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 240
     },
     {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 240
     },
     {
@@ -55,11 +55,11 @@
       "views": 220
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/deals/",
       "views": 180
     },
     {
-      "path": "/deals/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 180
     },
     {
@@ -67,18 +67,18 @@
       "views": 170
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/reviews/make/",
       "views": 160
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 24520
+      "views": 24550
     },
     {
       "country": "Morocco",
-      "views": 18270
+      "views": 18310
     },
     {
       "country": "Singapore",
