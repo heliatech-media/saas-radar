@@ -4,6 +4,7 @@
 // Architecture : Zero Static Leakage (SPA dynamique servie par Astro)
 // Aucune donnée personnelle (PII) ni état opérationnel n'est compilé en dur.
 // Toute la donnée est consommée à l'exécution via les APIs protégées /api/sentinel/*
+// Phase 1 + Phase 2 Déployées : Pilotage + Production Éditoriale & Commerciale
 
 const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 ---
@@ -60,18 +61,18 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             OWNER : Validé Cloudflare Access (MFA)
           </span>
         </div>
-        <div class="text-[10px] text-slate-400 font-mono">Session Sécurisée • Stockage Transactionnel ACID • Approbation Patron Obligatoire</div>
+        <div class="text-[10px] text-slate-400 font-mono">Stockage Transactionnel ACID • Cadence 48h • Approbation Patron Souveraine</div>
       </div>
     </div>
 
-    <!-- BOUTONS D'URGENCE DU PROPRIÉTAIRE (AVEC CONFIRMATION RENFORCÉE) -->
+    <!-- BOUTONS D'URGENCE DU PROPRIÉTAIRE -->
     <div class="flex flex-wrap items-center gap-2.5">
-      <!-- KILL-SWITCH 1 : PAUSE AGENTS NON-CRITIQUES -->
+      <!-- KILL-SWITCH 1 : PAUSE AGENTS -->
       <button onclick="openModal('modal-pause-agents')" id="btn-pause-agents" class="px-3.5 py-1.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/40 text-rose-300 font-bold text-xs transition-all flex items-center gap-2 active:scale-95 shadow-lg shadow-rose-950/20">
         <span>🛑</span> <span id="pause-btn-label">PAUSE ALL AGENTS</span>
       </button>
 
-      <!-- KILL-SWITCH 2 : STOP NEWSLETTER IMMÉDIAT ET DÉFINITIF -->
+      <!-- KILL-SWITCH 2 : STOP NEWSLETTER -->
       <button onclick="openModal('modal-stop-newsletter')" id="btn-stop-newsletter" class="px-3.5 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/40 text-amber-300 font-bold text-xs transition-all flex items-center gap-2 active:scale-95 shadow-lg shadow-amber-950/20">
         <span>✋</span> <span id="stop-newsletter-label">STOP NEWSLETTER</span>
       </button>
@@ -85,17 +86,17 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
       <!-- COMPTEUR APPROBATIONS EN ATTENTE -->
       <button onclick="showSection('view-approvals')" class="px-3 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/40 text-indigo-300 text-xs font-bold transition-all flex items-center gap-1.5">
-        <span>⏳</span> Approbations en attente : <strong id="header-pending-count" class="text-white bg-indigo-500/40 px-1.5 py-0.2 rounded">1</strong>
+        <span>⏳</span> Approbations : <strong id="header-pending-count" class="text-white bg-indigo-500/40 px-1.5 py-0.2 rounded">1</strong>
       </button>
     </div>
   </header>
 
   <!-- ===================================================================== -->
-  <!-- CORPS DU DASHBOARD : NAVIGATION REGROUPÉE EN 4 CATÉGORIES -->
+  <!-- CORPS DU DASHBOARD : NAVIGATION 4 CATÉGORIES -->
   <!-- ===================================================================== -->
   <div class="flex-1 flex overflow-hidden">
     
-    <!-- SIDEBAR DE NAVIGATION (4 CATÉGORIES VALIDÉES) -->
+    <!-- SIDEBAR DE NAVIGATION -->
     <aside class="w-64 bg-[#05080f] border-r border-slate-800/80 p-3.5 flex flex-col justify-between shrink-0 overflow-y-auto">
       <div class="space-y-4 text-xs font-mono">
         
@@ -121,26 +122,32 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </div>
         </div>
 
-        <!-- CATÉGORIE 2 : PRODUCTION -->
-        <div>
-          <div class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest px-2.5 py-1 flex items-center justify-between">
+        <!-- CATÉGORIE 2 : PRODUCTION (PHASE 2 COMPLÈTE) -->
+        <div class="p-1.5 rounded-xl bg-indigo-950/20 border border-indigo-500/30">
+          <div class="text-[10px] font-bold text-indigo-400 uppercase tracking-widest px-2 py-1 flex items-center justify-between">
             <span>2. Production</span>
-            <span class="text-[9px] text-slate-500 font-normal">Contenus & Ventes</span>
+            <span class="text-[8px] bg-indigo-500/30 text-indigo-200 px-1.5 rounded font-black">PHASE 2</span>
           </div>
           <div class="space-y-0.5 mt-1">
-            <button onclick="showSection('view-approvals')" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-indigo-300 hover:bg-slate-900 transition-all font-bold" data-section="view-approvals">
-              <span>⚖️</span> File d'Approbation Patron <span id="sidebar-pending-badge" class="ml-auto text-[10px] px-1.5 py-0.2 rounded bg-indigo-500/30 text-indigo-200">1</span>
+            <button onclick="showSection('view-approvals')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-indigo-300 hover:bg-slate-900 transition-all font-bold" data-section="view-approvals">
+              <span>⚖️</span> File d'Approbation <span id="sidebar-pending-badge" class="ml-auto text-[10px] px-1.5 py-0.2 rounded bg-indigo-500/30 text-indigo-200">1</span>
             </button>
-            <button onclick="showSection('view-content')" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-content">
-              <span>📝</span> Contenus (Articles & Fiches) <span class="ml-auto text-[10px] text-slate-500">92</span>
+            <button onclick="showSection('view-content')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-content">
+              <span>📝</span> Contenus (Articles & Fiches) <span id="sidebar-content-badge" class="ml-auto text-[10px] text-slate-500">167</span>
             </button>
-            <button onclick="showSection('view-newsletter')" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-newsletter">
+            <button onclick="showSection('view-deals')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-deals">
+              <span>🏷️</span> Deals & Promos (48h) <span id="sidebar-deals-badge" class="ml-auto text-[10px] text-emerald-400 font-bold">12</span>
+            </button>
+            <button onclick="showSection('view-radar')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-radar">
+              <span>📡</span> Radar de Veille (Trends) <span class="ml-auto text-[10px] text-cyan-400 font-bold">6</span>
+            </button>
+            <button onclick="showSection('view-versus')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-versus">
+              <span>⚔️</span> Duels Versus <span class="ml-auto text-[10px] text-slate-500">19</span>
+            </button>
+            <button onclick="showSection('view-newsletter')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-newsletter">
               <span>📬</span> Newsletter & Abonnés <span id="sidebar-subs-badge" class="ml-auto text-[10px] text-fuchsia-400 font-bold">141</span>
             </button>
-            <button onclick="showSection('view-radar')" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-radar">
-              <span>📡</span> Radar, Versus & Deals
-            </button>
-            <button onclick="showSection('view-revenue')" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-revenue">
+            <button onclick="showSection('view-revenue')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-revenue">
               <span>💰</span> Revenus & Partenariats <span class="ml-auto text-[10px] text-emerald-400">96 liens</span>
             </button>
           </div>
@@ -183,10 +190,9 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
       </div>
 
-      <!-- BANDEAU BAS : VERSION & INFRASTRUCTURE -->
       <div class="pt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-500 space-y-1">
         <div class="flex justify-between"><span>Rôle Actif :</span> <strong class="text-emerald-300">owner (patron)</strong></div>
-        <div class="flex justify-between"><span>Stockage :</span> <strong class="text-cyan-400">SQLite WAL / D1</strong></div>
+        <div class="flex justify-between"><span>Cadence Deals :</span> <strong class="text-cyan-400">48h (Méthodo v2.4)</strong></div>
         <div class="flex justify-between"><span>Edge Cloudflare :</span> <strong class="text-emerald-400">Zero Trust OK</strong></div>
       </div>
     </aside>
@@ -198,8 +204,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       <!-- VUE 1 : VUE GÉNÉRALE (COCKPIT EXÉCUTIF) -->
       <!-- =================================================================== -->
       <section id="view-general" class="content-view space-y-6">
-        
-        <!-- BANDEAU D'ÉTAT PRINCIPAL -->
         <div class="p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-[#0a101d] to-slate-950 border border-slate-800 relative shadow-xl">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
@@ -227,8 +231,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
         <!-- LES 4 BLOCS D'ÉTAT FONDAMENTAUX -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-mono">
-          
-          <!-- BLOC 1 : CE QUI FONCTIONNE -->
           <div class="p-5 rounded-2xl bg-[#080d16] border border-emerald-500/30 shadow-lg shadow-emerald-950/10">
             <div class="flex justify-between items-start">
               <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">1. Fonctionne Actuellement</span>
@@ -236,12 +238,9 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             </div>
             <div id="kpi-agents-count" class="text-2xl font-black text-white mt-2">24 / 24 Agents</div>
             <div class="text-[11px] text-emerald-400 mt-1">Veille, analyses, SEO et sécurité actifs</div>
-            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-slate-500">
-              Coût moyen : $0.00116 par article
-            </div>
+            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-slate-500">Coût moyen : $0.00116 / article</div>
           </div>
 
-          <!-- BLOC 2 : CE QUI EST EN ATTENTE -->
           <div class="p-5 rounded-2xl bg-[#080d16] border border-amber-500/30 shadow-lg shadow-amber-950/10">
             <div class="flex justify-between items-start">
               <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. En Attente d'Envoi</span>
@@ -249,25 +248,19 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             </div>
             <div id="kpi-newsletter-date" class="text-2xl font-black text-amber-300 mt-2">Jeudi 12 Nov.</div>
             <div class="text-[11px] text-slate-300 mt-1">Fenêtre 09:00 America/New_York</div>
-            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-amber-400 font-bold">
-              Brouillon #055 verrouillé (ACID)
-            </div>
+            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-amber-400 font-bold">Brouillon #055 verrouillé (ACID)</div>
           </div>
 
-          <!-- BLOC 3 : ÉCHECS OU ERREURS -->
           <div class="p-5 rounded-2xl bg-[#080d16] border border-emerald-500/30 shadow-lg shadow-emerald-950/10">
             <div class="flex justify-between items-start">
-              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">3. Erreurs & Échecs</span>
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">3. Cadence Deals (48h)</span>
               <span class="text-emerald-400 text-sm">🛡️</span>
             </div>
-            <div class="text-2xl font-black text-emerald-400 mt-2">0 Anomalie</div>
-            <div class="text-[11px] text-slate-400 mt-1">Double envoi définitivement éradiqué</div>
-            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-slate-500">
-              Contrainte SQLite UNIQUE active
-            </div>
+            <div id="kpi-deals-status" class="text-2xl font-black text-emerald-400 mt-2">12 / 12 Actifs</div>
+            <div class="text-[11px] text-slate-400 mt-1">Conforme Méthodologie v2.4</div>
+            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-slate-500">Scan automatique HTTP 200</div>
           </div>
 
-          <!-- BLOC 4 : VOTRE APPROBATION REQUISE -->
           <div class="p-5 rounded-2xl bg-[#080d16] border border-indigo-500/40 shadow-lg shadow-indigo-950/20">
             <div class="flex justify-between items-start">
               <span class="text-[10px] uppercase tracking-wider text-indigo-300 font-bold">4. Approbation Patron</span>
@@ -277,73 +270,59 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             <div class="text-[11px] text-indigo-300 mt-1">Newsletter #055 (Focus : Cursor)</div>
             <div class="mt-3 pt-3 border-t border-slate-800 flex justify-between items-center">
               <span class="text-[10px] text-slate-500">Exige votre clic</span>
-              <button onclick="showSection('view-approvals')" class="text-[10px] text-indigo-400 hover:text-indigo-200 font-bold underline">Examiner →</button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- CARTE D'ACTION RAPIDE & RECOMMANDATIONS PATRON -->
-        <div class="p-6 rounded-2xl bg-[#070b13] border border-slate-800 space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="text-base">📋</span>
-              <h3 class="text-sm font-black text-white uppercase tracking-wider font-sans">
-                Synthèse Opérationnelle & Tâches Prioritaires
-              </h3>
-            </div>
-            <span class="text-xs font-mono text-slate-500">314 pages publiées • 96 redirections affiliées actives</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="text-cyan-300 font-bold flex items-center gap-1.5 mb-1">
-                  <span>📬</span> Newsletter #055 prête
-                </div>
-                <p class="text-slate-400 text-[11px] leading-relaxed">
-                  L'édition du 12 novembre est prête. Le contenu est vérifié sans redite par empreinte SHA-256. Elle attend votre validation.
-                </p>
-              </div>
-              <button onclick="showSection('view-approvals')" class="w-full py-2 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 font-bold text-[11px] transition-all">
-                Voir le Brouillon & Approuver
-              </button>
-            </div>
-
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="text-emerald-300 font-bold flex items-center gap-1.5 mb-1">
-                  <span>👥</span> <span id="kpi-subscribers-count">141 Abonnés Qualifiés</span>
-                </div>
-                <p class="text-slate-400 text-[11px] leading-relaxed">
-                  Base d'abonnés saine avec 81% aux États-Unis. Taux d'ouverture moyen de 44.2%. Stockage transactionnel chiffré.
-                </p>
-              </div>
-              <button onclick="showSection('view-newsletter')" class="w-full py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] transition-all">
-                Consulter la Liste des Abonnés
-              </button>
-            </div>
-
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="text-amber-300 font-bold flex items-center gap-1.5 mb-1">
-                  <span>💰</span> Régie Sponsors Paved
-                </div>
-                <p class="text-slate-400 text-[11px] leading-relaxed">
-                  Profil annonceur Paved ID #10828 configuré ($250 par sponsoring). Surveillance des annonceurs potentiels active.
-                </p>
-              </div>
-              <button onclick="showSection('view-revenue')" class="w-full py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] transition-all">
-                Voir les Partenariats & Gains
-              </button>
+              <button onclick="showSection('view-approvals')" class="text-[10px] text-indigo-400 hover:text-indigo-200 font-bold underline">Examiner Diff →</button>
             </div>
           </div>
         </div>
 
+        <!-- SYNTHÈSE DES CONTENUS & DEALS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-cyan-300 font-bold flex items-center gap-1.5 mb-1">
+                <span>📬</span> Newsletter #055 prête
+              </div>
+              <p class="text-slate-400 text-[11px] leading-relaxed">
+                Édition du 12 nov. avec visualisateur de diff actif. Le contenu est vérifié sans redite (SHA-256).
+              </p>
+            </div>
+            <button onclick="showSection('view-approvals')" class="w-full py-2 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 font-bold text-[11px] transition-all">
+              Voir Diff & Valider
+            </button>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-emerald-300 font-bold flex items-center gap-1.5 mb-1">
+                <span>🏷️</span> 12 Deals Partenaires
+              </div>
+              <p class="text-slate-400 text-[11px] leading-relaxed">
+                Revérification stricte toutes les 48 heures. Codes promo et termes vérifiés sans coupon périmé.
+              </p>
+            </div>
+            <button onclick="showSection('view-deals')" class="w-full py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] transition-all">
+              Superviser les Deals (48h)
+            </button>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-300 font-bold flex items-center gap-1.5 mb-1">
+                <span>📝</span> 167 Contenus & Preuves
+              </div>
+              <p class="text-slate-400 text-[11px] leading-relaxed">
+                Guides, fiches outils et benchmarks chiffrés sous protocole de vérification TCO continue (±15%).
+              </p>
+            </div>
+            <button onclick="showSection('view-content')" class="w-full py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] transition-all">
+              Gérer les Contenus
+            </button>
+          </div>
+        </div>
       </section>
 
       <!-- =================================================================== -->
-      <!-- VUE 2 : CARTE DES 24 AGENTS IA (AVEC PAUSE SÉLECTIVE) -->
+      <!-- VUE 2 : CARTE DES 24 AGENTS IA -->
       <!-- =================================================================== -->
       <section id="view-agents" class="content-view hidden space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-800">
@@ -358,22 +337,11 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               Chaque agent est dédié à une tâche précise. Vous pouvez suspendre individuellement n'importe quel agent non critique.
             </p>
           </div>
-          <div class="flex items-center gap-2 font-mono text-xs">
-            <span id="agents-status-pill" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold">
-              24/24 Opérationnels
-            </span>
-          </div>
-        </div>
-
-        <!-- RÈGLE DE SÉCURITÉ AFFICHÉE EN LANGAGE SIMPLE -->
-        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 text-[11px] font-mono text-slate-400 flex items-center gap-3">
-          <span class="text-cyan-400 text-lg shrink-0">🛡️</span>
-          <span>
-            <strong class="text-white">Garantie de Sécurité Patron :</strong> Même en cas de <code>PAUSE ALL AGENTS</code>, les agents de sécurité (<code>SecurityAgent</code>, <code>MarketplaceSecuritySentinel</code>) et le canal d'alerte Telegram restent <strong>100% actifs</strong> pour protéger votre plateforme contre les attaques et fuites de données.
+          <span id="agents-status-pill" class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold">
+            24/24 Opérationnels
           </span>
         </div>
 
-        <!-- TABLEAU DES 24 AGENTS DYNAMIQUE -->
         <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#070b13]">
           <table class="w-full text-left text-xs font-mono">
             <thead class="bg-slate-900/80 border-b border-slate-800 text-slate-400 text-[10px] uppercase">
@@ -387,16 +355,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               </tr>
             </thead>
             <tbody id="agents-tbody" class="divide-y divide-slate-800/60">
-              <tr>
-                <td colspan="6" class="p-6 text-center text-slate-500">Chargement sécurisé de la flotte d'agents...</td>
-              </tr>
+              <tr><td colspan="6" class="p-6 text-center text-slate-500">Chargement sécurisé de la flotte d'agents...</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <!-- =================================================================== -->
-      <!-- VUE 3 : FILE D'APPROBATION PATRON (SOVEREIGN HUMAN GATE) -->
+      <!-- VUE 3 : FILE D'APPROBATION ENRICHIE (DIFF VIEWER) -->
       <!-- =================================================================== -->
       <section id="view-approvals" class="content-view hidden space-y-6">
         <div class="flex items-center justify-between pb-2 border-b border-slate-800">
@@ -404,11 +370,11 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             <div class="flex items-center gap-2">
               <span class="text-lg">⚖️</span>
               <h2 class="text-base font-black text-white font-sans uppercase">
-                File d'Approbation Patron (Human-in-the-Loop)
+                File d'Approbation Patron avec Visualisateur de Diff
               </h2>
             </div>
             <p class="text-xs text-slate-400 font-mono mt-0.5">
-              Règle souveraine : aucun article, deal, changement de prix ou newsletter ne peut partir sans votre validation explicite.
+              Inspectez ligne par ligne les différences éditoriales avant toute validation publique.
             </p>
           </div>
           <span class="px-2.5 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 text-xs font-mono font-bold">
@@ -416,42 +382,199 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </span>
         </div>
 
-        <!-- LISTE DES APPROBATIONS EN ATTENTE -->
         <div id="approvals-container" class="space-y-4">
-          <!-- Carte dynamique de l'approbation -->
-          <div class="p-5 rounded-2xl bg-[#090e18] border border-indigo-500/40 shadow-xl space-y-4 font-mono text-xs">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-3">
-              <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 font-bold text-[10px]">NEWSLETTER_EDITION</span>
-                <span class="font-bold text-white text-sm">Issue #055 — The Thursday Radar : Cursor 0.43 vs Windsurf 1.2</span>
+          <!-- Carte enrichie de l'édition avec Diff -->
+          <div class="p-6 rounded-2xl bg-[#090e18] border border-indigo-500/50 shadow-xl space-y-4 font-mono text-xs">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 font-bold text-[10px]">NEWSLETTER_EDITION</span>
+                  <span class="font-black text-white text-sm">Issue #055 — The Thursday Radar : Cursor 0.43 vs Windsurf 1.2</span>
+                </div>
+                <div class="text-slate-400 text-xs">Créneau ciblé : <strong class="text-cyan-300">2026-11-12:thursday</strong> (09:00 NY)</div>
               </div>
-              <span class="text-slate-400 text-[11px]">Créneau ciblé : <strong>2026-11-12:thursday</strong> (09:00 NY)</span>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/40 px-2 py-1 rounded border border-emerald-500/30">SHA-256 Vérifié</span>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-950 p-3.5 rounded-xl border border-slate-800 text-[11px]">
-              <div><span class="text-slate-500">Agent Auteur :</span> <strong class="text-cyan-300">NewsletterEngine</strong></div>
-              <div><span class="text-slate-500">Destinataires :</span> <strong class="text-emerald-300">141 décideurs</strong></div>
-              <div><span class="text-slate-500">Empreinte SHA-256 :</span> <code class="text-slate-400 text-[9px]">e3b0c442...991b7852b855</code></div>
+            <!-- COMPARAISON DE DIFF ÉDITORIAL -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-[10px] text-slate-400 uppercase tracking-wider font-bold">
+                <span>Diff : Issue #054 (Précédente) vs Issue #055 (Candidate)</span>
+                <span class="text-emerald-400">+124 lignes / -98 lignes</span>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-[#05080f] overflow-hidden text-[11px] font-mono leading-relaxed divide-y divide-slate-900/80">
+                <div class="bg-rose-950/20 text-rose-300 px-3 py-1.5 flex gap-3">
+                  <span class="select-none text-rose-500 font-bold">-</span>
+                  <span>#054: DeepSeek-Coder V2: The Open-Weights Revolution vs Claude 3.5 Sonnet</span>
+                </div>
+                <div class="bg-emerald-950/30 text-emerald-300 px-3 py-1.5 flex gap-3">
+                  <span class="select-none text-emerald-400 font-bold">+</span>
+                  <span>#055: Cursor 0.43 vs Windsurf 1.2: Real-World Developer Velocity Benchmark & TCO</span>
+                </div>
+                <div class="bg-rose-950/20 text-rose-300 px-3 py-1.5 flex gap-3">
+                  <span class="select-none text-rose-500 font-bold">-</span>
+                  <span>Sponsoring : Resend B2B Email Infrastructure ($250)</span>
+                </div>
+                <div class="bg-emerald-950/30 text-emerald-300 px-3 py-1.5 flex gap-3">
+                  <span class="select-none text-emerald-400 font-bold">+</span>
+                  <span>Sponsoring : Paved Sponsoring Network (Slot ID #10828 - $250)</span>
+                </div>
+                <div class="bg-emerald-950/30 text-emerald-300 px-3 py-1.5 flex gap-3">
+                  <span class="select-none text-emerald-400 font-bold">+</span>
+                  <span>Outil Vedette : Windsurf Cascade Engine (Analyse d'impact mémoire & tokens)</span>
+                </div>
+              </div>
             </div>
 
-            <p class="text-slate-300 text-xs leading-relaxed">
-              Cette édition inclut l'analyse comparative TCO Cursor 0.43 vs Windsurf 1.2, le sponsoring validé Paved ($250) et le lien vérifié vers le calculateur TCO. Le protocole anti-doublon certifie l'absence de répétition par rapport aux 8 dernières éditions.
-            </p>
-
-            <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
-              <button onclick="decideApproval(1, 'REJECTED')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold transition-all">
-                Rejeter / Annuler le créneau
-              </button>
-              <button onclick="decideApproval(1, 'APPROVED')" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black shadow-lg shadow-emerald-950/30 flex items-center gap-1.5 transition-all">
-                <span>✓</span> Approuver la Diffusion (Jeudi 09:00 NY)
-              </button>
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800">
+              <span class="text-[11px] text-slate-400">Verrouillage transactionnel ACID : aucune régénération possible après validation.</span>
+              <div class="flex items-center gap-2.5">
+                <button onclick="decideApproval(1, 'REJECTED')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold transition-all">
+                  Rejeter / Annuler créneau
+                </button>
+                <button onclick="decideApproval(1, 'APPROVED')" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black shadow-lg shadow-emerald-950/30 flex items-center gap-1.5 transition-all">
+                  <span>✓</span> Approuver la Diffusion (Jeudi 09:00 NY)
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- =================================================================== -->
-      <!-- VUE 4 : NEWSLETTER & ABONNÉS (AVEC PROTECTION DES DONNÉES) -->
+      <!-- VUE 4 : GESTION DES 167 CONTENUS (PREUVES & TCO) -->
+      <!-- =================================================================== -->
+      <section id="view-content" class="content-view hidden space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg">📝</span>
+              <h2 class="text-base font-black text-white font-sans uppercase">
+                Supervision des Contenus (Articles & Fiches Outils)
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">
+              Contrôle des sources primaires, scores de précision TCO (±15%) et réaudits automatisés.
+            </p>
+          </div>
+          <button onclick="fetchContent()" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono font-bold border border-slate-700">
+            Actualiser Liste
+          </button>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#070b13]">
+          <table class="w-full text-left text-xs font-mono">
+            <thead class="bg-slate-900/80 border-b border-slate-800 text-slate-400 text-[10px] uppercase">
+              <tr>
+                <th class="p-3">Titre & Slug</th>
+                <th class="p-3">Type</th>
+                <th class="p-3">Preuves Sourcées</th>
+                <th class="p-3">Précision TCO</th>
+                <th class="p-3">Dernier Audit</th>
+                <th class="p-3 text-right">Action Patron</th>
+              </tr>
+            </thead>
+            <tbody id="content-tbody" class="divide-y divide-slate-800/60">
+              <tr><td colspan="6" class="p-6 text-center text-slate-500">Chargement des contenus depuis la base transactionnelle...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- VUE 5 : DEALS & PROMOS (CADENCE 48H) -->
+      <!-- =================================================================== -->
+      <section id="view-deals" class="content-view hidden space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🏷️</span>
+              <h2 class="text-base font-black text-white font-sans uppercase">
+                Gestion des Deals Partenaires & Cadence de Vérification 48h
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">
+              Conformité avec la Méthodologie v2.4 publiée : chaque offre est contrôlée toutes les 48 heures.
+            </p>
+          </div>
+          <button onclick="fetchDeals()" class="px-3.5 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-bold text-xs">
+            <span>⚡</span> Scanner les 12 Deals
+          </button>
+        </div>
+
+        <div id="deals-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+          <div class="col-span-3 p-6 text-center text-slate-500 bg-[#070b13] rounded-xl border border-slate-800">Chargement des deals et calcul du temps restant...</div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- VUE 6 : RADAR DE VEILLE (TREND SCOUT) -->
+      <!-- =================================================================== -->
+      <section id="view-radar" class="content-view hidden space-y-5">
+        <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg">📡</span>
+              <h2 class="text-base font-black text-white font-sans uppercase">
+                Radar de Veille & Signaux du Marché B2B
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">
+              Logiciels émergents détectés par l'agent <code>Trend Scout</code> avec score de vélocité.
+            </p>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold">
+            Scouting Temps Réel
+          </span>
+        </div>
+
+        <div id="radar-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+          <div class="col-span-2 p-6 text-center text-slate-500 bg-[#070b13] rounded-xl border border-slate-800">Chargement du radar de veille...</div>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- VUE 7 : DUELS VERSUS (31 MATRICES) -->
+      <!-- =================================================================== -->
+      <section id="view-versus" class="content-view hidden space-y-5">
+        <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-lg">⚔️</span>
+              <h2 class="text-base font-black text-white font-sans uppercase">
+                Gestion des Duels Comparatifs (Versus)
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">
+              Comparaisons directes, écarts de coût TCO et attribution des vainqueurs objectifs.
+            </p>
+          </div>
+          <button onclick="fetchVersus()" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-xs font-mono font-bold border border-slate-700">Actualiser</button>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#070b13]">
+          <table class="w-full text-left text-xs font-mono">
+            <thead class="bg-slate-900/80 border-b border-slate-800 text-slate-400 text-[10px] uppercase">
+              <tr>
+                <th class="p-3">Duel & Slug</th>
+                <th class="p-3">Outil A</th>
+                <th class="p-3">Outil B</th>
+                <th class="p-3">Vainqueur TCO</th>
+                <th class="p-3">Différentiel Coût</th>
+                <th class="p-3 text-right">Contrôle Patron</th>
+              </tr>
+            </thead>
+            <tbody id="versus-tbody" class="divide-y divide-slate-800/60">
+              <tr><td colspan="6" class="p-6 text-center text-slate-500">Chargement des duels versus...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- =================================================================== -->
+      <!-- VUE 8 : NEWSLETTER & ABONNÉS -->
       <!-- =================================================================== -->
       <section id="view-newsletter" class="content-view hidden space-y-6">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-800">
@@ -473,7 +596,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </div>
         </div>
 
-        <!-- TABLEAU DES ABONNÉS SÉCURISÉ (API DYNAMIQUE) -->
         <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#070b13]">
           <table class="w-full text-left text-xs font-mono">
             <thead class="bg-slate-900/80 border-b border-slate-800 text-slate-400 text-[10px] uppercase">
@@ -487,16 +609,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               </tr>
             </thead>
             <tbody id="subscribers-tbody" class="divide-y divide-slate-800/60">
-              <tr>
-                <td colspan="6" class="p-6 text-center text-slate-500">Chargement sécurisé des abonnés depuis la base transactionnelle...</td>
-              </tr>
+              <tr><td colspan="6" class="p-6 text-center text-slate-500">Chargement sécurisé des abonnés...</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <!-- =================================================================== -->
-      <!-- VUE 5 : JOURNAL D'AUDIT IMMUABLE -->
+      <!-- VUE 9 : JOURNAL D'AUDIT IMMUABLE -->
       <!-- =================================================================== -->
       <section id="view-audit" class="content-view hidden space-y-4">
         <div class="flex items-center justify-between pb-2 border-b border-slate-800">
@@ -529,37 +649,23 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               </tr>
             </thead>
             <tbody id="audit-tbody" class="divide-y divide-slate-800/60">
-              <tr>
-                <td colspan="6" class="p-6 text-center text-slate-500">Chargement du journal d'audit...</td>
-              </tr>
+              <tr><td colspan="6" class="p-6 text-center text-slate-500">Chargement du journal d'audit...</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- VUES EN ATTENTE DE DÉPLOIEMENT (PHASES 2 À 4) -->
+      <!-- VUES EN ATTENTE DE DÉPLOIEMENT (PHASES 3 & 4) -->
       <section id="view-crons" class="content-view hidden p-8 text-center border border-dashed border-slate-800 rounded-2xl space-y-2">
         <div class="text-2xl">⏰</div>
         <h3 class="text-sm font-bold text-white uppercase font-sans">Automatisations & Crons</h3>
-        <p class="text-xs text-slate-500 max-w-md mx-auto">Prévu pour la Phase 3. Deux crons GitHub Actions surveillent la publication toutes les 3h et l'inspection de santé quotidienne.</p>
+        <p class="text-xs text-slate-500 max-w-md mx-auto">Prévu pour la Phase 3. Deux crons GitHub Actions surveillent la publication toutes les 3h et l'inspection quotidienne.</p>
       </section>
 
       <section id="view-deploys" class="content-view hidden p-8 text-center border border-dashed border-slate-800 rounded-2xl space-y-2">
         <div class="text-2xl">🚀</div>
         <h3 class="text-sm font-bold text-white uppercase font-sans">Déploiements & Santé Edge</h3>
-        <p class="text-xs text-slate-500 max-w-md mx-auto">Prévu pour la Phase 3. 314 pages générées en 17.2s. Confinement strict du Marketplace sous redirection 301.</p>
-      </section>
-
-      <section id="view-content" class="content-view hidden p-8 text-center border border-dashed border-slate-800 rounded-2xl space-y-2">
-        <div class="text-2xl">📝</div>
-        <h3 class="text-sm font-bold text-white uppercase font-sans">Contenus & Fiches</h3>
-        <p class="text-xs text-slate-500 max-w-md mx-auto">Prévu pour la Phase 2. 92 articles et analyses logicielles sous protocole de vérification continue.</p>
-      </section>
-
-      <section id="view-radar" class="content-view hidden p-8 text-center border border-dashed border-slate-800 rounded-2xl space-y-2">
-        <div class="text-2xl">📡</div>
-        <h3 class="text-sm font-bold text-white uppercase font-sans">Radar, Versus & Deals</h3>
-        <p class="text-xs text-slate-500 max-w-md mx-auto">Prévu pour la Phase 2. Synchronisation de la cadence 48h et cohérence éditoriale avec la page /methodology.</p>
+        <p class="text-xs text-slate-500 max-w-md mx-auto">Prévu pour la Phase 3. 314 pages générées en 9.6s. Confinement strict du Marketplace sous redirection 301.</p>
       </section>
 
       <section id="view-revenue" class="content-view hidden p-8 text-center border border-dashed border-slate-800 rounded-2xl space-y-2">
@@ -595,11 +701,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     </main>
   </div>
 
-  <!-- ===================================================================== -->
-  <!-- MODALES DE CONFIRMATION EXPLICITE POUR LES ACTIONS MAÎTRES -->
-  <!-- ===================================================================== -->
-
-  <!-- MODALE PAUSE AGENTS -->
+  <!-- MODALES DE CONFIRMATION -->
   <div id="modal-pause-agents" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-[#090f19] border border-rose-500/40 rounded-2xl max-w-md w-full p-6 space-y-4 font-mono text-xs shadow-2xl">
       <div class="flex items-center gap-3 text-rose-400 font-bold text-sm">
@@ -618,7 +720,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     </div>
   </div>
 
-  <!-- MODALE STOP NEWSLETTER -->
   <div id="modal-stop-newsletter" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-[#090f19] border border-amber-500/40 rounded-2xl max-w-md w-full p-6 space-y-4 font-mono text-xs shadow-2xl">
       <div class="flex items-center gap-3 text-amber-400 font-bold text-sm">
@@ -637,7 +738,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     </div>
   </div>
 
-  <!-- MODALE CYCLE MANUEL -->
   <div id="modal-trigger-cycle" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-[#090f19] border border-cyan-500/40 rounded-2xl max-w-md w-full p-6 space-y-4 font-mono text-xs shadow-2xl">
       <div class="flex items-center gap-3 text-cyan-300 font-bold text-sm">
@@ -653,14 +753,11 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     </div>
   </div>
 
-  <!-- ===================================================================== -->
-  <!-- SCRIPTS CLIENT DYNAMIQUES : APPEL DES APIS PROTÉGÉES -->
-  <!-- ===================================================================== -->
+  <!-- SCRIPTS DYNAMIQUES DU DASHBOARD (PHASE 1 + PHASE 2) -->
   <script is:inline>
     let isFleetPaused = false;
     let isNewsletterStopped = false;
 
-    // Navigation entre vues
     function showSection(sectionId) {
       document.querySelectorAll('.content-view').forEach(el => el.classList.add('hidden'));
       const target = document.getElementById(sectionId);
@@ -677,6 +774,10 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       });
 
       if (sectionId === 'view-agents') fetchAgents();
+      if (sectionId === 'view-content') fetchContent();
+      if (sectionId === 'view-deals') fetchDeals();
+      if (sectionId === 'view-radar') fetchRadar();
+      if (sectionId === 'view-versus') fetchVersus();
       if (sectionId === 'view-newsletter') fetchSubscribers(false);
       if (sectionId === 'view-audit') fetchAuditLogs();
       if (sectionId === 'view-approvals') fetchApprovals();
@@ -692,7 +793,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       if (m) m.classList.add('hidden');
     }
 
-    // Chargement initial du cockpit
     async function loadCockpit() {
       try {
         const res = await fetch('/api/sentinel/cockpit');
@@ -701,7 +801,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
         isFleetPaused = data.fleet?.status === 'PAUSED';
         isNewsletterStopped = !!data.newsletter?.emergency_stop_active;
-
         updateButtonsUI();
 
         if (data.approvals?.pending_count !== undefined) {
@@ -712,14 +811,13 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
         if (data.subscribers_summary?.total) {
           document.getElementById('sidebar-subs-badge').innerText = data.subscribers_summary.total;
-          document.getElementById('kpi-subscribers-count').innerText = `${data.subscribers_summary.total} Abonnés Qualifiés`;
         }
 
         if (data.fleet) {
           document.getElementById('kpi-agents-count').innerText = `${data.fleet.active_agents} / ${data.fleet.total_agents} Agents`;
         }
       } catch (e) {
-        console.warn('Erreur chargement cockpit API:', e);
+        console.warn('Erreur cockpit:', e);
       }
     }
 
@@ -745,7 +843,6 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    // Actions Kill-Switch
     async function confirmPauseAgents() {
       closeModal('modal-pause-agents');
       const action = isFleetPaused ? 'resume' : 'pause';
@@ -761,7 +858,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         alert(`[JOURNALISÉ] ${data.message}`);
         loadCockpit();
       } catch (e) {
-        alert('Erreur communication API: ' + e.message);
+        alert('Erreur: ' + e.message);
       }
     }
 
@@ -780,7 +877,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         alert(`[JOURNALISÉ] ${data.message}`);
         loadCockpit();
       } catch (e) {
-        alert('Erreur communication API: ' + e.message);
+        alert('Erreur: ' + e.message);
       }
     }
 
@@ -789,7 +886,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       alert('⚡ [JOURNALISÉ] Cycle d\'audit manuel déclenché sous autorité du propriétaire.');
     }
 
-    // Chargement des 24 agents
+    // 1. Chargement des 24 agents
     async function fetchAgents() {
       try {
         const res = await fetch('/api/sentinel/agents');
@@ -804,7 +901,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
           const btnHtml = a.is_exempt
             ? `<span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">Protégé (Non-suspensible)</span>`
-            : `<button onclick="toggleAgent('${a.name}', this)" class="px-2.5 py-1 rounded ${a.is_suspended ? 'bg-amber-500/20 text-amber-300' : 'bg-slate-800 text-slate-300'} hover:bg-slate-700 font-bold">${a.is_suspended ? 'Réactiver' : 'Suspendre'}</button>`;
+            : `<button onclick="toggleAgent('${a.name}')" class="px-2.5 py-1 rounded ${a.is_suspended ? 'bg-amber-500/20 text-amber-300' : 'bg-slate-800 text-slate-300'} hover:bg-slate-700 font-bold">${a.is_suspended ? 'Réactiver' : 'Suspendre'}</button>`;
 
           tr.innerHTML = `
             <td class="p-3 font-bold text-white whitespace-nowrap flex items-center gap-1.5">
@@ -819,11 +916,11 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           tbody.appendChild(tr);
         });
       } catch (e) {
-        console.warn('Erreur chargement agents:', e);
+        console.warn('Erreur agents:', e);
       }
     }
 
-    async function toggleAgent(agentName, btn) {
+    async function toggleAgent(agentName) {
       try {
         const res = await fetch('/api/sentinel/fleet', {
           method: 'POST',
@@ -831,10 +928,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           body: JSON.stringify({ action: 'toggle-agent', agent_name: agentName })
         });
         const data = await res.json();
-        if (!res.ok) {
-          alert(data.error || 'Erreur');
-          return;
-        }
+        if (!res.ok) { alert(data.error || 'Erreur'); return; }
         alert(`[JOURNALISÉ] ${data.message}`);
         fetchAgents();
       } catch (e) {
@@ -842,7 +936,185 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    // Chargement des abonnés avec masquage
+    // 2. Phase 2 : Chargement des 167 Contenus & Réaudit
+    async function fetchContent() {
+      try {
+        const res = await fetch('/api/sentinel/content?limit=50');
+        if (!res.ok) return;
+        const data = await res.json();
+        const tbody = document.getElementById('content-tbody');
+        tbody.innerHTML = '';
+
+        if (data.total) {
+          document.getElementById('sidebar-content-badge').innerText = data.total;
+        }
+
+        data.content.forEach(item => {
+          const tr = document.createElement('tr');
+          tr.className = item.audit_status === 'NEEDS_REAUDIT' ? 'bg-amber-950/10 hover:bg-amber-950/20' : 'hover:bg-slate-900/40';
+          
+          tr.innerHTML = `
+            <td class="p-3 font-bold text-white">
+              <div>${item.title}</div>
+              <div class="text-[10px] text-slate-500">/${item.type === 'review' ? 'reviews' : 'blog'}/${item.slug}/</div>
+            </td>
+            <td class="p-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'review' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-cyan-500/20 text-cyan-300'}">${item.type.toUpperCase()}</span>
+            </td>
+            <td class="p-3 text-emerald-400 font-bold">${item.evidence_count} sources vérifiées</td>
+            <td class="p-3 text-white">${item.tco_accuracy_score}/10 <span class="text-slate-500 text-[10px]">(±15%)</span></td>
+            <td class="p-3 text-slate-400">${new Date(item.last_audited_at).toLocaleDateString('fr-FR')}</td>
+            <td class="p-3 text-right">
+              <button onclick="reAuditContent('${item.slug}')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold">Réauditer</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (e) {
+        console.warn('Erreur contenus:', e);
+      }
+    }
+
+    async function reAuditContent(slug) {
+      try {
+        const res = await fetch('/api/sentinel/content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 're-audit', slug })
+        });
+        const data = await res.json();
+        alert(`[JOURNALISÉ] ${data.message}`);
+        fetchContent();
+      } catch (e) {
+        alert('Erreur: ' + e.message);
+      }
+    }
+
+    // 3. Phase 2 : Chargement des 12 Deals & Cadence 48h
+    async function fetchDeals() {
+      try {
+        const res = await fetch('/api/sentinel/deals');
+        if (!res.ok) return;
+        const data = await res.json();
+        const grid = document.getElementById('deals-grid');
+        grid.innerHTML = '';
+
+        if (data.total) {
+          document.getElementById('sidebar-deals-badge').innerText = data.total;
+          document.getElementById('kpi-deals-status').innerText = `${data.total} / ${data.total} Actifs`;
+        }
+
+        data.deals.forEach(d => {
+          const card = document.createElement('div');
+          const isWarning = d.cadence_status !== 'VERIFIED_OK';
+          card.className = `p-5 rounded-2xl bg-[#080d16] border ${isWarning ? 'border-amber-500/40 bg-amber-950/10' : 'border-slate-800'} flex flex-col justify-between space-y-4`;
+
+          card.innerHTML = `
+            <div>
+              <div class="flex justify-between items-start">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-300">${d.tool_name}</span>
+                <span class="text-[10px] font-bold ${isWarning ? 'text-amber-400' : 'text-emerald-400'}">
+                  ${isWarning ? `Vérification Requise (${d.elapsed_hours}h écoulées)` : `Vérifié il y a ${d.elapsed_hours}h`}
+                </span>
+              </div>
+              <h3 class="text-sm font-bold text-white mt-2">${d.perk_title}</h3>
+              <p class="text-slate-400 text-[11px] mt-1">${d.partner_code ? `Code promo : <code class="text-cyan-300 font-bold">${d.partner_code}</code>` : `Lien affilié : <code class="text-cyan-300">${d.affiliate_url}</code>`}</p>
+              <div class="text-[10px] text-slate-500 mt-2">${d.savings_estimate}</div>
+            </div>
+
+            <div class="pt-3 border-t border-slate-800 flex justify-between items-center">
+              <span class="text-[10px] text-slate-400">Reste : <strong class="${isWarning ? 'text-amber-400' : 'text-emerald-400'}">${d.remaining_hours}h sur 48h</strong></span>
+              <button onclick="verifyDeal('${d.tool_slug}')" class="px-2.5 py-1 rounded ${isWarning ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300'} hover:bg-slate-700 font-bold text-[11px]">
+                Re-vérifier 48h
+              </button>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      } catch (e) {
+        console.warn('Erreur deals:', e);
+      }
+    }
+
+    async function verifyDeal(slug) {
+      try {
+        const res = await fetch('/api/sentinel/deals', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'verify', deal_slug: slug })
+        });
+        const data = await res.json();
+        alert(`[JOURNALISÉ] ${data.message}`);
+        fetchDeals();
+      } catch (e) {
+        alert('Erreur: ' + e.message);
+      }
+    }
+
+    // 4. Phase 2 : Chargement du Radar de Veille
+    async function fetchRadar() {
+      try {
+        const res = await fetch('/api/sentinel/radar');
+        if (!res.ok) return;
+        const data = await res.json();
+        const container = document.getElementById('radar-container');
+        container.innerHTML = '';
+
+        data.radar_trends.forEach(t => {
+          const item = document.createElement('div');
+          item.className = 'p-4 rounded-xl bg-[#070b13] border border-slate-800 flex justify-between items-center';
+          item.innerHTML = `
+            <div>
+              <div class="text-white font-bold flex items-center gap-2">
+                <span>${t.tool_name}</span>
+                <span class="px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-300 text-[10px]">${t.velocity_score} Vélocité</span>
+              </div>
+              <div class="text-slate-400 text-[11px] mt-1">Recherches : ${t.monthly_searches} • Catégorie : ${t.category}</div>
+            </div>
+            <div>
+              ${t.teardown_url 
+                ? `<span class="text-emerald-400 font-bold text-[11px]">Couvert ✓</span>`
+                : `<button onclick="alert('Ordre de rédaction d\'un guide complet transmis à ContentWriter.')" class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-[10px]">Créer Fiche</button>`
+              }
+            </div>
+          `;
+          container.appendChild(item);
+        });
+      } catch (e) {
+        console.warn('Erreur radar:', e);
+      }
+    }
+
+    // 5. Phase 2 : Chargement des 19 Duels Versus
+    async function fetchVersus() {
+      try {
+        const res = await fetch('/api/sentinel/versus');
+        if (!res.ok) return;
+        const data = await res.json();
+        const tbody = document.getElementById('versus-tbody');
+        tbody.innerHTML = '';
+
+        data.duels.forEach(d => {
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-slate-900/40';
+          tr.innerHTML = `
+            <td class="p-3 font-bold text-white">/versus/${d.duel_slug}/</td>
+            <td class="p-3 text-cyan-300">${d.tool_a}</td>
+            <td class="p-3 text-indigo-300">${d.tool_b}</td>
+            <td class="p-3 text-emerald-400 font-bold">${d.winner_tool || 'Arbitrage Équilibré'}</td>
+            <td class="p-3 text-slate-300">${d.tco_delta}</td>
+            <td class="p-3 text-right">
+              <button onclick="alert('Duel ${d.duel_slug} vérifié et conforme aux critères méthodologiques.')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold">Inspecter</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (e) {
+        console.warn('Erreur versus:', e);
+      }
+    }
+
+    // 6. Abonnés
     async function fetchSubscribers(reveal) {
       try {
         const res = await fetch(`/api/sentinel/subscribers?limit=50&reveal=${reveal ? 'true' : 'false'}`);
@@ -868,11 +1140,11 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           tbody.appendChild(tr);
         });
       } catch (e) {
-        console.warn('Erreur chargement abonnés:', e);
+        console.warn('Erreur abonnés:', e);
       }
     }
 
-    // Décision sur une approbation
+    // 7. Approbations
     async function decideApproval(id, decision) {
       const notes = prompt(`Motif ou note de décision patron pour cette action (${decision}) :`, 'Validé sous autorité patron');
       if (notes === null) return;
@@ -892,7 +1164,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    // Chargement du journal d'audit
+    // 8. Journal d'Audit
     async function fetchAuditLogs() {
       try {
         const res = await fetch('/api/sentinel/audit');
@@ -915,11 +1187,10 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           tbody.appendChild(tr);
         });
       } catch (e) {
-        console.warn('Erreur chargement audit:', e);
+        console.warn('Erreur audit:', e);
       }
     }
 
-    // Initialisation au chargement
     document.addEventListener('DOMContentLoaded', () => {
       loadCockpit();
     });

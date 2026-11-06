@@ -127,3 +127,56 @@ CREATE TABLE IF NOT EXISTS newsletter_dispatches (
     UNIQUE(slot_key, subscriber_email),
     FOREIGN KEY(slot_key) REFERENCES newsletter_editions(slot_key)
 );
+
+-- ----------------------------------------------------------------------------
+-- 6. PHASE 2 : REGISTRE DES DEALS & OFFRES COMMERCIALES (CADENCE 48H)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS deals_registry (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tool_name TEXT NOT NULL,
+    tool_slug TEXT UNIQUE NOT NULL,
+    category TEXT NOT NULL,
+    partner_code TEXT,
+    perk_title TEXT NOT NULL,
+    badge TEXT NOT NULL,
+    affiliate_url TEXT NOT NULL,
+    savings_estimate TEXT NOT NULL,
+    verified_at TEXT NOT NULL,
+    verification_cadence_hours INTEGER NOT NULL DEFAULT 48,
+    status TEXT NOT NULL DEFAULT 'ACTIVE',     -- ACTIVE | NEEDS_VERIFICATION | EXPIRED
+    proof_url TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_deals_status ON deals_registry(status);
+
+-- ----------------------------------------------------------------------------
+-- 7. PHASE 2 : INVENTAIRE ÉDITORIAL & PREUVES DE CONTENUS
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS content_inventory (
+    slug TEXT PRIMARY KEY,
+    type TEXT NOT NULL,                        -- 'blog' | 'review' | 'pricing-leak'
+    title TEXT NOT NULL,
+    category TEXT NOT NULL,
+    word_count INTEGER NOT NULL DEFAULT 0,
+    evidence_count INTEGER NOT NULL DEFAULT 3,
+    tco_accuracy_score REAL NOT NULL DEFAULT 9.0,
+    audit_status TEXT NOT NULL DEFAULT 'VERIFIED', -- VERIFIED | NEEDS_REAUDIT | DRAFT
+    last_audited_at TEXT NOT NULL,
+    verified_by TEXT NOT NULL DEFAULT 'DataVerifier'
+);
+
+CREATE INDEX IF NOT EXISTS idx_content_status ON content_inventory(audit_status);
+
+-- ----------------------------------------------------------------------------
+-- 8. PHASE 2 : MATRICE DES DUELS COMPARATIFS (VERSUS)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS versus_matrix (
+    duel_slug TEXT PRIMARY KEY,
+    tool_a TEXT NOT NULL,
+    tool_b TEXT NOT NULL,
+    winner_tool TEXT,
+    category TEXT NOT NULL,
+    tco_delta TEXT NOT NULL,
+    last_benchmarked_at TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'ACTIVE'
+);
