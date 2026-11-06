@@ -715,6 +715,19 @@
         "saas",
         "automation"
       ]
+    },
+    "klap": {
+      "id": 4990100,
+      "url": "https://dev.to/heliatech/klap-the-genesis-of-ai-video-repurposing-and-the-hands-on-guide-to-viral-velocity-19jp",
+      "title": "Klap: The Genesis of AI Video Repurposing and the Hands-on Guide to Viral Velocity",
+      "canonical_url": "https://heliatech.online/blog/klap",
+      "published": true,
+      "tags": [
+        "klap",
+        "aivideo",
+        "contentrepurposing",
+        "saas"
+      ]
     }
   },
   "last_sync": null

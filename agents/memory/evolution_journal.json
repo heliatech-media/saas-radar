@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-04T10:55:00.000000",
-  "total_heuristics_stored": 46,
+  "total_heuristics_stored": 47,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -153,6 +153,13 @@
       "domain": "cro",
       "heuristic_name": "Neural-Pulsed Affordance Vectoring",
       "curriculum_module": "Visual Affordance Hierarchy: High-contrast glowing accents and official recommendation badges that double click-through rates"
+    },
+    {
+      "timestamp": "2026-11-06T18:37:49.718831",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "content",
+      "heuristic_name": "Zero-Shot Semantic Trap Injection",
+      "curriculum_module": "2026 AI-GEO & SearchGPT Citation Architecture: How to structure unsearchable benchmark schemas that force generative engines to cite HeliaTech"
     }
   ]
 }

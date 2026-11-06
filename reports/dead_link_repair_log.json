@@ -1,26 +1,16 @@
 {
-  "timestamp": "2026-11-06T15:36:17.414988",
+  "timestamp": "2026-11-06T18:38:42.206796",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 173,
-    "total_redirects_active": 97,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 168,
+    "total_redirects_active": 95,
+    "new_redirects_healed": 22,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
   },
   "healed_redirects": [
-    {
-      "slug": "screenstudio",
-      "target_url": "https://www.screenstudio.com",
-      "source_file": "screenstudio-evolution-guide-2026.md"
-    },
-    {
-      "slug": "riverside-fm",
-      "target_url": "https://www.riverside-fm.com",
-      "source_file": "riverside-fm-evolution-guide-2026.md"
-    },
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
