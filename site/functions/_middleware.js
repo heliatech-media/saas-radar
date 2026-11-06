@@ -40,8 +40,13 @@ export async function onRequest(context) {
     return Response.redirect(new URL(target, 'https://heliatech.online').toString(), 301);
   }
 
-  // 4. Edge Authentication Gate for /sentinel, /sentinel/*, and administrative cockpit
-  if (url.pathname === '/sentinel' || url.pathname.startsWith('/sentinel/')) {
+  // 4. Edge Authentication Gate for /sentinel, /sentinel/*, and /api/sentinel/*
+  if (
+    url.pathname === '/sentinel' || 
+    url.pathname.startsWith('/sentinel/') ||
+    url.pathname === '/api/sentinel' ||
+    url.pathname.startsWith('/api/sentinel/')
+  ) {
     const cfJwt = context.request.headers.get('Cf-Access-Jwt-Assertion');
     const cfEmail = context.request.headers.get('Cf-Access-Authenticated-User-Email');
     const authHeader = context.request.headers.get('Authorization');

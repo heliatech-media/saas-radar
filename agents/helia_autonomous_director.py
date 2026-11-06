@@ -127,7 +127,38 @@ class HeliaAutonomousDirector:
         timestamp = datetime.now().strftime("%H:%M:%S")
         print(f"[{timestamp}] [{agent_name}] {icon} {message}")
 
+    def get_governance_controls(self) -> dict:
+        """Reads real-time operational state from the private transactional governance database."""
+        db_path = ROOT_DIR / "data" / "sentinel_governance.db"
+        if not db_path.exists():
+            return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
+        try:
+            import sqlite3
+            import json
+            conn = sqlite3.connect(db_path)
+            conn.row_factory = sqlite3.Row
+            row = conn.execute("SELECT fleet_status, newsletter_emergency_stop, suspended_agents FROM fleet_controls WHERE id = 1").fetchone()
+            conn.close()
+            if row:
+                suspended = json.loads(row["suspended_agents"]) if row["suspended_agents"] else []
+                return {
+                    "fleet_status": row["fleet_status"],
+                    "newsletter_emergency_stop": row["newsletter_emergency_stop"],
+                    "suspended_agents": suspended
+                }
+        except Exception as e:
+            self.log("Helia-Governance", f"Error reading governance DB: {e}", "⚠️")
+        return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
+
     def execute_autonomous_growth_cycle(self, auto_push: bool = True):
+        controls = self.get_governance_controls()
+        if controls.get("fleet_status") == "PAUSED":
+            self.log("Helia-Governance", "⏸️ PAUSE ALL AGENTS IS ACTIVE (Commanded by Owner via Sentinel Admin).", "⏸️")
+            self.log("Helia-Governance", "SecurityAgent and NotifierAgent remain 100% active to guard infrastructure.", "🛡️")
+            sec_audit = self.security.audit_security_posture()
+            self.log("Helia-CyberDefense", f"Status: {sec_audit['status']} (Defenses armed during fleet pause)", "✅")
+            self.log("Helia-Core", "Autonomous cycle halted cleanly. Zero articles or builds triggered.", "💤")
+            return {"status": "PAUSED", "reason": "Owner Emergency Pause"}
         """
         Executes a complete end-to-end autonomous growth cycle:
         1. Cybersecurity audit

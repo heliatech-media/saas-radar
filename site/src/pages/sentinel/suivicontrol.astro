@@ -121,19 +121,7 @@ try {
     }
   }
 } catch (e) {}
-try {
-  const subCandidates = [
-    path.resolve(rootDir, 'site/src/data/subscribers_ledger.json'),
-    path.resolve(rootDir, 'data/subscribers_ledger.json'),
-    path.resolve('src/data/subscribers_ledger.json')
-  ];
-  for (const sc of subCandidates) {
-    if (fs.existsSync(sc)) {
-      subscribersData = JSON.parse(fs.readFileSync(sc, 'utf-8'));
-      break;
-    }
-  }
-} catch (e) {}
+// Subscribers ledger reading removed in Sentinel V2 to protect PII from static builds.
 
 // Read Paved Marketplace Telemetry
 let newsletterSupervision: any = {
@@ -801,7 +789,13 @@ const catalog = {
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-800/60 text-slate-300">
-                  {subscribersData.subscribers.map((sub: any) => (
+                  {subscribersData.subscribers.length === 0 ? (
+                    <tr>
+                      <td colspan="6" class="p-6 text-center text-slate-400 font-mono text-xs">
+                        🔒 <strong>Données Personnelles Protégées (Sentinel V2) :</strong> Les abonnés sont stockés dans la base transactionnelle privée et ne sont plus compilés en clair dans le build statique. Consultez et gérez la liste sécurisée via <a href="/sentinel/admin" class="text-cyan-400 underline font-bold">Sentinel Admin V2</a>.
+                      </td>
+                    </tr>
+                  ) : subscribersData.subscribers.map((sub: any) => (
                     <tr class="hover:bg-slate-800/40 transition-colors sub-row">
                       <td class="p-4 font-semibold text-white flex items-center gap-2">
                         <span>{sub.email}</span>
