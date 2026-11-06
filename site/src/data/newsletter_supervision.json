@@ -1,0 +1,57 @@
+{
+  "updated_at": "2026-11-06T17:14:39.238891",
+  "engine_version": "HeliaTech Forensic Newsletter Engine v2.0 (Anti-Duplicate)",
+  "total_tracked_editions": 2,
+  "journal": [
+    {
+      "id": 2,
+      "slot_key": "2026-11-05:thursday",
+      "scheduled_date": "2026-11-05",
+      "edition_type": "thursday",
+      "issue_number": "#054",
+      "issue_number_raw": 54,
+      "status": "sent",
+      "subject": "⚡ [THE RADAR #044] Cursor Teardown & Benchmark",
+      "content_hash": "ddff93d849b7581bde23b6c674c06c55fc3d97d8d50be877a28d674455cebe82",
+      "content_hash_short": "ddff93d849b7581b...",
+      "rejection_reason": null,
+      "selected_items": {
+        "featureArticleId": "cursor",
+        "versusId": "make-vs-zapier",
+        "dealId": "make-pro"
+      },
+      "recipients_total": 1,
+      "recipients_sent": 1,
+      "recipients_ignored": 0,
+      "duplicates_blocked": 0,
+      "created_at": "2026-11-05T01:52:10.468716",
+      "validated_at": null,
+      "dispatched_at": "2026-11-05T01:52:10.468716"
+    },
+    {
+      "id": 1,
+      "slot_key": "2026-11-01:thursday",
+      "scheduled_date": "2026-11-01",
+      "edition_type": "thursday",
+      "issue_number": "#043",
+      "issue_number_raw": 43,
+      "status": "sent",
+      "subject": "⚡ [THE RADAR #043] Cursor Teardown & Benchmark",
+      "content_hash": "6f3f09758b48091939ea9ee42500655e19260faabc05e829730f79e255d06116",
+      "content_hash_short": "6f3f09758b480919...",
+      "rejection_reason": null,
+      "selected_items": {
+        "featureArticleId": "cursor",
+        "versusId": "make-vs-zapier",
+        "dealId": "make-pro"
+      },
+      "recipients_total": 1,
+      "recipients_sent": 1,
+      "recipients_ignored": 0,
+      "duplicates_blocked": 0,
+      "created_at": "2026-11-01T02:09:31.619376",
+      "validated_at": null,
+      "dispatched_at": "2026-11-01T02:09:31.619376"
+    }
+  ]
+}

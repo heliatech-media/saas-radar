@@ -105,6 +105,28 @@ try {
 } catch (e) {}
 
 // Read Auto-Evolution Telemetry (Helia-AutoEvolution)
+let newsletterSupervision: any = {
+  updated_at: new Date().toISOString(),
+  engine_version: "HeliaTech Forensic Newsletter Engine v2.0 (Anti-Duplicate)",
+  total_tracked_editions: 0,
+  journal: []
+};
+try {
+  const newsCandidates = [
+    path.resolve(rootDir, 'site/src/data/newsletter_supervision.json'),
+    path.resolve(rootDir, 'site/public/data/newsletter_supervision.json'),
+    path.resolve(rootDir, 'data/newsletter_supervision.json'),
+    path.resolve('src/data/newsletter_supervision.json')
+  ];
+  for (const nc of newsCandidates) {
+    if (fs.existsSync(nc)) {
+      newsletterSupervision = JSON.parse(fs.readFileSync(nc, 'utf-8'));
+      break;
+    }
+  }
+} catch (e) {}
+
+// Read Auto-Evolution Telemetry (Helia-AutoEvolution)
 let evolutionTelemetry: any = null;
 try {
   const evoFile = path.resolve(rootDir, 'site/src/data/evolution_telemetry.json');
@@ -397,6 +419,9 @@ const catalog = {
           </button>
           <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all" data-tab="tab-report">
             📑 Dernier Rapport Exécutif
+          </button>
+          <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all font-bold" data-tab="tab-newsletter-governance">
+            🛡️ Gouvernance Newsletter ({newsletterSupervision.journal?.length || 0})
           </button>
           <button class="tab-btn px-4 py-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all" data-tab="tab-controls">
             🎛️ Console de Contrôle Patron
@@ -1300,6 +1325,152 @@ const catalog = {
             <div id="console-output" class="font-mono text-xs text-emerald-400 h-24 overflow-y-auto">
               [SYSTEM] Helia Admin Console prête. 12 agents en écoute.
             </div>
+          </div>
+        </div>
+
+        <!-- TAB: NEWSLETTER GOVERNANCE (ANTI-DUPLICATION) -->
+        <div id="tab-newsletter-governance" class="tab-content hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">🛡️</span>
+              <div>
+                <h2 class="text-lg font-black text-white flex items-center gap-2">
+                  Journal de Gouvernance Anti-Duplication Newsletter (ACID Slot Lock)
+                </h2>
+                <p class="text-xs text-slate-400">Verrou ACID unique par créneau (mardi/jeudi), vérification d'empreinte SHA-256 et isolation absolue des destinataires.</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+              ACID Pipeline Actif
+            </span>
+          </div>
+
+          <!-- Editions Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-800/80 bg-slate-950/70">
+            <table class="w-full text-left text-xs font-mono">
+              <thead>
+                <tr class="bg-slate-900/80 border-b border-slate-800 text-slate-400 uppercase text-[10px] tracking-wider">
+                  <th class="p-3.5">Créneau (Slot Key)</th>
+                  <th class="p-3.5">Issue #</th>
+                  <th class="p-3.5">Statut</th>
+                  <th class="p-3.5">Sujet & Empreinte SHA-256</th>
+                  <th class="p-3.5">Blocs Éditoriaux</th>
+                  <th class="p-3.5 text-right">Métriques Envoi</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60">
+                {newsletterSupervision.journal && newsletterSupervision.journal.length > 0 ? (
+                  newsletterSupervision.journal.map((ed: any) => {
+                    const statusColor = 
+                      ed.status === 'sent' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' :
+                      ed.status === 'validated' ? 'bg-blue-500/20 text-blue-300 border-blue-500/30' :
+                      ed.status === 'sending' ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' :
+                      ed.status === 'blocked' ? 'bg-rose-500/20 text-rose-300 border-rose-500/30' :
+                      ed.status === 'cancelled' ? 'bg-slate-500/20 text-slate-400 border-slate-500/30' :
+                      'bg-slate-800 text-slate-300 border-slate-700';
+
+                    return (
+                      <tr class="hover:bg-slate-900/40 transition-colors">
+                        <td class="p-3.5 whitespace-nowrap">
+                          <div class="font-bold text-white flex items-center gap-1.5">
+                            <span>📅</span>
+                            <code>{ed.slot_key}</code>
+                          </div>
+                          <div class="text-[10px] text-slate-500 mt-0.5">
+                            {ed.scheduled_date} ({ed.edition_type})
+                          </div>
+                        </td>
+                        <td class="p-3.5 whitespace-nowrap">
+                          <span class={`font-bold ${ed.issue_number_raw ? 'text-cyan-300' : 'text-slate-500'}`}>
+                            {ed.issue_number}
+                          </span>
+                        </td>
+                        <td class="p-3.5 whitespace-nowrap">
+                          <span class={`px-2 py-0.5 rounded text-[10px] font-bold uppercase border ${statusColor}`}>
+                            {ed.status}
+                          </span>
+                          {ed.rejection_reason && (
+                            <div class="mt-1 text-[10px] text-rose-400 max-w-xs break-words bg-rose-950/40 p-1.5 rounded border border-rose-800/40">
+                              ⚠️ {ed.rejection_reason}
+                            </div>
+                          )}
+                        </td>
+                        <td class="p-3.5 min-w-[240px]">
+                          <div class="font-sans font-semibold text-white text-xs line-clamp-1 mb-1" title={ed.subject}>
+                            {ed.subject}
+                          </div>
+                          <div class="flex items-center gap-1.5 text-[10px] text-slate-400">
+                            <span class="text-slate-500 font-bold">SHA:</span>
+                            <code class="text-slate-300 bg-slate-900 px-1 py-0.5 rounded border border-slate-800" title={ed.content_hash}>
+                              {ed.content_hash_short}
+                            </code>
+                          </div>
+                        </td>
+                        <td class="p-3.5 whitespace-nowrap">
+                          <div class="space-y-0.5 text-[10px]">
+                            {ed.selected_items?.featureArticleId && (
+                              <div class="text-slate-400">
+                                <span class="text-slate-500">Article:</span> <span class="text-cyan-300 font-semibold">{ed.selected_items.featureArticleId}</span>
+                              </div>
+                            )}
+                            {ed.selected_items?.versusId && (
+                              <div class="text-slate-400">
+                                <span class="text-slate-500">Versus:</span> <span class="text-fuchsia-300 font-semibold">{ed.selected_items.versusId}</span>
+                              </div>
+                            )}
+                            {ed.selected_items?.dealId && (
+                              <div class="text-slate-400">
+                                <span class="text-slate-500">Deal:</span> <span class="text-emerald-300 font-semibold">{ed.selected_items.dealId}</span>
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                        <td class="p-3.5 text-right whitespace-nowrap">
+                          <div class="flex flex-col items-end gap-1">
+                            <div class="flex items-center gap-2">
+                              <span class="text-emerald-400 font-bold">{ed.recipients_sent} envoyés</span>
+                              <span class="text-slate-600">/</span>
+                              <span class="text-slate-400">{ed.recipients_total}</span>
+                            </div>
+                            {ed.duplicates_blocked > 0 && (
+                              <div class="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">
+                                🛡️ {ed.duplicates_blocked} doublons bloqués
+                              </div>
+                            )}
+                            {ed.recipients_ignored > 0 && (
+                              <div class="text-[10px] text-slate-500">
+                                {ed.recipients_ignored} ignorés
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                ) : (
+                  <tr>
+                    <td colspan="6" class="p-6 text-center text-slate-500 italic">
+                      Aucun créneau enregistré dans le journal de gouvernance.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pipeline Rules Notice -->
+          <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2 text-xs font-mono">
+            <div class="text-white font-bold flex items-center gap-2">
+              <span>📋</span> Règles Métier du Pipeline Anti-Duplication
+            </div>
+            <ul class="text-slate-400 space-y-1 list-disc list-inside">
+              <li><strong class="text-cyan-300">Contrainte d'unicité SQLite WAL :</strong> <code class="text-slate-300">UNIQUE(scheduled_date, edition_type)</code> empêche tout déclenchement concurrent ou double clic manuel.</li>
+              <li><strong class="text-cyan-300">Séparation stricte du pipeline :</strong> <code class="text-slate-300">Planifier → Créer brouillon → Contenu → Valider → Envoyer → Archiver</code>. Le job d'envoi ne régénère JAMAIS de contenu.</li>
+              <li><strong class="text-cyan-300">Empreinte SHA-256 :</strong> Blocage automatique si le hash correspond à l'une des 8 dernières éditions, ou si le sujet a &gt; 85% de similarité.</li>
+              <li><strong class="text-cyan-300">Cooldown éditorial :</strong> Aucun article principal, duel ou deal ne peut être répété dans les 2 éditions précédentes.</li>
+              <li><strong class="text-cyan-300">Numérotation garantie :</strong> Le numéro <code class="text-cyan-400">ISSUE #</code> n'est alloué qu'à la validation et au verrouillage effectif.</li>
+              <li><strong class="text-cyan-300">Double protection destinataire :</strong> <code class="text-slate-300">UNIQUE(slot_key, subscriber_id)</code> et <code class="text-slate-300">UNIQUE(slot_key, subscriber_email)</code> garantissent au maximum 1 email par abonné par créneau.</li>
+            </ul>
           </div>
         </div>
 

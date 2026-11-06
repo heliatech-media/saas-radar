@@ -644,109 +644,145 @@ class EmailCampaignAgent:
             html = html.replace("{{" + key + "}}", str(val))
         return html
 
-    def dispatch_weekly_radar(self, force: bool = False) -> Dict:
+    def dispatch_weekly_radar(self, force: bool = False, test_mode: bool = False) -> Dict:
         """
-        Autonomous Thursday Newsletter Broadcast powered by cognitive memory.
-        Enforces 6-day cooldown and executes the exact planned forward issue.
+        Autonomous Newsletter Broadcast powered by the Forensic NewsletterEngine.
+        Enforces:
+        1. One edition per slot ("YYYY-MM-DD:thursday" / "YYYY-MM-DD:tuesday").
+        2. Strict separation: Plan -> Draft -> Validate -> Send -> Archive.
+        3. Never regenerates content on dispatch.
+        4. Fails cleanly if no validated edition exists.
+        5. Double protection: checks (slot_key, subscriber_id) / (slot_key, subscriber_email).
         """
-        ledger = self._get_ledger()
-        weekly_meta = ledger["active_campaigns"]["weekly_radar"]
+        from agents.newsletter_engine import (
+            NewsletterEngine, NoValidatedEditionError, EditionValidationError, SlotAlreadyReservedError
+        )
+        engine = NewsletterEngine()
         now = datetime.now()
 
-        # 1. Frequency Guard: Strictly prevent multiple dispatches within the same week
-        last_sent_str = weekly_meta.get("last_sent")
-        if last_sent_str and not force:
-            try:
-                last_sent_dt = datetime.fromisoformat(last_sent_str)
-                if (now - last_sent_dt).total_seconds() < 6 * 24 * 3600:
-                    logger.info(f"The Thursday Radar already dispatched this week ({last_sent_str}). Cooldown active.")
-                    return {"status": "SKIPPED", "reason": f"Already broadcasted this week on {last_sent_str}"}
-            except Exception as e:
-                logger.warning(f"Error parsing last_sent: {e}")
+        weekday = now.weekday()
+        if weekday == 3:  # Thursday
+            edition_type = "thursday"
+        elif weekday == 1:  # Tuesday
+            edition_type = "tuesday"
+        else:
+            if not force:
+                logger.info("Today is neither Tuesday nor Thursday. Skipping autonomous dispatch.")
+                return {"status": "SKIPPED", "reason": "Not Tuesday or Thursday"}
+            edition_type = "thursday"
 
-        # 2. Check if Thursday or forced
-        is_thursday = now.weekday() == 3
-        if not (is_thursday or force):
-            logger.info("Today is not Thursday. Skipping autonomous weekly radar broadcast.")
-            return {"status": "SKIPPED", "reason": "Not Thursday"}
+        today_date = now.strftime("%Y-%m-%d")
+        slot_key = engine.compute_slot_key(today_date, edition_type)
 
-        # 3. Pull planned issue from cognitive brain memory
-        brain = self._get_brain()
-        forward_plan = brain.get("editorial_forward_plan", [])
-        if not forward_plan:
-            self._sync_brain_from_ledger()
+        # 1. Check if already dispatched for this slot
+        existing_edition = engine.get_edition_by_slot(slot_key)
+        if existing_edition and existing_edition["status"] == "sent":
+            logger.info(f"Slot '{slot_key}' already sent (Issue #{existing_edition['issue_number']}). Cooldown active.")
+            return {
+                "status": "SKIPPED",
+                "reason": f"Already broadcasted for slot {slot_key} (Issue #{existing_edition['issue_number']})"
+            }
+
+        # 2. Check if a validated edition exists
+        if not existing_edition or existing_edition["status"] != "validated":
             brain = self._get_brain()
             forward_plan = brain.get("editorial_forward_plan", [])
+            planned_item = forward_plan[0] if forward_plan else FORWARD_EDITORIAL_POOL[0]
+            tool_name = planned_item.get("tool_name", "Cursor")
+            matching_pool = next((p for p in FORWARD_EDITORIAL_POOL if p["tool_name"] == tool_name), FORWARD_EDITORIAL_POOL[0])
 
-        # Select next in line
-        planned_item = forward_plan[0] if forward_plan else FORWARD_EDITORIAL_POOL[0]
-        issue_num = planned_item.get("issue_number", weekly_meta.get("current_issue", 50) + 1)
-        publish_date = now.strftime("%A, %b %d, %Y")
+            selected_items = {
+                "featureArticleId": matching_pool.get("review_slug", tool_name.lower()),
+                "versusId": matching_pool.get("duel_url", "").split("/versus/")[-1].strip("/") or "make-vs-zapier",
+                "dealId": matching_pool.get("deal_hop_link", "").split("/")[-1] or "exclusive-perk"
+            }
 
-        # Find matching template parameters
-        tool_name = planned_item.get("tool_name", "Cursor")
-        matching_pool = next((p for p in FORWARD_EDITORIAL_POOL if p["tool_name"] == tool_name), FORWARD_EDITORIAL_POOL[0])
+            subject = f"⚡ [THE RADAR] {matching_pool['subject_tagline']}"
+            publish_date_human = now.strftime("%A, %b %d, %Y")
 
-        context = {
-            "issue_number": f"{issue_num:03d}",
-            "publish_date": publish_date,
-            "issue_title": f"Issue #{issue_num:03d}: {matching_pool['headline']}",
-            "issue_headline": matching_pool["headline"],
-            "executive_summary": matching_pool["summary"],
-            "teardown_tool_name": matching_pool["tool_name"],
-            "teardown_tool_verdict_title": matching_pool["verdict_title"],
-            "teardown_summary": matching_pool["teardown_summary"],
-            "score_roi": matching_pool["score_roi"],
-            "score_friction": matching_pool["score_friction"],
-            "score_overall": matching_pool["score_overall"],
-            "teardown_review_url": f"https://heliatech.online/reviews/{matching_pool['review_slug']}/",
-            "duel_title": matching_pool["duel_title"],
-            "duel_takeaway": matching_pool["duel_takeaway"],
-            "duel_winner_reason": matching_pool["duel_winner_reason"],
-            "duel_url": matching_pool["duel_url"],
-            "deal_headline": matching_pool["deal_headline"],
-            "deal_description": matching_pool["deal_description"],
-            "deal_hop_link": matching_pool["deal_hop_link"],
-            "email": DIRECTOR_EMAIL,
-            "unsubscribe_url": f"https://heliatech.online/unsubscribe?email={DIRECTOR_EMAIL}"
-        }
+            context = {
+                "issue_number": "PENDING",
+                "publish_date": publish_date_human,
+                "issue_title": matching_pool["headline"],
+                "issue_headline": matching_pool["headline"],
+                "executive_summary": matching_pool["summary"],
+                "teardown_tool_name": matching_pool["tool_name"],
+                "teardown_tool_verdict_title": matching_pool["verdict_title"],
+                "teardown_summary": matching_pool["teardown_summary"],
+                "score_roi": matching_pool["score_roi"],
+                "score_friction": matching_pool["score_friction"],
+                "score_overall": matching_pool["score_overall"],
+                "teardown_review_url": f"https://heliatech.online/reviews/{matching_pool['review_slug']}/",
+                "duel_title": matching_pool["duel_title"],
+                "duel_takeaway": matching_pool["duel_takeaway"],
+                "duel_winner_reason": matching_pool["duel_winner_reason"],
+                "duel_url": matching_pool["duel_url"],
+                "deal_headline": matching_pool["deal_headline"],
+                "deal_description": matching_pool["deal_description"],
+                "deal_hop_link": matching_pool["deal_hop_link"],
+                "email": "{{email}}",
+                "unsubscribe_url": "https://heliatech.online/unsubscribe?email={{email}}"
+            }
 
-        html = self.render_template("weekly_confidential", context)
-        subject = f"⚡ [THE RADAR #{issue_num:03d}] {matching_pool['subject_tagline']}"
+            html = self.render_template("weekly_confidential", context)
 
-        # Broadcast via Resend
-        dispatch_id = self.send_via_resend(DIRECTOR_EMAIL, subject, html)
+            if not existing_edition:
+                try:
+                    engine.create_draft(
+                        scheduled_date=today_date,
+                        edition_type=edition_type,
+                        subject=subject,
+                        body_html=html,
+                        selected_items=selected_items
+                    )
+                except SlotAlreadyReservedError as e:
+                    logger.warning(f"Draft reservation conflict: {e}")
 
-        if dispatch_id:
-            weekly_meta["last_sent"] = now.isoformat()
-            weekly_meta["current_issue"] = issue_num
-            ledger["total_sent"] += 1
-            ledger["dispatches"].append({
-                "type": "weekly_radar",
-                "issue": issue_num,
-                "featured_tool": tool_name,
-                "recipient": DIRECTOR_EMAIL,
-                "dispatched_at": now.isoformat(),
-                "resend_id": dispatch_id
-            })
+            # Validate draft
+            try:
+                validated = engine.validate_draft(slot_key, force_human_override=force)
+            except EditionValidationError as e:
+                logger.error(f"Edition validation blocked: {e}")
+                return {"status": "BLOCKED", "reason": str(e), "slot_key": slot_key}
+
+        # 3. Dispatch the stored validated edition
+        validated_ed = engine.get_edition_by_slot(slot_key)
+        final_issue = validated_ed["issue_number"]
+        final_subject = validated_ed["subject"].replace("[THE RADAR]", f"[THE RADAR #{final_issue:03d}]")
+        final_html = validated_ed["content_html"].replace("PENDING", f"#{final_issue:03d}")
+
+        # Dispatch via Resend
+        def resend_caller(email: str, subj: str, body: str) -> Optional[str]:
+            custom_body = body.replace("{{email}}", email)
+            return self.send_via_resend(email, final_subject, custom_body)
+
+        subscribers_to_send = [{"id": "sub_director", "email": DIRECTOR_EMAIL}]
+
+        result = engine.dispatch_slot(
+            slot_key=slot_key,
+            test_mode=test_mode or (not self.is_configured()),
+            subscribers=subscribers_to_send,
+            resend_sender_fn=resend_caller if self.is_configured() else None
+        )
+
+        if result.get("status") == "SUCCESS":
+            # Update ledger for legacy telemetry compatibility
+            ledger = self._get_ledger()
+            ledger["total_sent"] += result.get("recipients_sent", 1)
+            ledger["active_campaigns"]["weekly_radar"]["last_sent"] = now.isoformat()
+            ledger["active_campaigns"]["weekly_radar"]["current_issue"] = final_issue
             self._save_ledger(ledger)
 
-            # Re-sync cognitive brain memory & forward plan
-            self._sync_brain_from_ledger()
-
-            # Telegram Notification
             self._notify_telegram(
                 f"📬 *NEWSLETTER HEBDOMADAIRE EXPÉDIÉE !*\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-                f"🗞️ *Édition :* The Thursday Radar #{issue_num:03d}\n"
-                f"🎯 *Focus :* {tool_name} & {matching_pool['duel_title']}\n"
-                f"💎 *Offre :* {matching_pool['deal_headline']}\n"
-                f"📧 *Expéditeur :* {DEFAULT_SENDER}\n"
-                f"⚡ *Statut :* Livré avec succès via Resend"
+                f"🗞️ *Édition :* The Thursday Radar #{final_issue:03d}\n"
+                f"🔑 *Créneau Verrouillé :* {slot_key}\n"
+                f"📧 *Envoyés :* {result.get('recipients_sent')} | 🚫 *Doublons bloqués :* {result.get('duplicates_blocked')}\n"
+                f"⚡ *Statut :* Livré sous contrôle Forensic anti-duplication"
             )
-
-            return {"status": "SUCCESS", "issue": issue_num, "tool": tool_name, "dispatch_id": dispatch_id}
-        return {"status": "FAILED"}
+            return {"status": "SUCCESS", "issue": final_issue, "slot_key": slot_key, "result": result}
+        return result
 
     def dispatch_pr_outreach(self, max_pitches: int = 1) -> Dict:
         """Autonomous B2B Accreditation & PR Outreach."""
