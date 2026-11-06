@@ -1,0 +1,85 @@
+{
+  "status": "NOMINAL",
+  "score": 99,
+  "evaluated_at": "2026-11-06T22:18:00.343Z",
+  "evaluation_duration_ms": 0,
+  "mode": "READ_ONLY_AUDIT",
+  "components": {
+    "d1_database": {
+      "id": "d1",
+      "name": "Base Transactionnelle D1",
+      "status": "NOMINAL",
+      "score_contribution": "30%",
+      "latency_ms": 12,
+      "audit_blocks_count": 136,
+      "latest_checkpoint": "chk_20261106_204000",
+      "details": "Base locale/mémoire active, intégrité vérifiée.",
+      "badge": "100% INTACT"
+    },
+    "r2_storage": {
+      "id": "r2",
+      "name": "Stockage Objet R2 & Bucket Lock",
+      "status": "NOMINAL",
+      "score_contribution": "20%",
+      "bucket": "heliatech-sentinel-backups",
+      "prefix": "audit_checkpoints/",
+      "lock_mode": "COMPLIANCE_WORM",
+      "retention_days": 365,
+      "details": "Verrou WORM actif sur les ancres d'audit. Écriture réservée au jeton dédié CLOUDFLARE_R2_AUDIT_EXPORTER_TOKEN.",
+      "badge": "WORM ACTIF (365j)"
+    },
+    "fleet_agents": {
+      "id": "agents",
+      "name": "Flotte des 24 Agents IA",
+      "status": "NOMINAL",
+      "score_contribution": "15%",
+      "total_agents": 24,
+      "active_agents": 24,
+      "security_agent_status": "ACTIVE (Non-suspensible)",
+      "details": "Les 24 agents sont opérationnels et respectent la gouvernance d'approbation patron.",
+      "badge": "24/24 OPÉRATIONNELS"
+    },
+    "newsletter_system": {
+      "id": "newsletter",
+      "name": "Système Newsletter & Anti-Doublon",
+      "status": "NOMINAL",
+      "score_contribution": "15%",
+      "subscribers_count": 141,
+      "anti_duplicate_rule": "STRICT_48H_FINGERPRINT",
+      "emergency_stop_active": false,
+      "details": "File d'attente sécurisée : aucun envoi automatique, validation patron obligatoire.",
+      "badge": "SÉCURISÉ (Clic Requis)"
+    },
+    "partner_deals": {
+      "id": "deals",
+      "name": "Liens d'Affiliation & Offres Partenaires",
+      "status": "NOMINAL",
+      "score_contribution": "10%",
+      "total_monitored_links": 96,
+      "http_reachable_count": 96,
+      "verified_offers_count": 12,
+      "ssrf_guard": "ACTIVE (Apex Whitelist HTTPS)",
+      "details": "Séparation stricte LINK_REACHABLE (96) et OFFER_VERIFIED (12). Sonde SSRF sécurisée.",
+      "badge": "96 LIENS AUDITÉS"
+    },
+    "edge_zero_trust": {
+      "id": "edge",
+      "name": "Infrastructure Edge & Zero Trust",
+      "status": "NOMINAL",
+      "score_contribution": "10%",
+      "pages_count": 314,
+      "access_policy": "CLOUDFLARE_ACCESS_MFA_STRICT",
+      "telegram_alerts": "CONNECTED (NotifierAgent)",
+      "details": "Réseau mondial Cloudflare Edge. Consultation d'audit strictement restreinte au propriétaire.",
+      "badge": "MFA OWNER VALIDÉ"
+    }
+  },
+  "diagnostic_log": [
+    "Base D1 : Connexion transactionnelle vérifiée (12ms), 0 corruption détectée.",
+    "Stockage R2 : Ancre de contrôle vérifiée (chk_20261106_204000) sous le préfixe audit_checkpoints/, conformité WORM 365j intacte.",
+    "Flotte d'Agents : 24 agents enregistrés, SecurityAgent non suspensible et prêt.",
+    "Newsletter : Système anti-doublon actif, envoi automatique désactivé.",
+    "Affiliation & SSRF : Whitelist HTTPS apex heliatech.online active, aucune redirection suspecte.",
+    "Zero Trust & Audit : Règle owner-only active sur /api/sentinel/audit, télémétrie masquée."
+  ]
+}

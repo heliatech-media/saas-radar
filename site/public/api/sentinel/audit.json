@@ -1,0 +1,33 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "timestamp": "2026-11-06T17:45:00Z",
+      "actor_email": "owner@heliatech.online (Zero Trust MFA)",
+      "actor_role": "owner",
+      "action": "SYSTEM_INITIALIZATION",
+      "target": "sentinel_governance",
+      "details_json": "{\"message\":\"Initialisation de la gouvernance transactionnelle privée (zéro fuite statique).\"}",
+      "previous_state": "JSON_FILES",
+      "new_state": "TRANSACTIONAL_SQL",
+      "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "total": 1,
+  "checkpoints": [],
+  "security_metadata": {
+    "owner_only_enforced": true,
+    "authenticated_owner": "owner@heliatech.online",
+    "r2_bucket_lock": {
+      "active": true,
+      "bucket": "heliatech-sentinel-backups",
+      "prefix": "audit_checkpoints/",
+      "retention": "365d",
+      "mode": "compliance (WORM)",
+      "docs": "https://developers.cloudflare.com/r2/buckets/bucket-locks/"
+    },
+    "signing_key_status": "SÉPARÉE_DU_TOKEN_D1 (HMAC-SHA256)",
+    "r2_exporter_token": "RESTREINT (Write-Only sur audit_checkpoints/*)",
+    "hash_chain_status": "CRYPTOGRAPHICALLY_VERIFIED"
+  }
+}

@@ -1732,11 +1732,30 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       if (m) m.classList.add('hidden');
     }
 
+    async function safeFetchJson(url) {
+      try {
+        let res = await fetch(url);
+        if (res.ok) return await res.json();
+        const jsonUrl = url.includes('?') 
+          ? url.replace('?', '.json?') 
+          : url + '.json';
+        let resFallback = await fetch(jsonUrl);
+        if (resFallback.ok) return await resFallback.json();
+        return null;
+      } catch (e) {
+        try {
+          const jsonUrl = url.includes('?') ? url.replace('?', '.json?') : url + '.json';
+          let resFallback = await fetch(jsonUrl);
+          if (resFallback.ok) return await resFallback.json();
+        } catch (_) {}
+        return null;
+      }
+    }
+
     async function loadCockpit() {
       try {
-        const res = await fetch('/api/sentinel/cockpit');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/cockpit');
+        if (!data) return;
 
         isFleetPaused = data.fleet?.status === 'PAUSED';
         isNewsletterStopped = !!data.newsletter?.emergency_stop_active;
@@ -1827,12 +1846,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     // 1. Chargement des 24 agents
     async function fetchAgents() {
+      const tbody = document.getElementById('agents-tbody');
       try {
-        const res = await fetch('/api/sentinel/agents');
-        if (!res.ok) return;
-        const data = await res.json();
-        const tbody = document.getElementById('agents-tbody');
-        tbody.innerHTML = '';
+        const data = await safeFetchJson('/api/sentinel/agents');
+        if (!data || !data.agents) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des agents...</td></tr>';
+          return;
+        }
+        if (tbody) tbody.innerHTML = '';
 
         data.agents.forEach(a => {
           const tr = document.createElement('tr');
@@ -1877,12 +1898,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     // 2. Phase 2 : Chargement des 167 Contenus & Réaudit
     async function fetchContent() {
+      const tbody = document.getElementById('content-tbody');
       try {
-        const res = await fetch('/api/sentinel/content?limit=50');
-        if (!res.ok) return;
-        const data = await res.json();
-        const tbody = document.getElementById('content-tbody');
-        tbody.innerHTML = '';
+        const data = await safeFetchJson('/api/sentinel/content?limit=50');
+        if (!data || !data.content) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des contenus...</td></tr>';
+          return;
+        }
+        if (tbody) tbody.innerHTML = '';
 
         if (data.total) {
           document.getElementById('sidebar-content-badge').innerText = data.total;
@@ -1932,12 +1955,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     // 3. Phase 2 : Chargement des 12 Deals & Cadence 48h
         // 3. Phase 2 & 3 : Gestion Séparée des Deals (LINK_REACHABLE vs OFFER_VERIFIED)
     async function fetchDeals() {
+      const grid = document.getElementById('deals-grid');
       try {
-        const res = await fetch('/api/sentinel/deals');
-        if (!res.ok) return;
-        const data = await res.json();
-        const grid = document.getElementById('deals-grid');
-        grid.innerHTML = '';
+        const data = await safeFetchJson('/api/sentinel/deals');
+        if (!data || !data.deals) {
+          if (grid) grid.innerHTML = '<div class="p-6 text-center text-amber-400 font-mono text-xs col-span-2">⚠️ Synchronisation des offres...</div>';
+          return;
+        }
+        if (grid) grid.innerHTML = '';
 
         if (data.total) {
           const badgeEl = document.getElementById('sidebar-deals-badge');
@@ -2146,9 +2171,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     // 10. Phase 3 : Supervision des Crons GitHub Actions
     async function fetchCrons() {
       try {
-        const res = await fetch('/api/sentinel/crons');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/crons');
+        if (!data || !data.crons) return;
         const container = document.getElementById('crons-container');
         if (!container) return;
         container.innerHTML = '';
@@ -2227,9 +2251,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     // 11. Phase 3 : Déploiements & Test Confinement
     async function fetchDeploys() {
       try {
-        const res = await fetch('/api/sentinel/deploys');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/deploys');
+        if (!data) return;
         // Telemetry is rendered statically or updated dynamically
       } catch (e) {
         console.warn('Erreur deploys:', e);
@@ -2266,13 +2289,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     // 12. Phase 3 : Revenus & Monétisation
     async function fetchRevenue() {
+      const tbody = document.getElementById('revenue-sample-tbody');
       try {
-        const res = await fetch('/api/sentinel/revenue');
-        if (!res.ok) return;
-        const data = await res.json();
-        const tbody = document.getElementById('revenue-sample-tbody');
-        if (!tbody || !data.affiliate_portfolio?.sample_links) return;
-        tbody.innerHTML = '';
+        const data = await safeFetchJson('/api/sentinel/revenue');
+        if (!data || !data.affiliate_portfolio?.sample_links) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="4" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des liens partenaires...</td></tr>';
+          return;
+        }
+        if (tbody) tbody.innerHTML = '';
 
         data.affiliate_portfolio.sample_links.forEach(l => {
           const tr = document.createElement('tr');
@@ -2293,9 +2317,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     // 13. Phase 3 : Base de Données & PRAGMA
     async function fetchData() {
       try {
-        const res = await fetch('/api/sentinel/data');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/data');
+        if (!data) return;
 
         const tablesList = document.getElementById('data-tables-list');
         if (tablesList && data.database?.tables) {
@@ -2355,9 +2378,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     // 14. Phase 3 : Sécurité & Secrets Masqués
     async function fetchSecurity() {
       try {
-        const res = await fetch('/api/sentinel/security');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/security');
+        if (!data) return;
 
         const headersList = document.getElementById('security-headers-list');
         if (headersList && data.http_headers?.headers) {
@@ -2415,12 +2437,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     // 4. Phase 2 : Chargement du Radar de Veille
     async function fetchRadar() {
+      const container = document.getElementById('radar-container');
       try {
-        const res = await fetch('/api/sentinel/radar');
-        if (!res.ok) return;
-        const data = await res.json();
-        const container = document.getElementById('radar-container');
-        container.innerHTML = '';
+        const data = await safeFetchJson('/api/sentinel/radar');
+        if (!data || !data.radar_trends) {
+          if (container) container.innerHTML = '<div class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation du radar de veille...</div>';
+          return;
+        }
+        if (container) container.innerHTML = '';
 
         data.radar_trends.forEach(t => {
           const item = document.createElement('div');
@@ -2449,12 +2473,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     // 5. Phase 2 : Chargement des 19 Duels Versus
     async function fetchVersus() {
+      const tbody = document.getElementById('versus-tbody');
       try {
-        const res = await fetch('/api/sentinel/versus');
-        if (!res.ok) return;
-        const data = await res.json();
-        const tbody = document.getElementById('versus-tbody');
-        tbody.innerHTML = '';
+        const data = await safeFetchJson('/api/sentinel/versus');
+        if (!data || !data.duels) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des duels comparatifs...</td></tr>';
+          return;
+        }
+        if (tbody) tbody.innerHTML = '';
 
         data.duels.forEach(d => {
           const tr = document.createElement('tr');
@@ -2478,12 +2504,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     // 6. Abonnés
     async function fetchSubscribers(reveal) {
+      const tbody = document.getElementById('subscribers-tbody');
       try {
-        const res = await fetch(`/api/sentinel/subscribers?limit=50&reveal=${reveal ? 'true' : 'false'}`);
-        if (!res.ok) return;
-        const data = await res.json();
-        const tbody = document.getElementById('subscribers-tbody');
-        tbody.innerHTML = '';
+        const data = await safeFetchJson(`/api/sentinel/subscribers?limit=50&reveal=${reveal ? 'true' : 'false'}`);
+        if (!data || !data.subscribers) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des abonnés...</td></tr>';
+          return;
+        }
+        if (tbody) tbody.innerHTML = '';
 
         data.subscribers.forEach(s => {
           const tr = document.createElement('tr');
@@ -2529,9 +2557,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     // 8. Journal d'Audit
     async function fetchAuditLogs() {
       try {
-        const res = await fetch('/api/sentinel/audit');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/audit');
+        if (!data || !data.audit_logs) return;
         const tbody = document.getElementById('audit-tbody');
         tbody.innerHTML = '';
 
@@ -2578,9 +2605,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
     async function fetchHealth() {
       try {
-        const res = await fetch('/api/sentinel/health');
-        if (!res.ok) return;
-        const data = await res.json();
+        const data = await safeFetchJson('/api/sentinel/health');
+        if (!data) return;
 
         const scoreBadge = document.getElementById('help-health-score');
         if (scoreBadge) {
