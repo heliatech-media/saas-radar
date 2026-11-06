@@ -1024,8 +1024,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
             <div class="pt-3 border-t border-slate-800 flex justify-between items-center">
               <span class="text-[10px] text-slate-400">Reste : <strong class="${isWarning ? 'text-amber-400' : 'text-emerald-400'}">${d.remaining_hours}h sur 48h</strong></span>
-              <button onclick="verifyDeal('${d.tool_slug}')" class="px-2.5 py-1 rounded ${isWarning ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300'} hover:bg-slate-700 font-bold text-[11px]">
-                Re-vérifier 48h
+              <button onclick="verifyDeal('${d.tool_slug}', this)" class="px-2.5 py-1 rounded ${isWarning ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300'} hover:bg-slate-700 font-bold text-[11px]">
+                Lancer Audit Réel (48h)
               </button>
             </div>
           `;
@@ -1036,18 +1036,31 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    async function verifyDeal(slug) {
+    async function verifyDeal(slug, btn) {
+      if (btn) {
+        btn.innerText = 'Audit HTTP...';
+        btn.disabled = true;
+      }
       try {
         const res = await fetch('/api/sentinel/deals', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ action: 'verify', deal_slug: slug })
+          body: JSON.stringify({ action: 'audit', deal_slug: slug })
         });
         const data = await res.json();
-        alert(`[JOURNALISÉ] ${data.message}`);
+        if (res.ok && data.success) {
+          alert(`[AUDIT RÉEL RÉUSSI]\n${data.message}`);
+        } else {
+          alert(`[ALERTE AUDIT ÉCHOUÉ]\n${data.error || 'Erreur lors du sondage HTTP.'}`);
+        }
         fetchDeals();
       } catch (e) {
-        alert('Erreur: ' + e.message);
+        alert('Erreur réseau lors du sondage : ' + e.message);
+      } finally {
+        if (btn) {
+          btn.innerText = 'Lancer Audit Réel (48h)';
+          btn.disabled = false;
+        }
       }
     }
 

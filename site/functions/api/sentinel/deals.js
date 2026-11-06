@@ -2,7 +2,27 @@
  * Cloudflare Pages Function: /api/sentinel/deals
  * Real-time Deal & Discount Supervision with Strict 48-Hour Cadence Verification.
  * Synchronized with HeliaTech Methodology Protocol v2.4.
+ * 
+ * Strict Governance Rule:
+ * Never simulate or blindly reset verified_at dates.
+ * Verification MUST execute an active HTTP health probe against the target vendor partner URL.
+ * Only if the vendor responds with HTTP 200/302 is the 48h clock rearmed.
  */
+
+const REDIRECTS_MAP = {
+  "make": "https://www.make.com/en/register?pc=heliatechmake",
+  "elevenlabs": "https://try.elevenlabs.io/ajhd6t7k04dh",
+  "rewardful": "https://www.rewardful.com/?via=heliatech",
+  "cursor": "https://www.cursor.com/?via=heliatech",
+  "windsurf": "https://codeium.com/windsurf",
+  "resend": "https://resend.com/?via=heliatech",
+  "descript": "https://www.descript.com/?via=heliatech",
+  "typeform": "https://www.typeform.com/?ref=heliatech",
+  "tally": "https://tally.so/?via=heliatech",
+  "supabase": "https://supabase.com/?ref=heliatech",
+  "lovable": "https://lovable.dev/?via=heliatech",
+  "hubspot": "https://www.hubspot.com"
+};
 
 const FALLBACK_DEALS = [
   { id: 1, tool_name: "Make.com", tool_slug: "make", category: "Automation & No-Code", partner_code: "heliatechmake", perk_title: "1 Month Free Pro Plan (10,000 Operations)", badge: "EXCLUSIVE PARTNER OFFER", affiliate_url: "/go/make", savings_estimate: "Save up to $270/mo vs Zapier", verified_at: new Date(Date.now() - 8 * 3600 * 1000).toISOString(), verification_cadence_hours: 48, status: "ACTIVE" },
@@ -45,7 +65,8 @@ export async function onRequestGet(context) {
         ...d,
         elapsed_hours: Math.round(elapsedHours * 10) / 10,
         remaining_hours: Math.round(remainingHours * 10) / 10,
-        cadence_status: isExpired ? "EXPIRED_NEEDS_VERIFICATION" : isDueSoon ? "DUE_SOON" : "VERIFIED_OK"
+        cadence_status: isExpired ? "EXPIRED_NEEDS_VERIFICATION" : isDueSoon ? "DUE_SOON" : "VERIFIED_OK",
+        target_probe_url: REDIRECTS_MAP[d.tool_slug] || d.affiliate_url
       };
     });
 
@@ -69,27 +90,102 @@ export async function onRequestPost(context) {
       return new Response(JSON.stringify({ error: "deal_slug required" }), { status: 400 });
     }
 
-    if (action === "verify") {
-      const nowIso = new Date().toISOString();
-      if (db) {
-        await db.prepare("UPDATE deals_registry SET verified_at = ?, status = 'ACTIVE' WHERE tool_slug = ?")
-          .bind(nowIso, deal_slug).run();
-        
-        await db.prepare(`
-          INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-          VALUES (datetime('now'), ?, 'owner', 'VERIFY_DEAL_48H', ?, '{"cadence":"48h","action":"reset_verification_clock"}', 'PENDING_CHECK', 'VERIFIED_48H', 'sig_deal_verify')
-        `).bind(actorEmail, `deal:${deal_slug}`).run();
+    if (action === "verify" || action === "audit") {
+      const targetUrl = REDIRECTS_MAP[deal_slug] || `https://heliatech.online/go/${deal_slug}`;
+      const startTime = Date.now();
+      
+      let auditStatus = 0;
+      let latencyMs = 0;
+      let auditSuccess = false;
+      let failureReason = null;
+
+      // Active HTTP probe to prove link is live
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 6000);
+
+        const probeRes = await fetch(targetUrl, {
+          method: "GET",
+          headers: {
+            "User-Agent": "HeliaTech-LinkHealthInspector/2.4 (+https://heliatech.online/methodology; B2B Partner Probe)"
+          },
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        latencyMs = Date.now() - startTime;
+        auditStatus = probeRes.status;
+
+        // HTTP 200 or successful redirect is considered valid
+        if (probeRes.ok || [200, 301, 302, 307, 308].includes(probeRes.status)) {
+          auditSuccess = true;
+        } else {
+          failureReason = `La page partenaire a retourné un code d'erreur HTTP ${probeRes.status}`;
+        }
+      } catch (err) {
+        latencyMs = Date.now() - startTime;
+        failureReason = err.name === 'AbortError' ? 'Délai d\'attente dépassé (timeout 6000ms)' : `Erreur réseau : ${err.message}`;
       }
 
-      return new Response(JSON.stringify({
-        success: true,
-        deal_slug,
-        verified_at: nowIso,
-        message: `Deal '${deal_slug}' validé avec succès sous cadence 48h.`
-      }), {
-        status: 200,
-        headers: { "Content-Type": "application/json" }
-      });
+      const nowIso = new Date().toISOString();
+
+      if (auditSuccess) {
+        // ONLY update timestamp when audit ACTUALLY succeeded
+        if (db) {
+          await db.prepare("UPDATE deals_registry SET verified_at = ?, status = 'ACTIVE' WHERE tool_slug = ?")
+            .bind(nowIso, deal_slug).run();
+
+          await db.prepare(`
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
+            VALUES (datetime('now'), ?, 'owner', 'DEAL_AUDIT_SUCCESS', ?, ?, 'AUDIT_RUNNING', 'ACTIVE_48H', 'sig_audit_probe_success')
+          `).bind(actorEmail, `deal:${deal_slug}`, JSON.stringify({
+            tested_url: targetUrl,
+            http_status: auditStatus,
+            latency_ms: latencyMs,
+            cadence: "48h",
+            verified_at: nowIso
+          })).run();
+        }
+
+        return new Response(JSON.stringify({
+          success: true,
+          deal_slug,
+          tested_url: targetUrl,
+          http_status: auditStatus,
+          latency_ms: latencyMs,
+          verified_at: nowIso,
+          message: `Audit HTTP réel réussi sur ${targetUrl} (Code ${auditStatus} en ${latencyMs}ms). Cadence 48h réarmée sous preuve d'intégrité.`
+        }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
+      } else {
+        // Audit failed: DO NOT fake or update the verified date! Mark as needing investigation.
+        if (db) {
+          await db.prepare("UPDATE deals_registry SET status = 'NEEDS_VERIFICATION' WHERE tool_slug = ?")
+            .bind(deal_slug).run();
+
+          await db.prepare(`
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
+            VALUES (datetime('now'), ?, 'owner', 'DEAL_AUDIT_FAILED', ?, ?, 'ACTIVE', 'NEEDS_VERIFICATION', 'sig_audit_probe_failed')
+          `).bind(actorEmail, `deal:${deal_slug}`, JSON.stringify({
+            tested_url: targetUrl,
+            failure_reason: failureReason,
+            latency_ms: latencyMs
+          })).run();
+        }
+
+        return new Response(JSON.stringify({
+          success: false,
+          deal_slug,
+          tested_url: targetUrl,
+          error: `Échec de l'audit HTTP réel : ${failureReason}. La date de vérification n'a pas été réinitialisée.`,
+          latency_ms: latencyMs
+        }), {
+          status: 422,
+          headers: { "Content-Type": "application/json" }
+        });
+      }
     }
 
     return new Response(JSON.stringify({ error: "Unknown action" }), { status: 400 });
