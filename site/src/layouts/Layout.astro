@@ -465,75 +465,57 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
         <!-- Center: Refined Luxury Typography Navigation (Zero Childish Emojis) -->
 
         <nav class="hidden md:flex items-center gap-1 text-[13px] font-medium tracking-normal text-slate-300">
-
-          <a href="/radar" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-
+          <a href="/radar" class="px-3 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
             Radar
-
           </a>
 
-          <a href="/versus" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-
+          <a href="/versus" class="px-3 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
             Versus
-
           </a>
 
-          <a href="/awards" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-
-            Awards
-
-          </a>
-
-          <a href="/deals" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
-
-            <span>Deals</span>
-
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-
-              Perks
-
-            </span>
-
-          </a>
-
-          
-
-          <a href="/pricing-leaks" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
-
-            <span>Leaks</span>
-
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30">
-
-              New
-
-            </span>
-
-          </a>
-
-          <a href="/advisor" class="group relative px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
-
-            <span>Advisor</span>
-
-            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
-
-              AI
-
-            </span>
-
-          </a>
-
-          <a href="/calculator" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
-
+          <a href="/calculator" class="px-3 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
             Calculator
-
           </a>
 
-          <a href="/blog" class="px-3.5 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
+          <a href="/deals" class="group relative px-3 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1.5">
+            <span>Deals</span>
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded-full text-[9px] font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              Perks
+            </span>
+          </a>
 
+          <a href="/blog" class="px-3 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150">
             Guides
-
           </a>
 
+          <!-- Streamlined Insights Dropdown -->
+          <div class="relative group">
+            <button type="button" class="px-3 py-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all duration-150 flex items-center gap-1 cursor-pointer">
+              <span>Insights</span>
+              <svg class="w-3 h-3 text-slate-500 group-hover:text-slate-300 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute right-0 sm:left-0 mt-2 w-56 p-2 rounded-2xl bg-[#08090d]/95 backdrop-blur-2xl border border-white/[0.1] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 flex flex-col gap-1">
+              <a href="/pricing-leaks" class="px-3 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-rose-400 hover:bg-white/[0.05] flex items-center justify-between transition-colors">
+                <span>Pricing Leaks</span>
+                <span class="text-[9px] font-mono text-rose-400 bg-rose-500/10 px-1.5 py-0.5 rounded border border-rose-500/25">New</span>
+              </a>
+              <a href="/advisor" class="px-3 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-cyan-400 hover:bg-white/[0.05] flex items-center justify-between transition-colors">
+                <span>AI Stack Advisor</span>
+                <span class="text-[9px] font-mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span>
+              </a>
+              <a href="/awards" class="px-3 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-pink-400 hover:bg-white/[0.05] flex items-center justify-between transition-colors">
+                <span>Awards 2026</span>
+                <span class="text-[9px] font-mono text-pink-400 bg-pink-500/10 px-1.5 py-0.5 rounded border border-pink-500/25">Best</span>
+              </a>
+              <div class="my-1 border-t border-slate-800/80"></div>
+              <a href="/methodology" class="px-3 py-2 rounded-xl text-xs font-mono text-slate-400 hover:text-cyan-300 hover:bg-white/[0.05] flex items-center justify-between transition-colors">
+                <span>Methodology & Ethics</span>
+                <span class="text-[9px] font-mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">v2.4</span>
+              </a>
+            </div>
+          </div>
         </nav>
 
         <!-- Right: High-End Live Observatory Pill & Action Trigger -->
@@ -658,6 +640,11 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
         </a>
 
+                <a href="/methodology" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
+          <span>Methodology & Ethics</span>
+          <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">Protocol</span>
+        </a>
+
         <a href="/calculator" class="px-3.5 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors flex items-center justify-between">
 
           <span>TCO Calculator & Audit</span>
@@ -740,6 +727,10 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
             <span class="text-slate-700">•</span>
 
+            <a href="/methodology" class="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">Methodology & Ethics</a>
+
+            <span class="text-slate-700">•</span>
+
             <a href="/sponsor" class="text-cyan-400 hover:text-cyan-300 font-bold transition-colors">Sponsor & Advertise</a>
 
             <span class="text-slate-700">•</span>
@@ -752,7 +743,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
         <div class="max-w-md text-xs text-slate-400 md:text-right border-l md:border-l-0 md:border-r border-slate-800 pl-4 md:pl-0 md:pr-4">
 
-          <p class="font-mono text-cyan-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures</p>
+          <p class="font-mono text-cyan-300 text-[11px] mb-1 uppercase tracking-wider">Independent Disclosures & Ethics</p>
 
           <p class="text-[11px] leading-relaxed">
 

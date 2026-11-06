@@ -34,7 +34,7 @@
     },
     "toolB": {
       "name": "GitHub Copilot",
-      "slug": "cursor",
+      "slug": "github-copilot",
       "tagline": "The legacy code completion assistant natively backed by GitHub and Microsoft enterprise identity.",
       "startingPrice": "$19/user/mo",
       "pricingModel": "Per User / Monthly",

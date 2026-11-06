@@ -551,16 +551,6 @@
     "commission_rate": "30% recurring"
   },
   {
-    "name": "Riverside.fm",
-    "slug": "riverside-fm",
-    "tagline": "Studio-quality remote recording for professional podcasters and video creators.",
-    "category": "Audio/Podcasting",
-    "rating": 4.7,
-    "starting_price": "$15/mo",
-    "best_for": "Professional media houses, corporate marketing teams, and high-growth podcasters who prioritize 4K production quality.",
-    "affiliate_url": "https://riverside.fm/?via=heliatech"
-  },
-  {
     "name": "Sanity",
     "slug": "sanity",
     "tagline": "The composable content platform built for structured data and real-time developer workflows",
@@ -590,17 +580,6 @@
     "best_for": "Product managers, QA testers, customer support teams, and remote developers.",
     "affiliate_url": "https://screenclip.com/?via=heliatech",
     "commission_rate": "30% recurring"
-  },
-  {
-    "name": "ScreenStudio",
-    "slug": "screenstudio",
-    "tagline": "The gold standard for creating high-end, polished screen recordings in minutes.",
-    "category": "AI Video",
-    "rating": 4.8,
-    "starting_price": "$89",
-    "best_for": "Product managers, SaaS founders, and content creators who need high-quality product demos without a dedicated video editor.",
-    "affiliate_url": "https://www.screen.studio/?via=heliatech",
-    "commission_rate": "30% per sale"
   },
   {
     "name": "Submagic",

@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "Methodology & Editorial Integrity | HeliaTech Observatoire";
+const seoDescription = "Versioned testing protocols, Sentinel™ scoring framework, empirical benchmark standards, and strict editorial independence firewall.";
+---
+
+<Layout title={seoTitle} description={seoDescription} canonical="https://heliatech.online/methodology/">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 py-16 sm:py-24">
+    
+    <!-- Header Badge & Title -->
+    <div class="mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25 mb-4">
+        <span>PROTOCOL SPECIFICATION</span>
+        <span>•</span>
+        <span>VERSION 2.4 (Q4 2026)</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+        Auditing Methodology & Editorial Integrity
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+        How HeliaTech benchmarks architectures, computes Sentinel™ scores, verifies vendor pricing disclosures, and maintains an uncompromised firewall between commercial monetization and editorial research.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 mt-6 text-xs font-mono text-slate-400">
+        <span>Last Protocol Update: November 6, 2026</span>
+        <span>•</span>
+        <span>Supervised by: HeliaTech Research Desk</span>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Anchor Links -->
+    <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 mb-12 flex flex-wrap gap-3 text-xs font-mono">
+      <a href="#sentinel-framework" class="text-slate-300 hover:text-cyan-400">1. Sentinel™ Framework</a>
+      <span class="text-slate-700">•</span>
+      <a href="#test-protocols" class="text-slate-300 hover:text-cyan-400">2. Test Protocols & Telemetry</a>
+      <span class="text-slate-700">•</span>
+      <a href="#editorial-firewall" class="text-slate-300 hover:text-cyan-400">3. Editorial Firewall & Monetization</a>
+      <span class="text-slate-700">•</span>
+      <a href="#calculator-model" class="text-slate-300 hover:text-cyan-400">4. Calculator & TCO Modeling</a>
+      <span class="text-slate-700">•</span>
+      <a href="#vendor-disputes" class="text-slate-300 hover:text-cyan-400">5. Vendor Right of Response</a>
+    </div>
+
+    <!-- Section 1: The Sentinel™ Framework -->
+    <section id="sentinel-framework" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono">01.</span> The Sentinel™ Scoring Framework
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed mb-6 font-light">
+        Every system indexed in the HeliaTech Radar receives an empirical <strong class="text-white font-medium">Sentinel Score (0–100)</strong>. Scores are not arbitrary opinions; they are computed via a standardized weighted multi-variable matrix:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-cyan-400 font-bold uppercase">1. Performance & Latency</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/15 text-cyan-300 font-bold">25% Weight</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Multi-region TTFB, API endpoint latency distribution (p50, p95, p99), Cold-start overhead, WebSocket throughput under 500+ concurrent connections, and 90-day status incident history.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-emerald-400 font-bold uppercase">2. TCO & Pricing Transparency</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/15 text-emerald-300 font-bold">25% Weight</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Public vs. hidden seat minimums, egress bandwidth penalties, contract renewal lock-in clauses, usage overage multipliers, and real-world TCO verified against 140+ enterprise quote submissions.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-amber-400 font-bold uppercase">3. Enterprise Readiness & Security</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/15 text-amber-300 font-bold">20% Weight</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            SOC2 Type II audit report availability, GDPR/HIPAA compliance, SAML/SSO tax policies (whether SSO requires 3x higher enterprise tiers), granular RBAC, and data residency choices (EU/US).
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-fuchsia-400 font-bold uppercase">4. Developer Experience & API</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-fuchsia-500/15 text-fuchsia-300 font-bold">20% Weight</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            SDK quality (TypeScript, Python, Go), comprehensive OpenAPI specifications, sandbox/mock environments, webhook reliability, and speed of programmatic integration.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 md:col-span-2">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-sky-400 font-bold uppercase">5. Ecosystem Interoperability & Portability</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-sky-500/15 text-sky-300 font-bold">10% Weight</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            First-party integrations, webhook streaming, data export ease without proprietary lock-in, and compatibility with workflow orchestration engines (n8n, Make, Zapier).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Test Protocols & Primary Telemetry -->
+    <section id="test-protocols" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono">02.</span> Test Protocols & Telemetry Verification
+      </h2>
+      <div class="space-y-4 text-sm text-slate-300 leading-relaxed font-light">
+        <p>
+          Unlike user-review aggregators that rely on self-reported subjective impressions, HeliaTech grounds technical claims in standardized testing:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-slate-400">
+          <li><strong class="text-white font-medium">Standardized Benchmarking:</strong> Network latency and TTFB tests are conducted from isolated Cloudflare Edge / AWS multi-region test nodes over 7-day trailing windows.</li>
+          <li><strong class="text-white font-medium">Pricing Forensics:</strong> When quoting pricing ranges or contract negotiation leak discounts, our research desk references verified enterprise redlines, RFP responses, and anonymous quotes submitted by verified CTOs and procurement directors.</li>
+          <li><strong class="text-white font-medium">Deal Verification Cadence:</strong> Promotional perks and coupon codes listed under our Deals directory are manually verified or programmatically pinged every 48 hours. If a code expires or vendor terms shift, it is immediately flagged or decommissioned.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3: The Editorial Firewall -->
+    <section id="editorial-firewall" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono">03.</span> Strict Editorial Firewall & Monetization Policy
+      </h2>
+      <div class="p-6 rounded-2xl bg-cyan-950/20 border border-cyan-500/30 mb-6">
+        <h3 class="text-sm font-mono font-bold text-cyan-300 uppercase tracking-wider mb-2">Our Core Non-Negotiable Charter</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <strong class="text-white">HeliaTech never sells scores, rankings, or positive reviews.</strong> A vendor cannot pay to increase its Sentinel score, alter its position in our Versus arena, or remove critical architectural trade-offs.
+        </p>
+      </div>
+
+      <div class="space-y-6 text-sm text-slate-300 leading-relaxed font-light">
+        <div>
+          <h4 class="text-base font-bold text-white mb-2">How HeliaTech Is Funded</h4>
+          <p class="text-slate-400 mb-3">
+            HeliaTech operates as an independent tech media organization. To sustain our full-time engineering and benchmarking operations, we rely on two transparent revenue streams:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <span class="text-xs font-mono text-emerald-400 font-bold block mb-1">1. Performance & Affiliate Partnerships</span>
+              <p class="text-xs text-slate-400">
+                When readers click qualifying links to inspect software and subsequently subscribe, HeliaTech may receive an affiliate referral commission. This occurs at <strong class="text-white font-medium">zero additional cost to the buyer</strong> (and frequently unlocks discounted partner rates). These partnerships have zero bearing on whether a tool receives a high or low Sentinel score.
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+              <span class="text-xs font-mono text-fuchsia-400 font-bold block mb-1">2. Labeled Commercial Sponsorships</span>
+              <p class="text-xs text-slate-400">
+                Companies may purchase clearly labeled advertising slots, such as newsletter sponsorships or discrete display banners. All commercial placements carry a visible <strong class="text-white font-medium">"SPONSORED"</strong> tag and are strictly cordoned off from our organic testing database.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Calculator & TCO Modeling -->
+    <section id="calculator-model" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono">04.</span> Calculator Assumptions & Margin Modeling
+      </h2>
+      <div class="space-y-4 text-sm text-slate-300 leading-relaxed font-light">
+        <p>
+          Our interactive <a href="/calculator" class="text-cyan-400 underline">TCO & ROI Calculator</a> models potential software spend reduction when migrating from legacy enterprise suites to modern agentic stacks:
+        </p>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-slate-400 space-y-2">
+          <p>• <strong class="text-white">Baseline Hypotheses:</strong> Legacy software rates reflect median list tier costs (e.g. Zapier Team/Company tiers, Apollo Custom seats). Modern alternative costs reflect transparent API usage and base licenses.</p>
+          <p>• <strong class="text-white">Activity Multiplier:</strong> Calculated at 10% operational volume scaling, reflecting typical monthly recurring transaction volume.</p>
+          <p>• <strong class="text-white">Uncertainty Range:</strong> Actual enterprise procurement outcomes vary ±15% based on multi-year contract prepayments, customized seat discounting, and bespoke SLA commitments. Figures are indicative models, not binding quotes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Vendor Disputes & Corrections -->
+    <section id="vendor-disputes" class="mb-12 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono">05.</span> Vendor Right of Response & Re-Audit Protocol
+      </h2>
+      <div class="space-y-4 text-sm text-slate-300 leading-relaxed font-light">
+        <p>
+          We believe in complete factual accuracy. If an executive or engineering team at an audited company identifies an out-of-date pricing tier, a resolved security vulnerability, or an inaccurate latency metric:
+        </p>
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300 space-y-2 font-mono">
+          <p>1. Send evidence, reproduction steps, or updated documentation to: <a href="mailto:desk@heliatech.online" class="text-cyan-400 underline font-bold">desk@heliatech.online</a>.</p>
+          <p>2. Our research desk will verify the claim within 48 business hours.</p>
+          <p>3. If substantiated, metrics and editorial copy are updated immediately with a timestamped correction note.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Trust Link -->
+    <div class="pt-8 border-t border-slate-800 text-center">
+      <a href="/radar" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-mono text-xs font-bold transition-all">
+        <span>← Return to Evaluated Radar Catalog</span>
+      </a>
+    </div>
+
+  </div>
+</Layout>

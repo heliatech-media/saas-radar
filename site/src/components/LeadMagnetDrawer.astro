@@ -33,7 +33,7 @@
       Get The 2026 SaaS Pricing Rate Cards & Secret Deals
     </h4>
     <p class="text-xs text-slate-400 font-normal leading-relaxed mb-4">
-      Join 14,000+ founders and CTOs. Every Thursday, receive uncompromised software audits and up to $15,000 in private partner credits.
+      Join 4,200+ CTOs and engineering leaders. Every Thursday at 9:00 AM EST (15:00 CET), receive uncompromised software audits and architectural teardowns.
     </p>
 
     <!-- Lead Form -->
@@ -56,9 +56,7 @@
     </form>
 
     <!-- Success Message -->
-    <div id="ht-drawer-success" class="hidden mt-3 p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] text-center">
-      ⚡ Access unlocked. Your first confidential briefing arrives this Thursday.
-    </div>
+    <div id="ht-drawer-success" class="hidden mt-3 p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] text-center" role="status" aria-live="polite"></div>
 
     <!-- Trust Footer -->
     <div class="mt-3 flex items-center justify-between text-[10px] font-mono text-slate-500">
@@ -172,7 +170,10 @@
         localStorage.setItem('ht_lead_subscribed', 'true');
 
         form.classList.add('hidden');
-        if (successMsg) successMsg.classList.remove('hidden');
+        if (successMsg) {
+          successMsg.innerHTML = "⚡ Access unlocked. Your first confidential briefing arrives this Thursday at 9:00 AM EST.";
+          successMsg.classList.remove('hidden');
+        }
 
         setTimeout(hideDrawer, 3500);
       });

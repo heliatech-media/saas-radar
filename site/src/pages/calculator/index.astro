@@ -360,6 +360,7 @@ const jsonLd = {
               </span>
               <span class="text-xs font-mono text-slate-400">/ yr</span>
             </div>
+            <span id="savings-range" class="text-[11px] font-mono text-emerald-400/80 block mt-1">Est. range: $4,960 – $6,720 / yr (±15% variance)</span>
             <p class="text-xs text-slate-400 mt-2">
               That's approximately <strong id="monthly-savings-badge" class="text-white">$486 / mo</strong> injected directly back into your operational runway.
             </p>
@@ -376,9 +377,20 @@ const jsonLd = {
               <span id="cost-optimized" class="text-emerald-400 font-bold">$1,580 / yr</span>
             </div>
             <div class="pt-2 border-t border-slate-800 flex justify-between items-center font-bold">
-              <span class="text-slate-200">Gross margin preserved:</span>
+              <span class="text-slate-200">Estimated TCO Reduction:</span>
               <span id="savings-percent" class="text-cyan-400 font-mono font-black text-sm">-78.7%</span>
             </div>
+          </div>
+
+          <!-- Indicative Estimation & Methodology Disclaimer -->
+          <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 mb-6 text-[11px] font-mono text-slate-400 leading-relaxed">
+            <div class="flex items-center gap-1.5 text-amber-400 font-bold mb-1">
+              <span>⚠️</span>
+              <span>Indicative Modeling, Non-Binding Quote</span>
+            </div>
+            <p>
+              Projections are computed using Q4 2026 baseline list rates, 10% activity factor, and $15 vs $4 seat deltas. Actual enterprise terms depend on custom commits and volume tiers. <a href="/methodology#calculator-model" class="text-cyan-400 underline hover:text-cyan-300">View calculation methodology ➔</a>
+            </p>
           </div>
 
           <!-- Primary Actions -->
@@ -616,6 +628,13 @@ const jsonLd = {
         if (costLegacyEl) costLegacyEl.textContent = '$' + totalLegacyAnnual.toLocaleString('en-US') + ' / yr';
         if (costOptimizedEl) costOptimizedEl.textContent = '$' + totalOptimizedAnnual.toLocaleString('en-US') + ' / yr';
         if (savingsPercentEl) savingsPercentEl.textContent = '-' + percent + '%';
+
+        const savingsRangeEl = document.getElementById('savings-range');
+        if (savingsRangeEl) {
+          const low = Math.round(annualSavings * 0.85);
+          const high = Math.round(annualSavings * 1.15);
+          savingsRangeEl.textContent = `Est. range: $${low.toLocaleString('en-US')} – $${high.toLocaleString('en-US')} / yr (±15% variance)`;
+        }
 
         syncUrlState();
       }

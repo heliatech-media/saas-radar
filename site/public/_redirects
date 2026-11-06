@@ -118,3 +118,6 @@
 /checkout / 301
 /admin/marketplace/* / 301
 /admin/marketplace / 301
+
+/reviews/riverside-fm /reviews/riverside 301
+/reviews/screenstudio /reviews/screen-studio 301

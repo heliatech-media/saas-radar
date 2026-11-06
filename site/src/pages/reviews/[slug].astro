@@ -118,14 +118,22 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
-    <!-- Breadcrumb Capsule -->
-    <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 mb-10 shadow-sm">
-      <a href="/radar/" class="hover:text-cyan-400 transition-colors">SAAS RADAR</a>
-      <span class="text-slate-600">/</span>
-      <span class="text-slate-400">{tool.category}</span>
-      <span class="text-slate-600">/</span>
-      <span class="text-cyan-300 font-bold">{tool.name}</span>
-    </nav>
+    <!-- Breadcrumb Capsule & Audit Protocol Badge -->
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
+      <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 shadow-sm">
+        <a href="/radar/" class="hover:text-cyan-400 transition-colors">SAAS RADAR</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-slate-400">{tool.category}</span>
+        <span class="text-slate-600">/</span>
+        <span class="text-cyan-300 font-bold">{tool.name}</span>
+      </nav>
+      <a href="/methodology" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 text-[11px] font-mono text-slate-400 hover:text-cyan-300 transition-colors">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Sentinel™ Protocol v2.4</span>
+        <span class="text-slate-600">|</span>
+        <span class="underline">Audit Methodology</span>
+      </a>
+    </div>
 
     <!-- Dedicated Blog Guide Callout Banner (if available) -->
     {relatedBlogPost && (
