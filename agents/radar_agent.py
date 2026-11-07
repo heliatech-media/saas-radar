@@ -114,17 +114,26 @@ Provide the output strictly conforming to the requested JSON schema.
         """
         Discovers a single high-potential trending tool, actively sniffing for Rewardful compatibility
         and prioritizing breakout high-converting software.
+        Guarantees that the selected tool is NEVER already indexed in local reviews.
         """
-        opps = self.discover_trending_opportunities(count=2)
-        if opps:
-            # Prioritize candidate tools with Rewardful or recurring Stripe payout indicators
-            for opp in opps:
+        existing = set(self.get_existing_tool_slugs())
+        opps = self.discover_trending_opportunities(count=5)
+        
+        valid_opps = []
+        for opp in opps:
+            slug = re.sub(r'[^a-z0-9]+', '-', opp.tool_name.lower()).strip('-')
+            if slug not in existing:
+                valid_opps.append(opp)
+            else:
+                print(f"[Helia-Radar] ⏩ Candidate '{opp.tool_name}' ({slug}) already indexed in reviews. Skipping.")
+
+        if valid_opps:
+            for opp in valid_opps:
                 if "rewardful" in opp.average_commission.lower() or "stripe" in opp.average_commission.lower() or "recurring" in opp.average_commission.lower():
                     print(f"[Helia-Radar] 💎 Priority candidate selected: {opp.tool_name} (Rewardful/Stripe recurring target)")
                     return opp
-            return opps[0]
+            return valid_opps[0]
 
-        existing = set(self.get_existing_tool_slugs())
         for seed in self.get_seed_tools():
             slug = re.sub(r'[^a-z0-9]+', '-', seed['name'].lower()).strip('-')
             if slug not in existing:
@@ -137,10 +146,23 @@ Provide the output strictly conforming to the requested JSON schema.
                     average_commission=seed["commission"]
                 )
 
-        return RadarKeyword(
-            tool_name="Castmagic",
-            category="Viral Creator & Stripe SaaS (Rewardful Ecosystem)",
-            primary_keyword="Castmagic vs Descript 2026",
-            intent="High Commercial Intent",
-            average_commission="30% recurring via Rewardful"
-        )
+        fallback_candidates = [
+            {"name": "Clay", "cat": "Data Enrichment & Waterfall B2B Intelligence", "comm": "30% recurring via PartnerStack"},
+            {"name": "OpusClip", "cat": "AI Video Repurposing & Shorts Synthesis", "comm": "30% recurring via Rewardful"},
+            {"name": "Lovable", "cat": "Full-Stack AI Software Generation & Prototyping", "comm": "25% recurring"},
+            {"name": "Runway", "cat": "Generative Video & VFX Foundation Models", "comm": "20% recurring"},
+            {"name": "Replicate", "cat": "Cloud AI Model Inference & Serverless GPUs", "comm": "20% recurring"},
+        ]
+        for fb in fallback_candidates:
+            fb_slug = re.sub(r'[^a-z0-9]+', '-', fb['name'].lower()).strip('-')
+            if fb_slug not in existing:
+                print(f"[Helia-Radar] 🚀 Dynamic breakout fallback selected: {fb['name']}")
+                return RadarKeyword(
+                    tool_name=fb["name"],
+                    category=fb["cat"],
+                    primary_keyword=f"{fb['name']} review 2026",
+                    intent="Commercial/High-Buying",
+                    average_commission=fb["comm"]
+                )
+
+        raise RuntimeError("Helia-Radar: All catalog opportunities and seeds are already indexed!")

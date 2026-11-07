@@ -106,7 +106,7 @@ class VersusAgent:
 
         if target_file.exists():
             logger.info(f"Versus article '{duel_slug}' already exists. Skipping generation.")
-            return target_file
+            return None
 
         logger.info(f"Architecting deep forensic versus showdown: '{slug_a.upper()} vs {slug_b.upper()}'...")
 
@@ -268,9 +268,35 @@ Write the complete markdown article without truncation.
             logger.warning(f"Could not rasterize duel PNG: {e}")
 
     def execute_versus_sweep(self, limit: int = 1) -> List[Path]:
-        """Runs the versus agent on top candidate duels."""
+        """Runs the versus agent on top candidate duels, scanning HIGH_INTENT_DUELS and versus-duels.json."""
         generated = []
-        for duel in HIGH_INTENT_DUELS:
+        
+        # Build candidate pool: priority high intent duels + catalog duels from versus-duels.json
+        all_candidates = list(HIGH_INTENT_DUELS)
+        versus_json_path = ROOT_DIR / "site" / "src" / "data" / "versus-duels.json"
+        if versus_json_path.exists():
+            try:
+                with open(versus_json_path, "r", encoding="utf-8") as f:
+                    v_list = json.load(f)
+                for v in v_list:
+                    slug = v.get("slug", "")
+                    if "-vs-" in slug:
+                        parts = slug.split("-vs-")
+                        tool_a = parts[0]
+                        tool_b = parts[1]
+                        # Avoid duplicates in candidate list
+                        if not any(c.get("tool_a") == tool_a and c.get("tool_b") == tool_b for c in all_candidates):
+                            all_candidates.append({
+                                "tool_a": tool_a,
+                                "tool_b": tool_b,
+                                "category": v.get("category", "B2B SaaS Rivalry"),
+                                "duel_title": v.get("headline", f"{tool_a.title()} vs {tool_b.title()} (2026 Comparison)"),
+                                "focus": v.get("tagline", "Empirical performance, pricing at scale, and architecture")
+                            })
+            except Exception as e:
+                logger.warning(f"Error loading versus-duels.json: {e}")
+
+        for duel in all_candidates:
             if len(generated) >= limit:
                 break
             art_path = self.generate_versus_article(duel)

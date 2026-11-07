@@ -101,8 +101,8 @@ jobs:
           git add .
           
           if ! git diff-index --quiet HEAD --; then
-            git pull --rebase origin main || true
             git commit -m "feat(auto-growth): Helia autonomous cloud cycle & masterclass deployment [cloud-cron]"
+            git pull --rebase origin main || true
             git push origin main
             echo "✓ Deployed changes to main and published to Cloudflare Edge."
           else
