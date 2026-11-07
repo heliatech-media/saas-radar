@@ -37,6 +37,7 @@ jobs:
 
       - name: Install Site Dependencies
         run: |
+          npm ci || npm install
           cd site
           npm ci || npm install
 
@@ -76,6 +77,23 @@ jobs:
           # Helia runs Cybersecurity check, Auto-repair, Market Discovery, Teardowns & Masterclass production
           python agents/helia_autonomous_director.py --run-once --no-push
 
+      - name: Sync New Content into Cloudflare D1 Remote
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_D1_TOKEN: ${{ secrets.CLOUDFLARE_D1_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_D1_DATABASE_ID: ${{ secrets.CLOUDFLARE_D1_DATABASE_ID }}
+        run: |
+          python scripts/sync_astro_to_d1.py
+
+      - name: Build & Deploy Edge Worker to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          node scripts/build.js
+          npx wrangler deploy
+
       - name: Commit & Push Autonomous Growth to GitHub
         run: |
           git config --global user.name "Helia [Autonomous Cloud Fleet]"
@@ -86,7 +104,7 @@ jobs:
             git pull --rebase origin main || true
             git commit -m "feat(auto-growth): Helia autonomous cloud cycle & masterclass deployment [cloud-cron]"
             git push origin main
-            echo "✓ Deployed changes to main. Cloudflare Pages build triggered."
+            echo "✓ Deployed changes to main and published to Cloudflare Edge."
           else
             echo "No new updates generated in this cycle."
           fi
