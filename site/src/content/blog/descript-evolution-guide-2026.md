@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Podcasting
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: descript
 image: /images/blog/descript.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Descript Account ➔
   url: https://descript.grsm.io/heliatech
 ---
-
 --- 
 title: "Deconstructing Descript at Scale: Unit Economics and Recursive Context Inflection in Enterprise Audio Pipelines"
 author: "HELIATECH Media Engineering"
