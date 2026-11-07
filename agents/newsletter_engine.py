@@ -62,6 +62,11 @@ class NewsletterEmergencyStopActiveError(Exception):
     pass
 
 
+class NewsletterGovernanceSecurityError(Exception):
+    """Raised when newsletter dispatch violates fail-closed governance rules (D1 failure, invalid mode, missing token)."""
+    pass
+
+
 class NewsletterEngine:
     """
     Forensic ACID-compliant Newsletter Governance Engine with persistent SQLite storage.
@@ -398,41 +403,58 @@ class NewsletterEngine:
         - Exactly 1 email maximum per subscriber per slot.
         - Enforces Cloudflare D1 governance (STOP NEWSLETTER & Owner approval).
         """
-        # Interrogation directe de la gouvernance Cloudflare D1 (source unique de vérité)
+        # Interrogation stricte et 100% FAIL-CLOSED de la gouvernance Cloudflare D1
         try:
             from agents.d1_client import get_d1_client
             d1 = get_d1_client()
+
+            # Règle P0 (Fail-Closed) : Envoi réel vers abonnés (test_mode == False) exige obligatoirement le mode CLOUDFLARE_D1_PRODUCTION
+            if not test_mode and getattr(d1, "mode", "") != "CLOUDFLARE_D1_PRODUCTION":
+                error_msg = (
+                    f"[FAIL-CLOSED SECURITY] Envoi réel refusé pour le créneau '{slot_key}' : "
+                    f"Le client D1 n'est pas en mode 'CLOUDFLARE_D1_PRODUCTION' (mode actuel : '{getattr(d1, 'mode', 'UNKNOWN')}'). "
+                    "Tout envoi de production vers de vrais abonnés exige impérativement une connexion D1 Cloudflare authentifiée."
+                )
+                logger.critical(error_msg)
+                raise NewsletterGovernanceSecurityError(error_msg)
+
+            # Lecture obligatoire de l'état persistant D1
             controls = d1.get_governance_controls()
 
             # Règle P0 : Arrêt d'urgence newsletter immédiat
             if controls.get("newsletter_emergency_stop") == 1:
-                logger.error(f"[STOP NEWSLETTER ACTIF] Envoi bloqué pour '{slot_key}' : Emergency Stop actif dans D1 fleet_controls.")
+                logger.critical(f"[STOP NEWSLETTER ACTIF] Envoi bloqué pour '{slot_key}' : Emergency Stop actif dans D1 fleet_controls.")
                 raise NewsletterEmergencyStopActiveError(
                     f"STOP NEWSLETTER actif en base Cloudflare D1 : tout envoi pour le créneau '{slot_key}' est strictement refusé."
                 )
 
             # Règle P0 : Flotte globale en pause
             if controls.get("fleet_status") == "PAUSED":
-                logger.error(f"[FLEET PAUSED] Envoi bloqué pour '{slot_key}' : La flotte d'agents est suspendue dans D1 fleet_controls.")
+                logger.critical(f"[FLEET PAUSED] Envoi bloqué pour '{slot_key}' : La flotte d'agents est suspendue dans D1 fleet_controls.")
                 raise NewsletterEmergencyStopActiveError(
                     f"Flotte suspendue (PAUSED) en base Cloudflare D1 : envoi bloqué pour '{slot_key}'."
                 )
 
-            # Règle P0 : En production Cloudflare D1, vérifier la signature formelle APPROVED dans owner_approvals
+            # Règle P0 : En production Cloudflare D1, vérifier formellement la signature APPROVED dans owner_approvals
             if getattr(d1, "mode", "") == "CLOUDFLARE_D1_PRODUCTION":
                 d1_approvals = d1.query(
                     "SELECT status FROM owner_approvals WHERE item_ref = ? AND status = 'APPROVED'",
                     [slot_key]
                 )
                 if not d1_approvals:
-                    logger.error(f"[UNAUTHORIZED] Créneau '{slot_key}' sans signature patron APPROVED dans D1 owner_approvals.")
+                    logger.critical(f"[UNAUTHORIZED] Créneau '{slot_key}' sans signature patron APPROVED dans D1 owner_approvals.")
                     raise NoValidatedEditionError(
                         f"Créneau '{slot_key}' non validé/signé par l'Owner en base Cloudflare D1 (owner_approvals). Envoi refusé."
                     )
-        except (NewsletterEmergencyStopActiveError, NoValidatedEditionError):
+        except (NewsletterEmergencyStopActiveError, NoValidatedEditionError, NewsletterGovernanceSecurityError):
             raise
         except Exception as e:
-            logger.warning(f"Note vérification gouvernance D1 dans dispatch_slot : {e}")
+            # POLITIQUE 100% FAIL-CLOSED : Toute exception (timeout D1, erreur token, panne réseau) DOIT LEVER une exception fatale
+            logger.critical(f"[FAIL-CLOSED BLOCKED] Échec fatal de vérification Cloudflare D1 pour '{slot_key}' : {e}")
+            raise NewsletterGovernanceSecurityError(
+                f"Échec fatal de gouvernance Cloudflare D1 pour le créneau '{slot_key}' : {e}. "
+                "Envoi strictement annulé (politique 100% Fail-Closed)."
+            ) from e
 
         with self._get_connection() as conn:
             edition = conn.execute(

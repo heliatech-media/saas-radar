@@ -342,6 +342,36 @@ class HeliaAutonomousDirector:
                     except Exception as e:
                         self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
 
+        # Step 4.5: Traitement réel des contenus en file d'attente 'AUDIT_QUEUED' par SoftwareAnalyst & DataVerifier
+        try:
+            from agents.d1_client import get_d1_client
+            d1 = get_d1_client()
+            queued = d1.query("SELECT * FROM content_inventory WHERE audit_status = 'AUDIT_QUEUED'")
+            if queued:
+                self.log("Helia-Analyst", f"Found {len(queued)} queued re-audit item(s) from Owner. Executing forensic analysis...", "🔬")
+                for q in queued:
+                    q_slug = q.get("slug")
+                    q_type = q.get("type", "review")
+                    self.log("Helia-Analyst", f"Executing physical source & TCO verification for '{q_slug}'...", "📊")
+                    audit_res = self.analyst.reaudit_content_item(slug=q_slug, content_type=q_type)
+                    now_iso = datetime.now(timezone.utc).isoformat()
+                    d1.execute(
+                        "UPDATE content_inventory SET audit_status = 'VERIFIED', last_audited_at = ?, evidence_count = ?, tco_accuracy_score = ? WHERE slug = ?",
+                        [now_iso, audit_res["evidence_count"], audit_res["tco_accuracy_score"], q_slug]
+                    )
+                    d1.log_audit(
+                        actor_email="agent:SoftwareAnalyst",
+                        action="EXECUTE_CONTENT_REAUDIT",
+                        target=f"content:{q_slug}",
+                        details={"agent": "SoftwareAnalyst", "evidence_count": audit_res["evidence_count"], "tco_accuracy_score": audit_res["tco_accuracy_score"]},
+                        previous_state="AUDIT_QUEUED",
+                        new_state="VERIFIED",
+                        actor_role="agent"
+                    )
+                    self.log("Helia-Analyst", f"Re-audit completed for '{q_slug}' ({audit_res['evidence_count']} sources verified, TCO score {audit_res['tco_accuracy_score']}/10). Status set to VERIFIED in D1.", "✅")
+        except Exception as e:
+            self.log("Helia-Analyst", f"Re-audit queue inspection note: {e}", "⚠️")
+
         # Step 5.5: Sub-Agent VersusEngine (Dual Head-to-Head Duel Showdowns)
         try:
             self.log("Helia-VersusEngine", "Evaluating candidate B2B rivalry showdowns...", "⚔️")

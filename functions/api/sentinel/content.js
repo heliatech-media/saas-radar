@@ -62,19 +62,21 @@ export async function onRequestPost(context) {
     if (action === "re-audit") {
       const nowIso = new Date().toISOString();
 
-      await db.prepare("UPDATE content_inventory SET audit_status = 'VERIFIED', last_audited_at = ? WHERE slug = ?")
+      // Vérité Opérationnelle : Le clic patron demande un réaudit et passe au statut AUDIT_QUEUED
+      await db.prepare("UPDATE content_inventory SET audit_status = 'AUDIT_QUEUED', last_audited_at = ? WHERE slug = ?")
         .bind(nowIso, slug).run();
 
       await db.prepare(`
         INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-        VALUES (datetime('now'), ?, 'owner', 'RE_AUDIT_CONTENT', ?, '{"agent":"SoftwareAnalyst"}', 'AUDIT_REQUESTED', 'VERIFIED', 'sig_content_audit')
+        VALUES (datetime('now'), ?, 'owner', 'REQUEST_CONTENT_REAUDIT', ?, '{"assigned_agent":"SoftwareAnalyst"}', 'VERIFIED', 'AUDIT_QUEUED', 'sig_reaudit_queued')
       `).bind(actorEmail, `content:${slug}`).run();
 
       return new Response(JSON.stringify({
         success: true,
         slug,
+        audit_status: "AUDIT_QUEUED",
         last_audited_at: nowIso,
-        message: `Réaudit du contenu '${slug}' validé avec succès en base D1 par SoftwareAnalyst & DataVerifier.`
+        message: `Ordre de réaudit enregistré : contenu '${slug}' placé en file d'attente ('AUDIT_QUEUED'). L'agent SoftwareAnalyst analysera et certifiera ce contenu au prochain cycle.`
       }), {
         status: 200,
         headers: { "Content-Type": "application/json" }
