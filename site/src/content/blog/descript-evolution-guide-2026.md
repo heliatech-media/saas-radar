@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Podcasting
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: descript
 image: /images/blog/descript.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Descript Account ➔
   url: https://descript.grsm.io/heliatech
 ---
-
 For decades, digital media editing has operated under an arcane, counterintuitive dogma: to change what someone said, you had to slice up red digital ribbons of audio waveforms, slide pixel blocks around a timeline, and squint at jagged decibel peaks. Creators and corporate communications teams spent countless hours hunting down verbal stumbles, removing 'ums' and 'ahs', and wrestling with multi-track rendering engines that felt more suited to Hollywood feature films than corporate webinars or internal async video updates. The human bottleneck was clear—the speed of thought was constantly hamstrung by the mechanics of legacy software.
 
 Then came a paradigm shift that reimagined post-production entirely. By treating audio and video like a text document, one platform turned every copywriter, marketer, and founder into an instant media editor.

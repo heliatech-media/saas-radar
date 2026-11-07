@@ -262,13 +262,12 @@
   {
     "name": "Julius AI",
     "slug": "julius-ai",
-    "tagline": "Your intelligent data analyst that writes code, cleans data, and visualizes insights in seconds.",
-    "category": "AI Data Analysis",
+    "tagline": "An intuitive AI-powered data analyst that writes code, generates interactive visualizations, and uncovers deep insights from your spreadsheets.",
+    "category": "AI Data Analysis & Visualization",
     "rating": 4.6,
-    "starting_price": "$0/mo",
-    "best_for": "Data analysts, marketers, researchers, and operations teams looking to automate manual reporting and ad-hoc exploratory data analysis.",
-    "affiliate_url": "https://julius.ai/?via=heliatech",
-    "commission_rate": "30% recurring"
+    "starting_price": "$20/mo",
+    "best_for": "Marketers, financial analysts, startup founders, and operations teams who need advanced data analysis and visualization without writing code.",
+    "affiliate_url": "https://julius.ai/?via=heliatech"
   },
   {
     "name": "Kit",
