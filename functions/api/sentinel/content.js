@@ -5,6 +5,14 @@
  * ZÉRO SAMPLE DATA, ZÉRO HARDCODED ARTICLE.
  */
 
+async function computeSha256(text) {
+  const enc = new TextEncoder().encode(text);
+  const hashBuf = await crypto.subtle.digest("SHA-256", enc);
+  return Array.from(new Uint8Array(hashBuf))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
 export async function onRequestGet(context) {
   try {
     const url = new URL(context.request.url);
@@ -66,10 +74,25 @@ export async function onRequestPost(context) {
       await db.prepare("UPDATE content_inventory SET audit_status = 'AUDIT_QUEUED', last_audited_at = ? WHERE slug = ?")
         .bind(nowIso, slug).run();
 
+            // Chaînage cryptographique SHA-256 avec le prev_hash du dernier log pour intégrité forensique
+      let prevSig = "0".repeat(64);
+      try {
+        const lastLog = await db.prepare("SELECT signature FROM sentinel_audit_logs ORDER BY id DESC LIMIT 1").first();
+        if (lastLog && lastLog.signature) {
+          prevSig = lastLog.signature;
+        }
+      } catch (_) {}
+
+      const targetRef = `content:${slug}`;
+      const actionType = "REQUEST_CONTENT_REAUDIT";
+      const detailsJson = JSON.stringify({ assigned_agent: "SoftwareAnalyst" });
+      const sigPayload = `${prevSig}|${nowIso}|${actorEmail}|${actionType}|${targetRef}|AUDIT_QUEUED`;
+      const signature = await computeSha256(sigPayload);
+
       await db.prepare(`
         INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-        VALUES (datetime('now'), ?, 'owner', 'REQUEST_CONTENT_REAUDIT', ?, '{"assigned_agent":"SoftwareAnalyst"}', 'VERIFIED', 'AUDIT_QUEUED', 'sig_reaudit_queued')
-      `).bind(actorEmail, `content:${slug}`).run();
+        VALUES (?, ?, 'owner', ?, ?, ?, 'VERIFIED', 'AUDIT_QUEUED', ?)
+      `).bind(nowIso, actorEmail, actionType, targetRef, detailsJson, signature).run();
 
       return new Response(JSON.stringify({
         success: true,
