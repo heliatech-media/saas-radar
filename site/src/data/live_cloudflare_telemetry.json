@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-07T12:31:14.242699",
+  "last_synced": "2026-11-07T15:01:37.429153",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-10 - 2026-11-07)",
-  "total_visitors_network": 22723,
-  "total_requests": 131025,
-  "total_visits": 7044,
-  "total_pageviews": 28026,
+  "total_visitors_network": 22766,
+  "total_requests": 131216,
+  "total_visits": 7057,
+  "total_pageviews": 28120,
   "percent_cached": "56.14%",
-  "data_served_mb": 1144.6,
+  "data_served_mb": 1150.5,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6100
+      "views": 6470
     },
     {
       "path": "/",
-      "views": 3520
+      "views": 3310
     },
     {
       "path": "/calculator/",
-      "views": 1140
+      "views": 1170
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 910
+      "views": 950
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 550
+      "views": 620
     },
     {
-      "path": "/blog/",
-      "views": 270
-    },
-    {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 260
-    },
-    {
-      "path": "/radar/",
-      "views": 250
-    },
-    {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 240
-    },
-    {
-      "path": "/terms/",
-      "views": 220
-    },
-    {
-      "path": "/reviews/elevenlabs/",
-      "views": 220
-    },
-    {
-      "path": "/reviews/clickup/",
-      "views": 210
-    },
-    {
-      "path": "/deals/",
-      "views": 210
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 200
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 280
     },
     {
       "path": "/awards/",
+      "views": 270
+    },
+    {
+      "path": "/radar/",
+      "views": 260
+    },
+    {
+      "path": "/blog/",
+      "views": 250
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 250
+    },
+    {
+      "path": "/versus/",
+      "views": 240
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 220
+    },
+    {
+      "path": "/deals/",
       "views": 190
+    },
+    {
+      "path": "/blog/rewardful-evolution-guide-2026/",
+      "views": 170
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 170
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 24440
+      "views": 25360
     },
     {
       "country": "Morocco",
-      "views": 19880
+      "views": 18570
     },
     {
       "country": "Singapore",
-      "views": 1560
+      "views": 1460
     },
     {
       "country": "Germany",
-      "views": 1420
+      "views": 1330
     },
     {
       "country": "Belgium",
-      "views": 710
+      "views": 640
     },
     {
       "country": "United Kingdom",
-      "views": 650
-    },
-    {
-      "country": "Brazil",
-      "views": 580
-    },
-    {
-      "country": "France",
-      "views": 510
+      "views": 620
     },
     {
       "country": "Canada",
-      "views": 470
+      "views": 590
     },
     {
-      "country": "CN",
-      "views": 460
+      "country": "Brazil",
+      "views": 560
+    },
+    {
+      "country": "Netherlands",
+      "views": 560
+    },
+    {
+      "country": "France",
+      "views": 440
     }
   ],
   "top_referrers": [
