@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-07T02:46:57.789010",
+  "last_synced": "2026-11-07T02:57:03.185026",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-10 - 2026-11-07)",
-  "total_visitors_network": 21661,
-  "total_requests": 128961,
-  "total_visits": 6714,
-  "total_pageviews": 27322,
+  "total_visitors_network": 22200,
+  "total_requests": 129601,
+  "total_visits": 6882,
+  "total_pageviews": 27543,
   "percent_cached": "56.14%",
-  "data_served_mb": 1083.5,
+  "data_served_mb": 1089.5,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/",
-      "views": 3200
+      "views": 3210
     },
     {
       "path": "/calculator/",
@@ -55,11 +55,11 @@
       "views": 230
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 180
+      "path": "/deals/",
+      "views": 190
     },
     {
-      "path": "/deals/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 180
     },
     {
@@ -67,18 +67,18 @@
       "views": 170
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/reviews/make/",
       "views": 160
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 24760
+      "views": 24770
     },
     {
       "country": "Morocco",
-      "views": 18410
+      "views": 18420
     },
     {
       "country": "Singapore",
@@ -90,7 +90,7 @@
     },
     {
       "country": "United Kingdom",
-      "views": 600
+      "views": 620
     },
     {
       "country": "Belgium",
@@ -98,7 +98,7 @@
     },
     {
       "country": "Canada",
-      "views": 570
+      "views": 590
     },
     {
       "country": "Netherlands",
@@ -106,7 +106,7 @@
     },
     {
       "country": "Brazil",
-      "views": 520
+      "views": 540
     },
     {
       "country": "France",
