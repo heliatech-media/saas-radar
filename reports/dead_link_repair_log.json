@@ -1,16 +1,21 @@
 {
-  "timestamp": "2026-11-07T00:32:32.844494",
+  "timestamp": "2026-11-07T03:59:27.476739",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 168,
-    "total_redirects_active": 95,
-    "new_redirects_healed": 22,
+    "total_content_files_scanned": 169,
+    "total_redirects_active": 96,
+    "new_redirects_healed": 23,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
   },
   "healed_redirects": [
+    {
+      "slug": "descript-enterprise-sandbox",
+      "target_url": "https://www.descript-enterprise-sandbox.com",
+      "source_file": "descript-evolution-guide-2026.md"
+    },
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",

@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-11-07 00:33:05",
-  "total_links_audited": 95,
+  "timestamp": "2026-11-07 04:00:11",
+  "total_links_audited": 96,
   "healthy_links": 92,
-  "broken_links_count": 3,
-  "health_rate": "96.8%",
+  "broken_links_count": 4,
+  "health_rate": "95.8%",
   "broken_links": [
+    {
+      "slug": "descript-enterprise-sandbox",
+      "target_url": "https://www.descript-enterprise-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.descript-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-enterprise-sandbox.com', port=443): Failed to resolve 'www.descript-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
     {
       "slug": "minicong",
       "target_url": "https://minicong.ai/?via=heliatech",
@@ -151,6 +159,14 @@
       "healthy": true
     },
     {
+      "slug": "descript-enterprise-sandbox",
+      "target_url": "https://www.descript-enterprise-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.descript-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-enterprise-sandbox.com', port=443): Failed to resolve 'www.descript-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "dumpling-ai",
       "target_url": "https://www.dumpling.ai/?via=heliatech",
       "final_url": "https://www.dumpling.ai/?via=heliatech",
@@ -160,7 +176,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=NhhC5Q99XPo9oJ&gsxid=NhhC5Q99XPo9oJ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=4wdnHGpsoZlM9v&gsxid=4wdnHGpsoZlM9v&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -393,7 +409,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=sNqglaBqQPZrZd&gsxid=sNqglaBqQPZrZd&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=J5TVcWpKrQ6gOH&gsxid=J5TVcWpKrQ6gOH&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -421,7 +437,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2FET2xSvyQnd0W&gsxid=2FET2xSvyQnd0W&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cSgajC6MG1LsiT&gsxid=cSgajC6MG1LsiT&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

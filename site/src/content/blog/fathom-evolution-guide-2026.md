@@ -13,7 +13,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: fathom
 image: /images/blog/fathom.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Fathom Account ➔
   url: https://fathom.video/?via=heliatech
 ---
-
 For decades, the boardroom—and eventually the Zoom room—was a graveyard of lost ideas. Executives and sales professionals were forced into a binary choice: participate fully in the conversation and lose the details, or scribble notes frantically and lose the human connection. This cognitive load created a massive bottleneck in the enterprise, where the 'meeting after the meeting'—the manual task of summarizing, emailing, and updating CRMs—consumed more time than the actual strategy sessions. The market was saturated with clunky, expensive legacy transcription services that delivered 'word soup' rather than actionable intelligence. Then came Fathom.
 
 ## 1. The Genesis & Evolution
