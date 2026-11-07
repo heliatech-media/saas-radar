@@ -110,7 +110,7 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
         # 0. Cognitive Swarm Reflection & Deliberative Refinement
         try:
             from agents.cognitive_core import CognitiveReflectionEngine
-            reflector = CognitiveReflectionEngine(api_key=self.client.api_key if self.client else None, model=self.model)
+            reflector = CognitiveReflectionEngine(api_key=GEMINI_API_KEY, model=self.model)
             reflection = reflector.reflect_and_refine(
                 agent_name="BlogAgent",
                 domain="content",
@@ -125,7 +125,7 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
         
         # 1. Generate dedicated relative hero artwork via Helia-VisualArtist
         try:
-            artist = ImageGeneratorAgent(api_key=self.client.api_key if self.client else "")
+            artist = ImageGeneratorAgent(api_key=GEMINI_API_KEY)
             artist.generate_article_hero_image(
                 tool_name=review.name,
                 tool_slug=review.slug,
