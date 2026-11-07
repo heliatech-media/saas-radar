@@ -1,19 +1,24 @@
 {
-  "timestamp": "2026-11-07T09:34:53.571897",
+  "timestamp": "2026-11-07T12:31:38.161281",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
     "total_content_files_scanned": 169,
-    "total_redirects_active": 96,
-    "new_redirects_healed": 23,
+    "total_redirects_active": 97,
+    "new_redirects_healed": 24,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
   },
   "healed_redirects": [
     {
-      "slug": "descript-sandbox",
-      "target_url": "https://www.descript-sandbox.com",
+      "slug": "descript-sandbox-leaks",
+      "target_url": "https://www.descript-sandbox-leaks.com",
+      "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "descript-migration-calculator",
+      "target_url": "https://www.descript-migration-calculator.com",
       "source_file": "descript-evolution-guide-2026.md"
     },
     {

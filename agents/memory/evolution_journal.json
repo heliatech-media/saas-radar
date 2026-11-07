@@ -1,8 +1,8 @@
 {
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
-  "last_cycle_timestamp": "2026-11-07T09:34:08.517458",
-  "total_heuristics_stored": 51,
+  "last_cycle_timestamp": "2026-11-07T12:30:53.492276",
+  "total_heuristics_stored": 52,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -202,6 +202,20 @@
       "domain": "content",
       "score": 95,
       "critique_summary": "Failed to open with a zero-inflection hard metric, omitted the Recursive Context Inflection Accounting (RCIA) cost-inflection equation C_step(n), lack"
+    },
+    {
+      "timestamp": "2026-11-07T12:30:39.279277",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "content",
+      "heuristic_name": "Cognitive-Load Interleaved Dwell Trapping",
+      "curriculum_module": "Long-form Reader Dwell Optimization: Using progressive disclosure and visual typography to retain technical decision-makers over 3 minutes"
+    },
+    {
+      "timestamp": "2026-11-07T12:30:53.492269",
+      "agent": "BlogAgent",
+      "domain": "content",
+      "score": 96,
+      "critique_summary": "Initial opening relied on general narrative fluff rather than an arresting metric; missing the explicit RCIA 100-step autonomous cost-inflection equat"
     }
   ]
 }
