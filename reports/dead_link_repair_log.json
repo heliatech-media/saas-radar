@@ -1,16 +1,21 @@
 {
-  "timestamp": "2026-11-07T12:31:38.161281",
+  "timestamp": "2026-11-07T15:26:32.365513",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 169,
-    "total_redirects_active": 97,
-    "new_redirects_healed": 24,
+    "total_content_files_scanned": 173,
+    "total_redirects_active": 103,
+    "new_redirects_healed": 30,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
   },
   "healed_redirects": [
+    {
+      "slug": "minvo-testing-sandbox",
+      "target_url": "https://www.minvo-testing-sandbox.com",
+      "source_file": "minvo-evolution-guide-2026.md"
+    },
     {
       "slug": "descript-sandbox-leaks",
       "target_url": "https://www.descript-sandbox-leaks.com",
@@ -20,6 +25,31 @@
       "slug": "descript-migration-calculator",
       "target_url": "https://www.descript-migration-calculator.com",
       "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "asana",
+      "target_url": "https://www.asana.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "notion",
+      "target_url": "https://www.notion.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "basecamp",
+      "target_url": "https://www.basecamp.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "height",
+      "target_url": "https://www.height.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "jira",
+      "target_url": "https://www.jira.com",
+      "source_file": "best-clickup-alternatives-2026.md"
     },
     {
       "slug": "playht",

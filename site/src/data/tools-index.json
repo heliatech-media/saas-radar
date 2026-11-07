@@ -377,6 +377,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "Minvo",
+    "slug": "minvo",
+    "tagline": "Turn long-form video into viral clips instantly using AI-powered automation",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Content creators, marketing agencies, podcasters, and B2B brands scaling short-form social video.",
+    "affiliate_url": "https://www.minvo.pro"
+  },
+  {
     "name": "Monday.com",
     "slug": "monday-com",
     "tagline": "A customizable Work OS where teams build custom workflows, manage projects, and scale operations.",

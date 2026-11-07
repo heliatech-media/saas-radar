@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-07T16:22:14.710745",
+  "last_synced": "2026-11-07T15:26:08.860509",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-10 - 2026-11-07)",
-  "total_visitors_network": 22829,
-  "total_requests": 131485,
-  "total_visits": 7076,
-  "total_pageviews": 28213,
+  "total_visitors_network": 22839,
+  "total_requests": 131498,
+  "total_visits": 7080,
+  "total_pageviews": 28222,
   "percent_cached": "56.14%",
-  "data_served_mb": 1157.1,
+  "data_served_mb": 1158.0,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6480
+      "views": 6110
     },
     {
       "path": "/",
-      "views": 3310
+      "views": 3540
     },
     {
       "path": "/calculator/",
-      "views": 1170
+      "views": 1150
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 950
+      "views": 920
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 620
+      "views": 580
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 280
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 270
     },
     {
-      "path": "/awards/",
+      "path": "/blog/",
       "views": 270
     },
     {
       "path": "/radar/",
-      "views": 260
-    },
-    {
-      "path": "/blog/",
       "views": 250
-    },
-    {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 250
-    },
-    {
-      "path": "/versus/",
-      "views": 240
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 250
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 230
+    },
+    {
+      "path": "/terms/",
       "views": 220
     },
     {
+      "path": "/reviews/clickup/",
+      "views": 210
+    },
+    {
       "path": "/deals/",
+      "views": 210
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 200
+    },
+    {
+      "path": "/awards/",
       "views": 190
-    },
-    {
-      "path": "/sentinel/",
-      "views": 180
-    },
-    {
-      "path": "/blog/rewardful-evolution-guide-2026/",
-      "views": 180
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 25400
+      "views": 24620
     },
     {
       "country": "Morocco",
-      "views": 18620
+      "views": 19940
     },
     {
       "country": "Singapore",
-      "views": 1460
+      "views": 1560
     },
     {
       "country": "Germany",
-      "views": 1330
+      "views": 1420
     },
     {
       "country": "Belgium",
-      "views": 640
+      "views": 710
     },
     {
       "country": "United Kingdom",
-      "views": 620
-    },
-    {
-      "country": "Canada",
-      "views": 590
+      "views": 650
     },
     {
       "country": "Brazil",
-      "views": 570
-    },
-    {
-      "country": "Netherlands",
-      "views": 560
+      "views": 600
     },
     {
       "country": "France",
-      "views": 440
+      "views": 510
+    },
+    {
+      "country": "Canada",
+      "views": 470
+    },
+    {
+      "country": "CN",
+      "views": 460
     }
   ],
   "top_referrers": [
