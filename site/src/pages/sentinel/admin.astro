@@ -2455,7 +2455,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         }
         if (tbody) tbody.innerHTML = '';
         if (!data.affiliate_portfolio?.sample_links || data.affiliate_portfolio.sample_links.length === 0) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="4" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun lien d'affiliation répertorié.</td></tr>';
+          if (tbody) tbody.innerHTML = `<tr><td colspan="4" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun lien d'affiliation répertorié.</td></tr>`;
           return;
         }
 
