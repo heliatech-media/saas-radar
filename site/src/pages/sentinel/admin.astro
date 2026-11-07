@@ -1947,10 +1947,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return;
         }
         if (tbody) tbody.innerHTML = '';
-        const subsBadge = document.getElementById('sidebar-subs-badge');
-        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
-        if (!data.subscribers || data.subscribers.length === 0) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+        if (!data.agents || data.agents.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun agent répertorié.</td></tr>';
           return;
         }
 
@@ -2043,10 +2041,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return;
         }
         if (tbody) tbody.innerHTML = '';
-        const subsBadge = document.getElementById('sidebar-subs-badge');
-        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
-        if (!data.subscribers || data.subscribers.length === 0) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+        if (!data.content || data.content.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun contenu répertorié dans Cloudflare D1.</td></tr>';
           return;
         }
 
@@ -2458,10 +2454,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return;
         }
         if (tbody) tbody.innerHTML = '';
-        const subsBadge = document.getElementById('sidebar-subs-badge');
-        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
-        if (!data.subscribers || data.subscribers.length === 0) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+        if (!data.affiliate_portfolio?.sample_links || data.affiliate_portfolio.sample_links.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="4" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun lien d'affiliation répertorié.</td></tr>';
           return;
         }
 
@@ -2730,10 +2724,8 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
           return;
         }
         if (tbody) tbody.innerHTML = '';
-        const subsBadge = document.getElementById('sidebar-subs-badge');
-        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
-        if (!data.subscribers || data.subscribers.length === 0) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+        if (!data.duels || data.duels.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun duel comparatif répertorié.</td></tr>';
           return;
         }
 
