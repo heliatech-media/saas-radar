@@ -139,10 +139,10 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               <span>🏷️</span> Deals & Promos (48h) <span id="sidebar-deals-badge" class="ml-auto text-[10px] text-emerald-400 font-bold">—</span>
             </button>
             <button onclick="showSection('view-radar')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-radar">
-              <span>📡</span> Radar de Veille (Trends) <span class="ml-auto text-[10px] text-cyan-400 font-bold">6</span>
+              <span>📡</span> Radar de Veille (Trends) <span id="sidebar-radar-badge" class="ml-auto text-[10px] text-cyan-400 font-bold">6</span>
             </button>
             <button onclick="showSection('view-versus')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-versus">
-              <span>⚔️</span> Duels Versus <span class="ml-auto text-[10px] text-slate-500">19</span>
+              <span>⚔️</span> Duels Versus <span id="sidebar-versus-badge" class="ml-auto text-[10px] text-cyan-400 font-bold">-</span>
             </button>
             <button onclick="showSection('view-newsletter')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-newsletter">
               <span>📬</span> Newsletter & Abonnés <span id="sidebar-subs-badge" class="ml-auto text-[10px] text-fuchsia-400 font-bold">—</span>
@@ -1855,6 +1855,10 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           if (dealsBadge && data.inventory_summary.deals_verified !== undefined) {
             dealsBadge.innerText = data.inventory_summary.deals_verified;
           }
+          const versusBadge = document.getElementById('sidebar-versus-badge');
+          if (versusBadge && data.inventory_summary.versus_count !== undefined) {
+            versusBadge.innerText = data.inventory_summary.versus_count;
+          }
         }
 
         if (data.fleet) {
@@ -1943,6 +1947,12 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return;
         }
         if (tbody) tbody.innerHTML = '';
+        const subsBadge = document.getElementById('sidebar-subs-badge');
+        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
+        if (!data.subscribers || data.subscribers.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+          return;
+        }
 
         let suspendedCount = 0;
 
@@ -2033,6 +2043,12 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return;
         }
         if (tbody) tbody.innerHTML = '';
+        const subsBadge = document.getElementById('sidebar-subs-badge');
+        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
+        if (!data.subscribers || data.subscribers.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+          return;
+        }
 
         if (data.total !== undefined) {
           const badge = document.getElementById('sidebar-content-badge');
@@ -2442,6 +2458,12 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return;
         }
         if (tbody) tbody.innerHTML = '';
+        const subsBadge = document.getElementById('sidebar-subs-badge');
+        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
+        if (!data.subscribers || data.subscribers.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+          return;
+        }
 
         data.affiliate_portfolio.sample_links.forEach(l => {
           const tr = document.createElement('tr');
@@ -2576,6 +2598,14 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
     }
 
     // 4. Phase 2 : Chargement du Radar de Veille
+    
+    // State registries for UI interactivity
+    const plannedRadarState = {};
+    function getPlannedRadar() { return plannedRadarState; }
+
+    const inspectedDuelsState = {};
+    function getInspectedDuels() { return inspectedDuelsState; }
+
     async function planRadarContent(toolName, slug, btn) {
       if (btn) {
         btn.innerText = '⏳ Transmission...';
@@ -2587,6 +2617,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           tool_slug: slug,
           tool_name: toolName
         });
+        plannedRadarState[slug] = true;
         alert(`[ORDRE DE RÉDACTION TRANSMIS D1]
 ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec succès.`}`);
         await fetchRadar();
@@ -2673,6 +2704,7 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
           action: 'inspect_duel',
           duel_slug: duelSlug
         });
+        inspectedDuelsState[duelSlug] = true;
         alert(`[MÉTHODOLOGIE DUEL CERTIFIÉE CONFORME D1]\n${data.message || `Duel ${duelSlug} certifié en base D1.`}\n\nPage publique active : /versus/${duelSlug}/`);
         await fetchVersus();
       } catch (e) {
@@ -2698,6 +2730,12 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
           return;
         }
         if (tbody) tbody.innerHTML = '';
+        const subsBadge = document.getElementById('sidebar-subs-badge');
+        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
+        if (!data.subscribers || data.subscribers.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+          return;
+        }
 
         const inspectedMap = getInspectedDuels();
 
@@ -2725,6 +2763,8 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
           tbody.appendChild(tr);
         });
 
+        const vsBadge = document.getElementById('sidebar-versus-badge');
+        if (vsBadge && data.total !== undefined) vsBadge.innerText = data.total;
         if (refreshBtn) {
           refreshBtn.innerHTML = '<span>✓</span> Duels à Jour';
           setTimeout(() => {
@@ -2758,6 +2798,12 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
           return;
         }
         if (tbody) tbody.innerHTML = '';
+        const subsBadge = document.getElementById('sidebar-subs-badge');
+        if (subsBadge && data.total !== undefined) subsBadge.innerText = data.total;
+        if (!data.subscribers || data.subscribers.length === 0) {
+          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun abonné enregistré dans Cloudflare D1. File de capture active.</td></tr>';
+          return;
+        }
 
         if (reveal) {
           recordLocalAuditLog('REVEAL_PII_SUBSCRIBERS', 'subscribers:pii', { authenticated_owner: 'owner@heliatech.online (Zero Trust MFA)' }, 'MASKED', 'UNMASKED');

@@ -82,6 +82,15 @@ export async function onRequestGet(context) {
       console.error("D1 deals_registry query error:", e);
     }
 
+    // 6. Duels versus réels
+    let versusCount = 0;
+    try {
+      const vsRow = await db.prepare("SELECT COUNT(*) as count FROM versus_matrix").first();
+      if (vsRow && vsRow.count !== undefined) versusCount = vsRow.count;
+    } catch (e) {
+      console.error("D1 versus_matrix query error:", e);
+    }
+
     const activeAgentsCount = fleetStatus === "PAUSED" ? 3 : Math.max(0, 24 - suspendedAgents.length);
 
     const payload = {
@@ -110,7 +119,8 @@ export async function onRequestGet(context) {
       },
       inventory_summary: {
         content_count: contentCount,
-        deals_verified: verifiedDealsCount
+        deals_verified: verifiedDealsCount,
+        versus_count: versusCount
       }
     };
 
