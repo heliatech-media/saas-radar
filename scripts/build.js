@@ -42,8 +42,15 @@ if (fs.existsSync(rootFunctions)) {
   console.log('⚡ Compiling functions into _worker.js for edge worker dynamic routing...');
   try {
     execSync('npx wrangler pages functions build functions --outdir dist', { cwd: rootDir, stdio: 'inherit' });
-    if (fs.existsSync(path.join(rootDist, '_worker.js'))) {
-      fs.copyFileSync(path.join(rootDist, '_worker.js'), path.join(siteDist, '_worker.js'));
+    const compiledWorker = path.join(rootDist, 'index.js');
+    const targetWorker = path.join(rootDist, '_worker.js');
+    if (fs.existsSync(compiledWorker)) {
+      fs.copyFileSync(compiledWorker, targetWorker);
+      fs.copyFileSync(compiledWorker, path.join(siteDist, '_worker.js'));
+      fs.copyFileSync(compiledWorker, path.join(siteDist, 'index.js'));
+      console.log('✓ Compiled and mapped index.js to _worker.js in dist and site/dist');
+    } else if (fs.existsSync(targetWorker)) {
+      fs.copyFileSync(targetWorker, path.join(siteDist, '_worker.js'));
       console.log('✓ Compiled and mirrored _worker.js to dist and site/dist');
     }
   } catch (err) {
