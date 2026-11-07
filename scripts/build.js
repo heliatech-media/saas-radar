@@ -37,18 +37,24 @@ if (fs.existsSync(siteFunctions)) {
   fs.cpSync(siteFunctions, rootFunctions, { recursive: true });
 }
 
-// 3.6 Compile Pages Functions into worker/index.js for Cloudflare Workers API routing
+// 3.6 Compile Pages Functions into _worker.js for Cloudflare Pages / Workers API routing
 if (fs.existsSync(rootFunctions)) {
-  console.log('⚡ Compiling functions into worker/index.js for edge worker dynamic routing...');
+  console.log('⚡ Compiling functions into _worker.js for edge worker dynamic routing...');
   try {
-    const workerDir = path.join(rootDir, 'worker');
-    if (!fs.existsSync(workerDir)) {
-      fs.mkdirSync(workerDir, { recursive: true });
+    execSync('npx wrangler pages functions build functions --outdir dist', { cwd: rootDir, stdio: 'inherit' });
+    const compiledWorker = path.join(rootDist, 'index.js');
+    const targetWorker = path.join(rootDist, '_worker.js');
+    if (fs.existsSync(compiledWorker)) {
+      fs.copyFileSync(compiledWorker, targetWorker);
+      fs.copyFileSync(compiledWorker, path.join(siteDist, '_worker.js'));
+      fs.copyFileSync(compiledWorker, path.join(siteDist, 'index.js'));
+      console.log('✓ Compiled and mapped index.js to _worker.js in dist and site/dist');
+    } else if (fs.existsSync(targetWorker)) {
+      fs.copyFileSync(targetWorker, path.join(siteDist, '_worker.js'));
+      console.log('✓ Compiled and mirrored _worker.js to dist and site/dist');
     }
-    execSync('npx wrangler pages functions build functions --outdir worker', { cwd: rootDir, stdio: 'inherit' });
-    console.log('✓ Compiled worker/index.js successfully');
   } catch (err) {
-    console.warn('⚠️ [Cloudflare Build Bridge] Notice on worker build:', err.message);
+    console.warn('⚠️ [Cloudflare Build Bridge] Notice on _worker.js build:', err.message);
   }
 }
 
