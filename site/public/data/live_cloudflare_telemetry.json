@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-07T03:27:16.362914",
+  "last_synced": "2026-11-07T03:37:21.972087",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-10 - 2026-11-07)",
-  "total_visitors_network": 22227,
-  "total_requests": 129764,
-  "total_visits": 6890,
-  "total_pageviews": 27571,
+  "total_visitors_network": 22237,
+  "total_requests": 129811,
+  "total_visits": 6893,
+  "total_pageviews": 27582,
   "percent_cached": "56.14%",
-  "data_served_mb": 1091.5,
+  "data_served_mb": 1092.1,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -67,7 +67,7 @@
       "views": 170
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/reviews/make/",
       "views": 160
     }
   ],
@@ -93,11 +93,11 @@
       "views": 620
     },
     {
-      "country": "Belgium",
+      "country": "Canada",
       "views": 590
     },
     {
-      "country": "Canada",
+      "country": "Belgium",
       "views": 590
     },
     {
