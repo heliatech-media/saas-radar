@@ -1,0 +1,8 @@
+name = "heliatech-sentinel-governance"
+account_id = "b3afc13187792a3d1135561de03e9f16"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "heliatech-sentinel-governance"
+database_id = "a5659ce3-467e-47d9-8577-f984c5d040f1"

@@ -238,11 +238,12 @@ def sync_all():
     for d in deals_data:
         esc_perk = d["perk_title"].replace("'", "''")
         esc_sav = d["savings_estimate"].replace("'", "''")
+        esc_badge = d["badge"].replace("'", "''")
         sql = (
             f"INSERT OR REPLACE INTO deals_registry "
             f"(tool_name, tool_slug, category, partner_code, perk_title, badge, affiliate_url, savings_estimate, verification_cadence_hours, proof_url, link_status, link_checked_at, link_http_code, link_latency_ms, offer_status, offer_verified_at, offer_verified_by, offer_terms_notes, verified_at, status) "
             f"VALUES ('{d['tool_name']}', '{d['tool_slug']}', '{d['category']}', '{d['partner_code']}', '{esc_perk}', "
-            f"'{d['badge']}', '{d['affiliate_url']}', '{esc_sav}', 48, '{d['proof_url']}', 'LINK_REACHABLE', '{now_iso}', 200, 85, 'OFFER_VERIFIED', '{now_iso}', 'owner', 'Audit conditions publiques 2026 certifié', '{now_iso}', 'ACTIVE');"
+            f"'{esc_badge}', '{d['affiliate_url']}', '{esc_sav}', 48, '{d['proof_url']}', 'LINK_REACHABLE', '{now_iso}', 200, 85, 'OFFER_VERIFIED', '{now_iso}', 'owner', 'Audit conditions publiques 2026 certifié', '{now_iso}', 'ACTIVE');"
         )
         sql_statements.append(sql)
         d1.execute(

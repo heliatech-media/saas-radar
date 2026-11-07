@@ -41,3 +41,7 @@ Thumbs.db
 
 # Local Preprod Marketplace Backup
 marketplace_local_backup/
+
+data/seed_production_d1.sql
+.wrangler/
+
