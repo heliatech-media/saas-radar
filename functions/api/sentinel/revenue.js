@@ -9,6 +9,22 @@
 
 export async function onRequestGet(context) {
   try {
+    const db = context.env?.DB;
+    let subscriberCount = 0;
+    let totalDealsCount = 12;
+
+    if (db) {
+      try {
+        const subRes = await db.prepare("SELECT COUNT(*) as c FROM subscribers").first();
+        if (subRes && subRes.c !== undefined) subscriberCount = subRes.c;
+
+        const dealsRes = await db.prepare("SELECT COUNT(*) as c FROM deals_registry").first();
+        if (dealsRes && dealsRes.c !== undefined) totalDealsCount = dealsRes.c;
+      } catch (e) {
+        console.warn("D1 query error in revenue.js:", e.message);
+      }
+    }
+
     const revenueTelemetry = {
       sponsoring: {
         platform: "Paved (Marketplace d'Annonceurs B2B)",
@@ -24,8 +40,8 @@ export async function onRequestGet(context) {
         value_raw: 18.40,
         badge: "ESTIMATION INTERNE",
         classification: "Non audité / Données bancaires non réconciliées",
-        cohort: "141 inscrits (données déclaratives non auditées nominativement)",
-        formula: "Moyenne modélisée des économies TCO estimées / base d'inscrits déclaratifs",
+        cohort: `${subscriberCount} inscrits en base D1 (données déclaratives)`,
+        formula: "Moyenne modélisée des économies TCO estimées / base d'inscrits D1",
         source: "Estimation interne théorique non auditée tant que les revenus réels d'affiliation et les abonnés correspondants ne sont pas prouvés par des relevés bancaires/Stripe."
       },
       projections: {
@@ -39,7 +55,7 @@ export async function onRequestGet(context) {
       },
       affiliate_portfolio: {
         total_links: 96,
-        source: "Répertoire /site/src/pages/go/*.astro & deals_registry SQLite",
+        source: `Répertoire /site/src/pages/go/*.astro & ${totalDealsCount} offres deals_registry`,
         cloaking_policy: "Transparent : /go/:slug avec Redirection Directe vers l'URL Partenaire Officielle",
         sample_links: [
           {

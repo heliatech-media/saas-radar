@@ -133,10 +133,10 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               <span>⚖️</span> File d'Approbation <span id="sidebar-pending-badge" class="ml-auto text-[10px] px-1.5 py-0.2 rounded bg-indigo-500/30 text-indigo-200">1</span>
             </button>
             <button onclick="showSection('view-content')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-content">
-              <span>📝</span> Contenus (Articles & Fiches) <span id="sidebar-content-badge" class="ml-auto text-[10px] text-slate-500">167</span>
+              <span>📝</span> Contenus (Articles & Fiches) <span id="sidebar-content-badge" class="ml-auto text-[10px] text-slate-500">—</span>
             </button>
             <button onclick="showSection('view-deals')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-deals">
-              <span>🏷️</span> Deals & Promos (48h) <span id="sidebar-deals-badge" class="ml-auto text-[10px] text-emerald-400 font-bold">12</span>
+              <span>🏷️</span> Deals & Promos (48h) <span id="sidebar-deals-badge" class="ml-auto text-[10px] text-emerald-400 font-bold">—</span>
             </button>
             <button onclick="showSection('view-radar')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-radar">
               <span>📡</span> Radar de Veille (Trends) <span class="ml-auto text-[10px] text-cyan-400 font-bold">6</span>
@@ -145,7 +145,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               <span>⚔️</span> Duels Versus <span class="ml-auto text-[10px] text-slate-500">19</span>
             </button>
             <button onclick="showSection('view-newsletter')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-newsletter">
-              <span>📬</span> Newsletter & Abonnés <span id="sidebar-subs-badge" class="ml-auto text-[10px] text-fuchsia-400 font-bold">141</span>
+              <span>📬</span> Newsletter & Abonnés <span id="sidebar-subs-badge" class="ml-auto text-[10px] text-fuchsia-400 font-bold">—</span>
             </button>
             <button onclick="showSection('view-revenue')" class="nav-btn w-full flex items-center gap-2 px-2.5 py-2 rounded-lg text-left text-slate-400 hover:text-white hover:bg-slate-900 transition-all" data-section="view-revenue">
               <span>💰</span> Revenus & Partenariats <span class="ml-auto text-[10px] text-emerald-400">96 liens</span>
@@ -383,63 +383,9 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </span>
         </div>
 
-        <div id="approvals-container" class="space-y-4">
-          <!-- Carte enrichie de l'édition avec Diff -->
-          <div id="approval-item-1" class="p-6 rounded-2xl bg-[#090e18] border border-indigo-500/50 shadow-xl space-y-4 font-mono text-xs transition-all">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-              <div>
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 font-bold text-[10px]">NEWSLETTER_EDITION</span>
-                  <span class="font-black text-white text-sm">Issue #055 — The Thursday Radar : Cursor 0.43 vs Windsurf 1.2</span>
-                </div>
-                <div class="text-slate-400 text-xs">Créneau ciblé : <strong class="text-cyan-300">2026-11-12:thursday</strong> (09:00 NY)</div>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/40 px-2 py-1 rounded border border-emerald-500/30">SHA-256 Vérifié</span>
-              </div>
-            </div>
-
-            <!-- COMPARAISON DE DIFF ÉDITORIAL -->
-            <div class="space-y-2">
-              <div class="flex justify-between items-center text-[10px] text-slate-400 uppercase tracking-wider font-bold">
-                <span>Diff : Issue #054 (Précédente) vs Issue #055 (Candidate)</span>
-                <span class="text-emerald-400">+124 lignes / -98 lignes</span>
-              </div>
-              <div class="rounded-xl border border-slate-800 bg-[#05080f] overflow-hidden text-[11px] font-mono leading-relaxed divide-y divide-slate-900/80">
-                <div class="bg-rose-950/20 text-rose-300 px-3 py-1.5 flex gap-3">
-                  <span class="select-none text-rose-500 font-bold">-</span>
-                  <span>#054: DeepSeek-Coder V2: The Open-Weights Revolution vs Claude 3.5 Sonnet</span>
-                </div>
-                <div class="bg-emerald-950/30 text-emerald-300 px-3 py-1.5 flex gap-3">
-                  <span class="select-none text-emerald-400 font-bold">+</span>
-                  <span>#055: Cursor 0.43 vs Windsurf 1.2: Real-World Developer Velocity Benchmark & TCO</span>
-                </div>
-                <div class="bg-rose-950/20 text-rose-300 px-3 py-1.5 flex gap-3">
-                  <span class="select-none text-rose-500 font-bold">-</span>
-                  <span>Sponsoring : Resend B2B Email Infrastructure ($250)</span>
-                </div>
-                <div class="bg-emerald-950/30 text-emerald-300 px-3 py-1.5 flex gap-3">
-                  <span class="select-none text-emerald-400 font-bold">+</span>
-                  <span>Sponsoring : Paved Sponsoring Network (Slot ID #10828 - $250)</span>
-                </div>
-                <div class="bg-emerald-950/30 text-emerald-300 px-3 py-1.5 flex gap-3">
-                  <span class="select-none text-emerald-400 font-bold">+</span>
-                  <span>Outil Vedette : Windsurf Cascade Engine (Analyse d'impact mémoire & tokens)</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800">
-              <span class="text-[11px] text-slate-400">Verrouillage transactionnel ACID : aucune régénération possible après validation.</span>
-              <div class="flex items-center gap-2.5">
-                <button onclick="decideApproval(1, 'REJECTED')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold transition-all">
-                  Rejeter / Annuler créneau
-                </button>
-                <button onclick="decideApproval(1, 'APPROVED')" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black shadow-lg shadow-emerald-950/30 flex items-center gap-1.5 transition-all">
-                  <span>✓</span> Approuver la Diffusion (Jeudi 09:00 NY)
-                </button>
-              </div>
-            </div>
+        <div id="approvals-container" class="space-y-4 font-mono text-xs">
+          <div class="p-8 rounded-2xl bg-[#090e18] border border-slate-800 text-center text-slate-500">
+            Synchronisation de la file d'approbation depuis Cloudflare D1...
           </div>
         </div>
       </section>
@@ -744,7 +690,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               <span class="text-slate-500 uppercase text-[9px] font-bold">Latence Edge Observée</span>
               <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-slate-800 text-slate-400">ÉCHANTILLON INDICATIF</span>
             </div>
-            <div class="text-xl font-black text-cyan-400">~38 ms (TTFB)</div>
+            <div class="text-xl font-black text-cyan-400">— ms (TTFB)</div>
             <div class="text-[11px] text-slate-300">Échantillon ponctuel Anycast (US/EU)</div>
             <div class="text-[10px] text-slate-500 pt-1 border-t border-slate-800">Source : Test observateur réseau (non SLA universel certifié).</div>
           </div>
@@ -1122,7 +1068,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               <span>🩺</span> Diagnostic Temps Réel
             </button>
             <span id="help-health-score" class="px-3 py-1 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold font-mono">
-              99/100 (NOMINAL)
+              —/100 (EN ATTENTE DIAGNOSTIC)
             </span>
           </div>
         </div>
@@ -1305,7 +1251,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
                 <span class="text-[10px] text-slate-500">Objectif : Sérénité</span>
               </div>
               <p class="text-slate-300 text-[11px] leading-relaxed">
-                Vérifiez que le voyant de <strong>Santé Globale</strong> affiche <em>99/100 (NOMINAL)</em>. Si aucune alerte rouge ne s'affiche et que vous n'avez reçu aucun message Telegram d'urgence, vos systèmes tournent parfaitement.
+                Vérifiez que le voyant de <strong>Santé Globale</strong> affiche <em>—/100 (EN ATTENTE DIAGNOSTIC)</em>. Si aucune alerte rouge ne s'affiche et que vous n'avez reçu aucun message Telegram d'urgence, vos systèmes tournent parfaitement.
               </p>
             </div>
 
@@ -1806,202 +1752,71 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    // Gestion Souveraine & Persistante des Décisions Patron (Anti-Doublon & Anti-Faux Positif)
-    function saveOwnerDecision(id, decision, notes) {
-      try {
-        const stored = JSON.parse(localStorage.getItem('sentinel_owner_decisions') || '{}');
-        stored[id] = { decision, notes, timestamp: new Date().toISOString() };
-        localStorage.setItem('sentinel_owner_decisions', JSON.stringify(stored));
-      } catch (_) {}
-    }
-
-    function getOwnerDecision(id) {
-      try {
-        const stored = JSON.parse(localStorage.getItem('sentinel_owner_decisions') || '{}');
-        return stored[id] || null;
-      } catch (_) {
-        return null;
-      }
-    }
-
-    function saveContentAudit(slug) {
-      try {
-        const stored = JSON.parse(localStorage.getItem('sentinel_content_audits') || '{}');
-        stored[slug] = {
-          last_audited_at: new Date().toISOString(),
-          audit_status: 'VERIFIED',
-          evidence_count: 8,
-          tco_accuracy_score: 9.9
-        };
-        localStorage.setItem('sentinel_content_audits', JSON.stringify(stored));
-      } catch (_) {}
-    }
-
-    function getContentAudits() {
-      try {
-        return JSON.parse(localStorage.getItem('sentinel_content_audits') || '{}');
-      } catch (_) {
-        return {};
-      }
-    }
-
-    function saveAgentToggle(name, isSuspended) {
-      try {
-        const stored = JSON.parse(localStorage.getItem('sentinel_agent_toggles') || '{}');
-        stored[name] = isSuspended;
-        localStorage.setItem('sentinel_agent_toggles', JSON.stringify(stored));
-      } catch (_) {}
-    }
-
-    function getAgentToggles() {
-      try {
-        return JSON.parse(localStorage.getItem('sentinel_agent_toggles') || '{}');
-      } catch (_) {
-        return {};
-      }
-    }
-
-    function savePlannedRadar(slug) {
-      try {
-        const stored = JSON.parse(localStorage.getItem('sentinel_planned_radar') || '{}');
-        stored[slug] = { planned_at: new Date().toISOString() };
-        localStorage.setItem('sentinel_planned_radar', JSON.stringify(stored));
-      } catch (_) {}
-    }
-
-    function getPlannedRadar() {
-      try {
-        return JSON.parse(localStorage.getItem('sentinel_planned_radar') || '{}');
-      } catch (_) {
-        return {};
-      }
-    }
-
-    function saveInspectedDuel(slug) {
-      try {
-        const stored = JSON.parse(localStorage.getItem('sentinel_inspected_duels') || '{}');
-        stored[slug] = { inspected_at: new Date().toISOString() };
-        localStorage.setItem('sentinel_inspected_duels', JSON.stringify(stored));
-      } catch (_) {}
-    }
-
-    function getInspectedDuels() {
-      try {
-        return JSON.parse(localStorage.getItem('sentinel_inspected_duels') || '{}');
-      } catch (_) {
-        return {};
-      }
-    }
-
-    function recordLocalAuditLog(action, target, detail, prevState, newState) {
-      try {
-        const logs = JSON.parse(localStorage.getItem('sentinel_local_audit_logs') || '[]');
-        logs.unshift({
-          timestamp: new Date().toISOString(),
-          actor_email: 'owner@heliatech.online (Zero Trust MFA)',
-          actor_role: 'owner',
-          action,
-          target,
-          details_json: JSON.stringify(detail),
-          previous_state: prevState,
-          new_state: newState,
-          signature: 'sig_' + Math.random().toString(36).substring(2, 10) + '_hmac_verified'
-        });
-        localStorage.setItem('sentinel_local_audit_logs', JSON.stringify(logs.slice(0, 50)));
-      } catch (_) {}
-    }
-
-    function applyDecisionsUI() {
-      const dec1 = getOwnerDecision(1);
-      const isApproved = dec1 && dec1.decision === 'APPROVED';
-
-      const card1 = document.getElementById('approval-item-1');
-      if (card1 && isApproved) {
-        card1.style.opacity = '1';
-        card1.style.borderColor = '#10b981';
-        card1.className = 'p-6 rounded-2xl bg-emerald-950/20 border border-emerald-500/50 shadow-xl space-y-4 font-mono text-xs transition-all';
-        card1.innerHTML = `
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-emerald-900/60 pb-3">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[10px]">✓ DIFFUSION VALIDÉE</span>
-                <span class="font-black text-white text-sm">Issue #055 — The Thursday Radar : Cursor 0.43 vs Windsurf 1.2</span>
-              </div>
-              <div class="text-slate-400 text-xs">Créneau ciblé : <strong class="text-emerald-400">2026-11-12:thursday</strong> (09:00 NY)</div>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-500/40">✓ Verrouillé & Prêt pour Envoi</span>
-            </div>
-          </div>
-          <div class="p-4 rounded-xl bg-[#05080f] border border-emerald-900/50 text-slate-300 space-y-2">
-            <div class="text-emerald-400 font-bold flex items-center gap-2">
-              <span>🛡️</span> Décision Souveraine Enregistrée : VALIDÉ PAR LE PATRON
-            </div>
-            <p class="text-slate-400 text-[11px] leading-relaxed">
-              Le créneau du jeudi 12 novembre 2026 (09:00 NY) est formellement approuvé. L'empreinte SHA-256 et la non-régression éditoriale ont été certifiées. Le système n'accepte aucun duplicata pour ce créneau (contrainte ACID unique slot).
-            </p>
-            <div class="text-[10px] text-slate-500 pt-2 border-t border-slate-800 flex justify-between">
-              <span>Note patron : ${dec1.notes || 'Validé sous autorité patron'}</span>
-              <span>Enregistré le : ${new Date(dec1.timestamp).toLocaleString('fr-FR')}</span>
-            </div>
-          </div>
-          <div class="flex items-center justify-between gap-3 pt-2">
-            <span class="text-[11px] text-emerald-400 font-bold">✓ 0 demande en attente pour ce créneau.</span>
-            <button onclick="showSection('view-general')" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition-all">
-              ← Retour au Cockpit
-            </button>
-          </div>
-        `;
-      }
-
-      if (isApproved) {
-        const sbBadge = document.getElementById('sidebar-pending-badge');
-        if (sbBadge) sbBadge.innerText = '0';
-        const hdBadge = document.getElementById('header-pending-count');
-        if (hdBadge) hdBadge.innerText = '0';
-
-        const kpiApp = document.getElementById('kpi-approvals-count');
-        if (kpiApp) {
-          kpiApp.innerText = '0 En Attente';
-          kpiApp.className = 'text-2xl font-black text-emerald-400 mt-2';
-        }
-
-        const kpiDate = document.getElementById('kpi-newsletter-date');
-        if (kpiDate) {
-          kpiDate.className = 'text-2xl font-black text-emerald-400 mt-2';
-        }
-
-        const synthCard = document.getElementById('synth-newsletter-card');
-        if (synthCard) {
-          synthCard.innerHTML = `
-            <div>
-              <div class="text-emerald-300 font-bold flex items-center gap-1.5 mb-1">
-                <span>✓</span> Newsletter #055 validée
-              </div>
-              <p class="text-slate-400 text-[11px] leading-relaxed">
-                Édition du 12 nov. validée par le patron. Verrouillée pour envoi au créneau programmé (09:00 NY).
-              </p>
-            </div>
-            <button onclick="showSection('view-approvals')" class="w-full py-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 font-bold text-[11px] transition-all">
-              Voir Validation & Diff
-            </button>
-          `;
-        }
-      }
-    }
-
+    // 100% VÉRITÉ D1 : ZÉRO SIMULATION, ZÉRO LOCALSTORAGE FALLBACK
     async function fetchApprovals() {
-      applyDecisionsUI();
+      const container = document.getElementById('approvals-container');
       try {
         const data = await safeFetchJson('/api/sentinel/approvals');
-        if (!data || !data.approvals) return;
-        const pending1 = data.approvals.find(a => a.id === 1 && a.status === 'PENDING');
-        if (!pending1 && !getOwnerDecision(1)) {
-          saveOwnerDecision(1, 'APPROVED', 'Synchronisé depuis D1');
-          applyDecisionsUI();
+        if (!container) return;
+
+        if (!data || !data.approvals || data.approvals.length === 0) {
+          container.innerHTML = `
+            <div class="p-8 rounded-2xl bg-emerald-950/15 border border-emerald-500/30 text-center font-mono space-y-2">
+              <div class="text-emerald-400 font-bold text-sm flex items-center justify-center gap-2">
+                <span>✓</span> File d'Approbation Vide (0 demande en attente)
+              </div>
+              <p class="text-slate-400 text-xs">
+                Tous les créneaux et contenus sont conformes ou déjà validés en base Cloudflare D1. Aucun agent ne peut diffuser sans nouvelle soumission formelle.
+              </p>
+            </div>
+          `;
+          return;
         }
+
+        container.innerHTML = '';
+        data.approvals.forEach(item => {
+          const card = document.createElement('div');
+          card.id = `approval-item-${item.id}`;
+          card.className = 'p-6 rounded-2xl bg-[#090e18] border border-indigo-500/50 shadow-xl space-y-4 font-mono text-xs transition-all';
+          card.innerHTML = `
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2 py-0.5 rounded bg-fuchsia-500/20 text-fuchsia-300 font-bold text-[10px]">${item.item_type || 'NEWSLETTER_EDITION'}</span>
+                  <span class="font-black text-white text-sm">${item.summary || item.item_ref}</span>
+                </div>
+                <div class="text-slate-400 text-xs">Créneau : <strong class="text-cyan-300">${item.item_ref}</strong> • Proposé par : <span class="text-amber-300">${item.proposed_by || 'Agent'}</span></div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] text-amber-400 font-bold bg-amber-950/40 px-2 py-1 rounded border border-amber-500/30">STATUT : PENDING</span>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl border border-slate-800 bg-[#05080f] text-slate-300 text-[11px] leading-relaxed">
+              <div class="font-bold text-slate-400 mb-1">Détails de l'élément soumis :</div>
+              <div>${item.summary || 'Soumission automatique par agent autonome. Vérification patron requise.'}</div>
+              <div class="text-[10px] text-slate-500 mt-2">Soumis le : ${new Date(item.created_at || Date.now()).toLocaleString('fr-FR')}</div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800">
+              <span class="text-[11px] text-slate-400">Verrouillage transactionnel ACID : décision écrite immédiatement dans Cloudflare D1.</span>
+              <div class="flex items-center gap-2.5">
+                <button onclick="decideApproval(${item.id}, 'REJECTED')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold transition-all">
+                  Rejeter / Annuler
+                </button>
+                <button onclick="decideApproval(${item.id}, 'APPROVED')" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black shadow-lg shadow-emerald-950/30 flex items-center gap-1.5 transition-all">
+                  <span>✓</span> Valider la Diffusion (Souverain Patron)
+                </button>
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
       } catch (e) {
         console.warn('Erreur approvals:', e);
+        if (container) {
+          container.innerHTML = `<div class="p-6 rounded-xl bg-rose-950/20 border border-rose-500/30 text-rose-300 font-mono text-xs">Erreur technique D1 : ${e.message}</div>`;
+        }
       }
     }
 
@@ -2014,26 +1829,26 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         isNewsletterStopped = !!data.newsletter?.emergency_stop_active;
         updateButtonsUI();
 
-        const dec1 = getOwnerDecision(1);
-        const isApproved = dec1 && dec1.decision === 'APPROVED';
-        const effectiveCount = isApproved ? 0 : (data.approvals?.pending_count ?? 0);
+        const pendingCount = data.approvals?.pending_count ?? 0;
 
         const hdBadge = document.getElementById('header-pending-count');
-        if (hdBadge) hdBadge.innerText = effectiveCount;
+        if (hdBadge) hdBadge.innerText = pendingCount;
         const sbBadge = document.getElementById('sidebar-pending-badge');
-        if (sbBadge) sbBadge.innerText = effectiveCount;
+        if (sbBadge) sbBadge.innerText = pendingCount;
         const kpiApp = document.getElementById('kpi-approvals-count');
         if (kpiApp) {
-          kpiApp.innerText = `${effectiveCount} En Attente`;
-          if (effectiveCount === 0) kpiApp.className = 'text-2xl font-black text-emerald-400 mt-2';
+          kpiApp.innerText = `${pendingCount} En Attente`;
+          kpiApp.className = pendingCount === 0 ? 'text-2xl font-black text-emerald-400 mt-2' : 'text-2xl font-black text-amber-400 mt-2';
         }
 
-        if (data.subscribers_summary?.total) {
-          document.getElementById('sidebar-subs-badge').innerText = data.subscribers_summary.total;
+        if (data.subscribers_summary) {
+          const subsBadge = document.getElementById('sidebar-subs-badge');
+          if (subsBadge) subsBadge.innerText = data.subscribers_summary.total;
         }
 
         if (data.fleet) {
-          document.getElementById('kpi-agents-count').innerText = `${data.fleet.active_agents} / ${data.fleet.total_agents} Agents`;
+          const kpiAgents = document.getElementById('kpi-agents-count');
+          if (kpiAgents) kpiAgents.innerText = `${data.fleet.active_agents} / ${data.fleet.total_agents} Agents`;
         }
       } catch (e) {
         console.warn('Erreur cockpit:', e);
@@ -2094,11 +1909,9 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       closeModal('modal-trigger-cycle');
       try {
         const data = await safePostJson('/api/sentinel/crons', { action: 'trigger_run', cron_id: 'auto_publish' });
-        recordLocalAuditLog('TRIGGER_MANUAL_CYCLE', 'cron:auto_publish', { reason: 'Ordre direct patron' }, 'IDLE', 'RUNNING');
-        alert(`[CYCLE DÉCLENCHÉ & JOURNALISÉ]
-${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'}`);
-        loadCockpit();
-        fetchCrons();
+        alert(`[CYCLE DÉCLENCHÉ & JOURNALISÉ D1]\n${data.message || 'Cycle d\'audit éditorial déclenché via GitHub Actions API.'}`);
+        await loadCockpit();
+        await fetchCrons();
       } catch (e) {
         alert('Erreur déclenchement cycle: ' + e.message);
       }
@@ -2109,7 +1922,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
       const tbody = document.getElementById('agents-tbody');
       const refreshBtn = btn || document.getElementById('btn-refresh-agents');
       if (refreshBtn) {
-        refreshBtn.innerHTML = '<span>⏳</span> Actualisation...';
+        refreshBtn.innerHTML = '<span>⚡</span> Actualisation...';
         refreshBtn.disabled = true;
       }
       try {
@@ -2120,11 +1933,10 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
         }
         if (tbody) tbody.innerHTML = '';
 
-        const localToggles = getAgentToggles();
         let suspendedCount = 0;
 
         data.agents.forEach(a => {
-          const isSuspended = localToggles[a.name] !== undefined ? localToggles[a.name] : a.is_suspended;
+          const isSuspended = !!a.is_suspended;
           if (isSuspended) suspendedCount++;
 
           const tr = document.createElement('tr');
@@ -2161,7 +1973,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
           refreshBtn.innerHTML = '<span>✓</span> 24 Agents à Jour';
           setTimeout(() => {
             if (refreshBtn) {
-              refreshBtn.innerHTML = '<span>🔄</span> Actualiser';
+              refreshBtn.innerHTML = '<span>⚡</span> Actualiser';
               refreshBtn.disabled = false;
             }
           }, 1200);
@@ -2169,7 +1981,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
       } catch (e) {
         console.warn('Erreur agents:', e);
         if (refreshBtn) {
-          refreshBtn.innerHTML = '<span>🔄</span> Actualiser';
+          refreshBtn.innerHTML = '<span>⚡</span> Actualiser';
           refreshBtn.disabled = false;
         }
       }
@@ -2177,20 +1989,14 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
 
     async function toggleAgent(agentName, btn) {
       if (btn) {
-        btn.innerText = '⏳ Action...';
+        btn.innerText = 'Action D1...';
         btn.disabled = true;
       }
       try {
-        const localToggles = getAgentToggles();
-        const currentSuspended = !!localToggles[agentName];
-        const newSuspended = !currentSuspended;
-
         const data = await safePostJson('/api/sentinel/fleet', { action: 'toggle-agent', agent_name: agentName });
-        saveAgentToggle(agentName, newSuspended);
-        recordLocalAuditLog('TOGGLE_AGENT', `agent:${agentName}`, { suspended: newSuspended }, currentSuspended ? 'SUSPENDED' : 'ACTIVE', newSuspended ? 'SUSPENDED' : 'ACTIVE');
-        alert(`[JOURNALISÉ] ${data.message || 'Statut de l\'agent mis à jour.'}`);
-        fetchAgents();
-        loadCockpit();
+        alert(`[JOURNALISÉ D1] ${data.message || 'Statut de l\'agent mis à jour dans Cloudflare D1.'}`);
+        await fetchAgents();
+        await loadCockpit();
       } catch (e) {
         alert('Erreur: ' + e.message);
       } finally {
@@ -2205,7 +2011,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
       const tbody = document.getElementById('content-tbody');
       const refreshBtn = btn || document.getElementById('btn-refresh-content');
       if (refreshBtn) {
-        refreshBtn.innerHTML = '<span>⏳</span> Actualisation...';
+        refreshBtn.innerHTML = '<span>⚡</span> Actualisation...';
         refreshBtn.disabled = true;
       }
 
@@ -2217,19 +2023,16 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
         }
         if (tbody) tbody.innerHTML = '';
 
-        if (data.total) {
+        if (data.total !== undefined) {
           const badge = document.getElementById('sidebar-content-badge');
           if (badge) badge.innerText = data.total;
         }
 
-        const localAudits = getContentAudits();
-
         data.content.forEach(item => {
-          const local = localAudits[item.slug];
-          const lastAudited = local ? local.last_audited_at : item.last_audited_at;
-          const status = local ? local.audit_status : item.audit_status;
-          const tcoScore = local ? local.tco_accuracy_score : item.tco_accuracy_score;
-          const evidenceCount = local ? Math.max(item.evidence_count, local.evidence_count) : item.evidence_count;
+          const lastAudited = item.last_audited_at;
+          const status = item.audit_status;
+          const tcoScore = item.tco_accuracy_score;
+          const evidenceCount = item.evidence_count;
 
           const tr = document.createElement('tr');
           tr.className = status === 'NEEDS_REAUDIT' ? 'bg-amber-950/10 hover:bg-amber-950/20' : 'hover:bg-slate-900/40';
@@ -2238,7 +2041,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
             <td class="p-3 font-bold text-white">
               <div class="flex items-center gap-1.5">
                 <span>${item.title}</span>
-                ${local ? '<span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold">✓ Réaudité</span>' : ''}
+                ${status === 'VERIFIED' ? '<span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold">✓ D1 Vérifié</span>' : ''}
               </div>
               <div class="text-[10px] text-slate-500">/${item.type === 'review' ? 'reviews' : 'blog'}/${item.slug}/</div>
             </td>
@@ -2249,8 +2052,8 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
             <td class="p-3 text-white">${tcoScore}/10 <span class="text-slate-500 text-[10px]">(±15%)</span></td>
             <td class="p-3 text-slate-300 font-bold">${new Date(lastAudited).toLocaleDateString('fr-FR')}</td>
             <td class="p-3 text-right">
-              <button onclick="reAuditContent('${item.slug}', this)" class="px-2.5 py-1 rounded ${local ? 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/40' : 'bg-slate-800 hover:bg-slate-700 text-slate-300'} font-bold transition-all text-xs">
-                ${local ? '✓ À jour' : 'Réauditer'}
+              <button onclick="reAuditContent('${item.slug}', this)" class="px-2.5 py-1 rounded ${status === 'VERIFIED' ? 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/40' : 'bg-slate-800 hover:bg-slate-700 text-slate-300'} font-bold transition-all text-xs">
+                ${status === 'VERIFIED' ? '✓ À jour' : 'Réauditer'}
               </button>
             </td>
           `;
@@ -2261,7 +2064,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
           refreshBtn.innerHTML = '<span>✓</span> Liste à Jour';
           setTimeout(() => {
             if (refreshBtn) {
-              refreshBtn.innerHTML = '<span>🔄</span> Actualiser Liste';
+              refreshBtn.innerHTML = '<span>⚡</span> Actualiser Liste';
               refreshBtn.disabled = false;
             }
           }, 1200);
@@ -2269,7 +2072,7 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
       } catch (e) {
         console.warn('Erreur contenus:', e);
         if (refreshBtn) {
-          refreshBtn.innerHTML = '<span>🔄</span> Actualiser Liste';
+          refreshBtn.innerHTML = '<span>⚡</span> Actualiser Liste';
           refreshBtn.disabled = false;
         }
       }
@@ -2277,15 +2080,13 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
 
     async function reAuditContent(slug, btn) {
       if (btn) {
-        btn.innerText = '⏳ Audit...';
+        btn.innerText = 'Audit D1...';
         btn.disabled = true;
       }
       try {
         const data = await safePostJson('/api/sentinel/content', { action: 're-audit', slug });
-        saveContentAudit(slug);
-        recordLocalAuditLog('RE_AUDIT_CONTENT', `content:${slug}`, { agent: 'SoftwareAnalyst & DataVerifier' }, 'NEEDS_REAUDIT', 'VERIFIED');
-        alert(`[JOURNALISÉ & CERTIFIÉ] ${data.message || `Réaudit du contenu '${slug}' validé avec succès par SoftwareAnalyst & DataVerifier.`}`);
-        fetchContent();
+        alert(`[JOURNALISÉ & CERTIFIÉ D1] ${data.message || `Réaudit du contenu '${slug}' validé avec succès en base D1.`}`);
+        await fetchContent();
       } catch (e) {
         alert('Erreur: ' + e.message);
       } finally {
@@ -2758,11 +2559,9 @@ ${data.message || 'Cycle d\'audit éditorial déclenché sous autorité patron.'
           tool_slug: slug,
           tool_name: toolName
         });
-        savePlannedRadar(slug);
-        recordLocalAuditLog('CREATE_EDITORIAL_BRIEF', `radar:${slug}`, { tool_name: toolName, assigned_to: ['ContentWriter', 'SoftwareAnalyst'] }, 'QUEUED', 'ASSIGNED_TO_WRITER');
-        alert(`[ORDRE DE RÉDACTION TRANSMIS]
+        alert(`[ORDRE DE RÉDACTION TRANSMIS D1]
 ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec succès.`}`);
-        fetchRadar();
+        await fetchRadar();
       } catch (e) {
         alert('Erreur radar: ' + e.message);
       } finally {
@@ -2834,7 +2633,7 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
 
     async function inspectDuel(duelSlug, btn) {
       if (btn) {
-        btn.innerText = '⏳ Audit...';
+        btn.innerText = 'Audit D1...';
         btn.disabled = true;
       }
       try {
@@ -2842,18 +2641,8 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
           action: 'inspect_duel',
           duel_slug: duelSlug
         });
-        saveInspectedDuel(duelSlug);
-        recordLocalAuditLog('INSPECT_DUEL_METHODOLOGY', `duel:${duelSlug}`, { live_url: `/versus/${duelSlug}/` }, 'UNVERIFIED', 'METHODOLOGY_VERIFIED');
-        alert(`[MÉTHODOLOGIE DUEL CERTIFIÉE CONFORME]
-${data.message || `Duel ${duelSlug} certifié.`}
-
-Critères validés :
-• Sources primaires 2026
-• Calculs TCO bornés à ±15%
-• Impartialité éditoriale stricte
-
-Page publique active : /versus/${duelSlug}/`);
-        fetchVersus();
+        alert(`[MÉTHODOLOGIE DUEL CERTIFIÉE CONFORME D1]\n${data.message || `Duel ${duelSlug} certifié en base D1.`}\n\nPage publique active : /versus/${duelSlug}/`);
+        await fetchVersus();
       } catch (e) {
         alert('Erreur versus: ' + e.message);
       } finally {
@@ -2984,15 +2773,9 @@ Page publique active : /versus/${duelSlug}/`);
           decision_notes: notes
         });
 
-        // Persistance immédiate dans le stockage souverain du navigateur
-        saveOwnerDecision(id, decision, notes);
-        recordLocalAuditLog('DECIDE_APPROVAL', `approval:${id}`, { decision, notes }, 'PENDING', decision);
-
-        alert(`[JOURNALISÉ & SIGNÉ] ${data.message || 'Diffusion validée avec succès. Aucune autre action requise pour ce créneau.'}`);
-
-        // Mise à jour cohérente de tous les indicateurs
-        applyDecisionsUI();
-        loadCockpit();
+        alert(`[JOURNALISÉ & SIGNÉ D1]\n${data.message || 'Décision enregistrée avec succès en base D1.'}`);
+        await fetchApprovals();
+        await loadCockpit();
       } catch (e) {
         alert('Erreur: ' + e.message);
       }
@@ -3006,9 +2789,7 @@ Page publique active : /versus/${duelSlug}/`);
         if (!tbody) return;
         tbody.innerHTML = '';
 
-        const serverLogs = (data && (data.logs || data.audit_logs)) || [];
-        const localLogs = JSON.parse(localStorage.getItem('sentinel_local_audit_logs') || '[]');
-        const allLogs = [...localLogs, ...serverLogs];
+        const allLogs = (data && (data.logs || data.audit_logs)) || [];
 
         if (allLogs.length === 0) {
           tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucune entrée d\'audit disponible.</td></tr>';

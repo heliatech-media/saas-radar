@@ -8,39 +8,47 @@ export async function onRequestGet(context) {
   try {
     const db = context.env?.DB;
 
-    let subscriberCount = 141;
-    let contentCount = 167;
-    let dealsCount = 12;
-    let versusCount = 19;
-    let approvalsPending = 1;
-    let auditLogCount = 42;
-    let schemaVersion = 3;
+    if (!db) {
+      return new Response(JSON.stringify({
+        error: "Erreur technique : Base D1 non connectée sur ce runtime.",
+        database: null
+      }), {
+        status: 503,
+        headers: { "Content-Type": "application/json", "Cache-Control": "no-store, private" }
+      });
+    }
 
-    if (db) {
-      try {
-        const subRes = await db.prepare("SELECT COUNT(*) as cnt FROM subscribers").first();
-        if (subRes) subscriberCount = subRes.cnt;
+    let subscriberCount = 0;
+    let contentCount = 0;
+    let dealsCount = 0;
+    let versusCount = 0;
+    let approvalsPending = 0;
+    let auditLogCount = 0;
+    let schemaVersion = 1;
 
-        const contRes = await db.prepare("SELECT COUNT(*) as cnt FROM content_inventory").first();
-        if (contRes) contentCount = contRes.cnt;
+    try {
+      const subRes = await db.prepare("SELECT COUNT(*) as cnt FROM subscribers").first();
+      if (subRes && subRes.cnt !== undefined) subscriberCount = subRes.cnt;
 
-        const dealsRes = await db.prepare("SELECT COUNT(*) as cnt FROM deals_registry").first();
-        if (dealsRes) dealsCount = dealsRes.cnt;
+      const contRes = await db.prepare("SELECT COUNT(*) as cnt FROM content_inventory").first();
+      if (contRes && contRes.cnt !== undefined) contentCount = contRes.cnt;
 
-        const vsRes = await db.prepare("SELECT COUNT(*) as cnt FROM versus_matrix").first();
-        if (vsRes) versusCount = vsRes.cnt;
+      const dealsRes = await db.prepare("SELECT COUNT(*) as cnt FROM deals_registry").first();
+      if (dealsRes && dealsRes.cnt !== undefined) dealsCount = dealsRes.cnt;
 
-        const appRes = await db.prepare("SELECT COUNT(*) as cnt FROM owner_approvals WHERE status = 'PENDING'").first();
-        if (appRes) approvalsPending = appRes.cnt;
+      const vsRes = await db.prepare("SELECT COUNT(*) as cnt FROM versus_matrix").first();
+      if (vsRes && vsRes.cnt !== undefined) versusCount = vsRes.cnt;
 
-        const auditRes = await db.prepare("SELECT COUNT(*) as cnt FROM sentinel_audit_logs").first();
-        if (auditRes) auditLogCount = auditRes.cnt;
+      const appRes = await db.prepare("SELECT COUNT(*) as cnt FROM owner_approvals WHERE status = 'PENDING'").first();
+      if (appRes && appRes.cnt !== undefined) approvalsPending = appRes.cnt;
 
-        const migRes = await db.prepare("SELECT MAX(version) as max_ver FROM schema_migrations").first();
-        if (migRes && migRes.max_ver) schemaVersion = migRes.max_ver;
-      } catch (e) {
-        console.warn("D1 query fallback in data.js:", e.message);
-      }
+      const auditRes = await db.prepare("SELECT COUNT(*) as cnt FROM sentinel_audit_logs").first();
+      if (auditRes && auditRes.cnt !== undefined) auditLogCount = auditRes.cnt;
+
+      const migRes = await db.prepare("SELECT MAX(version) as max_ver FROM schema_migrations").first();
+      if (migRes && migRes.max_ver) schemaVersion = migRes.max_ver;
+    } catch (e) {
+      console.warn("D1 query error in data.js:", e.message);
     }
 
     const dataTelemetry = {
@@ -52,7 +60,7 @@ export async function onRequestGet(context) {
         schema_version_applied: `v${schemaVersion.toString().padStart(4, '0')}`,
         source: "data/migrations/ & schema_migrations table",
         tables: [
-          { name: "subscribers", rows: subscriberCount, security: "Emails chiffrés / PII isolées (141 déclaratifs)", source: "SELECT COUNT(*) FROM subscribers" },
+          { name: "subscribers", rows: subscriberCount, security: "Emails chiffrés / PII isolées", source: "SELECT COUNT(*) FROM subscribers" },
           { name: "content_inventory", rows: contentCount, security: "Preuves & scores TCO vérifiés", source: "SELECT COUNT(*) FROM content_inventory" },
           { name: "deals_registry", rows: dealsCount, security: "Cadence 48h (LINK_REACHABLE + OFFER_VERIFIED)", source: "SELECT COUNT(*) FROM deals_registry" },
           { name: "versus_matrix", rows: versusCount, security: "Duels comparatifs et deltas TCO", source: "SELECT COUNT(*) FROM versus_matrix" },

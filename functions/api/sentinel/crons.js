@@ -1,23 +1,30 @@
 /**
  * Cloudflare Pages Function: /api/sentinel/crons
- * Phase 3 : Supervision des Automatisations & Crons GitHub Actions.
- * Toutes les métriques sont rigoureusement sourcées et étiquetées.
+ * Supervision & Déclenchement Réel des Workflows GitHub Actions.
+ * ZÉRO SIMULATION : Si GITHUB_DISPATCH_TOKEN est configuré, déclenche réellement
+ * l'API GitHub Actions workflow_dispatch via HTTP POST.
  */
+
+const WORKFLOW_MAP = {
+  "auto_publish": "auto_publish.yml",
+  "daily_health_check": "daily_health_check.yml",
+  "deal_probe_48h": "deal_probe.yml",
+  "newsletter_engine": "newsletter_draft.yml",
+  "trend_scout": "trend_scout.yml",
+  "audit_backup_r2": "audit_backup.yml"
+};
 
 export async function onRequestGet(context) {
   try {
     const db = context.env?.DB;
-    
-    // Vérifier l'état global de la flotte (si PAUSE ALL AGENTS est actif)
     let isFleetPaused = false;
+
     if (db) {
       try {
         const row = await db.prepare("SELECT fleet_status FROM fleet_controls WHERE id = 1").first();
-        if (row && row.fleet_status === "PAUSED") {
-          isFleetPaused = true;
-        }
+        if (row && row.fleet_status === "PAUSED") isFleetPaused = true;
       } catch (e) {
-        console.warn("D1 fleet check fallback:", e.message);
+        console.warn("D1 fleet check:", e.message);
       }
     }
 
@@ -28,20 +35,10 @@ export async function onRequestGet(context) {
         workflow_file: "auto_publish.yml",
         source: "Workflow .github/workflows/auto_publish.yml",
         cron_expression: "0 */3 * * *",
-        cadence_label: "Toutes les 3 heures (00h, 03h, 06h, 09h, 12h, 15h, 18h, 21h UTC)",
-        runner: "ubuntu-latest (GitHub-Hosted Runner)",
-        timeout_minutes: 45,
-        concurrency_lock: "helia-autonomous-fleet (Unique - Concurrency Group Lock)",
-        last_run_status: isFleetPaused ? "PAUSED_BY_OWNER" : "SUCCESS",
-        last_run_at: new Date(Date.now() - 52 * 60 * 1000).toISOString(),
-        next_run_in: "2 h 08 min",
-        agents_mobilized: [
-          "RadarAgent (Découverte outils)",
-          "ContentWriter (Rédaction markdown)",
-          "DataVerifier (Contrôle preuves)",
-          "MarketplaceSecuritySentinel (Garde 301)"
-        ],
-        kill_switch_compliance: "Garantie : Respecte le flag fleet_controls.fleet_status = PAUSED"
+        cadence_label: "Toutes les 3 heures",
+        runner: "ubuntu-latest",
+        last_run_status: isFleetPaused ? "PAUSED_BY_OWNER" : "ACTIVE",
+        kill_switch_compliance: "Respecte fleet_controls.fleet_status = PAUSED"
       },
       {
         id: "daily_health_check",
@@ -49,19 +46,10 @@ export async function onRequestGet(context) {
         workflow_file: "daily_health_check.yml",
         source: "Workflow .github/workflows/daily_health_check.yml",
         cron_expression: "0 4 * * *",
-        cadence_label: "Quotidien à 04:00 UTC (05:00 Paris)",
-        runner: "ubuntu-latest (GitHub-Hosted Runner)",
-        timeout_minutes: 30,
-        concurrency_lock: "helia-health-inspection",
-        last_run_status: "SUCCESS",
-        last_run_at: new Date(Date.now() - 14 * 3600 * 1000).toISOString(),
-        next_run_in: "9 h 35 min",
-        agents_mobilized: [
-          "LinkSentinel (Sondage des 96 liens /go/)",
-          "SecurityAgent (Audit fuites & CSP)",
-          "NotifierAgent (Alerte Telegram Founder)"
-        ],
-        kill_switch_compliance: "Non suspendu : SecurityAgent et audits d'intégrité restent actifs"
+        cadence_label: "Quotidien à 04:00 UTC",
+        runner: "ubuntu-latest",
+        last_run_status: "ACTIVE",
+        kill_switch_compliance: "SecurityAgent et audits d'intégrité non suspensibles"
       },
       {
         id: "deal_probe_48h",
@@ -70,17 +58,9 @@ export async function onRequestGet(context) {
         source: "Workflow .github/workflows/deal_probe.yml",
         cron_expression: "0 */6 * * *",
         cadence_label: "Toutes les 6 heures",
-        runner: "ubuntu-latest (GitHub-Hosted Runner)",
-        timeout_minutes: 20,
-        concurrency_lock: "helia-deal-probe",
-        last_run_status: "SUCCESS",
-        last_run_at: new Date(Date.now() - 2 * 3600 * 1000).toISOString(),
-        next_run_in: "3 h 55 min",
-        agents_mobilized: [
-          "LinkSentinel (Sondage HTTP HEAD/GET)",
-          "PriceTracker (Vérification tarifs)"
-        ],
-        kill_switch_compliance: "Sonde technique uniquement (ne modifie jamais l'approbation commerciale)"
+        runner: "ubuntu-latest",
+        last_run_status: "ACTIVE",
+        kill_switch_compliance: "Sonde technique sans modification commerciale"
       },
       {
         id: "newsletter_engine",
@@ -88,18 +68,10 @@ export async function onRequestGet(context) {
         workflow_file: "newsletter_draft.yml",
         source: "Workflow .github/workflows/newsletter_draft.yml",
         cron_expression: "0 9 * * 2,4",
-        cadence_label: "Mardi & Jeudi à 09:00 NY (14:00 UTC)",
-        runner: "ubuntu-latest (GitHub-Hosted Runner)",
-        timeout_minutes: 15,
-        concurrency_lock: "helia-newsletter-draft",
-        last_run_status: "SUCCESS",
-        last_run_at: new Date(Date.now() - 26 * 3600 * 1000).toISOString(),
-        next_run_in: "Jeudi 09:00 NY",
-        agents_mobilized: [
-          "NewsletterEngine (Assemblage & SHA-256)",
-          "AdManager (Sponsor Paved #10828)"
-        ],
-        kill_switch_compliance: "Verrou strict DRAFT_LOCKED : aucun envoi sans clic patron"
+        cadence_label: "Mardi & Jeudi à 09:00 NY",
+        runner: "ubuntu-latest",
+        last_run_status: "ACTIVE",
+        kill_switch_compliance: "Verrou DRAFT_LOCKED : validation patron requise"
       },
       {
         id: "trend_scout",
@@ -108,17 +80,9 @@ export async function onRequestGet(context) {
         source: "Workflow .github/workflows/trend_scout.yml",
         cron_expression: "0 */6 * * *",
         cadence_label: "Toutes les 6 heures",
-        runner: "ubuntu-latest (GitHub-Hosted Runner)",
-        timeout_minutes: 25,
-        concurrency_lock: "helia-trend-scout",
-        last_run_status: isFleetPaused ? "PAUSED_BY_OWNER" : "SUCCESS",
-        last_run_at: new Date(Date.now() - 3 * 3600 * 1000).toISOString(),
-        next_run_in: "2 h 45 min",
-        agents_mobilized: [
-          "TrendScout (Recherche Github & HuggingFace)",
-          "CommunityScout (Veille Reddit/Discord)"
-        ],
-        kill_switch_compliance: "Respecte le flag fleet_controls.fleet_status = PAUSED"
+        runner: "ubuntu-latest",
+        last_run_status: isFleetPaused ? "PAUSED_BY_OWNER" : "ACTIVE",
+        kill_switch_compliance: "Respecte fleet_controls.fleet_status = PAUSED"
       },
       {
         id: "audit_backup_r2",
@@ -126,18 +90,10 @@ export async function onRequestGet(context) {
         workflow_file: "audit_backup.yml",
         source: "Workflow .github/workflows/audit_backup.yml",
         cron_expression: "0 0 * * *",
-        cadence_label: "Quotidien à 00:00 UTC (01:00 Paris)",
-        runner: "ubuntu-latest (GitHub-Hosted Runner)",
-        timeout_minutes: 20,
-        concurrency_lock: "helia-audit-backup",
-        last_run_status: "SUCCESS",
-        last_run_at: new Date(Date.now() - 23 * 3600 * 1000).toISOString(),
-        next_run_in: "45 min",
-        agents_mobilized: [
-          "SecurityAgent (Signature HMAC)",
-          "MemoryArchiver (Export chiffré R2)"
-        ],
-        kill_switch_compliance: "Non suspendu : la protection des données est immuable"
+        cadence_label: "Quotidien à 00:00 UTC",
+        runner: "ubuntu-latest",
+        last_run_status: "ACTIVE",
+        kill_switch_compliance: "Sauvegarde continue non suspensible"
       }
     ];
 
@@ -145,8 +101,7 @@ export async function onRequestGet(context) {
       crons,
       total_crons: crons.length,
       fleet_paused: isFleetPaused,
-      concurrency_lock_group: "helia-autonomous-fleet",
-      governance_rule: "Verrou strict d'exécution unique : aucun job concurrent ne peut tourner simultanément."
+      governance_rule: "Verrou strict d'exécution unique."
     }), {
       status: 200,
       headers: { "Content-Type": "application/json", "Cache-Control": "no-store, private" }
@@ -162,27 +117,80 @@ export async function onRequestPost(context) {
     const { action, cron_id } = body;
     const actorEmail = context.request.headers.get("Cf-Access-Authenticated-User-Email") || "owner@heliatech.online";
     const db = context.env?.DB;
+    const ghToken = context.env?.GITHUB_DISPATCH_TOKEN || context.env?.GITHUB_TOKEN || context.env?.GH_TOKEN;
 
     if (action === "trigger_run") {
       const nowIso = new Date().toISOString();
+      const targetCron = cron_id || "auto_publish";
+      const workflowFile = WORKFLOW_MAP[targetCron] || `${targetCron}.yml`;
+      let dispatchResult = { success: false, mode: "d1_only", message: "" };
 
+      // 1. Déclenchement réel GitHub Actions via workflow_dispatch API
+      if (ghToken) {
+        try {
+          const ghUrl = `https://api.github.com/repos/heliatech-media/saas-radar/actions/workflows/${workflowFile}/dispatches`;
+          const ghRes = await fetch(ghUrl, {
+            method: "POST",
+            headers: {
+              "Authorization": `Bearer ${ghToken}`,
+              "Accept": "application/vnd.github+json",
+              "User-Agent": "HeliaTech-SentinelAdmin/2.4",
+              "X-GitHub-Api-Version": "2022-11-28"
+            },
+            body: JSON.stringify({ ref: "main" })
+          });
+
+          if (ghRes.status === 204) {
+            dispatchResult = {
+              success: true,
+              mode: "github_api_dispatched",
+              status_code: 204,
+              message: `Workflow GitHub Actions '${workflowFile}' déclenché en production avec succès (HTTP 204).`
+            };
+          } else {
+            const errText = await ghRes.text();
+            dispatchResult = {
+              success: false,
+              mode: "github_api_error",
+              status_code: ghRes.status,
+              message: `Réponse GitHub API HTTP ${ghRes.status} : ${errText.substring(0, 200)}`
+            };
+          }
+        } catch (ghErr) {
+          dispatchResult = {
+            success: false,
+            mode: "github_api_exception",
+            message: `Erreur d'appel GitHub API : ${ghErr.message}`
+          };
+        }
+      } else {
+        dispatchResult = {
+          success: true,
+          mode: "d1_audit_logged",
+          message: `Signal consigné en D1. Pour le déclenchement distant automatique du runner GitHub, configurez GITHUB_DISPATCH_TOKEN dans les variables Cloudflare Pages.`
+        };
+      }
+
+      // 2. Consigner l'ordre patron dans le journal d'audit immuable D1
       if (db) {
         await db.prepare(`
           INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
           VALUES (datetime('now'), ?, 'owner', 'CRON_MANUAL_DISPATCH', ?, ?, 'SCHEDULED', 'DISPATCHED', 'sig_manual_cron')
         `).bind(
           actorEmail,
-          `cron:${cron_id || 'auto_publish'}`,
-          JSON.stringify({ actorEmail, cron_id, triggered_at: nowIso, method: "repository_dispatch" })
+          `cron:${targetCron}`,
+          JSON.stringify({ actorEmail, cron_id: targetCron, workflow_file: workflowFile, triggered_at: nowIso, dispatch_mode: dispatchResult.mode })
         ).run();
       }
 
       return new Response(JSON.stringify({
-        success: true,
-        cron_id: cron_id || "auto_publish",
+        success: dispatchResult.success,
+        cron_id: targetCron,
+        workflow_file: workflowFile,
         triggered_at: nowIso,
         actor: actorEmail,
-        message: `Signal de déclenchement manuel émis pour '${cron_id}'. Événement signé et consigné au journal d'audit.`
+        dispatch_mode: dispatchResult.mode,
+        message: dispatchResult.message
       }), {
         status: 200,
         headers: { "Content-Type": "application/json" }

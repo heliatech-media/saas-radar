@@ -1,10 +1,8 @@
 /**
  * Cloudflare Pages Function: /api/sentinel/audit
  * Immutable Audit Trail Endpoint - OWNER ONLY.
- * Règle impérative P1 :
- * "lecture des journaux : owner uniquement"
- * Returns chronological ledger of owner interventions with cryptographically verifiable signatures,
- * signed checkpoints, and Cloudflare R2 Bucket Lock status.
+ * Strictly queries Cloudflare D1 table sentinel_audit_logs.
+ * ZÉRO LOG SIMULÉ, ZÉRO INITIALISATION FACTICE.
  */
 
 export async function onRequestGet(context) {
@@ -26,41 +24,27 @@ export async function onRequestGet(context) {
     }
 
     const db = context.env?.DB;
+
+    if (!db) {
+      return new Response(JSON.stringify({
+        error: "Erreur technique : Base D1 non connectée sur ce runtime.",
+        logs: [],
+        total: 0,
+        checkpoints: []
+      }), {
+        status: 503,
+        headers: { "Content-Type": "application/json", "Cache-Control": "no-store, private" }
+      });
+    }
+
     let logs = [];
     let checkpoints = [];
 
-    if (db) {
-      try {
-        const rows = await db.prepare("SELECT * FROM sentinel_audit_logs ORDER BY id DESC LIMIT 50").all();
-        if (rows && rows.results) logs = rows.results;
-      } catch (e) {
-        console.warn("D1 audit query fallback:", e.message);
-      }
+    const rows = await db.prepare("SELECT * FROM sentinel_audit_logs ORDER BY id DESC LIMIT 50").all();
+    if (rows && rows.results) logs = rows.results;
 
-      try {
-        const chkRows = await db.prepare("SELECT * FROM d1_audit_checkpoints ORDER BY created_at DESC LIMIT 10").all();
-        if (chkRows && chkRows.results) checkpoints = chkRows.results;
-      } catch (e) {
-        console.warn("D1 checkpoints query fallback:", e.message);
-      }
-    }
-
-    if (logs.length === 0) {
-      logs = [
-        {
-          id: 1,
-          timestamp: "2026-11-06T17:45:00Z",
-          actor_email: "owner@heliatech.online (Zero Trust MFA)",
-          actor_role: "owner",
-          action: "SYSTEM_INITIALIZATION",
-          target: "sentinel_governance",
-          details_json: JSON.stringify({ message: "Initialisation de la gouvernance transactionnelle privée (zéro fuite statique)." }),
-          previous_state: "JSON_FILES",
-          new_state: "TRANSACTIONAL_SQL",
-          signature: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-        }
-      ];
-    }
+    const chkRows = await db.prepare("SELECT * FROM d1_audit_checkpoints ORDER BY created_at DESC LIMIT 10").all();
+    if (chkRows && chkRows.results) checkpoints = chkRows.results;
 
     const securityMetadata = {
       owner_only_enforced: true,
@@ -78,7 +62,13 @@ export async function onRequestGet(context) {
       hash_chain_status: "CRYPTOGRAPHICALLY_VERIFIED"
     };
 
-    return new Response(JSON.stringify({ logs, total: logs.length, checkpoints, security_metadata: securityMetadata }), {
+    return new Response(JSON.stringify({
+      logs,
+      total: logs.length,
+      checkpoints,
+      security_metadata: securityMetadata,
+      source: "Cloudflare D1 table sentinel_audit_logs"
+    }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -87,6 +77,6 @@ export async function onRequestGet(context) {
       }
     });
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
+    return new Response(JSON.stringify({ error: err.message, logs: [], total: 0 }), { status: 500 });
   }
 }

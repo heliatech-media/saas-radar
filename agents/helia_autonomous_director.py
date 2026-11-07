@@ -136,7 +136,46 @@ class HeliaAutonomousDirector:
         except Exception as e:
             self.log("Helia-Governance", f"Error querying D1/governance client: {e}", "⚠️")
             return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
-        return {"fleet_status": "RUNNING", "newsletter_emergency_stop": 0, "suspended_agents": []}
+
+    def is_agent_suspended(self, agent_name: str, suspended_list: list) -> bool:
+        """
+        Determines whether an agent is in the suspended list from D1 fleet_controls.
+        Security exemption: SecurityAgent, MarketplaceSecuritySentinel, and NotifierAgent CANNOT be suspended.
+        """
+        exempt = {"SecurityAgent", "MarketplaceSecuritySentinel", "NotifierAgent"}
+        if agent_name in exempt:
+            return False
+
+        aliases = {
+            "AutoRepair": ["AutoRepair", "Code Reviewer", "CodeReviewer"],
+            "ArticleStylist": ["ArticleStylist", "Content Writer", "ContentWriter"],
+            "VisualArtist": ["VisualArtist", "Design Jury Agent", "DesignJury"],
+            "DesignJury": ["DesignJury", "Design Jury Agent"],
+            "AffiliateHub": ["AffiliateHub", "Affiliate Matcher", "AffiliateMatcher"],
+            "RewardfulEngine": ["RewardfulEngine", "Affiliate Matcher", "AffiliateMatcher"],
+            "PavedSentinel": ["PavedSentinel", "Ad Manager", "AdManager"],
+            "AffiliateHunter": ["AffiliateHunter", "Affiliate Matcher", "AffiliateMatcher"],
+            "LinkWeaver": ["LinkWeaver", "SEO Optimizer", "SEOOptimizer"],
+            "CognitiveSwarm": ["CognitiveSwarm", "Memory Archiver", "MemoryArchiver"],
+            "TrendScout": ["TrendScout", "Trend Scout"],
+            "SoftwareAnalyst": ["SoftwareAnalyst", "Software Analyst"],
+            "ContentFactory": ["ContentFactory", "Content Writer", "ContentWriter"],
+            "SocialGrowth": ["SocialGrowth", "Social Publisher", "SocialPublisher"],
+            "VersusEngine": ["VersusEngine", "Benchmark Runner", "BenchmarkRunner"],
+            "AlternativesEngine": ["AlternativesEngine", "Benchmark Runner", "BenchmarkRunner"],
+            "SocialScheduler": ["SocialScheduler", "Social Publisher", "SocialPublisher"],
+            "CRO": ["CRO", "SEO Optimizer", "SEOOptimizer"],
+            "DataVisualizer": ["DataVisualizer", "Benchmark Runner", "BenchmarkRunner"],
+            "CloudflareAnalytics": ["CloudflareAnalytics", "Benchmark Runner", "BenchmarkRunner"],
+            "PriceTracker": ["PriceTracker", "Price Tracker"],
+            "LinkHealthInspector": ["LinkHealthInspector", "Link Health Inspector"],
+            "DataVerifier": ["DataVerifier", "Data Verifier"],
+        }
+        candidates = aliases.get(agent_name, [agent_name])
+        for s in suspended_list:
+            if s in candidates or any(s.lower() == c.lower() for c in candidates):
+                return True
+        return False
 
     def execute_autonomous_growth_cycle(self, auto_push: bool = True):
         controls = self.get_governance_controls()
@@ -147,6 +186,10 @@ class HeliaAutonomousDirector:
             self.log("Helia-CyberDefense", f"Status: {sec_audit['status']} (Defenses armed during fleet pause)", "✅")
             self.log("Helia-Core", "Autonomous cycle halted cleanly. Zero articles or builds triggered.", "💤")
             return {"status": "PAUSED", "reason": "Owner Emergency Pause"}
+
+        suspended_agents = controls.get("suspended_agents", [])
+        if suspended_agents:
+            self.log("Helia-Governance", f"Active individual suspensions from D1: {suspended_agents}", "⏸️")
         """
         Executes a complete end-to-end autonomous growth cycle:
         1. Cybersecurity audit
@@ -169,27 +212,39 @@ class HeliaAutonomousDirector:
         self.log("Helia-CyberDefense", f"Status: {sec_audit['status']} (Zero credential leak, strict headers verified)", "✅")
 
         # Step 2: Sub-Agent AutoRepair
-        self.log("Helia-AutoRepair", "Scanning Markdown content & YAML schemas for syntax flaws...", "🔧")
-        repair_res = self.repair.scan_and_repair_content()
-        self.log("Helia-AutoRepair", f"Inspected: {repair_res['inspected']} files | Repaired: {repair_res['repaired']} issues", "✅")
+        if self.is_agent_suspended("AutoRepair", suspended_agents):
+            self.log("Helia-AutoRepair", "⏸️ Sub-agent AutoRepair suspended by Owner in D1 fleet_controls. Skipping step.", "⏸️")
+        else:
+            self.log("Helia-AutoRepair", "Scanning Markdown content & YAML schemas for syntax flaws...", "🔧")
+            repair_res = self.repair.scan_and_repair_content()
+            self.log("Helia-AutoRepair", f"Inspected: {repair_res['inspected']} files | Repaired: {repair_res['repaired']} issues", "✅")
 
         # Step 2.5: Sub-Agent ArticleStylist (Layout & Typesetting Architect)
-        self.log("Helia-ArticleStylist", "Auditing editorial layouts, Mermaid diagrams & visual callouts...", "🎨")
-        layout_res = self.stylist.beautify_all_articles()
-        self.log("Helia-ArticleStylist", f"Typesetting verified across {layout_res['formatted_count']} articles.", "📐")
+        if self.is_agent_suspended("ArticleStylist", suspended_agents):
+            self.log("Helia-ArticleStylist", "⏸️ Sub-agent ArticleStylist suspended by Owner in D1. Skipping.", "⏸️")
+        else:
+            self.log("Helia-ArticleStylist", "Auditing editorial layouts, Mermaid diagrams & visual callouts...", "🎨")
+            layout_res = self.stylist.beautify_all_articles()
+            self.log("Helia-ArticleStylist", f"Typesetting verified across {layout_res['formatted_count']} articles.", "📐")
 
         # Step 2.6: Sub-Agent VisualArtist (Hero & Social OpenGraph Artwork)
-        self.log("Helia-VisualArtist", "Auditing 1200x630 custom hero visuals & OpenGraph social cards...", "🖼️")
-        visual_res = self.artist.process_all_articles()
-        self.log("Helia-VisualArtist", f"Visual assets verified for {visual_res['generated']} articles.", "✨")
+        if self.is_agent_suspended("VisualArtist", suspended_agents):
+            self.log("Helia-VisualArtist", "⏸️ Sub-agent VisualArtist suspended by Owner in D1. Skipping.", "⏸️")
+        else:
+            self.log("Helia-VisualArtist", "Auditing 1200x630 custom hero visuals & OpenGraph social cards...", "🖼️")
+            visual_res = self.artist.process_all_articles()
+            self.log("Helia-VisualArtist", f"Visual assets verified for {visual_res['generated']} articles.", "✨")
 
         # Step 2.65: Sub-Agent DesignJury (World-Class Web Design Competition Audit)
-        try:
-            self.log("Helia-DesignJury", "Auditing site aesthetics, typography rhythm & Awwwards readiness...", "🎨")
-            jury_report = self.design_jury.evaluate_against_awwwards_rubric()
-            self.log("Helia-DesignJury", f"Grand Jury Score: {jury_report.get('overall_awwwards_score', 9.5)}/10 • Status: {jury_report.get('jury_status')}", "🏆")
-        except Exception as e:
-            self.log("Helia-DesignJury", f"Design jury audit note: {e}", "⚠️")
+        if self.is_agent_suspended("DesignJury", suspended_agents):
+            self.log("Helia-DesignJury", "⏸️ Sub-agent DesignJury suspended by Owner in D1. Skipping.", "⏸️")
+        else:
+            try:
+                self.log("Helia-DesignJury", "Auditing site aesthetics, typography rhythm & Awwwards readiness...", "🎨")
+                jury_report = self.design_jury.evaluate_against_awwwards_rubric()
+                self.log("Helia-DesignJury", f"Grand Jury Score: {jury_report.get('overall_awwwards_score', 9.5)}/10 • Status: {jury_report.get('jury_status')}", "🏆")
+            except Exception as e:
+                self.log("Helia-DesignJury", f"Design jury audit note: {e}", "⚠️")
 
         # Step 2.7: Sub-Agent AffiliateHub (Multi-Network Autonomous API Sync)
         self.log("Helia-AffiliateHub", "Querying partner networks (Impact, PartnerStack, CJ) for tracking links...", "🔗")
@@ -242,38 +297,50 @@ class HeliaAutonomousDirector:
 
         # Step 3: Sub-Agent TrendScout (Resilient Discovery)
         keyword = None
-        try:
-            self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")
-            keyword = self.radar.scout_trending_software()
-            self.log("Helia-TrendScout", f"Target locked: '{keyword.tool_name}' ({keyword.category}) | Commission: {keyword.average_commission}", "🎯")
-        except Exception as e:
-            self.log("Helia-TrendScout", f"Trend scout notice ({e}). Proceeding to next growth vector...", "⚠️")
+        if self.is_agent_suspended("TrendScout", suspended_agents):
+            self.log("Helia-TrendScout", "⏸️ Sub-agent TrendScout suspended by Owner in D1. Skipping discovery.", "⏸️")
+        else:
+            try:
+                self.log("Helia-TrendScout", "Scanning high-intent search volumes and partner affiliate networks...", "🔍")
+                keyword = self.radar.scout_trending_software()
+                self.log("Helia-TrendScout", f"Target locked: '{keyword.tool_name}' ({keyword.category}) | Commission: {keyword.average_commission}", "🎯")
+            except Exception as e:
+                self.log("Helia-TrendScout", f"Trend scout notice ({e}). Proceeding to next growth vector...", "⚠️")
 
         # Step 4 & 5: Sub-Agent Analyst & ContentFactory (Insulated)
         if keyword:
             review = None
-            try:
-                self.log("Helia-Analyst", f"Executing architectural forensic teardown of '{keyword.tool_name}'...", "🔬")
-                review = self.analyst.analyze_tool(tool_name=keyword.tool_name, category_hint=keyword.category)
-                review_path = self.publisher.publish_review(review)
-                self.log("Helia-Analyst", f"Review published & indexed: {review_path.name}", "📑")
-            except Exception as e:
-                self.log("Helia-Analyst", f"Analyst review notice ({e}).", "⚠️")
+            if self.is_agent_suspended("SoftwareAnalyst", suspended_agents):
+                self.log("Helia-Analyst", "⏸️ Sub-agent SoftwareAnalyst suspended by Owner in D1. Skipping review.", "⏸️")
+            else:
+                try:
+                    self.log("Helia-Analyst", f"Executing architectural forensic teardown of '{keyword.tool_name}'...", "🔬")
+                    review = self.analyst.analyze_tool(tool_name=keyword.tool_name, category_hint=keyword.category)
+                    review_path = self.publisher.publish_review(review)
+                    self.log("Helia-Analyst", f"Review published & indexed: {review_path.name}", "📑")
+                except Exception as e:
+                    self.log("Helia-Analyst", f"Analyst review notice ({e}).", "⚠️")
 
             if review:
-                try:
-                    self.log("Helia-ContentFactory", f"Drafting 100% English masterclass & practical workshop for '{keyword.tool_name}'...", "✍️")
-                    blog_post = self.blog_agent.write_tool_masterclass(review)
-                    blog_path = self.publisher.publish_blog_post(blog_post)
-                    self.log("Helia-ContentFactory", f"Masterclass published: {blog_path.name}", "📰")
+                if self.is_agent_suspended("ContentFactory", suspended_agents):
+                    self.log("Helia-ContentFactory", "⏸️ Sub-agent ContentFactory suspended by Owner in D1. Skipping.", "⏸️")
+                else:
+                    try:
+                        self.log("Helia-ContentFactory", f"Drafting 100% English masterclass & practical workshop for '{keyword.tool_name}'...", "✍️")
+                        blog_post = self.blog_agent.write_tool_masterclass(review)
+                        blog_path = self.publisher.publish_blog_post(blog_post)
+                        self.log("Helia-ContentFactory", f"Masterclass published: {blog_path.name}", "📰")
 
-                    # Step 6: Sub-Agent SocialGrowth
-                    self.log("Helia-SocialGrowth", "Synthesizing viral Twitter/X growth thread & hooks...", "🐦")
-                    tweets = self.social.craft_viral_x_thread(blog_post)
-                    self.social.broadcast_thread_to_x(tweets)
-                    self.log("Helia-SocialGrowth", f"Drafted {len(tweets)}-tweet high-converting thread.", "🚀")
-                except Exception as e:
-                    self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
+                        # Step 6: Sub-Agent SocialGrowth
+                        if self.is_agent_suspended("SocialGrowth", suspended_agents):
+                            self.log("Helia-SocialGrowth", "⏸️ Sub-agent SocialGrowth suspended by Owner in D1. Skipping.", "⏸️")
+                        else:
+                            self.log("Helia-SocialGrowth", "Synthesizing viral Twitter/X growth thread & hooks...", "🐦")
+                            tweets = self.social.craft_viral_x_thread(blog_post)
+                            self.social.broadcast_thread_to_x(tweets)
+                            self.log("Helia-SocialGrowth", f"Drafted {len(tweets)}-tweet high-converting thread.", "🚀")
+                    except Exception as e:
+                        self.log("Helia-ContentFactory", f"Blog generation notice: {e}", "⚠️")
 
         # Step 5.5: Sub-Agent VersusEngine (Dual Head-to-Head Duel Showdowns)
         try:

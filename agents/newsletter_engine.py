@@ -57,6 +57,11 @@ class NoValidatedEditionError(Exception):
     pass
 
 
+class NewsletterEmergencyStopActiveError(Exception):
+    """Raised when dispatching while STOP NEWSLETTER or PAUSE ALL AGENTS is active in Cloudflare D1 fleet_controls."""
+    pass
+
+
 class NewsletterEngine:
     """
     Forensic ACID-compliant Newsletter Governance Engine with persistent SQLite storage.
@@ -391,7 +396,44 @@ class NewsletterEngine:
         - Fails cleanly if no validated edition exists (NEVER creates a new edition).
         - Enforces (slot_key + subscriber_id) / (slot_key + subscriber_email) double protection.
         - Exactly 1 email maximum per subscriber per slot.
+        - Enforces Cloudflare D1 governance (STOP NEWSLETTER & Owner approval).
         """
+        # Interrogation directe de la gouvernance Cloudflare D1 (source unique de vérité)
+        try:
+            from agents.d1_client import get_d1_client
+            d1 = get_d1_client()
+            controls = d1.get_governance_controls()
+
+            # Règle P0 : Arrêt d'urgence newsletter immédiat
+            if controls.get("newsletter_emergency_stop") == 1:
+                logger.error(f"[STOP NEWSLETTER ACTIF] Envoi bloqué pour '{slot_key}' : Emergency Stop actif dans D1 fleet_controls.")
+                raise NewsletterEmergencyStopActiveError(
+                    f"STOP NEWSLETTER actif en base Cloudflare D1 : tout envoi pour le créneau '{slot_key}' est strictement refusé."
+                )
+
+            # Règle P0 : Flotte globale en pause
+            if controls.get("fleet_status") == "PAUSED":
+                logger.error(f"[FLEET PAUSED] Envoi bloqué pour '{slot_key}' : La flotte d'agents est suspendue dans D1 fleet_controls.")
+                raise NewsletterEmergencyStopActiveError(
+                    f"Flotte suspendue (PAUSED) en base Cloudflare D1 : envoi bloqué pour '{slot_key}'."
+                )
+
+            # Règle P0 : En production Cloudflare D1, vérifier la signature formelle APPROVED dans owner_approvals
+            if getattr(d1, "mode", "") == "CLOUDFLARE_D1_PRODUCTION":
+                d1_approvals = d1.query(
+                    "SELECT status FROM owner_approvals WHERE item_ref = ? AND status = 'APPROVED'",
+                    [slot_key]
+                )
+                if not d1_approvals:
+                    logger.error(f"[UNAUTHORIZED] Créneau '{slot_key}' sans signature patron APPROVED dans D1 owner_approvals.")
+                    raise NoValidatedEditionError(
+                        f"Créneau '{slot_key}' non validé/signé par l'Owner en base Cloudflare D1 (owner_approvals). Envoi refusé."
+                    )
+        except (NewsletterEmergencyStopActiveError, NoValidatedEditionError):
+            raise
+        except Exception as e:
+            logger.warning(f"Note vérification gouvernance D1 dans dispatch_slot : {e}")
+
         with self._get_connection() as conn:
             edition = conn.execute(
                 "SELECT * FROM newsletter_editions WHERE slot_key = ?",

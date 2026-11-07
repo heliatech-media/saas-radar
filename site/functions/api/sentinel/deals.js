@@ -92,140 +92,7 @@ const REDIRECTS_MAP = {
   "hubspot": "https://www.hubspot.com"
 };
 
-const FALLBACK_DEALS = [
-  { 
-    id: 1, 
-    tool_name: "Make.com", 
-    tool_slug: "make", 
-    category: "Automation & No-Code", 
-    partner_code: "heliatechmake", 
-    perk_title: "1 Month Free Pro Plan (10,000 Operations)", 
-    badge: "EXCLUSIVE PARTNER OFFER", 
-    affiliate_url: "/go/make", 
-    savings_estimate: "Save up to $270/mo vs Zapier", 
-    link_status: "LINK_REACHABLE",
-    link_checked_at: new Date(Date.now() - 4 * 3600 * 1000).toISOString(),
-    link_http_code: 200,
-    link_latency_ms: 124,
-    offer_status: "OFFER_VERIFIED",
-    offer_verified_at: new Date(Date.now() - 8 * 3600 * 1000).toISOString(),
-    offer_verified_by: "owner",
-    offer_terms_notes: "Code heliatechmake actif - 1 mois gratuit plan Pro 10k ops",
-    verified_at: new Date(Date.now() - 8 * 3600 * 1000).toISOString(), 
-    verification_cadence_hours: 48, 
-    status: "ACTIVE" 
-  },
-  { 
-    id: 2, 
-    tool_name: "ElevenLabs", 
-    tool_slug: "elevenlabs", 
-    category: "AI Voice & Audio", 
-    partner_code: null, 
-    perk_title: "Starter Tier for $1.00 + 30,000 Characters", 
-    badge: "80% FIRST-MONTH DISCOUNT", 
-    affiliate_url: "/go/elevenlabs", 
-    savings_estimate: "80% Off Starter Plan", 
-    link_status: "LINK_REACHABLE",
-    link_checked_at: new Date(Date.now() - 5 * 3600 * 1000).toISOString(),
-    link_http_code: 200,
-    link_latency_ms: 142,
-    offer_status: "OFFER_VERIFIED",
-    offer_verified_at: new Date(Date.now() - 14 * 3600 * 1000).toISOString(),
-    offer_verified_by: "owner",
-    offer_terms_notes: "Remise 80% premier mois sur plan Starter confirmée",
-    verified_at: new Date(Date.now() - 14 * 3600 * 1000).toISOString(), 
-    verification_cadence_hours: 48, 
-    status: "ACTIVE" 
-  },
-  { 
-    id: 3, 
-    tool_name: "Rewardful", 
-    tool_slug: "rewardful", 
-    category: "Growth & Affiliate", 
-    partner_code: null, 
-    perk_title: "14-Day Unlimited Trial (0% Take Rate)", 
-    badge: "ZERO TRANSACTION FEES", 
-    affiliate_url: "/go/rewardful", 
-    savings_estimate: "Zero transaction fees during launch", 
-    link_status: "LINK_REACHABLE",
-    link_checked_at: new Date(Date.now() - 6 * 3600 * 1000).toISOString(),
-    link_http_code: 200,
-    link_latency_ms: 180,
-    offer_status: "OFFER_VERIFIED",
-    offer_verified_at: new Date(Date.now() - 43 * 3600 * 1000).toISOString(),
-    offer_verified_by: "owner",
-    offer_terms_notes: "Essai 14 jours sans commission actif",
-    verified_at: new Date(Date.now() - 43 * 3600 * 1000).toISOString(), 
-    verification_cadence_hours: 48, 
-    status: "ACTIVE" 
-  },
-  { 
-    id: 4, 
-    tool_name: "Cursor", 
-    tool_slug: "cursor", 
-    category: "Developer Tools", 
-    partner_code: null, 
-    perk_title: "Pro Tier Free Trial ($20 Value)", 
-    badge: "VERIFIED DEVELOPER DEAL", 
-    affiliate_url: "/go/cursor", 
-    savings_estimate: "Includes 500 fast Claude 3.5 Sonnet requests", 
-    link_status: "LINK_REACHABLE",
-    link_checked_at: new Date(Date.now() - 2 * 3600 * 1000).toISOString(),
-    link_http_code: 200,
-    link_latency_ms: 110,
-    offer_status: "OFFER_VERIFIED",
-    offer_verified_at: new Date(Date.now() - 6 * 3600 * 1000).toISOString(),
-    offer_verified_by: "owner",
-    offer_terms_notes: "Essai Pro avec 500 requêtes Claude 3.5 Sonnet confirmé",
-    verified_at: new Date(Date.now() - 6 * 3600 * 1000).toISOString(), 
-    verification_cadence_hours: 48, 
-    status: "ACTIVE" 
-  },
-  { 
-    id: 5, 
-    tool_name: "Windsurf", 
-    tool_slug: "windsurf", 
-    category: "Developer Tools", 
-    partner_code: null, 
-    perk_title: "Cascade Flow Trial (Unlimited Copilot)", 
-    badge: "SPECIAL AGENTIC ACCESS", 
-    affiliate_url: "/go/windsurf", 
-    savings_estimate: "Bypass individual token surcharges", 
-    link_status: "LINK_REACHABLE",
-    link_checked_at: new Date(Date.now() - 3 * 3600 * 1000).toISOString(),
-    link_http_code: 200,
-    link_latency_ms: 135,
-    offer_status: "OFFER_VERIFIED",
-    offer_verified_at: new Date(Date.now() - 5 * 3600 * 1000).toISOString(),
-    offer_verified_by: "owner",
-    offer_terms_notes: "Accès Cascade Flow sans surcoût token vérifié",
-    verified_at: new Date(Date.now() - 5 * 3600 * 1000).toISOString(), 
-    verification_cadence_hours: 48, 
-    status: "ACTIVE" 
-  },
-  { 
-    id: 6, 
-    tool_name: "Resend", 
-    tool_slug: "resend", 
-    category: "Developer Infrastructure", 
-    partner_code: null, 
-    perk_title: "3,000 Free Monthly Emails + Dedicated IP", 
-    badge: "FREE DEVELOPER TIER", 
-    affiliate_url: "/go/resend", 
-    savings_estimate: "Save $35/mo vs SendGrid Essentials", 
-    link_status: "LINK_REACHABLE",
-    link_checked_at: new Date(Date.now() - 7 * 3600 * 1000).toISOString(),
-    link_http_code: 200,
-    link_latency_ms: 95,
-    offer_status: "OFFER_VERIFIED",
-    offer_verified_at: new Date(Date.now() - 12 * 3600 * 1000).toISOString(),
-    offer_verified_by: "owner",
-    offer_terms_notes: "Quota gratuit 3,000 emails/mois + IP vérifié",
-    verified_at: new Date(Date.now() - 12 * 3600 * 1000).toISOString(), 
-    verification_cadence_hours: 48, 
-    status: "ACTIVE" 
-  }
-];
+// ZÉRO FALLBACK FICTIF : Seules les données réelles de D1 deals_registry sont retournées.
 
 export async function onRequestGet(context) {
   try {
@@ -243,9 +110,7 @@ export async function onRequestGet(context) {
       }
     }
 
-    if (deals.length === 0) {
-      deals = FALLBACK_DEALS;
-    }
+    if (!db) { return new Response(JSON.stringify({ error: "Erreur technique : Base D1 non connectée sur ce runtime.", deals: [], total: 0 }), { status: 503, headers: { "Content-Type": "application/json", "Cache-Control": "no-store, private" } }); }
 
     const now = Date.now();
     const processed = deals.map(d => {

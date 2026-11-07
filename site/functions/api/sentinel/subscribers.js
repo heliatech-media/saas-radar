@@ -1,9 +1,8 @@
 /**
  * Cloudflare Pages Function: /api/sentinel/subscribers
  * Secure, privacy-preserving subscriber ledger endpoint.
- * Zero Static PII Leakage: Data is loaded dynamically via protected Edge API.
- * Emails are masked by default to prevent unintentional exposure.
- * Any unmasking action (reveal=true) is formally recorded in the audit trail.
+ * Strictly queries Cloudflare D1 table subscribers.
+ * ZÉRO SAMPLE DATA, ZÉRO HARDCODED EMAIL.
  */
 
 function maskEmail(email) {
@@ -13,50 +12,43 @@ function maskEmail(email) {
   return `${local[0]}${"*".repeat(local.length - 2)}${local[local.length - 1]}@${domain}`;
 }
 
-const FALLBACK_SUBSCRIBERS_SAMPLE = [
-  { id: "sub_133", email: "matthew.mercer@seattle-systems.org", role: "Director of Cloud Infrastructure", country: "United States", country_code: "US", signup_date: "2026-11-03T17:57:30Z", source_path: "/blog/make-vs-zapier", status: "Verified" },
-  { id: "sub_047", email: "jessica.chen@apexworkflow.com", role: "Engineering Manager", country: "United States", country_code: "US", signup_date: "2026-10-28T14:12:00Z", source_path: "/tools/cursor", status: "Verified" },
-  { id: "sub_092", email: "tarik.b@casasolutions.ma", role: "CTO & Co-founder", country: "Morocco", country_code: "MA", signup_date: "2026-10-31T09:44:00Z", source_path: "/calculator", status: "Verified" },
-  { id: "sub_018", email: "lukas.weber@berlin-devops.de", role: "Principal Architect", country: "Germany", country_code: "DE", signup_date: "2026-10-22T11:05:00Z", source_path: "/blog/resend", status: "Verified" },
-  { id: "sub_088", email: "sarah.jenkins@oxfordcloud.co.uk", role: "Lead Systems Engineer", country: "United Kingdom", country_code: "GB", signup_date: "2026-10-30T16:20:00Z", source_path: "/radar", status: "Verified" }
-];
-
 export async function onRequestGet(context) {
   try {
     const url = new URL(context.request.url);
     const page = parseInt(url.searchParams.get("page") || "1", 10);
-    const limit = Math.min(parseInt(url.searchParams.get("limit") || "25", 10), 100);
+    const limit = Math.min(parseInt(url.searchParams.get("limit") || "50", 10), 100);
     const offset = (page - 1) * limit;
     const reveal = url.searchParams.get("reveal") === "true";
     const actorEmail = context.request.headers.get("Cf-Access-Authenticated-User-Email") || "owner@heliatech.online";
     const db = context.env?.DB;
 
-    let subscribers = [];
-    let total = 141;
-
-    if (db) {
-      try {
-        const countRes = await db.prepare("SELECT COUNT(*) as c FROM subscribers").first();
-        if (countRes) total = countRes.c;
-
-        const rows = await db.prepare("SELECT id, email, role, country, country_code, signup_date, source_path, lead_magnet, status FROM subscribers ORDER BY signup_date DESC LIMIT ? OFFSET ?")
-          .bind(limit, offset).all();
-        if (rows && rows.results) subscribers = rows.results;
-
-        // Si l'utilisateur démasque les emails, consigner formellement l'accès PII dans l'audit
-        if (reveal) {
-          await db.prepare(`
-            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-            VALUES (datetime('now'), ?, 'owner', 'REVEAL_PII_SUBSCRIBERS', 'subscribers:pii', '{"reason":"Owner consultation with Zero Trust MFA"}', 'MASKED', 'UNMASKED', 'sig_pii_unmasked')
-          `).bind(actorEmail).run();
-        }
-      } catch (e) {
-        console.warn("D1 subscribers query fallback:", e.message);
-      }
+    if (!db) {
+      return new Response(JSON.stringify({
+        error: "Erreur technique : Base D1 non connectée sur ce runtime.",
+        subscribers: [],
+        total: 0
+      }), {
+        status: 503,
+        headers: { "Content-Type": "application/json", "Cache-Control": "no-store, private" }
+      });
     }
 
-    if (subscribers.length === 0) {
-      subscribers = FALLBACK_SUBSCRIBERS_SAMPLE;
+    let subscribers = [];
+    let total = 0;
+
+    const countRes = await db.prepare("SELECT COUNT(*) as c FROM subscribers").first();
+    if (countRes && countRes.c !== undefined) total = countRes.c;
+
+    const rows = await db.prepare("SELECT id, email, role, country, country_code, signup_date, source_path, lead_magnet, status FROM subscribers ORDER BY signup_date DESC LIMIT ? OFFSET ?")
+      .bind(limit, offset).all();
+    if (rows && rows.results) subscribers = rows.results;
+
+    // Si l'utilisateur démasque les emails, consigner formellement l'accès PII dans l'audit D1
+    if (reveal) {
+      await db.prepare(`
+        INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
+        VALUES (datetime('now'), ?, 'owner', 'REVEAL_PII_SUBSCRIBERS', 'subscribers:pii', '{"reason":"Owner consultation with Zero Trust MFA"}', 'MASKED', 'UNMASKED', 'sig_pii_unmasked')
+      `).bind(actorEmail).run();
     }
 
     const sanitized = subscribers.map(s => ({
@@ -70,7 +62,8 @@ export async function onRequestGet(context) {
       page,
       limit,
       subscribers: sanitized,
-      pii_protected: !reveal
+      pii_protected: !reveal,
+      source: "Cloudflare D1 table subscribers"
     }), {
       status: 200,
       headers: {
@@ -80,6 +73,6 @@ export async function onRequestGet(context) {
       }
     });
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
+    return new Response(JSON.stringify({ error: err.message, subscribers: [], total: 0 }), { status: 500 });
   }
 }
