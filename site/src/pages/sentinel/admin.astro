@@ -1846,6 +1846,17 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           if (subsBadge) subsBadge.innerText = data.subscribers_summary.total;
         }
 
+        if (data.inventory_summary) {
+          const contentBadge = document.getElementById('sidebar-content-badge');
+          if (contentBadge && data.inventory_summary.content_count !== undefined) {
+            contentBadge.innerText = data.inventory_summary.content_count;
+          }
+          const dealsBadge = document.getElementById('sidebar-deals-badge');
+          if (dealsBadge && data.inventory_summary.deals_verified !== undefined) {
+            dealsBadge.innerText = data.inventory_summary.deals_verified;
+          }
+        }
+
         if (data.fleet) {
           const kpiAgents = document.getElementById('kpi-agents-count');
           if (kpiAgents) kpiAgents.innerText = `${data.fleet.active_agents} / ${data.fleet.total_agents} Agents`;
@@ -2599,6 +2610,10 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
         const data = await safeFetchJson('/api/sentinel/radar');
         if (!data || !data.radar_trends) {
           if (container) container.innerHTML = '<div class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation du radar de veille...</div>';
+          if (refreshBtn) {
+            refreshBtn.innerHTML = '<span>🔄</span> Actualiser';
+            refreshBtn.disabled = false;
+          }
           return;
         }
         if (container) container.innerHTML = '';

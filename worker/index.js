@@ -4527,7 +4527,7 @@ async function onRequest(context) {
 }
 __name(onRequest, "onRequest");
 
-// ../.wrangler/tmp/pages-O830Gf/functionsRoutes-0.988460358014788.mjs
+// ../.wrangler/tmp/pages-VzlDZs/functionsRoutes-0.24789203814593697.mjs
 var routes = [
   {
     routePath: "/api/sentinel/agents",

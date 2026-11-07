@@ -76,7 +76,7 @@ export async function onRequestGet(context) {
 
     // 5. Deals réels vérifiés
     try {
-      const dealRow = await db.prepare("SELECT COUNT(*) as count FROM deals_registry WHERE offer_cadence_status = 'OFFER_VERIFIED'").first();
+      const dealRow = await db.prepare("SELECT COUNT(*) as count FROM deals_registry WHERE offer_status = 'OFFER_VERIFIED' OR status = 'ACTIVE'").first();
       if (dealRow && dealRow.count !== undefined) verifiedDealsCount = dealRow.count;
     } catch (e) {
       console.error("D1 deals_registry query error:", e);
