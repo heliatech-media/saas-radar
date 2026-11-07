@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-07T02:26:46.971451",
+  "last_synced": "2026-11-07T02:36:52.292142",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-10 - 2026-11-07)",
-  "total_visitors_network": 21628,
-  "total_requests": 128834,
-  "total_visits": 6704,
-  "total_pageviews": 27304,
+  "total_visitors_network": 21651,
+  "total_requests": 128906,
+  "total_visits": 6711,
+  "total_pageviews": 27318,
   "percent_cached": "56.14%",
-  "data_served_mb": 1082.4,
+  "data_served_mb": 1083.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -55,11 +55,11 @@
       "views": 230
     },
     {
-      "path": "/deals/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 180
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/deals/",
       "views": 180
     },
     {
@@ -67,7 +67,7 @@
       "views": 170
     },
     {
-      "path": "/reviews/apollo-io/",
+      "path": "/reviews/make/",
       "views": 160
     }
   ],
