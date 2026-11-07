@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-11-07 06:38:55",
+  "timestamp": "2026-11-07 09:35:33",
   "total_links_audited": 96,
   "healthy_links": 92,
   "broken_links_count": 4,
   "health_rate": "95.8%",
   "broken_links": [
     {
-      "slug": "descript-enterprise-sandbox",
-      "target_url": "https://www.descript-enterprise-sandbox.com",
+      "slug": "descript-sandbox",
+      "target_url": "https://www.descript-sandbox.com",
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.descript-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-enterprise-sandbox.com', port=443): Failed to resolve 'www.descript-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='www.descript-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-sandbox.com', port=443): Failed to resolve 'www.descript-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "minicong",
@@ -159,12 +159,12 @@
       "healthy": true
     },
     {
-      "slug": "descript-enterprise-sandbox",
-      "target_url": "https://www.descript-enterprise-sandbox.com",
+      "slug": "descript-sandbox",
+      "target_url": "https://www.descript-sandbox.com",
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.descript-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-enterprise-sandbox.com', port=443): Failed to resolve 'www.descript-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+      "error": "HTTPSConnectionPool(host='www.descript-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-sandbox.com', port=443): Failed to resolve 'www.descript-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "dumpling-ai",
@@ -176,7 +176,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0RKV8iX253gJ2L&gsxid=0RKV8iX253gJ2L&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Lo2qevJc1y5Wb4&gsxid=Lo2qevJc1y5Wb4&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -409,7 +409,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=XdACpa2RyYg1L3&gsxid=XdACpa2RyYg1L3&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=RwKH0l0lFfUSxW&gsxid=RwKH0l0lFfUSxW&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -437,7 +437,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=wGxN2Q8bIBtNi0&gsxid=wGxN2Q8bIBtNi0&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=tjpbEHqktXRBpx&gsxid=tjpbEHqktXRBpx&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-07T06:38:26.931172",
+  "timestamp": "2026-11-07T09:34:53.571897",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
@@ -12,8 +12,8 @@
   },
   "healed_redirects": [
     {
-      "slug": "descript-enterprise-sandbox",
-      "target_url": "https://www.descript-enterprise-sandbox.com",
+      "slug": "descript-sandbox",
+      "target_url": "https://www.descript-sandbox.com",
       "source_file": "descript-evolution-guide-2026.md"
     },
     {

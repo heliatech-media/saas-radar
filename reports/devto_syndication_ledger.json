@@ -766,6 +766,19 @@
       "url": "https://dev.to/resend-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/resend-evolution-guide-2026",
       "status": "already_published"
+    },
+    "retool": {
+      "id": 4992846,
+      "url": "https://dev.to/heliatech/retool-the-genesis-of-enterprise-internal-apps-and-the-hands-on-guide-to-workflow-velocity-in-2026-3o86",
+      "title": "Retool: The Genesis of Enterprise Internal Apps and the Hands-on Guide to Workflow Velocity in 2026",
+      "canonical_url": "https://heliatech.online/blog/retool",
+      "published": true,
+      "tags": [
+        "retool",
+        "nocode",
+        "aiautomation",
+        "saas"
+      ]
     }
   },
   "last_sync": null
