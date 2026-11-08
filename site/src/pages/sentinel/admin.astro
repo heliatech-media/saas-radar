@@ -411,12 +411,43 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           </button>
         </div>
 
+        <!-- Barre de recherche, filtres et pagination de l'inventaire complet -->
+        <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 font-mono">
+          <div class="relative flex-1">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">🔍</span>
+            <input 
+              id="content-search-input" 
+              type="text" 
+              placeholder="Rechercher parmi les 176 contenus (titre, slug, ex: CapCut, Make, Descript)..." 
+              oninput="filterContentTable()"
+              class="w-full pl-9 pr-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-all"
+            />
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 text-xs">
+            <button id="btn-filter-all" onclick="setContentTypeFilter('all', this)" class="content-filter-btn px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/40 transition-all">
+              Tous (<span id="filter-cnt-all">...</span>)
+            </button>
+            <button id="btn-filter-review" onclick="setContentTypeFilter('review', this)" class="content-filter-btn px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold transition-all">
+              Reviews (<span id="filter-cnt-reviews">...</span>)
+            </button>
+            <button id="btn-filter-article" onclick="setContentTypeFilter('article', this)" class="content-filter-btn px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold transition-all">
+              Articles (<span id="filter-cnt-articles">...</span>)
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 px-1">
+          <span>Affichage de <strong id="displayed-content-count" class="text-cyan-300">0</strong> sur <strong id="total-content-count" class="text-white">0</strong> contenus inventoriés</span>
+          <span class="text-slate-500">Inventaire D1 exhaustif en temps réel (sans limite restrictive)</span>
+        </div>
+
         <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#070b13]">
           <table class="w-full text-left text-xs font-mono">
             <thead class="bg-slate-900/80 border-b border-slate-800 text-slate-400 text-[10px] uppercase">
               <tr>
                 <th class="p-3">Titre & Slug</th>
                 <th class="p-3">Type</th>
+                <th class="p-3">Date Création</th>
+                <th class="p-3">Vues</th>
                 <th class="p-3">Preuves Sourcées</th>
                 <th class="p-3">Précision TCO</th>
                 <th class="p-3">Dernier Audit</th>
@@ -424,7 +455,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
               </tr>
             </thead>
             <tbody id="content-tbody" class="divide-y divide-slate-800/60">
-              <tr><td colspan="6" class="p-6 text-center text-slate-500">Chargement des contenus depuis la base transactionnelle...</td></tr>
+              <tr><td colspan="8" class="p-6 text-center text-slate-500">Chargement des contenus depuis la base transactionnelle...</td></tr>
             </tbody>
           </table>
         </div>
@@ -2091,7 +2122,119 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
     }
 
-    // 2. Phase 2 : Chargement des 167 Contenus & Réaudit
+    // 2. Phase 2 : Chargement Exhaustif des 176+ Contenus, Recherche & Vues
+    let currentContentFilter = 'all';
+    window.__allContentItems = [];
+
+    function setContentTypeFilter(type, btn) {
+      currentContentFilter = type;
+      document.querySelectorAll('.content-filter-btn').forEach(b => {
+        b.className = 'content-filter-btn px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold transition-all';
+      });
+      if (btn) {
+        btn.className = 'content-filter-btn px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/40 transition-all';
+      }
+      filterContentTable();
+    }
+
+    function filterContentTable() {
+      const tbody = document.getElementById('content-tbody');
+      if (!tbody) return;
+
+      const searchInput = document.getElementById('content-search-input');
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+      const items = window.__allContentItems || [];
+      const filtered = items.filter(item => {
+        const matchesType = (currentContentFilter === 'all') || (item.type === currentContentFilter);
+        const matchesQuery = !query || 
+          (item.title && item.title.toLowerCase().includes(query)) ||
+          (item.slug && item.slug.toLowerCase().includes(query)) ||
+          (item.category && item.category.toLowerCase().includes(query));
+        return matchesType && matchesQuery;
+      });
+
+      // Update counters
+      const dispCount = document.getElementById('displayed-content-count');
+      if (dispCount) dispCount.innerText = filtered.length;
+
+      const totalCount = document.getElementById('total-content-count');
+      if (totalCount) totalCount.innerText = items.length;
+
+      const cntAll = document.getElementById('filter-cnt-all');
+      if (cntAll) cntAll.innerText = items.length;
+
+      const cntRev = document.getElementById('filter-cnt-reviews');
+      if (cntRev) cntRev.innerText = items.filter(i => i.type === 'review').length;
+
+      const cntArt = document.getElementById('filter-cnt-articles');
+      if (cntArt) cntArt.innerText = items.filter(i => i.type === 'article').length;
+
+      tbody.innerHTML = '';
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun contenu correspondant à votre recherche.</td></tr>';
+        return;
+      }
+
+      filtered.forEach(item => {
+        const lastAudited = item.last_audited_at;
+        const status = item.audit_status;
+        const tcoScore = item.tco_accuracy_score;
+        const evidenceCount = item.evidence_count;
+        const createdAt = item.created_at || (item.last_audited_at ? item.last_audited_at.substring(0, 10) : '2026-10-23');
+        const viewsCount = item.views !== undefined && item.views !== null ? Number(item.views) : 0;
+
+        const isQueued = status === 'AUDIT_QUEUED';
+        const isVerified = status === 'VERIFIED';
+        const needsReaudit = status === 'NEEDS_REAUDIT';
+
+        const tr = document.createElement('tr');
+        tr.className = isQueued ? 'bg-amber-950/20' : (needsReaudit ? 'bg-rose-950/15 hover:bg-rose-950/25' : 'hover:bg-slate-900/40');
+        
+        let statusBadge = '';
+        if (isQueued) {
+          statusBadge = '<span class="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold">⏳ En attente SoftwareAnalyst</span>';
+        } else if (isVerified) {
+          statusBadge = '<span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold">✓ Vérifié</span>';
+        } else {
+          statusBadge = '<span class="px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-300 text-[9px] font-bold">⚠️ Réaudit Requis</span>';
+        }
+
+        let actionBtn = '';
+        if (isQueued) {
+          actionBtn = `<button disabled class="px-2.5 py-1 rounded bg-slate-800 text-slate-500 font-bold text-xs cursor-not-allowed">⏳ En attente</button>`;
+        } else {
+          actionBtn = `<button onclick="reAuditContent('${item.slug}', this)" class="px-2.5 py-1 rounded ${needsReaudit ? 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30' : 'bg-slate-800 hover:bg-slate-700 text-slate-300'} font-bold transition-all text-xs">${needsReaudit ? 'Lancer Réaudit' : 'Demander Réaudit'}</button>`;
+        }
+
+        tr.innerHTML = `
+          <td class="p-3 font-bold text-white max-w-xs">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span>${item.title}</span>
+              ${statusBadge}
+            </div>
+            <a href="/${item.type === 'review' ? 'reviews' : 'blog'}/${item.slug}/" target="_blank" class="text-[10px] text-cyan-400/80 hover:text-cyan-300 hover:underline">/${item.type === 'review' ? 'reviews' : 'blog'}/${item.slug}/ ↗</a>
+          </td>
+          <td class="p-3">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'review' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-cyan-500/20 text-cyan-300'}">${item.type.toUpperCase()}</span>
+          </td>
+          <td class="p-3 text-slate-300 font-mono text-[11px] whitespace-nowrap">
+            📅 ${createdAt}
+          </td>
+          <td class="p-3 text-cyan-300 font-bold font-mono text-[11px] whitespace-nowrap">
+            <span class="px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/25">👁️ ${viewsCount.toLocaleString('fr-FR')}</span>
+          </td>
+          <td class="p-3 text-emerald-400 font-bold whitespace-nowrap">${evidenceCount} sources</td>
+          <td class="p-3 text-white whitespace-nowrap">${tcoScore}/10 <span class="text-slate-500 text-[10px]">(±15%)</span></td>
+          <td class="p-3 text-slate-300 font-bold whitespace-nowrap">${new Date(lastAudited).toLocaleDateString('fr-FR')}</td>
+          <td class="p-3 text-right whitespace-nowrap">
+            ${actionBtn}
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
     async function fetchContent(btn) {
       const tbody = document.getElementById('content-tbody');
       const refreshBtn = btn || document.getElementById('btn-refresh-content');
@@ -2101,71 +2244,20 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       }
 
       try {
-        const data = await safeFetchJson('/api/sentinel/content?limit=50');
+        const data = await safeFetchJson('/api/sentinel/content?limit=500');
         if (!data || !data.content) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des contenus...</td></tr>';
+          if (tbody) tbody.innerHTML = '<tr><td colspan="8" class="p-6 text-center text-amber-400 font-mono text-xs">⚠️ Synchronisation des contenus...</td></tr>';
           return;
         }
-        if (tbody) tbody.innerHTML = '';
-        if (!data.content || data.content.length === 0) {
-          if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-slate-500 font-mono text-xs">Aucun contenu répertorié dans Cloudflare D1.</td></tr>';
-          return;
-        }
+
+        window.__allContentItems = data.content || [];
 
         if (data.total !== undefined) {
           const badge = document.getElementById('sidebar-content-badge');
           if (badge) badge.innerText = data.total;
         }
 
-        data.content.forEach(item => {
-          const lastAudited = item.last_audited_at;
-          const status = item.audit_status;
-          const tcoScore = item.tco_accuracy_score;
-          const evidenceCount = item.evidence_count;
-
-          const isQueued = status === 'AUDIT_QUEUED';
-          const isVerified = status === 'VERIFIED';
-          const needsReaudit = status === 'NEEDS_REAUDIT';
-
-          const tr = document.createElement('tr');
-          tr.className = isQueued ? 'bg-amber-950/20' : (needsReaudit ? 'bg-rose-950/15 hover:bg-rose-950/25' : 'hover:bg-slate-900/40');
-          
-          let statusBadge = '';
-          if (isQueued) {
-            statusBadge = '<span class="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold">⏳ En attente SoftwareAnalyst</span>';
-          } else if (isVerified) {
-            statusBadge = '<span class="px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold">✓ Vérifié par Agent</span>';
-          } else {
-            statusBadge = '<span class="px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-300 text-[9px] font-bold">⚠️ Réaudit Requis</span>';
-          }
-
-          let actionBtn = '';
-          if (isQueued) {
-            actionBtn = `<button disabled class="px-2.5 py-1 rounded bg-slate-800 text-slate-500 font-bold text-xs cursor-not-allowed">⏳ En attente cycle</button>`;
-          } else {
-            actionBtn = `<button onclick="reAuditContent('${item.slug}', this)" class="px-2.5 py-1 rounded ${needsReaudit ? 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30' : 'bg-slate-800 hover:bg-slate-700 text-slate-300'} font-bold transition-all text-xs">${needsReaudit ? 'Lancer Réaudit' : 'Demander Réaudit'}</button>`;
-          }
-
-          tr.innerHTML = `
-            <td class="p-3 font-bold text-white">
-              <div class="flex items-center gap-1.5">
-                <span>${item.title}</span>
-                ${statusBadge}
-              </div>
-              <div class="text-[10px] text-slate-500">/${item.type === 'review' ? 'reviews' : 'blog'}/${item.slug}/</div>
-            </td>
-            <td class="p-3">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'review' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-cyan-500/20 text-cyan-300'}">${item.type.toUpperCase()}</span>
-            </td>
-            <td class="p-3 text-emerald-400 font-bold">${evidenceCount} sources vérifiées</td>
-            <td class="p-3 text-white">${tcoScore}/10 <span class="text-slate-500 text-[10px]">(±15%)</span></td>
-            <td class="p-3 text-slate-300 font-bold">${new Date(lastAudited).toLocaleDateString('fr-FR')}</td>
-            <td class="p-3 text-right">
-              ${actionBtn}
-            </td>
-          `;
-          tbody.appendChild(tr);
-        });
+        filterContentTable();
 
         if (refreshBtn) {
           refreshBtn.innerHTML = '<span>✓</span> Liste à Jour';

@@ -16,7 +16,8 @@ async function computeSha256(text) {
 export async function onRequestGet(context) {
   try {
     const url = new URL(context.request.url);
-    const limit = Math.min(parseInt(url.searchParams.get("limit") || "50", 10), 100);
+    const limitParam = url.searchParams.get("limit");
+    const limit = (!limitParam || limitParam === "all") ? 500 : Math.min(parseInt(limitParam, 10), 1000);
     const db = context.env?.DB;
 
     if (!db) {
