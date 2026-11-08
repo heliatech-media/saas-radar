@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-08T21:03:32.638130",
+  "last_synced": "2026-11-08T21:23:40.383819",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-11 - 2026-11-08)",
-  "total_visitors_network": 24566,
-  "total_requests": 134923,
-  "total_visits": 7615,
-  "total_pageviews": 29634,
+  "total_visitors_network": 24583,
+  "total_requests": 134951,
+  "total_visits": 7620,
+  "total_pageviews": 29644,
   "percent_cached": "56.14%",
-  "data_served_mb": 1238.0,
+  "data_served_mb": 1240.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -31,11 +31,11 @@
       "views": 700
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
+      "path": "/blog/julius-ai-evolution-guide-2026/",
       "views": 310
     },
     {
-      "path": "/blog/julius-ai-evolution-guide-2026/",
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 310
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 26660
+      "views": 26670
     },
     {
       "country": "Morocco",
@@ -102,7 +102,7 @@
     },
     {
       "country": "Canada",
-      "views": 610
+      "views": 620
     },
     {
       "country": "Netherlands",
