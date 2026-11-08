@@ -1,38 +1,34 @@
 {
-  "last_synced": "2026-11-08T23:54:49.666898",
+  "last_synced": "2026-11-08T23:04:39.914088",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-11 - 2026-11-08)",
-  "total_visitors_network": 24687,
-  "total_requests": 135230,
-  "total_visits": 7652,
-  "total_pageviews": 29728,
+  "total_visitors_network": 24690,
+  "total_requests": 135255,
+  "total_visits": 7653,
+  "total_pageviews": 29732,
   "percent_cached": "56.14%",
-  "data_served_mb": 1254.7,
+  "data_served_mb": 1254.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6550
+      "views": 6210
     },
     {
       "path": "/",
-      "views": 3470
+      "views": 3650
     },
     {
       "path": "/calculator/",
-      "views": 1210
+      "views": 1160
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1120
+      "views": 1060
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 700
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 310
+      "views": 680
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
@@ -40,76 +36,80 @@
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 290
+      "views": 280
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 280
     },
     {
-      "path": "/radar/",
-      "views": 280
-    },
-    {
-      "path": "/awards/",
+      "path": "/blog/",
       "views": 270
     },
     {
-      "path": "/blog/",
-      "views": 260
+      "path": "/radar/",
+      "views": 270
     },
     {
-      "path": "/versus/",
+      "path": "/reviews/elevenlabs/",
       "views": 240
     },
     {
-      "path": "/deals/",
-      "views": 200
+      "path": "/awards/",
+      "views": 230
     },
     {
-      "path": "/blog/jasper-ai-evolution-guide-2026/",
-      "views": 190
+      "path": "/reviews/clickup/",
+      "views": 220
+    },
+    {
+      "path": "/deals/",
+      "views": 220
+    },
+    {
+      "path": "/terms/",
+      "views": 220
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 26790
+      "views": 25990
     },
     {
       "country": "Morocco",
-      "views": 18700
+      "views": 20040
     },
     {
       "country": "Singapore",
-      "views": 1620
+      "views": 1630
     },
     {
       "country": "Germany",
-      "views": 1370
+      "views": 1490
     },
     {
       "country": "Belgium",
-      "views": 650
+      "views": 710
     },
     {
       "country": "United Kingdom",
-      "views": 640
+      "views": 660
     },
     {
       "country": "Brazil",
-      "views": 630
-    },
-    {
-      "country": "Canada",
-      "views": 620
-    },
-    {
-      "country": "Netherlands",
-      "views": 560
+      "views": 640
     },
     {
       "country": "France",
+      "views": 550
+    },
+    {
+      "country": "CN",
+      "views": 490
+    },
+    {
+      "country": "Canada",
       "views": 480
     }
   ],

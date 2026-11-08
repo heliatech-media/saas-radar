@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: minvo
 image: /images/blog/minvo.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Minvo Account ➔
   url: /go/minvo
 ---
-
 ## Architectural Overview: The 100k-Scale Video Repurposing Bottleneck
 
 Manually slicing 100 hours of enterprise webinar archives into vertical social assets costs $4,500 in human non-linear editor (NLE) labor at an average burn rate of $45/hour. Traditional NLE pipelines introduce a catastrophic 85% task-multiplier penalty due to manual transcript scrubbing, multi-speaker framing adjustments, and keyframe rendering blocks. At scale, this human-in-the-loop dependency creates an unsustainable operational drag that suffocates B2B content velocity.

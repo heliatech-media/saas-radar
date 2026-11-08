@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-07T15:26:32.365513",
+  "timestamp": "2026-11-08T23:05:12.199979",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 173,
-    "total_redirects_active": 103,
-    "new_redirects_healed": 30,
+    "total_content_files_scanned": 176,
+    "total_redirects_active": 106,
+    "new_redirects_healed": 32,
     "internal_links_repaired": 0,
     "external_targets_repaired": 12,
     "content_files_modified": 0
@@ -100,6 +100,16 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "capcut",
+      "target_url": "https://www.capcut.com",
+      "source_file": "best-descript-alternatives-2026.md"
+    },
+    {
+      "slug": "davinci-resolve",
+      "target_url": "https://www.davinci-resolve.com",
+      "source_file": "best-descript-alternatives-2026.md"
     },
     {
       "slug": "zoominfo",

@@ -87,6 +87,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "CapCut Pro",
+    "slug": "capcut-pro",
+    "tagline": "A powerful, AI-driven video editor designed to accelerate content creation for modern creators and marketing teams.",
+    "category": "AI Video & Content Creation",
+    "rating": 4.6,
+    "starting_price": "$7.99/mo",
+    "best_for": "Social media managers, TikTok/Reels creators, and agile remote marketing teams seeking rapid turnaround times.",
+    "affiliate_url": "https://www.capcut.com"
+  },
+  {
     "name": "Captions",
     "slug": "captions",
     "tagline": "An AI-powered video editor designed to create, edit, and translate professional talking-head videos with a single tap.",
@@ -384,7 +394,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "Content creators, marketing agencies, podcasters, and B2B brands scaling short-form social video.",
-    "affiliate_url": "https://www.minvo.pro"
+    "affiliate_url": "https://minvo.pro/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Monday.com",
