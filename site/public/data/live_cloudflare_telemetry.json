@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T00:45:10.278679",
+  "last_synced": "2026-11-09T00:55:43.133545",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-11 - 2026-11-08)",
-  "total_visitors_network": 24711,
-  "total_requests": 135372,
-  "total_visits": 7660,
-  "total_pageviews": 29758,
+  "total_visitors_network": 24732,
+  "total_requests": 135398,
+  "total_visits": 7666,
+  "total_pageviews": 29764,
   "percent_cached": "56.14%",
-  "data_served_mb": 1258.2,
+  "data_served_mb": 1259.2,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -43,11 +43,11 @@
       "views": 290
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/radar/",
       "views": 280
     },
     {
-      "path": "/radar/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 280
     },
     {
