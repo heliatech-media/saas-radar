@@ -177,7 +177,9 @@ AFFILIATE_MAP = {
     "perplexity-enterprise": "https://www.perplexity.ai/?via=heliatech",
     "senja": "https://senja.io/?via=heliatech",
     "videoask": "https://www.videoask.com/?via=heliatech",
-    "minvo": "https://minvo.pro/?via=heliatech"
+    "minvo": "https://minvo.pro/?via=heliatech",
+    "capcut-pro": "https://capcut.pxf.io/heliatech",
+    "capcut": "https://capcut.pxf.io/heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

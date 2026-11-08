@@ -6,7 +6,7 @@ tagline: A powerful, AI-driven video editor designed to accelerate content creat
 category: AI Video & Content Creation
 rating: 4.6
 website_url: https://www.capcut.com
-affiliate_url: https://www.capcut.com
+affiliate_url: "https://capcut.pxf.io/heliatech"
 summary: CapCut Pro bridges the gap between complex pro-grade video editing software
   and lightning-fast social media workflows. Packed with advanced AI background removal,
   automatic captioning, and cloud-based collaboration, it serves as an efficient alternative

@@ -23,6 +23,8 @@ def generate():
         target = aff if aff else web
         if target:
             lines.append(f'/go/{slug} {target} 302\n')
+            if slug == 'capcut-pro':
+                lines.append(f'/go/capcut {target} 302\n')
             
     with open(redirects_path, 'w', encoding='utf-8') as f:
         f.writelines(lines)
