@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-08T18:32:23.398082",
+  "last_synced": "2026-11-08T18:42:31.108486",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-11 - 2026-11-08)",
-  "total_visitors_network": 24438,
-  "total_requests": 134446,
-  "total_visits": 7575,
-  "total_pageviews": 29537,
+  "total_visitors_network": 24450,
+  "total_requests": 134488,
+  "total_visits": 7579,
+  "total_pageviews": 29549,
   "percent_cached": "56.14%",
-  "data_served_mb": 1216.3,
+  "data_served_mb": 1216.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,11 +16,11 @@
     },
     {
       "path": "/",
-      "views": 3440
+      "views": 3450
     },
     {
       "path": "/calculator/",
-      "views": 1200
+      "views": 1210
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
@@ -47,11 +47,11 @@
       "views": 280
     },
     {
-      "path": "/awards/",
+      "path": "/radar/",
       "views": 270
     },
     {
-      "path": "/radar/",
+      "path": "/awards/",
       "views": 270
     },
     {
@@ -74,7 +74,7 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 26490
+      "views": 26520
     },
     {
       "country": "Morocco",
@@ -82,7 +82,7 @@
     },
     {
       "country": "Singapore",
-      "views": 1600
+      "views": 1610
     },
     {
       "country": "Germany",
