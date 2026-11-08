@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-08T17:21:43.750517",
+  "last_synced": "2026-11-08T17:41:51.213767",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-11 - 2026-11-08)",
-  "total_visitors_network": 24382,
-  "total_requests": 134303,
-  "total_visits": 7558,
-  "total_pageviews": 29484,
+  "total_visitors_network": 24396,
+  "total_requests": 134334,
+  "total_visits": 7562,
+  "total_pageviews": 29498,
   "percent_cached": "56.14%",
-  "data_served_mb": 1210.9,
+  "data_served_mb": 1213.1,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6170
+      "views": 6540
     },
     {
       "path": "/",
-      "views": 3650
+      "views": 3440
     },
     {
       "path": "/calculator/",
-      "views": 1160
+      "views": 1200
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1030
+      "views": 1070
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 680
+      "views": 690
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 310
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
       "views": 310
     },
     {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 290
+    },
+    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 280
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 280
-    },
-    {
-      "path": "/blog/",
+      "path": "/radar/",
       "views": 270
     },
     {
-      "path": "/radar/",
+      "path": "/awards/",
+      "views": 270
+    },
+    {
+      "path": "/blog/",
       "views": 260
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 230
-    },
-    {
-      "path": "/terms/",
-      "views": 220
-    },
-    {
-      "path": "/awards/",
-      "views": 220
+      "path": "/versus/",
+      "views": 240
     },
     {
       "path": "/deals/",
-      "views": 220
+      "views": 200
     },
     {
-      "path": "/reviews/clickup/",
-      "views": 220
+      "path": "/blog/jasper-ai-evolution-guide-2026/",
+      "views": 190
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 25700
+      "views": 26470
     },
     {
       "country": "Morocco",
-      "views": 19980
+      "views": 18650
     },
     {
       "country": "Singapore",
-      "views": 1620
+      "views": 1590
     },
     {
       "country": "Germany",
-      "views": 1490
+      "views": 1360
     },
     {
       "country": "Belgium",
-      "views": 710
+      "views": 650
     },
     {
       "country": "United Kingdom",
-      "views": 660
-    },
-    {
-      "country": "Brazil",
       "views": 640
     },
     {
-      "country": "France",
-      "views": 540
+      "country": "Brazil",
+      "views": 630
     },
     {
       "country": "Canada",
-      "views": 480
+      "views": 610
     },
     {
-      "country": "CN",
-      "views": 460
+      "country": "Netherlands",
+      "views": 560
+    },
+    {
+      "country": "France",
+      "views": 480
     }
   ],
   "top_referrers": [
