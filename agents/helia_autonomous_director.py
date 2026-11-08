@@ -23,7 +23,7 @@ import time
 import argparse
 import subprocess
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 import yaml
 
 # Ensure UTF-8 output on Windows consoles
@@ -549,9 +549,10 @@ class HeliaAutonomousDirector:
         self.visionary.generate_growth_blueprint()
         build_success = self._run_build()
 
+        tool_label = keyword.tool_name if (keyword and hasattr(keyword, 'tool_name')) else "Cloud Growth Refresh"
         if build_success and auto_push:
             self.log("Helia-EdgePublisher", "Build 100% clean. Committing and pushing to origin main...", "🚢")
-            self._deploy_git(f"feat(growth): Helia deployed autonomous review & masterclass for {keyword.tool_name}")
+            self._deploy_git(f"feat(growth): Helia deployed autonomous review & masterclass for {tool_label}")
             self.log("Helia-EdgePublisher", "Cloudflare edge deployment triggered globally.", "🌐")
 
         # Step 8: Sub-Agent Reporter
@@ -565,15 +566,15 @@ class HeliaAutonomousDirector:
         # Step 9: Sub-Agent Notifier (Founder Push Notifications)
         try:
             self.notifier.send_notification(
-                title=f"Cycle Autonome #{keyword.tool_name}",
-                message=f"Helia a audité le site, renforcé le maillage interne, publié l'analyse de {keyword.tool_name} et mis à jour le calendrier social.",
+                title=f"Cycle Autonome #{tool_label}",
+                message=f"Helia a audité le site, renforcé le maillage interne, publié l'analyse ({tool_label}) et mis à jour le calendrier social.",
                 category="CYCLE",
                 link="https://heliatech.online/sentinel/suivicontrol"
             )
         except Exception as e:
             self.log("Helia-Notifier", f"Notification notice: {e}", "⚠️")
 
-        self.log("HELIA-CORE", f"🎉 Autonomous Growth Cycle successfully concluded for {keyword.tool_name}!", "🏆")
+        self.log("HELIA-CORE", f"🎉 Autonomous Growth Cycle successfully concluded for {tool_label}!", "🏆")
 
     def expand_blog_for_existing_tools(self, limit: int = 2, auto_push: bool = True):
         """Helia expands masterclasses for audited tools lacking an in-depth guide."""

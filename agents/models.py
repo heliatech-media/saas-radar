@@ -3,8 +3,8 @@ Pydantic Schemas for SaaS Directory & Multi-Agent Engine.
 Defines strict data contracts for all agents.
 """
 
-from typing import List, Optional
-from pydantic import BaseModel, Field
+from typing import List, Optional, Any
+from pydantic import BaseModel, Field, model_validator
 
 
 class PricingTier(BaseModel):
@@ -75,10 +75,28 @@ class ComparisonArticle(BaseModel):
 
 class RadarKeyword(BaseModel):
     tool_name: str
-    category: str
-    search_intent: str
-    primary_affiliate_network: str
-    average_commission: str
+    category: str = Field(default="B2B SaaS")
+    search_intent: str = Field(default="High Commercial Intent (Review, Pricing, Alternatives)")
+    primary_affiliate_network: str = Field(default="Direct / PartnerStack / Rewardful")
+    average_commission: str = Field(default="20% - 40% recurring")
+    primary_keyword: Optional[str] = None
+    intent: Optional[str] = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def normalize_fields(cls, data: Any) -> Any:
+        if isinstance(data, dict):
+            if "intent" in data and "search_intent" not in data:
+                data["search_intent"] = data["intent"]
+            elif "primary_keyword" in data and "search_intent" not in data:
+                data["search_intent"] = f"Commercial intent for {data['primary_keyword']}"
+            if "primary_affiliate_network" not in data:
+                data["primary_affiliate_network"] = "Direct / PartnerStack / Rewardful"
+            if "average_commission" not in data:
+                data["average_commission"] = "20% - 40% recurring"
+            if "category" not in data:
+                data["category"] = "B2B SaaS"
+        return data
 
 
 class AffiliateCTA(BaseModel):

@@ -141,8 +141,8 @@ Provide the output strictly conforming to the requested JSON schema.
                 return RadarKeyword(
                     tool_name=seed["name"],
                     category=seed["category"],
-                    primary_keyword=f"{seed['name']} review 2026",
-                    intent="Commercial/High-Buying",
+                    search_intent=f"High Commercial ({seed['name']} Review 2026, Pricing, Alternatives)",
+                    primary_affiliate_network="Direct / PartnerStack / Rewardful",
                     average_commission=seed["commission"]
                 )
 
@@ -160,8 +160,8 @@ Provide the output strictly conforming to the requested JSON schema.
                 return RadarKeyword(
                     tool_name=fb["name"],
                     category=fb["cat"],
-                    primary_keyword=f"{fb['name']} review 2026",
-                    intent="Commercial/High-Buying",
+                    search_intent=f"High Commercial ({fb['name']} Review 2026, Pricing, Alternatives)",
+                    primary_affiliate_network="Direct / PartnerStack / Rewardful",
                     average_commission=fb["comm"]
                 )
 
