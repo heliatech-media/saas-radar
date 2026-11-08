@@ -5,7 +5,7 @@ tagline: Turn long-form video into viral clips instantly using AI-powered automa
 category: AI Video
 rating: 4.6
 website_url: https://www.minvo.pro
-affiliate_url: https://www.minvo.pro
+affiliate_url: "https://minvo.pro/?via=heliatech"
 summary: Minvo is an AI-driven video repurposing platform designed to transform webinars,
   podcasts, and long-form recordings into engaging, platform-optimized short clips
   for TikTok, YouTube Shorts, and Instagram Reels. It automates speaker detection,
