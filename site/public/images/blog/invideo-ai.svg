@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#070b19"/>
+      <stop offset="100%" stop-color="#0c0a20"/>
+    </linearGradient>
+
+    <!-- Glowing Orbs & Highlights -->
+    <radialGradient id="ambientCyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientFuchsia" cx="85%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientViolet" cx="60%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Vectors -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="glassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="timelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowHeavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#cyberGrid)"/>
+
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="200" cy="150" r="300" fill="url(#ambientCyan)" filter="url(#glowHeavy)"/>
+  <circle cx="1000" cy="450" r="350" fill="url(#ambientFuchsia)" filter="url(#glowHeavy)"/>
+  <circle cx="700" cy="120" r="250" fill="url(#ambientViolet)" filter="url(#glowHeavy)"/>
+
+  <!-- Abstract Geometric Background Vectors / Neural Net Mesh -->
+  <g opacity="0.25">
+    <path d="M 650 180 L 850 100 L 1050 220 L 950 380 L 750 320 Z" fill="none" stroke="url(#cyanBlue)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M 580 300 L 750 320 L 700 480 L 520 420 Z" fill="none" stroke="url(#violetFuchsia)" stroke-width="1.5"/>
+    <line x1="850" y1="100" x2="750" y2="320" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="1050" y1="220" x2="950" y2="380" stroke="#d946ef" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="650" y1="180" x2="580" y2="300" stroke="#06b6d4" stroke-width="1"/>
+  </g>
+
+  <!-- ==================== TOP BRANDING & BADGE ==================== -->
+  <g transform="translate(80, 60)" filter="url(#dropShadow)">
+    <!-- Pill Badge Background -->
+    <rect x="0" y="0" width="310" height="34" rx="17" fill="url(#glassFill)" stroke="url(#glassBorder)" stroke-width="1.5"/>
+    <!-- Glowing Status Indicator Dot -->
+    <circle cx="20" cy="17" r="4" fill="#06b6d4" filter="url(#glow)"/>
+    <circle cx="20" cy="17" r="2.5" fill="#38bdf8"/>
+    <!-- Badge Text -->
+    <text x="38" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY & HEADINGS ==================== -->
+  <g transform="translate(80, 130)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#a78bfa" letter-spacing="4">AI VIDEO // EXECUTIVE INTELLIGENCE</text>
+    
+    <!-- Main Title: INVIDEO AI -->
+    <text x="0" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="1">
+      INVIDEO <tspan fill="url(#cyanBlue)">AI</tspan>
+    </text>
+
+    <!-- Subtitle / Investigation Title -->
+    <text x="0" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">
+      The Genesis of Text-to-Video Synthesis and the
+    </text>
+    <text x="0" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#f1f5f9">
+      Executive Playbook to Production Velocity
+    </text>
+  </g>
+
+  <!-- ==================== HOLOGRAPHIC 3D VECTOR / MEDIA DOMAIN METAPHOR ==================== -->
+  <g transform="translate(540, 100)" filter="url(#dropShadow)">
+    <!-- Main Studio HUD Container -->
+    <rect x="0" y="0" width="580" height="450" rx="16" fill="url(#glassFill)" stroke="url(#glassBorder)" stroke-width="1.5"/>
+
+    <!-- Top Window Bar -->
+    <path d="M 0 40 L 580 40" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <circle cx="24" cy="20" r="5" fill="#f43f5e" opacity="0.8"/>
+    <circle cx="42" cy="20" r="5" fill="#fbbf24" opacity="0.8"/>
+    <circle cx="60" cy="20" r="5" fill="#34d399" opacity="0.8"/>
+    
+    <text x="290" y="24" text-anchor="middle" font-family="monospace" font-size="11" fill="#64748b" letter-spacing="1.5">NODE_VFX // NEURAL_RENDER_ENGINE.SYNTH</text>
+
+    <!-- Holographic 3D Layer Panels (Isometric / Perspective Stack) -->
+    <g transform="translate(40, 70)">
+      <!-- Panel 1: Script-to-Timeline Core Node -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="220" height="110" rx="8" fill="#090d16" stroke="#06b6d4" stroke-width="1.5" opacity="0.9"/>
+        <path d="M 15 25 L 75 25" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 15 45 L 140 45" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 15 65 L 100 65" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+        <!-- Pulse Indicator -->
+        <circle cx="195" cy="25" r="8" fill="#06b6d4" opacity="0.3" filter="url(#glow)"/>
+        <circle cx="195" cy="25" r="4" fill="#38bdf8"/>
+        <!-- Mini waveform inside card -->
+        <path d="M 15 90 Q 30 75 45 90 T 75 90 T 105 90 T 135 90 T 165 90 T 195 90" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+      </g>
+
+      <!-- Panel 2: Vector Neural Asset Pipeline -->
+      <g transform="translate(260, 20)">
+        <rect x="0" y="0" width="240" height="130" rx="8" fill="#090d16" stroke="#8b5cf6" stroke-width="1.5" opacity="0.9"/>
+        <text x="16" y="28" font-family="monospace" font-size="11" fill="#c084fc" letter-spacing="1">SYNTHESIS ENGINE</text>
+        <path d="M 16 45 L 224 45" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        
+        <!-- Animated Nodes Graph -->
+        <circle cx="40" cy="85" r="12" fill="#8b5cf6" opacity="0.2" filter="url(#glow)"/>
+        <circle cx="40" cy="85" r="6" fill="#a78bfa"/>
+        <line x1="46" y1="85" x2="94" y2="85" stroke="#8b5cf6" stroke-width="2"/>
+        
+        <circle cx="100" cy="85" r="16" fill="#d946ef" opacity="0.25" filter="url(#glow)"/>
+        <circle cx="100" cy="85" r="8" fill="#d946ef"/>
+        <line x1="108" y1="85" x2="186" y2="85" stroke="#d946ef" stroke-width="2" stroke-dasharray="3 3"/>
+        
+        <circle cx="192" cy="85" r="12" fill="#38bdf8" opacity="0.2" filter="url(#glow)"/>
+        <circle cx="192" cy="85" r="6" fill="#38bdf8"/>
+
+        <!-- Metadata tags -->
+        <rect x="16" y="105" width="60" height="14" rx="4" fill="#1e1b4b"/>
+        <text x="22" y="115" font-family="monospace" font-size="8" fill="#818cf8">LLM_CORE</text>
+        <rect x="82" y="105" width="65" height="14" rx="4" fill="#3b0764"/>
+        <text x="88" y="115" font-family="monospace" font-size="8" fill="#e879f9">VEC_RENDER</text>
+      </g>
+
+      <!-- Connecting Data Flow Bezier -->
+      <path d="M 220 55 C 240 55, 240 70, 260 70" fill="none" stroke="url(#cyanBlue)" stroke-width="2" filter="url(#glow)"/>
+    </g>
+
+    <!-- ==================== HOLOGRAPHIC 3D AUDIO/VIDEO TIMELINE ==================== -->
+    <g transform="translate(40, 240)">
+      <rect x="0" y="0" width="500" height="160" rx="10" fill="#050811" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      
+      <!-- Timeline Header -->
+      <text x="20" y="25" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">TIMELINE // MULTI-MODAL SYNCHRONIZATION</text>
+      <line x1="20" y1="35" x2="480" y2="35" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+      <!-- Track 1: Voice & Audio Energy Envelope -->
+      <g transform="translate(20, 50)">
+        <text x="0" y="12" font-family="monospace" font-size="9" fill="#38bdf8">VOICE_GEN</text>
+        <rect x="70" y="0" width="380" height="18" rx="4" fill="#082f49" opacity="0.6"/>
+        <!-- Waveform lines -->
+        <path d="M 80 9 L 85 3 L 90 15 L 95 6 L 100 12 L 105 4 L 110 14 L 115 8 L 120 15 L 125 5 L 130 11 L 135 7 L 140 13 L 145 5 L 150 14 L 155 8 L 160 12 L 165 4 L 170 15 L 175 6 L 180 12 L 185 5 L 190 14 L 195 7 L 200 13 L 205 4 L 210 15 L 215 8 L 220 12 L 225 5 L 230 14 L 235 6 L 240 13 L 245 4 L 250 15 L 255 7 L 260 12 L 265 5 L 270 14 L 275 8 L 280 13 L 285 4 L 290 15 L 295 6 L 300 12 L 305 5 L 310 14 L 315 7 L 320 13 L 325 4 L 330 15 L 335 8 L 340 12 L 345 5 L 350 14 L 355 6 L 360 13 L 365 5 L 370 14 L 375 7 L 380 12 L 385 5 L 390 14 L 395 8 L 400 12 L 405 6 L 410 14 L 415 8 L 420 10" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+      </g>
+
+      <!-- Track 2: Visual AI Frames & Transitions -->
+      <g transform="translate(20, 80)">
+        <text x="0" y="12" font-family="monospace" font-size="9" fill="#c084fc">VISUAL_AI</text>
+        <!-- Keyframe Blocks -->
+        <rect x="70" y="2" width="90" height="16" rx="3" fill="url(#violetFuchsia)" opacity="0.8"/>
+        <text x="78" y="14" font-family="monospace" font-size="8" fill="#ffffff" font-weight="bold">SCENE_01.MP4</text>
+        
+        <rect x="165" y="2" width="110" height="16" rx="3" fill="url(#violetFuchsia)" opacity="0.5"/>
+        <text x="173" y="14" font-family="monospace" font-size="8" fill="#ffffff" font-weight="bold">TRANSITION_FX</text>
+        
+        <rect x="280" y="2" width="140" height="16" rx="3" fill="url(#violetFuchsia)" opacity="0.9"/>
+        <text x="288" y="14" font-family="monospace" font-size="8" fill="#ffffff" font-weight="bold">SCENE_02_RENDER</text>
+      </g>
+
+      <!-- Playhead / CTI Indicator -->
+      <g transform="translate(230, 35)">
+        <line x1="0" y1="0" x2="0" y2="105" stroke="#f43f5e" stroke-width="2" filter="url(#glow)"/>
+        <polygon points="-5,0 5,0 0,6" fill="#f43f5e"/>
+      </g>
+
+      <!-- Bottom Timeline Metrics -->
+      <g transform="translate(20, 125)">
+        <line x1="0" y1="0" x2="460" y2="0" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <text x="0" y="16" font-family="monospace" font-size="9" fill="#64748b">BUFFER: 99.8%</text>
+        <text x="120" y="16" font-family="monospace" font-size="9" fill="#64748b">LATENCY: 12ms</text>
+        <text x="240" y="16" font-family="monospace" font-size="9" fill="#06b6d4" font-weight="bold">FPS: 60.0 UHD</text>
+        <text x="390" y="16" font-family="monospace" font-size="9" fill="#34d399">ACTIVE</text>
+      </g>
+    </g>
+
+    <!-- Floating Security / Architectural Badge -->
+    <g transform="translate(420, 35)">
+      <rect x="0" y="0" width="125" height="24" rx="12" fill="#030712" stroke="#38bdf8" stroke-width="1" opacity="0.85"/>
+      <circle cx="12" cy="12" r="3" fill="#34d399" filter="url(#glow)"/>
+      <text x="24" y="16" font-family="monospace" font-size="9" fill="#38bdf8" letter-spacing="1">SECURE V1.0</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM FEATURE METRICS ==================== -->
+  <g transform="translate(80, 545)">
+    <!-- Metric 1 -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#ffffff">10x</text>
+      <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94a3b8" letter-spacing="0.5">PRODUCTION VELOCITY</text>
+    </g>
+
+    <!-- Divider 1 -->
+    <line x1="180" y1="0" x2="180" y2="25" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+    <!-- Metric 2 -->
+    <g transform="translate(220, 0)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#38bdf8">100%</text>
+      <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94a3b8" letter-spacing="0.5">TEXT-TO-VIDEO SYNTHESIS</text>
+    </g>
+
+    <!-- Divider 2 -->
+    <line x1="430" y1="0" x2="430" y2="25" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+    <!-- Metric 3 -->
+    <g transform="translate(470, 0)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#c084fc">4K UHD</text>
+      <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94a3b8" letter-spacing="0.5">NEURAL RENDER PIPELINE</text>
+    </g>
+  </g>
+
+  <!-- HELIA TECH Watermark / Brand Signature -->
+  <g transform="translate(1030, 580)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#64748b" letter-spacing="3" text-anchor="end">HELIATECH.ONLINE</text>
+  </g>
+</svg>

@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-09T04:37:32.202047",
+  "last_synced": "2026-11-09T03:44:46.494326",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 25754,
-  "total_requests": 137336,
-  "total_visits": 7983,
-  "total_pageviews": 30590,
+  "total_visitors_network": 25759,
+  "total_requests": 137353,
+  "total_visits": 7985,
+  "total_pageviews": 30591,
   "percent_cached": "56.14%",
-  "data_served_mb": 1299.5,
+  "data_served_mb": 1301.2,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6550
+      "views": 6230
     },
     {
       "path": "/",
-      "views": 3480
+      "views": 3690
     },
     {
       "path": "/calculator/",
-      "views": 1230
+      "views": 1180
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1140
+      "views": 1090
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 700
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 330
-    },
-    {
       "path": "/blog/julius-ai-evolution-guide-2026/",
-      "views": 310
-    },
-    {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 300
+      "views": 320
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 290
     },
     {
-      "path": "/radar/",
+      "path": "/blog/",
       "views": 290
     },
     {
-      "path": "/versus/",
-      "views": 280
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 290
     },
     {
-      "path": "/awards/",
+      "path": "/radar/",
       "views": 270
     },
     {
-      "path": "/blog/",
-      "views": 260
+      "path": "/reviews/elevenlabs/",
+      "views": 240
+    },
+    {
+      "path": "/awards/",
+      "views": 240
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 230
     },
     {
       "path": "/deals/",
-      "views": 210
+      "views": 230
     },
     {
-      "path": "/reviews/make/",
-      "views": 200
+      "path": "/terms/",
+      "views": 220
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 26880
+      "views": 26150
     },
     {
       "country": "Morocco",
-      "views": 18840
+      "views": 20090
     },
     {
       "country": "Germany",
-      "views": 1810
+      "views": 1890
     },
     {
       "country": "Singapore",
-      "views": 1640
+      "views": 1700
     },
     {
       "country": "Belgium",
-      "views": 650
+      "views": 710
     },
     {
       "country": "United Kingdom",
-      "views": 650
+      "views": 680
     },
     {
       "country": "Brazil",
-      "views": 650
-    },
-    {
-      "country": "Canada",
-      "views": 640
-    },
-    {
-      "country": "Netherlands",
-      "views": 560
+      "views": 670
     },
     {
       "country": "France",
-      "views": 510
+      "views": 550
+    },
+    {
+      "country": "CN",
+      "views": 500
+    },
+    {
+      "country": "Canada",
+      "views": 480
     }
   ],
   "top_referrers": [

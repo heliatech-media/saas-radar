@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-08 23:04:38 UTC",
+  "last_updated": "2026-11-09 03:44:45 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 74,
-    "total_published_investigations": 176,
-    "reviews_audited": 75,
-    "masterclasses_and_duels": 101,
+    "total_monetized_tools": 76,
+    "total_published_investigations": 179,
+    "reviews_audited": 76,
+    "masterclasses_and_duels": 103,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$25,900 USD",
+    "projected_monthly_mrr": "$26,600 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -111,6 +111,16 @@
       "slug": "cal-com",
       "destination": "https://cal.com/?via=heliatech",
       "type": "Commission Partner"
+    },
+    {
+      "slug": "capcut-pro",
+      "destination": "https://capcut.pxf.io/heliatech",
+      "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "capcut",
+      "destination": "https://capcut.pxf.io/heliatech",
+      "type": "Catalog Edge Hop"
     },
     {
       "slug": "captions",
@@ -445,6 +455,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-05 08:13:02",
+      "title": "Cycle Autonome #ScreenClip",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de ScreenClip et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-05 08:12:14",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-11-05 06:06:39",
       "title": "Cycle Autonome #ScreenStudio",
       "category": "CYCLE",
@@ -463,20 +487,6 @@
       "title": "Cycle Autonome #Guidde",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Guidde et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-05 03:58:47",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-05 01:53:19",
-      "title": "Cycle Autonome #Beehiiv",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Beehiiv et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

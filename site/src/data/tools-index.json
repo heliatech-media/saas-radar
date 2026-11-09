@@ -249,6 +249,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "InVideo AI",
+    "slug": "invideo-ai",
+    "tagline": "Turn simple text prompts into fully produced, publish-ready videos complete with script, voiceover, and stock footage.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$25/mo",
+    "best_for": "Content creators, digital marketers, and agencies scaling YouTube Shorts, TikToks, and explainer content.",
+    "affiliate_url": "https://invideo.io"
+  },
+  {
     "name": "Instantly.ai",
     "slug": "instantly-ai",
     "tagline": "Scale your cold email outreach with unlimited accounts and automated warmups.",

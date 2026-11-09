@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-08 23:05:59",
-  "total_links_audited": 106,
-  "healthy_links": 100,
-  "broken_links_count": 6,
-  "health_rate": "94.3%",
+  "timestamp": "2026-11-09 03:46:01",
+  "total_links_audited": 108,
+  "healthy_links": 101,
+  "broken_links_count": 7,
+  "health_rate": "93.5%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -20,6 +20,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.descript-sandbox-leaks.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-sandbox-leaks.com', port=443): Failed to resolve 'www.descript-sandbox-leaks.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "invideo-ai-sandbox",
+      "target_url": "https://www.invideo-ai-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "minicong",
@@ -140,6 +148,13 @@
       "healthy": true
     },
     {
+      "slug": "capcut-pro",
+      "target_url": "https://www.capcut-pro.com",
+      "final_url": "https://capcut-pro.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "captions",
       "target_url": "https://www.captions.ai/?via=heliatech",
       "final_url": "https://captions.ai/?via=heliatech",
@@ -228,7 +243,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=v3ySn8C7wdnvZg&gsxid=v3ySn8C7wdnvZg&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=vyYFopluAye94Q&gsxid=vyYFopluAye94Q&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -287,6 +302,14 @@
       "final_url": "https://instantly.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "invideo-ai-sandbox",
+      "target_url": "https://www.invideo-ai-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "jasper-ai",
@@ -497,7 +520,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=pyVxVIKZelxMhO&gsxid=pyVxVIKZelxMhO&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ATRHL0VOfQZurJ&gsxid=ATRHL0VOfQZurJ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -525,7 +548,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=nRiWUMvQ1PS9bW&gsxid=nRiWUMvQ1PS9bW&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=dyHpeKoMA0TDxm&gsxid=dyHpeKoMA0TDxm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

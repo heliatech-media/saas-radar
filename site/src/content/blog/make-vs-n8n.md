@@ -1,23 +1,28 @@
 ---
-title: "Make vs n8n (2026): Managed Cloud Workflow Agility vs Self-Hosted Open-Source Sovereignty"
-description: "Comprehensive 2026 head-to-head teardown of Make vs N8N. Empirical comparison matrix, pricing scaling math, architectural benchmarks, and executive recommendations."
-date: "2026-10-23"
-author: "HELIA TECH"
-category: "AI Automation & No-Code"
+title: 'Make vs n8n (2026): Managed Cloud Workflow Agility vs Self-Hosted Open-Source
+  Sovereignty'
+description: Comprehensive 2026 head-to-head teardown of Make vs N8N. Empirical comparison
+  matrix, pricing scaling math, architectural benchmarks, and executive recommendations.
+date: '2026-10-23'
+author: HELIA TECH
+category: AI Automation & No-Code
 tags:
-  - Make
-  - N8N
-  - "Make vs N8N"
-  - Comparison
-  - B2B Software
-readingTime: "12 MIN"
-tool_slug: "make"
+- Make
+- N8N
+- Make vs N8N
+- Comparison
+- B2B Software
+readingTime: 5 MIN
+tool_slug: make
 tldr:
-  - "Make excels at rapid prototyping and visual orchestration, delivering unmatched leverage for marketing and operations teams."
-  - "N8N remains superior for data sovereignty and complex AI agent orchestration, providing an edge when security and cost-predictability are paramount."
-  - "Economic scaling breakdown reveals up to 70% cost variation between both platforms at scale."
+- Make excels at rapid prototyping and visual orchestration, delivering unmatched
+  leverage for marketing and operations teams.
+- N8N remains superior for data sovereignty and complex AI agent orchestration, providing
+  an edge when security and cost-predictability are paramount.
+- Economic scaling breakdown reveals up to 70% cost variation between both platforms
+  at scale.
+image: /images/blog/make.svg
 ---
-
 # Duel: Make vs n8n (2026)
 ## Managed Cloud Workflow Agility vs Self-Hosted Open-Source Sovereignty
 
