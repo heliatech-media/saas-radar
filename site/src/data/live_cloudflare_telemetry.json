@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T02:46:44.535348",
+  "last_synced": "2026-11-09T03:16:54.039861",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 25168,
-  "total_requests": 136418,
-  "total_visits": 7802,
-  "total_pageviews": 30224,
+  "total_visitors_network": 25684,
+  "total_requests": 136947,
+  "total_visits": 7962,
+  "total_pageviews": 30418,
   "percent_cached": "56.14%",
-  "data_served_mb": 1281.2,
+  "data_served_mb": 1288.6,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -24,7 +24,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1130
+      "views": 1140
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -39,20 +39,20 @@
       "views": 310
     },
     {
-      "path": "/radar/",
-      "views": 290
-    },
-    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 290
+      "views": 300
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 290
     },
     {
+      "path": "/radar/",
+      "views": 290
+    },
+    {
       "path": "/versus/",
-      "views": 270
+      "views": 280
     },
     {
       "path": "/awards/",
@@ -68,13 +68,13 @@
     },
     {
       "path": "/reviews/make/",
-      "views": 190
+      "views": 200
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 26860
+      "views": 26870
     },
     {
       "country": "Morocco",
@@ -93,11 +93,11 @@
       "views": 650
     },
     {
-      "country": "Brazil",
+      "country": "United Kingdom",
       "views": 650
     },
     {
-      "country": "United Kingdom",
+      "country": "Brazil",
       "views": 650
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "country": "France",
-      "views": 480
+      "views": 500
     }
   ],
   "top_referrers": [
