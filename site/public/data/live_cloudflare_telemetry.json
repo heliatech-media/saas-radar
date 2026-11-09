@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T21:34:51.975974",
+  "last_synced": "2026-11-09T21:45:01.873256",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26624,
-  "total_requests": 140727,
-  "total_visits": 8253,
-  "total_pageviews": 31668,
+  "total_visitors_network": 26635,
+  "total_requests": 140777,
+  "total_visits": 8256,
+  "total_pageviews": 31678,
   "percent_cached": "56.14%",
-  "data_served_mb": 1379.5,
+  "data_served_mb": 1380.2,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -35,6 +35,10 @@
       "views": 330
     },
     {
+      "path": "/api/telemetry",
+      "views": 320
+    },
+    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 320
     },
@@ -43,23 +47,19 @@
       "views": 310
     },
     {
-      "path": "/radar/",
-      "views": 290
-    },
-    {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 290
     },
     {
-      "path": "/versus/",
-      "views": 280
-    },
-    {
-      "path": "/api/telemetry",
-      "views": 280
+      "path": "/radar/",
+      "views": 290
     },
     {
       "path": "/awards/",
+      "views": 280
+    },
+    {
+      "path": "/versus/",
       "views": 280
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 19090
+      "views": 19130
     },
     {
       "country": "Germany",
