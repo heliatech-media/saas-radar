@@ -1,6 +1,7 @@
 ---
 name: VideoAsk
 slug: videoask
+created_at: "2026-11-05"
 tagline: Scale personal connections with asynchronous video funnels and conditional
   logic.
 category: Video Automation

@@ -1,6 +1,7 @@
 ---
 name: Munch
 slug: munch
+created_at: "2026-11-06"
 tagline: Transform long-form content into viral social media clips using AI-driven
   context analysis.
 category: AI Video Automation

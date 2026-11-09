@@ -1,6 +1,7 @@
 ---
 name: ElevenLabs
 slug: elevenlabs
+created_at: "2026-10-22"
 tagline: The all-in-one generative audio platform powering ElevenCreative, ElevenAgents, and ElevenAPI.
 category: AI Voice & Audio Generation
 rating: 4.9

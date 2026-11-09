@@ -1,6 +1,7 @@
 ---
 name: Lusha
 slug: lusha
+created_at: "2026-10-23"
 tagline: B2B sales intelligence and contact enrichment platform for finding direct
   dials and verified emails.
 category: B2B Sales Intelligence

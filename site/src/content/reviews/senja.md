@@ -1,6 +1,7 @@
 ---
 name: Senja
 slug: senja
+created_at: "2026-11-05"
 tagline: The fastest way to collect, manage, and share social proof.
 category: Marketing Automation & Social Proof
 rating: 4.8

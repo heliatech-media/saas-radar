@@ -1,6 +1,7 @@
 ---
 name: Printify
 slug: printify
+created_at: "2026-10-23"
 tagline: A robust print-on-demand platform connecting e-commerce stores with a global
   network of print providers.
 category: Print on Demand

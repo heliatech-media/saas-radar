@@ -1,6 +1,7 @@
 ---
 name: Podia
 slug: podia
+created_at: "2026-10-25"
 tagline: All-in-one digital storefront to sell online courses, downloads, webinars,
   and memberships.
 category: Creator Economy & Digital Products

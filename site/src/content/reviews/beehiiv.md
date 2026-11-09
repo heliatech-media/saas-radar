@@ -1,6 +1,7 @@
 ---
 name: Beehiiv
 slug: beehiiv
+created_at: "2026-10-23"
 tagline: The newsletter platform built by newsletter operators to scale, monetize,
   and grow audiences efficiently.
 category: Newsletters

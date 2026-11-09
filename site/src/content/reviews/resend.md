@@ -1,6 +1,7 @@
 ---
 name: Resend
 slug: resend
+created_at: "2026-10-25"
 tagline: Modern email infrastructure designed for developers, not marketers.
 category: DevTools
 rating: 4.8

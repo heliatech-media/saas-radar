@@ -1,6 +1,7 @@
 ---
 name: Notion AI
 slug: notion-ai
+created_at: "2026-10-22"
 tagline: Embed generative intelligence directly into your workspace notes, databases,
   and documents.
 category: AI Productivity & Workspace

@@ -1,6 +1,7 @@
 ---
 name: Framer
 slug: framer
+created_at: "2026-10-23"
 tagline: Design and publish stunning, production-ready responsive websites with the
   power of a canvas and React under the hood.
 category: Design and Web Development

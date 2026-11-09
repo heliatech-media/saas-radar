@@ -2300,8 +2300,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           const valB = (b.type || '').toLowerCase();
           return valA.localeCompare(valB) * dir;
         } else if (col === 'created_at') {
-          const valA = a.created_at || (a.last_audited_at ? a.last_audited_at.substring(0, 10) : '1970-01-01');
-          const valB = b.created_at || (b.last_audited_at ? b.last_audited_at.substring(0, 10) : '1970-01-01');
+          const valA = a.created_at || '1970-01-01';
+          const valB = b.created_at || '1970-01-01';
           return valA.localeCompare(valB) * dir;
         } else if (col === 'views') {
           const valA = a.views !== undefined && a.views !== null ? Number(a.views) : 0;
@@ -2350,7 +2350,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         const status = item.audit_status;
         const tcoScore = item.tco_accuracy_score;
         const evidenceCount = item.evidence_count;
-        const createdAt = item.created_at || (item.last_audited_at ? item.last_audited_at.substring(0, 10) : '2026-10-23');
+        const createdAt = item.created_at || '2026-10-22';
         const viewsCount = item.views !== undefined && item.views !== null ? Number(item.views) : 0;
 
         const isQueued = status === 'AUDIT_QUEUED';

@@ -1,6 +1,7 @@
 ---
 name: HeyGen
 slug: heygen
+created_at: "2026-10-22"
 tagline: AI-powered video generation platform for creating hyper-realistic talking
   avatar videos at scale.
 category: AI Video & Content Creation

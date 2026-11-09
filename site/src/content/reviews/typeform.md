@@ -1,6 +1,7 @@
 ---
 name: Typeform
 slug: typeform
+created_at: "2026-10-24"
 tagline: Transform digital data collection with human-centric, conversational forms
   and surveys.
 category: Marketing

@@ -1,6 +1,7 @@
 ---
 name: Vercel
 slug: vercel
+created_at: "2026-10-23"
 tagline: The frontend cloud for high-performance developer workflows, instant preview
   deployments, and scalable Jamstack web applications.
 category: DevTools

@@ -1,6 +1,7 @@
 ---
 name: Riverside
 slug: riverside
+created_at: "2026-10-24"
 tagline: Studio-quality remote video and audio recording from anywhere in the world.
 category: Audio/Podcasting
 rating: 4.6

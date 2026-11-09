@@ -1,6 +1,7 @@
 ---
 name: Screen Studio
 slug: screen-studio
+created_at: "2026-11-01"
 tagline: Professional screen recordings with automatic zooms and cursor smoothing.
 category: AI Video
 rating: 4.9

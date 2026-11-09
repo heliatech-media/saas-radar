@@ -1,6 +1,7 @@
 ---
 name: Jasper AI
 slug: jasper-ai
+created_at: "2026-10-24"
 tagline: An AI-powered content creation platform built specifically for enterprise
   marketing teams to scale campaigns.
 category: AI Writing

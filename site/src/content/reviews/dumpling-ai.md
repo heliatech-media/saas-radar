@@ -1,6 +1,7 @@
 ---
 name: Dumpling AI
 slug: dumpling-ai
+created_at: "2026-10-28"
 tagline: Turn long-form video into high-converting, bite-sized social clips with AI-powered
   multi-format reframing.
 category: AI Video

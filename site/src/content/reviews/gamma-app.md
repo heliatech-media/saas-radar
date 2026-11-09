@@ -1,6 +1,7 @@
 ---
 name: Gamma
 slug: gamma-app
+created_at: "2026-11-05"
 tagline: A new medium for presenting ideas, powered by AI.
 category: AI Presentation & Design
 rating: 4.7

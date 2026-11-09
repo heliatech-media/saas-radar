@@ -1,6 +1,7 @@
 ---
 name: Submagic
 slug: submagic
+created_at: "2026-10-24"
 tagline: AI-powered video captioning and editing tool that transforms raw footage
   into viral short-form clips in minutes.
 category: AI Video

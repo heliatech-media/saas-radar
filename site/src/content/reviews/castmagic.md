@@ -1,6 +1,7 @@
 ---
 name: Castmagic
 slug: castmagic
+created_at: "2026-10-24"
 tagline: Turn long-form audio and video recordings into show notes, blog posts, and
   social clips instantly with AI.
 category: Audio/Podcasting

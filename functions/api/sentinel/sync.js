@@ -39,12 +39,22 @@ async function handleSync(context) {
     const nowIso = new Date().toISOString();
     const actorEmail = context.request.headers.get("Cf-Access-Authenticated-User-Email") || "owner@heliatech.online";
 
-    // 1. Ingestion Content Inventory (168 rows)
+    // 1. Ingestion Content Inventory (168 rows) - ON CONFLICT préserve strictement created_at et views
     const contentStmts = SEED_CONTENT.map(c => 
       db.prepare(`
-        INSERT OR REPLACE INTO content_inventory 
+        INSERT INTO content_inventory 
         (slug, type, title, category, word_count, evidence_count, tco_accuracy_score, audit_status, last_audited_at, verified_by)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'SoftwareAnalyst')
+        ON CONFLICT(slug) DO UPDATE SET
+          type = excluded.type,
+          title = excluded.title,
+          category = excluded.category,
+          word_count = excluded.word_count,
+          evidence_count = excluded.evidence_count,
+          tco_accuracy_score = excluded.tco_accuracy_score,
+          audit_status = excluded.audit_status,
+          last_audited_at = excluded.last_audited_at,
+          verified_by = excluded.verified_by
       `).bind(c.slug, c.type, c.title, c.category, c.word_count, c.evidence_count, c.tco_accuracy_score, c.audit_status, nowIso)
     );
 

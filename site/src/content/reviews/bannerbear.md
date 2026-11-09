@@ -1,6 +1,7 @@
 ---
 name: Bannerbear
 slug: bannerbear
+created_at: "2026-11-05"
 tagline: Automate your marketing collateral with an API-first image and video generation
   engine.
 category: Automation

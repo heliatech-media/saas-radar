@@ -1,6 +1,7 @@
 ---
 name: InVideo AI
 slug: invideo-ai
+created_at: "2026-11-09"
 tagline: Turn simple text prompts into fully produced, publish-ready videos complete
   with script, voiceover, and stock footage.
 category: AI Video

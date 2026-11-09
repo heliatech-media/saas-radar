@@ -1,6 +1,7 @@
 ---
 name: Fathom
 slug: fathom
+created_at: "2026-11-04"
 tagline: AI-powered meeting assistant that records, transcribes, highlights, and summarizes
   your calls for free.
 category: Audio/Podcasting

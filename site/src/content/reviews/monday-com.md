@@ -1,6 +1,7 @@
 ---
 name: Monday.com
 slug: monday-com
+created_at: "2026-10-23"
 tagline: A customizable Work OS where teams build custom workflows, manage projects,
   and scale operations.
 category: Work OS & Project Management

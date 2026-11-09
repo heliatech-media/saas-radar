@@ -1,6 +1,7 @@
 ---
 name: Axiom.ai
 slug: axiom-ai
+created_at: "2026-11-05"
 tagline: Automate any browser-based task without writing a single line of code.
 category: Automation
 rating: 4.6

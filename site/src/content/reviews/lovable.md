@@ -1,6 +1,7 @@
 ---
 name: Lovable
 slug: lovable
+created_at: "2026-10-24"
 tagline: Build production-ready web applications by chatting with an AI engineer.
 category: AI Development
 rating: 4.6

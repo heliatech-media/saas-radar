@@ -1,6 +1,7 @@
 ---
 name: WATI
 slug: wati
+created_at: "2026-10-23"
 tagline: The official WhatsApp Business API platform built for customer support, marketing
   automation, and team collaboration.
 category: WhatsApp Business API & Customer Support Automation

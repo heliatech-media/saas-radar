@@ -1,6 +1,7 @@
 ---
 name: CapCut Pro
 slug: capcut-pro
+created_at: "2026-11-08"
 tagline: A powerful, AI-driven video editor designed to accelerate content creation
   for modern creators and marketing teams.
 category: AI Video & Content Creation

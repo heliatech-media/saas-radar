@@ -1,6 +1,7 @@
 ---
 name: Cursor
 slug: cursor
+created_at: "2026-10-22"
 tagline: The AI-first code editor built for maximum engineering velocity and deep
   codebase understanding.
 category: AI & Developer Tools

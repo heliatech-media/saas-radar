@@ -1,6 +1,7 @@
 ---
 name: TypingMind
 slug: typing-mind
+created_at: "2026-11-05"
 tagline: A powerful, privacy-focused UI wrapper for LLMs that turns chaotic AI chats
   into a structured workspace.
 category: AI Productivity

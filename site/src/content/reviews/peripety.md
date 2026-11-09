@@ -1,6 +1,7 @@
 ---
 name: Peripety
 slug: peripety
+created_at: "2026-10-25"
 tagline: Autonomous AI video generation and cinematic synthetic production for enterprise
   marketing teams.
 category: AI Video

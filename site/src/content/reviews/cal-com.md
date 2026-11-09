@@ -1,6 +1,7 @@
 ---
 name: Cal.com
 slug: cal-com
+created_at: "2026-11-01"
 tagline: The open-source infrastructure for scheduling meetings at scale
 category: Automation
 rating: 4.7

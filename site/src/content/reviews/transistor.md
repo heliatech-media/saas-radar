@@ -1,6 +1,7 @@
 ---
 name: Transistor
 slug: transistor
+created_at: "2026-10-25"
 tagline: Professional podcast hosting, analytics, and distribution platform built
   for serious creators and businesses.
 category: Audio/Podcasting

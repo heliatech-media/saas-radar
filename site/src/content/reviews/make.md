@@ -1,6 +1,7 @@
 ---
 name: Make
 slug: make
+created_at: "2026-10-22"
 tagline: Design, build, and automate anything from simple tasks to complex workflows
   without coding.
 category: AI Automation & No-Code

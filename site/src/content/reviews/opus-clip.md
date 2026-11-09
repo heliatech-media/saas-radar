@@ -1,6 +1,7 @@
 ---
 name: Opus Clip
 slug: opus-clip
+created_at: "2026-10-25"
 tagline: Turn long-form videos into viral short-form clips with generative AI in one
   click.
 category: AI Video

@@ -1,6 +1,7 @@
 ---
 name: Tally
 slug: tally
+created_at: "2026-10-26"
 tagline: The simplest, most powerful notion-style form builder for modern teams.
 category: Productivity & Forms
 rating: 4.8

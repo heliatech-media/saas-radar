@@ -1,6 +1,7 @@
 ---
 name: Captions
 slug: captions
+created_at: "2026-11-02"
 tagline: An AI-powered video editor designed to create, edit, and translate professional
   talking-head videos with a single tap.
 category: AI Video

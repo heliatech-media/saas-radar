@@ -1,6 +1,7 @@
 ---
 name: Tome
 slug: tome
+created_at: "2026-10-26"
 tagline: AI-powered storytelling and presentation format that builds narrative decks
   in seconds.
 category: AI Video & Presentation

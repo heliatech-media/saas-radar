@@ -1,6 +1,7 @@
 ---
 name: Minicong
 slug: minicong
+created_at: "2026-10-28"
 tagline: Autonomous AI video generation and localization pipeline for enterprise growth
   teams
 category: AI Video

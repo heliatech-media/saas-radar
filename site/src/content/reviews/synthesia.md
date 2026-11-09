@@ -1,6 +1,7 @@
 ---
 name: Synthesia
 slug: synthesia
+created_at: "2026-11-05"
 tagline: Turn text into professional AI videos with human-like avatars and multilingual
   voiceovers in minutes.
 category: AI Video

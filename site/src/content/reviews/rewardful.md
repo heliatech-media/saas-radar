@@ -1,6 +1,7 @@
 ---
 name: Rewardful
 slug: rewardful
+created_at: "2026-10-24"
 tagline: The all-in-one affiliate and referral management software built natively for Stripe SaaS companies.
 category: Growth & Affiliate Infrastructure
 rating: 4.9

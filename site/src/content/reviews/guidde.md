@@ -1,6 +1,7 @@
 ---
 name: Guidde
 slug: guidde
+created_at: "2026-11-05"
 tagline: Create professional video documentation and how-to guides in seconds using
   AI.
 category: AI Video & Documentation

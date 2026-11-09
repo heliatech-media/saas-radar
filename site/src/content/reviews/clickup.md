@@ -1,6 +1,7 @@
 ---
 name: ClickUp
 slug: clickup
+created_at: "2026-10-23"
 tagline: The one app to replace them all with customizable tasks, docs, goals, and
   chat.
 category: Productivity & Workspace OS

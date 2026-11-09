@@ -1,6 +1,7 @@
 ---
 name: Klap
 slug: klap
+created_at: "2026-10-27"
 tagline: Turn long-form videos into viral short-form clips with AI in seconds.
 category: AI Video
 rating: 4.6

@@ -1,6 +1,7 @@
 ---
 name: Brevo
 slug: brevo
+created_at: "2026-10-23"
 tagline: All-in-one digital marketing platform built around transactional email and
   robust CRM capabilities.
 category: Marketing Automation & CRM

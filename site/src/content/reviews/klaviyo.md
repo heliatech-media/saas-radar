@@ -1,6 +1,7 @@
 ---
 name: Klaviyo
 slug: klaviyo
+created_at: "2026-10-30"
 tagline: Data-driven marketing automation platform built specifically for e-commerce
   brands.
 category: Marketing Automation

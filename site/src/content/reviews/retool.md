@@ -1,6 +1,7 @@
 ---
 name: Retool
 slug: retool
+created_at: "2026-10-22"
 tagline: Next-generation AI Automation & No-Code platform built for modern scaling
   teams.
 category: AI Automation & No-Code

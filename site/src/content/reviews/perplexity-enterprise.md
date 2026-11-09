@@ -1,6 +1,7 @@
 ---
 name: Perplexity Enterprise
 slug: perplexity-enterprise
+created_at: "2026-11-06"
 tagline: An enterprise-grade conversational AI search engine designed for rapid, citation-backed
   research and market intelligence.
 category: AI Research & Productivity

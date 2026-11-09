@@ -1,6 +1,7 @@
 ---
 name: Fliki
 slug: fliki-ai
+created_at: "2026-11-05"
 tagline: Transform text into high-quality videos with AI voices in minutes.
 category: AI Video & Audio
 rating: 4.5

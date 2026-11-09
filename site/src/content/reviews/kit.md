@@ -1,6 +1,7 @@
 ---
 name: Kit
 slug: kit
+created_at: "2026-10-31"
 tagline: The creator-first email marketing platform built to scale newsletters and
   digital product sales.
 category: Creator SaaS & Newsletters

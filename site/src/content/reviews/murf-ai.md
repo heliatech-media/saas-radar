@@ -1,6 +1,7 @@
 ---
 name: Murf.ai
 slug: murf-ai
+created_at: "2026-11-01"
 tagline: Transform text into studio-quality voiceovers with human-like AI voices in
   minutes.
 category: AI Audio/Voiceover

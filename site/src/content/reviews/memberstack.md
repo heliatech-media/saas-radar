@@ -1,6 +1,7 @@
 ---
 name: Memberstack
 slug: memberstack
+created_at: "2026-10-29"
 tagline: The ultimate user authentication and membership management platform for Webflow,
   HTML, and custom websites.
 category: B2B SaaS / Creator Tools

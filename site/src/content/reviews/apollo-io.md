@@ -1,6 +1,7 @@
 ---
 name: Apollo.io
 slug: apollo-io
+created_at: "2026-10-23"
 tagline: The all-in-one B2B sales intelligence and engagement platform to find, contact,
   and close your ideal buyers.
 category: Marketing & Sales Intelligence

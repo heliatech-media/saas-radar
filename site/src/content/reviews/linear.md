@@ -1,6 +1,7 @@
 ---
 name: Linear
 slug: linear
+created_at: "2026-10-23"
 tagline: The issue tracking tool designed for high-performance software engineering
   teams.
 category: DevTools

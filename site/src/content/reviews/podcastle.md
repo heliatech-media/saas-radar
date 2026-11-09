@@ -1,6 +1,7 @@
 ---
 name: Podcastle
 slug: podcastle
+created_at: "2026-10-25"
 tagline: AI-powered creation suite for studio-quality podcasting, recording, and editing.
 category: Audio/Podcasting
 rating: 4.5

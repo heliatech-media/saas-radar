@@ -1,6 +1,7 @@
 ---
 name: PartnerStack
 slug: partnerstack
+created_at: "2026-10-23"
 tagline: The complete partnership ecosystem to scale SaaS revenue through affiliates,
   resellers, and referral partners.
 category: B2B Partner Ecosystem

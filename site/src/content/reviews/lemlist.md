@@ -1,6 +1,7 @@
 ---
 name: Lemlist
 slug: lemlist
+created_at: "2026-10-23"
 tagline: Personalized cold email software with custom image and video automation to
   boost reply rates.
 category: Marketing

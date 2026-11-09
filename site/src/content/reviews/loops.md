@@ -1,6 +1,7 @@
 ---
 name: Loops
 slug: loops
+created_at: "2026-11-09"
 tagline: Modern email marketing automation built for SaaS companies.
 category: Email Marketing
 rating: 4.7

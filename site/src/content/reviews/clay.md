@@ -1,6 +1,7 @@
 ---
 name: Clay
 slug: clay
+created_at: "2026-11-04"
 tagline: The data-driven outbound platform that turns manual research into automated,
   personalized outreach.
 category: B2B Sales Automation

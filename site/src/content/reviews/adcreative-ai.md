@@ -1,6 +1,7 @@
 ---
 name: AdCreative.ai
 slug: adcreative-ai
+created_at: "2026-10-23"
 tagline: Data-driven AI creative generation platform that scales ad spend performance
   instantly
 category: AI Advertising

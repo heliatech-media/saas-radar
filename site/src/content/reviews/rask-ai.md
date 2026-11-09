@@ -1,6 +1,7 @@
 ---
 name: Rask AI
 slug: rask-ai
+created_at: "2026-11-05"
 tagline: Automated video localization and dubbing for global content scaling.
 category: AI Video
 rating: 4.6

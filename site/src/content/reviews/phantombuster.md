@@ -1,6 +1,7 @@
 ---
 name: PhantomBuster
 slug: phantombuster
+created_at: "2026-10-23"
 tagline: The code-free automation and data extraction platform to scale your B2B lead
   generation.
 category: Automation

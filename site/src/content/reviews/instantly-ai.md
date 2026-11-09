@@ -1,6 +1,7 @@
 ---
 name: Instantly.ai
 slug: instantly-ai
+created_at: "2026-11-04"
 tagline: Scale your cold email outreach with unlimited accounts and automated warmups.
 category: Sales Automation
 rating: 4.8

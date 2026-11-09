@@ -1,6 +1,7 @@
 ---
 name: Descript
 slug: descript
+created_at: "2026-10-25"
 tagline: The all-in-one audio and video editor that works like a word processor.
 category: Audio/Podcasting
 rating: 4.6

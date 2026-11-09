@@ -1,6 +1,7 @@
 ---
 name: Minvo
 slug: minvo
+created_at: "2026-11-07"
 tagline: Turn long-form video into viral clips instantly using AI-powered automation
 category: AI Video
 rating: 4.6

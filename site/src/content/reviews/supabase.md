@@ -1,6 +1,7 @@
 ---
 name: Supabase
 slug: supabase
+created_at: "2026-10-23"
 tagline: The open source Firebase alternative providing all the backend features you
   need to build a product.
 category: DevTools

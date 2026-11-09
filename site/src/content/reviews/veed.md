@@ -1,6 +1,7 @@
 ---
 name: VEED
 slug: veed
+created_at: "2026-10-26"
 tagline: The browser-based AI video suite built for fast-moving marketing teams and
   creators
 category: AI Video

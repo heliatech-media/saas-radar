@@ -19,6 +19,7 @@ import os
 import sys
 import json
 import re
+import subprocess
 from pathlib import Path
 from datetime import datetime, timezone
 from dotenv import load_dotenv
@@ -105,6 +106,25 @@ def sync_all():
         except Exception:
             pass
 
+    def get_creation_date(p, fm):
+        # 1. Frontmatter explicit created_at or date (immutable source of truth)
+        d = fm.get("created_at") or fm.get("date")
+        if d:
+            return str(d)[:10]
+        # 2. Git log first addition date
+        try:
+            res = subprocess.run(
+                ['git', 'log', '--diff-filter=A', '--format=%cs', '-n', '1', '--', str(p.relative_to(ROOT_DIR))],
+                capture_output=True, text=True, check=True
+            )
+            git_d = res.stdout.strip()
+            if git_d:
+                return git_d
+        except Exception:
+            pass
+        # 3. Fallback to mtime for untracked new files
+        return datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%d")
+
     for p in reviews_paths:
         slug = p.stem
         raw = p.read_text(encoding="utf-8")
@@ -115,9 +135,7 @@ def sync_all():
         links = re.findall(r'https?://[^\s\)\"\\]+', raw)
         ev_count = max(len(links), 4)
 
-        created_at = fm.get("date") or fm.get("created_at") or fm.get("last_updated")
-        if not created_at:
-            created_at = datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%d")
+        created_at = get_creation_date(p, fm)
 
         path_key = f"reviews/{slug}"
         views = top_pages.get(path_key, (abs(hash(slug)) % 480) + 120)
@@ -147,9 +165,7 @@ def sync_all():
         links = re.findall(r'https?://[^\s\)\"\\]+', raw)
         ev_count = max(len(links), 4)
 
-        created_at = fm.get("date") or fm.get("created_at")
-        if not created_at:
-            created_at = datetime.fromtimestamp(p.stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%d")
+        created_at = get_creation_date(p, fm)
 
         path_key = f"blog/{slug}"
         views = top_pages.get(path_key, (abs(hash(slug)) % 520) + 160)
@@ -175,15 +191,25 @@ def sync_all():
         escaped_title = row["title"].replace("'", "''")
         escaped_cat = row["category"].replace("'", "''")
         sql = (
-            f"INSERT OR REPLACE INTO content_inventory "
+            f"INSERT INTO content_inventory "
             f"(slug, type, title, category, word_count, evidence_count, tco_accuracy_score, audit_status, last_audited_at, verified_by, created_at, views) "
             f"VALUES ('{row['slug']}', '{row['type']}', '{escaped_title}', '{escaped_cat}', {row['word_count']}, "
-            f"{row['evidence_count']}, {row['tco_accuracy_score']}, '{row['audit_status']}', '{row['last_audited_at']}', '{row['verified_by']}', '{row['created_at']}', {row['views']});"
+            f"{row['evidence_count']}, {row['tco_accuracy_score']}, '{row['audit_status']}', '{row['last_audited_at']}', '{row['verified_by']}', '{row['created_at']}', {row['views']}) "
+            f"ON CONFLICT(slug) DO UPDATE SET "
+            f"type = excluded.type, title = excluded.title, category = excluded.category, word_count = excluded.word_count, "
+            f"evidence_count = excluded.evidence_count, tco_accuracy_score = excluded.tco_accuracy_score, "
+            f"audit_status = excluded.audit_status, last_audited_at = excluded.last_audited_at, verified_by = excluded.verified_by, "
+            f"views = excluded.views, created_at = excluded.created_at;"
         )
         sql_statements.append(sql)
         d1.execute(
-            "INSERT OR REPLACE INTO content_inventory (slug, type, title, category, word_count, evidence_count, tco_accuracy_score, audit_status, last_audited_at, verified_by, created_at, views) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO content_inventory (slug, type, title, category, word_count, evidence_count, tco_accuracy_score, audit_status, last_audited_at, verified_by, created_at, views) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
+            "ON CONFLICT(slug) DO UPDATE SET "
+            "type = excluded.type, title = excluded.title, category = excluded.category, word_count = excluded.word_count, "
+            "evidence_count = excluded.evidence_count, tco_accuracy_score = excluded.tco_accuracy_score, "
+            "audit_status = excluded.audit_status, last_audited_at = excluded.last_audited_at, verified_by = excluded.verified_by, "
+            "views = excluded.views, created_at = excluded.created_at",
             [row["slug"], row["type"], row["title"], row["category"], row["word_count"], row["evidence_count"], row["tco_accuracy_score"], row["audit_status"], row["last_audited_at"], row["verified_by"], row["created_at"], row["views"]]
         )
 

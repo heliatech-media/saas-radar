@@ -1,6 +1,7 @@
 ---
 name: ScreenClip
 slug: screenclip
+created_at: "2026-11-05"
 tagline: The fastest way to capture, annotate, and share screen recordings and screenshots
   for professional teams.
 category: AI Video/Screen Recording

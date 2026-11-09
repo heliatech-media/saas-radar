@@ -1,6 +1,7 @@
 ---
 name: Julius AI
 slug: julius-ai
+created_at: "2026-10-29"
 tagline: Your intelligent data analyst that writes code, builds visualizations, and
   uncovers insights from any dataset instantly.
 category: AI Data Analysis
