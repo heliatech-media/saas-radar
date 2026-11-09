@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T20:14:01.577968",
+  "last_synced": "2026-11-09T20:34:20.747532",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26568,
-  "total_requests": 140345,
-  "total_visits": 8236,
-  "total_pageviews": 31602,
+  "total_visitors_network": 26585,
+  "total_requests": 140475,
+  "total_visits": 8241,
+  "total_pageviews": 31619,
   "percent_cached": "56.14%",
-  "data_served_mb": 1375.5,
+  "data_served_mb": 1377.5,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/",
-      "views": 3520
+      "views": 3530
     },
     {
       "path": "/calculator/",
@@ -51,11 +51,11 @@
       "views": 290
     },
     {
-      "path": "/versus/",
+      "path": "/awards/",
       "views": 280
     },
     {
-      "path": "/awards/",
+      "path": "/versus/",
       "views": 280
     },
     {
@@ -67,18 +67,18 @@
       "views": 220
     },
     {
-      "path": "/blog/retool/",
+      "path": "/deals/",
       "views": 210
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 28120
+      "views": 28130
     },
     {
       "country": "Morocco",
-      "views": 18920
+      "views": 18940
     },
     {
       "country": "Germany",
