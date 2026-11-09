@@ -1,41 +1,49 @@
 {
-  "last_synced": "2026-11-09T14:44:22.110831",
+  "last_synced": "2026-11-09T18:02:58.874022",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26345,
-  "total_requests": 139487,
-  "total_visits": 8166,
-  "total_pageviews": 31207,
+  "total_visitors_network": 26472,
+  "total_requests": 139881,
+  "total_visits": 8206,
+  "total_pageviews": 31406,
   "percent_cached": "56.14%",
-  "data_served_mb": 1351.7,
+  "data_served_mb": 1364.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6250
+      "views": 6570
     },
     {
       "path": "/",
-      "views": 3720
+      "views": 3520
     },
     {
       "path": "/calculator/",
-      "views": 1310
+      "views": 1450
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1140
+      "views": 1190
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
       "views": 820
     },
     {
-      "path": "/blog/julius-ai-evolution-guide-2026/",
-      "views": 320
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 330
     },
     {
-      "path": "/blog/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 310
+    },
+    {
+      "path": "/blog/julius-ai-evolution-guide-2026/",
+      "views": 310
+    },
+    {
+      "path": "/radar/",
       "views": 290
     },
     {
@@ -43,74 +51,66 @@
       "views": 290
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 290
+      "path": "/awards/",
+      "views": 280
     },
     {
-      "path": "/radar/",
+      "path": "/versus/",
+      "views": 280
+    },
+    {
+      "path": "/blog/",
       "views": 270
     },
     {
-      "path": "/awards/",
-      "views": 240
+      "path": "/reviews/make/",
+      "views": 220
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 240
-    },
-    {
-      "path": "/deals/",
-      "views": 230
-    },
-    {
-      "path": "/reviews/clickup/",
-      "views": 230
-    },
-    {
-      "path": "/terms/",
-      "views": 230
+      "path": "/blog/retool/",
+      "views": 210
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 27000
+      "views": 27900
     },
     {
       "country": "Morocco",
-      "views": 20150
+      "views": 18880
     },
     {
       "country": "Germany",
-      "views": 1960
+      "views": 1980
     },
     {
       "country": "Singapore",
-      "views": 1760
+      "views": 1720
     },
     {
       "country": "Brazil",
-      "views": 720
-    },
-    {
-      "country": "Belgium",
-      "views": 710
+      "views": 690
     },
     {
       "country": "United Kingdom",
-      "views": 680
+      "views": 670
     },
     {
-      "country": "France",
-      "views": 580
-    },
-    {
-      "country": "CN",
-      "views": 520
+      "country": "Belgium",
+      "views": 650
     },
     {
       "country": "Canada",
-      "views": 490
+      "views": 640
+    },
+    {
+      "country": "Netherlands",
+      "views": 560
+    },
+    {
+      "country": "France",
+      "views": 520
     }
   ],
   "top_referrers": [
