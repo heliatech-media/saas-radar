@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T01:26:01.117294",
+  "last_synced": "2026-11-09T01:36:06.803930",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 24858,
-  "total_requests": 135615,
-  "total_visits": 7705,
-  "total_pageviews": 29788,
+  "total_visitors_network": 25055,
+  "total_requests": 135874,
+  "total_visits": 7767,
+  "total_pageviews": 29893,
   "percent_cached": "56.14%",
-  "data_served_mb": 1263.3,
+  "data_served_mb": 1268.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,7 +16,7 @@
     },
     {
       "path": "/",
-      "views": 3470
+      "views": 3480
     },
     {
       "path": "/calculator/",
@@ -43,12 +43,12 @@
       "views": 290
     },
     {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "path": "/radar/",
       "views": 290
     },
     {
-      "path": "/radar/",
-      "views": 280
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 290
     },
     {
       "path": "/awards/",
@@ -60,7 +60,7 @@
     },
     {
       "path": "/versus/",
-      "views": 240
+      "views": 250
     },
     {
       "path": "/deals/",
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 26800
+      "views": 26830
     },
     {
       "country": "Morocco",
-      "views": 18800
+      "views": 18810
     },
     {
       "country": "Singapore",
@@ -86,23 +86,23 @@
     },
     {
       "country": "Germany",
-      "views": 1370
+      "views": 1480
     },
     {
       "country": "Belgium",
       "views": 650
     },
     {
-      "country": "United Kingdom",
+      "country": "Brazil",
       "views": 640
     },
     {
-      "country": "Brazil",
-      "views": 630
+      "country": "Canada",
+      "views": 640
     },
     {
-      "country": "Canada",
-      "views": 620
+      "country": "United Kingdom",
+      "views": 640
     },
     {
       "country": "Netherlands",
