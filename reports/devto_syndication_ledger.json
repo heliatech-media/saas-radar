@@ -811,6 +811,32 @@
       "url": "https://dev.to/best-descript-alternatives-2026",
       "canonical_url": "https://heliatech.online/blog/best-descript-alternatives-2026",
       "status": "already_published"
+    },
+    "apollo-io-vs-zoominfo": {
+      "id": 5001693,
+      "url": "https://dev.to/heliatech/apolloio-vs-zoominfo-2026-modern-growth-stack-vs-legacy-15000-enterprise-database-2h6m",
+      "title": "Apollo.io vs ZoomInfo (2026): Modern Growth Stack vs Legacy $15,000 Enterprise Database",
+      "canonical_url": "https://heliatech.online/blog/apollo-io-vs-zoominfo",
+      "published": true,
+      "tags": [
+        "apolloio",
+        "zoominfo",
+        "apolloiovszoominfo",
+        "comparison"
+      ]
+    },
+    "cursor-vs-lovable": {
+      "id": 5005006,
+      "url": "https://dev.to/heliatech/cursor-vs-lovable-2026-professional-ide-engineering-vs-autonomous-full-stack-app-generation-12id",
+      "title": "Cursor vs Lovable (2026): Professional IDE Engineering vs Autonomous Full-Stack App Generation",
+      "canonical_url": "https://heliatech.online/blog/cursor-vs-lovable",
+      "published": true,
+      "tags": [
+        "cursor",
+        "lovable",
+        "cursorvslovable",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

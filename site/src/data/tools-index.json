@@ -249,6 +249,17 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "InVideo AI",
+    "slug": "invideo-ai",
+    "tagline": "Turn simple text prompts into fully produced, publish-ready videos complete with script, voiceover, and stock footage.",
+    "category": "AI Video",
+    "rating": 4.6,
+    "starting_price": "$25/mo",
+    "best_for": "Content creators, digital marketers, and agencies scaling YouTube Shorts, TikToks, and explainer content.",
+    "affiliate_url": "https://invideo.io/?fpr=heliatech",
+    "commission_rate": "25% to 50% recurring commission on paid plans"
+  },
+  {
     "name": "Instantly.ai",
     "slug": "instantly-ai",
     "tagline": "Scale your cold email outreach with unlimited accounts and automated warmups.",
@@ -333,6 +344,16 @@
     "best_for": "Fast-moving engineering teams, startups, and product-focused tech companies",
     "affiliate_url": "https://linear.app/?via=heliatech",
     "commission_rate": "Not publicly disclosed or official affiliate program not currently open"
+  },
+  {
+    "name": "Loops",
+    "slug": "loops",
+    "tagline": "Modern email marketing automation built for SaaS companies.",
+    "category": "Email Marketing",
+    "rating": 4.7,
+    "starting_price": "$49/mo",
+    "best_for": "SaaS founders, product managers, and growth marketers who need behavior-based automation without the bloat of legacy ESPs.",
+    "affiliate_url": "https://loops.so"
   },
   {
     "name": "Lovable",

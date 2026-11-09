@@ -47,10 +47,10 @@ Before diving into the forensic mechanics, let us establish the bottom line for 
 
 | Empirical Criteria | Tool A: Cursor | Tool B: Lovable |
 | :--- | :--- | :--- |
-| **Core Architecture** | VS Code-forked desktop IDE with deep multi-model orchestration, codebase vector embeddings, and terminal access. | Browser-based autonomous full-stack code synthesis engine with integrated live preview, Supabase backend, and Vite/React runtime. |
+| **Core Architecture** | VS Code-forked desktop IDE with deep multi-model orchestration, codebase vector embeddings, and terminal access. | Browser-based autonomous full-stack code synthesis engine with integrated live preview, [Supabase](/reviews/supabase) backend, and Vite/React runtime. |
 | **Pricing at Scale** | Flat-rate subscription tiers ($20/mo Pro, custom enterprise) with usage-based rate limits for frontier models. | Usage-based credit tiers scaling with generation complexity, deployment frequency, and concurrent build pipelines. |
 | **Learning Curve** | Low to Moderate for VS Code veterans; steep for teams transitioning from legacy IDEs like Xcode or Eclipse. | Near-Zero for non-technical builders; moderate for engineers accustomed to absolute Git-level control. |
-| **API & Webhooks** | Full local access to system environment, terminal commands, custom CLI tools, and direct git repositories. | Managed webhooks, automated Supabase schema migrations, and Git repository synchronization via GitHub apps. |
+| **API & Webhooks** | Full local access to system environment, terminal commands, custom CLI tools, and direct git repositories. | Managed webhooks, automated [Supabase](/reviews/supabase) schema migrations, and Git repository synchronization via GitHub apps. |
 | **Ecosystem & Extensibility** | Direct access to the entire VS Code Marketplace (millions of extensions, themes, and language servers). | Curated, sandboxed ecosystem optimized for rapid frontend-backend integration and UI component libraries. |
 | **Security & Compliance** | Enterprise Privacy Mode (zero-data retention options, SOC 2 Type II, HIPAA-ready setups for local models). | Managed cloud sandbox security, enterprise SSO options, and automated secret management for third-party APIs. |
 | **Best For** | Granular codebase surgery, refactoring legacy monoliths, and building complex, custom backend microservices. | Zero-to-one prototyping, internal tools, marketing micro-apps, and full-stack MVP validation. |
