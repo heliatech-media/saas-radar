@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T08:28:54.709344",
+  "last_synced": "2026-11-09T08:49:01.549439",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26034,
-  "total_requests": 138230,
-  "total_visits": 8070,
-  "total_pageviews": 30822,
+  "total_visitors_network": 26044,
+  "total_requests": 138245,
+  "total_visits": 8073,
+  "total_pageviews": 30829,
   "percent_cached": "56.14%",
-  "data_served_mb": 1327.7,
+  "data_served_mb": 1328.3,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -43,11 +43,11 @@
       "views": 300
     },
     {
-      "path": "/radar/",
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 290
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "path": "/radar/",
       "views": 290
     },
     {
