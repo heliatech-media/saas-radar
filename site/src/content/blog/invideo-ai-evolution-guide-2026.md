@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: invideo-ai
 image: /images/blog/invideo-ai.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free InVideo AI Account ➔
   url: /go/invideo-ai
 ---
-
 ---
 title: "InVideo AI Engineering Breakdown: Scaling Enterprise Video Production at 100k Unit Economics"
 description: "An adversarial technical audit of InVideo AI, evaluating task execution bottlenecks, generation latency, and autonomous workflow TCO under heavy production loads."

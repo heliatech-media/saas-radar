@@ -6,7 +6,7 @@ tagline: Turn simple text prompts into fully produced, publish-ready videos comp
 category: AI Video
 rating: 4.6
 website_url: https://invideo.io
-affiliate_url: https://invideo.io
+affiliate_url: "https://invideo.io/?fpr=heliatech"
 summary: InVideo AI leverages advanced generative models to synthesize text scripts,
   stock video clips, dynamic captions, and human-like AI voiceovers into cohesive
   video assets. It bridges the gap between raw idea and published content entirely

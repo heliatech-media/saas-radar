@@ -1,5 +1,5 @@
 # 🛰️ HELIATECH MONETIZED SOCIAL BROADCAST CALENDAR
-*Generated on 2026-11-09 03:44 • Strategy: 100% Monetized Assets Only*
+*Generated on 2026-11-09 14:44 • Strategy: 100% Monetized Assets Only*
 
 > [!NOTE]
 > Social distribution bandwidth is strictly reserved for high-converting partner tools with verified affiliate tracking URLs.
@@ -17,7 +17,7 @@
 | **Castmagic** | [`/go/castmagic`](https://heliatech.online/go/castmagic) | **100.0%** | `2026-11-16 09:15 UTC` | `2026-11-16 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Clickup** | [`/go/clickup`](https://heliatech.online/go/clickup) | **76.0%** | `2026-11-17 09:15 UTC` | `2026-11-17 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Cursor** | [`/go/cursor`](https://heliatech.online/go/cursor) | **80.0%** | `2026-11-18 09:15 UTC` | `2026-11-18 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Heygen** | [`/go/heygen`](https://heliatech.online/go/heygen) | **80.0%** | `2026-11-20 09:15 UTC` | `2026-11-20 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Heygen** | [`/go/heygen`](https://heliatech.online/go/heygen) | **76.0%** | `2026-11-20 09:15 UTC` | `2026-11-20 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Linear** | [`/go/linear`](https://heliatech.online/go/linear) | **100.0%** | `2026-11-21 09:15 UTC` | `2026-11-21 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Lusha** | [`/go/lusha`](https://heliatech.online/go/lusha) | **96.0%** | `2026-11-22 09:15 UTC` | `2026-11-22 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Memberstack** | [`/go/memberstack`](https://heliatech.online/go/memberstack) | **96.0%** | `2026-11-23 09:15 UTC` | `2026-11-23 14:30 UTC` | 🔒 `QUEUED_STANDBY` |

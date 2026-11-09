@@ -179,7 +179,8 @@ AFFILIATE_MAP = {
     "videoask": "https://www.videoask.com/?via=heliatech",
     "minvo": "https://minvo.pro/?via=heliatech",
     "capcut-pro": "https://capcut.pxf.io/heliatech",
-    "capcut": "https://capcut.pxf.io/heliatech"
+    "capcut": "https://capcut.pxf.io/heliatech",
+    "invideo-ai": "https://invideo.io/?fpr=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

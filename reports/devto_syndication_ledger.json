@@ -824,6 +824,19 @@
         "apolloiovszoominfo",
         "comparison"
       ]
+    },
+    "cursor-vs-lovable": {
+      "id": 5005006,
+      "url": "https://dev.to/heliatech/cursor-vs-lovable-2026-professional-ide-engineering-vs-autonomous-full-stack-app-generation-12id",
+      "title": "Cursor vs Lovable (2026): Professional IDE Engineering vs Autonomous Full-Stack App Generation",
+      "canonical_url": "https://heliatech.online/blog/cursor-vs-lovable",
+      "published": true,
+      "tags": [
+        "cursor",
+        "lovable",
+        "cursorvslovable",
+        "comparison"
+      ]
     }
   },
   "last_sync": null
