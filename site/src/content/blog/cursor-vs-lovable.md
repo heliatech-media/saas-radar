@@ -86,7 +86,7 @@ Furthermore, Cursor gives you absolute control over your environment. You have d
 
 Lovable approaches software development from the opposite vector. Instead of enhancing the editing experience within an IDE, Lovable eliminates the IDE for the initial creation phase. It operates as an autonomous, conversational full-stack synthesis engine.
 
-You input a natural language prompt describing an application—for example, *"Build a multi-tenant CRM with real-time analytics, Kanban boards, and role-based access control"*—and Lovable provisions a complete, running application in real-time. Under the hood, it orchestrates a Vite, React, Tailwind CSS, and TypeScript frontend, seamlessly wiring it to a managed backend (typically Supabase for database, auth, and edge functions).
+You input a natural language prompt describing an application—for example, *"Build a multi-tenant CRM with real-time analytics, Kanban boards, and role-based access control"*—and Lovable provisions a complete, running application in real-time. Under the hood, it orchestrates a Vite, React, Tailwind CSS, and TypeScript frontend, seamlessly wiring it to a managed backend (typically [Supabase](/reviews/supabase) for database, auth, and edge functions).
 
 ```
 [Natural Language Prompt] 

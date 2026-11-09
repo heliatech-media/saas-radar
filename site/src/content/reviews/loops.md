@@ -6,7 +6,7 @@ tagline: Modern email marketing automation built for SaaS companies.
 category: Email Marketing
 rating: 4.7
 website_url: https://loops.so
-affiliate_url: https://loops.so
+affiliate_url: "https://loops.so/?fp_ref=heliatech"
 summary: Loops is a developer-friendly email platform designed specifically for B2B
   SaaS. It focuses on product-led growth by enabling automated, behavior-based email
   sequences that feel like personal outreach.

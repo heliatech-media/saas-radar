@@ -1,254 +1,221 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <!-- Background & Base Gradients -->
+    <!-- Background Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#030712"/>
-      <stop offset="50%" stop-color="#070c1b"/>
+      <stop offset="50%" stop-color="#070b19"/>
       <stop offset="100%" stop-color="#020408"/>
     </linearGradient>
 
-    <!-- Glowing Orbs & Ambient Lights -->
-    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="fuchsiaGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Component Gradients -->
-    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Neon & Glow Gradients -->
+    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#06b6d4"/>
       <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
+
     <linearGradient id="violetFuchsiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8b5cf6"/>
       <stop offset="100%" stop-color="#d946ef"/>
     </linearGradient>
-    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
-    </linearGradient>
-    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.5"/>
+
+    <linearGradient id="nodeActiveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.2"/>
     </linearGradient>
 
-    <!-- Glow Filters -->
+    <!-- Radial Glows -->
+    <radialGradient id="ambientCyan" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="ambientViolet" cx="20%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters for High-End Glow & Glassmorphism -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
-    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+
+    <filter id="deepGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
-    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+
+    <filter id="glassBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="12"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
     </filter>
 
     <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
-      <circle cx="40" cy="40" r="1" fill="#ffffff" fill-opacity="0.08"/>
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.03"/>
+    </pattern>
+    <pattern id="dotsGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#38bdf8" fill-opacity="0.1"/>
     </pattern>
   </defs>
 
-  <!-- Background Layer -->
+  <!-- 1. Background Layer -->
   <rect width="1200" height="630" fill="url(#bgGrad)"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#cyberGrid)"/>
+  <rect width="1200" height="630" fill="url(#dotsGrid)"/>
 
-  <!-- Ambient Glow Orbs -->
-  <circle cx="150" cy="150" r="300" fill="url(#cyanGlow)"/>
-  <circle cx="1050" cy="450" r="350" fill="url(#fuchsiaGlow)"/>
-  <circle cx="650" cy="200" r="250" fill="url(#violetGlow)"/>
+  <!-- Ambient Lighting Effects -->
+  <rect width="1200" height="630" fill="url(#ambientCyan)" style="mix-blend-mode: screen;"/>
+  <rect width="1200" height="630" fill="url(#ambientViolet)" style="mix-blend-mode: screen;"/>
 
-  <!-- ================= BACKGROUND VECTOR INFRASTRUCTURE ================= -->
-  <g opacity="0.35" transform="translate(50, 0)">
-    <!-- Circuit lines connecting background -->
-    <path d="M 100 500 L 250 500 L 350 400 L 550 400" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6 4"/>
-    <path d="M 850 150 L 950 150 L 1050 250" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="4 4"/>
-    <circle cx="250" cy="500" r="4" fill="#06b6d4" filter="url(#glow-subtle)"/>
-    <circle cx="950" cy="150" r="4" fill="#d946ef" filter="url(#glow-subtle)"/>
+  <!-- Abstract Background Vector Lines (Data Streams) -->
+  <g opacity="0.3" filter="url(#glow)">
+    <path d="M -100 150 Q 300 50 600 250 T 1300 100" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="2"/>
+    <path d="M -100 400 Q 400 600 700 350 T 1300 500" fill="none" stroke="url(#violetFuchsiaGrad)" stroke-width="2"/>
   </g>
 
-  <!-- ================= RIGHT SIDE: 3D AI VIDEO / WAVEFORM METAPHOR ================= -->
-  <g transform="translate(640, 75)" filter="url(#drop-shadow)">
-    <!-- Holographic Container Panel -->
-    <rect x="0" y="0" width="500" height="480" rx="24" fill="url(#glassGrad)" stroke="url(#cardBorder)" stroke-width="1.5"/>
+  <!-- 2. Distinct Domain Metaphor: OpusClip AI Video / Neural Render Timeline & Workflow Engine -->
+  <g transform="translate(620, 80)">
+    <!-- Holographic 3D Container Backdrop -->
+    <rect x="0" y="0" width="530" height="470" rx="16" fill="#090d16" fill-opacity="0.75" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.5" filter="url(#glassBlur)"/>
     
-    <!-- Top Bar of Hologram -->
-    <path d="M 24 0 L 476 0 A 24 24 0 0 1 500 24 L 500 60 L 0 60 L 0 24 A 24 24 0 0 1 24 0 Z" fill="#030712" fill-opacity="0.6"/>
-    <line x1="0" y1="60" x2="500" y2="60" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
-    
-    <!-- Window Controls -->
-    <circle cx="36" cy="30" r="6" fill="#ef4444" fill-opacity="0.8"/>
-    <circle cx="56" cy="30" r="6" fill="#f59e0b" fill-opacity="0.8"/>
-    <circle cx="76" cy="30" r="6" fill="#10b981" fill-opacity="0.8"/>
-    <text x="250" y="35" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="600" letter-spacing="1.5" text-anchor="middle">OPUS_CLIP_NEURAL_ENGINE.v4</text>
+    <!-- Top Bar of IDE/Timeline UI -->
+    <path d="M 0 16 C 0 7.163 7.163 0 16 0 L 514 0 C 522.837 0 530 7.163 530 16 L 530 45 L 0 45 Z" fill="#0f172a" fill-opacity="0.9"/>
+    <circle cx="24" cy="22" r="5" fill="#f43f5e" opacity="0.8"/>
+    <circle cx="42" cy="22" r="5" fill="#fbbf24" opacity="0.8"/>
+    <circle cx="60" cy="22" r="5" fill="#34d399" opacity="0.8"/>
+    <text x="85" y="27" fill="#94a3b8" font-family="monospace" font-size="12" letter-spacing="1">OPUS_ENGINE // NEURAL_RENDER_v4.2</text>
 
-    <!-- Vector Neural Render Timeline / Sound Energy Envelopes -->
-    <!-- Track 1: Long-Form Ingestion Stream -->
-    <g transform="translate(30, 90)">
-      <rect x="0" y="0" width="440" height="60" rx="10" fill="#0f172a" fill-opacity="0.8" stroke="#38bdf8" stroke-opacity="0.3"/>
-      <text x="15" y="22" fill="#94a3b8" font-family="monospace" font-size="10" letter-spacing="1">SOURCE_STREAM // 01:42:15.00</text>
+    <!-- AI Video / Audio Waveform Processing Node Graphics -->
+    <!-- Sound Energy Envelopes & Vector Neural Render Timelines -->
+    <g transform="translate(30, 70)">
+      <!-- Timeline Track 1: Longform Source -->
+      <rect x="0" y="0" width="470" height="50" rx="8" fill="#1e293b" fill-opacity="0.4" stroke="#334155"/>
+      <text x="15" y="20" fill="#64748b" font-family="monospace" font-size="10">SOURCE_STREAM.MP4 [1080P_60FPS]</text>
       <!-- Waveform Bars -->
-      <g transform="translate(15, 32)" stroke-linecap="round" stroke-width="3">
-        <line x1="0" y1="5" x2="0" y2="15" stroke="#38bdf8" opacity="0.4"/>
-        <line x1="10" y1="2" x2="10" y2="18" stroke="#38bdf8" opacity="0.7"/>
-        <line x1="20" y1="8" x2="20" y2="12" stroke="#38bdf8" opacity="0.5"/>
-        <line x1="30" y1="0" x2="30" y2="20" stroke="#38bdf8"/>
-        <line x1="40" y1="4" x2="40" y2="16" stroke="#38bdf8" opacity="0.8"/>
-        <line x1="50" y1="7" x2="50" y2="13" stroke="#38bdf8" opacity="0.6"/>
-        <line x1="60" y1="2" x2="60" y2="18" stroke="#38bdf8"/>
-        <line x1="70" y1="5" x2="70" y2="15" stroke="#38bdf8" opacity="0.4"/>
-        <line x1="80" y1="1" x2="80" y2="19" stroke="#38bdf8" opacity="0.9"/>
-        <line x1="90" y1="6" x2="90" y2="14" stroke="#38bdf8" opacity="0.7"/>
-        <line x1="100" y1="3" x2="100" y2="17" stroke="#38bdf8" opacity="0.5"/>
-        <line x1="110" y1="8" x2="110" y2="12" stroke="#38bdf8" opacity="0.3"/>
-        <line x1="120" y1="0" x2="120" y2="20" stroke="#38bdf8"/>
-        <line x1="130" y1="4" x2="130" y2="16" stroke="#38bdf8" opacity="0.8"/>
-        <line x1="140" y1="6" x2="140" y2="14" stroke="#38bdf8" opacity="0.6"/>
-        <line x1="150" y1="2" x2="150" y2="18" stroke="#38bdf8" opacity="0.9"/>
-        <line x1="160" y1="5" x2="160" y2="15" stroke="#38bdf8" opacity="0.5"/>
-        <line x1="170" y1="1" x2="170" y2="19" stroke="#38bdf8"/>
-        <line x1="180" y1="7" x2="180" y2="13" stroke="#38bdf8" opacity="0.4"/>
-        <line x1="190" y1="3" x2="190" y2="17" stroke="#38bdf8" opacity="0.7"/>
-        <line x1="200" y1="5" x2="200" y2="15" stroke="#38bdf8" opacity="0.6"/>
-        <line x1="210" y1="0" x2="210" y2="20" stroke="#38bdf8" opacity="0.8"/>
-        <line x1="220" y1="4" x2="220" y2="16" stroke="#38bdf8" opacity="0.5"/>
-        <line x1="230" y1="6" x2="230" y2="14" stroke="#38bdf8" opacity="0.7"/>
-        <line x1="240" y1="2" x2="240" y2="18" stroke="#38bdf8" opacity="0.9"/>
-        <line x1="250" y1="5" x2="250" y2="15" stroke="#38bdf8" opacity="0.4"/>
-        <line x1="260" y1="1" x2="260" y2="19" stroke="#38bdf8"/>
-        <line x1="270" y1="7" x2="270" y2="13" stroke="#38bdf8" opacity="0.6"/>
-        <line x1="280" y1="3" x2="280" y2="17" stroke="#38bdf8" opacity="0.8"/>
-        <line x1="290" y1="5" x2="290" y2="15" stroke="#38bdf8" opacity="0.5"/>
-        <line x1="300" y1="0" x2="300" y2="20" stroke="#38bdf8" opacity="0.7"/>
-        <line x1="310" y1="4" x2="310" y2="16" stroke="#38bdf8" opacity="0.9"/>
-        <line x1="320" y1="6" x2="320" y2="14" stroke="#38bdf8" opacity="0.4"/>
-        <line x1="330" y1="2" x2="330" y2="18" stroke="#38bdf8" opacity="0.6"/>
-        <line x1="340" y1="5" x2="340" y2="15" stroke="#38bdf8" opacity="0.8"/>
-        <line x1="350" y1="3" x2="350" y2="17" stroke="#38bdf8" opacity="0.5"/>
-        <line x1="360" y1="6" x2="360" y2="14" stroke="#38bdf8" opacity="0.7"/>
-        <line x1="370" y1="1" x2="370" y2="19" stroke="#38bdf8" opacity="0.9"/>
-        <line x1="380" y1="4" x2="380" y2="16" stroke="#38bdf8" opacity="0.6"/>
-        <line x1="390" y1="7" x2="390" y2="13" stroke="#38bdf8" opacity="0.4"/>
-        <line x1="400" y1="2" x2="400" y2="18" stroke="#38bdf8" opacity="0.8"/>
+      <g transform="translate(15, 30)" fill="#06b6d4" opacity="0.6">
+        <rect x="0" y="-8" width="3" height="12" rx="1"/><rect x="6" y="-14" width="3" height="18" rx="1"/><rect x="12" y="-5" width="3" height="9" rx="1"/><rect x="18" y="-18" width="3" height="22" rx="1"/><rect x="24" y="-10" width="3" height="14" rx="1"/><rect x="30" y="-22" width="3" height="26" rx="1"/><rect x="36" y="-15" width="3" height="19" rx="1"/><rect x="42" y="-8" width="3" height="12" rx="1"/><rect x="48" y="-19" width="3" height="23" rx="1"/><rect x="54" y="-25" width="3" height="30" rx="1"/><rect x="60" y="-12" width="3" height="16" rx="1"/><rect x="66" y="-16" width="3" height="20" rx="1"/><rect x="72" y="-8" width="3" height="12" rx="1"/><rect x="78" y="-20" width="3" height="24" rx="1"/><rect x="84" y="-14" width="3" height="18" rx="1"/><rect x="90" y="-5" width="3" height="9" rx="1"/><rect x="96" y="-18" width="3" height="22" rx="1"/><rect x="102" y="-24" width="3" height="28" rx="1"/><rect x="108" y="-15" width="3" height="19" rx="1"/><rect x="114" y="-10" width="3" height="14" rx="1"/><rect x="120" y="-22" width="3" height="26" rx="1"/><rect x="126" y="-14" width="3" height="18" rx="1"/><rect x="132" y="-8" width="3" height="12" rx="1"/><rect x="138" y="-19" width="3" height="23" rx="1"/><rect x="144" y="-25" width="3" height="29" rx="1"/><rect x="150" y="-12" width="3" height="16" rx="1"/><rect x="156" y="-17" width="3" height="21" rx="1"/><rect x="162" y="-9" width="3" height="13" rx="1"/><rect x="168" y="-21" width="3" height="25" rx="1"/><rect x="174" y="-15" width="3" height="19" rx="1"/><rect x="180" y="-7" width="3" height="11" rx="1"/><rect x="186" y="-23" width="3" height="27" rx="1"/><rect x="192" y="-16" width="3" height="20" rx="1"/><rect x="198" y="-11" width="3" height="15" rx="1"/><rect x="204" y="-26" width="3" height="30" rx="1"/><rect x="210" y="-18" width="3" height="22" rx="1"/><rect x="216" y="-13" width="3" height="17" rx="1"/><rect x="222" y="-20" width="3" height="24" rx="1"/><rect x="228" y="-9" width="3" height="13" rx="1"/><rect x="234" y="-15" width="3" height="19" rx="1"/>
+      </g>
+
+      <!-- Connection Flow Vector Arrow -->
+      <g transform="translate(225, 55)" filter="url(#glow)">
+        <path d="M 10 0 L 10 20" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 2"/>
+        <polygon points="6,18 14,18 10,25" fill="#38bdf8"/>
+      </g>
+
+      <!-- Timeline Track 2: AI Viral Curation (Multi-Clip Output) -->
+      <g transform="translate(0, 85)">
+        <rect x="0" y="0" width="470" height="90" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#8b5cf6" stroke-opacity="0.5"/>
+        <text x="15" y="20" fill="#e2e8f0" font-family="monospace" font-size="10" font-weight="bold">AI_VIRAL_SCORE_MATRIX // 5 AUTO-CLIPS GENERATED</text>
+        
+        <!-- Clip Segment 1 (High Virality 99) -->
+        <g transform="translate(15, 32)">
+          <rect x="0" y="0" width="130" height="42" rx="6" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+          <text x="10" y="16" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="bold">CLIP #01: HOOK</text>
+          <text x="10" y="31" fill="#94a3b8" font-family="monospace" font-size="9">Virality: 99% • 0:42</text>
+          <circle cx="115" cy="21" r="4" fill="#34d399" filter="url(#glow)"/>
+        </g>
+
+        <!-- Clip Segment 2 (High Virality 95) -->
+        <g transform="translate(155, 32)">
+          <rect x="0" y="0" width="130" height="42" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5"/>
+          <text x="10" y="16" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="bold">CLIP #02: INSIGHT</text>
+          <text x="10" y="31" fill="#94a3b8" font-family="monospace" font-size="9">Virality: 95% • 0:58</text>
+          <circle cx="115" cy="21" r="4" fill="#34d399" filter="url(#glow)"/>
+        </g>
+
+        <!-- Clip Segment 3 (Active Processing) -->
+        <g transform="translate(295, 32)">
+          <rect x="0" y="0" width="160" height="42" rx="6" fill="#172033" stroke="#d946ef" stroke-dasharray="3 3" stroke-width="1.5"/>
+          <text x="10" y="16" fill="#f472b6" font-family="sans-serif" font-size="11" font-weight="bold">AUTOREFRAME AI</text>
+          <text x="10" y="31" fill="#e2e8f0" font-family="monospace" font-size="9">Active Tracking...</text>
+          <circle cx="140" cy="21" r="4" fill="#f43f5e" filter="url(#glow)"/>
+        </g>
       </g>
     </g>
 
-    <!-- Neural AI Processing Vectors (Connecting lines) -->
-    <g transform="translate(30, 155)">
-      <path d="M 120 0 L 120 25 L 220 25 L 220 50" fill="none" stroke="#8b5cf6" stroke-width="2" filter="url(#glow-subtle)"/>
-      <circle cx="120" cy="12" r="3" fill="#8b5cf6"/>
-      <circle cx="220" cy="37" r="3" fill="#d946ef"/>
-    </g>
-
-    <!-- Track 2: Viral Highlight Extraction (Multi-Clip Output) -->
-    <g transform="translate(30, 185)">
-      <rect x="0" y="0" width="440" height="110" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#d946ef" stroke-opacity="0.5" filter="url(#glow-subtle)"/>
-      <text x="15" y="22" fill="#d946ef" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="1">AI VIRALITY SCORE: 98.4% // 4 REPURPOSED CLIPS</text>
+    <!-- Bottom HUD Data Readouts -->
+    <g transform="translate(30, 265)">
+      <rect x="0" y="0" width="470" height="165" rx="8" fill="#030712" fill-opacity="0.8" stroke="#1e293b"/>
+      <text x="15" y="22" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold">> NEURAL_EMBEDDING_CLUSTER_MAP</text>
       
-      <!-- Mini Output Clip Card 1 -->
-      <g transform="translate(15, 36)">
-        <rect x="0" y="0" width="128" height="58" rx="6" fill="#1e1b4b" stroke="#06b6d4" stroke-width="1"/>
-        <text x="10" y="20" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">Clip #1: Key Insight</text>
-        <text x="10" y="35" fill="#38bdf8" font-family="monospace" font-size="9">00:12 - 00:58</text>
-        <rect x="10" y="43" width="60" height="4" rx="2" fill="#06b6d4"/>
-      </g>
+      <!-- Graph Lines / Analytics Node Graph -->
+      <path d="M 20 110 Q 90 40 160 80 T 300 50 T 440 90" fill="none" stroke="url(#cyanBlueGrad)" stroke-width="2.5" filter="url(#glow)"/>
+      <path d="M 20 110 Q 90 40 160 80 T 300 50 T 440 90 L 440 135 L 20 135 Z" fill="url(#cyanBlueGrad)" fill-opacity="0.08"/>
 
-      <!-- Mini Output Clip Card 2 -->
-      <g transform="translate(156, 36)">
-        <rect x="0" y="0" width="128" height="58" rx="6" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1"/>
-        <text x="10" y="20" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">Clip #2: Core Metric</text>
-        <text x="10" y="35" fill="#c084fc" font-family="monospace" font-size="9">04:15 - 05:02</text>
-        <rect x="10" y="43" width="90" height="4" rx="2" fill="#8b5cf6"/>
-      </g>
+      <!-- Data Nodes on Graph -->
+      <circle cx="160" cy="80" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="2" filter="url(#glow)"/>
+      <circle cx="300" cy="50" r="5" fill="#8b5cf6" stroke="#ffffff" stroke-width="2" filter="url(#glow)"/>
+      <circle cx="440" cy="90" r="5" fill="#d946ef" stroke="#ffffff" stroke-width="2" filter="url(#glow)"/>
 
-      <!-- Mini Output Clip Card 3 -->
-      <g transform="translate(297, 36)">
-        <rect x="0" y="0" width="128" height="58" rx="6" fill="#1e1b4b" stroke="#d946ef" stroke-width="1"/>
-        <text x="10" y="20" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">Clip #3: Epic Summary</text>
-        <text x="10" y="35" fill="#f472b6" font-family="monospace" font-size="9">12:30 - 13:15</text>
-        <rect x="10" y="43" width="45" height="4" rx="2" fill="#d946ef"/>
+      <!-- Stat Readouts -->
+      <g transform="translate(15, 145)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10">VELOCITY MULTIPLIER: <tspan fill="#34d399" font-weight="bold">10X</tspan></text>
+        <text x="220" y="0" fill="#64748b" font-family="monospace" font-size="10">PROCESSING LATENCY: <tspan fill="#38bdf8" font-weight="bold">1.2s</tspan></text>
       </g>
     </g>
 
-    <!-- AI Active Captioning / Face Tracking preview block -->
-    <g transform="translate(30, 315)">
-      <rect x="0" y="0" width="440" height="135" rx="10" fill="#030712" stroke="#38bdf8" stroke-opacity="0.2"/>
-      <text x="15" y="22" fill="#94a3b8" font-family="monospace" font-size="10" letter-spacing="1">AUTO-REFRAMING &amp; DYNAMIC CAPTIONS</text>
-      
-      <!-- Simulated Video Frame with Active Speaker Box -->
-      <rect x="15" y="35" width="160" height="85" rx="6" fill="#0b0f19" stroke="#38bdf8" stroke-opacity="0.4"/>
-      <!-- Speaker face bounding box -->
-      <rect x="65" y="45" width="60" height="60" rx="30" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <circle cx="95" cy="75" r="18" fill="#06b6d4" fill-opacity="0.2"/>
-      <text x="95" y="79" fill="#06b6d4" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">AI FOCUS</text>
+    <!-- Floating Holographic Badge on Card -->
+    <g transform="translate(380, 20)" filter="url(#glow)">
+      <rect x="0" y="0" width="120" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="60" y="17" fill="#e9d5ff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">99% VIRALITY</text>
+    </g>
+  </g>
 
-      <!-- Auto Caption Text Graphic -->
-      <g transform="translate(190, 45)">
-        <rect x="0" y="0" width="235" height="75" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-opacity="0.3"/>
-        <text x="15" y="25" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">"AI video repurposing is</text>
-        <text x="15" y="45" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold">transforming enterprise</text>
-        <text x="15" y="65" fill="#d946ef" font-family="sans-serif" font-size="12" font-weight="bold">growth velocity instantly."</text>
+  <!-- 3. Typography & Branding Left Section -->
+  <g transform="translate(80, 90)">
+    <!-- Top Sleek Pill Badge -->
+    <g filter="url(#glow)">
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="#0f172a" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1.5"/>
+      <circle cx="20" cy="17" r="4" fill="#06b6d4"/>
+      <text x="36" y="21" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="0" fill="#94a3b8" font-family="sans-serif" font-size="16" font-weight="600" letter-spacing="3">AI VIDEO &amp; CONTENT CREATION</text>
+      <text x="0" y="65" fill="#ffffff" font-family="sans-serif" font-size="56" font-weight="900" letter-spacing="-1">OPUSCLIP</text>
+    </g>
+
+    <!-- Subtitle / Investigation Focus -->
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" fill="#e2e8f0" font-family="sans-serif" font-size="24" font-weight="700" letter-spacing="-0.5">Decoding the Viral Engine and the</text>
+      <text x="0" y="32" fill="url(#cyanBlueGrad)" font-family="sans-serif" font-size="24" font-weight="700" letter-spacing="-0.5">Hands-on Blueprint for Automated</text>
+      <text x="0" y="64" fill="url(#violetFuchsiaGrad)" font-family="sans-serif" font-size="24" font-weight="700" letter-spacing="-0.5">Content Velocity</text>
+    </g>
+
+    <!-- Feature Bullet Points / Tech Specs -->
+    <g transform="translate(0, 290)">
+      <!-- Bullet 1 -->
+      <g transform="translate(0, 0)">
+        <circle cx="6" cy="6" r="4" fill="#06b6d4" filter="url(#glow)"/>
+        <text x="22" y="10" fill="#94a3b8" font-family="monospace" font-size="13">AI Curation &amp; Automated Hook Generation</text>
+      </g>
+      <!-- Bullet 2 -->
+      <g transform="translate(0, 30)">
+        <circle cx="6" cy="6" r="4" fill="#8b5cf6" filter="url(#glow)"/>
+        <text x="22" y="10" fill="#94a3b8" font-family="monospace" font-size="13">Multi-Platform Vector Repurposing Workflow</text>
+      </g>
+      <!-- Bullet 3 -->
+      <g transform="translate(0, 60)">
+        <circle cx="6" cy="6" r="4" fill="#d946ef" filter="url(#glow)"/>
+        <text x="22" y="10" fill="#94a3b8" font-family="monospace" font-size="13">Enterprise-Grade Content Scaling Blueprint</text>
       </g>
     </g>
   </g>
 
+  <!-- 4. Footer Branding & Accent Borders -->
+  <g transform="translate(80, 565)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1"/>
+    <text x="0" y="25" fill="#64748b" font-family="monospace" font-size="11" letter-spacing="1.5">heliatech.online // flagship enterprise software investigation</text>
+    <text x="1040" y="25" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" text-anchor="end" letter-spacing="1">DOSSIER #884-OPUS</text>
+  </g>
 
-  <!-- ================= LEFT SIDE: TYPOGRAPHY & DOSSIER ================= -->
-  <g transform="translate(80, 75)">
-    <!-- Architectural Pill Badge -->
-    <g filter="url(#glow-subtle)">
-      <rect x="0" y="0" width="310" height="34" rx="17" fill="#0b0f19" stroke="#06b6d4" stroke-width="1.5"/>
-      <circle cx="18" cy="17" r="4" fill="#06b6d4"/>
-      <text x="35" y="22" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
-    </g>
-
-    <!-- Main Title: OPUS CLIP -->
-    <g transform="translate(0, 85)">
-      <text x="0" y="0" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">OPUS CLIP</text>
-      <text x="0" y="40" fill="url(#cyanBlueGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" letter-spacing="1">AI Video &amp; Short-Form Velocity</text>
-    </g>
-
-    <!-- Subtitle / Executive Description -->
-    <g transform="translate(0, 185)">
-      <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" line-height="1.5">
-        <tspan x="0" dy="0">The genesis of AI-driven video repurposing. Analyzing</tspan>
-        <tspan x="0" dy="24">neural curation models, automated virality scoring, and</tspan>
-        <tspan x="0" dy="24">enterprise scaling frameworks for high-velocity content engines.</tspan>
-      </text>
-    </g>
-
-    <!-- Metadata Grid / Key Attributes -->
-    <g transform="translate(0, 310)">
-      <!-- Metric Box 1 -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="165" height="70" rx="10" fill="url(#glassGrad)" stroke="#38bdf8" stroke-opacity="0.3"/>
-        <text x="20" y="28" fill="#38bdf8" font-family="monospace" font-size="22" font-weight="bold">10x</text>
-        <text x="20" y="48" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Workflow Velocity</text>
-      </g>
-
-      <!-- Metric Box 2 -->
-      <g transform="translate(185, 0)">
-        <rect x="0" y="0" width="165" height="70" rx="10" fill="url(#glassGrad)" stroke="#d946ef" stroke-opacity="0.3"/>
-        <text x="20" y="28" fill="#d946ef" font-family="monospace" font-size="22" font-weight="bold">98.4%</text>
-        <text x="20" y="48" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Curation Accuracy</text>
-      </g>
-    </g>
-
-    <!-- Footer Branding / URL -->
-    <g transform="translate(0, 425)">
-      <line x1="0" y1="0" x2="350" y2="0" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
-      <text x="0" y="25" fill="#64748b" font-family="monospace" font-size="12" font-weight="600" letter-spacing="1.5">HELIATECH.ONLINE // RESEARCH DIVISION</text>
-    </g>
+  <!-- Decorative Corner Brackets for Cyber-Lux aesthetic -->
+  <g stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 20 40 L 20 20 L 40 20"/>
+    <path d="M 1180 40 L 1180 20 L 1160 20"/>
+    <path d="M 20 590 L 20 610 L 40 610"/>
+    <path d="M 1180 590 L 1180 610 L 1160 610"/>
   </g>
 </svg>

@@ -70,7 +70,7 @@ If your teams are spending more time configuring views, cleaning up orphaned cus
 - Advanced custom formula syntax requires a slight learning curve for operations managers migrating from spreadsheet environments.
 
 ### Pricing Model & Economics
-Monday.com starts at **$9/seat/month** (Standard tier, billed annually), with enterprise security controls gating at higher custom tiers. It avoids ClickUp's aggressive feature gating on basic automations.
+[Monday.com](/reviews/monday-com) starts at **$9/seat/month** (Standard tier, billed annually), with enterprise security controls gating at higher custom tiers. It avoids ClickUp's aggressive feature gating on basic automations.
 
 ### Migration Feasibility
 Native CSV and ClickUp direct importers map columns, statuses, and assignees cleanly. 
@@ -87,7 +87,7 @@ Native CSV and ClickUp direct importers map columns, statuses, and assignees cle
 
 ### Key Architectural Advantages
 - **Blazing Performance:** Built with native-like performance in mind, ensuring zero latency during rapid sprint planning and issue triage.
-- **Bi-Directional Git Integration:** Seamless sync with GitHub, GitLab, and Linear's own git automation engine ensures PR statuses instantly update task states without manual intervention.
+- **Bi-Directional Git Integration:** Seamless sync with GitHub, GitLab, and [Linear](/reviews/linear)'s own git automation engine ensures PR statuses instantly update task states without manual intervention.
 - **Cycle-Based Methodology:** Built around automated cycles (sprints) that prevent backlog bloat through automated auto-closing of stale issues.
 
 ### Where It Falls Short
