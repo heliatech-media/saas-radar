@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T01:56:17.977647",
+  "last_synced": "2026-11-09T02:16:29.869982",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 25119,
-  "total_requests": 136097,
-  "total_visits": 7786,
-  "total_pageviews": 30060,
+  "total_visitors_network": 25131,
+  "total_requests": 136214,
+  "total_visits": 7790,
+  "total_pageviews": 30139,
   "percent_cached": "56.14%",
-  "data_served_mb": 1273.7,
+  "data_served_mb": 1276.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -20,11 +20,11 @@
     },
     {
       "path": "/calculator/",
-      "views": 1210
+      "views": 1220
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1120
+      "views": 1130
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -39,10 +39,6 @@
       "views": 310
     },
     {
-      "path": "/radar/",
-      "views": 290
-    },
-    {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 290
     },
@@ -51,16 +47,20 @@
       "views": 290
     },
     {
+      "path": "/radar/",
+      "views": 290
+    },
+    {
       "path": "/awards/",
       "views": 270
     },
     {
-      "path": "/blog/",
+      "path": "/versus/",
       "views": 260
     },
     {
-      "path": "/versus/",
-      "views": 250
+      "path": "/blog/",
+      "views": 260
     },
     {
       "path": "/deals/",
@@ -74,34 +74,34 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 26840
+      "views": 26850
     },
     {
       "country": "Morocco",
-      "views": 18810
+      "views": 18830
+    },
+    {
+      "country": "Germany",
+      "views": 1650
     },
     {
       "country": "Singapore",
       "views": 1620
     },
     {
-      "country": "Germany",
-      "views": 1560
-    },
-    {
       "country": "Belgium",
       "views": 650
     },
     {
-      "country": "Brazil",
-      "views": 640
+      "country": "United Kingdom",
+      "views": 650
     },
     {
       "country": "Canada",
       "views": 640
     },
     {
-      "country": "United Kingdom",
+      "country": "Brazil",
       "views": 640
     },
     {
