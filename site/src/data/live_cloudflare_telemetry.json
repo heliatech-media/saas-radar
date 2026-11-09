@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T21:45:01.873256",
+  "last_synced": "2026-11-09T22:15:17.404068",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26635,
-  "total_requests": 140777,
-  "total_visits": 8256,
-  "total_pageviews": 31678,
+  "total_visitors_network": 26646,
+  "total_requests": 140914,
+  "total_visits": 8260,
+  "total_pageviews": 31696,
   "percent_cached": "56.14%",
-  "data_served_mb": 1380.2,
+  "data_served_mb": 1381.9,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -31,12 +31,12 @@
       "views": 830
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 330
+      "path": "/api/telemetry",
+      "views": 420
     },
     {
-      "path": "/api/telemetry",
-      "views": 320
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 330
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
@@ -55,11 +55,11 @@
       "views": 290
     },
     {
-      "path": "/awards/",
+      "path": "/versus/",
       "views": 280
     },
     {
-      "path": "/versus/",
+      "path": "/awards/",
       "views": 280
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "country": "Morocco",
-      "views": 19130
+      "views": 19230
     },
     {
       "country": "Germany",
@@ -86,11 +86,11 @@
     },
     {
       "country": "Singapore",
-      "views": 1720
+      "views": 1730
     },
     {
       "country": "Brazil",
-      "views": 700
+      "views": 710
     },
     {
       "country": "United Kingdom",
