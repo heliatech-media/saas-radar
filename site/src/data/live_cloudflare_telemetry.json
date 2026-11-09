@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T02:16:29.869982",
+  "last_synced": "2026-11-09T02:36:37.372410",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 25131,
-  "total_requests": 136214,
-  "total_visits": 7790,
-  "total_pageviews": 30139,
+  "total_visitors_network": 25153,
+  "total_requests": 136391,
+  "total_visits": 7797,
+  "total_pageviews": 30211,
   "percent_cached": "56.14%",
-  "data_served_mb": 1276.8,
+  "data_served_mb": 1279.8,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -20,7 +20,7 @@
     },
     {
       "path": "/calculator/",
-      "views": 1220
+      "views": 1230
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
@@ -32,11 +32,15 @@
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 310
+      "views": 320
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
       "views": 310
+    },
+    {
+      "path": "/radar/",
+      "views": 290
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
@@ -47,16 +51,12 @@
       "views": 290
     },
     {
-      "path": "/radar/",
-      "views": 290
+      "path": "/versus/",
+      "views": 270
     },
     {
       "path": "/awards/",
       "views": 270
-    },
-    {
-      "path": "/versus/",
-      "views": 260
     },
     {
       "path": "/blog/",
@@ -67,14 +67,14 @@
       "views": 200
     },
     {
-      "path": "/blog/jasper-ai-evolution-guide-2026/",
+      "path": "/reviews/make/",
       "views": 190
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 26850
+      "views": 26860
     },
     {
       "country": "Morocco",
@@ -93,15 +93,15 @@
       "views": 650
     },
     {
+      "country": "Brazil",
+      "views": 650
+    },
+    {
       "country": "United Kingdom",
       "views": 650
     },
     {
       "country": "Canada",
-      "views": 640
-    },
-    {
-      "country": "Brazil",
       "views": 640
     },
     {
