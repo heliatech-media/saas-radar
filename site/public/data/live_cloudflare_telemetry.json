@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T03:47:07.462804",
+  "last_synced": "2026-11-09T04:07:17.661873",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 25711,
-  "total_requests": 137025,
-  "total_visits": 7970,
-  "total_pageviews": 30438,
+  "total_visitors_network": 25723,
+  "total_requests": 137293,
+  "total_visits": 7974,
+  "total_pageviews": 30570,
   "percent_cached": "56.14%",
-  "data_served_mb": 1292.8,
+  "data_served_mb": 1298.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -32,7 +32,7 @@
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 320
+      "views": 330
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
@@ -82,11 +82,11 @@
     },
     {
       "country": "Germany",
-      "views": 1660
+      "views": 1810
     },
     {
       "country": "Singapore",
-      "views": 1620
+      "views": 1630
     },
     {
       "country": "Belgium",
