@@ -25,11 +25,11 @@ export async function onRequestPost(context) {
       body = JSON.parse(text || "{}");
     }
 
-    const type = body.type || "VISIT";
-    const country = context.request.headers.get("cf-ipcountry") || "Unknown";
-    const tool = body.tool || body.title || "Unknown Tool";
-    const path = body.path || "/";
-    const referrer = body.referrer || "Direct / Organic";
+    const type = String(body.type || "VISIT").slice(0, 20);
+    const country = String(context.request.headers.get("cf-ipcountry") || "Unknown").slice(0, 10);
+    const tool = String(body.tool || body.title || "Unknown Tool").slice(0, 60).replace(/[<>{}]/g, "");
+    const path = String(body.path || "/").slice(0, 100).replace(/[<>{}]/g, "");
+    const referrer = String(body.referrer || "Direct / Organic").slice(0, 100).replace(/[<>{}]/g, "");
     const now = new Date().toLocaleTimeString("en-US", { hour12: false });
 
     const botToken = context.env?.TELEGRAM_BOT_TOKEN;

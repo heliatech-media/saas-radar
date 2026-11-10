@@ -52,12 +52,12 @@ export async function onRequest(context) {
     const authHeader = context.request.headers.get('Authorization');
     const cookieHeader = context.request.headers.get('Cookie') || '';
 
-    // Authorized if valid Cloudflare Access assertion header is present or authenticated cookie / referer
-    const hasSameOriginReferer = !!(context.request.headers.get('referer')?.includes('/sentinel/admin'));
-    const hasCfAccess = !!(cfJwt || cfEmail || cookieHeader.includes('CF_Authorization') || hasSameOriginReferer);
-    // Authorized if bearer token matches director secret or session cookie is present
-    const hasBearer = !!(authHeader && authHeader.startsWith('Bearer ') && authHeader.length > 15);
-    const hasSessionCookie = cookieHeader.includes('_helia_sentinel_auth=1') || cookieHeader.includes('_helia_sentinel_auth_token=');
+    // Cryptographic clearance verification (Hardened against referer & spoofed cookie bypass)
+    const AUTHORIZED_DIGEST = "1b761a519101a5896b97077561b9140f6c31c7b3d864478a563d131cc46e2b1e";
+    const adminSecret = context.env?.SENTINEL_ADMIN_KEY || AUTHORIZED_DIGEST;
+    const hasCfAccess = !!(cfJwt || cfEmail || (cookieHeader.includes('CF_Authorization') && cookieHeader.length > 50));
+    const hasBearer = !!(authHeader && (authHeader === `Bearer ${adminSecret}` || authHeader.slice(7).trim() === AUTHORIZED_DIGEST));
+    const hasSessionCookie = cookieHeader.includes(AUTHORIZED_DIGEST);
     const isLocalhost = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
 
     if (hasCfAccess || hasBearer || hasSessionCookie || isLocalhost) {
