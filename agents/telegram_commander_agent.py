@@ -888,6 +888,13 @@ if __name__ == "__main__":
     commander = TelegramCommander()
     print("\n--- Helia-TelegramCommander 3.0 Status ---")
     print(f"Configured: {commander.is_configured()}")
-    print("Testing 1 poll cycle...")
+    if "--loop" in sys.argv or "--daemon" in sys.argv:
+        print("Starting continuous polling loop...")
+        try:
+            commander.start_polling_loop()
+        except KeyboardInterrupt:
+            print("Stopped.")
+    else:
+        print("Testing 1 poll cycle...")
     commander.poll_once()
     print("Poll test complete.")

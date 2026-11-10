@@ -532,7 +532,7 @@ class EngineeringDeskAgent:
         return success
 
     def _notify_telegram(self, text: str):
-        bot_token = os.getenv("TELEGRAM_BOT_TOKEN", "8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4")
+        bot_token = os.getenv("TELEGRAM_BOT_TOKEN", "")
         chat_id = os.getenv("TELEGRAM_CHAT_ID", "8819768123")
         try:
             import urllib.request

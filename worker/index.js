@@ -4244,7 +4244,7 @@ async function onRequestPost12(context) {
     const path = body.path || "/";
     const referrer = body.referrer || "Direct";
     const now = (/* @__PURE__ */ new Date()).toISOString();
-    const botToken = context.env?.TELEGRAM_BOT_TOKEN || "8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4";
+    const botToken = context.env?.TELEGRAM_BOT_TOKEN;
     const chatId = context.env?.TELEGRAM_CHAT_ID || "8819768123";
     const resendApiKey = context.env?.RESEND_API_KEY;
     const telegramText = `\u2B50 NOUVEAU SUBSCRIBER B2B HELIATECH !
@@ -4375,7 +4375,7 @@ async function onRequestPost13(context) {
     const path = body.path || "/";
     const referrer = body.referrer || "Direct / Organic";
     const now = (/* @__PURE__ */ new Date()).toLocaleTimeString("en-US", { hour12: false });
-    const botToken = context.env?.TELEGRAM_BOT_TOKEN || "8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4";
+    const botToken = context.env?.TELEGRAM_BOT_TOKEN;
     const chatId = context.env?.TELEGRAM_CHAT_ID || "8819768123";
     if (type === "HOP" || type === "CONVERSION") {
       const msg = `\u{1F3AF} [HELIATECH CONVERSION - AFFILIATE HOP]

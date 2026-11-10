@@ -108,15 +108,7 @@ const {
             '📱 Appareil : ' + (window.innerWidth < 768 ? 'Mobile' : 'Desktop') + '\n' +
             '⏰ Heure : ' + new Date().toLocaleTimeString();
 
-          fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              chat_id: '8819768123',
-              text: leadMsg
-            }),
-            keepalive: true
-          }).catch(() => {});
+          /* client-side direct telegram fetch purged for security */
         } catch(err) {}
 
         // 3. Local backup

@@ -43,7 +43,7 @@ export async function onRequestPost(context) {
     const referrer = body.referrer || "Direct";
     const now = new Date().toISOString();
 
-    const botToken = context.env?.TELEGRAM_BOT_TOKEN || "8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4";
+    const botToken = context.env?.TELEGRAM_BOT_TOKEN;
     const chatId = context.env?.TELEGRAM_CHAT_ID || "8819768123";
     const resendApiKey = context.env?.RESEND_API_KEY;
 

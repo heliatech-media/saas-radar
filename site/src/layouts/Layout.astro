@@ -364,23 +364,17 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
                     '⏰ Heure : ' + new Date().toLocaleTimeString();
 
-                  fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
-
-                    method: 'POST',
-
-                    headers: { 'Content-Type': 'application/json' },
-
-                    body: JSON.stringify({
-
-                      chat_id: '8819768123',
-
-                      text: hopMsg
-
-                    }),
-
-                    keepalive: true
-
-                  }).catch(() => {});
+                  fetch('/api/telemetry', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({
+                        type: 'HOP',
+                        tool: toolSlug,
+                        path: path,
+                        referrer: document.referrer || 'Direct / Organic'
+                      }),
+                      keepalive: true
+                    }).catch(() => {});
 
                 } catch(bErr) {}
 

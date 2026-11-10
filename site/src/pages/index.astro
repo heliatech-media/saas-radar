@@ -474,15 +474,11 @@ const latestArticles = blogPosts
               '🔗 Source : ' + (document.referrer || 'Direct') + '\n' +
               '⏰ Heure : ' + new Date().toLocaleTimeString();
 
-            fetch('https://api.telegram.org/bot8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4/sendMessage', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                chat_id: '8819768123',
-                text: leadMsg
-              }),
-              keepalive: true
-            }).catch(() => {});
+            fetch('/api/subscribe', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email: email, path: '/', referrer: document.referrer || 'Direct' })
+                }).catch(() => {});
           } catch(err) {}
 
           // 3. Local storage backup

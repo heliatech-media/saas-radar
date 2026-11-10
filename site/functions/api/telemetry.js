@@ -32,7 +32,7 @@ export async function onRequestPost(context) {
     const referrer = body.referrer || "Direct / Organic";
     const now = new Date().toLocaleTimeString("en-US", { hour12: false });
 
-    const botToken = context.env?.TELEGRAM_BOT_TOKEN || "8897785268:AAG12hNOLn9x3bFJI_qzSad-sGF8wUY_HD4";
+    const botToken = context.env?.TELEGRAM_BOT_TOKEN;
     const chatId = context.env?.TELEGRAM_CHAT_ID || "8819768123";
 
     // Immediate Alert on High-Value Commercial Events (Affiliate Hop)
