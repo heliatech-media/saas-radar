@@ -5,13 +5,10 @@ date: "2026-11-16"
 author: "HELIA TECH"
 category: "AI Voice & Audio Generation"
 tags:
-  - ElevenLabs
-  - Black Friday 2026
-  - Cyber Monday 2026
-  - ElevenCreative
-  - ElevenAgents
-  - Voice AI
-  - Creator Economy
+  - ai
+  - audio
+  - webdev
+  - productivity
 readingTime: "5 MIN"
 tool_slug: "elevenlabs"
 tldr:
