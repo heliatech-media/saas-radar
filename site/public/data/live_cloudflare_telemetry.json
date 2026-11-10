@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-11-09T23:40:32.887307",
+  "last_synced": "2026-11-10T05:19:17.137166",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26723,
-  "total_requests": 141698,
-  "total_visits": 8284,
-  "total_pageviews": 31798,
+  "time_window": "28 Days (2026-10-13 - 2026-11-10)",
+  "total_visitors_network": 28247,
+  "total_requests": 144630,
+  "total_visits": 8756,
+  "total_pageviews": 32550,
   "percent_cached": "56.14%",
-  "data_served_mb": 1388.6,
+  "data_served_mb": 1425.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -16,23 +16,23 @@
     },
     {
       "path": "/",
-      "views": 3720
-    },
-    {
-      "path": "/calculator/",
-      "views": 1380
-    },
-    {
-      "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1180
+      "views": 3740
     },
     {
       "path": "/api/telemetry",
-      "views": 960
+      "views": 1640
+    },
+    {
+      "path": "/calculator/",
+      "views": 1390
+    },
+    {
+      "path": "/blog/beehiiv-evolution-guide-2026/",
+      "views": 1210
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 830
+      "views": 840
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
@@ -40,7 +40,7 @@
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 300
+      "views": 320
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
@@ -55,15 +55,15 @@
       "views": 270
     },
     {
-      "path": "/awards/",
-      "views": 240
+      "path": "/reviews/elevenlabs/",
+      "views": 250
     },
     {
       "path": "/terms/",
       "views": 240
     },
     {
-      "path": "/reviews/elevenlabs/",
+      "path": "/reviews/clickup/",
       "views": 240
     },
     {
@@ -74,11 +74,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 27370
+      "views": 27530
     },
     {
       "country": "Morocco",
-      "views": 21020
+      "views": 21700
     },
     {
       "country": "Germany",
@@ -86,31 +86,31 @@
     },
     {
       "country": "Singapore",
-      "views": 1780
+      "views": 1860
     },
     {
       "country": "Brazil",
-      "views": 860
+      "views": 920
     },
     {
       "country": "Belgium",
-      "views": 710
+      "views": 730
     },
     {
       "country": "United Kingdom",
-      "views": 700
+      "views": 730
     },
     {
       "country": "France",
-      "views": 590
+      "views": 620
     },
     {
       "country": "CN",
-      "views": 540
+      "views": 560
     },
     {
       "country": "Canada",
-      "views": 490
+      "views": 510
     }
   ],
   "top_referrers": [

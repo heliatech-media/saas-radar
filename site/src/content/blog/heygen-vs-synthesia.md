@@ -104,7 +104,7 @@ HeyGen’s API documentation is structured for modern engineering teams. RESTful
 
 * **Webhook Reliability:** Webhooks fire with high fidelity, passing metadata payloads that simplify downstream pipeline triggers in AWS S3, Google Cloud Storage, or custom data warehouses.
 * **Interactive SDKs:** The real-time streaming SDK enables developers to embed fully conversational AI avatars directly into proprietary mobile apps and web platforms with minimal latency.
-* **Low-Code Orchestration:** Out-of-the-box integrations with Make and Zapier allow non-technical RevOps teams to trigger personalized video generation from CRM updates (e.g., when a lead status changes to "Demo Booked").
+* **Low-Code Orchestration:** Out-of-the-box integrations with [Make](/reviews/make) and [Zapier](/reviews/zapier) allow non-technical RevOps teams to trigger personalized video generation from CRM updates (e.g., when a lead status changes to "Demo Booked").
 
 ### Synthesia: The Enterprise Administrative Core
 Synthesia prioritizes secure administrative control over raw programmatic flexibility. 

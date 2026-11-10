@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-09T23:41:17.303644",
+  "timestamp": "2026-11-10T05:19:55.836542",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 183,
-    "total_redirects_active": 111,
-    "new_redirects_healed": 33,
+    "total_content_files_scanned": 184,
+    "total_redirects_active": 112,
+    "new_redirects_healed": 34,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -30,6 +30,11 @@
       "slug": "descript-migration-calculator",
       "target_url": "https://www.descript-migration-calculator.com",
       "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "firebase",
+      "target_url": "https://www.firebase.com",
+      "source_file": "supabase-vs-firebase.md"
     },
     {
       "slug": "asana",

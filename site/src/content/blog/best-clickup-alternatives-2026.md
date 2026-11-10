@@ -76,7 +76,7 @@ If your teams are spending more time configuring views, cleaning up orphaned cus
 Native CSV and ClickUp direct importers map columns, statuses, and assignees cleanly. 
 *Estimated migration time:* **2 to 3 hours.**
 
-[Test Monday.com With Official Extended Access ↗](/go/monday-com)
+[Test [Monday.com](/reviews/monday-com) With Official Extended Access ↗](/go/monday-com)
 
 ---
 
@@ -95,7 +95,7 @@ Native CSV and ClickUp direct importers map columns, statuses, and assignees cle
 - Lacks embedded whiteboards and native long-form document editors (though external links integrate smoothly).
 
 ### Pricing Model & Economics
-Linear offers a robust free tier, with paid plans starting at **$8/seat/month**. It provides predictable, transparent billing without hidden feature add-on fees.
+[Linear](/reviews/linear) offers a robust free tier, with paid plans starting at **$8/seat/month**. It provides predictable, transparent billing without hidden feature add-on fees.
 
 ### Migration Feasibility
 Clean JSON and CSV issue importers map historical ticket data, comments, and assignees smoothly from ClickUp.
