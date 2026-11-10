@@ -126,7 +126,7 @@ Asana excels where ClickUp stumbles: maintaining structural alignment across mas
 
 ### Where It Falls Short
 - Can become expensive at scale when unlocking advanced portfolio and workload management features.
-- Less customizable for niche engineering workflows compared to Jira or Linear.
+- Less customizable for niche engineering workflows compared to Jira or [Linear](/reviews/linear).
 
 ### Pricing Model & Economics
 Starts at **$10.99/seat/month** (Starter tier), scaling up to Business and Enterprise brackets that align closely with ClickUp's enterprise price points but with significantly higher stability.
@@ -255,7 +255,7 @@ To select the optimal platform for your organization, evaluate your primary oper
    * *Rationale:* You cannot afford administrative overhead. These tools offer lightning-fast onboarding, low initial costs, and clean user interfaces that scale without configuration bloat.
 
 2. **High-Growth Mid-Market Scale-Ups (50–250 Employees):**
-   * *Recommendation:* **Monday.com** (for general operations) or **Linear** (for engineering squads).
+   * *Recommendation:* **[Monday.com](/reviews/monday-com)** (for general operations) or **Linear** (for engineering squads).
    * *Rationale:* Your teams are beginning to silo. Monday.com bridges departments with zero lag, while Linear keeps engineering velocity high without the performance degradation experienced in ClickUp.
 
 3. **Enterprises with Strict Compliance (SOC2 / GDPR / FedRAMP):**

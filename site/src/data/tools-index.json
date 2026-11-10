@@ -249,6 +249,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "InVideo",
+    "slug": "invideo",
+    "tagline": "Turn text prompts into fully produced, publish-ready videos with AI assistance",
+    "category": "AI Video",
+    "rating": 4.5,
+    "starting_price": "$25/mo",
+    "best_for": "Content creators, social media managers, and digital marketers producing high-volume video content",
+    "affiliate_url": "https://invideo.io"
+  },
+  {
     "name": "InVideo AI",
     "slug": "invideo-ai",
     "tagline": "Turn simple text prompts into fully produced, publish-ready videos complete with script, voiceover, and stock footage.",

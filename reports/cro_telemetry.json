@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-10 14:01:30",
-  "total_pages_audited": 108,
-  "monetized_pages": 105,
-  "total_ctas_tracked": 492,
+  "timestamp": "2026-11-10 21:07:58",
+  "total_pages_audited": 110,
+  "monetized_pages": 107,
+  "total_ctas_tracked": 504,
   "average_cro_score": "88.8/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -130,19 +130,19 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "apollo-io-evolution-guide-2026",
+      "slug": "invideo-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1073,
-      "cta_count": 6,
+      "word_count": 1246,
+      "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "axiom-ai-evolution-guide-2026",
+      "slug": "apollo-io-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1410,
-      "cta_count": 3,
+      "word_count": 1073,
+      "cta_count": 6,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"

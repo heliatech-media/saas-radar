@@ -876,6 +876,19 @@
         "beehiivvssubstack",
         "comparison"
       ]
+    },
+    "framer-vs-webflow": {
+      "id": 5012774,
+      "url": "https://dev.to/heliatech/framer-vs-webflow-2026-modern-interactive-canvas-velocity-vs-deep-enterprise-cms-40ce",
+      "title": "Framer vs Webflow (2026): Modern Interactive Canvas Velocity vs Deep Enterprise CMS",
+      "canonical_url": "https://heliatech.online/blog/framer-vs-webflow",
+      "published": true,
+      "tags": [
+        "framer",
+        "webflow",
+        "framervswebflow",
+        "comparison"
+      ]
     }
   },
   "last_sync": null
