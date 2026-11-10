@@ -1,116 +1,116 @@
 {
-  "last_synced": "2026-11-10T00:56:28.990755",
+  "last_synced": "2026-11-10T05:19:17.137166",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-12 - 2026-11-09)",
-  "total_visitors_network": 26754,
-  "total_requests": 141870,
-  "total_visits": 8293,
-  "total_pageviews": 31826,
+  "time_window": "28 Days (2026-10-13 - 2026-11-10)",
+  "total_visitors_network": 28247,
+  "total_requests": 144630,
+  "total_visits": 8756,
+  "total_pageviews": 32550,
   "percent_cached": "56.14%",
-  "data_served_mb": 1391.2,
+  "data_served_mb": 1425.4,
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6580
+      "views": 6260
     },
     {
       "path": "/",
-      "views": 3550
+      "views": 3740
+    },
+    {
+      "path": "/api/telemetry",
+      "views": 1640
     },
     {
       "path": "/calculator/",
-      "views": 1520
+      "views": 1390
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
       "views": 1210
     },
     {
-      "path": "/api/telemetry",
-      "views": 950
-    },
-    {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 830
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 330
-    },
-    {
-      "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 320
+      "views": 840
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
-      "views": 310
+      "views": 320
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 290
+      "views": 320
     },
     {
-      "path": "/radar/",
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
       "views": 290
     },
     {
       "path": "/blog/",
-      "views": 280
+      "views": 290
     },
     {
-      "path": "/versus/",
-      "views": 280
+      "path": "/radar/",
+      "views": 270
     },
     {
-      "path": "/awards/",
-      "views": 280
+      "path": "/reviews/elevenlabs/",
+      "views": 250
     },
     {
-      "path": "/reviews/make/",
-      "views": 220
+      "path": "/terms/",
+      "views": 240
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 240
+    },
+    {
+      "path": "/deals/",
+      "views": 240
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 28260
+      "views": 27530
     },
     {
       "country": "Morocco",
-      "views": 19760
+      "views": 21700
     },
     {
       "country": "Germany",
-      "views": 1980
+      "views": 2010
     },
     {
       "country": "Singapore",
-      "views": 1730
+      "views": 1860
     },
     {
       "country": "Brazil",
-      "views": 780
-    },
-    {
-      "country": "United Kingdom",
-      "views": 680
+      "views": 920
     },
     {
       "country": "Belgium",
-      "views": 650
+      "views": 730
     },
     {
-      "country": "Canada",
-      "views": 640
-    },
-    {
-      "country": "Netherlands",
-      "views": 580
+      "country": "United Kingdom",
+      "views": 730
     },
     {
       "country": "France",
-      "views": 520
+      "views": 620
+    },
+    {
+      "country": "CN",
+      "views": 560
+    },
+    {
+      "country": "Canada",
+      "views": 510
     }
   ],
   "top_referrers": [

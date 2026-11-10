@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-09 14:44:20 UTC",
+  "last_updated": "2026-11-10 05:19:15 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 77,
-    "total_published_investigations": 182,
+    "total_monetized_tools": 78,
+    "total_published_investigations": 184,
     "reviews_audited": 77,
-    "masterclasses_and_duels": 105,
+    "masterclasses_and_duels": 107,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$26,950 USD",
+    "projected_monthly_mrr": "$27,300 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -238,6 +238,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "loops",
+      "destination": "https://loops.so/?fp_ref=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "lovable",
       "destination": "https://lovable.dev/?via=heliatech",
       "type": "Commission Partner"
@@ -460,38 +465,38 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-05 14:37:58",
+      "title": "Cycle Autonome #Axiom.ai",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Axiom.ai et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-05 14:37:13",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-05 12:30:26",
+      "title": "Cycle Autonome #Fliki",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Fliki et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-05 12:29:27",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-11-05 10:22:38",
       "title": "Cycle Autonome #Synthesia",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Synthesia et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-05 10:20:35",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-05 08:13:02",
-      "title": "Cycle Autonome #ScreenClip",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de ScreenClip et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-05 08:12:14",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 2 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-05 06:06:39",
-      "title": "Cycle Autonome #ScreenStudio",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de ScreenStudio et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

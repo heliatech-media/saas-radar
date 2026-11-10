@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-09 14:44:20",
-  "total_pages_audited": 105,
-  "monetized_pages": 102,
-  "total_ctas_tracked": 471,
+  "timestamp": "2026-11-10 05:19:15",
+  "total_pages_audited": 107,
+  "monetized_pages": 104,
+  "total_ctas_tracked": 488,
   "average_cro_score": "88.8/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -87,8 +87,8 @@
     {
       "slug": "opus-clip-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1175,
-      "cta_count": 2,
+      "word_count": 732,
+      "cta_count": 5,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"

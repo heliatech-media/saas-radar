@@ -180,7 +180,8 @@ AFFILIATE_MAP = {
     "minvo": "https://minvo.pro/?via=heliatech",
     "capcut-pro": "https://capcut.pxf.io/heliatech",
     "capcut": "https://capcut.pxf.io/heliatech",
-    "invideo-ai": "https://invideo.io/?fpr=heliatech"
+    "invideo-ai": "https://invideo.io/?fpr=heliatech",
+    "loops": "https://loops.so/?fp_ref=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

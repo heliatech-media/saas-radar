@@ -86,7 +86,7 @@ Furthermore, Cursor gives you absolute control over your environment. You have d
 
 Lovable approaches software development from the opposite vector. Instead of enhancing the editing experience within an IDE, Lovable eliminates the IDE for the initial creation phase. It operates as an autonomous, conversational full-stack synthesis engine.
 
-You input a natural language prompt describing an application—for example, *"Build a multi-tenant CRM with real-time analytics, Kanban boards, and role-based access control"*—and Lovable provisions a complete, running application in real-time. Under the hood, it orchestrates a Vite, React, Tailwind CSS, and TypeScript frontend, seamlessly wiring it to a managed backend (typically Supabase for database, auth, and edge functions).
+You input a natural language prompt describing an application—for example, *"Build a multi-tenant CRM with real-time analytics, Kanban boards, and role-based access control"*—and Lovable provisions a complete, running application in real-time. Under the hood, it orchestrates a Vite, React, Tailwind CSS, and TypeScript frontend, seamlessly wiring it to a managed backend (typically [Supabase](/reviews/supabase) for database, auth, and edge functions).
 
 ```
 [Natural Language Prompt] 
@@ -119,7 +119,7 @@ Let us model the financial impact across three distinct operational scales: **5,
 
 ### Scenario B: 50,000 Operations / Growth-Stage SaaS
 *   **Cursor:** 20 developer seats ($20/seat) + potential overage for heavy Claude 3.5 Sonnet / GPT-4o usage = **$400–$600/month**. Engineering hours are heavily leveraged, accelerating feature velocity across a complex microservice architecture.
-*   **Lovable:** Scaling tier for production applications with high concurrent user generation, custom domains, and heavier Supabase database loads = **$300–$800/month**. However, as the application scales past MVP limits, maintaining complex business logic purely through conversational prompts can lead to technical debt that requires manual code refactoring.
+*   **Lovable:** Scaling tier for production applications with high concurrent user generation, custom domains, and heavier [Supabase](/reviews/supabase) database loads = **$300–$800/month**. However, as the application scales past MVP limits, maintaining complex business logic purely through conversational prompts can lead to technical debt that requires manual code refactoring.
 *   *Verdict at 50k Scale:* **Cursor pulls ahead** for sustained engineering maintainability. Lovable remains viable if the app stays within standard CRUD and dashboard parameters.
 
 ### Scenario C: 500,000 Operations / Enterprise Scale

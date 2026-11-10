@@ -353,7 +353,8 @@
     "rating": 4.7,
     "starting_price": "$49/mo",
     "best_for": "SaaS founders, product managers, and growth marketers who need behavior-based automation without the bloat of legacy ESPs.",
-    "affiliate_url": "https://loops.so"
+    "affiliate_url": "https://loops.so/?fp_ref=heliatech",
+    "commission_rate": "30% recurring for 12 months"
   },
   {
     "name": "Lovable",
@@ -464,13 +465,13 @@
     "commission_rate": "50% for the first year of Plus and Business plans"
   },
   {
-    "name": "Opus Clip",
+    "name": "OpusClip",
     "slug": "opus-clip",
     "tagline": "Turn long-form videos into viral short-form clips with generative AI in one click.",
-    "category": "AI Video",
+    "category": "AI Video & Content Creation",
     "rating": 4.6,
-    "starting_price": "$15/mo",
-    "best_for": "Podcasters, digital agencies, and content marketing teams scaling short-form video output.",
+    "starting_price": "$29/mo",
+    "best_for": "Podcasters, digital marketing agencies, and content creators looking to scale short-form output without adding video editors.",
     "affiliate_url": "https://www.opus.pro/?via=heliatech"
   },
   {
