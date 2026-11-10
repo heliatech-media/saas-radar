@@ -1,9 +1,9 @@
 ---
-title: "ElevenLabs Black Friday 2026: 55% Off & $200k Contest | HeliaTech"
-description: "Profitez de -55% sur ElevenLabs pour le Black Friday 2026. Découvrez les plans Creator à 99$/an, le forfait Pro et le concours #MoreThanVoice à 200 000 $."
+title: "ElevenLabs Black Friday 2026: 55% Off Annual Plans & $200k Creator Contest Guide"
+description: "Get up to 55% off ElevenLabs annual plans for Black Friday 2026. Explore the $99/yr Creator tier, Pro deals, and the $200,000 #MoreThanVoice creator contest."
 date: "2026-11-16"
 author: "HELIA TECH"
-category: "AI Voice & Creative Tools"
+category: "AI Voice & Audio Generation"
 tags:
   - ElevenLabs
   - Black Friday 2026
@@ -15,96 +15,99 @@ tags:
 readingTime: "5 MIN"
 tool_slug: "elevenlabs"
 tldr:
-  - "ElevenLabs propose jusqu'à 55 % de réduction sur ses forfaits annuels Creator (99 $/an) et Pro du 16 novembre au 1er décembre 2026."
-  - "Ces forfaits annuels intègrent un accès complet à ElevenCreative, l'API streaming et ElevenAgents (agents téléphoniques IA 24/7)."
-  - "Le concours créateur #MoreThanVoice distribue 200 000 $ de prix : 10 000 $ chaque jour du 16 au 30 novembre, et un Grand Prix de 50 000 $ début décembre."
-  - "Concours ouvert à tous (comptes gratuits et payants, sans obligation d'achat) avec soumission de projet multimédia sur au moins 2 plateformes."
+  - "ElevenLabs is slashing up to 55% off select annual plans from November 16 to December 1, 2026, pricing the Creator tier at just $99 for the entire year."
+  - "Both Creator and Pro plans provide full access to ElevenCreative, real-time streaming APIs, and ElevenAgents (24/7 autonomous telephony)."
+  - "The #MoreThanVoice contest features a $200,000 prize pool: one $10,000 daily winner selected every day from November 16 to 30, followed by a $50,000 Grand Prize on December 4."
+  - "The contest is completely free to enter for all users (free and paid tiers, no purchase required) with multi-platform submissions."
 ---
 
-# ElevenLabs Black Friday 2026 : -55% sur les Forfaits et Concours #MoreThanVoice (200 000 $)
+# ElevenLabs Black Friday 2026: Up to 55% Off Annual Plans & $200,000 #MoreThanVoice Contest
 
-> **Divulgation de partenariat certifié :** Cet article contient des liens d'affiliation officiels (*#ad, #ElevenLabsPartner*). Si vous souscrivez via ces liens, HeliaTech perçoit une commission sans aucun surcoût pour vous. Les données tarifaires et conditions du concours sont vérifiées auprès de la direction partenaire ElevenLabs.
+> **Certified Partner Disclosure:** This guide contains official affiliate partner links (*#ad, #ElevenLabsPartner*). If you purchase through our links, HeliaTech may earn a referral commission at no additional cost to you. Pricing data, discounts, and contest rules have been verified directly with ElevenLabs PartnerStack management.
 
-Du **16 novembre au 1er décembre 2026**, **ElevenLabs** déploie sa campagne annuelle la plus ambitieuse à l'occasion du Black Friday et du Cyber Monday. L'événement combine une réduction historique de **-55 % sur les forfaits annuels** et le concours créateur **#MoreThanVoice**, doté de **200 000 $ de cash prize**.
+From **November 16 to December 1, 2026**, **ElevenLabs** is launching its most substantial global promotional campaign to date for Black Friday and Cyber Monday. The event features two parallel initiatives:
 
-Que vous soyez créateur de contenu, podcaster, développeur ou dirigeant souhaitant automatiser votre accueil téléphonique d'entreprise, voici l'analyse exhaustive des offres, du calendrier et des critères d'éligibilité.
+1. **Up to 55% off select annual subscriptions**, dropping the entry price of the full creative suite to historic lows.
+2. **The #MoreThanVoice Contest**, a worldwide creator competition awarding **$200,000 in cash prizes**.
+
+Whether you are a YouTube creator, audio engineer, indie developer building conversational agents, or a business owner automating inbound phone calls, here is the complete teardown of the offers, pricing tiers, and contest entry requirements.
 
 ---
 
-## 1. Les Réductions Black Friday & Cyber Monday ElevenLabs
+## 1. ElevenLabs Black Friday & Cyber Monday Deals Overview
 
-L'offre promotionnelle cible les forfaits annuels et inclut pour la première fois l'ensemble de la suite créative : la génération vocale studio, la génération musicale commerciale, les effets sonores (SFX), l'accès direct aux SDK/API et la plateforme [ElevenAgents](/blog/elevenagents-ai-receptionist-guide/).
+The 2026 Black Friday campaign targets annual commitments, bundling the newly unified **ElevenCreative** timeline studio, commercial music generation, text-to-speech models, and [ElevenAgents](/blog/elevenagents-ai-receptionist-guide/) into a single subscription.
 
-| Forfait Éligible | Tarif Habituel | Tarif Black Friday | Économie Réalisée | Public Recommandé |
+| Subscription Tier | Standard Annual Rate | Black Friday Promo Rate | Net Discount | Recommended Target Audience |
 | :--- | :---: | :---: | :---: | :--- |
-| **Creator Annuel** | 220 $/an | **99 $/an** | **-55 %** | Créateurs YouTube, podcasters, voix-off et solopreneurs |
-| **Pro Annuel (Nouveau)** | 1 100 $/an | **-55 %** | **-55 %** | Agences, studios vidéo, entreprises à fort volume audio |
-| **Pro Mensuel vers Annuel** | Facturation mensuelle | **-50 %** | **-50 %** | Utilisateurs Pro actifs basculant en abonnement annuel |
+| **Creator Annual** | $220/year ($22/mo) | **$99 for the full year** | **55% OFF** | YouTubers, podcasters, solo creators, indie app builders |
+| **Pro Annual (New Users)** | $1,100/year ($110/mo) | **55% OFF first year** | **55% OFF** | Production agencies, video studios, commercial voiceovers |
+| **Pro Monthly to Annual** | $110/month | **50% OFF annual switch** | **50% OFF** | Existing Pro monthly subscribers upgrading to annual |
 
-👉 [Activer l'offre Black Friday ElevenLabs (-55 % sur le plan annuel)](https://try.elevenlabs.io/ajhd6t7k04dh)
+👉 [Claim the ElevenLabs Black Friday 55% Discount Here](https://try.elevenlabs.io/ajhd6t7k04dh)
 
-### Ce qui est inclus dans le forfait Creator à 99 $/an :
-- **Clonage vocal haute fidélité** : Cloner votre propre voix avec nuance de timbre et d'inflexion.
-- **Suite ElevenCreative complète** : Studio de montage timeline audio/vidéo, sous-titrage automatique et génération de bruitages Foley.
-- **Musique commerciale sous licence** : Génération de morceaux musicaux originaux autorisés pour une diffusion commerciale large sur YouTube, TikTok, podcasts et publicités.
-- **Déploiement ElevenAgents** : Configuration d'un réceptionniste téléphonique intelligent répondant à vos appels 24/7.
-- **Accès API** : Intégration de la synthèse vocale dans vos workflows n8n, Make, ou vos applications web (Cursor, Lovable, v0).
-
----
-
-## 2. Concours Créateur #MoreThanVoice : 200 000 $ de Récompenses
-
-Le concours **#MoreThanVoice** est une compétition internationale célébrant l'extension d'ElevenLabs au-delà de la parole brute.
-
-### La dotation financière :
-- **10 000 $ par jour pendant 15 jours** : Un lauréat sélectionné quotidiennement entre le 16 et le 30 novembre 2026 (fuseau horaire ET). Soit **150 000 $** distribués aux gagnants journaliers.
-- **50 000 $ de Grand Prix** : Attribué le **4 décembre 2026** au projet le plus marquant parmi les 15 gagnants quotidiens.
-- **Total de la cagnotte** : **200 000 $ en cash**.
-
-### Critères de participation :
-- **Aucune obligation d'achat** : Ouvert aussi bien aux utilisateurs du plan gratuit (*Free tier*) qu'aux forfaits payants.
-- **Le brief créatif** : Produire une création finie démontrant l'utilisation d'ElevenCreative *au-delà de la simple voix* (musique originale, synchronisation SFX, narration émotionnelle, court-métrage ou bande-annonce).
-- **Diffusion requise** : Publier l'œuvre terminée sur au moins **deux réseaux sociaux** distincts (YouTube, LinkedIn, X, TikTok, Instagram).
-- **Mentions obligatoires** : Inclure les hashtags **#morethanvoice**, **#contest** et afficher le filigrane (watermark) officiel ElevenLabs.
-- **Formulaire de soumission** : Valider l'URL de votre publication sur le formulaire officiel disponible à partir du 16 novembre.
+### What is Included in the $99/Year Creator Plan?
+- **High-Fidelity Voice Cloning**: Clone distinct voice profiles with precise cadence and emotional control.
+- **Full ElevenCreative Suite**: Multi-track timeline editor, automated video captions, and Foley sound effect generation.
+- **Commercial Music Generation**: Generate original musical arrangements cleared for broad commercial monetization across YouTube, TikTok, podcasts, and digital ads.
+- **ElevenAgents Telephony**: Deploy an autonomous AI phone receptionist capable of answering business calls 24/7 and booking appointments.
+- **Developer API Access**: Integrate low-latency streaming endpoints into applications built with Cursor, Lovable, v0, or custom Python/TypeScript stacks.
 
 ---
 
-## 3. Pourquoi ElevenCreative Transforme la Production Audio
+## 2. The #MoreThanVoice Contest: $200,000 Creator Competition
 
-Historiquement réputé pour son modèle de Text-to-Speech v3, ElevenLabs s'est transformé en un moteur de production multimédia global. Comparé à d'autres solutions du marché comme [HeyGen](/versus/elevenlabs-vs-heygen/) ou [Murf AI](/reviews/murf-ai/), la suite combine désormais :
+The **#MoreThanVoice** contest is an international creative showcase designed to demonstrate that ElevenLabs is no longer just a text-to-speech platform, but an end-to-end multimedia production suite.
 
-1. **Le Sound Design procédural (SFX)** : Décrivez une ambiance sonore en langage naturel (*"porte métallique qui grince dans un bunker souterrain avec réverbération"*) pour générer des effets audio studio.
-2. **La Musique Commerciale** : Fini les litiges de droits d'auteur sur YouTube. Les compositions générées sont utilisables pour vos projets professionnels.
-3. **Le Doublage Automatique (AI Dubbing)** : Traduction et synchronisation labiale dans plus de 29 langues tout en conservant l'empreinte vocale d'origine.
-4. **La Téléphonie Autonome** : Grâce aux [agents conversationnels ElevenAgents](/blog/elevenagents-ai-receptionist-guide/), vous pouvez connecter une voix humaine ultra-réactive à votre ligne professionnelle ou votre agenda Calendly.
+### Prize Distribution Breakdown:
+- **15 Daily Winners**: **$10,000 awarded every single day** between November 16 and November 30, 2026 (ET timezone). That represents **$150,000** distributed across daily winners.
+- **$50,000 Grand Prize**: Selected on or about **December 4, 2026**, exclusively from the 15 daily winners.
+- **Total Cash Pool**: **$200,000 in cash rewards**.
 
-Pour évaluer votre consommation de crédits et comparer vos coûts d'infrastructure vocale, consultez notre [Calculateur de Tarifs IA](/calculator/ai-pricing/).
-
----
-
-## 4. Calendrier Officiel & Dates Clés
-
-Notez ces dates dans votre planning de production :
-
-- **16 novembre 2026 (00h01 ET)** : Lancement mondial des réductions -55% et ouverture du formulaire de candidature du concours.
-- **Du 16 au 30 novembre 2026** : Sélection et annonce d'un gagnant à 10 000 $ chaque jour.
-- **30 novembre 2026 (23h59 ET)** : Clôture définitive des inscriptions au concours #MoreThanVoice.
-- **1er décembre 2026** : Fin des tarifs promotionnels Black Friday / Cyber Monday.
-- **4 décembre 2026** : Élection et annonce du Grand Vainqueur des 50 000 $.
+### Eligibility & Submission Rules:
+- **No Purchase Required**: Open to all registered users, including completely free accounts (*Free Tier*) as well as paid subscribers.
+- **The Creative Brief**: Showcase how you utilize **ElevenCreative beyond standard voiceover** (e.g., combining original commercial music, procedural Foley sound effects, emotional character acting, or cinematic trailer design).
+- **Multi-Platform Requirement**: Post your finished creative piece publicly on at least **two separate social platforms** (YouTube, LinkedIn, X, TikTok, or Instagram).
+- **Mandatory Tags**: Include the hashtags **#morethanvoice** and **#contest**, along with the official ElevenLabs watermark on the video/asset.
+- **Submission Form**: Submit your live post URLs through ElevenLabs' official entry portal once submissions open on November 16.
 
 ---
 
-## 5. FAQ ElevenLabs Black Friday 2026
+## 3. Why ElevenCreative is a Generative Leap Beyond Text-to-Speech
 
-### Quel est le meilleur forfait à choisir pendant le Black Friday ?
-Pour 90 % des créateurs et développeurs indépendants, le forfait **Creator annuel à 99 $** est l'option la plus rentable : il offre des quotas généreux, l'accès API, ElevenCreative et ElevenAgents avec 55 % d'économie immédiate.
+While competitors like [HeyGen](/versus/elevenlabs-vs-heygen/) focus heavily on visual video avatars, ElevenLabs has doubled down on studio-grade acoustic depth. The current engine integrates four core creative modalities:
 
-### Le concours #MoreThanVoice nécessite-t-il d'acheter un abonnement ?
-Non. Le concours est formellement ouvert à tous les utilisateurs, y compris ceux utilisant le forfait gratuit d'ElevenLabs.
+1. **Procedural Sound Effects (SFX)**: Generate complex audio assets directly from text prompts (*"heavy blast doors sealing inside an underground concrete bunker with metallic reverberation"*).
+2. **Commercial Music Composition**: Generate licensed background scores without risking copyright strikes on streaming networks or client deliverables.
+3. **AI Dubbing & Cadence Preservation**: Translate speech into 29+ languages while maintaining the speaker's original timbre, rhythm, and vocal acoustics.
+4. **Autonomous Phone Agents**: Through [ElevenAgents](/blog/elevenagents-ai-receptionist-guide/), teams can deploy human-sounding customer support agents that integrate with Calendly, Google Calendar, and custom webhooks.
 
-### Comment s'assurer que mon projet est éligible aux 10 000 $ quotidiens ?
-Votre création doit être réalisée avec ElevenCreative, publiée publiquement sur au moins deux plateformes avec les tags `#morethanvoice` et `#contest`, porter le watermark officiel et être enregistrée via le formulaire dédié avant le 30 novembre à 23h59 ET.
+To model your monthly credit burn rate and compare token usage, explore our interactive [AI Pricing Calculator](/calculator/ai-pricing/).
 
-### Où s'inscrire pour bénéficier de la remise de 55 % ?
-L'offre s'active directement en ligne sur la page officielle : [https://try.elevenlabs.io/ajhd6t7k04dh](https://try.elevenlabs.io/ajhd6t7k04dh).
+---
+
+## 4. Official Timeline & Important Deadlines
+
+Keep these key operational dates in your editorial calendar:
+
+- **November 16, 2026 (00:01 AM ET)**: The 55% discount goes live globally, and #MoreThanVoice contest submissions officially open.
+- **November 16 – November 30, 2026**: One $10,000 daily winner announced every 24 hours.
+- **November 30, 2026 (11:59 PM ET)**: Submissions for the contest permanently close.
+- **December 1, 2026**: Black Friday & Cyber Monday promotional discounts expire.
+- **December 4, 2026**: The $50,000 Grand Prize winner is announced.
+
+---
+
+## 5. Frequently Asked Questions (FAQ)
+
+### Which ElevenLabs Black Friday plan offers the highest return on investment?
+For individual creators, developers, and agency operators, the **Creator annual plan at $99/year** delivers the highest value. It provides ample monthly character allowances, full commercial rights, API access, and telephony features at a 55% discount.
+
+### Can free tier users enter the $200,000 #MoreThanVoice contest?
+Yes. The contest is explicitly open to both free and paid accounts, with no purchase necessary to enter or win.
+
+### How do I ensure my entry qualifies for the $10,000 daily prize?
+Your project must be produced in ElevenCreative, published on at least two public social platforms with `#morethanvoice` and `#contest`, display the official watermark, and be submitted through the official form before November 30 at 11:59 PM ET.
+
+### Where can I activate the 55% discount?
+The discount is activated directly through the verified partner link: [https://try.elevenlabs.io/ajhd6t7k04dh](https://try.elevenlabs.io/ajhd6t7k04dh).
