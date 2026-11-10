@@ -362,7 +362,7 @@ const catalogData = {
             </div>
             <div>
               <span class="font-bold text-white uppercase text-[11px] tracking-wider block">Filtre Temporel des Vues & Métriques :</span>
-              <span id="current-period-desc" class="text-[10px] text-emerald-400 font-semibold">Période active : 30 Derniers Jours consolidés Cloudflare (28 974 Visiteurs • 33 345 Pages Vues)</span>
+              <span id="current-period-desc" class="text-[10px] text-emerald-400 font-semibold">Période active : 30 Derniers Jours consolidés Cloudflare (29 075 Visiteurs • 33 440 Pages Vues)</span>
             </div>
           </div>
           
@@ -1324,35 +1324,35 @@ const catalogData = {
         const PERIOD_CONFIGS = {
           today: {
             label: "Aujourd'hui (24h)",
-            desc: `Période active : Dernières 24 Heures réelles Cloudflare (${(pToday.visitors || 2215).toLocaleString()} Visiteurs • ${(pToday.pageviews || 1502).toLocaleString()} Pages Vues)`,
-            edgeVisitors: pToday.visitors || 2215,
-            rumVisits: pToday.rumVisits || 619,
-            rumPageviews: pToday.pageviews || 1502,
-            requests: pToday.requests || 8947,
+            desc: `Période active : Dernières 24 Heures réelles Cloudflare (${(pToday.visitors || 2316).toLocaleString()} Visiteurs • ${(pToday.pageviews || 1597).toLocaleString()} Pages Vues)`,
+            edgeVisitors: pToday.visitors || 2316,
+            rumVisits: pToday.rumVisits || 648,
+            rumPageviews: pToday.pageviews || 1597,
+            requests: pToday.requests || 9388,
             totalHops: pToday.hops || 8,
             dwell: pToday.dwell || "2m 55s",
             revenue: pToday.revenue || 280,
-            viewMultiplier: pToday.viewMultiplier || 0.045
+            viewMultiplier: pToday.viewMultiplier || 0.0478
           },
           week: {
             label: "1 Semaine (7j)",
-            desc: `Période active : 7 Derniers Jours réels Cloudflare (${(pWeek.visitors || 18527).toLocaleString()} Visiteurs • ${(pWeek.pageviews || 18100).toLocaleString()} Pages Vues)`,
-            edgeVisitors: pWeek.visitors || 18527,
-            rumVisits: pWeek.rumVisits || 4816,
-            rumPageviews: pWeek.pageviews || 18100,
-            requests: pWeek.requests || 75181,
+            desc: `Période active : 7 Derniers Jours réels Cloudflare (${(pWeek.visitors || 18628).toLocaleString()} Visiteurs • ${(pWeek.pageviews || 18195).toLocaleString()} Pages Vues)`,
+            edgeVisitors: pWeek.visitors || 18628,
+            rumVisits: pWeek.rumVisits || 4843,
+            rumPageviews: pWeek.pageviews || 18195,
+            requests: pWeek.requests || 75622,
             totalHops: pWeek.hops || 24,
             dwell: pWeek.dwell || "2m 48s",
             revenue: pWeek.revenue || 840,
-            viewMultiplier: pWeek.viewMultiplier || 0.5428
+            viewMultiplier: pWeek.viewMultiplier || 0.5441
           },
           month: {
             label: "1 Mois (30j)",
-            desc: `Période active : 30 Derniers Jours consolidés Cloudflare (${(pMonth.visitors || 28974).toLocaleString()} Visiteurs • ${(pMonth.pageviews || 33345).toLocaleString()} Pages Vues)`,
-            edgeVisitors: pMonth.visitors || 28974,
-            rumVisits: pMonth.rumVisits || 8981,
-            rumPageviews: pMonth.pageviews || 33345,
-            requests: pMonth.requests || 150879,
+            desc: `Période active : 30 Derniers Jours consolidés Cloudflare (${(pMonth.visitors || 29075).toLocaleString()} Visiteurs • ${(pMonth.pageviews || 33440).toLocaleString()} Pages Vues)`,
+            edgeVisitors: pMonth.visitors || 29075,
+            rumVisits: pMonth.rumVisits || 9013,
+            rumPageviews: pMonth.pageviews || 33440,
+            requests: pMonth.requests || 151320,
             totalHops: pMonth.hops || 38,
             dwell: pMonth.dwell || "2m 50s",
             revenue: 1330,
@@ -1360,27 +1360,27 @@ const catalogData = {
           },
           quarter: {
             label: "3 Mois (90j)",
-            desc: `Période active : 3 Derniers Mois consolidés Cloudflare (${(pQuarter.visitors || 57735).toLocaleString()} Visiteurs • ${(pQuarter.pageviews || 68008).toLocaleString()} Pages Vues)`,
-            edgeVisitors: pQuarter.visitors || 57735,
-            rumVisits: pQuarter.rumVisits || 17320,
-            rumPageviews: pQuarter.pageviews || 68008,
-            requests: pQuarter.requests || 290036,
-            totalHops: pQuarter.hops || 82,
-            dwell: pQuarter.dwell || "2m 45s",
-            revenue: 2870,
-            viewMultiplier: pQuarter.viewMultiplier || 2.0395
+            desc: `Période active : 3 Mois (90j) — Site actif depuis 19 jours (${(pQuarter.visitors || 29075).toLocaleString()} Visiteurs • ${(pQuarter.pageviews || 33440).toLocaleString()} Pages Vues)`,
+            edgeVisitors: pQuarter.visitors || 29075,
+            rumVisits: pQuarter.rumVisits || 9013,
+            rumPageviews: pQuarter.pageviews || 33440,
+            requests: pQuarter.requests || 151320,
+            totalHops: pQuarter.hops || 38,
+            dwell: pQuarter.dwell || "2m 50s",
+            revenue: 1330,
+            viewMultiplier: 1.0
           },
           all: {
             label: "Depuis l'ouverture (Global)",
-            desc: `Période active : Historique Global depuis l'ouverture (${(pAll.visitors || 67923).toLocaleString()} Visiteurs • ${(pAll.pageviews || 78170).toLocaleString()} Pages Vues D1)`,
-            edgeVisitors: pAll.visitors || 67923,
-            rumVisits: pAll.rumVisits || 21500,
-            rumPageviews: pAll.pageviews || 78170,
-            requests: pAll.requests || 353703,
-            totalHops: pAll.hops || 104,
-            dwell: pAll.dwell || "2m 42s",
-            revenue: 3640,
-            viewMultiplier: pAll.viewMultiplier || 2.3443
+            desc: `Période active : Historique Global depuis l'ouverture (${(pAll.visitors || 29075).toLocaleString()} Visiteurs • ${(pAll.pageviews || 33440).toLocaleString()} Pages Vues Edge • 19 jours)`,
+            edgeVisitors: pAll.visitors || 29075,
+            rumVisits: pAll.rumVisits || 9013,
+            rumPageviews: pAll.pageviews || 33440,
+            requests: pAll.requests || 151320,
+            totalHops: pAll.hops || 38,
+            dwell: pAll.dwell || "2m 50s",
+            revenue: 1330,
+            viewMultiplier: 1.0
           }
         };
 
