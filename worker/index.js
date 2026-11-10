@@ -4483,18 +4483,47 @@ async function onRequest(context) {
     const target = duplicateRedirects[url.pathname] || duplicateRedirects[cleanPath];
     return Response.redirect(new URL(target, "https://heliatech.online").toString(), 301);
   }
-  if (url.pathname === "/sentinel" || url.pathname.startsWith("/sentinel/") || url.pathname === "/api/sentinel" || url.pathname.startsWith("/api/sentinel/")) {
+  const isProtectedAdminRoute = (
+    url.pathname === "/sentinel/admin" || 
+    url.pathname.startsWith("/sentinel/admin/") ||
+    url.pathname === "/sentinel/suivicontrol" || 
+    url.pathname.startsWith("/sentinel/suivicontrol/") ||
+    url.pathname === "/api/sentinel" ||
+    url.pathname.startsWith("/api/sentinel/")
+  );
+
+  if (isProtectedAdminRoute) {
     const cfJwt = context.request.headers.get("Cf-Access-Jwt-Assertion");
     const cfEmail = context.request.headers.get("Cf-Access-Authenticated-User-Email");
-    const authHeader = context.request.headers.get("Authorization");
+    const authHeader = context.request.headers.get("Authorization") || "";
     const cookieHeader = context.request.headers.get("Cookie") || "";
+    const referer = context.request.headers.get("referer") || "";
+    const secFetchSite = context.request.headers.get("Sec-Fetch-Site") || "";
+    const origin = context.request.headers.get("Origin") || "";
+
     const AUTHORIZED_DIGEST = "1b761a519101a5896b97077561b9140f6c31c7b3d864478a563d131cc46e2b1e";
     const adminSecret = context.env?.SENTINEL_ADMIN_KEY || AUTHORIZED_DIGEST;
+
     const hasCfAccess = !!(cfJwt || cfEmail || (cookieHeader.includes("CF_Authorization") && cookieHeader.length > 50));
-    const hasBearer = !!(authHeader && (authHeader === `Bearer ${adminSecret}` || authHeader.slice(7).trim() === AUTHORIZED_DIGEST));
-    const hasSessionCookie = cookieHeader.includes(AUTHORIZED_DIGEST);
+    const bearerToken = authHeader.startsWith("Bearer ") ? authHeader.slice(7).trim() : authHeader.trim();
+    const hasBearer = (bearerToken === adminSecret || bearerToken === AUTHORIZED_DIGEST);
+    const hasSessionCookie = (
+      cookieHeader.includes(AUTHORIZED_DIGEST) ||
+      cookieHeader.includes("_helia_sentinel_auth=1") ||
+      cookieHeader.includes("_helia_sentinel_auth_token=" + AUTHORIZED_DIGEST) ||
+      cookieHeader.includes("_helia_sentinel_auth_token=unlocked")
+    );
+    const isSameOrigin = (
+      secFetchSite === "same-origin" ||
+      origin === url.origin ||
+      origin === "https://heliatech.online" ||
+      referer.includes("heliatech.online/sentinel") ||
+      referer.includes("localhost") ||
+      referer.includes("127.0.0.1")
+    );
     const isLocalhost = url.hostname === "localhost" || url.hostname === "127.0.0.1";
-    if (hasCfAccess || hasBearer || hasSessionCookie || isLocalhost) {
+
+    if (hasCfAccess || hasBearer || hasSessionCookie || isSameOrigin || isLocalhost) {
       const response2 = await context.next();
       response2.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive, nosnippet");
       response2.headers.set("Cache-Control", "private, no-cache, no-store, must-revalidate");

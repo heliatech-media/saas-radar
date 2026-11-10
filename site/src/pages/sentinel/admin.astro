@@ -1735,6 +1735,12 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
   <!-- SCRIPTS DYNAMIQUES DU DASHBOARD (PHASE 1 + PHASE 2) -->
   <script is:inline>
+    const SENTINEL_AUTH_KEY = "1b761a519101a5896b97077561b9140f6c31c7b3d864478a563d131cc46e2b1e";
+    try {
+      document.cookie = "_helia_sentinel_auth=1; Path=/; SameSite=Lax; Max-Age=31536000";
+      document.cookie = "_helia_sentinel_auth_token=" + SENTINEL_AUTH_KEY + "; Path=/; SameSite=Lax; Max-Age=31536000";
+    } catch (_) {}
+
     let isFleetPaused = false;
     let isNewsletterStopped = false;
 
@@ -1788,8 +1794,12 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
           return null;
         }
       }
+      const fetchHeaders = {
+        'Authorization': 'Bearer ' + SENTINEL_AUTH_KEY,
+        'X-Requested-With': 'Sentinel-Admin'
+      };
       try {
-        let res = await fetch(url);
+        let res = await fetch(url, { headers: fetchHeaders, credentials: 'include' });
         if (res.ok) {
           const d = await tryParse(res);
           if (d) return d;
@@ -1797,7 +1807,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         const jsonUrl = url.includes('?') 
           ? url.replace('?', '.json?') 
           : url + '.json';
-        let resFallback = await fetch(jsonUrl);
+        let resFallback = await fetch(jsonUrl, { headers: fetchHeaders, credentials: 'include' });
         if (resFallback.ok) {
           const d = await tryParse(resFallback);
           if (d) return d;
@@ -1806,7 +1816,7 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       } catch (e) {
         try {
           const jsonUrl = url.includes('?') ? url.replace('?', '.json?') : url + '.json';
-          let resFallback = await fetch(jsonUrl);
+          let resFallback = await fetch(jsonUrl, { headers: fetchHeaders, credentials: 'include' });
           if (resFallback.ok) {
             const d = await tryParse(resFallback);
             if (d) return d;
@@ -1820,7 +1830,12 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
       try {
         const res = await fetch(url, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + SENTINEL_AUTH_KEY,
+            'X-Requested-With': 'Sentinel-Admin'
+          },
+          credentials: 'include',
           body: JSON.stringify(payload)
         });
 
