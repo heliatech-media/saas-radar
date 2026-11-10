@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-10T05:19:55.836542",
+  "timestamp": "2026-11-10T14:02:13.383906",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 184,
-    "total_redirects_active": 112,
-    "new_redirects_healed": 34,
+    "total_content_files_scanned": 185,
+    "total_redirects_active": 113,
+    "new_redirects_healed": 35,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -125,6 +125,11 @@
       "slug": "davinci-resolve",
       "target_url": "https://www.davinci-resolve.com",
       "source_file": "best-descript-alternatives-2026.md"
+    },
+    {
+      "slug": "substack",
+      "target_url": "https://www.substack.com",
+      "source_file": "beehiiv-vs-substack.md"
     },
     {
       "slug": "cognism",

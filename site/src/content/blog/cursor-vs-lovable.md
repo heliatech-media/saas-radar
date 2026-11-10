@@ -182,7 +182,7 @@ To remove all ambiguity, apply this binary operational checklist to your next pr
 ### When to Strictly Choose Lovable
 *   You need to validate a product concept, build an MVP, or launch an internal operations dashboard in days rather than months.
 *   You are a solo founder, product manager, or designer who wants to turn wireframes into functioning, deployed web applications without writing boilerplate code.
-*   Your application stack fits cleanly within modern web paradigms (React, Vite, Tailwind, Supabase) and prioritizes rapid frontend/backend integration over complex distributed systems engineering.
+*   Your application stack fits cleanly within modern web paradigms (React, Vite, Tailwind, [Supabase](/reviews/supabase)) and prioritizes rapid frontend/backend integration over complex distributed systems engineering.
 
 ---
 

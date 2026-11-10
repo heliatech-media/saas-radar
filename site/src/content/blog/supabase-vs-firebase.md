@@ -1,23 +1,29 @@
 ---
-title: "Supabase vs Firebase (2026): Open-Source PostgreSQL Power vs Google NoSQL Proprietary Lock-in"
-description: "Comprehensive 2026 head-to-head teardown of Supabase vs Firebase. Empirical comparison matrix, pricing scaling math, architectural benchmarks, and executive recommendations."
-date: "2026-10-23"
-author: "HELIA TECH"
-category: "DevTools"
+title: 'Supabase vs Firebase (2026): Open-Source PostgreSQL Power vs Google NoSQL
+  Proprietary Lock-in'
+description: Comprehensive 2026 head-to-head teardown of Supabase vs Firebase. Empirical
+  comparison matrix, pricing scaling math, architectural benchmarks, and executive
+  recommendations.
+date: '2026-10-23'
+author: HELIA TECH
+category: DevTools
 tags:
-  - Supabase
-  - Firebase
-  - "Supabase vs Firebase"
-  - Comparison
-  - B2B Software
-readingTime: "12 MIN"
-tool_slug: "supabase"
+- Supabase
+- Firebase
+- Supabase vs Firebase
+- Comparison
+- B2B Software
+readingTime: 9 MIN
+tool_slug: supabase
 tldr:
-  - "Supabase excels at relational integrity and SQL flexibility, delivering unmatched leverage for engineering teams needing enterprise PostgreSQL extensions."
-  - "Firebase remains superior for rapid out-of-the-box mobile prototyping, providing an edge when utilizing Google Cloud's native ecosystem primitives."
-  - "Economic scaling breakdown reveals up to 70% cost variation between both platforms at scale."
+- Supabase excels at relational integrity and SQL flexibility, delivering unmatched
+  leverage for engineering teams needing enterprise PostgreSQL extensions.
+- Firebase remains superior for rapid out-of-the-box mobile prototyping, providing
+  an edge when utilizing Google Cloud's native ecosystem primitives.
+- Economic scaling breakdown reveals up to 70% cost variation between both platforms
+  at scale.
+image: /images/blog/supabase.svg
 ---
-
 ## Executive Verdict (The 30-Second Summary)
 
 The Backend-as-a-Service (BaaS) landscape in 2026 is defined by a fundamental philosophical split: **relational freedom versus proprietary velocity**. 

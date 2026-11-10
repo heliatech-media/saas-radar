@@ -101,7 +101,7 @@ Native CSV and ClickUp direct importers map columns, statuses, and assignees cle
 Clean JSON and CSV issue importers map historical ticket data, comments, and assignees smoothly from ClickUp.
 *Estimated migration time:* **1 to 2 hours.**
 
-[Test Linear With Official Extended Access ↗](/go/linear)
+[Test [Linear](/reviews/linear) With Official Extended Access ↗](/go/linear)
 
 ---
 
@@ -175,7 +175,7 @@ Basecamp completely rejects the notification-heavy, micro-management paradigm of
 - **Automatic Check-ins:** Replaces status update meetings with scheduled async prompts sent directly to team members.
 
 ### Where It Falls Short
-- Rigid structure: You cannot heavily customize workflows, fields, or views like you can in ClickUp or Monday.com.
+- Rigid structure: You cannot heavily customize workflows, fields, or views like you can in ClickUp or [Monday.com](/reviews/monday-com).
 - Poorly suited for complex software engineering bug-tracking pipelines or multi-dependency product roadmaps.
 
 ### Pricing Model & Economics
