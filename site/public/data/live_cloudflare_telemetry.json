@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-11T03:49:45.098454",
+  "last_synced": "2026-11-11T13:15:42.251199",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-14 - 2026-11-11)",
-  "total_visitors_network": 30561,
-  "total_requests": 153985,
-  "total_visits": 9473,
-  "total_pageviews": 34248,
+  "total_visitors_network": 31703,
+  "total_requests": 158573,
+  "total_visits": 9827,
+  "total_pageviews": 35249,
   "percent_cached": "56.14%",
-  "data_served_mb": 1509.2,
+  "data_served_mb": 1553.0,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
       "date": "2026-11-11",
-      "visitors": 1383,
-      "rumVisits": 387,
-      "pageviews": 644,
-      "requests": 2061,
+      "visitors": 2525,
+      "rumVisits": 707,
+      "pageviews": 1645,
+      "requests": 6649,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0188
+      "viewMultiplier": 0.0467
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 15311,
-      "rumVisits": 3980,
-      "pageviews": 13231,
-      "requests": 45373,
+      "visitors": 16453,
+      "rumVisits": 4277,
+      "pageviews": 14232,
+      "requests": 49961,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.3863
+      "viewMultiplier": 0.4038
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 30561,
-      "rumVisits": 9473,
-      "pageviews": 34248,
-      "requests": 153985,
+      "visitors": 31703,
+      "rumVisits": 9827,
+      "pageviews": 35249,
+      "requests": 158573,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 30561,
-      "rumVisits": 9473,
-      "pageviews": 34248,
-      "requests": 153985,
+      "visitors": 31703,
+      "rumVisits": 9827,
+      "pageviews": 35249,
+      "requests": 158573,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 30561,
-      "rumVisits": 9473,
-      "pageviews": 34248,
-      "requests": 153985,
+      "visitors": 31703,
+      "rumVisits": 9827,
+      "pageviews": 35249,
+      "requests": 158573,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,23 +70,23 @@
   "top_pages": [
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6280
+      "views": 6290
     },
     {
       "path": "/api/telemetry",
-      "views": 4510
+      "views": 5280
     },
     {
       "path": "/",
-      "views": 4000
+      "views": 4110
     },
     {
       "path": "/calculator/",
-      "views": 1460
+      "views": 1500
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1310
+      "views": 1330
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -94,7 +94,7 @@
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 330
+      "views": 340
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
@@ -102,15 +102,19 @@
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
-      "views": 310
+      "views": 320
+    },
+    {
+      "path": "/blog/",
+      "views": 300
     },
     {
       "path": "/radar/",
       "views": 300
     },
     {
-      "path": "/blog/",
-      "views": 300
+      "path": "/deals/",
+      "views": 260
     },
     {
       "path": "/reviews/beehiiv/",
@@ -121,50 +125,46 @@
       "views": 260
     },
     {
-      "path": "/deals/",
-      "views": 260
-    },
-    {
       "path": "/reviews/clickup/",
-      "views": 240
+      "views": 250
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 28250
+      "views": 28750
     },
     {
       "country": "Morocco",
-      "views": 24750
+      "views": 25620
     },
     {
       "country": "Germany",
-      "views": 2100
+      "views": 2390
     },
     {
       "country": "Singapore",
-      "views": 2010
+      "views": 2100
     },
     {
       "country": "Brazil",
-      "views": 1080
+      "views": 1130
     },
     {
       "country": "United Kingdom",
       "views": 810
     },
     {
+      "country": "CN",
+      "views": 760
+    },
+    {
       "country": "Belgium",
       "views": 740
     },
     {
-      "country": "CN",
-      "views": 730
-    },
-    {
       "country": "France",
-      "views": 680
+      "views": 690
     },
     {
       "country": "Canada",

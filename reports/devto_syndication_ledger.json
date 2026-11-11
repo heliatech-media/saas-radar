@@ -915,6 +915,19 @@
         "clickupvslinear",
         "comparison"
       ]
+    },
+    "invideo-ai-evolution-guide-2026": {
+      "id": 5017154,
+      "url": "https://dev.to/heliatech/invideo-ai-engineering-breakdown-scaling-enterprise-video-production-at-100k-unit-economics-3oap",
+      "title": "InVideo AI: The Genesis of Text-to-Video Synthesis and the Executive Playbook to Production Velocity",
+      "canonical_url": "https://heliatech.online/blog/invideo-ai-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "invideoai",
+        "productivity",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null

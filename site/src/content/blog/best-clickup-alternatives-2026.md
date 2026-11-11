@@ -255,7 +255,7 @@ To select the optimal platform for your organization, evaluate your primary oper
    * *Rationale:* You cannot afford administrative overhead. These tools offer lightning-fast onboarding, low initial costs, and clean user interfaces that scale without configuration bloat.
 
 2. **High-Growth Mid-Market Scale-Ups (50–250 Employees):**
-   * *Recommendation:* **[Monday.com](/reviews/monday-com)** (for general operations) or **Linear** (for engineering squads).
+   * *Recommendation:* **[Monday.com](/reviews/monday-com)** (for general operations) or **[Linear](/reviews/linear)** (for engineering squads).
    * *Rationale:* Your teams are beginning to silo. [Monday.com](/reviews/monday-com) bridges departments with zero lag, while Linear keeps engineering velocity high without the performance degradation experienced in ClickUp.
 
 3. **Enterprises with Strict Compliance (SOC2 / GDPR / FedRAMP):**
@@ -271,7 +271,7 @@ Migrating away from ClickUp requires a methodical approach to prevent payload co
 1. **Audit and Purge Dead Workspaces:**
    Before exporting, conduct a clean-up sweep in ClickUp. Archive abandoned spaces, delete duplicate custom fields, and resolve orphaned subtasks to minimize data migration clutter.
 2. **Map Custom Fields and Status Schemas:**
-   Document ClickUp's custom field types (dropdowns, numbers, formulas) and ensure your destination platform (e.g., Monday.com or Linear) supports equivalent data types to prevent truncation during import.
+   Document ClickUp's custom field types (dropdowns, numbers, formulas) and ensure your destination platform (e.g., [Monday.com](/reviews/monday-com) or Linear) supports equivalent data types to prevent truncation during import.
 3. **Execute a Staged Test Migration:**
    Never migrate your entire company database on the first try. Export a single non-critical department space, import it into the target platform, and test all automations, permissions, and webhook integrations.
 4. **Freeze ClickUp and Cut Over:**

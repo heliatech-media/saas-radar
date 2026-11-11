@@ -486,6 +486,16 @@
     "affiliate_url": "https://www.opus.pro/?via=heliatech"
   },
   {
+    "name": "OpusClip",
+    "slug": "opusclip",
+    "tagline": "Transform long-form videos into viral short-form clips using AI-driven repurposing.",
+    "category": "AI Video & Content Creation",
+    "rating": 4.5,
+    "starting_price": "$19/mo",
+    "best_for": "Content creators, social media managers, and B2B marketing teams repurposing long-form video assets.",
+    "affiliate_url": "https://www.opus.pro"
+  },
+  {
     "name": "PartnerStack",
     "slug": "partnerstack",
     "tagline": "The complete partnership ecosystem to scale SaaS revenue through affiliates, resellers, and referral partners.",

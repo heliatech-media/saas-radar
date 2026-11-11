@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: opus-clip
 image: /images/blog/opus-clip.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free OpusClip Account ➔
   url: https://www.opus.pro/?via=heliatech
 ---
-
 ---
 title: "Autonomous Video Ingestion Unit Economics: Deconstructing OpusClip Scale Efficiency"
 slug: "opusclip-unit-economics"

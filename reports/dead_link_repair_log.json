@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-11T03:50:20.678345",
+  "timestamp": "2026-11-11T13:16:20.316645",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 190,
-    "total_redirects_active": 114,
-    "new_redirects_healed": 35,
+    "total_content_files_scanned": 193,
+    "total_redirects_active": 115,
+    "new_redirects_healed": 36,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -60,6 +60,11 @@
       "slug": "jira",
       "target_url": "https://www.jira.com",
       "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "opusclip",
+      "target_url": "https://www.opusclip.com",
+      "source_file": "opusclip-evolution-guide-2026.md"
     },
     {
       "slug": "zoominfo",
