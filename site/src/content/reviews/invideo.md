@@ -5,7 +5,7 @@ tagline: Turn text prompts into fully produced, publish-ready videos with AI ass
 category: AI Video
 rating: 4.5
 website_url: https://invideo.io
-affiliate_url: https://invideo.io
+affiliate_url: "https://invideo.io/?fpr=heliatech"
 summary: InVideo is an AI-powered video creation platform that generates scripts,
   creates voiceovers, selects stock footage, and edits videos entirely from simple
   text prompts. It is designed to accelerate video production workflows for creators,

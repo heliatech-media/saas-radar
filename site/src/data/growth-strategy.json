@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-10T21:09:53.762165",
+  "timestamp": "2026-11-11T03:51:53.885630",
   "current_status": {
     "published_reviews": 78,
-    "published_articles": 110,
-    "total_assets": 188
+    "published_articles": 112,
+    "total_assets": 190
   },
   "milestone_progress": {
     "phase1_100k": {
@@ -16,7 +16,7 @@
     "phase2_1m": {
       "target_visitors": 1000000,
       "assets_required": 454,
-      "progress_percent": 41.41,
+      "progress_percent": 41.85,
       "estimated_monthly_hops": 120000,
       "estimated_monthly_royalty": "$178,500"
     }

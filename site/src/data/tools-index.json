@@ -256,7 +256,8 @@
     "rating": 4.5,
     "starting_price": "$25/mo",
     "best_for": "Content creators, social media managers, and digital marketers producing high-volume video content",
-    "affiliate_url": "https://invideo.io"
+    "affiliate_url": "https://invideo.io/?fpr=heliatech",
+    "commission_rate": "50% for the first month or up to 25% recurring depending on the plan"
   },
   {
     "name": "InVideo AI",
@@ -481,7 +482,7 @@
     "category": "AI Video & Content Creation",
     "rating": 4.6,
     "starting_price": "$29/mo",
-    "best_for": "Podcasters, digital marketing agencies, and content creators looking to scale short-form output without adding video editors.",
+    "best_for": "Podcasters, content creators, and marketing teams looking to scale short-form social distribution.",
     "affiliate_url": "https://www.opus.pro/?via=heliatech"
   },
   {

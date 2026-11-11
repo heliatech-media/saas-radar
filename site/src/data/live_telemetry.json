@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-10 21:07:58 UTC",
+  "last_updated": "2026-11-11 03:49:43 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 78,
-    "total_published_investigations": 188,
+    "total_monetized_tools": 79,
+    "total_published_investigations": 190,
     "reviews_audited": 78,
-    "masterclasses_and_duels": 110,
+    "masterclasses_and_duels": 112,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$27,300 USD",
+    "projected_monthly_mrr": "$27,650 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -199,6 +199,11 @@
     },
     {
       "slug": "invideo-ai",
+      "destination": "https://invideo.io/?fpr=heliatech",
+      "type": "Commission Partner"
+    },
+    {
+      "slug": "invideo",
       "destination": "https://invideo.io/?fpr=heliatech",
       "type": "Commission Partner"
     },
@@ -465,6 +470,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-05 20:58:59",
+      "title": "Cycle Autonome #Bannerbear",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Bannerbear et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-05 20:57:28",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
       "timestamp": "2026-11-05 18:52:08",
       "title": "Cycle Autonome #VideoAsk",
       "category": "CYCLE",
@@ -483,20 +502,6 @@
       "title": "Cycle Autonome #Rask.ai",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Rask.ai et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-05 16:44:22",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, rask-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-05 14:37:58",
-      "title": "Cycle Autonome #Axiom.ai",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Axiom.ai et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

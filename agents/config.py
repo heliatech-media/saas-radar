@@ -181,7 +181,8 @@ AFFILIATE_MAP = {
     "capcut-pro": "https://capcut.pxf.io/heliatech",
     "capcut": "https://capcut.pxf.io/heliatech",
     "invideo-ai": "https://invideo.io/?fpr=heliatech",
-    "loops": "https://loops.so/?fp_ref=heliatech"
+    "loops": "https://loops.so/?fp_ref=heliatech",
+    "invideo": "https://invideo.io/?fpr=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
