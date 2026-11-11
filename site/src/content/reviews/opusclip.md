@@ -5,7 +5,7 @@ tagline: Transform long-form videos into viral short-form clips using AI-driven 
 category: AI Video & Content Creation
 rating: 4.5
 website_url: https://www.opus.pro
-affiliate_url: https://www.opus.pro
+affiliate_url: "https://www.opus.pro/?via=heliatech"
 summary: OpusClip is a generative AI platform that automatically detects, crops, and
   captions highlights from long-form video content like podcasts and webinars. It
   optimizes these clips for social media platforms like TikTok, YouTube Shorts, and

@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="30%" r="70%" fx="60%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="gridGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.15" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsiaViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#030712" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Geometric Patterns -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(6, 182, 212, 0.15)" />
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="180" r="250" fill="#8b5cf6" opacity="0.15" filter="url(#intenseGlow)" />
+  <circle cx="750" cy="450" r="300" fill="#06b6d4" opacity="0.12" filter="url(#intenseGlow)" />
+  <circle cx="200" cy="500" r="200" fill="#d946ef" opacity="0.08" filter="url(#intenseGlow)" />
+
+  <!-- Abstract Vector Art: 3D Holographic Neural Render Timeline (Runway AI Video Metaphor) -->
+  <g transform="translate(560, 80)">
+    <!-- Ambient Backdrop Plane -->
+    <path d="M 50 120 L 450 40 L 520 320 L 120 400 Z" fill="url(#nodeGrad)" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1.5" filter="url(#softGlow)" />
+    
+    <!-- Connection Matrix Lines (Back) -->
+    <g stroke="rgba(6, 182, 212, 0.2)" stroke-width="1">
+      <line x1="120" y1="180" x2="320" y2="100" />
+      <line x1="320" y1="100" x2="420" y2="250" />
+      <line x1="420" y1="250" x2="220" y2="310" />
+      <line x1="220" y1="310" x2="120" y2="180" />
+    </g>
+
+    <!-- Floating 3D Vector Waveform Layers (Video Frames / Latent Space) -->
+    <!-- Layer 3 (Deepest) -->
+    <path d="M 80 220 Q 180 120 280 200 T 480 180" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.4" filter="url(#softGlow)" />
+    
+    <!-- Layer 2 (Middle) -->
+    <path d="M 100 270 Q 200 150 300 240 T 500 210" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.7" filter="url(#softGlow)" />
+
+    <!-- Layer 1 (Foreground Main Cinematic Vector Ribbon) -->
+    <path d="M 60 330 C 150 180, 250 80, 340 220 S 480 380, 540 250" fill="none" stroke="url(#cyanPurple)" stroke-width="5" filter="url(#glow)" />
+
+    <!-- Intersecting Timeline Frames (Glass Panels) -->
+    <g transform="translate(150, 120)">
+      <polygon points="0,0 80,-40 80,140 0,180" fill="url(#glassGrad)" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" />
+      <circle cx="40" cy="70" r="14" fill="#030712" stroke="#06b6d4" stroke-width="2" filter="url(#softGlow)" />
+      <text x="40" y="74" fill="#38bdf8" font-family="monospace" font-size="10" text-anchor="middle">01</text>
+    </g>
+
+    <g transform="translate(300, 75)">
+      <polygon points="0,0 90,-45 90,140 0,185" fill="url(#glassGrad)" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.6" />
+      <circle cx="45" cy="70" r="16" fill="#030712" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)" />
+      <path d="M 39 63 L 53 70 L 39 77 Z" fill="#8b5cf6" />
+    </g>
+
+    <g transform="translate(430, 140)">
+      <polygon points="0,0 70,-35 70,120 0,155" fill="url(#glassGrad)" stroke="#d946ef" stroke-width="1.5" stroke-opacity="0.7" />
+      <circle cx="35" cy="60" r="14" fill="#030712" stroke="#d946ef" stroke-width="2" filter="url(#glow)" />
+      <circle cx="35" cy="60" r="5" fill="#d946ef" />
+    </g>
+
+    <!-- Floating Neural Nodes / Vertex Points -->
+    <g filter="url(#glow)">
+      <circle cx="140" cy="275" r="5" fill="#06b6d4" />
+      <circle cx="280" cy="155" r="6" fill="#38bdf8" />
+      <circle cx="370" cy="240" r="7" fill="#8b5cf6" />
+      <circle cx="480" cy="285" r="6" fill="#d946ef" />
+    </g>
+
+    <!-- Data Stream Particle Dots -->
+    <circle cx="210" cy="210" r="3" fill="#ffffff" filter="url(#softGlow)" />
+    <circle cx="330" cy="190" r="2" fill="#38bdf8" />
+    <circle cx="410" cy="310" r="3.5" fill="#d946ef" filter="url(#softGlow)" />
+    
+    <!-- Vector Grid Accents Underneath -->
+    <path d="M 50 380 L 250 440 L 520 340" fill="none" stroke="rgba(6, 182, 212, 0.3)" stroke-dasharray="4 4" stroke-width="1.5" />
+  </g>
+
+  <!-- Left Column: Typography & Architectural Dossier Content -->
+  <g transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 105)">
+      <!-- Pill Background -->
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="rgba(6, 182, 212, 0.08)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1.5" />
+      
+      <!-- Glowing Core Dot -->
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow)" />
+      <circle cx="18" cy="17" r="2" fill="#ffffff" />
+      
+      <!-- Badge Text -->
+      <text x="38" y="22" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="11" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title Group -->
+    <g transform="translate(0, 190)">
+      <!-- Tool Title -->
+      <text x="0" y="0" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="-1.5" filter="url(#softGlow)">RUNWAY</text>
+      
+      <!-- Accent Line under Title -->
+      <path d="M 0 20 L 420 20" stroke="url(#fuchsiaViolet)" stroke-width="3" filter="url(#glow)" />
+      <path d="M 0 20 L 150 20" stroke="#06b6d4" stroke-width="3" />
+
+      <!-- Subtitle / Category -->
+      <text x="0" y="58" fill="#d946ef" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" letter-spacing="4">AI VIDEO &amp; CONTENT CREATION</text>
+
+      <!-- Investigation Title -->
+      <text x="0" y="115" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="22" letter-spacing="-0.3">
+        <tspan x="0" dy="0">The Evolution of Generative Cinema</tspan>
+        <tspan x="0" dy="32">and the Masterclass Guide to AI Video Production</tspan>
+      </text>
+    </g>
+
+    <!-- Bottom Metadata / Technical Specs Bar -->
+    <g transform="translate(0, 485)">
+      <line x1="0" y1="0" x2="440" y2="0" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+      
+      <!-- Spec Item 1 -->
+      <g transform="translate(0, 22)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">FRAMEWORK</text>
+        <text x="0" y="16" fill="#f1f5f9" font-family="system-ui, sans-serif" font-weight="600" font-size="13">Gen-3 Alpha / Latent Space</text>
+      </g>
+
+      <!-- Spec Item 2 -->
+      <g transform="translate(180, 22)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">MODALITY</text>
+        <text x="0" y="16" fill="#f1f5f9" font-family="system-ui, sans-serif" font-weight="600" font-size="13">Text-to-Video / Motion Brush</text>
+      </g>
+
+      <!-- Spec Item 3 -->
+      <g transform="translate(380, 22)">
+        <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="1">SECURITY</text>
+        <text x="0" y="16" fill="#06b6d4" font-family="system-ui, sans-serif" font-weight="600" font-size="13">Enterprise C2PA</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Framing / UI Border Accents -->
+  <g stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" fill="none">
+    <!-- Top-Left Corner Crosshair -->
+    <path d="M 30 50 L 50 50 M 50 30 L 50 50" />
+    <!-- Bottom-Right Corner Crosshair -->
+    <path d="M 1170 580 L 1150 580 M 1150 600 L 1150 580" />
+    
+    <!-- Outer Border with Glowing Segment -->
+    <rect x="24" y="24" width="1152" height="582" rx="8" stroke="rgba(139, 92, 246, 0.15)" />
+    <!-- Highlight segment top-right -->
+    <path d="M 1000 24 L 1174 24 c 4 0, 6 2, 6 6 l 0 100" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+  </g>
+
+  <!-- Branding Watermark / Domain Signature -->
+  <g transform="translate(1080, 590)" text-anchor="end">
+    <text x="0" y="0" fill="#64748b" font-family="monospace" font-size="10" letter-spacing="2">HELIATECH.ONLINE</text>
+  </g>
+</svg>

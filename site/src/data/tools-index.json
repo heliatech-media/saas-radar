@@ -493,7 +493,8 @@
     "rating": 4.5,
     "starting_price": "$19/mo",
     "best_for": "Content creators, social media managers, and B2B marketing teams repurposing long-form video assets.",
-    "affiliate_url": "https://www.opus.pro"
+    "affiliate_url": "https://www.opus.pro/?via=heliatech",
+    "commission_rate": "30% recurring for 1 year"
   },
   {
     "name": "PartnerStack",
@@ -613,6 +614,16 @@
     "best_for": "Professional podcasters, remote interviewers, media production agencies, and content marketing teams",
     "affiliate_url": "https://riverside.fm/?via=heliatech",
     "commission_rate": "30% recurring"
+  },
+  {
+    "name": "Runway",
+    "slug": "runway",
+    "tagline": "Pioneering multimodal AI video generation and editing software for creative workflows.",
+    "category": "AI Video & Content Creation",
+    "rating": 4.6,
+    "starting_price": "$0/mo",
+    "best_for": "Filmmakers, motion designers, creative directors, and digital marketers seeking to accelerate pre-visualization and asset generation.",
+    "affiliate_url": "https://runwayml.com"
   },
   {
     "name": "Sanity",

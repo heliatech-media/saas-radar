@@ -256,7 +256,7 @@ To select the optimal platform for your organization, evaluate your primary oper
 
 2. **High-Growth Mid-Market Scale-Ups (50–250 Employees):**
    * *Recommendation:* **[Monday.com](/reviews/monday-com)** (for general operations) or **[Linear](/reviews/linear)** (for engineering squads).
-   * *Rationale:* Your teams are beginning to silo. [Monday.com](/reviews/monday-com) bridges departments with zero lag, while Linear keeps engineering velocity high without the performance degradation experienced in ClickUp.
+   * *Rationale:* Your teams are beginning to silo. [Monday.com](/reviews/monday-com) bridges departments with zero lag, while [Linear](/reviews/linear) keeps engineering velocity high without the performance degradation experienced in ClickUp.
 
 3. **Enterprises with Strict Compliance (SOC2 / GDPR / FedRAMP):**
    * *Recommendation:* **Jira Software** (for engineering) or **Asana** (for enterprise PMOs).

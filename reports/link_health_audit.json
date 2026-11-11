@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-11 13:17:03",
-  "total_links_audited": 115,
+  "timestamp": "2026-11-11 21:42:04",
+  "total_links_audited": 116,
   "healthy_links": 107,
-  "broken_links_count": 8,
-  "health_rate": "93.0%",
+  "broken_links_count": 9,
+  "health_rate": "92.2%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -60,6 +60,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.opusclip-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.opusclip-sandbox.com', port=443): Failed to resolve 'www.opusclip-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "runway-tco-calculator",
+      "target_url": "https://www.runway-tco-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tome",
@@ -251,7 +259,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=XLklJxypZhI7ZK&gsxid=XLklJxypZhI7ZK&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ltPK4P19lNd0cg&gsxid=ltPK4P19lNd0cg&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -534,8 +542,8 @@
     },
     {
       "slug": "opusclip",
-      "target_url": "https://www.opusclip.com",
-      "final_url": "https://www.opus.pro/redirecting",
+      "target_url": "https://www.opus.pro/?via=heliatech",
+      "final_url": "https://www.opus.pro/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -571,7 +579,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=EgyEWPOvqTFw6K&gsxid=EgyEWPOvqTFw6K&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LUh3NL925FYG1K&gsxid=LUh3NL925FYG1K&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -599,7 +607,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=y5Tp2yBkq7MTkL&gsxid=y5Tp2yBkq7MTkL&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=rJrhAYxTX8AMCX&gsxid=rJrhAYxTX8AMCX&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -634,7 +642,7 @@
     {
       "slug": "rask-ai",
       "target_url": "https://rask.ai/?via=heliatech",
-      "final_url": "https://www.rask.ai/?via=heliatech",
+      "final_url": "https://www.rask.ai/home?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -693,6 +701,14 @@
       "final_url": "https://riverside.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "runway-tco-calculator",
+      "target_url": "https://www.runway-tco-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "sanity",
