@@ -98,14 +98,14 @@ When evaluating form software, pricing models dictate long-term operational viab
 ## Round 3: Integration Depth & Developer Ergonomics
 
 ### Typeform Ecosystem
-Typeform is an established enterprise citizen. Its integration marketplace features native, first-party connections with HubSpot, Salesforce, Slack, Google Sheets, Mailchimp, and Zapier. 
+Typeform is an established enterprise citizen. Its integration marketplace features native, first-party connections with HubSpot, Salesforce, Slack, Google Sheets, Mailchimp, and [Zapier](/reviews/zapier). 
 
 For developers, Typeform provides a mature REST API complete with comprehensive documentation, webhooks that fire reliably with cryptographic signatures for payload validation, and SDKs that simplify embedding forms into React or Vue applications. Setting up hidden fields, passing user state through URL parameters, and reading variable scores back into your application layer is well-documented and predictable.
 
 ### Tally Ecosystem
-Tally approaches integrations with a developer-first, minimalist mindset. While it offers native integrations with Slack, Notion, Google Sheets, [Airtable](/reviews/airtable), and Stripe, it relies heavily on webhooks, Zapier, and Make for complex CRM orchestrations. 
+Tally approaches integrations with a developer-first, minimalist mindset. While it offers native integrations with Slack, Notion, Google Sheets, [Airtable](/reviews/airtable), and Stripe, it relies heavily on webhooks, Zapier, and [Make](/reviews/make) for complex CRM orchestrations. 
 
-Tally’s webhook implementation is clean and emits structured JSON payloads immediately upon submission. Because Tally forms act like structured documents, mapping fields to relational databases like PostgreSQL or Airtable via Make feels more intuitive than dealing with Typeform's nested answer objects. However, for legacy enterprise stacks (e.g., rigid on-premise CRMs), Typeform’s certified enterprise connectors require less custom middleware configuration.
+Tally’s webhook implementation is clean and emits structured JSON payloads immediately upon submission. Because Tally forms act like structured documents, mapping fields to relational databases like PostgreSQL or [Airtable](/reviews/airtable) via Make feels more intuitive than dealing with Typeform's nested answer objects. However, for legacy enterprise stacks (e.g., rigid on-premise CRMs), Typeform’s certified enterprise connectors require less custom middleware configuration.
 
 ---
 

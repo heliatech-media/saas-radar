@@ -6,7 +6,7 @@ tagline: Pioneering multimodal AI video generation and editing software for crea
 category: AI Video & Content Creation
 rating: 4.6
 website_url: https://runwayml.com
-affiliate_url: https://runwayml.com
+affiliate_url: "https://runwayml.com/?via=heliatech"
 summary: Runway is a cutting-edge creative suite powered by applied machine learning,
   best known for its Gen-2 and Gen-3 Alpha video generation models. It empowers filmmakers,
   designers, and marketers to generate cinematic b-roll, rotoscope objects, and transform

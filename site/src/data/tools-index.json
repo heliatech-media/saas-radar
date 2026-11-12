@@ -249,6 +249,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "HubSpot",
+    "slug": "hubspot",
+    "tagline": "The all-in-one CRM platform designed to help scaling businesses align marketing, sales, and customer service.",
+    "category": "B2B Sales & CRM Intelligence",
+    "rating": 4.5,
+    "starting_price": "$20/mo",
+    "best_for": "Mid-market B2B enterprises, fast-growing startups, and inbound-focused marketing teams looking to unify customer data.",
+    "affiliate_url": "https://www.hubspot.com"
+  },
+  {
     "name": "InVideo",
     "slug": "invideo",
     "tagline": "Turn text prompts into fully produced, publish-ready videos with AI assistance",
@@ -623,7 +633,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "Filmmakers, motion designers, creative directors, and digital marketers seeking to accelerate pre-visualization and asset generation.",
-    "affiliate_url": "https://runwayml.com"
+    "affiliate_url": "https://runwayml.com/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Sanity",

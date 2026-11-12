@@ -271,7 +271,7 @@ Migrating away from ClickUp requires a methodical approach to prevent payload co
 1. **Audit and Purge Dead Workspaces:**
    Before exporting, conduct a clean-up sweep in ClickUp. Archive abandoned spaces, delete duplicate custom fields, and resolve orphaned subtasks to minimize data migration clutter.
 2. **Map Custom Fields and Status Schemas:**
-   Document ClickUp's custom field types (dropdowns, numbers, formulas) and ensure your destination platform (e.g., [Monday.com](/reviews/monday-com) or Linear) supports equivalent data types to prevent truncation during import.
+   Document ClickUp's custom field types (dropdowns, numbers, formulas) and ensure your destination platform (e.g., [Monday.com](/reviews/monday-com) or [Linear](/reviews/linear)) supports equivalent data types to prevent truncation during import.
 3. **Execute a Staged Test Migration:**
    Never migrate your entire company database on the first try. Export a single non-critical department space, import it into the target platform, and test all automations, permissions, and webhook integrations.
 4. **Freeze ClickUp and Cut Over:**

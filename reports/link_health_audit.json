@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-11 21:42:04",
-  "total_links_audited": 116,
-  "healthy_links": 107,
+  "timestamp": "2026-11-12 04:58:58",
+  "total_links_audited": 118,
+  "healthy_links": 109,
   "broken_links_count": 9,
-  "health_rate": "92.2%",
+  "health_rate": "92.4%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -259,7 +259,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ltPK4P19lNd0cg&gsxid=ltPK4P19lNd0cg&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0ZwPRNiCCVcwmE&gsxid=0ZwPRNiCCVcwmE&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -316,6 +316,13 @@
       "slug": "heygen",
       "target_url": "https://www.heygen.com/?via=heliatech",
       "final_url": "https://www.heygen.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "hubspot",
+      "target_url": "https://www.hubspot.com",
+      "final_url": "https://www.hubspot.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -579,7 +586,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LUh3NL925FYG1K&gsxid=LUh3NL925FYG1K&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TnOIahz5lXHYIm&gsxid=TnOIahz5lXHYIm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -607,7 +614,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=rJrhAYxTX8AMCX&gsxid=rJrhAYxTX8AMCX&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=MRPAKcrVo6MSbS&gsxid=MRPAKcrVo6MSbS&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -699,6 +706,13 @@
       "slug": "riverside",
       "target_url": "https://riverside.fm/?via=heliatech",
       "final_url": "https://riverside.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "runway",
+      "target_url": "https://runwayml.com/?via=heliatech",
+      "final_url": "https://runway.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

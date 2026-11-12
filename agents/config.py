@@ -183,7 +183,8 @@ AFFILIATE_MAP = {
     "invideo-ai": "https://invideo.io/?fpr=heliatech",
     "loops": "https://loops.so/?fp_ref=heliatech",
     "invideo": "https://invideo.io/?fpr=heliatech",
-    "opusclip": "https://www.opus.pro/?via=heliatech"
+    "opusclip": "https://www.opus.pro/?via=heliatech",
+    "runway": "https://runwayml.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

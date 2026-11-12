@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-11T21:41:22.691415",
+  "timestamp": "2026-11-12T04:58:20.754479",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 196,
-    "total_redirects_active": 116,
-    "new_redirects_healed": 36,
+    "total_content_files_scanned": 199,
+    "total_redirects_active": 118,
+    "new_redirects_healed": 37,
     "internal_links_repaired": 0,
     "external_targets_repaired": 14,
     "content_files_modified": 0
@@ -15,6 +15,11 @@
       "slug": "opusclip-sandbox",
       "target_url": "https://www.opusclip-sandbox.com",
       "source_file": "opus-clip-evolution-guide-2026.md"
+    },
+    {
+      "slug": "hubspot",
+      "target_url": "https://www.hubspot.com",
+      "source_file": "hubspot-evolution-guide-2026.md"
     },
     {
       "slug": "minvo-testing-sandbox",

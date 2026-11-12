@@ -1,7 +1,7 @@
 {
   "domain": "Autonomous B2B Newsletter Planning, Dispatch Memory & Audience Retention",
   "version": "2.0",
-  "last_evolution": "2026-11-11T21:39:47.612901",
+  "last_evolution": "2026-11-12T04:56:49.788266",
   "heuristics": [
     {
       "id": "HEUR-EMAIL-01",
@@ -129,8 +129,8 @@
   "editorial_forward_plan": [
     {
       "issue_number": 55,
-      "target_date": "2026-11-12",
-      "target_date_human": "Thursday, Nov 12, 2026",
+      "target_date": "2026-11-19",
+      "target_date_human": "Thursday, Nov 19, 2026",
       "status": "NEXT_IN_LINE",
       "tool_name": "Cursor",
       "category": "Developer Tools & AI IDE",
@@ -143,8 +143,8 @@
     },
     {
       "issue_number": 56,
-      "target_date": "2026-11-19",
-      "target_date_human": "Thursday, Nov 19, 2026",
+      "target_date": "2026-11-26",
+      "target_date_human": "Thursday, Nov 26, 2026",
       "status": "QUEUED",
       "tool_name": "ElevenLabs",
       "category": "Voice AI & Conversational Agents",
@@ -157,8 +157,8 @@
     },
     {
       "issue_number": 57,
-      "target_date": "2026-11-26",
-      "target_date_human": "Thursday, Nov 26, 2026",
+      "target_date": "2026-12-03",
+      "target_date_human": "Thursday, Dec 03, 2026",
       "status": "QUEUED",
       "tool_name": "Supabase",
       "category": "Data Infrastructure & Cloud Database",
@@ -171,8 +171,8 @@
     },
     {
       "issue_number": 58,
-      "target_date": "2026-12-03",
-      "target_date_human": "Thursday, Dec 03, 2026",
+      "target_date": "2026-12-10",
+      "target_date_human": "Thursday, Dec 10, 2026",
       "status": "QUEUED",
       "tool_name": "n8n",
       "category": "Workflow Automation & Enterprise Orchestration",
@@ -185,8 +185,8 @@
     },
     {
       "issue_number": 59,
-      "target_date": "2026-12-10",
-      "target_date_human": "Thursday, Dec 10, 2026",
+      "target_date": "2026-12-17",
+      "target_date_human": "Thursday, Dec 17, 2026",
       "status": "QUEUED",
       "tool_name": "Apollo.io",
       "category": "B2B Sales Intelligence & Lead Gen",
@@ -199,8 +199,8 @@
     },
     {
       "issue_number": 60,
-      "target_date": "2026-12-17",
-      "target_date_human": "Thursday, Dec 17, 2026",
+      "target_date": "2026-12-24",
+      "target_date_human": "Thursday, Dec 24, 2026",
       "status": "QUEUED",
       "tool_name": "Linear",
       "category": "Engineering Productivity & Issue Tracking",
@@ -213,8 +213,8 @@
     },
     {
       "issue_number": 61,
-      "target_date": "2026-12-24",
-      "target_date_human": "Thursday, Dec 24, 2026",
+      "target_date": "2026-12-31",
+      "target_date_human": "Thursday, Dec 31, 2026",
       "status": "QUEUED",
       "tool_name": "HeyGen",
       "category": "Generative Video & Global Localization",
@@ -227,8 +227,8 @@
     },
     {
       "issue_number": 62,
-      "target_date": "2026-12-31",
-      "target_date_human": "Thursday, Dec 31, 2026",
+      "target_date": "2027-01-07",
+      "target_date_human": "Thursday, Jan 07, 2027",
       "status": "QUEUED",
       "tool_name": "Airtable",
       "category": "Relational Databases & No-Code Operations",
@@ -241,8 +241,8 @@
     },
     {
       "issue_number": 63,
-      "target_date": "2027-01-07",
-      "target_date_human": "Thursday, Jan 07, 2027",
+      "target_date": "2027-01-14",
+      "target_date_human": "Thursday, Jan 14, 2027",
       "status": "QUEUED",
       "tool_name": "Lovable",
       "category": "AI Fullstack Application Builders",
@@ -255,8 +255,8 @@
     },
     {
       "issue_number": 64,
-      "target_date": "2027-01-14",
-      "target_date_human": "Thursday, Jan 14, 2027",
+      "target_date": "2027-01-21",
+      "target_date_human": "Thursday, Jan 21, 2027",
       "status": "QUEUED",
       "tool_name": "Make.com",
       "category": "Fintech Automation & Dunning Workflows",
@@ -269,8 +269,8 @@
     },
     {
       "issue_number": 65,
-      "target_date": "2027-01-21",
-      "target_date_human": "Thursday, Jan 21, 2027",
+      "target_date": "2027-01-28",
+      "target_date_human": "Thursday, Jan 28, 2027",
       "status": "QUEUED",
       "tool_name": "Brevo",
       "category": "Multichannel B2B CRM & Transactional Routing",
@@ -283,8 +283,8 @@
     },
     {
       "issue_number": 66,
-      "target_date": "2027-01-28",
-      "target_date_human": "Thursday, Jan 28, 2027",
+      "target_date": "2027-02-04",
+      "target_date_human": "Thursday, Feb 04, 2027",
       "status": "QUEUED",
       "tool_name": "Postman",
       "category": "API Governance & Enterprise Testing",

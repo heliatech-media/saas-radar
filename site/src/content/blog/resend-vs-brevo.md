@@ -1,23 +1,29 @@
 ---
-title: "Resend vs Brevo (2026): Modern React Email Developer APIs vs Multi-Channel Marketing Automation"
-description: "Comprehensive 2026 head-to-head teardown of Resend vs Brevo. Empirical comparison matrix, pricing scaling math, architectural benchmarks, and executive recommendations."
-date: "2026-10-23"
-author: "HELIA TECH"
-category: "DevTools"
+title: 'Resend vs Brevo (2026): Modern React Email Developer APIs vs Multi-Channel
+  Marketing Automation'
+description: Comprehensive 2026 head-to-head teardown of Resend vs Brevo. Empirical
+  comparison matrix, pricing scaling math, architectural benchmarks, and executive
+  recommendations.
+date: '2026-10-23'
+author: HELIA TECH
+category: DevTools
 tags:
-  - Resend
-  - Brevo
-  - "Resend vs Brevo"
-  - Comparison
-  - B2B Software
-readingTime: "12 MIN"
-tool_slug: "resend"
+- Resend
+- Brevo
+- Resend vs Brevo
+- Comparison
+- B2B Software
+readingTime: 10 MIN
+tool_slug: resend
 tldr:
-  - "Resend excels at code-first React Email component rendering and pristine developer ergonomics, delivering unmatched leverage for modern engineering teams."
-  - "Brevo remains superior for multi-channel marketing automation, providing an edge when CRM pipelines, SMS, and drag-and-drop builders are non-negotiable."
-  - "Economic scaling breakdown reveals significant cost variations between API-first volume delivery and contact-based database pricing tiers."
+- Resend excels at code-first React Email component rendering and pristine developer
+  ergonomics, delivering unmatched leverage for modern engineering teams.
+- Brevo remains superior for multi-channel marketing automation, providing an edge
+  when CRM pipelines, SMS, and drag-and-drop builders are non-negotiable.
+- Economic scaling breakdown reveals significant cost variations between API-first
+  volume delivery and contact-based database pricing tiers.
+image: /images/blog/resend.svg
 ---
-
 # Resend vs Brevo (2026): Modern React Email Developer APIs vs Multi-Channel Marketing Automation
 
 As Chief Operating Officer and Senior Systems Architect at HeliaTech Media, I evaluate developer tools and infrastructure platforms through a single, unyielding lens: **operational efficiency, system resilience, developer velocity, and total cost of ownership (TCO) at scale.** 
