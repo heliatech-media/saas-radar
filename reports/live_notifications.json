@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-11-12 14:34:27",
+    "title": "Cycle Autonome #Close CRM",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Close CRM) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-12 14:32:07",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 11 lien(s) d'affiliation en anomalie :\n• `asana, close-crm, descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-11-12 04:59:29",
     "title": "Cycle Autonome #HubSpot",
     "category": "CYCLE",
@@ -333,20 +347,6 @@
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, riverside-fm, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-06 00:37:57",
-    "title": "Cycle Autonome #Perplexity Enterprise",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Perplexity Enterprise et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-06 00:37:11",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, perplexity-enterprise, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
   }
 ]

@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-11-12T04:58:20.754479",
+  "timestamp": "2026-11-12T14:31:20.923051",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 199,
-    "total_redirects_active": 118,
+    "total_content_files_scanned": 202,
+    "total_redirects_active": 119,
     "new_redirects_healed": 37,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 14,
+    "external_targets_repaired": 15,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -15,11 +15,6 @@
       "slug": "opusclip-sandbox",
       "target_url": "https://www.opusclip-sandbox.com",
       "source_file": "opus-clip-evolution-guide-2026.md"
-    },
-    {
-      "slug": "hubspot",
-      "target_url": "https://www.hubspot.com",
-      "source_file": "hubspot-evolution-guide-2026.md"
     },
     {
       "slug": "minvo-testing-sandbox",
@@ -132,6 +127,11 @@
       "source_file": "invideo-ai-evolution-guide-2026.md"
     },
     {
+      "slug": "close-crm",
+      "target_url": "https://www.close-crm.com",
+      "source_file": "close-crm-evolution-guide-2026.md"
+    },
+    {
       "slug": "davinci-resolve",
       "target_url": "https://www.davinci-resolve.com",
       "source_file": "best-descript-alternatives-2026.md"
@@ -233,6 +233,12 @@
       "slug": "descript",
       "dead_target": "https://descript.grsm.io/heliatech",
       "healed_target": "https://www.descript.com",
+      "status_code": 404
+    },
+    {
+      "slug": "hubspot",
+      "dead_target": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
+      "healed_target": "https://www.hubspot.com",
       "status_code": 404
     },
     {

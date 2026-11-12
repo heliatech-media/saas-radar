@@ -1,10 +1,26 @@
 {
-  "timestamp": "2026-11-12 04:58:58",
-  "total_links_audited": 118,
-  "healthy_links": 109,
-  "broken_links_count": 9,
-  "health_rate": "92.4%",
+  "timestamp": "2026-11-12 14:32:07",
+  "total_links_audited": 119,
+  "healthy_links": 108,
+  "broken_links_count": 11,
+  "health_rate": "90.8%",
   "broken_links": [
+    {
+      "slug": "asana",
+      "target_url": "https://www.asana.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='asana.com', port=443): Read timed out. (read timeout=7)"
+    },
+    {
+      "slug": "close-crm",
+      "target_url": "https://www.close-crm.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.close-crm.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.close-crm.com', port=443): Failed to resolve 'www.close-crm.com' ([Errno -2] Name or service not known)\"))"
+    },
     {
       "slug": "descript-migration-calculator",
       "target_url": "https://www.descript-migration-calculator.com",
@@ -110,9 +126,10 @@
     {
       "slug": "asana",
       "target_url": "https://www.asana.com",
-      "final_url": "https://asana.com/",
-      "status_code": 200,
-      "healthy": true
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='asana.com', port=443): Read timed out. (read timeout=7)"
     },
     {
       "slug": "axiom-ai",
@@ -199,6 +216,14 @@
       "healthy": true
     },
     {
+      "slug": "close-crm",
+      "target_url": "https://www.close-crm.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.close-crm.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.close-crm.com', port=443): Failed to resolve 'www.close-crm.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "cognism",
       "target_url": "https://www.cognism.com",
       "final_url": "https://www.cognism.com/",
@@ -259,7 +284,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0ZwPRNiCCVcwmE&gsxid=0ZwPRNiCCVcwmE&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=In8FGPzVrSH6FP&gsxid=In8FGPzVrSH6FP&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -586,7 +611,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TnOIahz5lXHYIm&gsxid=TnOIahz5lXHYIm&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=qrigUlfBvL7on9&gsxid=qrigUlfBvL7on9&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -614,7 +639,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=MRPAKcrVo6MSbS&gsxid=MRPAKcrVo6MSbS&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=VtRqVwj0G1HHDW&gsxid=VtRqVwj0G1HHDW&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -649,7 +674,7 @@
     {
       "slug": "rask-ai",
       "target_url": "https://rask.ai/?via=heliatech",
-      "final_url": "https://www.rask.ai/home?via=heliatech",
+      "final_url": "https://www.rask.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

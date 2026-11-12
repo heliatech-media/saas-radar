@@ -184,7 +184,8 @@ AFFILIATE_MAP = {
     "loops": "https://loops.so/?fp_ref=heliatech",
     "invideo": "https://invideo.io/?fpr=heliatech",
     "opusclip": "https://www.opus.pro/?via=heliatech",
-    "runway": "https://runwayml.com/?via=heliatech"
+    "runway": "https://runwayml.com/?via=heliatech",
+    "hubspot": "https://hubspot.pxf.io/c/4198270/123456/heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

@@ -141,6 +141,16 @@
     "commission_rate": "20% recurring commission for up to 12 months"
   },
   {
+    "name": "Close CRM",
+    "slug": "close-crm",
+    "tagline": "The all-in-one sales CRM built for high-velocity inside sales teams.",
+    "category": "B2B Sales & CRM Intelligence",
+    "rating": 4.6,
+    "starting_price": "$49/user/mo",
+    "best_for": "High-velocity inside sales teams and SMBs that rely heavily on outbound calling and email outreach.",
+    "affiliate_url": "https://close.com"
+  },
+  {
     "name": "Cursor",
     "slug": "cursor",
     "tagline": "The AI-first code editor built for maximum engineering velocity and deep codebase understanding.",
@@ -256,7 +266,8 @@
     "rating": 4.5,
     "starting_price": "$20/mo",
     "best_for": "Mid-market B2B enterprises, fast-growing startups, and inbound-focused marketing teams looking to unify customer data.",
-    "affiliate_url": "https://www.hubspot.com"
+    "affiliate_url": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
+    "commission_rate": "30% recurring for up to 1 year or flat fee up to $1,000 per sale"
   },
   {
     "name": "InVideo",

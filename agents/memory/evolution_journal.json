@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-12T04:57:15.584571",
-  "total_heuristics_stored": 63,
+  "total_heuristics_stored": 64,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -349,6 +349,13 @@
       "domain": "content",
       "score": 42,
       "critique_summary": "Violates HEUR-CONT-01, HEUR-CONT-02, HEUR-CON-08, and HEUR-CON-14. The opening contains generic fluff ('Before the modern revenue architecture was bui"
+    },
+    {
+      "timestamp": "2026-11-12T14:25:55.407061",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "social",
+      "heuristic_name": "Dwell-Velocity Matrix Injection",
+      "curriculum_module": "Multi-Platform Repurposing: Translating deep blog benchmarks into concise, authoritative Twitter/X and Dev.to technical briefs"
     }
   ]
 }

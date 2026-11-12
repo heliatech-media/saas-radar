@@ -103,9 +103,9 @@ Typeform is an established enterprise citizen. Its integration marketplace featu
 For developers, Typeform provides a mature REST API complete with comprehensive documentation, webhooks that fire reliably with cryptographic signatures for payload validation, and SDKs that simplify embedding forms into React or Vue applications. Setting up hidden fields, passing user state through URL parameters, and reading variable scores back into your application layer is well-documented and predictable.
 
 ### Tally Ecosystem
-Tally approaches integrations with a developer-first, minimalist mindset. While it offers native integrations with Slack, Notion, Google Sheets, [Airtable](/reviews/airtable), and Stripe, it relies heavily on webhooks, Zapier, and [Make](/reviews/make) for complex CRM orchestrations. 
+Tally approaches integrations with a developer-first, minimalist mindset. While it offers native integrations with Slack, Notion, Google Sheets, [Airtable](/reviews/airtable), and Stripe, it relies heavily on webhooks, [Zapier](/reviews/zapier), and [Make](/reviews/make) for complex CRM orchestrations. 
 
-Tally’s webhook implementation is clean and emits structured JSON payloads immediately upon submission. Because Tally forms act like structured documents, mapping fields to relational databases like PostgreSQL or [Airtable](/reviews/airtable) via Make feels more intuitive than dealing with Typeform's nested answer objects. However, for legacy enterprise stacks (e.g., rigid on-premise CRMs), Typeform’s certified enterprise connectors require less custom middleware configuration.
+Tally’s webhook implementation is clean and emits structured JSON payloads immediately upon submission. Because Tally forms act like structured documents, mapping fields to relational databases like PostgreSQL or [Airtable](/reviews/airtable) via [Make](/reviews/make) feels more intuitive than dealing with Typeform's nested answer objects. However, for legacy enterprise stacks (e.g., rigid on-premise CRMs), Typeform’s certified enterprise connectors require less custom middleware configuration.
 
 ---
 
@@ -137,7 +137,7 @@ To remove ambiguity, apply this binary operational checklist to your upcoming pr
 
 ### When to strictly choose Tally:
 *   You are bootstrapping a startup, running high-volume customer research, or managing internal operations where response volume scales infinitely without budget penalties.
-*   Your team already lives inside Notion, Airtable, and modern doc-centric workflows and wants to spin up complex forms in minutes.
+*   Your team already lives inside Notion, [Airtable](/reviews/airtable), and modern doc-centric workflows and wants to spin up complex forms in minutes.
 *   You need advanced conditional logic, payment collection, and file uploads without shelling out hundreds of dollars a month for basic tiers.
 *   *Deploy your Tally workspace here:* [Explore Tally via Official Partner Link](/go/tally)
 

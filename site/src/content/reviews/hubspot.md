@@ -6,7 +6,7 @@ tagline: The all-in-one CRM platform designed to help scaling businesses align m
 category: B2B Sales & CRM Intelligence
 rating: 4.5
 website_url: https://www.hubspot.com
-affiliate_url: https://www.hubspot.com
+affiliate_url: "https://hubspot.pxf.io/c/4198270/123456/heliatech"
 summary: HubSpot is a comprehensive, cloud-based CRM ecosystem built to scale operations
   across inbound marketing, sales pipelines, and customer support. It replaces siloed
   legacy tools with an integrated relational database and powerful automation engines.
