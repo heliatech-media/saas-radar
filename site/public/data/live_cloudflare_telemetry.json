@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-12T14:30:48.304246",
+  "last_synced": "2026-11-12T21:40:43.770052",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-15 - 2026-11-12)",
-  "total_visitors_network": 34745,
-  "total_requests": 169128,
-  "total_visits": 10770,
-  "total_pageviews": 37997,
+  "total_visitors_network": 35121,
+  "total_requests": 170791,
+  "total_visits": 10887,
+  "total_pageviews": 38322,
   "percent_cached": "56.14%",
-  "data_served_mb": 1728.3,
+  "data_served_mb": 1751.3,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
       "date": "2026-11-12",
-      "visitors": 2100,
-      "rumVisits": 588,
-      "pageviews": 1998,
-      "requests": 7820,
+      "visitors": 2476,
+      "rumVisits": 693,
+      "pageviews": 2323,
+      "requests": 9483,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0526
+      "viewMultiplier": 0.0606
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 15647,
-      "rumVisits": 4068,
-      "pageviews": 12813,
-      "requests": 48963,
+      "visitors": 16023,
+      "rumVisits": 4165,
+      "pageviews": 13138,
+      "requests": 50626,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.3372
+      "viewMultiplier": 0.3428
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 34745,
-      "rumVisits": 10770,
-      "pageviews": 37997,
-      "requests": 169128,
+      "visitors": 35121,
+      "rumVisits": 10887,
+      "pageviews": 38322,
+      "requests": 170791,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 34745,
-      "rumVisits": 10770,
-      "pageviews": 37997,
-      "requests": 169128,
+      "visitors": 35121,
+      "rumVisits": 10887,
+      "pageviews": 38322,
+      "requests": 170791,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 34745,
-      "rumVisits": 10770,
-      "pageviews": 37997,
-      "requests": 169128,
+      "visitors": 35121,
+      "rumVisits": 10887,
+      "pageviews": 38322,
+      "requests": 170791,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,23 +70,23 @@
   "top_pages": [
     {
       "path": "/api/telemetry",
-      "views": 7810
+      "views": 8130
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6300
+      "views": 6320
     },
     {
       "path": "/",
-      "views": 4330
+      "views": 4380
     },
     {
       "path": "/calculator/",
-      "views": 1810
+      "views": 1840
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1380
+      "views": 1420
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -102,7 +102,7 @@
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
-      "views": 330
+      "views": 340
     },
     {
       "path": "/blog/",
@@ -117,26 +117,26 @@
       "views": 280
     },
     {
+      "path": "/reviews/clickup/",
+      "views": 260
+    },
+    {
       "path": "/reviews/elevenlabs/",
       "views": 260
     },
     {
       "path": "/reviews/beehiiv/",
       "views": 260
-    },
-    {
-      "path": "/reviews/clickup/",
-      "views": 260
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 29800
+      "views": 30170
     },
     {
       "country": "Morocco",
-      "views": 28190
+      "views": 28520
     },
     {
       "country": "Germany",
@@ -144,15 +144,15 @@
     },
     {
       "country": "Singapore",
-      "views": 2310
+      "views": 2320
     },
     {
       "country": "Brazil",
-      "views": 1270
+      "views": 1320
     },
     {
       "country": "CN",
-      "views": 990
+      "views": 1000
     },
     {
       "country": "United Kingdom",

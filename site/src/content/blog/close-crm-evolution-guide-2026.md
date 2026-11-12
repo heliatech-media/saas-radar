@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: close-crm
 image: /images/blog/close-crm.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Close CRM Account ➔
   url: /go/close-crm
 ---
-
 ## The Friction Tax
 
 **I**n the modern B2B landscape, the greatest enemy of a sales team isn't the competition—it's the 'tab-switching tax.' For years, sales reps have been forced to navigate a fragmented ecosystem: one tool for the CRM, another for the dialer, a third for email sequencing, and a spreadsheet to track the fallout. This administrative overhead turns high-potential hunters into glorified data entry clerks. Before Close, the industry accepted this as the cost of doing business. Close arrived to prove that sales isn't about managing a database; it’s about having a conversation.

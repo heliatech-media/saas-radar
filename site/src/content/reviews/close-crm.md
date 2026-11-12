@@ -5,7 +5,7 @@ tagline: The all-in-one sales CRM built for high-velocity inside sales teams.
 category: B2B Sales & CRM Intelligence
 rating: 4.6
 website_url: https://close.com
-affiliate_url: https://close.com
+affiliate_url: "https://p.partnerstack.com/close?via=heliatech"
 summary: Close is a specialized CRM designed to eliminate friction for sales teams
   by embedding calling, SMS, and email directly into the platform. It prioritizes
   speed and communication over complex administrative overhead.
@@ -139,4 +139,4 @@ Close is optimized for SMBs and mid-market teams. While it can handle larger tea
 
 ### Does Close integrate with other tools?
 
-Yes, it integrates with Zapier, Slack, Zoom, and various email providers, though its primary strength lies in its native, all-in-one communication stack.
+Yes, it integrates with [Zapier](/reviews/zapier), Slack, Zoom, and various email providers, though its primary strength lies in its native, all-in-one communication stack.

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-12T14:31:20.923051",
+  "timestamp": "2026-11-12T21:41:23.317154",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 202,
+    "total_content_files_scanned": 204,
     "total_redirects_active": 119,
-    "new_redirects_healed": 37,
+    "new_redirects_healed": 36,
     "internal_links_repaired": 0,
     "external_targets_repaired": 15,
     "content_files_modified": 0
@@ -125,11 +125,6 @@
       "slug": "invideo-ai-sandbox",
       "target_url": "https://www.invideo-ai-sandbox.com",
       "source_file": "invideo-ai-evolution-guide-2026.md"
-    },
-    {
-      "slug": "close-crm",
-      "target_url": "https://www.close-crm.com",
-      "source_file": "close-crm-evolution-guide-2026.md"
     },
     {
       "slug": "davinci-resolve",

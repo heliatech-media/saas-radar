@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-12T04:57:15.584571",
-  "total_heuristics_stored": 64,
+  "total_heuristics_stored": 65,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -356,6 +356,13 @@
       "domain": "social",
       "heuristic_name": "Dwell-Velocity Matrix Injection",
       "curriculum_module": "Multi-Platform Repurposing: Translating deep blog benchmarks into concise, authoritative Twitter/X and Dev.to technical briefs"
+    },
+    {
+      "timestamp": "2026-11-12T21:39:52.449726",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "cro",
+      "heuristic_name": "Sub-Perceptual Retinal Resonance & GPU-Composited Anchor Priming",
+      "curriculum_module": "Visual Affordance Hierarchy: High-contrast glowing accents and official recommendation badges that double click-through rates"
     }
   ]
 }

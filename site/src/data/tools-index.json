@@ -130,6 +130,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Clay.com",
+    "slug": "clay-com",
+    "tagline": "Combine 50+ data providers and AI to build hyper-personalized outbound campaigns at scale.",
+    "category": "B2B Sales & CRM Intelligence",
+    "rating": 4.8,
+    "starting_price": "$149/mo",
+    "best_for": "B2B founders, outbound sales agencies, and growth teams scaling personalized cold email.",
+    "affiliate_url": "https://clay.com"
+  },
+  {
     "name": "ClickUp",
     "slug": "clickup",
     "tagline": "The one app to replace them all with customizable tasks, docs, goals, and chat.",
@@ -148,7 +158,8 @@
     "rating": 4.6,
     "starting_price": "$49/user/mo",
     "best_for": "High-velocity inside sales teams and SMBs that rely heavily on outbound calling and email outreach.",
-    "affiliate_url": "https://close.com"
+    "affiliate_url": "https://p.partnerstack.com/close?via=heliatech",
+    "commission_rate": "20% recurring for 12 months"
   },
   {
     "name": "Cursor",
