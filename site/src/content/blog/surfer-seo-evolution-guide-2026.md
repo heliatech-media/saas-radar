@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: surfer-seo
 image: /images/blog/surfer-seo.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Surfer SEO Account ➔
   url: /go/surfer-seo
 ---
-
 ---
 title: "Surfer SEO Enterprise Unit Economics & Autonomous Content Scaling: A 100k-Scale TCO Audit"
 slug: "surfer-seo-enterprise-tco-audit"

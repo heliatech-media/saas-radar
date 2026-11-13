@@ -947,6 +947,19 @@
       "url": "https://dev.to/adcreative-ai-vs-jasper-ai",
       "canonical_url": "https://heliatech.online/blog/adcreative-ai-vs-jasper-ai",
       "status": "already_published"
+    },
+    "airtable-vs-notion-ai": {
+      "id": 5030225,
+      "url": "https://dev.to/heliatech/airtable-vs-notion-ai-2026-relational-data-powerhouse-vs-connected-knowledge-workspace-6k5",
+      "title": "Airtable vs Notion AI (2026): Relational Data Powerhouse vs Connected Knowledge Workspace",
+      "canonical_url": "https://heliatech.online/blog/airtable-vs-notion-ai",
+      "published": true,
+      "tags": [
+        "airtable",
+        "notionai",
+        "airtablevsnotionai",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-13 13:46:24",
+    "title": "Cycle Autonome #Resemble AI",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Resemble AI) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-13 13:45:59",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 11 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway, runway-tco-calculator, submagic, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-13 13:39:54",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Resemble AI: Architecting the Future of Synthetic Speech and the Enterprise Blueprint for Voice Sovereignty",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Resemble AI: Architecting the Future of Synthetic Speech and the Enterprise Blueprint for Voice Sovereignty\n• **Catégorie :** AI Voice & Audio Generation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/resemble-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/resemble-ai-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-13 13:39:26",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Resemble AI",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Resemble AI\n• **Catégorie :** AI Voice & Audio Generation\n• **Note globale :** 4.6/10\n• **Cible idéale :** Game developers, enterprise localization teams, and product engineers needing programmatic voice cloning.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/resemble-ai/"
+  },
+  {
     "timestamp": "2026-11-13 04:13:20",
     "title": "Cycle Autonome #Surfer SEO",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #Klap",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klap et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-06 18:39:15",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-06 15:37:24",
-    "title": "Cycle Autonome #Beehiiv",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Beehiiv et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-06 15:36:59",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, riverside-fm, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-06 12:47:09",
-    "title": "Cycle Autonome #Descript",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

@@ -6,7 +6,7 @@ tagline: Data-driven content optimization and SERP analysis platform powered by 
 category: AI SEO & Copywriting
 rating: 4.6
 website_url: https://surferseo.com
-affiliate_url: https://surferseo.com
+affiliate_url: "https://surferseo.com/?via=heliatech"
 summary: Surfer SEO is an advanced content optimization platform that analyzes top-ranking
   Google search results to provide real-time NLP guidelines, outlining, and auditing
   for higher search engine visibility. It bridges the gap between raw keyword research

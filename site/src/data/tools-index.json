@@ -617,6 +617,16 @@
     "commission_rate": "20% recurring for up to 12 months"
   },
   {
+    "name": "Resemble AI",
+    "slug": "resemble-ai",
+    "tagline": "Enterprise-grade generative voice AI platform for ultra-realistic speech synthesis and real-time voice cloning.",
+    "category": "AI Voice & Audio Generation",
+    "rating": 4.6,
+    "starting_price": "$0.006",
+    "best_for": "Game developers, enterprise localization teams, and product engineers needing programmatic voice cloning.",
+    "affiliate_url": "https://www.resemble.ai"
+  },
+  {
     "name": "Resend",
     "slug": "resend",
     "tagline": "Modern email infrastructure designed for developers, not marketers.",
@@ -719,7 +729,8 @@
     "rating": 4.6,
     "starting_price": "$89/mo",
     "best_for": "Content marketing teams, SEO agencies, and freelance writers aiming to rank higher on Google through data-backed content optimization.",
-    "affiliate_url": "https://surferseo.com"
+    "affiliate_url": "https://surferseo.com/?via=heliatech",
+    "commission_rate": "25% recurring"
   },
   {
     "name": "Synthesia",

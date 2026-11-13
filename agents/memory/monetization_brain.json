@@ -1,8 +1,8 @@
 {
   "domain": "Affiliate Revenue Engineering & Partner Arbitrage",
   "version": "6.1",
-  "last_evolution": "2026-11-10T13:58:58.130529",
-  "total_heuristics_learned": 6,
+  "last_evolution": "2026-11-13T13:39:19.311102",
+  "total_heuristics_learned": 7,
   "heuristics": [
     {
       "id": "HEUR-MON-01",
@@ -45,6 +45,13 @@
       "rule": "When telemetry flags free-tier user consumption crossing 82% of threshold limits (API calls, storage, or seats) coupled with velocity spikes >35% week-over-week, instantly bypass standard tiered upgrade upsells. Dynamically deploy an in-app 'Sovereign Headroom Calculator' highlighting projected enterprise cost overruns on their current legacy stack vs. direct-routed Tier-1 sovereign partners (Make, Brevo, ElevenLabs), auto-crediting a 30-day accelerated migration sandbox with pre-configured templates to lock in high-margin recurring affiliate attribution before they hit hard blocks.",
       "confidence_score": 0.99,
       "impact": "Captures high-intent free-tier churners at peak anxiety, shifting 41% more users directly into high-margin recurring enterprise funnels while completely neutralizing aggregator leakage."
+    },
+    {
+      "id": "HEUR-MON-07",
+      "name": "Predictive Zero-Day Vendor-Lockout Arbitrage",
+      "rule": "When telemetry aggregates cross-tenant API error rates or rate-limiting headers exceeding 12% across legacy SaaS dependencies during peak enterprise build cycles, instantly deploy a zero-latency 'Emergency Redirection Vector' banner in the IDE/dashboard. Calculate instantaneous downtime financial bleed using $B = (Requests/Min * CostPerFailedCall * DowntimeMinutes)$, and provision a 1-click sovereign drop-in replacement via direct Tier-1 partner endpoints (Make, Brevo, ElevenLabs) with automated schema translation and 100% net recurring affiliate attribution capture.",
+      "confidence_score": 0.99,
+      "impact": "Captures high-urgency enterprise migrations during legacy platform failures, neutralizing aggregator cuts and converting crisis-driven traffic into permanent direct high-margin recurring revenue streams."
     }
   ]
 }
