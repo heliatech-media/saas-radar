@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="1200">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0e1626" />
+      <stop offset="50%" stop-color="#070a13" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Glow & Blur Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowDeep" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.6" />
+    </pattern>
+
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="150" r="250" fill="#8b5cf6" opacity="0.12" filter="url(#glowDeep)" />
+  <circle cx="200" cy="500" r="300" fill="#06b6d4" opacity="0.1" filter="url(#glowDeep)" />
+  <circle cx="1050" cy="500" r="200" fill="#d946ef" opacity="0.08" filter="url(#glowDeep)" />
+
+  <!-- Abstract Vector / Isometric Data Architecture (Semrush Metaphor) -->
+  <g transform="translate(680, 80)">
+    <!-- Connecting Infrastructure Lines -->
+    <path d="M 50 350 L 220 250 L 380 320 L 450 180" fill="none" stroke="url(#cyanBlue)" stroke-width="2" opacity="0.4" stroke-dasharray="6 4" />
+    <path d="M 0 200 L 150 150 L 300 220 L 420 100" fill="none" stroke="url(#violetFuchsia)" stroke-width="2" opacity="0.4" />
+
+    <!-- Isometric Database / Neural Cube 1 (Back) -->
+    <g transform="translate(150, 100)">
+      <path d="M 80 0 L 160 40 L 80 80 L 0 40 Z" fill="#090d16" stroke="#38bdf8" stroke-width="1.5" opacity="0.7" />
+      <path d="M 0 40 L 0 120 L 80 160 L 80 80 Z" fill="#090d16" stroke="#38bdf8" stroke-width="1.5" opacity="0.5" />
+      <path d="M 160 40 L 160 120 L 80 160 L 80 80 Z" fill="#030712" stroke="#38bdf8" stroke-width="1.5" opacity="0.6" />
+      <!-- Inner glowing core -->
+      <circle cx="80" cy="80" r="12" fill="#06b6d4" filter="url(#glow)" />
+    </g>
+
+    <!-- Isometric Database / Neural Cube 2 (Primary AI Node) -->
+    <g transform="translate(280, 220)">
+      <path d="M 90 0 L 180 45 L 90 90 L 0 45 Z" fill="#0f172a" stroke="url(#violetFuchsia)" stroke-width="2" />
+      <path d="M 0 45 L 0 135 L 90 180 L 90 90 Z" fill="#090d16" stroke="url(#violetFuchsia)" stroke-width="1.5" />
+      <path d="M 180 45 L 180 135 L 90 180 L 90 90 Z" fill="#030712" stroke="url(#violetFuchsia)" stroke-width="1.5" />
+      <!-- Circuit lines on top face -->
+      <path d="M 90 20 L 135 45 L 90 70" fill="none" stroke="#d946ef" stroke-width="1.5" opacity="0.8" />
+      <circle cx="90" cy="90" r="16" fill="#8b5cf6" filter="url(#glow)" />
+      <circle cx="90" cy="90" r="6" fill="#ffffff" />
+    </g>
+
+    <!-- Isometric Database / Neural Cube 3 (Visibility Engine) -->
+    <g transform="translate(80, 300)">
+      <path d="M 70 0 L 140 35 L 70 70 L 0 35 Z" fill="#0f172a" stroke="url(#cyanBlue)" stroke-width="2" />
+      <path d="M 0 35 L 0 105 L 70 140 L 70 70 Z" fill="#090d16" stroke="url(#cyanBlue)" stroke-width="1.5" />
+      <path d="M 140 35 L 140 105 L 70 140 L 70 70 Z" fill="#030712" stroke="url(#cyanBlue)" stroke-width="1.5" />
+      <circle cx="70" cy="70" r="12" fill="#38bdf8" filter="url(#glow)" />
+    </g>
+
+    <!-- Floating Vector Nodes & Data Rings -->
+    <g transform="translate(320, 80)">
+      <ellipse cx="0" cy="0" rx="40" ry="16" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.8" />
+      <circle cx="0" cy="-16" r="4" fill="#38bdf8" filter="url(#glow)" />
+    </g>
+
+    <g transform="translate(100, 240)">
+      <ellipse cx="0" cy="0" rx="60" ry="22" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5" />
+      <circle cx="50" cy="10" r="5" fill="#d946ef" filter="url(#glow)" />
+    </g>
+
+    <!-- Holographic Vector Mesh overlaying nodes -->
+    <path d="M 150 180 L 370 265 L 220 390 Z" fill="url(#meshGrad)" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.3" />
+  </g>
+
+  <!-- Left Content Area -->
+  <g transform="translate(80, 95)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+      <circle cx="18" cy="16" r="5" fill="#06b6d4" filter="url(#glow)" />
+      <text x="36" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title & Typography -->
+    <g transform="translate(0, 80)">
+      <!-- Tool Category -->
+      <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#8b5cf6" letter-spacing="3">AI SEO &amp; COPYWRITING</text>
+      
+      <!-- Tool Name: SEMRUSH -->
+      <text x="0" y="65" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="900" fill="#ffffff" letter-spacing="2" filter="url(#glow)">SEMRUSH</text>
+
+      <!-- Investigation Title Line 1 -->
+      <text x="0" y="125" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#f1f5f9" letter-spacing="0.5">The Anatomy of Digital Dominance</text>
+
+      <!-- Investigation Title Line 2 with Gradient or Accent -->
+      <text x="0" y="165" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="500" fill="#94a3b8" letter-spacing="0.5">and the Blueprint for Enterprise Visibility</text>
+    </g>
+
+    <!-- Architectural Metadata Footer inside Graphic -->
+    <g transform="translate(0, 380)">
+      <line x1="0" y1="0" x2="520" y2="0" stroke="#1e293b" stroke-width="1.5" />
+      
+      <!-- Stat 1 -->
+      <g transform="translate(0, 20)">
+        <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">DOM-INDEX</text>
+        <text x="0" y="22" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#06b6d4">99.8%</text>
+      </g>
+
+      <!-- Stat 2 -->
+      <g transform="translate(150, 20)">
+        <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">AI VECTOR DEPTH</text>
+        <text x="0" y="22" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#8b5cf6">4.2B+ NODES</text>
+      </g>
+
+      <!-- Stat 3 -->
+      <g transform="translate(340, 20)">
+        <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">STATUS</text>
+        <text x="0" y="22" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#38bdf8">VERIFIED</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Frame Border / Cyber Accent Corners -->
+  <g stroke="#06b6d4" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Top Left Corner -->
+    <path d="M 20 40 L 20 20 L 40 20" />
+    <!-- Top Right Corner -->
+    <path d="M 1180 40 L 1180 20 L 1160 20" />
+    <!-- Bottom Left Corner -->
+    <path d="M 20 590 L 20 610 L 40 610" />
+    <!-- Bottom Right Corner -->
+    <path d="M 1180 590 L 1180 610 L 1160 610" />
+  </g>
+
+  <!-- Watermark / Brand Signature -->
+  <text x="1170" y="600" text-anchor="end" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#475569" letter-spacing="2">HELIATECH.ONLINE</text>
+</svg>

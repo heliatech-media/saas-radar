@@ -624,7 +624,8 @@
     "rating": 4.6,
     "starting_price": "$0.006",
     "best_for": "Game developers, enterprise localization teams, and product engineers needing programmatic voice cloning.",
-    "affiliate_url": "https://www.resemble.ai"
+    "affiliate_url": "https://www.resemble.ai/?via=heliatech",
+    "commission_rate": "Not publicly specified"
   },
   {
     "name": "Resend",
@@ -699,6 +700,16 @@
     "best_for": "Product managers, QA testers, customer support teams, and remote developers.",
     "affiliate_url": "https://screenclip.com/?via=heliatech",
     "commission_rate": "30% recurring"
+  },
+  {
+    "name": "Semrush",
+    "slug": "semrush",
+    "tagline": "The all-in-one visibility management platform for digital marketing and SEO professionals.",
+    "category": "AI SEO & Copywriting",
+    "rating": 4.6,
+    "starting_price": "$129.95/mo",
+    "best_for": "In-house marketing teams, SEO agencies, and enterprise content creators requiring granular keyword data and competitor analysis.",
+    "affiliate_url": "https://www.semrush.com"
   },
   {
     "name": "Submagic",

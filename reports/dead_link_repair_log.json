@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-13T13:45:15.918378",
+  "timestamp": "2026-11-13T21:07:58.361262",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 210,
+    "total_content_files_scanned": 213,
     "total_redirects_active": 121,
-    "new_redirects_healed": 36,
+    "new_redirects_healed": 35,
     "internal_links_repaired": 0,
     "external_targets_repaired": 15,
     "content_files_modified": 0
@@ -74,11 +74,6 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "resemble-ai",
-      "target_url": "https://www.resemble.ai",
       "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {

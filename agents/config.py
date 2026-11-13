@@ -188,7 +188,8 @@ AFFILIATE_MAP = {
     "hubspot": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
     "close-crm": "https://p.partnerstack.com/close?via=heliatech",
     "clay-com": "https://clay.com/?via=heliatech",
-    "surfer-seo": "https://surferseo.com/?via=heliatech"
+    "surfer-seo": "https://surferseo.com/?via=heliatech",
+    "resemble-ai": "https://www.resemble.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

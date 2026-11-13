@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-13 21:09:00",
+    "title": "Cycle Autonome #Semrush",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Semrush) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-13 21:08:36",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-13 21:06:53",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Semrush: The Anatomy of Digital Dominance and the Blueprint for Enterprise Visibility",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Semrush: The Anatomy of Digital Dominance and the Blueprint for Enterprise Visibility\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/semrush-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/semrush-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-13 21:06:24",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Semrush",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Semrush\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.6/10\n• **Cible idéale :** In-house marketing teams, SEO agencies, and enterprise content creators requiring granular keyword data and competitor analysis.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/semrush/"
+  },
+  {
     "timestamp": "2026-11-13 13:46:24",
     "title": "Cycle Autonome #Resemble AI",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #Julius AI",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Julius AI et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-07 00:33:05",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-06 21:30:04",
-    "title": "Cycle Autonome #Descript",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-06 21:29:39",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-06 18:39:40",
-    "title": "Cycle Autonome #Klap",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Klap et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

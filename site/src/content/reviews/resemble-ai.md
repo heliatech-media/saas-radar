@@ -6,7 +6,7 @@ tagline: Enterprise-grade generative voice AI platform for ultra-realistic speec
 category: AI Voice & Audio Generation
 rating: 4.6
 website_url: https://www.resemble.ai
-affiliate_url: https://www.resemble.ai
+affiliate_url: "https://www.resemble.ai/?via=heliatech"
 summary: Resemble AI is an advanced voice generation platform specializing in hyper-realistic
   human voice cloning and speech-to-speech translation. Designed primarily for developers,
   game studios, and enterprise localization teams, it bridges the gap between synthetic

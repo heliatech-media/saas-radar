@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-13 13:45:59",
+  "timestamp": "2026-11-13 21:08:36",
   "total_links_audited": 121,
-  "healthy_links": 110,
-  "broken_links_count": 11,
-  "health_rate": "90.9%",
+  "healthy_links": 112,
+  "broken_links_count": 9,
+  "health_rate": "92.6%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -62,28 +62,12 @@
       "error": "HTTPSConnectionPool(host='www.opusclip-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.opusclip-sandbox.com', port=443): Failed to resolve 'www.opusclip-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
-      "slug": "runway",
-      "target_url": "https://runwayml.com/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
       "slug": "runway-tco-calculator",
       "target_url": "https://www.runway-tco-calculator.com",
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "submagic",
-      "target_url": "https://submagic.co/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     {
       "slug": "tome",
@@ -289,7 +273,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=aaJXWJwUMqqXmo&gsxid=aaJXWJwUMqqXmo&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=CrasOlh0bpjW6x&gsxid=CrasOlh0bpjW6x&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -616,7 +600,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cDDVhrFlnDfSI9&gsxid=cDDVhrFlnDfSI9&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3zg2nGiiCvqvnV&gsxid=3zg2nGiiCvqvnV&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -644,7 +628,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=RPC8Y1unK4kTz5&gsxid=RPC8Y1unK4kTz5&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=If5ebUwwQqOStm&gsxid=If5ebUwwQqOStm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -699,8 +683,8 @@
     },
     {
       "slug": "resemble-ai",
-      "target_url": "https://www.resemble.ai",
-      "final_url": "https://www.resemble.ai/",
+      "target_url": "https://www.resemble.ai/?via=heliatech",
+      "final_url": "https://www.resemble.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -742,10 +726,9 @@
     {
       "slug": "runway",
       "target_url": "https://runwayml.com/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "final_url": "https://runway.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "runway-tco-calculator",
@@ -793,10 +776,9 @@
     {
       "slug": "submagic",
       "target_url": "https://submagic.co/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "final_url": "https://www.submagic.co/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "substack",
