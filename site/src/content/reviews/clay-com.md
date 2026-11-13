@@ -6,7 +6,7 @@ tagline: Combine 50+ data providers and AI to build hyper-personalized outbound 
 category: B2B Sales & CRM Intelligence
 rating: 4.8
 website_url: https://clay.com
-affiliate_url: https://clay.com
+affiliate_url: "https://clay.com/?via=heliatech"
 summary: Clay is an advanced data enrichment and outbound prospecting platform that
   acts like a spreadsheet crossed with a developer's API builder. It allows sales
   teams to waterfall data across 50+ providers, leverage AI to scrape websites, and
@@ -144,7 +144,7 @@ Clay is an advanced data enrichment and outbound prospecting platform that acts 
 ### Pros
 - Unmatched data enrichment via waterfall integration across 50+ providers like Clearbit, Apollo, and LinkedIn.
 - Built-in AI writing assistant powered by multiple LLMs (OpenAI, Anthropic) for hyper-personalized messaging.
-- Incredible flexibility, functioning like an Airtable/Excel spreadsheet built specifically for outbound workflows.
+- Incredible flexibility, functioning like an [Airtable](/reviews/airtable)/Excel spreadsheet built specifically for outbound workflows.
 - Extensive API and webhook support allowing custom data scraping and integration with virtually any tool.
 
 ### Cons

@@ -186,7 +186,8 @@ AFFILIATE_MAP = {
     "opusclip": "https://www.opus.pro/?via=heliatech",
     "runway": "https://runwayml.com/?via=heliatech",
     "hubspot": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
-    "close-crm": "https://p.partnerstack.com/close?via=heliatech"
+    "close-crm": "https://p.partnerstack.com/close?via=heliatech",
+    "clay-com": "https://clay.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

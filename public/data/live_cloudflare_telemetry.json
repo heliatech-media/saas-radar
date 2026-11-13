@@ -1,0 +1,280 @@
+{
+  "last_synced": "2026-11-13T04:11:04.312601",
+  "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
+  "site": "heliatech.online",
+  "time_window": "28 Days (2026-10-16 - 2026-11-13)",
+  "total_visitors_network": 35963,
+  "total_requests": 172622,
+  "total_visits": 11148,
+  "total_pageviews": 38737,
+  "percent_cached": "56.14%",
+  "data_served_mb": 1778.6,
+  "periods": {
+    "today": {
+      "label": "Aujourd'hui (24h)",
+      "date": "2026-11-13",
+      "visitors": 750,
+      "rumVisits": 210,
+      "pageviews": 321,
+      "requests": 1427,
+      "hops": 8,
+      "dwell": "2m 55s",
+      "revenue": 280,
+      "viewMultiplier": 0.0083
+    },
+    "week": {
+      "label": "1 Semaine (7j)",
+      "visitors": 15156,
+      "rumVisits": 3940,
+      "pageviews": 11797,
+      "requests": 44991,
+      "hops": 24,
+      "dwell": "2m 48s",
+      "revenue": 840,
+      "viewMultiplier": 0.3045
+    },
+    "month": {
+      "label": "1 Mois (30j)",
+      "visitors": 35963,
+      "rumVisits": 11148,
+      "pageviews": 38737,
+      "requests": 172622,
+      "hops": 38,
+      "dwell": "2m 50s",
+      "revenue": 1330,
+      "viewMultiplier": 1.0
+    },
+    "quarter": {
+      "label": "3 Mois (90j)",
+      "visitors": 35963,
+      "rumVisits": 11148,
+      "pageviews": 38737,
+      "requests": 172622,
+      "hops": 38,
+      "dwell": "2m 50s",
+      "revenue": 1330,
+      "viewMultiplier": 1.0
+    },
+    "all": {
+      "label": "Depuis l'ouverture (Global)",
+      "visitors": 35963,
+      "rumVisits": 11148,
+      "pageviews": 38737,
+      "requests": 172622,
+      "hops": 38,
+      "dwell": "2m 50s",
+      "revenue": 1330,
+      "viewMultiplier": 1.0
+    }
+  },
+  "top_pages": [
+    {
+      "path": "/api/telemetry",
+      "views": 8590
+    },
+    {
+      "path": "/blog/screen-studio-evolution-guide-2026/",
+      "views": 6320
+    },
+    {
+      "path": "/",
+      "views": 4450
+    },
+    {
+      "path": "/calculator/",
+      "views": 1880
+    },
+    {
+      "path": "/blog/beehiiv-evolution-guide-2026/",
+      "views": 1440
+    },
+    {
+      "path": "/blog/eleven-v4-voice-ai-benchmark/",
+      "views": 910
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
+      "views": 370
+    },
+    {
+      "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 350
+    },
+    {
+      "path": "/blog/julius-ai-evolution-guide-2026/",
+      "views": 340
+    },
+    {
+      "path": "/blog/",
+      "views": 310
+    },
+    {
+      "path": "/radar/",
+      "views": 310
+    },
+    {
+      "path": "/deals/",
+      "views": 280
+    },
+    {
+      "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
+      "views": 270
+    },
+    {
+      "path": "/reviews/beehiiv/",
+      "views": 260
+    },
+    {
+      "path": "/reviews/elevenlabs/",
+      "views": 260
+    },
+    {
+      "path": "/reviews/clickup/",
+      "views": 260
+    },
+    {
+      "path": "/terms/",
+      "views": 250
+    },
+    {
+      "path": "/awards/",
+      "views": 250
+    },
+    {
+      "path": "/blog/linear-evolution-guide-2026/",
+      "views": 250
+    },
+    {
+      "path": "/blog/resend-evolution-guide-2026/",
+      "views": 240
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 220
+    },
+    {
+      "path": "/media-kit/",
+      "views": 210
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
+      "views": 210
+    },
+    {
+      "path": "/reviews/brevo/",
+      "views": 200
+    },
+    {
+      "path": "/blog/make-automation-revolution/",
+      "views": 200
+    },
+    {
+      "path": "/reviews/supabase/",
+      "views": 200
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 200
+    },
+    {
+      "path": "/versus/",
+      "views": 200
+    },
+    {
+      "path": "/blog/castmagic-evolution-guide-2026/",
+      "views": 190
+    },
+    {
+      "path": "/blog/rewardful-evolution-guide-2026/",
+      "views": 190
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "United States",
+      "views": 30320
+    },
+    {
+      "country": "Morocco",
+      "views": 29020
+    },
+    {
+      "country": "Germany",
+      "views": 2740
+    },
+    {
+      "country": "Singapore",
+      "views": 2360
+    },
+    {
+      "country": "Brazil",
+      "views": 1350
+    },
+    {
+      "country": "CN",
+      "views": 1020
+    },
+    {
+      "country": "United Kingdom",
+      "views": 930
+    },
+    {
+      "country": "Netherlands",
+      "views": 890
+    },
+    {
+      "country": "Belgium",
+      "views": 770
+    },
+    {
+      "country": "France",
+      "views": 740
+    },
+    {
+      "country": "Canada",
+      "views": 690
+    },
+    {
+      "country": "Spain",
+      "views": 540
+    },
+    {
+      "country": "HK",
+      "views": 500
+    },
+    {
+      "country": "FI",
+      "views": 440
+    },
+    {
+      "country": "PL",
+      "views": 320
+    }
+  ],
+  "top_referrers": [
+    {
+      "source": "Google Organic Search",
+      "views": 512
+    },
+    {
+      "source": "Direct / Bookmarks",
+      "views": 274
+    },
+    {
+      "source": "DEV.to Syndication",
+      "views": 182
+    },
+    {
+      "source": "Twitter / X",
+      "views": 156
+    },
+    {
+      "source": "LinkedIn B2B",
+      "views": 78
+    }
+  ],
+  "devices": {
+    "Desktop": 64,
+    "Mobile": 36
+  }
+}

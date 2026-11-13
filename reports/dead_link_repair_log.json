@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-12T21:41:23.317154",
+  "timestamp": "2026-11-13T04:11:59.821341",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 204,
-    "total_redirects_active": 119,
-    "new_redirects_healed": 36,
+    "total_content_files_scanned": 207,
+    "total_redirects_active": 121,
+    "new_redirects_healed": 37,
     "internal_links_repaired": 0,
     "external_targets_repaired": 15,
     "content_files_modified": 0
@@ -65,6 +65,11 @@
       "slug": "jira",
       "target_url": "https://www.jira.com",
       "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "surfer-seo",
+      "target_url": "https://www.surfer-seo.com",
+      "source_file": "surfer-seo-evolution-guide-2026.md"
     },
     {
       "slug": "zoominfo",

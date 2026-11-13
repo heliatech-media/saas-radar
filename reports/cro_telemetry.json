@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-12 21:40:42",
-  "total_pages_audited": 121,
-  "monetized_pages": 118,
-  "total_ctas_tracked": 549,
+  "timestamp": "2026-11-13 04:11:01",
+  "total_pages_audited": 123,
+  "monetized_pages": 120,
+  "total_ctas_tracked": 559,
   "average_cro_score": "88.9/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -78,7 +78,7 @@
     {
       "slug": "hubspot-enterprise-pricing-rate-card-leaks-2026",
       "type": "blog",
-      "word_count": 883,
+      "word_count": 893,
       "cta_count": 0,
       "has_monetized_hop": false,
       "cro_score": 60,
@@ -132,7 +132,7 @@
     {
       "slug": "make-automation-revolution",
       "type": "blog",
-      "word_count": 1629,
+      "word_count": 1636,
       "cta_count": 6,
       "has_monetized_hop": true,
       "cro_score": 90,

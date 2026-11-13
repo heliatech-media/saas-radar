@@ -941,6 +941,12 @@
         "composer",
         "autonomousai"
       ]
+    },
+    "adcreative-ai-vs-jasper-ai": {
+      "id": "already_published",
+      "url": "https://dev.to/adcreative-ai-vs-jasper-ai",
+      "canonical_url": "https://heliatech.online/blog/adcreative-ai-vs-jasper-ai",
+      "status": "already_published"
     }
   },
   "last_sync": null

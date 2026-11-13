@@ -137,7 +137,8 @@
     "rating": 4.8,
     "starting_price": "$149/mo",
     "best_for": "B2B founders, outbound sales agencies, and growth teams scaling personalized cold email.",
-    "affiliate_url": "https://clay.com"
+    "affiliate_url": "https://clay.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "ClickUp",
@@ -709,6 +710,16 @@
     "best_for": "Full-stack developers, indie hackers, and engineering teams scaling web and mobile applications.",
     "affiliate_url": "https://supabase.com/?via=heliatech",
     "commission_rate": "20% for 12 months"
+  },
+  {
+    "name": "Surfer SEO",
+    "slug": "surfer-seo",
+    "tagline": "Data-driven content optimization and SERP analysis platform powered by NLP metrics.",
+    "category": "AI SEO & Copywriting",
+    "rating": 4.6,
+    "starting_price": "$89/mo",
+    "best_for": "Content marketing teams, SEO agencies, and freelance writers aiming to rank higher on Google through data-backed content optimization.",
+    "affiliate_url": "https://surferseo.com"
   },
   {
     "name": "Synthesia",
