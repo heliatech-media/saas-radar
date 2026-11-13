@@ -5,11 +5,15 @@ and maintains the search index.
 """
 
 import json
+import logging
 from pathlib import Path
 from typing import List
 import yaml
 from agents.config import CONTENT_DIR, BLOG_CONTENT_DIR, DATA_DIR
 from agents.models import ToolReview, BlogPost
+from agents.notifier_agent import NotifierAgent
+
+logger = logging.getLogger("Helia-Publisher")
 
 
 class PublisherAgent:
@@ -20,6 +24,7 @@ class PublisherAgent:
         self.content_dir.mkdir(parents=True, exist_ok=True)
         self.blog_dir.mkdir(parents=True, exist_ok=True)
         self.data_dir.mkdir(parents=True, exist_ok=True)
+        self.notifier = NotifierAgent()
 
     def publish_review(self, review: ToolReview) -> Path:
         """Writes an Astro-compatible Markdown review with structured YAML frontmatter."""
@@ -102,6 +107,23 @@ class PublisherAgent:
         # Update the search and directory index
         self._update_index(review)
 
+        # Instant Founder Alert via Telegram
+        try:
+            if self.notifier and self.notifier.is_configured():
+                review_url = f"https://heliatech.online/reviews/{review.slug}/"
+                title = f"⭐ NOUVELLE REVUE LOGICIEL : {review.name}"
+                msg = (
+                    f"Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n"
+                    f"• **Outil :** {review.name}\n"
+                    f"• **Catégorie :** {review.category}\n"
+                    f"• **Note globale :** {review.rating}/10\n"
+                    f"• **Cible idéale :** {review.best_for}\n\n"
+                    f"👉 Lire la fiche d'audit complète :"
+                )
+                self.notifier.send_notification(title, msg, category="REVIEW", link=review_url)
+        except Exception as e:
+            logger.warning(f"Notification error on review publication: {e}")
+
         return filepath
 
     def publish_blog_post(self, post: BlogPost) -> Path:
@@ -132,6 +154,23 @@ class PublisherAgent:
 
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(full_content)
+
+        # Instant Founder Alert via Telegram
+        try:
+            if self.notifier and self.notifier.is_configured():
+                article_url = f"https://heliatech.online/blog/{post.slug}/"
+                title = f"📰 NOUVEL ARTICLE PUBLIÉ : {post.title}"
+                msg = (
+                    f"Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n"
+                    f"• **Titre :** {post.title}\n"
+                    f"• **Catégorie :** {post.category}\n"
+                    f"• **Temps de lecture :** {post.readingTime or '8 min read'}\n"
+                    f"• **Slug :** `/blog/{post.slug}/`\n\n"
+                    f"👉 Découvrir la masterclass en direct :"
+                )
+                self.notifier.send_notification(title, msg, category="CONTENT", link=article_url)
+        except Exception as e:
+            logger.warning(f"Notification error on blog publication: {e}")
 
         return filepath
 

@@ -1,7 +1,21 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 16,
+  "total_sent": 17,
   "dispatches": [
+    {
+      "type": "impact_appeal",
+      "account_id": "8110674",
+      "from": "partnership@heliatech.online",
+      "recipients": [
+        "support@impact.com",
+        "publisher-support@impact.com"
+      ],
+      "cc": [
+        "hamzaelfahsi@gmail.com"
+      ],
+      "dispatched_at": "2026-11-12T00:38:58.200Z",
+      "resend_id": "01a1cd31-6c2e-7b47-aabd-4cd9de2a3ace"
+    },
     {
       "type": "weekly_radar",
       "issue": 43,
