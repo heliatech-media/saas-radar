@@ -51,11 +51,12 @@ Their core frustration was relatable: in Poland, foreign films and television sh
 
 ```mermaid
 flowchart TD
-    A[Source Text or Voice Sample] --> B[Contextual & Emotional Synthesis]
-    B --> C{ElevenLabs Generative Core}
-    C -->|Voice Design| D[Novel Custom Voice Profiles]
-    C -->|Instant Cloning| E[High-Fidelity 60s Clone]
-    C -->|Dubbing Studio| F[29 Languages + Lip Sync]
+    A["Source Text or Voice Sample"] --> B["Contextual & Emotional Synthesis"]
+    B --> C["🎙️ ElevenLabs Generative Core"]
+    C -->|Voice Design| D["Novel Custom Voice Profiles"]
+    C -->|Instant Cloning| E["High-Fidelity 60s Clone"]
+    C -->|Dubbing Studio| F["29 Languages + Lip Sync"]
+    style C fill:#0284c7,stroke:#38bdf8,stroke-width:2px,color:#ffffff
 ```
 
 By engineering a proprietary model that analyzes syntactic phrasing and emotional subtext, ElevenLabs achieved what Big Tech giants had struggled with for years: rendering **subtle pauses, natural intakes of breath, conversational inflections, and acoustic warmth** that make speech unmistakably human.

@@ -13,10 +13,25 @@ const RADAR_ITEMS = [
   { tool_name: "DeepSeek Coder V2", slug: "deepseek-coder", category: "Open Weights", velocity_score: "85%", monthly_searches: "~45,000", status: "ANALYSIS_QUEUED", teardown_url: null }
 ];
 
+export async function onRequestOptions() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+    },
+  });
+}
+
 export async function onRequestGet() {
   return new Response(JSON.stringify({ radar_trends: RADAR_ITEMS, total: RADAR_ITEMS.length }), {
     status: 200,
-    headers: { "Content-Type": "application/json", "Cache-Control": "no-store, private" }
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-store, private",
+      "Access-Control-Allow-Origin": "*"
+    }
   });
 }
 

@@ -182,7 +182,12 @@ class LinkedInSyndicator:
         linkedin_text = self.social_agent.craft_linkedin_authority_post(post)
 
         canonical_url = f"https://heliatech.online/blog/{target_slug}"
-        png_url = f"https://heliatech.online/images/blog/{tool_slug}.png"
+        raw_image = fm.get("image", "")
+        if raw_image:
+            img_stem = Path(raw_image).stem
+            png_url = f"https://heliatech.online/images/blog/{img_stem}.png"
+        else:
+            png_url = f"https://heliatech.online/images/blog/{tool_slug}.png"
 
         # Construct LinkedIn ugcPosts Payload
         headers = {

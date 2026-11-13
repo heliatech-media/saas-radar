@@ -30,6 +30,7 @@ from typing import Dict, List, Optional, Any, Tuple
 from difflib import SequenceMatcher
 from contextlib import contextmanager
 from zoneinfo import ZoneInfo
+from agents.notifier_agent import NotifierAgent
 
 logger = logging.getLogger("Helia-NewsletterEngine")
 
@@ -284,6 +285,25 @@ class NewsletterEngine:
 
         logger.info(f"Created unique draft #{edition_id} for slot '{slot_key}' (hash: {content_hash[:12]}...)")
         self.export_supervision_journal()
+
+        # Instant Founder Alert via Telegram
+        try:
+            notifier = NotifierAgent()
+            if notifier.is_configured():
+                title = f"📅 NOUVELLE NEWSLETTER PLANIFIÉE"
+                msg = (
+                    f"Une nouvelle édition de newsletter vient d'être planifiée par Helia !\n\n"
+                    f"• **Créneau :** `{slot_key}`\n"
+                    f"• **Type :** {edition_type.upper()}\n"
+                    f"• **Date prévue :** {scheduled_date}\n"
+                    f"• **Sujet :** {subject}\n"
+                    f"• **Statut :** Brouillon créé (en attente d'approbation)\n\n"
+                    f"👉 Valider ou inspecter dans Sentinel Admin :"
+                )
+                notifier.send_notification(title, msg, category="NEWSLETTER", link="https://heliatech.online/sentinel/admin")
+        except Exception as e:
+            logger.warning(f"Telegram notification notice on draft creation: {e}")
+
         return self.get_edition_by_slot(slot_key)
 
     # =========================================================================
@@ -575,6 +595,24 @@ class NewsletterEngine:
 
         logger.info(f"Dispatched slot '{slot_key}' Issue #{issue_num:03d}: {sent_count} sent, {blocked_count} duplicates blocked, {ignored_count} ignored.")
         self.export_supervision_journal()
+
+        # Instant Founder Alert via Telegram
+        try:
+            notifier = NotifierAgent()
+            if notifier.is_configured():
+                title = f"🚀 NEWSLETTER OFFICIELLEMENT EXPÉDIÉE : #{issue_num:03d}"
+                msg = (
+                    f"L'édition #{issue_num:03d} vient d'être envoyée avec succès aux abonnés de la communauté !\n\n"
+                    f"• **Créneau :** `{slot_key}`\n"
+                    f"• **Sujet :** {edition['subject']}\n"
+                    f"• **Abonnés touchés :** {total_sent}\n"
+                    f"• **Doublons interceptés :** {total_blocked}\n\n"
+                    f"👉 Historique complet dans Sentinel Admin :"
+                )
+                notifier.send_notification(title, msg, category="NEWSLETTER", link="https://heliatech.online/sentinel/admin")
+        except Exception as e:
+            logger.warning(f"Telegram notification notice on newsletter dispatch: {e}")
+
         return {
             "status": "SUCCESS",
             "slot_key": slot_key,

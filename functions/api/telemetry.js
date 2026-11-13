@@ -74,7 +74,28 @@ export async function onRequestPost(context) {
 }
 
 export async function onRequestGet(context) {
-  // 1. Direct Edge Asset Retrieval from Cloudflare Pages static assets
+  // 1. Direct Edge Retrieval from Cloudflare D1 Cache (Real-Time Live Telemetry)
+  if (context.env?.DB) {
+    try {
+      const row = await context.env.DB.prepare(
+        "SELECT data_json FROM sentinel_telemetry_cache WHERE id = 1"
+      ).first();
+      if (row && row.data_json) {
+        return new Response(row.data_json, {
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control": "public, max-age=5, s-maxage=15",
+            "Access-Control-Allow-Origin": "*",
+            "X-Edge-Origin": "Cloudflare-D1-Live-Cache"
+          }
+        });
+      }
+    } catch (err) {
+      console.warn("D1 telemetry cache lookup error:", err);
+    }
+  }
+
+  // 2. Direct Edge Asset Retrieval from Cloudflare Pages static assets
   if (context.env?.ASSETS) {
     try {
       const assetUrl = new URL("/data/live_cloudflare_telemetry.json", context.request.url);

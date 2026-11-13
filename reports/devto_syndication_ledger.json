@@ -903,82 +903,43 @@
         "productivity"
       ]
     },
-    "clickup-vs-linear": {
-      "id": 5014195,
-      "url": "https://dev.to/heliatech/clickup-vs-linear-2026-all-in-one-enterprise-workspace-vs-keyboard-first-engineering-velocity-408j",
-      "title": "ClickUp vs Linear (2026): All-in-One Enterprise Workspace vs Keyboard-First Engineering Velocity",
-      "canonical_url": "https://heliatech.online/blog/clickup-vs-linear",
+    "bolt-new-vs-lovable-2026-vibe-coding-showdown": {
+      "id": 5016884,
+      "url": "https://dev.to/heliatech/boltnew-vs-lovable-the-2026-vibe-coding-full-stack-app-builder-showdown-43mg",
+      "title": "Bolt.new vs Lovable: The 2026 Vibe Coding & Full-Stack App Builder Showdown",
+      "canonical_url": "https://heliatech.online/blog/bolt-new-vs-lovable-2026-vibe-coding-showdown",
       "published": true,
       "tags": [
-        "clickup",
-        "linear",
-        "clickupvslinear",
-        "comparison"
+        "boltnew",
+        "lovable",
+        "vibecoding",
+        "aiappbuilders"
       ]
     },
-    "invideo-ai-evolution-guide-2026": {
-      "id": 5017154,
-      "url": "https://dev.to/heliatech/invideo-ai-engineering-breakdown-scaling-enterprise-video-production-at-100k-unit-economics-3oap",
-      "title": "InVideo AI: The Genesis of Text-to-Video Synthesis and the Executive Playbook to Production Velocity",
-      "canonical_url": "https://heliatech.online/blog/invideo-ai-evolution-guide-2026",
+    "smartlead-vs-instantly-2026-b2b-cold-outreach": {
+      "id": 5016885,
+      "url": "https://dev.to/heliatech/smartlead-vs-instantly-the-ultimate-b2b-cold-outreach-deliverability-breakdown-2026-229",
+      "title": "Smartlead vs Instantly: The Ultimate B2B Cold Outreach & Deliverability Breakdown (2026)",
+      "canonical_url": "https://heliatech.online/blog/smartlead-vs-instantly-2026-b2b-cold-outreach",
       "published": true,
       "tags": [
-        "invideoai",
-        "productivity",
-        "saas",
-        "automation"
+        "smartlead",
+        "instantly",
+        "coldoutreach",
+        "b2bsales"
       ]
     },
-    "invideo-evolution-guide-2026": {
-      "id": 5019332,
-      "url": "https://dev.to/heliatech/invideo-the-genesis-of-prompt-to-video-production-and-the-hands-on-guide-to-enterprise-scale-in-4a9e",
-      "title": "InVideo: The Genesis of Prompt-to-Video Production and the Hands-on Guide to Enterprise Scale in 2026",
-      "canonical_url": "https://heliatech.online/blog/invideo-evolution-guide-2026",
+    "replit-agent-vs-cursor-composer-2026": {
+      "id": 5016904,
+      "url": "https://dev.to/heliatech/replit-agent-vs-cursor-composer-which-ai-actually-builds-production-software-in-2026-1964",
+      "title": "Replit Agent vs Cursor Composer: Which AI Actually Builds Production Software in 2026?",
+      "canonical_url": "https://heliatech.online/blog/replit-agent-vs-cursor-composer-2026",
       "published": true,
       "tags": [
-        "invideo",
-        "productivity",
-        "saas",
-        "automation"
-      ]
-    },
-    "loops-evolution-guide-2026": {
-      "id": 5020752,
-      "url": "https://dev.to/heliatech/loops-the-modern-email-engine-for-saas-and-the-blueprint-for-product-led-growth-4fji",
-      "title": "Loops: The Modern Email Engine for SaaS and the Blueprint for Product-Led Growth",
-      "canonical_url": "https://heliatech.online/blog/loops-evolution-guide-2026",
-      "published": true,
-      "tags": [
-        "loops",
-        "productledgrowth",
-        "saas",
-        "emailautomation"
-      ]
-    },
-    "adcreative-ai-vs-jasper-ai": {
-      "id": 5024016,
-      "url": "https://dev.to/heliatech/adcreativeai-vs-jasper-ai-2026-high-converting-visual-ad-banners-vs-enterprise-brand-copywriting-ga1",
-      "title": "AdCreative.ai vs Jasper AI (2026): High-Converting Visual Ad Banners vs Enterprise Brand Copywriting",
-      "canonical_url": "https://heliatech.online/blog/adcreative-ai-vs-jasper-ai",
-      "published": true,
-      "tags": [
-        "adcreativeai",
-        "jasperai",
-        "adcreativeaivsjasperai",
-        "comparison"
-      ]
-    },
-    "hubspot-enterprise-pricing-rate-card-leaks-2026": {
-      "id": 5025710,
-      "url": "https://dev.to/heliatech/hubspot-enterprise-2026-hidden-rate-card-the-uncensored-pricing-leak-onboarding-traps-4799",
-      "title": "HubSpot Enterprise 2026 Hidden Rate Card: The Uncensored Pricing Leak & Onboarding Traps",
-      "canonical_url": "https://heliatech.online/blog/hubspot-enterprise-pricing-rate-card-leaks-2026",
-      "published": true,
-      "tags": [
-        "hubspot",
-        "crm",
-        "pricing",
-        "enterprise"
+        "replitagent",
+        "cursor",
+        "composer",
+        "autonomousai"
       ]
     }
   },

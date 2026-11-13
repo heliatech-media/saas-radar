@@ -78,11 +78,12 @@ flowchart TD
 Make utilise un canevas de type Graphe Orienté Acyclic (DAG). Les workflows sont cartographiés spatialement, permettant aux données de circuler simultanément à travers des nœuds de routage complexes, des agrégateurs, des filtres et des itérateurs.
 
 ```mermaid
-flowchart LR
-    A[Déclencheur : Webhook Ingestion] --> B{Routeur Nodal Make}
-    B -->|Branche A| C[CRM Entreprise]
-    B -->|Branche B| D[Moteur de facturation]
-    B -->|Branche C| E[Base de Données Analytics]
+flowchart TD
+    A["Déclencheur : Webhook Ingestion"] --> B["⚡ Routeur Nodal Make"]
+    B -->|Branche A| C["CRM Entreprise"]
+    B -->|Branche B| D["Moteur de facturation"]
+    B -->|Branche C| E["Base de Données Analytics"]
+    style B fill:#6366f1,stroke:#818cf8,stroke-width:2px,color:#ffffff
 ```
 
 *   **Le triomphe architectural :** Make traite les données sous forme de "paquets" (bundles) circulant dans les chemins d'exécution. Vous pouvez ingérer un payload JSON profondément imbriqué et le manipuler avec une précision chirurgicale sans saturer la mémoire.

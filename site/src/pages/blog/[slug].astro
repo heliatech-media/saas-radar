@@ -412,7 +412,7 @@ const jsonLd = {
       pre.appendChild(btn);
     });
 
-    // 4. Client-side Mermaid Dynamic Vector Rendering
+    // 4. Client-side Mermaid Dynamic Vector Rendering (Executive Architectural Theme)
     const mermaidPres = document.querySelectorAll('.elite-article pre[data-language="mermaid"]');
     if (mermaidPres.length > 0) {
       import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs')
@@ -421,25 +421,57 @@ const jsonLd = {
             startOnLoad: false,
             theme: 'dark',
             securityLevel: 'loose',
+            flowchart: {
+              useMaxWidth: false,
+              htmlLabels: true,
+              curve: 'basis',
+              nodeSpacing: 35,
+              rankSpacing: 40
+            },
             themeVariables: {
               darkMode: true,
-              background: '#070b12',
-              primaryColor: '#0284c7',
+              background: '#090e1a',
+              primaryColor: '#0c1425',
               primaryTextColor: '#f8fafc',
-              primaryBorderColor: '#38bdf8',
-              lineColor: '#64748b',
+              primaryBorderColor: '#0284c7',
+              lineColor: '#38bdf8',
               secondaryColor: '#1e293b',
-              tertiaryColor: '#0f172a'
+              tertiaryColor: '#0c1425',
+              fontSize: '13.5px',
+              fontFamily: 'Inter, system-ui, sans-serif'
             }
           });
           mermaidPres.forEach(async (pre, idx) => {
             const rawCode = pre.querySelector('code')?.innerText || pre.innerText;
-            const target = document.createElement('div');
-            target.className = 'my-8 p-6 rounded-2xl bg-[#070b12] border border-slate-800 flex justify-center overflow-x-auto shadow-inner';
+            const wrapper = document.createElement('div');
+            wrapper.className = 'my-8 rounded-2xl bg-[#090e1a] border border-cyan-500/20 shadow-2xl overflow-hidden';
+
+            const header = document.createElement('div');
+            header.className = 'flex items-center justify-between px-5 py-2.5 bg-slate-900/80 border-b border-white/[0.08] text-xs font-mono text-slate-400';
+            header.innerHTML = `
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span class="text-cyan-300 font-bold tracking-wider">SYSTEM ARCHITECTURE</span>
+              </div>
+              <span class="text-[11px] text-slate-500 hidden sm:inline">↔ Drag or scroll to explore</span>
+            `;
+            wrapper.appendChild(header);
+
+            const canvas = document.createElement('div');
+            canvas.className = 'mermaid-body p-6 overflow-x-auto flex justify-center items-center';
+            canvas.style.webkitOverflowScrolling = 'touch';
+            wrapper.appendChild(canvas);
+
             try {
               const { svg } = await mermaid.render('mermaid-diag-' + idx, rawCode);
-              target.innerHTML = svg;
-              pre.parentNode.replaceChild(target, pre);
+              canvas.innerHTML = svg;
+              const svgEl = canvas.querySelector('svg');
+              if (svgEl) {
+                svgEl.style.height = 'auto';
+                svgEl.style.display = 'block';
+                svgEl.style.margin = '0 auto';
+              }
+              pre.parentNode.replaceChild(wrapper, pre);
             } catch (e) {
               console.warn('Mermaid rendering fallback:', e);
             }

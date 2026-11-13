@@ -48,12 +48,13 @@ Enter **ElevenAgents by [ElevenLabs](/reviews/elevenlabs)**: an intelligent, rea
 
 ```mermaid
 flowchart TD
-    A[Incoming Customer Call] --> B[ElevenAgents Virtual Receptionist]
-    B --> C{Intent Analysis & Knowledge Retrieval}
-    C -->|General FAQ & Pricing| D[Natural Voice Answer via v3 Expressive Mode]
-    C -->|Booking Request| E[Direct Sync: Google Calendar / Calendly]
-    C -->|Complex Escalation| F[Live Transfer to Staff Mobile with Context]
+    A["📞 Incoming Customer Call"] --> B["🤖 ElevenAgents Virtual Receptionist"]
+    B --> C["🔍 Intent Analysis & Knowledge Retrieval"]
+    C -->|General FAQ & Pricing| D["Natural Voice Answer via v3 Expressive Mode"]
+    C -->|Booking Request| E["Direct Sync: Google Calendar / Calendly"]
+    C -->|Complex Escalation| F["Live Transfer to Staff Mobile with Context"]
     style B fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff
+    style C fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff
     style E fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#ffffff
 ```
 

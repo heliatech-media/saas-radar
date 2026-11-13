@@ -5,6 +5,17 @@
  * ZÉRO MOCK, ZÉRO HARDCODED COUNT, ZÉRO FALLBACK FICTIF.
  */
 
+export async function onRequestOptions() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+    },
+  });
+}
+
 export async function onRequestGet(context) {
   try {
     const db = context.env?.DB;
@@ -129,7 +140,8 @@ export async function onRequestGet(context) {
       headers: {
         "Content-Type": "application/json",
         "Cache-Control": "no-store, private",
-        "X-Robots-Tag": "noindex, nofollow"
+        "X-Robots-Tag": "noindex, nofollow",
+        "Access-Control-Allow-Origin": "*"
       }
     });
   } catch (err) {

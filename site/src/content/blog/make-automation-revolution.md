@@ -52,12 +52,14 @@ A single e-commerce checkout is never merely a notification email:
 Integromat was designed from day one as a **visual computer**. Rather than chaining static form inputs together, they invented an infinite zoomable canvas populated by interactive bubbles (modules), connected by glowing light beams that pulse with live data packets during execution.
 
 ```mermaid
-flowchart LR
-    A[Inbound Webhook] --> B{Intelligent Router}
-    B -->|B2B Enterprise Lead| C[Apollo Data Enrichment]
-    C --> D[HubSpot CRM Deal Creation]
-    D --> E[Slack VIP Notification]
-    B -->|Standard Lead| F[Add to Email Nurture Flow]
+flowchart TD
+    A["Inbound Webhook"] --> B["⚡ Intelligent Router"]
+    B -->|B2B Enterprise Lead| C["Apollo Data Enrichment"]
+    C --> D["HubSpot CRM Deal Creation"]
+    D --> E["Slack VIP Notification"]
+    B -->|Standard Lead| F["Add to Email Nurture Flow"]
+    style B fill:#6366f1,stroke:#818cf8,stroke-width:2px,color:#ffffff
+    style E fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff
 ```
 
 In 2022, following its acquisition by Celonis (the global leader in process mining for Fortune 500 enterprises), Integromat transformed into **Make**. The platform revamped its core engine, boosted execution throughput by an order of magnitude, and opened its ecosystem to thousands of pre-built community integrations.

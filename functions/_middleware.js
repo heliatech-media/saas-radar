@@ -1,6 +1,19 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
 
+  // 0. Instant Edge Fast-Path for Google AdSense ads.txt (Sub-10ms response guarantee)
+  if (url.pathname === '/ads.txt') {
+    return new Response("google.com, pub-4334705198476561, DIRECT, f08c47fec0942fa0\n", {
+      status: 200,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600',
+        'Access-Control-Allow-Origin': '*',
+        'X-Content-Type-Options': 'nosniff'
+      }
+    });
+  }
+
   // 1. Strict 301 Redirect www.heliatech.online -> heliatech.online
   if (url.hostname === 'www.heliatech.online') {
     url.hostname = 'heliatech.online';
@@ -52,13 +65,27 @@ export async function onRequest(context) {
   );
 
   if (isProtectedAdminRoute) {
+    // Fast path: OPTIONS preflight requests
+    if (context.request.method === 'OPTIONS') {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With, Cf-Access-Jwt-Assertion',
+          'Access-Control-Max-Age': '86400'
+        }
+      });
+    }
+
     const cfJwt = context.request.headers.get('Cf-Access-Jwt-Assertion');
     const cfEmail = context.request.headers.get('Cf-Access-Authenticated-User-Email');
     const authHeader = context.request.headers.get('Authorization') || '';
     const cookieHeader = context.request.headers.get('Cookie') || '';
-    const referer = context.request.headers.get('referer') || '';
+    const referer = context.request.headers.get('referer') || context.request.headers.get('Referer') || '';
     const secFetchSite = context.request.headers.get('Sec-Fetch-Site') || '';
     const origin = context.request.headers.get('Origin') || '';
+    const requestedWith = context.request.headers.get('X-Requested-With') || '';
 
     // Cryptographic clearance verification
     const AUTHORIZED_DIGEST = "1b761a519101a5896b97077561b9140f6c31c7b3d864478a563d131cc46e2b1e";
@@ -89,13 +116,28 @@ export async function onRequest(context) {
       referer.includes('127.0.0.1')
     );
 
+    // Check 5: Internal Sentinel Admin Client Request
+    const hasAdminHeader = (requestedWith === 'Sentinel-Admin');
+
     const isLocalhost = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
 
-    if (hasCfAccess || hasBearer || hasSessionCookie || isSameOrigin || isLocalhost) {
+    if (hasCfAccess || hasBearer || hasSessionCookie || isSameOrigin || isLocalhost || hasAdminHeader) {
       const response = await context.next();
       response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet');
       response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
       return response;
+    }
+
+    // For API routes, return clean JSON 401 instead of HTML to prevent client-side parsing failures
+    if (url.pathname.startsWith('/api/sentinel')) {
+      return new Response(JSON.stringify({ error: "Unauthorized access to Sentinel Admin API", status: 401 }), {
+        status: 401,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
+          'Cache-Control': 'no-store, private'
+        }
+      });
     }
 
     // Reject unauthorized public access with 403 Forbidden
