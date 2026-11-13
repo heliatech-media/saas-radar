@@ -32,6 +32,7 @@ load_dotenv(ROOT_DIR / ".env")
 
 from agents.config import GEMINI_API_KEY, GEMINI_MODEL, BLOG_CONTENT_DIR, DATA_DIR, call_gemini_with_failover
 from agents.image_generator_agent import ImageGeneratorAgent
+from agents.notifier_agent import NotifierAgent
 
 # High-intent B2B rivalry pairs with enormous Google search volume & high buyer intent
 HIGH_INTENT_DUELS = [
@@ -181,6 +182,23 @@ Write the complete markdown article without truncation.
 
             # Generate custom duel artwork
             self.generate_duel_visual(slug_a, slug_b, duel_slug)
+
+            # Instant Founder Alert via Telegram
+            try:
+                notifier = NotifierAgent()
+                if notifier.is_configured():
+                    duel_url = f"https://heliatech.online/blog/{duel_slug}/"
+                    title = f"⚔️ NOUVEAU DUEL VERSUS : {title_clean}"
+                    msg = (
+                        f"Un nouveau grand comparatif direct vient d'être publié sur HeliaTech !\n\n"
+                        f"• **Duel :** {name_a} vs {name_b}\n"
+                        f"• **Titre :** {title_clean}\n"
+                        f"• **Fichier :** `{duel_slug}.md`\n\n"
+                        f"👉 Découvrir le duel en direct :"
+                    )
+                    notifier.send_notification(title, msg, category="CONTENT", link=duel_url)
+            except Exception as e:
+                logger.warning(f"Telegram alert notice on versus duel: {e}")
 
             return target_file
 

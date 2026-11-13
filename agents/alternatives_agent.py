@@ -32,6 +32,7 @@ if str(ROOT_DIR) not in sys.path:
 load_dotenv(ROOT_DIR / ".env")
 
 from agents.config import GEMINI_API_KEY, GEMINI_MODEL, BLOG_CONTENT_DIR, DATA_DIR, call_gemini_with_failover
+from agents.notifier_agent import NotifierAgent
 
 # High-intent replacement queries in B2B SaaS
 HIGH_INTENT_ALTERNATIVES = [
@@ -365,6 +366,24 @@ tldr:
                 f.write(content)
 
             logger.info(f"Top 7 Alternatives article successfully saved to: {target_file}")
+
+            # Instant Founder Alert via Telegram
+            try:
+                notifier = NotifierAgent()
+                if notifier.is_configured():
+                    alt_url = f"https://heliatech.online/blog/{slug}/"
+                    title = f"🏆 NOUVEAU COMPARATIF TOP 7 : {config.get('target_name', slug)}"
+                    msg = (
+                        f"Un nouveau comparatif 'Top 7 Meilleures Alternatives' vient d'être publié !\n\n"
+                        f"• **Cible :** Alternatives à {config.get('target_name', slug)}\n"
+                        f"• **Catégorie :** {config.get('category', 'SaaS')}\n"
+                        f"• **Fichier :** `{slug}.md`\n\n"
+                        f"👉 Découvrir le classement complet :"
+                    )
+                    notifier.send_notification(title, msg, category="CONTENT", link=alt_url)
+            except Exception as e:
+                logger.warning(f"Telegram alert notice on alternatives roundup: {e}")
+
             return target_file
 
         except Exception as e:
