@@ -150,19 +150,19 @@ const jsonLd = {
         {post.description}
       </p>
 
-      <!-- Author Capsule & Direct Links -->
+      <!-- Author Capsule & Direct Links (E-E-A-T Verified) -->
       <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/60 border border-slate-800">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px] shadow-glow-cyan">
+        <a href="/about" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-cyan-500 to-fuchsia-500 p-[1px] shadow-glow-cyan group-hover:scale-105 transition-transform">
             <div class="w-full h-full bg-[#030303] rounded-full flex items-center justify-center font-black text-xs text-white">
               HT
             </div>
           </div>
           <div>
-            <span class="text-xs font-bold text-white block">HELIATECH EDITORIAL</span>
-            <span class="text-[11px] font-mono text-cyan-400">Forensics & Intelligence Division</span>
+            <span class="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors block">HELIATECH EDITORIAL</span>
+            <span class="text-[11px] font-mono text-cyan-400">Forensics & Intelligence Division • <span class="underline">About Us</span></span>
           </div>
-        </div>
+        </a>
 
         {post.tool_slug && (
           <div class="flex items-center gap-3">
