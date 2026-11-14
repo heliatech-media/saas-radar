@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <circle cx="280" cy="315" r="160" fill="#2563eb" opacity="0.12" filter="blur(40px)" />
+  <circle cx="920" cy="315" r="160" fill="#10b981" opacity="0.12" filter="blur(40px)" />
+
+  <!-- Grid overlay -->
+  <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4" />
+  <path d="M200 0 V630 M400 0 V630 M600 0 V630 M800 0 V630 M1000 0 V630" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4" />
+
+  <!-- Left Card: Smartlead.ai -->
+  <rect x="120" y="160" width="380" height="310" rx="20" fill="#09142e" stroke="#3b82f6" stroke-width="2" stroke-opacity="0.6" />
+  <text x="310" y="240" fill="#60a5fa" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" text-anchor="middle">🎯 Smartlead.ai</text>
+  <text x="310" y="280" fill="#94a3b8" font-family="monospace" font-size="16" text-anchor="middle">Enterprise Outbound Infra</text>
+  <text x="310" y="325" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Dynamic IP Warmup &amp; API</text>
+  <rect x="160" y="370" width="300" height="42" rx="10" fill="#1d4ed8" fill-opacity="0.2" stroke="#60a5fa" stroke-width="1" />
+  <text x="310" y="397" fill="#60a5fa" font-family="monospace" font-weight="bold" font-size="14" text-anchor="middle">Custom Webhooks • Unibox V2</text>
+
+  <!-- VS Badge -->
+  <circle cx="600" cy="315" r="48" fill="#1e293b" stroke="#f59e0b" stroke-width="3" />
+  <text x="600" y="325" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="900" font-size="28" text-anchor="middle">VS</text>
+
+  <!-- Right Card: Instantly.ai -->
+  <rect x="700" y="160" width="380" height="310" rx="20" fill="#08231c" stroke="#10b981" stroke-width="2" stroke-opacity="0.6" />
+  <text x="890" y="240" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" text-anchor="middle">⚡ Instantly.ai</text>
+  <text x="890" y="280" fill="#94a3b8" font-family="monospace" font-size="16" text-anchor="middle">All-in-One Outbound Suite</text>
+  <text x="890" y="325" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Lead Database &amp; Automated CRM</text>
+  <rect x="740" y="370" width="300" height="42" rx="10" fill="#047857" fill-opacity="0.2" stroke="#34d399" stroke-width="1" />
+  <text x="890" y="397" fill="#34d399" font-family="monospace" font-weight="bold" font-size="14" text-anchor="middle">Super Warmup • B2B Leads</text>
+
+  <!-- Top Title -->
+  <rect x="420" y="50" width="360" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="600" y="74" fill="#34d399" font-family="monospace" font-weight="bold" font-size="12" text-anchor="middle" letter-spacing="2">HELIATECH 2026 BENCHMARK</text>
+  <text x="600" y="125" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="26" text-anchor="middle">The Ultimate B2B Cold Outreach &amp; Deliverability Breakdown</text>
+</svg>

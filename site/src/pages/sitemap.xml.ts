@@ -8,6 +8,13 @@ export async function GET() {
 
   const staticUrls = [
     '/',
+    '/about/',
+    '/privacy/',
+    '/contact/',
+    '/terms/',
+    '/methodology/',
+    '/sponsor/',
+    '/media-kit/',
     '/deals/',
     '/radar/',
     '/awards/',
