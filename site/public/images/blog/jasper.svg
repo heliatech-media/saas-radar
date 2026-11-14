@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- Glowing Orbs -->
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fuchsiaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- UI/Panel Gradients -->
+    <linearGradient id="panelGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="strokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Grid Overlay -->
+  <rect width="1200" height="630" fill="url(#gridPattern)"/>
+
+  <!-- Ambient Lighting / Glow Orbs -->
+  <circle cx="200" cy="150" r="300" fill="url(#cyanGlow)" filter="url(#softGlow)"/>
+  <circle cx="1000" cy="500" r="350" fill="url(#fuchsiaGlow)" filter="url(#softGlow)"/>
+  <circle cx="850" cy="120" r="250" fill="url(#violetGlow)" filter="url(#softGlow)"/>
+
+  <!-- ABSTRACT 3D VECTOR ILLUSTRATION (AI SEO / Copywriting Neural Core) -->
+  <g transform="translate(680, 80)" filter="url(#glow)">
+    <!-- Connecting Workflow / Neural Web Lines -->
+    <path d="M 50 150 L 200 80 L 350 180 L 280 320 L 100 280 Z" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3"/>
+    <path d="M 200 80 L 260 200 L 350 180" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.4"/>
+    <path d="M 100 280 L 260 200 L 50 150" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-opacity="0.3"/>
+
+    <!-- Central Floating Enterprise AI Hub (Isometric Multi-layered Cube) -->
+    <!-- Base Plate -->
+    <polygon points="200,240 320,180 200,120 80,180" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+    <polygon points="200,240 320,180 200,120 80,180" fill="url(#panelGlass)" opacity="0.8"/>
+
+    <!-- Mid Plate -->
+    <polygon points="200,190 300,140 200,90 100,140" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2"/>
+    
+    <!-- Top Core -->
+    <polygon points="200,140 260,110 200,80 140,110" fill="#311045" stroke="#d946ef" stroke-width="2"/>
+
+    <!-- Vertical Connection Pillars -->
+    <line x1="80" y1="180" x2="80" y2="230" stroke="#06b6d4" stroke-width="2"/>
+    <line x1="320" y1="180" x2="320" y2="230" stroke="#06b6d4" stroke-width="2"/>
+    <line x1="200" y1="240" x2="200" y2="290" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Floating Data Nodes & Rings -->
+    <ellipse cx="200" cy="290" rx="60" ry="20" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <ellipse cx="200" cy="70" rx="90" ry="30" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+    <!-- Orbiting Enterprise SEO Signals -->
+    <circle cx="120" cy="110" r="6" fill="#38bdf8"/>
+    <circle cx="290" cy="210" r="8" fill="#d946ef"/>
+    <circle cx="230" cy="280" r="5" fill="#06b6d4"/>
+
+    <!-- Code / Vector Embeddings Matrix Lines representing Content Scale -->
+    <g transform="translate(140, 320)" opacity="0.85">
+      <rect width="180" height="110" rx="8" fill="#030712" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- Window Controls -->
+      <circle cx="15" cy="15" r="3" fill="#ef4444"/>
+      <circle cx="25" cy="15" r="3" fill="#f59e0b"/>
+      <circle cx="35" cy="15" r="3" fill="#10b981"/>
+      <!-- Syntax / Vector Content Lines -->
+      <line x1="15" y1="35" x2="110" y2="35" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+      <line x1="15" y1="50" x2="150" y2="50" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round"/>
+      <line x1="15" y1="65" x2="80" y2="65" stroke="#d946ef" stroke-width="3" stroke-linecap="round"/>
+      <line x1="15" y1="80" x2="130" y2="80" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+      <line x1="15" y1="95" x2="95" y2="95" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- TYPOGRAPHY & BRANDING SECTION -->
+  <g transform="translate(80, 90)">
+    
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="310" height="34" rx="17" fill="#0f172a" stroke="url(#strokeGrad)" stroke-width="1.5"/>
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow)"/>
+      <text x="35" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Tool Title: JASPER -->
+    <g transform="translate(0, 85)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="76" font-weight="900" fill="url(#textGrad)" letter-spacing="2" filter="url(#glow)">JASPER</text>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 125)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#d946ef" letter-spacing="3">AI SEO &amp; COPYWRITING</text>
+    </g>
+
+    <!-- Investigation Headline -->
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="0.5">
+        <tspan x="0" dy="0">The Evolution of Enterprise AI</tspan>
+        <tspan x="0" dy="40">Copywriting and the Hands-on Guide</tspan>
+        <tspan x="0" dy="40">to Brand-Aligned Content Scale</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FOOTER / METRICS BAR -->
+  <g transform="translate(80, 530)">
+    <!-- Divider Line -->
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1.5"/>
+    
+    <!-- Meta Info -->
+    <g transform="translate(0, 25)">
+      <!-- Metric 1 -->
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1">DOMESTIC ENGINE</text>
+      <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#38bdf8">Vector-Trained LLM</text>
+
+      <!-- Metric 2 -->
+      <div x="240" y="0">
+        <text x="240" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1">BRAND VOICE GOVERNANCE</text>
+        <text x="240" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#8b5cf6">Deterministic Guardrails</text>
+      </div>
+
+      <!-- Metric 3 -->
+      <div x="520" y="0">
+        <text x="520" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1">INDEX EFFICIENCY</text>
+        <text x="520" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#d946ef">99.4% SEO Alignment</text>
+      </div>
+
+      <!-- URL Badge -->
+      <g transform="translate(840, -5)">
+        <rect x="0" y="0" width="200" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="100" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#06b6d4" text-anchor="middle" letter-spacing="1.5">heliatech.online</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-14 04:09:31",
+    "title": "Cycle Autonome #Jasper",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Jasper) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-14 04:09:06",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, jasper, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-14 04:07:23",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Jasper: The Evolution of Enterprise AI Copywriting and the Hands-on Guide to Brand-Aligned Content Scale",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Jasper: The Evolution of Enterprise AI Copywriting and the Hands-on Guide to Brand-Aligned Content Scale\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/jasper/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/jasper/"
+  },
+  {
+    "timestamp": "2026-11-14 04:07:04",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Jasper",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Jasper\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.3/10\n• **Cible idéale :** Mid-to-large marketing teams, content agencies, and high-volume enterprise brands\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/jasper/"
+  },
+  {
     "timestamp": "2026-11-13 21:09:00",
     "title": "Cycle Autonome #Semrush",
     "category": "CYCLE",
@@ -316,34 +344,6 @@
   },
   {
     "timestamp": "2026-11-07 06:39:19",
-    "title": "Cycle Autonome #Julius AI",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Julius AI et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-07 06:38:55",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `descript-enterprise-sandbox, minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-07 04:00:36",
-    "title": "Cycle Autonome #Descript",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-07 04:00:11",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `descript-enterprise-sandbox, minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-07 00:34:58",
     "title": "Cycle Autonome #Julius AI",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Julius AI et mis à jour le calendrier social.",

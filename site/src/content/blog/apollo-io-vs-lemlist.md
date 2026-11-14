@@ -73,7 +73,7 @@ The following matrix reflects empirical benchmarks assessed across live producti
 | **Dynamic Personalization** | StandardLiquid syntax variables (first name, company, custom fields). | **Liquid Syntax + Dynamic Image/Video Overlays** + custom landing page generator per lead. |
 | **Multi-Channel Outreach** | Email, Phone Dialer (WebRTC), LinkedIn manual tasks, Custom Tasks. | Email, Automated LinkedIn (Invites, Messages, Profile Visits), WhatsApp, Cold Calling, Video. |
 | **API & Webhook Latency** | REST API & GraphQL; webhook delivery average: **180ms**. High rate limits on org tier. | REST API v2; webhook delivery average: **240ms**. Rate limits tied to seat plan tier. |
-| **Native Integrations** | Salesforce, HubSpot, Marketo, Pipedrive, Outreach, Salesloft, [Zapier](/reviews/zapier). | HubSpot, Salesforce, Pipedrive, Zapier, [Make](/reviews/make), Lemcal, Lemverse ecosystem. |
+| **Native Integrations** | Salesforce, HubSpot, Marketo, Pipedrive, Outreach, Salesloft, [Zapier](/reviews/zapier). | HubSpot, Salesforce, Pipedrive, [Zapier](/reviews/zapier), [Make](/reviews/make), Lemcal, Lemverse ecosystem. |
 | **Data Enrichment Depth** | Waterfall email verification, phone enrichment, buyer intent (Bombora), job change triggers. | Basic contact enrichment via external API integration; rely on external data providers. |
 | **Data Decay / Accuracy** | ~10–15% bounce rate on unverified rows; requires secondary validation pass at scale. | Depends on source provider; email verification integrated into workflow before send. |
 | **Learning Curve** | Moderate to High (dense administrative UI, deep permission controls). | Low to Moderate (modern visual sequence builder, straightforward campaign setup). |
@@ -371,7 +371,7 @@ Before executing deployment, we advise engineering teams to sign up for trial ti
 
 ### Option A: The Data-First Outbound Engine
 
-If you need a unified prospecting and execution platform with access to over 275 million B2B contacts, start your evaluation of **Apollo.io** here:
+If you need a unified prospecting and execution platform with access to over 275 million B2B contacts, start your evaluation of **[Apollo.io](/reviews/apollo-io)** here:
 
 👉 **[Evaluate Apollo.io Platform Architecture](/go/apollo-io)**
 

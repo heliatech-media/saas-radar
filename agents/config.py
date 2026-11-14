@@ -189,7 +189,8 @@ AFFILIATE_MAP = {
     "close-crm": "https://p.partnerstack.com/close?via=heliatech",
     "clay-com": "https://clay.com/?via=heliatech",
     "surfer-seo": "https://surferseo.com/?via=heliatech",
-    "resemble-ai": "https://www.resemble.ai/?via=heliatech"
+    "resemble-ai": "https://www.resemble.ai/?via=heliatech",
+    "semrush": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

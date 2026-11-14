@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-13 21:08:36",
-  "total_links_audited": 121,
-  "healthy_links": 112,
-  "broken_links_count": 9,
-  "health_rate": "92.6%",
+  "timestamp": "2026-11-14 04:09:06",
+  "total_links_audited": 123,
+  "healthy_links": 113,
+  "broken_links_count": 10,
+  "health_rate": "91.9%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -28,6 +28,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "jasper",
+      "target_url": "https://www.jasper.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.jasper.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.jasper.com', port=443) at 0x7c340f0a0c20>, 'Connection to www.jasper.com timed out. (connect timeout=7)'))"
     },
     {
       "slug": "minicong",
@@ -273,7 +281,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=CrasOlh0bpjW6x&gsxid=CrasOlh0bpjW6x&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=zbEjEJJ0hWs1sK&gsxid=zbEjEJJ0hWs1sK&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -370,6 +378,14 @@
       "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
+      "slug": "jasper",
+      "target_url": "https://www.jasper.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.jasper.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.jasper.com', port=443) at 0x7c340f0a0c20>, 'Connection to www.jasper.com timed out. (connect timeout=7)'))"
+    },
+    {
       "slug": "jasper-ai",
       "target_url": "https://www.jasper-ai.com",
       "final_url": "https://www.jasper-ai.com/",
@@ -401,7 +417,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -587,7 +603,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -600,7 +616,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3zg2nGiiCvqvnV&gsxid=3zg2nGiiCvqvnV&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=6Z8JQuLznVtuUw&gsxid=6Z8JQuLznVtuUw&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -628,7 +644,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=If5ebUwwQqOStm&gsxid=If5ebUwwQqOStm&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=fOtkqEHq7p9UUn&gsxid=fOtkqEHq7p9UUn&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -760,6 +776,13 @@
       "healthy": true
     },
     {
+      "slug": "semrush",
+      "target_url": "https://www.semrush.com",
+      "final_url": "https://www.semrush.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "senja",
       "target_url": "https://senja.io/?via=heliatech",
       "final_url": "https://senja.io/?via=heliatech",
@@ -783,8 +806,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {

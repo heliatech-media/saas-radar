@@ -315,6 +315,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Jasper",
+    "slug": "jasper",
+    "tagline": "The AI content platform built for enterprise marketing teams to scale brand-aligned content creation.",
+    "category": "AI SEO & Copywriting",
+    "rating": 4.3,
+    "starting_price": "$39/mo",
+    "best_for": "Mid-to-large marketing teams, content agencies, and high-volume enterprise brands",
+    "affiliate_url": "https://www.jasper.ai"
+  },
+  {
     "name": "Jasper AI",
     "slug": "jasper-ai",
     "tagline": "An AI-powered content creation platform built specifically for enterprise marketing teams to scale campaigns.",
@@ -709,7 +719,8 @@
     "rating": 4.6,
     "starting_price": "$129.95/mo",
     "best_for": "In-house marketing teams, SEO agencies, and enterprise content creators requiring granular keyword data and competitor analysis.",
-    "affiliate_url": "https://www.semrush.com"
+    "affiliate_url": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+    "commission_rate": "$200 per sale (Pro), $10 per sale (Guru), $0.01 per registration"
   },
   {
     "name": "Submagic",

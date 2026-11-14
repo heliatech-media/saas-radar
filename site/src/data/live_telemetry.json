@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-13 21:07:17 UTC",
+  "last_updated": "2026-11-14 04:07:48 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 86,
-    "total_published_investigations": 213,
-    "reviews_audited": 86,
-    "masterclasses_and_duels": 127,
+    "total_monetized_tools": 87,
+    "total_published_investigations": 216,
+    "reviews_audited": 87,
+    "masterclasses_and_duels": 129,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$30,100 USD",
+    "projected_monthly_mrr": "$30,450 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -413,6 +413,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "semrush",
+      "destination": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "senja",
       "destination": "https://senja.io/?via=heliatech",
       "type": "Commission Partner"
@@ -505,35 +510,35 @@
   ],
   "recent_events": [
     {
-      "timestamp": "2026-11-07 04:00:36",
+      "timestamp": "2026-11-07 09:36:03",
       "title": "Cycle Autonome #Descript",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-11-07 04:00:11",
+      "timestamp": "2026-11-07 09:35:33",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `descript-enterprise-sandbox, minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `descript-sandbox, minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     },
     {
-      "timestamp": "2026-11-07 00:34:58",
+      "timestamp": "2026-11-07 06:39:19",
       "title": "Cycle Autonome #Julius AI",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Julius AI et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-11-07 00:33:05",
+      "timestamp": "2026-11-07 06:38:55",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 3 lien(s) d'affiliation en anomalie :\n• `minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 4 lien(s) d'affiliation en anomalie :\n• `descript-enterprise-sandbox, minicong, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     },
     {
-      "timestamp": "2026-11-06 21:30:04",
+      "timestamp": "2026-11-07 04:00:36",
       "title": "Cycle Autonome #Descript",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",

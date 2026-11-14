@@ -973,6 +973,12 @@
         "apolloiovslemlist",
         "comparison"
       ]
+    },
+    "clickup-vs-linear": {
+      "id": "already_published",
+      "url": "https://dev.to/clickup-vs-linear",
+      "canonical_url": "https://heliatech.online/blog/clickup-vs-linear",
+      "status": "already_published"
     }
   },
   "last_sync": null

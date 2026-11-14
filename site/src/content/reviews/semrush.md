@@ -6,7 +6,7 @@ tagline: The all-in-one visibility management platform for digital marketing and
 category: AI SEO & Copywriting
 rating: 4.6
 website_url: https://www.semrush.com
-affiliate_url: https://www.semrush.com
+affiliate_url: "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech"
 summary: Semrush is an enterprise-grade SEO, content marketing, and competitive intelligence
   suite that aggregates massive clickstream and search indexing data. It equips marketing
   teams to perform deep keyword research, technical site audits, backlink tracking,

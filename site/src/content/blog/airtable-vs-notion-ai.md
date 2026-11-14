@@ -43,7 +43,7 @@ This masterclass delivers a forensic, empirical evaluation of **Airtable** and *
 
 ## Comprehensive Side-by-Side Comparison Matrix
 
-| Empirical Criteria | Airtable | Notion AI |
+| Empirical Criteria | Airtable | [Notion AI](/reviews/notion-ai) |
 | :--- | :--- | :--- |
 | **Core Architecture** | Relational Database Management System (RDBMS) with tabular GUI | Document-based block hierarchy with relational blocks |
 | **Data Types & Typing** | Strict (Linked records, rollups, formulas, barcodes, attachments) | Loose / Polymorphic (Rich text blocks with inline property metadata) |
