@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - AI Copywriting
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: writesonic
 image: /images/blog/writesonic.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free WriteSonic Account ➔
   url: /go/writesonic
 ---
-
 ---
 title: "Dissecting WriteSonic's Unit Economics: A 100k-Scale TCO & Context Inflation Audit"
 slug: "writesonic-tco-audit-2025"

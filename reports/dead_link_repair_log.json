@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-11-14T12:45:42.926724",
+  "timestamp": "2026-11-14T19:38:23.199450",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 219,
-    "total_redirects_active": 124,
-    "new_redirects_healed": 36,
+    "total_content_files_scanned": 222,
+    "total_redirects_active": 126,
+    "new_redirects_healed": 37,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 16,
+    "external_targets_repaired": 17,
     "content_files_modified": 0
   },
   "healed_redirects": [
@@ -125,6 +125,11 @@
       "slug": "invideo-ai-sandbox",
       "target_url": "https://www.invideo-ai-sandbox.com",
       "source_file": "invideo-ai-evolution-guide-2026.md"
+    },
+    {
+      "slug": "ahrefs",
+      "target_url": "https://www.ahrefs.com",
+      "source_file": "ahrefs-evolution-guide-2026.md"
     },
     {
       "slug": "davinci-resolve",
@@ -288,6 +293,12 @@
       "slug": "webflow",
       "dead_target": "https://webflow.pxf.io/c/4923491/1231885/15172",
       "healed_target": "https://www.webflow.com",
+      "status_code": 404
+    },
+    {
+      "slug": "writesonic",
+      "dead_target": "https://writesonic.grsm.io/heliatech",
+      "healed_target": "https://www.writesonic.com",
       "status_code": 404
     }
   ]

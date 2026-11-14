@@ -191,7 +191,8 @@ AFFILIATE_MAP = {
     "surfer-seo": "https://surferseo.com/?via=heliatech",
     "resemble-ai": "https://www.resemble.ai/?via=heliatech",
     "semrush": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
-    "jasper": "https://jasper.ai/?fpr=heliatech"
+    "jasper": "https://jasper.ai/?fpr=heliatech",
+    "writesonic": "https://writesonic.grsm.io/heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

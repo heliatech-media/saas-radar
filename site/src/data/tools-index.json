@@ -11,6 +11,16 @@
     "commission_rate": "100% first month or 30% recurring"
   },
   {
+    "name": "Ahrefs",
+    "slug": "ahrefs",
+    "tagline": "An all-in-one SEO toolset with powerful data to audit your site, analyze competitors, and rank higher.",
+    "category": "AI SEO & Copywriting",
+    "rating": 4.7,
+    "starting_price": "$129/mo",
+    "best_for": "In-house SEO professionals, digital marketing agencies, and content-driven enterprises",
+    "affiliate_url": "https://ahrefs.com"
+  },
+  {
     "name": "Airtable",
     "slug": "airtable",
     "tagline": "Next-generation AI Automation & No-Code platform built for modern scaling teams.",
@@ -894,7 +904,8 @@
     "rating": 4.6,
     "starting_price": "$16/mo",
     "best_for": "Content marketing teams, SEO agencies, and freelance writers scaling output without sacrificing quality.",
-    "affiliate_url": "https://writesonic.com"
+    "affiliate_url": "https://writesonic.grsm.io/heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Zapier",

@@ -992,6 +992,19 @@
         "saas",
         "automation"
       ]
+    },
+    "airtable-vs-retool": {
+      "id": 5037445,
+      "url": "https://dev.to/heliatech/airtable-vs-retool-2026-spreadsheet-database-hybrid-vs-full-stack-internal-app-builder-nnd",
+      "title": "Airtable vs Retool (2026): Spreadsheet-Database Hybrid vs Full-Stack Internal App Builder",
+      "canonical_url": "https://heliatech.online/blog/airtable-vs-retool",
+      "published": true,
+      "tags": [
+        "airtable",
+        "retool",
+        "airtablevsretool",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

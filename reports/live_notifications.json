@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-14 19:39:43",
+    "title": "Cycle Autonome #Ahrefs",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Ahrefs) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-14 19:39:10",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-14 19:37:15",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Ahrefs: The Architecture of Search Dominance and the Hands-On Blueprint for Enterprise Organic Growth",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Ahrefs: The Architecture of Search Dominance and the Hands-On Blueprint for Enterprise Organic Growth\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/ahrefs-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/ahrefs-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-14 19:36:54",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Ahrefs",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Ahrefs\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.7/10\n• **Cible idéale :** In-house SEO professionals, digital marketing agencies, and content-driven enterprises\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/ahrefs/"
+  },
+  {
     "timestamp": "2026-11-14 12:46:56",
     "title": "Cycle Autonome #WriteSonic",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #CapCut Pro",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (CapCut Pro) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-08 23:05:59",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 6 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, minicong, minvo-testing-sandbox, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-07 15:27:28",
-    "title": "Cycle Autonome #Minvo",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Minvo et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-07 15:27:03",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 7 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, minicong, minvo-testing-sandbox, notion-ai, submagic, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-07 12:32:39",
-    "title": "Cycle Autonome #Descript",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse de Descript et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

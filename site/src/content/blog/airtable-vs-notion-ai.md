@@ -71,7 +71,7 @@ Notion operates on a **block-based architecture**. Every paragraph, image, datab
 
 Notion’s architectural breakthrough is its ambient fluidity. You can draft an engineering specification, embed a product roadmap database inside it, mention a cross-functional team member, and invoke [Notion AI](/reviews/notion-ai) to synthesize the entire page context into an executive summary or extract action items. 
 
-Notion AI functions as a contextual co-pilot. It indexes your workspace (with appropriate permission scoping) to answer natural language queries across disparate pages, wikis, and databases. It thrives on unstructured text, reducing cognitive load when searching for institutional knowledge, but struggles when forced to execute complex relational mathematics or strict programmatic logic loops.
+[Notion AI](/reviews/notion-ai) functions as a contextual co-pilot. It indexes your workspace (with appropriate permission scoping) to answer natural language queries across disparate pages, wikis, and databases. It thrives on unstructured text, reducing cognitive load when searching for institutional knowledge, but struggles when forced to execute complex relational mathematics or strict programmatic logic loops.
 
 ---
 

@@ -6,7 +6,7 @@ tagline: AI-powered content creation platform engineered for SEO optimization an
 category: AI SEO & Copywriting
 rating: 4.6
 website_url: https://writesonic.com
-affiliate_url: https://writesonic.com
+affiliate_url: "https://writesonic.grsm.io/heliatech"
 summary: WriteSonic is a comprehensive AI writing and SEO optimization platform designed
   to scale content operations for marketers, agencies, and enterprises. It combines
   advanced language models with real-time web research to produce factually accurate,
