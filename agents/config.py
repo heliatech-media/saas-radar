@@ -190,7 +190,8 @@ AFFILIATE_MAP = {
     "clay-com": "https://clay.com/?via=heliatech",
     "surfer-seo": "https://surferseo.com/?via=heliatech",
     "resemble-ai": "https://www.resemble.ai/?via=heliatech",
-    "semrush": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech"
+    "semrush": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+    "jasper": "https://jasper.ai/?fpr=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

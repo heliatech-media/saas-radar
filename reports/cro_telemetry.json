@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-14 04:07:48",
-  "total_pages_audited": 129,
-  "monetized_pages": 126,
-  "total_ctas_tracked": 592,
+  "timestamp": "2026-11-14 12:44:58",
+  "total_pages_audited": 131,
+  "monetized_pages": 128,
+  "total_ctas_tracked": 609,
   "average_cro_score": "89.0/100",
   "active_cro_boosters": [
     "Interactive ROI Sliders (RoiCalculator.astro)",
@@ -13,82 +13,10 @@
   "estimated_rpv_lift": "+38.4%",
   "pages": [
     {
-      "slug": "best-zapier-alternatives-2026",
-      "type": "blog",
-      "word_count": 2488,
-      "cta_count": 18,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "minvo-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 727,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "screen-studio-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1133,
-      "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "lovable-evolution-guide-2026",
+      "slug": "synthesia-evolution-guide-2026",
       "type": "blog",
       "word_count": 1108,
-      "cta_count": 5,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "podia-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 969,
       "cta_count": 2,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "elevenlabs-v4-conversational-voice-openai-realtime-latency-leak",
-      "type": "blog",
-      "word_count": 537,
-      "cta_count": 5,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "runway-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 784,
-      "cta_count": 3,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "apollo-io-vs-lemlist",
-      "type": "blog",
-      "word_count": 2884,
-      "cta_count": 10,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "descript-vs-riverside",
-      "type": "blog",
-      "word_count": 2042,
-      "cta_count": 4,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -103,37 +31,73 @@
       "status": "OPTIMIZED"
     },
     {
-      "slug": "munch-evolution-guide-2026",
+      "slug": "zapier-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1047,
+      "word_count": 1094,
+      "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "gamma-app-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1140,
       "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
     },
     {
-      "slug": "hubspot-evolution-guide-2026",
+      "slug": "beehiiv-evolution-guide-2026",
       "type": "blog",
-      "word_count": 1111,
-      "cta_count": 3,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "clay-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 776,
-      "cta_count": 3,
-      "has_monetized_hop": true,
-      "cro_score": 90,
-      "status": "OPTIMIZED"
-    },
-    {
-      "slug": "synthesia-evolution-guide-2026",
-      "type": "blog",
-      "word_count": 1108,
+      "word_count": 746,
       "cta_count": 2,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "guidde-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1031,
+      "cta_count": 2,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "bannerbear-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 724,
+      "cta_count": 2,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "hubspot-enterprise-pricing-rate-card-leaks-2026",
+      "type": "blog",
+      "word_count": 893,
+      "cta_count": 0,
+      "has_monetized_hop": false,
+      "cro_score": 60,
+      "status": "NEEDS_BOOST"
+    },
+    {
+      "slug": "salesforce-agentforce-hidden-conversation-credit-pricing-trap",
+      "type": "blog",
+      "word_count": 481,
+      "cta_count": 5,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "opus-clip-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 860,
+      "cta_count": 3,
       "has_monetized_hop": true,
       "cro_score": 90,
       "status": "OPTIMIZED"
@@ -142,6 +106,42 @@
       "slug": "peripety-evolution-guide-2026",
       "type": "blog",
       "word_count": 1103,
+      "cta_count": 2,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "zapier-2026-price-shock-webhook-surcharge-make-migration",
+      "type": "blog",
+      "word_count": 954,
+      "cta_count": 8,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "retool",
+      "type": "blog",
+      "word_count": 901,
+      "cta_count": 7,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "make-automation-revolution",
+      "type": "blog",
+      "word_count": 1636,
+      "cta_count": 6,
+      "has_monetized_hop": true,
+      "cro_score": 90,
+      "status": "OPTIMIZED"
+    },
+    {
+      "slug": "invideo-evolution-guide-2026",
+      "type": "blog",
+      "word_count": 1246,
       "cta_count": 2,
       "has_monetized_hop": true,
       "cro_score": 90,

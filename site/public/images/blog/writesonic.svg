@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070913" />
+      <stop offset="100%" stop-color="#020408" />
+    </radialGradient>
+    
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Brand & Accent Gradients -->
+    <linearGradient id="cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="glass-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur1" />
+      <feGaussianBlur stdDeviation="40" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Geometric Pattern for Grid -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.08" />
+    </pattern>
+    
+    <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#8b5cf6" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="1200" height="630" fill="url(#bg-glow)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-grid)" />
+
+  <!-- AMBIENT LIGHTING ORBS -->
+  <circle cx="950" cy="150" r="250" fill="#06b6d4" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="1050" cy="400" r="200" fill="#d946ef" opacity="0.10" filter="url(#glow-heavy)" />
+  <circle cx="200" cy="500" r="300" fill="#8b5cf6" opacity="0.10" filter="url(#glow-heavy)" />
+
+  <!-- TOP-LEFT BRANDING: HELIA TECH -->
+  <g transform="translate(80, 70)">
+    <path d="M 0 0 L 15 -10 L 30 0" fill="none" stroke="#06b6d4" stroke-width="2" filter="url(#glow-subtle)" />
+    <text x="45" y="5" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="800" fill="#38bdf8" letter-spacing="4">HELIA TECH</text>
+    <text x="148" y="5" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="400" fill="#94a3b8" letter-spacing="2">// INVESTIGATION</text>
+  </g>
+
+  <!-- PILL BADGE -->
+  <g transform="translate(80, 105)">
+    <rect width="320" height="28" rx="14" fill="#0f172a" stroke="url(#glass-stroke)" stroke-width="1.5" />
+    <circle cx="16" cy="14" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+    <text x="32" y="19" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700" fill="#cbd5e1" letter-spacing="1.5">ARCHITECTURAL DOSSIER</text>
+    <text x="215" y="19" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="400" fill="#06b6d4" letter-spacing="1">v4.8</text>
+  </g>
+
+  <!-- MAIN HEADINGS -->
+  <g transform="translate(80, 175)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#d946ef" letter-spacing="3">AI SEO &amp; COPYWRITING</text>
+    
+    <!-- Title Line 1: Tool Name -->
+    <text x="0" y="52" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="48" font-weight="900" fill="#ffffff" letter-spacing="1">
+      WRITESONIC
+    </text>
+    
+    <!-- Title Line 2 & 3: The Narrative -->
+    <text x="0" y="98" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="32" font-weight="700" fill="url(#cyan-violet)" letter-spacing="0.5">
+      The AI Content Engine Evolution
+    </text>
+    <text x="0" y="138" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="400" fill="#94a3b8" letter-spacing="0.5">
+      and the 15-Minute SEO Blueprint for Enterprise Domination
+    </text>
+  </g>
+
+  <!-- METRIC CARDS / BADGES BOTTOM -->
+  <g transform="translate(80, 520)">
+    <!-- Metric 1 -->
+    <rect x="0" y="0" width="160" height="50" rx="8" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+    <text x="16" y="20" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">VELOCITY GAIN</text>
+    <text x="16" y="38" font-family="'Inter', sans-serif" font-size="18" font-weight="800" fill="#38bdf8">15X FASTER</text>
+
+    <!-- Metric 2 -->
+    <rect x="180" y="0" width="160" height="50" rx="8" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+    <text x="196" y="20" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">SEO OPTIMIZATION</text>
+    <text x="196" y="38" font-family="'Inter', sans-serif" font-size="18" font-weight="800" fill="#d946ef">REAL-TIME</text>
+
+    <!-- Metric 3 -->
+    <rect x="360" y="0" width="160" height="50" rx="8" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+    <text x="376" y="20" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1">ARCHITECTURE</text>
+    <text x="376" y="38" font-family="'Inter', sans-serif" font-size="18" font-weight="800" fill="#06b6d4">NEURAL CORE</text>
+  </g>
+
+  <!-- RIGHT SIDE: 3D VECTOR DOMAIN METAPHOR (AI SEO & Content Engine Core) -->
+  <g transform="translate(700, 100)">
+    <!-- Ambient Backing Glow -->
+    <circle cx="180" cy="220" r="140" fill="url(#cyan-violet)" opacity="0.2" filter="url(#glow-heavy)" />
+
+    <!-- Connecting Data Pathways (Background Net) -->
+    <path d="M 30 80 L 180 130 L 330 80" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="4 4" />
+    <path d="M 180 130 L 180 280" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.4" />
+    <path d="M 30 320 L 180 280 L 330 320" fill="none" stroke="#d946ef" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="4 4" />
+
+    <!-- Isometric Central Processing Node (The WriteSonic Engine) -->
+    <g transform="translate(180, 200)">
+      <!-- Outer Hexagon Ring -->
+      <polygon points="0,-110 95,-55 95,55 0,110 -95,55 -95,-55" fill="url(#card-bg)" stroke="url(#cyan-violet)" stroke-width="2.5" filter="url(#glow-subtle)" />
+      
+      <!-- Inner Rotating/Static Tech Lines -->
+      <polygon points="0,-80 70,-40 70,40 0,80 -70,40 -70,-40" fill="#030712" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
+      
+      <!-- Core Neural Pulse Center -->
+      <circle cx="0" cy="0" r="35" fill="#090d16" stroke="#d946ef" stroke-width="2" />
+      <circle cx="0" cy="0" r="15" fill="url(#cyan-violet)" filter="url(#glow-subtle)" />
+      
+      <!-- Floating Data Nodes / SEO Metrics Orbs -->
+      <g transform="translate(0, -110)">
+        <circle cx="0" cy="0" r="8" fill="#38bdf8" filter="url(#glow-subtle)" />
+        <rect x="-35" y="-22" width="70" height="16" rx="4" fill="#0b1329" stroke="#38bdf8" stroke-width="1" />
+        <text x="0" y="-10" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">KEYWORD.AI</text>
+      </g>
+
+      <g transform="translate(95, -55)">
+        <circle cx="0" cy="0" r="8" fill="#8b5cf6" filter="url(#glow-subtle)" />
+        <rect x="-25" y="10" width="80" height="16" rx="4" fill="#0b1329" stroke="#8b5cf6" stroke-width="1" />
+        <text x="15" y="22" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">SERP ANALYZER</text>
+      </g>
+
+      <g transform="translate(95, 55)">
+        <circle cx="0" cy="0" r="8" fill="#d946ef" filter="url(#glow-subtle)" />
+        <rect x="-25" y="-4" width="85" height="16" rx="4" fill="#0b1329" stroke="#d946ef" stroke-width="1" />
+        <text x="17" y="8" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">AUTO-PUBLISH</text>
+      </g>
+
+      <g transform="translate(-95, 55)">
+        <circle cx="0" cy="0" r="8" fill="#06b6d4" filter="url(#glow-subtle)" />
+        <rect x="-60" y="-4" width="80" height="16" rx="4" fill="#0b1329" stroke="#06b6d4" stroke-width="1" />
+        <text x="-20" y="8" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">BRAND VOICE</text>
+      </g>
+
+      <g transform="translate(-95, -55)">
+        <circle cx="0" cy="0" r="8" fill="#38bdf8" filter="url(#glow-subtle)" />
+        <rect x="-55" y="-22" width="75" height="16" rx="4" fill="#0b1329" stroke="#38bdf8" stroke-width="1" />
+        <text x="-18" y="-10" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">GPT-4O CORE</text>
+      </g>
+    </g>
+
+    <!-- Floating UI Code/Content Window Overlay (Isometric perspective feel) -->
+    <g transform="translate(40, 340)">
+      <rect width="280" height="110" rx="10" fill="#090d16" fill-opacity="0.9" stroke="url(#fuchsia-cyan)" stroke-width="1.5" filter="url(#glow-subtle)" />
+      <!-- Window Header dots -->
+      <circle cx="20" cy="18" r="4" fill="#ef4444" />
+      <circle cx="35" cy="18" r="4" fill="#f59e0b" />
+      <circle cx="50" cy="18" r="4" fill="#10b981" />
+      <text x="70" y="21" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748b">writesonic_engine.log</text>
+      
+      <!-- Code / Logic Lines -->
+      <line x1="20" y1="45" x2="140" y2="45" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8" />
+      <line x1="20" y1="65" x2="220" y2="65" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" stroke-opacity="0.6" />
+      <line x1="20" y1="85" x2="180" y2="85" stroke="#d946ef" stroke-width="3" stroke-linecap="round" stroke-opacity="0.7" />
+      
+      <!-- Status Pill inside window -->
+      <rect x="190" y="77" width="70" height="18" rx="9" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-width="1" />
+      <text x="225" y="89" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#38bdf8" text-anchor="middle">OPTIMIZED</text>
+    </g>
+
+    <!-- Top Floating Sparkles / Nodes -->
+    <g transform="translate(250, 40)">
+      <path d="M 0,-10 L 3,-3 L 10,0 L 3,3 L 0,10 L -3,3 L -10,0 L -3,-3 Z" fill="#d946ef" filter="url(#glow-subtle)" />
+    </g>
+    <g transform="translate(60, 150)">
+      <path d="M 0,-6 L 2,-2 L 6,0 L 2,2 L 0,6 L -2,2 L -6,0 L -2,-2 Z" fill="#38bdf8" filter="url(#glow-subtle)" />
+    </g>
+  </g>
+
+  <!-- SUBTLE FRAME ACCENTS -->
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#38bdf8" stroke-opacity="0.1" stroke-width="1" pointer-events="none" />
+</svg>

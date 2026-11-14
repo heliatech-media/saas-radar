@@ -6,7 +6,7 @@ tagline: The AI content platform built for enterprise marketing teams to scale b
 category: AI SEO & Copywriting
 rating: 4.3
 website_url: https://www.jasper.ai
-affiliate_url: https://www.jasper.ai
+affiliate_url: "https://jasper.ai/?fpr=heliatech"
 summary: Jasper is an enterprise-grade AI copywriting and SEO platform designed to
   help marketing teams produce brand-consistent content at scale. By leveraging multiple
   large language models and proprietary brand voice training, it automates blog posts,

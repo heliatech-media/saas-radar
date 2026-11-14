@@ -322,7 +322,8 @@
     "rating": 4.3,
     "starting_price": "$39/mo",
     "best_for": "Mid-to-large marketing teams, content agencies, and high-volume enterprise brands",
-    "affiliate_url": "https://www.jasper.ai"
+    "affiliate_url": "https://jasper.ai/?fpr=heliatech",
+    "commission_rate": "20% recurring for up to 12 months"
   },
   {
     "name": "Jasper AI",
@@ -884,6 +885,16 @@
     "best_for": "UI/UX designers, marketing agencies, and scaling tech companies needing bespoke web experiences",
     "affiliate_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
     "commission_rate": "50% recurring for the first year"
+  },
+  {
+    "name": "WriteSonic",
+    "slug": "writesonic",
+    "tagline": "AI-powered content creation platform engineered for SEO optimization and high-converting copywriting",
+    "category": "AI SEO & Copywriting",
+    "rating": 4.6,
+    "starting_price": "$16/mo",
+    "best_for": "Content marketing teams, SEO agencies, and freelance writers scaling output without sacrificing quality.",
+    "affiliate_url": "https://writesonic.com"
   },
   {
     "name": "Zapier",

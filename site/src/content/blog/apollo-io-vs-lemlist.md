@@ -373,7 +373,7 @@ Before executing deployment, we advise engineering teams to sign up for trial ti
 
 If you need a unified prospecting and execution platform with access to over 275 million B2B contacts, start your evaluation of **[Apollo.io](/reviews/apollo-io)** here:
 
-👉 **[Evaluate Apollo.io Platform Architecture](/go/apollo-io)**
+👉 **[Evaluate [Apollo.io](/reviews/apollo-io) Platform Architecture](/go/apollo-io)**
 
 <br />
 
