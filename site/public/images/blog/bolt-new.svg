@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bg-glow" cx="50%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="cyan-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-cyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <linearGradient id="code-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feGaussianBlur stdDeviation="8" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3"/>
+    </pattern>
+    
+    <pattern id="dot-matrix" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bg-glow)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="950" cy="150" r="250" fill="#8b5cf6" opacity="0.12" filter="url(#glow-heavy)" />
+  <circle cx="200" cy="500" r="220" fill="#06b6d4" opacity="0.1" filter="url(#glow-heavy)" />
+  <circle cx="650" cy="315" r="300" fill="#3b82f6" opacity="0.07" filter="url(#glow-heavy)" />
+
+  <!-- Geometric Decorative Lines -->
+  <g opacity="0.4">
+    <path d="M 0 100 L 300 100 L 350 150 L 1200 150" fill="none" stroke="url(#cyan-violet)" stroke-width="1.5" />
+    <path d="M 1200 520 L 900 520 L 850 470 L 0 470" fill="none" stroke="url(#fuchsia-cyan)" stroke-width="1" stroke-dasharray="6 4" />
+    <circle cx="350" cy="150" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+    <circle cx="850" cy="470" r="4" fill="#d946ef" filter="url(#glow-subtle)" />
+  </g>
+
+  <!-- HELIATECH Architectural Dossier Badge -->
+  <g transform="translate(80, 75)">
+    <rect x="0" y="0" width="280" height="34" rx="17" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow-subtle)" />
+    <text x="36" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Typography: Title & Category -->
+  <g transform="translate(80, 150)">
+    <!-- Category Subtitle -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#d946ef" letter-spacing="3" filter="url(#glow-subtle)">AI DEVELOPMENT // SHOWDOWN 2026</text>
+    
+    <!-- Main Tool Title -->
+    <text x="0" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="900" fill="#ffffff" letter-spacing="-1">
+      BOLT<tspan fill="#06b6d4">.</tspan>NEW
+    </text>
+    
+    <!-- Investigation Subtitle -->
+    <text x="0" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="400" fill="#94a3b8" letter-spacing="-0.2">
+      The Vibe Coding &amp; Full-Stack App Builder Showdown
+    </text>
+  </g>
+
+  <!-- Architectural Metric Indicators (Left Side) -->
+  <g transform="translate(80, 310)">
+    <!-- Metric Box 1 -->
+    <rect x="0" y="0" width="180" height="60" rx="8" fill="url(#glass-grad)" stroke="#1e293b" stroke-width="1" />
+    <text x="15" y="24" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">SYNTAX ENGINE</text>
+    <text x="15" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#38bdf8">AST v4.8 Vector</text>
+
+    <!-- Metric Box 2 -->
+    <rect x="195" y="0" width="180" height="60" rx="8" fill="url(#glass-grad)" stroke="#1e293b" stroke-width="1" />
+    <text x="210" y="24" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">EXECUTION STATE</text>
+    <text x="210" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#d946ef">WebContainer 99%</text>
+
+    <!-- Tech spec bar -->
+    <line x1="0" y1="85" x2="375" y2="85" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+    <text x="0" y="110" font-family="monospace" font-size="11" fill="#64748b">STATUS: <tspan fill="#10b981">LIVE BENCHMARK ACTIVE</tspan></text>
+  </g>
+
+  <!-- RIGHT SIDE: Isometric Holographic IDE & Code Visualization -->
+  <g transform="translate(540, 70)">
+    <!-- Outer Glow Frame -->
+    <rect x="0" y="0" width="580" height="490" rx="16" fill="#0b1329" fill-opacity="0.7" stroke="url(#cyan-violet)" stroke-width="2" filter="url(#glow-heavy)" />
+    
+    <!-- Inner Container Window -->
+    <rect x="1" y="1" width="578" height="488" rx="15" fill="#030712" fill-opacity="0.9" />
+
+    <!-- Window Header -->
+    <path d="M 0 45 L 580 45" stroke="#1e293b" stroke-width="1" />
+    <circle cx="25" cy="23" r="6" fill="#ef4444" fill-opacity="0.8" />
+    <circle cx="45" cy="23" r="6" fill="#f59e0b" fill-opacity="0.8" />
+    <circle cx="65" cy="23" r="6" fill="#10b981" fill-opacity="0.8" />
+    
+    <rect x="180" y="12" width="220" height="22" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="290" y="27" font-family="monospace" font-size="11" fill="#94a3b8" text-anchor="middle">bolt.new://ai-fullstack-vm</text>
+
+    <!-- Holographic Code Editor Interface -->
+    <g transform="translate(25, 70)">
+      <!-- Line Numbers -->
+      <g font-family="monospace" font-size="12" fill="#334155">
+        <text x="0" y="20">01</text>
+        <text x="0" y="45">02</text>
+        <text x="0" y="70">03</text>
+        <text x="0" y="95">04</text>
+        <text x="0" y="120">05</text>
+        <text x="0" y="145">06</text>
+        <text x="0" y="170">07</text>
+        <text x="0" y="195">08</text>
+        <text x="0" y="220">09</text>
+        <text x="0" y="245">10</text>
+        <text x="0" y="270">11</text>
+        <text x="0" y="295">12</text>
+        <text x="0" y="320">13</text>
+        <text x="0" y="345">14</text>
+      </g>
+
+      <!-- Code Syntax Lines -->
+      <g transform="translate(45, 0)" font-family="monospace" font-size="13">
+        <!-- Line 1 -->
+        <text x="0" y="20" fill="#c084fc">import</text>
+        <text x="70" y="20" fill="#f8fafc">{</text>
+        <text x="82" y="20" fill="#38bdf8">NeuralEngine</text>
+        <text x="182" y="20" fill="#f8fafc">}</text>
+        <text x="195" y="20" fill="#c084fc">from</text>
+        <text x="235" y="20" fill="#34d399">'@bolt/core'</text>
+        
+        <!-- Line 2 -->
+        <text x="0" y="45" fill="#c084fc">import</text>
+        <text x="70" y="45" fill="#f8fafc">{</text>
+        <text x="82" y="45" fill="#38bdf8">FullStackContainer</text>
+        <text x="215" y="45" fill="#f8fafc">}</text>
+        <text x="228" y="45" fill="#c084fc">from</text>
+        <text x="268" y="45" fill="#34d399">'@webcontainer/api'</text>
+
+        <!-- Line 3 -->
+        <text x="0" y="70" fill="#64748b">// Initialize runtime environment for 2026 Vibe Coding showdown</text>
+
+        <!-- Line 4 -->
+        <text x="0" y="95" fill="#fb7185">const</text>
+        <text x="45" y="95" fill="#38bdf8">appBuilder</text>
+        <text x="125" y="95" fill="#f8fafc">=</text>
+        <text x="140" y="95" fill="#c084fc">new</text>
+        <text x="172" y="95" fill="#38bdf8">NeuralEngine</text>
+        <text x="260" y="95" fill="#f8fafc">({</text>
+
+        <!-- Line 5 -->
+        <text x="20" y="120" fill="#38bdf8">mode</text>
+        <text x="55" y="120" fill="#f8fafc">:</text>
+        <text x="70" y="120" fill="#34d399">'autonomous-generation'</text>
+        <text x="240" y="120" fill="#f8fafc">,</text>
+
+        <!-- Line 6 -->
+        <text x="20" y="145" fill="#38bdf8">target</text>
+        <text x="65" y="145" fill="#f8fafc">:</text>
+        <text x="80" y="145" fill="#34d399">'production-ready'</text>
+        <text x="210" y="145" fill="#f8fafc">,</text>
+
+        <!-- Line 7 -->
+        <text x="20" y="170" fill="#38bdf8">vibeCodingIndex</text>
+        <text x="140" y="170" fill="#f8fafc">:</text>
+        <text x="155" y="170" fill="#f59e0b">0.998</text>
+
+        <!-- Line 8 -->
+        <text x="0" y="195" fill="#f8fafc">})</text>
+
+        <!-- Line 9 -->
+        <text x="0" y="220" fill="#fb7185">async</text>
+        <text x="40" y="220" fill="#c084fc">function</text>
+        <text x="105" y="220" fill="#facc15">deployShowdown</text>
+        <text x="215" y="220" fill="#f8fafc">() {</text>
+
+        <!-- Line 10 -->
+        <text x="20" y="245" fill="#fb7185">const</text>
+        <text x="65" y="245" fill="#f8fafc">astTree =</text>
+        <text x="130" y="245" fill="#c084fc">await</text>
+        <text x="170" y="245" fill="#38bdf8">appBuilder</text>
+        <text x="245" y="245" fill="#f8fafc">.</text>
+        <text x="250" y="245" fill="#60a5fa">compileAST</text>
+        <text x="325" y="245" fill="#f8fafc">();</text>
+
+        <!-- Line 11 -->
+        <text x="20" y="270" fill="#c084fc">return</text>
+        <text x="65" y="270" fill="#38bdf8">FullStackContainer</text>
+        <text x="195" y="270" fill="#f8fafc">.</text>
+        <text x="200" y="270" fill="#60a5fa">mount</text>
+        <text x="240" y="270" fill="#f8fafc">(</text>
+        <text x="248" y="270" fill="#f8fafc">astTree</text>
+        <text x="295" y="270" fill="#f8fafc">);</text>
+
+        <!-- Line 12 -->
+        <text x="0" y="295" fill="#f8fafc">}</text>
+
+        <!-- Line 13 & 14 (Visual Node Connectors) -->
+        <path d="M 0 325 L 485 325" stroke="#1e293b" stroke-width="1" />
+        <circle cx="15" cy="355" r="4" fill="#06b6d4" filter="url(#glow-subtle)" />
+        <text x="30" y="359" font-family="monospace" font-size="11" fill="#38bdf8">AST Vector Embeddings Synced</text>
+
+        <circle cx="260" cy="355" r="4" fill="#d946ef" filter="url(#glow-subtle)" />
+        <text x="275" y="359" font-family="monospace" font-size="11" fill="#d946ef">WebContainer Active</text>
+      </g>
+    </g>
+
+    <!-- Floating Holographic Badge (Bottom Right of Window) -->
+    <g transform="translate(340, 420)">
+      <rect x="0" y="0" width="205" height="42" rx="8" fill="#0f172a" fill-opacity="0.9" stroke="#06b6d4" stroke-width="1.5" filter="url(#glow-subtle)" />
+      <circle cx="22" cy="21" r="5" fill="#10b981" filter="url(#glow-subtle)" />
+      <text x="38" y="26" font-family="monospace" font-size="12" font-weight="700" fill="#ffffff">BUILD: SUCCESS</text>
+    </g>
+  </g>
+
+  <!-- Bottom Branding / Footer -->
+  <g transform="translate(80, 580)">
+    <text x="0" y="0" font-family="monospace" font-size="11" fill="#64748b" letter-spacing="1">HELIA TECH RESEARCH DIVISION</text>
+    <text x="1040" y="0" font-family="monospace" font-size="11" fill="#64748b" text-anchor="end" letter-spacing="1">HELIATECH.ONLINE</text>
+    <!-- Subtle divider line -->
+    <line x1="0" y1="-15" x2="1040" y2="-15" stroke="#1e293b" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+</svg>

@@ -18,7 +18,8 @@
     "rating": 4.7,
     "starting_price": "$129/mo",
     "best_for": "In-house SEO professionals, digital marketing agencies, and content-driven enterprises",
-    "affiliate_url": "https://ahrefs.com"
+    "affiliate_url": "https://ahrefs.com/",
+    "commission_rate": "Ahrefs does not currently offer a public affiliate program; historically managed on an invite-only or in-house basis for specific influencers, but currently closed to new public applications."
   },
   {
     "name": "Airtable",
@@ -387,6 +388,16 @@
     "best_for": "E-commerce brands, DTC merchants, and digital marketers scaling growth through behavioral segmentation.",
     "affiliate_url": "https://partnerstack.com/klaviyo?via=heliatech",
     "commission_rate": "Custom CPA or tiered commission based on referral type"
+  },
+  {
+    "name": "KoalaWriter",
+    "slug": "koalawriter",
+    "tagline": "AI-powered long-form content creation optimized for SEO and SERP dominance.",
+    "category": "AI SEO & Copywriting",
+    "rating": 4.5,
+    "starting_price": "$9/mo",
+    "best_for": "SEO agencies, content marketers, and niche site owners looking to scale programmatic SEO content.",
+    "affiliate_url": "https://koala.sh"
   },
   {
     "name": "Lemlist",

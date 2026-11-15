@@ -454,7 +454,14 @@
       "title": "Airtable vs Retool (2026): Spreadsheet-Database Hybrid vs Full-Stack Internal App Builder",
       "tool_slug": "airtable",
       "canonical_url": "https://heliatech.online/blog/airtable-vs-retool"
+    },
+    "elevenlabs-vs-murf-ai": {
+      "published_at": "2026-11-15T00:36:17.536788",
+      "share_urn": "urn:li:share:7527529875126099968",
+      "title": "ElevenLabs vs Murf.ai (2026): Generative Voice AI Breakthrough vs Studio Voiceover Production",
+      "tool_slug": "elevenlabs",
+      "canonical_url": "https://heliatech.online/blog/elevenlabs-vs-murf-ai"
     }
   },
-  "last_publish": "2026-11-14T19:39:43.036994"
+  "last_publish": "2026-11-15T00:36:17.536801"
 }

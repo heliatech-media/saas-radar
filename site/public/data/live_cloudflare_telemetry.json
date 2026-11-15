@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-14T19:37:42.395347",
+  "last_synced": "2026-11-15T00:34:33.842800",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-17 - 2026-11-14)",
-  "total_visitors_network": 39455,
-  "total_requests": 182342,
-  "total_visits": 12231,
-  "total_pageviews": 41852,
+  "time_window": "28 Days (2026-10-18 - 2026-11-15)",
+  "total_visitors_network": 39754,
+  "total_requests": 183317,
+  "total_visits": 12323,
+  "total_pageviews": 42192,
   "percent_cached": "56.14%",
-  "data_served_mb": 1951.0,
+  "data_served_mb": 1977.9,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
-      "date": "2026-11-14",
-      "visitors": 1722,
-      "rumVisits": 482,
-      "pageviews": 1695,
-      "requests": 5364,
+      "date": "2026-11-15",
+      "visitors": 54,
+      "rumVisits": 120,
+      "pageviews": 68,
+      "requests": 183,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0405
+      "viewMultiplier": 0.0016
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 16167,
-      "rumVisits": 4203,
-      "pageviews": 13157,
-      "requests": 49863,
+      "visitors": 14998,
+      "rumVisits": 3899,
+      "pageviews": 12420,
+      "requests": 47870,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.3144
+      "viewMultiplier": 0.2944
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 39455,
-      "rumVisits": 12231,
-      "pageviews": 41852,
-      "requests": 182342,
+      "visitors": 39754,
+      "rumVisits": 12323,
+      "pageviews": 42192,
+      "requests": 183317,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 39455,
-      "rumVisits": 12231,
-      "pageviews": 41852,
-      "requests": 182342,
+      "visitors": 39754,
+      "rumVisits": 12323,
+      "pageviews": 42192,
+      "requests": 183317,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 39455,
-      "rumVisits": 12231,
-      "pageviews": 41852,
-      "requests": 182342,
+      "visitors": 39754,
+      "rumVisits": 12323,
+      "pageviews": 42192,
+      "requests": 183317,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,7 +70,7 @@
   "top_pages": [
     {
       "path": "/api/telemetry",
-      "views": 9220
+      "views": 9350
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -78,15 +78,15 @@
     },
     {
       "path": "/",
-      "views": 4640
+      "views": 4660
     },
     {
       "path": "/calculator/",
-      "views": 2230
+      "views": 2270
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1460
+      "views": 1470
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -106,18 +106,22 @@
     },
     {
       "path": "/blog/",
-      "views": 340
+      "views": 350
     },
     {
       "path": "/radar/",
       "views": 320
     },
     {
+      "path": "/deals/",
+      "views": 290
+    },
+    {
       "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
       "views": 290
     },
     {
-      "path": "/deals/",
+      "path": "/reviews/clickup/",
       "views": 290
     },
     {
@@ -125,20 +129,12 @@
       "views": 280
     },
     {
-      "path": "/reviews/clickup/",
+      "path": "/reviews/elevenlabs/",
       "views": 270
     },
     {
       "path": "/terms/",
       "views": 270
-    },
-    {
-      "path": "/reviews/elevenlabs/",
-      "views": 270
-    },
-    {
-      "path": "/blog/linear-evolution-guide-2026/",
-      "views": 260
     },
     {
       "path": "/blog/resend-evolution-guide-2026/",
@@ -149,19 +145,23 @@
       "views": 260
     },
     {
+      "path": "/blog/linear-evolution-guide-2026/",
+      "views": 260
+    },
+    {
       "path": "/blog/best-zapier-alternatives-2026/",
       "views": 240
+    },
+    {
+      "path": "/versus/",
+      "views": 230
     },
     {
       "path": "/media-kit/",
       "views": 220
     },
     {
-      "path": "/versus/",
-      "views": 220
-    },
-    {
-      "path": "/reviews/supabase/",
+      "path": "/blog/rewardful-evolution-guide-2026/",
       "views": 220
     },
     {
@@ -173,15 +173,15 @@
       "views": 220
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 210
-    },
-    {
-      "path": "/blog/rewardful-evolution-guide-2026/",
-      "views": 210
+      "path": "/reviews/supabase/",
+      "views": 220
     },
     {
       "path": "/reviews/brevo/",
+      "views": 210
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
       "views": 210
     },
     {
@@ -192,15 +192,15 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 32370
+      "views": 32680
     },
     {
       "country": "Morocco",
-      "views": 29650
+      "views": 29800
     },
     {
       "country": "Germany",
-      "views": 3090
+      "views": 3110
     },
     {
       "country": "Singapore",

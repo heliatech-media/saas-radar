@@ -1005,6 +1005,19 @@
         "airtablevsretool",
         "comparison"
       ]
+    },
+    "elevenlabs-vs-murf-ai": {
+      "id": 5038623,
+      "url": "https://dev.to/heliatech/elevenlabs-vs-murfai-2026-generative-voice-ai-breakthrough-vs-studio-voiceover-production-2onh",
+      "title": "ElevenLabs vs Murf.ai (2026): Generative Voice AI Breakthrough vs Studio Voiceover Production",
+      "canonical_url": "https://heliatech.online/blog/elevenlabs-vs-murf-ai",
+      "published": true,
+      "tags": [
+        "technology",
+        "murfai",
+        "elevenlabsvsmurfai",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

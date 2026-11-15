@@ -6,7 +6,7 @@ tagline: An all-in-one SEO toolset with powerful data to audit your site, analyz
 category: AI SEO & Copywriting
 rating: 4.7
 website_url: https://ahrefs.com
-affiliate_url: https://ahrefs.com
+affiliate_url: "https://ahrefs.com/"
 summary: Ahrefs is an industry-standard SEO suite offering robust backlink analysis,
   keyword research, site audits, and rank tracking. It empowers digital marketers
   and enterprise teams to uncover organic search traffic growth opportunities and

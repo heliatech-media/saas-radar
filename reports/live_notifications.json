@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-15 00:36:17",
+    "title": "Cycle Autonome #KoalaWriter",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (KoalaWriter) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-15 00:35:46",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 12 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, koalawriter, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-15 00:34:07",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : KoalaWriter: The Evolution of SERP Dominance and the Hands-on Guide to AI Content Scale in 2026",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** KoalaWriter: The Evolution of SERP Dominance and the Hands-on Guide to AI Content Scale in 2026\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/koalawriter-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/koalawriter-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-15 00:33:43",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : KoalaWriter",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** KoalaWriter\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.5/10\n• **Cible idéale :** SEO agencies, content marketers, and niche site owners looking to scale programmatic SEO content.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/koalawriter/"
+  },
+  {
     "timestamp": "2026-11-14 19:39:43",
     "title": "Cycle Autonome #Ahrefs",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #Loops",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Loops) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-09 14:45:38",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 8 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, loops, minicong, minvo-testing-sandbox, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-09 03:46:26",
-    "title": "Cycle Autonome #InVideo AI",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (InVideo AI) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-09 03:46:01",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 7 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-08 23:06:26",
-    "title": "Cycle Autonome #CapCut Pro",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (CapCut Pro) et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

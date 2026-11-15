@@ -84,7 +84,7 @@ Evaluating software strictly on sticker price is an amateur error. True TCO inco
     *   50 seats @ ~$45/user/month = $2,250/mo.
     *   Includes generous automation runs (50,000+ runs/month) and high record limits (up to 250,000 records per base).
     *   *Monthly Total:* **$2,250**
-*   **Notion AI (Enterprise/Business + AI Add-on):**
+*   **[Notion AI](/reviews/notion-ai) (Enterprise/Business + AI Add-on):**
     *   50 seats @ ~$15–$25/user/month + $10/user/month for Notion AI = ~$1,750/mo.
     *   *Monthly Total:* **$1,750**
 *   *Verdict:* Notion is cheaper initially, but if those 50,000 operations involve complex relational updates, Notion will require external orchestration tools (like [Make](/reviews/make) or [Zapier](/reviews/zapier)), adding $100–$300/mo in third-party API costs.
