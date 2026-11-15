@@ -193,7 +193,8 @@ AFFILIATE_MAP = {
     "semrush": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
     "jasper": "https://jasper.ai/?fpr=heliatech",
     "writesonic": "https://writesonic.grsm.io/heliatech",
-    "ahrefs": "https://ahrefs.com/"
+    "ahrefs": "https://ahrefs.com",
+    "koalawriter": "https://koala.sh/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

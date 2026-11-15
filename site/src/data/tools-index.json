@@ -18,8 +18,8 @@
     "rating": 4.7,
     "starting_price": "$129/mo",
     "best_for": "In-house SEO professionals, digital marketing agencies, and content-driven enterprises",
-    "affiliate_url": "https://ahrefs.com/",
-    "commission_rate": "Ahrefs does not currently offer a public affiliate program; historically managed on an invite-only or in-house basis for specific influencers, but currently closed to new public applications."
+    "affiliate_url": "https://ahrefs.com",
+    "commission_rate": "Ahrefs does not currently offer a public affiliate program for their core SEO toolset."
   },
   {
     "name": "Airtable",
@@ -260,6 +260,16 @@
     "commission_rate": "200 Credits per signup + 20% recurring commission for partners"
   },
   {
+    "name": "Gamma",
+    "slug": "gamma",
+    "tagline": "Create stunning presentations, docs, and web pages from a single prompt in seconds",
+    "category": "AI Presentation & Document Creator",
+    "rating": 4.7,
+    "starting_price": "$8/mo",
+    "best_for": "Marketers, founders, educators, and sales teams who need to build high-converting pitches quickly.",
+    "affiliate_url": "https://gamma.app"
+  },
+  {
     "name": "Guidde",
     "slug": "guidde",
     "tagline": "Create professional video documentation and how-to guides in seconds using AI.",
@@ -397,7 +407,8 @@
     "rating": 4.5,
     "starting_price": "$9/mo",
     "best_for": "SEO agencies, content marketers, and niche site owners looking to scale programmatic SEO content.",
-    "affiliate_url": "https://koala.sh"
+    "affiliate_url": "https://koala.sh/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Lemlist",

@@ -5,7 +5,7 @@ tagline: AI-powered long-form content creation optimized for SEO and SERP domina
 category: AI SEO & Copywriting
 rating: 4.5
 website_url: https://koala.sh
-affiliate_url: https://koala.sh
+affiliate_url: "https://koala.sh/?via=heliatech"
 summary: KoalaWriter is a specialized AI writing tool designed to generate SEO-optimized,
   long-form articles by pulling real-time data from Google search results. It focuses
   on minimizing the 'AI-generated' feel by incorporating internal linking, image generation,

@@ -77,7 +77,7 @@ Powered by StackBlitz’s proprietary **WebContainers technology**, Bolt.new exe
 ### Lovable.dev: The Supabase-Native Full-Stack Studio
 Lovable approaches the problem from a product-engineering mindset. Rather than turning your browser into a compiler, Lovable runs an orchestrated cloud agent that specializes in **React, Tailwind, and [Supabase](/reviews/supabase)**.
 
-* **How it works:** Lovable constructs your user interface with precision design standards while orchestrating backend migrations in a sandboxed Supabase environment.
+* **How it works:** Lovable constructs your user interface with precision design standards while orchestrating backend migrations in a sandboxed [Supabase](/reviews/supabase) environment.
 * **Key Advantage:** Authentication (OAuth, Magic Links), PostgreSQL tables, and strict **Row Level Security (RLS)** policies are generated automatically without requiring the user to write raw SQL.
 * **The Catch:** It is heavily optimized for modern React/Vite frontends; if you require an obscure Python or Rust microservice inside the sandbox, you must integrate it via external webhooks.
 

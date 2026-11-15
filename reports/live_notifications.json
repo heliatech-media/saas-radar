@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-15 18:16:58",
+    "title": "Cycle Autonome #Gamma",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Gamma) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-15 18:16:33",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 12 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-15 18:14:44",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Gamma: The Death of the Blank Slide and the Blueprint for AI-Powered Presentation Velocity",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Gamma: The Death of the Blank Slide and the Blueprint for AI-Powered Presentation Velocity\n• **Catégorie :** AI Presentation & Document Creator\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/gamma-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/gamma-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-15 18:14:19",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Gamma",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Gamma\n• **Catégorie :** AI Presentation & Document Creator\n• **Note globale :** 4.7/10\n• **Cible idéale :** Marketers, founders, educators, and sales teams who need to build high-converting pitches quickly.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/gamma/"
+  },
+  {
     "timestamp": "2026-11-15 00:36:17",
     "title": "Cycle Autonome #KoalaWriter",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #OpusClip",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (OpusClip) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-10 05:20:37",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 7 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-09 23:42:25",
-    "title": "Cycle Autonome #OpusClip",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (OpusClip) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-09 23:41:59",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 7 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-09 14:46:04",
-    "title": "Cycle Autonome #Loops",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Loops) et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

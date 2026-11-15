@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-15 00:35:46",
-  "total_links_audited": 130,
-  "healthy_links": 118,
+  "timestamp": "2026-11-15 18:16:33",
+  "total_links_audited": 131,
+  "healthy_links": 119,
   "broken_links_count": 12,
   "health_rate": "90.8%",
   "broken_links": [
@@ -22,20 +22,20 @@
       "error": "HTTPSConnectionPool(host='www.descript-sandbox-leaks.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-sandbox-leaks.com', port=443): Failed to resolve 'www.descript-sandbox-leaks.com' ([Errno -2] Name or service not known)\"))"
     },
     {
+      "slug": "gamma-enterprise-sandbox",
+      "target_url": "https://www.gamma-enterprise-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "invideo-ai-sandbox",
       "target_url": "https://www.invideo-ai-sandbox.com",
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "koalawriter",
-      "target_url": "https://www.koalawriter.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.koalawriter.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)')))"
     },
     {
       "slug": "minicong",
@@ -119,7 +119,7 @@
     },
     {
       "slug": "ahrefs",
-      "target_url": "https://ahrefs.com/",
+      "target_url": "https://ahrefs.com",
       "final_url": "https://ahrefs.com/",
       "status_code": 200,
       "healthy": true
@@ -311,7 +311,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=6umxLIluwu1QN2&gsxid=6umxLIluwu1QN2&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=9xmNT1OCrn4gdg&gsxid=9xmNT1OCrn4gdg&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -349,6 +349,14 @@
       "final_url": "https://gamma.app/signup?r=heliatech",
       "status_code": 403,
       "healthy": true
+    },
+    {
+      "slug": "gamma-enterprise-sandbox",
+      "target_url": "https://www.gamma-enterprise-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "guidde",
@@ -446,7 +454,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -465,11 +473,10 @@
     },
     {
       "slug": "koalawriter",
-      "target_url": "https://www.koalawriter.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.koalawriter.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)')))"
+      "target_url": "https://koala.sh/?via=heliatech",
+      "final_url": "https://koala.sh/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "leadiq",
@@ -640,7 +647,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -653,7 +660,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=6vSRfDxJYsfjKA&gsxid=6vSRfDxJYsfjKA&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3xgRLnEVaydfvJ&gsxid=3xgRLnEVaydfvJ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -681,7 +688,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=GJluX5zxYBmMqi&gsxid=GJluX5zxYBmMqi&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=vtKsCAoDuwc9uF&gsxid=vtKsCAoDuwc9uF&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -858,8 +865,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {
