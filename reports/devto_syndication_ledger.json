@@ -1037,6 +1037,19 @@
       "url": "https://dev.to/hubspot-enterprise-pricing-rate-card-leaks-2026",
       "canonical_url": "https://heliatech.online/blog/hubspot-enterprise-pricing-rate-card-leaks-2026",
       "status": "already_published"
+    },
+    "castmagic-vs-descript": {
+      "id": 5047027,
+      "url": "https://dev.to/heliatech/castmagic-vs-descript-2026-generative-content-asset-extraction-vs-timeline-waveform-surgery-27l",
+      "title": "Castmagic vs Descript (2026): Generative Content Asset Extraction vs Timeline Waveform Surgery",
+      "canonical_url": "https://heliatech.online/blog/castmagic-vs-descript",
+      "published": true,
+      "tags": [
+        "castmagic",
+        "descript",
+        "castmagicvsdescript",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

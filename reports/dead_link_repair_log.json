@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-16T00:34:05.795662",
+  "timestamp": "2026-11-16T10:24:29.369468",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 234,
-    "total_redirects_active": 133,
+    "total_content_files_scanned": 237,
+    "total_redirects_active": 134,
     "new_redirects_healed": 41,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
@@ -25,6 +25,11 @@
       "slug": "gamma-enterprise-sandbox",
       "target_url": "https://www.gamma-enterprise-sandbox.com",
       "source_file": "gamma-evolution-guide-2026.md"
+    },
+    {
+      "slug": "riverside-sandbox",
+      "target_url": "https://www.riverside-sandbox.com",
+      "source_file": "riverside-fm-evolution-guide-2026.md"
     },
     {
       "slug": "descript-sandbox-leaks",
@@ -145,11 +150,6 @@
       "slug": "invideo-ai-sandbox",
       "target_url": "https://www.invideo-ai-sandbox.com",
       "source_file": "invideo-ai-evolution-guide-2026.md"
-    },
-    {
-      "slug": "transistor-fm",
-      "target_url": "https://www.transistor-fm.com",
-      "source_file": "transistor-fm.md"
     },
     {
       "slug": "davinci-resolve",

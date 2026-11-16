@@ -475,7 +475,14 @@
       "title": "HeyGen vs Synthesia (2026): The Enterprise AI Avatar Video Showdown",
       "tool_slug": "heygen",
       "canonical_url": "https://heliatech.online/blog/heygen-vs-synthesia"
+    },
+    "castmagic-vs-descript": {
+      "published_at": "2026-11-16T10:25:36.039215",
+      "share_urn": "urn:li:share:7528040566379692032",
+      "title": "Castmagic vs Descript (2026): Generative Content Asset Extraction vs Timeline Waveform Surgery",
+      "tool_slug": "castmagic",
+      "canonical_url": "https://heliatech.online/blog/castmagic-vs-descript"
     }
   },
-  "last_publish": "2026-11-16T00:35:22.423509"
+  "last_publish": "2026-11-16T10:25:36.039228"
 }

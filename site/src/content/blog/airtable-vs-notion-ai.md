@@ -171,4 +171,4 @@ To eliminate ambiguity, apply this binary operational filter to your organizatio
 Architect your systems with precision. Select the platform that aligns with your operational ontology:
 
 *   **Engineered for Data & Workflows:** Deploy relational models, automated pipelines, and programmatic control. **[Evaluate Airtable Now](/go/airtable)**
-*   **Engineered for Knowledge & Collaboration:** Deploy connected wikis, document hierarchies, and conversational AI. **[Evaluate Notion AI Now](/go/notion-ai)**
+*   **Engineered for Knowledge & Collaboration:** Deploy connected wikis, document hierarchies, and conversational AI. **[Evaluate [Notion AI](/reviews/notion-ai) Now](/go/notion-ai)**

@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-16 00:34:56",
-  "total_links_audited": 133,
-  "healthy_links": 120,
+  "timestamp": "2026-11-16 10:25:11",
+  "total_links_audited": 134,
+  "healthy_links": 121,
   "broken_links_count": 13,
-  "health_rate": "90.2%",
+  "health_rate": "90.3%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -78,6 +78,14 @@
       "error": "HTTPSConnectionPool(host='www.replit-agent.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.replit-agent.com', port=443): Failed to resolve 'www.replit-agent.com' ([Errno -2] Name or service not known)\"))"
     },
     {
+      "slug": "riverside-sandbox",
+      "target_url": "https://www.riverside-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.riverside-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.riverside-sandbox.com', port=443): Failed to resolve 'www.riverside-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "runway-tco-calculator",
       "target_url": "https://www.runway-tco-calculator.com",
       "final_url": "FAILED",
@@ -92,14 +100,6 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno -3] Temporary failure in name resolution)\"))"
-    },
-    {
-      "slug": "transistor-fm",
-      "target_url": "https://www.transistor-fm.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.transistor-fm.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.transistor-fm.com', port=443): Failed to resolve 'www.transistor-fm.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "writesonic-rate-card",
@@ -127,8 +127,8 @@
     },
     {
       "slug": "ahrefs",
-      "target_url": "https://ahrefs.com",
-      "final_url": "https://ahrefs.com/",
+      "target_url": "https://ahrefs.com/?via=heliatech",
+      "final_url": "https://ahrefs.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -319,7 +319,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=b7FTHMdBDJoChF&gsxid=b7FTHMdBDJoChF&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=7uZgXYlViTWdNm&gsxid=7uZgXYlViTWdNm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -675,7 +675,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=G5gpzJjpPizcDo&gsxid=G5gpzJjpPizcDo&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=PHn98oo3aUaW3U&gsxid=PHn98oo3aUaW3U&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -703,7 +703,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=CWFtIIxGQVvQzw&gsxid=CWFtIIxGQVvQzw&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=zZDxB8DkMDCRtB&gsxid=zZDxB8DkMDCRtB&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -805,6 +805,14 @@
       "final_url": "https://riverside.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "riverside-sandbox",
+      "target_url": "https://www.riverside-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.riverside-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.riverside-sandbox.com', port=443): Failed to resolve 'www.riverside-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "runway",
@@ -929,11 +937,10 @@
     },
     {
       "slug": "transistor-fm",
-      "target_url": "https://www.transistor-fm.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.transistor-fm.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.transistor-fm.com', port=443): Failed to resolve 'www.transistor-fm.com' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://transistor.fm/?via=heliatech",
+      "final_url": "https://transistor.fm/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "tray-io",

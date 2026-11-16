@@ -164,7 +164,7 @@ flowchart TD
 
 ### Lovable.dev Pricing Structure
 * **Starter / Free:** Limited daily message credits.
-* **Pro Tier ($20/month):** ~100 daily message credits (or monthly equivalent), with prioritized reasoning and native Supabase cloud deployments.
+* **Pro Tier ($20/month):** ~100 daily message credits (or monthly equivalent), with prioritized reasoning and native [Supabase](/reviews/supabase) cloud deployments.
 * **Scale / Team Tier ($50 - $100/month):** For multi-seat agencies building client MVPs continuously.
 * **Credit Consumption Reality:** Lovable charges per conversational cycle rather than raw token arithmetic, which makes cost estimation more predictable for non-technical creators.
 

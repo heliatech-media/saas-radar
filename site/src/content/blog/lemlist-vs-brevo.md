@@ -51,7 +51,7 @@ This masterclass is a forensic, empirical showdown between two category leaders:
 | **Pricing at Scale (50k/mo)** | High ($150–$300/mo across multiple seats & warmup pools) | Moderate ($65–$119/mo depending on tier) |
 | **Deliverability Engine** | Built-in custom domain rotation, Lemwarm (peer-to-peer warmup), SPF/DKIM/DMARC auditing | Shared/Dedicated IPs, SMTP relay, strict opt-in compliance enforcement |
 | **API & Webhooks** | REST API for lead ingestion, webhook triggers for status updates | Extensive REST API, transactional webhooks, native event logs |
-| **Ecosystem & Integrations**| Native CRM sync (HubSpot, Salesforce, Pipedrive), [Zapier](/reviews/zapier), [Make](/reviews/make) | Native CMS (Shopify, WordPress), Zapier, Segment, Custom CRM |
+| **Ecosystem & Integrations**| Native CRM sync (HubSpot, Salesforce, Pipedrive), [Zapier](/reviews/zapier), [Make](/reviews/make) | Native CMS (Shopify, WordPress), [Zapier](/reviews/zapier), Segment, Custom CRM |
 | **Security & Compliance** | GDPR conscious, SOC2 compliance roadmaps, outbound risk management | GDPR native, HIPAA compliant (Enterprise), rigorous opt-in checks |
 | **Best For** | High-ticket B2B pipeline generation via cold outreach | Mass inbound broadcasting, transactional alerts, SMB marketing |
 

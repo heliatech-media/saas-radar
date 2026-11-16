@@ -18,8 +18,8 @@
     "rating": 4.7,
     "starting_price": "$129/mo",
     "best_for": "In-house SEO professionals, digital marketing agencies, and content-driven enterprises",
-    "affiliate_url": "https://ahrefs.com",
-    "commission_rate": "Ahrefs does not currently offer a public affiliate program; historically managed on an invite-only basis."
+    "affiliate_url": "https://ahrefs.com/?via=heliatech",
+    "commission_rate": "Ahrefs does not have a traditional public affiliate program, but offers affiliate partnerships selectively on a case-by-case basis through their marketing team."
   },
   {
     "name": "Airtable",
@@ -702,6 +702,16 @@
     "best_for": "Professional podcasters, remote interviewers, media production agencies, and content marketing teams",
     "affiliate_url": "https://riverside.fm/?via=heliatech",
     "commission_rate": "30% recurring"
+  },
+  {
+    "name": "Riverside.fm",
+    "slug": "riverside-fm",
+    "tagline": "Studio-quality remote video and audio recording directly in your browser",
+    "category": "Video Automation",
+    "rating": 4.6,
+    "starting_price": "$19/mo",
+    "best_for": "Professional podcasters, remote interviewers, agencies, and content teams seeking broadcast-grade media assets.",
+    "affiliate_url": "https://riverside.fm/?via=heliatech"
   },
   {
     "name": "Runway",

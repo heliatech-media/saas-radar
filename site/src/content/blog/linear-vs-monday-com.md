@@ -73,7 +73,7 @@ Linear’s engineering team built their application as an intentional rebuttal t
 This focus on developer ergonomics means zero context switching. Keyboard shortcuts govern everything: `C` creates an issue, `I` assigns to self, `P` sets priority. Cycles replace endless backlogs with time-boxed iteration blocks, mirroring sprint cadences without the administrative bloat of traditional Scrum rituals. Triage workflows act as an inbound gatekeeper, preventing bug spam and feature requests from polluting active engineering boards.
 
 ### Monday.com: The Relational Work OS Canvas
-Monday.com operates on a vastly different architectural premise. Instead of assuming a uniform workflow (like the SDLC), Monday treats data as a polyvalent spreadsheet-database hybrid. Boards are composed of items, subitems, columns, and groups that can be morphed into Gantt charts, Kanban columns, workload views, and calendar grids via modular widget blocks.
+[Monday.com](/reviews/monday-com) operates on a vastly different architectural premise. Instead of assuming a uniform workflow (like the SDLC), Monday treats data as a polyvalent spreadsheet-database hybrid. Boards are composed of items, subitems, columns, and groups that can be morphed into Gantt charts, Kanban columns, workload views, and calendar grids via modular widget blocks.
 
 The core paradigm is *extensibility through configuration*. Using Monday’s automation builder, you can orchestrate multi-step conditional logic: *When status changes to "Review", create a subitem in the Design board, assign it to Sarah, and notify the #marketing channel via webhook.* 
 
