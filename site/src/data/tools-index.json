@@ -639,6 +639,16 @@
     "affiliate_url": "https://www.podia.com/?via=heliatech"
   },
   {
+    "name": "Postiz",
+    "slug": "postiz",
+    "tagline": "The open-source social media management platform for modern teams.",
+    "category": "Social Media Automation",
+    "rating": 4.5,
+    "starting_price": "$19/mo",
+    "best_for": "Marketing agencies, solo founders, and developers who prioritize data ownership and automation flexibility.",
+    "affiliate_url": "https://postiz.com/"
+  },
+  {
     "name": "Printify",
     "slug": "printify",
     "tagline": "A robust print-on-demand platform connecting e-commerce stores with a global network of print providers.",

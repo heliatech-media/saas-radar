@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-16 21:30:29",
+    "title": "Cycle Autonome #Postiz",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Postiz) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-16 21:30:01",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 13 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-16 21:27:46",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Postiz: The Open-Source Social Revolution and the Blueprint for Cross-Platform Dominance",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Postiz: The Open-Source Social Revolution and the Blueprint for Cross-Platform Dominance\n• **Catégorie :** Social Media Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/postiz-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/postiz-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-16 21:26:57",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Postiz",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Postiz\n• **Catégorie :** Social Media Automation\n• **Note globale :** 4.5/10\n• **Cible idéale :** Marketing agencies, solo founders, and developers who prioritize data ownership and automation flexibility.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/postiz/"
+  },
+  {
     "timestamp": "2026-11-16 10:25:36",
     "title": "Cycle Autonome #Riverside-fm",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #HubSpot",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (HubSpot) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-12 04:58:58",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-11 21:42:27",
-    "title": "Cycle Autonome #Runway",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Runway) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-11 21:42:04",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-11 13:17:53",
-    "title": "Cycle Autonome #OpusClip",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (OpusClip) et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

@@ -89,7 +89,7 @@ When evaluating SaaS tools at an enterprise level, sticker price tells only half
 *   **Linear Setup:** 50 users on the Business tier (~$15/user/month).
     *   *Monthly Cost:* $750
     *   *Admin Overhead:* Minimal. Git integrations handle sync; permission structures are streamlined.
-*   **Monday.com Setup:** 50 users on the Pro tier (requires a minimum block, typically priced per tier).
+*   **[Monday.com](/reviews/monday-com) Setup:** 50 users on the Pro tier (requires a minimum block, typically priced per tier).
     *   *Monthly Cost:* ~$1,100 (plus potential charges for heavy automation usage limits).
     *   *Admin Overhead:* Moderate. Requires a dedicated internal "Monday Champion" to manage board permissions and automations.
 

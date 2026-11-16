@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#070c1b"/>
+      <stop offset="100%" stop-color="#0c0a20"/>
+    </linearGradient>
+
+    <!-- Glowing Orbs & Highlights -->
+    <radialGradient id="ambientCyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ambientFuchsia" cx="85%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- UI Gradients -->
+    <linearGradient id="cyanToBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="violetToFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Ambient Lighting Effects -->
+  <rect width="1200" height="630" fill="url(#ambientCyan)"/>
+  <rect width="1200" height="630" fill="url(#ambientFuchsia)"/>
+  <circle cx="850" cy="315" r="300" fill="url(#coreGlow)" filter="url(#glow)"/>
+
+  <!-- ==================== BACKGROUND GRAPHICS & AUTOMATION MESH ==================== -->
+  <g id="workflow-mesh" opacity="0.6">
+    <!-- Connecting Circuit Paths -->
+    <path d="M 680 200 L 760 200 L 820 140 L 980 140" fill="none" stroke="url(#cyanToBlue)" stroke-width="2" filter="url(#glow-subtle)"/>
+    <path d="M 720 380 L 800 380 L 870 450 L 990 450" fill="none" stroke="url(#violetToFuchsia)" stroke-width="2" filter="url(#glow-subtle)"/>
+    <path d="M 850 240 L 920 310 L 1050 310" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+
+    <!-- Data Nodes / Floating Hexagons & Cards -->
+    <!-- Node 1: Twitter/X Stream -->
+    <g transform="translate(740, 110)">
+      <polygon points="40,0 80,23 80,68 40,90 0,68 0,23" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+      <circle cx="40" cy="45" r="14" fill="#06b6d4" fill-opacity="0.2"/>
+      <path d="M 32 37 L 48 53 M 48 37 L 32 53" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Node 2: LinkedIn API Sync -->
+    <g transform="translate(1000, 100)">
+      <rect x="0" y="0" width="130" height="70" rx="10" fill="url(#cardBg)" stroke="#8b5cf6" stroke-width="1.5"/>
+      <circle cx="25" cy="35" r="10" fill="#8b5cf6" fill-opacity="0.3"/>
+      <path d="M 21 35 L 29 35 M 25 31 L 25 39" stroke="#d946ef" stroke-width="2" stroke-linecap="round"/>
+      <text x="45" y="30" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">API SYNC</text>
+      <text x="45" y="48" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Active Pipeline</text>
+    </g>
+
+    <!-- Node 3: AI Vector Generator -->
+    <g transform="translate(980, 400)">
+      <rect x="0" y="0" width="150" height="85" rx="12" fill="url(#cardBg)" stroke="#d946ef" stroke-width="1.5"/>
+      <circle cx="30" cy="30" r="12" fill="#d946ef" fill-opacity="0.3"/>
+      <path d="M 24 30 L 36 30 M 30 24 L 30 36" stroke="#f472b6" stroke-width="2" stroke-linecap="round"/>
+      <text x="52" y="30" fill="#f8fafc" font-family="system-ui, sans-serif" font-weight="700" font-size="12">AI ENGINE</text>
+      <text x="52" y="48" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Auto-Generate</text>
+      <!-- Mini graph bars -->
+      <rect x="20" y="60" width="12" height="15" rx="2" fill="#8b5cf6"/>
+      <rect x="38" y="50" width="12" height="25" rx="2" fill="#d946ef"/>
+      <rect x="56" y="42" width="12" height="33" rx="2" fill="#38bdf8"/>
+      <rect x="74" y="55" width="12" height="20" rx="2" fill="#06b6d4"/>
+    </g>
+
+    <!-- Node 4: Webhook Dispatcher -->
+    <g transform="translate(710, 420)">
+      <polygon points="35,0 70,20 70,60 35,80 0,60 0,20" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <circle cx="35" cy="40" r="12" fill="#38bdf8" fill-opacity="0.2"/>
+      <path d="M 28 40 L 42 40 M 35 33 L 35 47" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ==================== CENTRAL HERO GRAPHIC: 3D CODE/AUTOMATION CORE ==================== -->
+  <g id="hero-core" transform="translate(790, 260)">
+    <!-- Central Holographic Cube / Platform -->
+    <g filter="url(#glow)">
+      <!-- Outer Hexagon Ring -->
+      <polygon points="0,-110 95,-55 95,55 0,110 -95,55 -95,-55" fill="none" stroke="url(#cyanToBlue)" stroke-width="2" opacity="0.6"/>
+      <!-- Inner Rotating Hexagon -->
+      <polygon points="0,-75 65,-37.5 65,37.5 0,75 -65,37.5 -65,-37.5" fill="url(#cardBg)" stroke="url(#violetToFuchsia)" stroke-width="2.5"/>
+      <!-- Center Core Pulse -->
+      <circle cx="0" cy="0" r="28" fill="#090d16" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="0" cy="0" r="12" fill="#d946ef" filter="url(#glow-subtle)"/>
+    </g>
+
+    <!-- Floating Code / Workflow Tokens around Core -->
+    <g transform="translate(-150, -90)">
+      <rect x="0" y="0" width="100" height="32" rx="6" fill="#090d16" stroke="#06b6d4" stroke-width="1"/>
+      <text x="12" y="21" fill="#38bdf8" font-family="monospace" font-weight="700" font-size="11">&lt;/POSTIZ&gt;</text>
+    </g>
+    <g transform="translate(80, 70)">
+      <rect x="0" y="0" width="115" height="32" rx="6" fill="#090d16" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="10" y="21" fill="#d946ef" font-family="monospace" font-weight="700" font-size="11">AUTO_PUBLISH</text>
+    </g>
+  </g>
+
+  <!-- ==================== FOREGROUND CONTENT & TYPOGRAPHY ==================== -->
+  <g id="content-layer" transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 85)">
+      <rect x="0" y="0" width="315" height="34" rx="17" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <circle cx="18" cy="17" r="5" fill="#06b6d4" filter="url(#glow-subtle)"/>
+      <text x="36" y="22" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="11" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: POSTIZ -->
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="-1">POSTIZ</text>
+      <!-- Glowing accent underline -->
+      <path d="M 0 15 L 240 15" stroke="url(#cyanToBlue)" stroke-width="4" stroke-linecap="round" filter="url(#glow-subtle)"/>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(0, 235)">
+      <text x="0" y="0" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="20" letter-spacing="2">OPEN-SOURCE SOCIAL MEDIA AUTOMATION</text>
+    </g>
+
+    <!-- Investigation Headline -->
+    <g transform="translate(0, 290)">
+      <text x="0" y="0" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="34">The Open-Source Social Revolution</text>
+      <text x="0" y="42" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="34">and the Blueprint for Cross-Platform Dominance</text>
+    </g>
+
+    <!-- Architectural Metadata / Stats Footer -->
+    <g transform="translate(0, 420)">
+      <!-- Divider Line -->
+      <path d="M 0 0 L 640 0" stroke="#1e293b" stroke-width="1.5"/>
+
+      <!-- Stat 1 -->
+      <g transform="translate(0, 25)">
+        <text x="0" y="0" fill="#38bdf8" font-family="system-ui, sans-serif" font-weight="900" font-size="24">100%</text>
+        <text x="0" y="20" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">OPEN-SOURCE CORE</text>
+      </g>
+
+      <!-- Vertical Separator 1 -->
+      <line x1="160" y1="5" x2="160" y2="40" stroke="#1e293b" stroke-width="1.5"/>
+
+      <!-- Stat 2 -->
+      <g transform="translate(190, 25)">
+        <text x="0" y="0" fill="#d946ef" font-family="system-ui, sans-serif" font-weight="900" font-size="24">MULTI-API</text>
+        <text x="0" y="20" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">UNIFIED SCHEDULING</text>
+      </g>
+
+      <!-- Vertical Separator 2 -->
+      <line x1="380" y1="5" x2="380" y2="40" stroke="#1e293b" stroke-width="1.5"/>
+
+      <!-- Stat 3 -->
+      <g transform="translate(410, 25)">
+        <text x="0" y="0" fill="#06b6d4" font-family="system-ui, sans-serif" font-weight="900" font-size="24">AI-NATIVE</text>
+        <text x="0" y="20" fill="#64748b" font-family="system-ui, sans-serif" font-weight="700" font-size="11" letter-spacing="0.5">CONTENT GENERATION</text>
+      </g>
+    </g>
+
+    <!-- Bottom Brand Watermark -->
+    <g transform="translate(0, 565)">
+      <text x="0" y="0" fill="#475569" font-family="system-ui, sans-serif" font-weight="800" font-size="11" letter-spacing="3">HELIATECH.ONLINE — ENTERPRISE SOFTWARE INVESTIGATION</text>
+    </g>
+
+  </g>
+</svg>

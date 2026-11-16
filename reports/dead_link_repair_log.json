@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-16T10:24:29.369468",
+  "timestamp": "2026-11-16T21:29:04.451669",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 237,
-    "total_redirects_active": 134,
-    "new_redirects_healed": 41,
+    "total_content_files_scanned": 240,
+    "total_redirects_active": 136,
+    "new_redirects_healed": 42,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -45,6 +45,11 @@
       "slug": "runway-tco-calculator",
       "target_url": "https://www.runway-tco-calculator.com",
       "source_file": "runway-evolution-guide-2026.md"
+    },
+    {
+      "slug": "postiz",
+      "target_url": "https://www.postiz.com",
+      "source_file": "postiz-evolution-guide-2026.md"
     },
     {
       "slug": "replit-agent",

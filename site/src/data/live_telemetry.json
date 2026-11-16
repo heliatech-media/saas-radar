@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-16 10:23:53 UTC",
+  "last_updated": "2026-11-16 21:28:04 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 93,
-    "total_published_investigations": 237,
-    "reviews_audited": 93,
-    "masterclasses_and_duels": 144,
+    "total_monetized_tools": 94,
+    "total_published_investigations": 240,
+    "reviews_audited": 94,
+    "masterclasses_and_duels": 146,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$32,550 USD",
+    "projected_monthly_mrr": "$32,900 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -408,6 +408,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "riverside-fm",
+      "destination": "https://riverside.fm/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "riverside",
       "destination": "https://riverside.fm/?via=heliatech",
       "type": "Commission Partner"
@@ -540,38 +545,38 @@
   ],
   "recent_events": [
     {
-      "timestamp": "2026-11-11 21:42:27",
-      "title": "Cycle Autonome #Runway",
+      "timestamp": "2026-11-12 14:34:27",
+      "title": "Cycle Autonome #Close CRM",
       "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Runway) et mis à jour le calendrier social.",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Close CRM) et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-11-11 21:42:04",
+      "timestamp": "2026-11-12 14:32:07",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 11 lien(s) d'affiliation en anomalie :\n• `asana, close-crm, descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-12 04:59:29",
+      "title": "Cycle Autonome #HubSpot",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (HubSpot) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-12 04:58:58",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     },
     {
-      "timestamp": "2026-11-11 13:17:53",
-      "title": "Cycle Autonome #OpusClip",
+      "timestamp": "2026-11-11 21:42:27",
+      "title": "Cycle Autonome #Runway",
       "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (OpusClip) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-11 13:17:03",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 8 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-11 03:51:53",
-      "title": "Cycle Autonome #OpusClip",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (OpusClip) et mis à jour le calendrier social.",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Runway) et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

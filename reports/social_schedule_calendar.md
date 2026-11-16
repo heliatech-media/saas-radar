@@ -1,5 +1,5 @@
 # 🛰️ HELIATECH MONETIZED SOCIAL BROADCAST CALENDAR
-*Generated on 2026-11-16 10:23 • Strategy: 100% Monetized Assets Only*
+*Generated on 2026-11-16 21:28 • Strategy: 100% Monetized Assets Only*
 
 > [!NOTE]
 > Social distribution bandwidth is strictly reserved for high-converting partner tools with verified affiliate tracking URLs.
@@ -45,7 +45,7 @@
 | **Webflow** | [`/go/webflow`](https://heliatech.online/go/webflow) | **100.0%** | `2026-12-24 09:15 UTC` | `2026-12-24 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Zapier** | [`/go/zapier`](https://heliatech.online/go/zapier) | **100.0%** | `2026-12-25 09:15 UTC` | `2026-12-25 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Transistor** | [`/go/transistor`](https://heliatech.online/go/transistor) | **96.0%** | `2026-12-26 09:15 UTC` | `2026-12-26 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Podcastle** | [`/go/podcastle`](https://heliatech.online/go/podcastle) | **100.0%** | `2026-12-27 09:15 UTC` | `2026-12-27 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Podcastle** | [`/go/podcastle`](https://heliatech.online/go/podcastle) | **72.0%** | `2026-12-27 09:15 UTC` | `2026-12-27 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Peripety** | [`/go/peripety`](https://heliatech.online/go/peripety) | **100.0%** | `2026-12-28 09:15 UTC` | `2026-12-28 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Resend** | [`/go/resend`](https://heliatech.online/go/resend) | **100.0%** | `2026-12-29 09:15 UTC` | `2026-12-29 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Riverside** | [`/go/riverside`](https://heliatech.online/go/riverside) | **96.0%** | `2026-12-30 09:15 UTC` | `2026-12-30 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
@@ -3218,7 +3218,7 @@ Read the full investigative masterclass here: https://heliatech.online/blog/rese
 ## 💎 Focus Campaign: AHREFS
 - **Article URL:** https://heliatech.online/blog/ahrefs-evolution-guide-2026
 - **Hero Visual:** `https://heliatech.online/images/blog/ahrefs.png`
-- **Direct Affiliate Hop:** `https://ahrefs.com`
+- **Direct Affiliate Hop:** `https://ahrefs.com/?via=heliatech`
 
 ### 🐦 X (Twitter) 4-Tweet Viral Thread:
 - **Tweet 1** (125 chars):

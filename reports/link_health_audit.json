@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-16 10:25:11",
-  "total_links_audited": 134,
-  "healthy_links": 121,
+  "timestamp": "2026-11-16 21:30:01",
+  "total_links_audited": 136,
+  "healthy_links": 123,
   "broken_links_count": 13,
-  "health_rate": "90.3%",
+  "health_rate": "90.4%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -319,7 +319,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=7uZgXYlViTWdNm&gsxid=7uZgXYlViTWdNm&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=VSv53luhCGfc96&gsxid=VSv53luhCGfc96&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -675,7 +675,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=PHn98oo3aUaW3U&gsxid=PHn98oo3aUaW3U&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=AJfpU6ha94K6L4&gsxid=AJfpU6ha94K6L4&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -703,7 +703,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=zZDxB8DkMDCRtB&gsxid=zZDxB8DkMDCRtB&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=SHGASAqgwBcXO3&gsxid=SHGASAqgwBcXO3&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -718,6 +718,13 @@
       "slug": "podia",
       "target_url": "https://www.podia.com/?via=heliatech",
       "final_url": "https://www.podia.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "postiz",
+      "target_url": "https://www.postiz.com",
+      "final_url": "https://postiz.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -801,6 +808,13 @@
     },
     {
       "slug": "riverside",
+      "target_url": "https://riverside.fm/?via=heliatech",
+      "final_url": "https://riverside.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "riverside-fm",
       "target_url": "https://riverside.fm/?via=heliatech",
       "final_url": "https://riverside.com/?via=heliatech",
       "status_code": 200,
