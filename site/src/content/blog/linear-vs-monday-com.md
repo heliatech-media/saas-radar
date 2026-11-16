@@ -43,7 +43,7 @@ Choosing between them is not merely a matter of feature checklists; it is a fund
 
 ## Comprehensive Side-by-Side Comparison Matrix
 
-| Empirical Criteria | Linear (/go/linear) | Monday.com (/go/monday-com) |
+| Empirical Criteria | Linear (/go/linear) | [Monday.com](/reviews/monday-com) (/go/monday-com) |
 | :--- | :--- | :--- |
 | **Core Architecture** | React Native / Electron desktop-first app; heavily optimized local caching; sub-50ms interaction loops. | React-based web SPA with relational item-subitem data structures and modular widget blocks. |
 | **Pricing at Scale** | Predictable per-user tiers ($8–$15+/user/mo); flat enterprise structuring; minimal seat bloat. | Seat-based tiers with mandatory multi-seat minimum blocks; hidden costs for advanced automations and storage. |

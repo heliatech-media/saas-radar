@@ -6,7 +6,7 @@ tagline: Create stunning presentations, docs, and web pages from a single prompt
 category: AI Presentation & Document Creator
 rating: 4.7
 website_url: https://gamma.app
-affiliate_url: https://gamma.app
+affiliate_url: "https://gamma.app/?via=heliatech"
 summary: Gamma is an AI-powered content generation platform that replaces traditional
   slide builders with flexible, card-based decks, documents, and web pages. It utilizes
   generative AI to handle layouts, formatting, and content structure, allowing users

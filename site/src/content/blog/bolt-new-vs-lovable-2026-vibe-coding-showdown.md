@@ -135,7 +135,7 @@ USING (auth.uid() = user_id);
 This guarantees that even if a junior founder deploys the app to thousands of users, Tenant A cannot query Tenant B's data via browser console inspection. You can read more about secure database architecture in our [Supabase Evolution Guide](/blog/supabase-evolution-guide-2026/).
 
 ### How Bolt.new Handles Security
-Bolt.new relies on mock state or client-side storage (`localStorage`) until you explicitly connect an external backend (Supabase, Firebase, or an Express API). While this makes initial prototyping ultra-fast, the founder must actively audit the code to ensure sensitive credentials are not bundled into the client-side JavaScript.
+Bolt.new relies on mock state or client-side storage (`localStorage`) until you explicitly connect an external backend ([Supabase](/reviews/supabase), Firebase, or an Express API). While this makes initial prototyping ultra-fast, the founder must actively audit the code to ensure sensitive credentials are not bundled into the client-side JavaScript.
 
 > [!IMPORTANT]
 > **Security Audit Warning:** Never ship a Bolt.new application directly to commercial paying users without verifying that database secrets are stored in secure environment variables rather than client-exposed bundles.

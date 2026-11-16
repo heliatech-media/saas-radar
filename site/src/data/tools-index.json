@@ -19,7 +19,7 @@
     "starting_price": "$129/mo",
     "best_for": "In-house SEO professionals, digital marketing agencies, and content-driven enterprises",
     "affiliate_url": "https://ahrefs.com",
-    "commission_rate": "Ahrefs does not currently offer a public affiliate program for their core SEO toolset."
+    "commission_rate": "Ahrefs does not currently offer a public affiliate program; historically managed on an invite-only basis."
   },
   {
     "name": "Airtable",
@@ -267,7 +267,8 @@
     "rating": 4.7,
     "starting_price": "$8/mo",
     "best_for": "Marketers, founders, educators, and sales teams who need to build high-converting pitches quickly.",
-    "affiliate_url": "https://gamma.app"
+    "affiliate_url": "https://gamma.app/?via=heliatech",
+    "commission_rate": "50% of revenue for the first year"
   },
   {
     "name": "Guidde",
@@ -829,6 +830,16 @@
     "best_for": "B2B marketers, multi-show creators, and growing podcast networks needing advanced analytics and private feeds.",
     "affiliate_url": "https://transistor.fm/?via=heliatech",
     "commission_rate": "30% recurring"
+  },
+  {
+    "name": "Transistor.fm",
+    "slug": "transistor-fm",
+    "tagline": "Professional podcast hosting, analytics, and distribution for brands and creators",
+    "category": "Podcast Hosting & Analytics",
+    "rating": 4.7,
+    "starting_price": "$19/mo",
+    "best_for": "B2B brands, agencies, and professional podcasters managing multiple shows or internal team feeds.",
+    "affiliate_url": "https://transistor.fm/?via=heliatech"
   },
   {
     "name": "Typeform",

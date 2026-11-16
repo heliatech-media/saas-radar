@@ -194,7 +194,8 @@ AFFILIATE_MAP = {
     "jasper": "https://jasper.ai/?fpr=heliatech",
     "writesonic": "https://writesonic.grsm.io/heliatech",
     "ahrefs": "https://ahrefs.com",
-    "koalawriter": "https://koala.sh/?via=heliatech"
+    "koalawriter": "https://koala.sh/?via=heliatech",
+    "gamma": "https://gamma.app/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

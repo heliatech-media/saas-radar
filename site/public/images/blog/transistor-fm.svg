@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#091833" />
+      <stop offset="45%" stop-color="#050a18" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- UI & Accent Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="violetFuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="glassCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#d946ef" stop-opacity="1" />
+      <stop offset="70%" stop-color="#8b5cf6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Pattern for Grid -->
+    <pattern id="matrixGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="url(#gridGrad)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+  <rect width="1200" height="630" fill="url(#matrixGrid)" />
+
+  <!-- Ambient Light Orbs (Background) -->
+  <circle cx="950" cy="180" r="220" fill="#8b5cf6" opacity="0.15" filter="url(#glow-heavy)" />
+  <circle cx="800" cy="450" r="260" fill="#06b6d4" opacity="0.1" filter="url(#glow-heavy)" />
+  <circle cx="200" cy="500" r="180" fill="#38bdf8" opacity="0.08" filter="url(#glow-heavy)" />
+
+  <!-- Geometric Accent Lines & HUD Decor -->
+  <g opacity="0.4">
+    <path d="M 70 80 L 140 80 L 170 110" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="70" cy="80" r="3" fill="#38bdf8" />
+    <path d="M 1130 550 L 1060 550 L 1030 520" fill="none" stroke="#d946ef" stroke-width="1.5" />
+    <circle cx="1130" cy="550" r="3" fill="#d946ef" />
+    <!-- Crosshairs -->
+    <path d="M 600 30 L 600 42" stroke="#06b6d4" stroke-width="1" opacity="0.6" />
+    <path d="M 594 36 L 606 36" stroke="#06b6d4" stroke-width="1" opacity="0.6" />
+  </g>
+
+  <!-- ==================== MAIN COMPOSITION ==================== -->
+
+  <!-- LEFT COLUMN: Typography & Dossier Info -->
+  <g transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 95)" filter="url(#glow-subtle)">
+      <rect width="335" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" opacity="0.9" />
+      <circle cx="22" cy="17" r="5" fill="#06b6d4" />
+      <circle cx="22" cy="17" r="9" fill="#06b6d4" opacity="0.3" />
+      <text x="42" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#38bdf8">HELIATECH ARCHITECTURAL DOSSIER</text>
+    </g>
+
+    <!-- Main Title: TRANSISTOR.FM -->
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="900" letter-spacing="1.5" fill="#ffffff" filter="url(#drop-shadow)">TRANSISTOR<tspan fill="url(#cyanBlue)">.FM</tspan></text>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(2, 222)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" letter-spacing="4" fill="#8b5cf6">PODCAST HOSTING &amp; ANALYTICS</text>
+    </g>
+
+    <!-- Investigation Headline Paragraph -->
+    <g transform="translate(2, 275)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">The Enterprise Podcast Engine and the</text>
+      <text x="0" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">Hands-on Guide to <tspan font-weight="700" fill="#f1f5f9">Audio Distribution in 2026</tspan></text>
+    </g>
+
+    <!-- Key Metrics / Meta Badges at Bottom Left -->
+    <g transform="translate(0, 375)">
+      <!-- Metric Card 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="165" height="70" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+        <path d="M 12 22 L 20 22 L 24 16 L 28 28 L 32 22 L 40 22" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="16" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">99.99%</text>
+        <text x="16" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1" fill="#64748b">GLOBAL UPTIME</text>
+      </g>
+      <!-- Metric Card 2 -->
+      <g transform="translate(185, 0)">
+        <rect width="165" height="70" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+        <circle cx="26" cy="24" r="8" fill="none" stroke="#d946ef" stroke-width="2" />
+        <path d="M 26 18 V 24 H 30" fill="none" stroke="#d946ef" stroke-width="2" stroke-linecap="round" />
+        <text x="16" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff">MULTI-RSS</text>
+        <text x="16" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1" fill="#64748b">DISTRIBUTION</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: 3D VECTOR ILLUSTRATION (Holographic Audio Waveform / Enterprise Engine) ==================== -->
+
+  <g transform="translate(680, 80)" filter="url(#drop-shadow)">
+    
+    <!-- Outer Glass Control Panel HUD Container -->
+    <rect x="0" y="0" width="440" height="470" rx="20" fill="url(#glassCard)" stroke="#1e293b" stroke-width="2" />
+    
+    <!-- Top Bar of Control Panel -->
+    <path d="M 20 50 L 420 50" stroke="#1e293b" stroke-width="1" />
+    <circle cx="40" cy="25" r="5" fill="#ef4444" opacity="0.8" />
+    <circle cx="58" cy="25" r="5" fill="#f59e0b" opacity="0.8" />
+    <circle cx="76" cy="25" r="5" fill="#10b981" opacity="0.8" />
+    <text x="220" y="29" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="2" fill="#64748b">ENGINE://DISTRIBUTION_CORE_v2.6</text>
+
+    <!-- Holographic 3D Waveform Node Centerpiece -->
+    <g transform="translate(40, 80)">
+      
+      <!-- Background grid for analyzer -->
+      <g opacity="0.15">
+        <line x1="0" y1="40" x2="360" y2="40" stroke="#38bdf8" stroke-dasharray="4 4" />
+        <line x1="0" y1="90" x2="360" y2="90" stroke="#38bdf8" stroke-dasharray="4 4" />
+        <line x1="0" y1="140" x2="360" y2="140" stroke="#38bdf8" stroke-dasharray="4 4" />
+        <line x1="90" y1="0" x2="90" y2="180" stroke="#38bdf8" stroke-dasharray="4 4" />
+        <line x1="180" y1="0" x2="180" y2="180" stroke="#38bdf8" stroke-dasharray="4 4" />
+        <line x1="270" y1="0" x2="270" y2="180" stroke="#38bdf8" stroke-dasharray="4 4" />
+      </g>
+
+      <!-- Isometric 3D Audio Frequency Bars / Pillars -->
+      <g transform="translate(0, 10)">
+        <!-- Bar 1 -->
+        <path d="M 20 120 L 40 105 L 40 45 L 20 60 Z" fill="#06b6d4" opacity="0.4" />
+        <path d="M 0 135 L 20 120 L 20 60 L 0 75 Z" fill="#38bdf8" opacity="0.6" />
+        <polygon points="0,75 20,60 40,45 20,60" fill="#38bdf8" opacity="0.8" />
+
+        <!-- Bar 2 -->
+        <path d="M 65 100 L 85 85 L 85 20 L 65 35 Z" fill="#38bdf8" opacity="0.5" />
+        <path d="M 45 115 L 65 100 L 65 35 L 45 50 Z" fill="#8b5cf6" opacity="0.7" />
+        <polygon points="45,50 65,35 85,20" fill="#8b5cf6" />
+
+        <!-- Bar 3 (Peak) -->
+        <path d="M 110 75 L 130 60 L 130 5 L 110 20 Z" fill="#8b5cf6" opacity="0.7" />
+        <path d="M 90 90 L 110 75 L 110 20 L 90 35 Z" fill="#d946ef" opacity="0.9" />
+        <polygon points="90,35 110,20 130,5" fill="#d946ef" filter="url(#glow-subtle)" />
+
+        <!-- Bar 4 -->
+        <path d="M 155 110 L 175 95 L 175 35 L 155 50 Z" fill="#8b5cf6" opacity="0.5" />
+        <path d="M 135 125 L 155 110 L 155 50 L 135 65 Z" fill="#38bdf8" opacity="0.7" />
+        <polygon points="135,65 155,50 175,35" fill="#38bdf8" />
+
+        <!-- Bar 5 -->
+        <path d="M 200 130 L 220 115 L 220 70 L 200 85 Z" fill="#06b6d4" opacity="0.4" />
+        <path d="M 180 145 L 200 130 L 200 85 L 180 100 Z" fill="#38bdf8" opacity="0.6" />
+        <polygon points="180,100 200,85 220,70" fill="#38bdf8" />
+
+        <!-- Bar 6 -->
+        <path d="M 245 95 L 265 80 L 265 15 L 245 30 Z" fill="#8b5cf6" opacity="0.6" />
+        <path d="M 225 110 L 245 95 L 245 30 L 225 45 Z" fill="#d946ef" opacity="0.8" />
+        <polygon points="225,45 245,30 265,15" fill="#d946ef" />
+
+        <!-- Bar 7 -->
+        <path d="M 290 125 L 310 110 L 310 60 L 290 75 Z" fill="#06b6d4" opacity="0.4" />
+        <path d="M 270 140 L 290 125 L 290 75 L 270 90 Z" fill="#38bdf8" opacity="0.6" />
+        <polygon points="270,90 290,75 310,60" fill="#38bdf8" />
+      </g>
+
+      <!-- Glowing Sinusoidal Wave Overlay -->
+      <path d="M 0 90 Q 60 20, 110 50 T 220 100 T 330 40 T 360 90" fill="none" stroke="url(#waveGrad)" stroke-width="4" filter="url(#glow-heavy)" />
+      <path d="M 0 90 Q 60 20, 110 50 T 220 100 T 330 40 T 360 90" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.9" />
+    </g>
+
+    <!-- Data Stream / Analytics Node Network (Lower Half of Panel) -->
+    <g transform="translate(40, 280)">
+      
+      <!-- Card background for telemetry -->
+      <rect width="360" height="155" rx="12" fill="#030712" stroke="#1e293b" stroke-width="1.5" />
+      
+      <!-- Telemetry Header -->
+      <circle cx="20" cy="24" r="4" fill="#06b6d4" />
+      <text x="35" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#f1f5f9">DISTRIBUTION NODES &amp; SYNC</text>
+      
+      <g transform="translate(20, 48)">
+        <!-- Node 1: Apple Podcasts -->
+        <g transform="translate(0, 0)">
+          <rect width="100" height="36" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+          <circle cx="14" cy="18" r="4" fill="#38bdf8" />
+          <text x="26" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#e2e8f0">APPLE PODCASTS</text>
+        </g>
+        
+        <!-- Connector Line 1 -->
+        <path d="M 100 18 L 130 18" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6" />
+
+        <!-- Node 2: Spotify Enterprise -->
+        <g transform="translate(130, 0)">
+          <rect width="100" height="36" rx="6" fill="#0f172a" stroke="#8b5cf6" stroke-width="1" />
+          <circle cx="14" cy="18" r="4" fill="#8b5cf6" />
+          <text x="26" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#e2e8f0">SPOTIFY SYNC</text>
+        </g>
+
+        <!-- Connector Line 2 -->
+        <path d="M 230 18 L 260 18" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6" />
+
+        <!-- Node 3: RSS Feed -->
+        <g transform="translate(260, 0)">
+          <rect width="60" height="36" rx="6" fill="#0f172a" stroke="#d946ef" stroke-width="1" />
+          <circle cx="14" cy="18" r="4" fill="#d946ef" />
+          <text x="26" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#e2e8f0">RSS</text>
+        </g>
+      </g>
+
+      <!-- Bottom Telemetry Chart Line -->
+      <g transform="translate(20, 105)">
+        <text x="0" y="0" font-family="monospace" font-size="10" fill="#64748b">ANALYTICS PIPELINE: <tspan fill="#06b6d4">ACTIVE (12.4M IMPRESSIONS)</tspan></text>
+        <!-- Mini sparkline graph -->
+        <path d="M 0 30 L 30 25 L 60 32 L 90 15 L 120 22 L 150 10 L 180 18 L 210 5 L 240 12 L 270 2 L 320 8" fill="none" stroke="url(#cyanBlue)" stroke-width="2" />
+        <path d="M 0 30 L 30 25 L 60 32 L 90 15 L 120 22 L 150 10 L 180 18 L 210 5 L 240 12 L 270 2 L 320 8 L 320 40 L 0 40 Z" fill="#06b6d4" opacity="0.1" />
+      </g>
+
+    </g>
+
+  </g>
+
+</svg>

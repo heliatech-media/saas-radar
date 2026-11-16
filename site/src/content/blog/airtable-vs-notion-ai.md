@@ -93,7 +93,7 @@ Evaluating software strictly on sticker price is an amateur error. True TCO inco
 *   **Airtable (Enterprise Scale):**
     *   Custom enterprise pricing (typically $100+ per seat for advanced security and unlimited scaling). 200 seats = ~$20,000/mo.
     *   *Monthly Total:* **$20,000+** (Includes robust native AI fields for batch processing structured data).
-*   **Notion AI (Enterprise Scale):**
+*   **[Notion AI](/reviews/notion-ai) (Enterprise Scale):**
     *   200 seats @ Enterprise tier + AI = ~$50,000+ annualized equivalent.
     *   *Monthly Total:* **~$18,000–$22,000/mo.**
 *   *Scaling Observation:* Airtable hits hard cost ceilings when crossing millions of records or exceeding automation quotas, forcing enterprise tier negotiations. Notion scales linearly with seats, but becomes chaotic when enterprise data volumes exceed its database UI performance thresholds (rendering thousands of complex block relations causes noticeable UI lag).
