@@ -95,7 +95,7 @@ When evaluating SaaS tools at an enterprise level, sticker price tells only half
 
 ### Scenario B: 500-Person Cross-Functional Enterprise
 *   **Linear Scaling Reality:** Linear is rarely deployed across non-technical departments. Attempting to force HR, Legal, and Sales into Linear results in high friction because the data model is strictly optimized for issues, projects, and cycles. If forced, you pay for 500 seats ($7,500/mo), but adoption outside engineering plummets below 20%.
-*   **Monday.com Scaling Reality:** Monday thrives here. 500 enterprise seats across departments with customized governance, cross-board dashboards, and enterprise security.
+*   **[Monday.com](/reviews/monday-com) Scaling Reality:** Monday thrives here. 500 enterprise seats across departments with customized governance, cross-board dashboards, and enterprise security.
     *   *Monthly Cost:* Custom Enterprise pricing, scaling into tens of thousands annually, but justified by cross-departmental consolidation.
     *   *ROI Driver:* Replaces 3 to 4 point solutions (e.g., standalone Gantt tools, basic CRMs, lightweight wikis), consolidating software spend.
 

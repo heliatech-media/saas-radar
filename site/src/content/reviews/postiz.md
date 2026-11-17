@@ -5,7 +5,7 @@ tagline: The open-source social media management platform for modern teams.
 category: Social Media Automation
 rating: 4.5
 website_url: https://postiz.com/
-affiliate_url: https://postiz.com/
+affiliate_url: "https://postiz.com/?via=heliatech"
 summary: Postiz is an open-source social media scheduling and automation platform
   designed to bridge the gap between complex enterprise tools and basic schedulers.
   It focuses on AI-driven content generation and multi-platform distribution within

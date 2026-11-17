@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-17 05:50:29",
+    "title": "Cycle Autonome #VEED-IO",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (VEED-IO) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-17 05:49:26",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 16 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-io, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-17 05:47:35",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : VEED.IO: The Browser-Based Video Revolution and the Enterprise Playbook for Rapid Content Scaling",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** VEED.IO: The Browser-Based Video Revolution and the Enterprise Playbook for Rapid Content Scaling\n• **Catégorie :** Video Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/veed-io-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/veed-io-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-17 05:46:50",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : VEED.IO",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** VEED.IO\n• **Catégorie :** Video Automation\n• **Note globale :** 4.2/10\n• **Cible idéale :** Social media managers, content marketers, and creators who need to produce high-volume, captioned short-form video without learning Adobe Premiere.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/veed-io/"
+  },
+  {
     "timestamp": "2026-11-16 21:30:29",
     "title": "Cycle Autonome #Postiz",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Cycle Autonome #Clay.com",
     "category": "CYCLE",
     "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Clay.com) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-12 21:42:00",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-12 14:34:27",
-    "title": "Cycle Autonome #Close CRM",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Close CRM) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-12 14:32:07",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 11 lien(s) d'affiliation en anomalie :\n• `asana, close-crm, descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-12 04:59:29",
-    "title": "Cycle Autonome #HubSpot",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (HubSpot) et mis à jour le calendrier social.",
     "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

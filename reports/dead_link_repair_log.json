@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-16T21:29:04.451669",
+  "timestamp": "2026-11-17T05:48:46.441254",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 240,
-    "total_redirects_active": 136,
-    "new_redirects_healed": 42,
+    "total_content_files_scanned": 242,
+    "total_redirects_active": 139,
+    "new_redirects_healed": 44,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -45,11 +45,6 @@
       "slug": "runway-tco-calculator",
       "target_url": "https://www.runway-tco-calculator.com",
       "source_file": "runway-evolution-guide-2026.md"
-    },
-    {
-      "slug": "postiz",
-      "target_url": "https://www.postiz.com",
-      "source_file": "postiz-evolution-guide-2026.md"
     },
     {
       "slug": "replit-agent",
@@ -150,6 +145,21 @@
       "slug": "power-automate",
       "target_url": "https://powerautomate.microsoft.com",
       "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "veed-architecture-sandbox",
+      "target_url": "https://www.veed-architecture-sandbox.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
+    },
+    {
+      "slug": "veed-io",
+      "target_url": "https://www.veed-io.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
+    },
+    {
+      "slug": "veed-migration-sandbox",
+      "target_url": "https://www.veed-migration-sandbox.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
     },
     {
       "slug": "invideo-ai-sandbox",

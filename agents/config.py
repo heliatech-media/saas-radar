@@ -195,7 +195,8 @@ AFFILIATE_MAP = {
     "writesonic": "https://writesonic.grsm.io/heliatech",
     "ahrefs": "https://ahrefs.com/?via=heliatech",
     "koalawriter": "https://koala.sh/?via=heliatech",
-    "gamma": "https://gamma.app/?via=heliatech"
+    "gamma": "https://gamma.app/?via=heliatech",
+    "postiz": "https://postiz.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

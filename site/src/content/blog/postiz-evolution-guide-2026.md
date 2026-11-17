@@ -12,7 +12,7 @@ tags:
 - Open Source
 - SaaS
 - B2B Software
-readingTime: 11 MIN
+readingTime: 6 MIN
 tool_slug: postiz
 image: /images/blog/postiz.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Postiz Account ➔
   url: /go/postiz
 ---
-
 ---
 title: "Architecting Autonomous Social Infrastructure: Postiz TCO, Open-Source Unit Economics, and RCIA Cost-Inflection Modeling"
 slug: "postiz-architectural-tco-rcia-analysis"

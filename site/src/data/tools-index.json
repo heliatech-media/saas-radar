@@ -646,7 +646,8 @@
     "rating": 4.5,
     "starting_price": "$19/mo",
     "best_for": "Marketing agencies, solo founders, and developers who prioritize data ownership and automation flexibility.",
-    "affiliate_url": "https://postiz.com/"
+    "affiliate_url": "https://postiz.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Printify",
@@ -893,6 +894,16 @@
     "best_for": "Content creators, digital marketers, and localized growth teams needing fast video turnaround",
     "affiliate_url": "https://www.veed.io/?via=heliatech",
     "commission_rate": "25% recurring for up to 12 months"
+  },
+  {
+    "name": "VEED.IO",
+    "slug": "veed-io",
+    "tagline": "A browser-based video editing suite designed for rapid social content production.",
+    "category": "Video Automation",
+    "rating": 4.2,
+    "starting_price": "$18/mo",
+    "best_for": "Social media managers, content marketers, and creators who need to produce high-volume, captioned short-form video without learning Adobe Premiere.",
+    "affiliate_url": "https://www.veed.io/?via=heliatech"
   },
   {
     "name": "Vercel",

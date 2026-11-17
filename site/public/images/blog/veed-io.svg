@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Base Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="40%" r="70%" fx="50%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Brand Color Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="fuchsiaViolet" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Glow & Lighting Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowIntense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="25" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Glassmorphism Clip Paths -->
+    <clipPath id="timelineClip">
+      <rect x="0" y="0" width="700" height="280" rx="16" />
+    </clipPath>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="1200" height="630" fill="url(#bgGlow)" />
+
+  <!-- Cybernetic Grid Overlay -->
+  <g opacity="0.7">
+    <path d="M0 0H1200V630H0z" fill="url(#gridGrad)" />
+    <!-- Isometric Grid Lines -->
+    <path d="M-100 100L1300 100M-100 200L1300 200M-100 300L1300 300M-100 400L1300 400M-100 500L1300 500M-100 600L1300 600" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.08" />
+    <path d="M100 -100L100 730M300 -100L300 730M500 -100L500 730M700 -100L700 730M900 -100L900 730M1100 -100L1100 730" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.08" />
+  </g>
+
+  <!-- Ambient Lighting Orbs -->
+  <circle cx="950" cy="180" r="220" fill="#8b5cf6" opacity="0.15" filter="url(#glowIntense)" />
+  <circle cx="800" cy="450" r="280" fill="#06b6d4" opacity="0.12" filter="url(#glowIntense)" />
+  <circle cx="200" cy="500" r="180" fill="#d946ef" opacity="0.08" filter="url(#glowIntense)" />
+
+
+  <!-- ==================== BACKGROUND 3D VECTOR METAPHORS (AI Video / Waveforms) ==================== -->
+  <g transform="translate(680, 80)" filter="url(#dropShadow)">
+    <!-- Main Floating Holographic Container (Video Automation Studio) -->
+    <rect x="0" y="0" width="460" height="470" rx="20" fill="url(#panelBg)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+    
+    <!-- Top Bar of Studio Window -->
+    <path d="M0 20C0 8.9543 8.9543 0 20 0H440C451.046 0 460 8.9543 460 20V50H0V20Z" fill="#0f172a" fill-opacity="0.9" />
+    <circle cx="25" cy="25" r="5" fill="#f43f5e" opacity="0.8" />
+    <circle cx="45" cy="25" r="5" fill="#fbbf24" opacity="0.8" />
+    <circle cx="65" cy="25" r="5" fill="#34d399" opacity="0.8" />
+    <text x="90" y="29" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5">VEED.IO // NEURAL-RENDER-ENGINE v4.8</text>
+
+    <!-- Holographic Video Preview Window -->
+    <g transform="translate(25, 70)">
+      <rect x="0" y="0" width="410" height="180" rx="10" fill="#030712" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1" />
+      
+      <!-- Abstract 3D Video Vectors / Playback Content -->
+      <path d="M100 90L205 35L310 90L205 145Z" fill="none" stroke="url(#cyanPurple)" stroke-width="2" opacity="0.6" />
+      <path d="M130 90L205 52L280 90L205 128Z" fill="url(#cyanPurple)" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1.5" />
+      
+      <!-- AI Facial / Object Tracking Nodes -->
+      <g filter="url(#glow)">
+        <circle cx="205" cy="90" r="18" fill="none" stroke="#d946ef" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="205" cy="90" r="4" fill="#d946ef" />
+        <!-- Corner Reticles -->
+        <path d="M185 75H175V85M225 75H235V85M185 105H175V95M225 105H235V95" stroke="#06b6d4" stroke-width="2" fill="none" />
+      </g>
+
+      <!-- Live Telemetry Overlay -->
+      <rect x="15" y="15" width="110" height="24" rx="4" fill="#090d16" fill-opacity="0.8" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="1" />
+      <circle cx="25" cy="27" r="4" fill="#06b6d4" />
+      <text x="36" y="31" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10" font-weight="700">AUTO-CAPTION</text>
+    </g>
+
+    <!-- Multi-Track Audio Waveform & Automation Timeline -->
+    <g transform="translate(25, 265)">
+      <!-- Track 1: Audio Spectrum -->
+      <rect x="0" y="0" width="410" height="40" rx="6" fill="#090d16" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1" />
+      <path d="M10 20 H30 L38 8 L46 32 L54 14 L62 26 L70 20 H120 L128 2 L136 38 L144 12 L152 28 L160 20 H250 L258 5 L266 35 L274 15 L282 25 L290 20 H400" fill="none" stroke="url(#cyanPurple)" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Track 2: Neural Video Clip Blocks -->
+      <rect x="0" y="48" width="410" height="40" rx="6" fill="#090d16" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1" />
+      <rect x="10" y="54" width="110" height="28" rx="4" fill="#8b5cf6" fill-opacity="0.3" stroke="#8b5cf6" stroke-width="1" />
+      <text x="20" y="72" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" font-weight="600">A-ROLL_SYNTH.MP4</text>
+
+      <rect x="126" y="54" width="150" height="28" rx="4" fill="#06b6d4" fill-opacity="0.3" stroke="#06b6d4" stroke-width="1" />
+      <text x="136" y="72" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" font-weight="600">AI_TRANSLATE_ES</text>
+
+      <rect x="282" y="54" width="118" height="28" rx="4" fill="#d946ef" fill-opacity="0.3" stroke="#d946ef" stroke-width="1" />
+      <text x="292" y="72" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" font-weight="600">B-ROLL_STOCK</text>
+
+      <!-- Playhead Line -->
+      <line x1="180" y1="-190" x2="180" y2="120" stroke="#f43f5e" stroke-width="2" filter="url(#glow)" />
+      <polygon points="175,-190 185,-190 180,-182" fill="#f43f5e" />
+    </g>
+
+    <!-- Bottom Metrics & Status -->
+    <g transform="translate(25, 385)">
+      <rect x="0" y="0" width="125" height="50" rx="8" fill="#030712" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1" />
+      <text x="12" y="20" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">RENDER SPEED</text>
+      <text x="12" y="38" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">120 FPS (4K)</text>
+
+      <rect x="137" y="0" width="125" height="50" rx="8" fill="#030712" stroke="#8b5cf6" stroke-opacity="0.2" stroke-width="1" />
+      <text x="149" y="20" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">CLOUD PIPELINE</text>
+      <text x="149" y="38" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="14" font-weight="700">DISTRIBUTED</text>
+
+      <rect x="274" y="0" width="136" height="50" rx="8" fill="#030712" stroke="#d946ef" stroke-opacity="0.2" stroke-width="1" />
+      <text x="286" y="20" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">SCALE FACTOR</text>
+      <text x="286" y="38" fill="#d946ef" font-family="system-ui, sans-serif" font-size="14" font-weight="700">10X RAPID</text>
+    </g>
+  </g>
+
+  <!-- Floating Vector Particles / Connection Nodes -->
+  <g filter="url(#glow)">
+    <circle cx="630" cy="180" r="6" fill="#38bdf8" />
+    <path d="M630 180L680 180" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+    
+    <circle cx="650" cy="420" r="5" fill="#d946ef" />
+    <path d="M650 420L680 400" stroke="#d946ef" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+
+    <circle cx="1160" cy="300" r="4" fill="#06b6d4" />
+    <path d="M1140 300L1160 300" stroke="#06b6d4" stroke-width="1.5" opacity="0.6" />
+  </g>
+
+
+  <!-- ==================== FOREGROUND CONTENT & TYPOGRAPHY ==================== -->
+  
+  <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+  <g transform="translate(80, 85)">
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <circle cx="18" cy="16" r="4" fill="#06b6d4" filter="url(#glow)" />
+    <text x="35" y="21" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Title & Subtitle Section -->
+  <g transform="translate(80, 150)">
+    <!-- Software Tool Title -->
+    <text x="0" y="55" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">
+      VEED<tspan fill="#38bdf8">.</tspan><tspan fill="url(#cyanPurple)">IO</tspan>
+    </text>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(0, 75)">
+      <rect x="0" y="0" width="180" height="26" rx="6" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1" />
+      <text x="12" y="17" fill="#d946ef" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">VIDEO AUTOMATION</text>
+    </g>
+
+    <!-- Investigation Headline -->
+    <text x="0" y="145" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.5" line-height="1.2">
+      The Browser-Based Video Revolution<tspan dy="40" x="0">and the Enterprise Playbook for</tspan><tspan dy="40" x="0" fill="url(#cyanPurple)">Rapid Content Scaling</tspan>
+    </text>
+
+    <!-- Executive Summary Paragraph -->
+    <text x="0" y="260" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" line-height="1.5">
+      <tspan x="0" dy="0">Deconstructing cloud-native video architectures, automated neural workflows,</tspan>
+      <tspan x="0" dy="22">and enterprise deployment paradigms for global marketing velocity.</tspan>
+    </text>
+  </g>
+
+
+  <!-- ==================== BRAND FOOTER / METADATA ==================== -->
+  <g transform="translate(80, 550)">
+    <!-- Divider Line -->
+    <line x1="0" y1="0" x2="560" y2="0" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1" />
+    
+    <!-- Footer Branding -->
+    <text x="0" y="25" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="2">HELIATECH.ONLINE</text>
+    <circle cx="140" cy="21" r="2" fill="#64748b" />
+    <text x="155" y="25" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="1">ENTERPRISE SOFTWARE RESEARCH</text>
+    
+    <!-- Security / Verification Badge -->
+    <g transform="translate(450, 10)">
+      <rect x="0" y="0" width="110" height="20" rx="4" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.3" stroke-width="1" />
+      <text x="12" y="14" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="9" font-weight="700" letter-spacing="1">VERIFIED DOSSIER</text>
+    </g>
+  </g>
+
+</svg>
