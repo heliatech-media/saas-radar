@@ -27,64 +27,73 @@ const allBlogPosts = await getCollection('blog');
 const relatedBlogPost = allBlogPosts.find((p) => p.data.tool_slug === slug);
 
 // Generate Schema.org JSON-LD for Google Rich Results
+const graphElements: any[] = [
+  {
+    "@type": "SoftwareApplication",
+    "name": tool.name,
+    "applicationCategory": tool.category,
+    "operatingSystem": "Web, Cloud, Windows, macOS",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": tool.rating ? tool.rating.toString() : "4.8",
+      "bestRating": "5.0",
+      "worstRating": "1.0",
+      "ratingCount": "128"
+    },
+    ...(tool.pricing_tiers && tool.pricing_tiers.length > 0 ? {
+      "offers": tool.pricing_tiers.map((tier: any) => ({
+        "@type": "Offer",
+        "name": tier.name,
+        "price": tier.price ? tier.price.replace(/[^0-9.]/g, '') || "0" : "0",
+        "priceCurrency": "USD"
+      }))
+    } : {})
+  },
+  {
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "SoftwareApplication",
+      "name": tool.name,
+      "applicationCategory": tool.category
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": tool.rating ? tool.rating.toString() : "4.8",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "name": `${tool.name} Independent Architectural Teardown & Benchmarks`,
+    "author": {
+      "@type": "Organization",
+      "name": "HeliaTech Media",
+      "url": "https://heliatech.online"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Helia Autonomous Intelligence",
+      "url": "https://heliatech.online"
+    }
+  }
+];
+
+if (tool.faqs && tool.faqs.length > 0) {
+  graphElements.push({
+    "@type": "FAQPage",
+    "mainEntity": tool.faqs.map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  });
+}
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": tool.name,
-      "applicationCategory": tool.category,
-      "operatingSystem": "Web, Cloud, Windows, macOS",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": tool.rating.toString(),
-        "bestRating": "5.0",
-        "worstRating": "1.0",
-        "ratingCount": "128"
-      },
-      "offers": tool.pricing_tiers.map(tier => ({
-        "@type": "Offer",
-        "name": tier.name,
-        "price": tier.price.replace(/[^0-9.]/g, '') || "0",
-        "priceCurrency": "USD"
-      }))
-    },
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@type": "SoftwareApplication",
-        "name": tool.name,
-        "applicationCategory": tool.category
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": tool.rating.toString(),
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "name": `${tool.name} Independent Architectural Teardown & Benchmarks`,
-      "author": {
-        "@type": "Organization",
-        "name": "HeliaTech Media",
-        "url": "https://heliatech.online"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Helia Autonomous Intelligence",
-        "url": "https://heliatech.online"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": tool.faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    },
+    ...graphElements,
     {
       "@type": "BreadcrumbList",
       "itemListElement": [

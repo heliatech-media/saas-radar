@@ -1,6 +1,9 @@
 # HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh
 # Format: /go/:tool <destination> 302
 
+/reviews /radar/ 301
+/reviews/ /radar/ 301
+
 /go/activepieces https://www.activepieces.com 302
 /go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
 /go/ahrefs https://ahrefs.com/?via=heliatech 302

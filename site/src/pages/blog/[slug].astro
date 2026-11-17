@@ -34,6 +34,10 @@ if (entry.slug.includes('-vs-')) {
   contenderB = parts[1].replace(/-2026.*$/, '').replace(/-claude.*$/, '').replace(/-fr$/, '');
 }
 
+const articleImage = post.image 
+  ? (post.image.startsWith('http') ? post.image : `https://heliatech.online${post.image.replace(/\.svg$/, '.png')}`)
+  : `https://heliatech.online/images/blog/${entry.slug}.png`;
+
 // Generate Schema.org JSON-LD for Google Rich Results
 const jsonLd = {
   "@context": "https://schema.org",
@@ -42,6 +46,7 @@ const jsonLd = {
       "@type": "Article",
       "headline": post.title,
       "description": post.description,
+      "image": articleImage,
       "datePublished": post.date,
       "author": {
         "@type": "Organization",

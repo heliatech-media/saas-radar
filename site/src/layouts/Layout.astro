@@ -108,6 +108,7 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <link rel="canonical" href={canonicalUrl} />
 
@@ -123,11 +124,11 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title} | HeliaTech</title>
+    <title>{title.toLowerCase().includes('heliatech') || title.length > 52 ? title : `${title} | HeliaTech`}</title>
 
     <meta name="description" content={description} />
 
-    <meta property="og:title" content={`${title} | HeliaTech`} />
+    <meta property="og:title" content={title.toLowerCase().includes('heliatech') ? title : `${title} | HeliaTech`} />
 
     <meta property="og:description" content={description} />
 
