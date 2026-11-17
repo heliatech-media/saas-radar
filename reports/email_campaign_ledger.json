@@ -1,7 +1,15 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 17,
+  "total_sent": 18,
   "dispatches": [
+    {
+      "type": "sponsor_outreach_reply",
+      "recipient": "doyle@emaildoyle.co",
+      "from": "partnership@heliatech.online",
+      "subject": "Re: Hi HeliaTech Radar team",
+      "dispatched_at": "2026-11-17T23:28:42.712002Z",
+      "resend_id": "01a1ebd7-5c82-7808-a5de-33b7ef78632e"
+    },
     {
       "type": "impact_appeal",
       "account_id": "8110674",
