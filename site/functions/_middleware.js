@@ -1,19 +1,6 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
 
-  // 0. Instant Edge Fast-Path for Google AdSense ads.txt (Sub-10ms response guarantee)
-  if (url.pathname === '/ads.txt') {
-    return new Response("google.com, pub-4334705198476561, DIRECT, f08c47fec0942fa0\n", {
-      status: 200,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600',
-        'Access-Control-Allow-Origin': '*',
-        'X-Content-Type-Options': 'nosniff'
-      }
-    });
-  }
-
   // 1. Strict 301 Redirect www.heliatech.online -> heliatech.online
   if (url.hostname === 'www.heliatech.online') {
     url.hostname = 'heliatech.online';
