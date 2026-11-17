@@ -94,7 +94,7 @@ Evaluating the economics of these tools requires looking beyond sticker prices t
     *   Cost: ~$69/month.
     *   Capacity: 20 execution hours, 5 active Phantoms.
     *   *Math:* Sufficient for running 3 to 4 targeted LinkedIn search extractions and enrichment workflows per week. 
-*   **Apollo.io (Basic/Professional Plan):** 
+*   **[Apollo.io](/reviews/apollo-io) (Basic/Professional Plan):** 
     *   Cost: ~$49–$79 per user/month.
     *   Capacity: Standard search limits, thousands of email credits.
     *   *Math:* Immediate lookup of 5,000 verified leads without managing execution runtimes or proxy failures.

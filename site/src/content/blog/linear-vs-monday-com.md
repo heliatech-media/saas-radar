@@ -112,7 +112,7 @@ Linear’s integration suite is narrow by design and deep by execution.
 Its GraphQL API is a developer's dream. Writing custom sync scripts or internal automations takes hours, not days, thanks to robust documentation and clean schema design.
 
 ### Monday.com: The Universal Connector
-Monday.com approaches integration as an expansive web. Its app marketplace features hundreds of native connectors spanning enterprise resource planning (ERP), customer relationship management (CRM), and marketing automation tools.
+[Monday.com](/reviews/monday-com) approaches integration as an expansive web. Its app marketplace features hundreds of native connectors spanning enterprise resource planning (ERP), customer relationship management (CRM), and marketing automation tools.
 *   **Salesforce / HubSpot:** Two-way sync of deal stages to project boards.
 *   **Zendesk / Intercom:** Convert customer support tickets directly into tracked operational tasks.
 *   **Custom Webhooks & [Make](/reviews/make)/[Zapier](/reviews/zapier):** While Monday’s native automation builder handles 80% of workflows, complex cross-workspace synchronization is easily facilitated through robust webhook payloads and an extensive low-code ecosystem.

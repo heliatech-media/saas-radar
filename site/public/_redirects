@@ -38,6 +38,7 @@
 /go/gamma https://gamma.app/?via=heliatech 302
 /go/gamma-app https://gamma.app/signup?r=heliatech 302
 /go/gamma-enterprise-sandbox https://www.gamma-enterprise-sandbox.com 302
+/go/getimg-ai https://www.getimg-ai.com 302
 /go/guidde https://www.guidde.com/?via=heliatech 302
 /go/height https://www.height.com 302
 /go/heygen https://www.heygen.com/?via=heliatech 302
@@ -127,7 +128,7 @@
 /go/v0 https://v0.dev/?via=heliatech 302
 /go/veed https://www.veed.io/?via=heliatech 302
 /go/veed-architecture-sandbox https://www.veed-architecture-sandbox.com 302
-/go/veed-io https://www.veed-io.com 302
+/go/veed-io https://www.veed.io/?via=heliatech 302
 /go/veed-migration-sandbox https://www.veed-migration-sandbox.com 302
 /go/velocity-global https://velocityglobal.com 302
 /go/vercel https://vercel.com/?via=heliatech 302

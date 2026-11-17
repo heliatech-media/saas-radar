@@ -12,7 +12,7 @@ tags:
 - Content Marketing
 - SaaS
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: veed-io
 image: /images/blog/veed-io.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free VEED.IO Account ➔
   url: https://www.veed.io/?via=heliatech
 ---
-
 ---
 title: "Browser-Native Video Infrastructure Unit Economics: Dissecting VEED.IO at 100k Scale"
 slug: "veed-io-unit-economics-architecture"

@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-17 15:17:12",
+    "title": "Cycle Autonome #Getimg-ai",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Getimg-ai) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-17 15:15:21",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 16 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, getimg-ai, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-17 15:13:35",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Getimg.ai: Democratizing Diffusion and the Blueprint for Enterprise Visual Velocity",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Getimg.ai: Democratizing Diffusion and the Blueprint for Enterprise Visual Velocity\n• **Catégorie :** AI Image Generation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/getimg-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/getimg-ai-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-17 15:13:04",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Getimg.ai",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Getimg.ai\n• **Catégorie :** AI Image Generation\n• **Note globale :** 4.5/10\n• **Cible idéale :** Content creators, indie developers, and marketing teams needing rapid, high-quality visual assets.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/getimg-ai/"
+  },
+  {
     "timestamp": "2026-11-17 05:50:29",
     "title": "Cycle Autonome #VEED-IO",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, surfer-seo, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-11-13 04:10:37",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Surfer SEO: The Genesis of Data-Driven Content Architecture and the Masterclass Guide to SERP Dominance",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Surfer SEO: The Genesis of Data-Driven Content Architecture and the Masterclass Guide to SERP Dominance\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/surfer-seo-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/surfer-seo-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-13 04:10:15",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Surfer SEO",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Surfer SEO\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.6/10\n• **Cible idéale :** Content marketing teams, SEO agencies, and freelance writers aiming to rank higher on Google through data-backed content optimization.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/surfer-seo/"
-  },
-  {
-    "timestamp": "2026-11-13 02:34:29",
-    "title": "ALERTE ARTICLES CONNECTÉE ⚡",
-    "category": "CONTENT",
-    "message": "Désormais, pour chaque nouvel article ou nouvelle analyse logicielle créée sur HeliaTech, vous recevrez une alerte instantanée ici avec le titre, la catégorie et le lien direct.",
-    "link": "https://heliatech.online/blog/"
-  },
-  {
-    "timestamp": "2026-11-12 21:42:29",
-    "title": "Cycle Autonome #Clay.com",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Clay.com) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
   }
 ]

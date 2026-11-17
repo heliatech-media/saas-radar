@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-17 05:49:26",
-  "total_links_audited": 139,
-  "healthy_links": 123,
+  "timestamp": "2026-11-17 15:15:21",
+  "total_links_audited": 140,
+  "healthy_links": 124,
   "broken_links_count": 16,
-  "health_rate": "88.5%",
+  "health_rate": "88.6%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -28,6 +28,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "getimg-ai",
+      "target_url": "https://www.getimg-ai.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.getimg-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.getimg-ai.com', port=443): Failed to resolve 'www.getimg-ai.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "invideo-ai-sandbox",
@@ -108,14 +116,6 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.veed-architecture-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-architecture-sandbox.com', port=443): Failed to resolve 'www.veed-architecture-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "veed-io",
-      "target_url": "https://www.veed-io.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.veed-io.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-io.com', port=443): Failed to resolve 'www.veed-io.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "veed-migration-sandbox",
@@ -343,7 +343,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bbsmQK3lGJuHOf&gsxid=bbsmQK3lGJuHOf&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=qLyzIYNBEBtris&gsxid=qLyzIYNBEBtris&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -396,6 +396,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "getimg-ai",
+      "target_url": "https://www.getimg-ai.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.getimg-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.getimg-ai.com', port=443): Failed to resolve 'www.getimg-ai.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "guidde",
@@ -699,7 +707,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=APHbVdEJA2ClF8&gsxid=APHbVdEJA2ClF8&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=X2agiybitmrAKD&gsxid=X2agiybitmrAKD&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -727,7 +735,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=w15WxSQakcok3N&gsxid=w15WxSQakcok3N&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=BesJmodfCHgaWC&gsxid=BesJmodfCHgaWC&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1032,11 +1040,10 @@
     },
     {
       "slug": "veed-io",
-      "target_url": "https://www.veed-io.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.veed-io.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-io.com', port=443): Failed to resolve 'www.veed-io.com' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://www.veed.io/?via=heliatech",
+      "final_url": "https://www.veed.io/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "veed-migration-sandbox",

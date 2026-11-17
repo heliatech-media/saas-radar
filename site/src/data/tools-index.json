@@ -271,6 +271,16 @@
     "commission_rate": "50% of revenue for the first year"
   },
   {
+    "name": "Getimg.ai",
+    "slug": "getimg-ai",
+    "tagline": "A comprehensive suite of AI image generation and editing tools built for speed and developer integration.",
+    "category": "AI Image Generation",
+    "rating": 4.5,
+    "starting_price": "$12/mo",
+    "best_for": "Content creators, indie developers, and marketing teams needing rapid, high-quality visual assets.",
+    "affiliate_url": "https://getimg.ai/?via=heliatech"
+  },
+  {
     "name": "Guidde",
     "slug": "guidde",
     "tagline": "Create professional video documentation and how-to guides in seconds using AI.",
