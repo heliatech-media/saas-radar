@@ -116,8 +116,24 @@ Visual & Aesthetic Directives:
                 if match:
                     raw = match.group(0)
 
+            # Strict XML parsing validation to guarantee zero broken SVGs in production
+            import xml.etree.ElementTree as ET
+            try:
+                ET.fromstring(raw)
+            except Exception as xml_err:
+                self.log(f"XML validation notice for {tool_name}: {xml_err}. Using robust fallback SVG.", "⚠️")
+                raw = self._create_fallback_svg(tool_name, category)
+
             out_path.write_text(raw, encoding="utf-8")
             self.log(f"Generated artwork saved: {out_path.name} ({len(raw)} bytes)", "🖼️")
+
+            # Always automatically rasterize high-res 1200x630 PNG counterpart
+            png_path = out_path.with_suffix(".png")
+            try:
+                self.rasterize_svg_to_png(out_path, png_path)
+            except Exception as r_err:
+                self.log(f"Auto-rasterize notice: {r_err}", "⚠️")
+
             return out_path
         except Exception as e:
             self.log(f"Generation exception for {tool_name}: {e}. Creating fallback cyber banner.", "⚠️")
@@ -127,6 +143,10 @@ Visual & Aesthetic Directives:
 
     def _create_fallback_svg(self, tool_name: str, category: str) -> str:
         """Fallback high-tech cyberpunk SVG card in case of network timeout."""
+        import xml.sax.saxutils as saxutils
+        esc_tool = saxutils.escape(tool_name.upper())
+        esc_cat = saxutils.escape(category.upper())
+
         return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <radialGradient id="bg" cx="50%" cy="40%" r="70%">
@@ -144,19 +164,19 @@ Visual & Aesthetic Directives:
   </defs>
   <rect width="1200" height="630" fill="url(#bg)" />
   <rect width="1200" height="630" fill="url(#grid)" />
-  <circle cx="950" cy="300" r="280" fill="#06b6d4" opacity="0.12" filter="blur(50px)" />
-  <circle cx="250" cy="400" r="220" fill="#d946ef" opacity="0.1" filter="blur(60px)" />
+  <circle cx="950" cy="300" r="280" fill="#06b6d4" opacity="0.12" />
+  <circle cx="250" cy="400" r="220" fill="#d946ef" opacity="0.1" />
   <g transform="translate(100, 140)">
     <rect width="240" height="32" rx="16" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-width="1" />
     <circle cx="18" cy="16" r="4" fill="#06b6d4" />
     <text x="32" y="21" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1.5">HELIATECH DOSSIER</text>
   </g>
-  <text x="100" y="260" fill="#ffffff" font-family="sans-serif" font-size="64" font-weight="900" letter-spacing="-1">{tool_name.upper()}</text>
-  <text x="100" y="320" fill="url(#neon)" font-family="monospace" font-size="24" font-weight="bold" letter-spacing="2">{category.upper()}</text>
+  <text x="100" y="260" fill="#ffffff" font-family="sans-serif" font-size="64" font-weight="900" letter-spacing="-1">{esc_tool}</text>
+  <text x="100" y="320" fill="url(#neon)" font-family="monospace" font-size="24" font-weight="bold" letter-spacing="2">{esc_cat}</text>
   <line x1="100" y1="360" x2="1100" y2="360" stroke="#334155" stroke-width="1.5" />
   <text x="100" y="420" fill="#94a3b8" font-family="sans-serif" font-size="20">Enterprise Software Teardown &amp; Hands-on Engineering Masterclass</text>
   <g transform="translate(100, 480)">
-    <text x="0" y="20" fill="#06b6d4" font-family="monospace" font-size="14" font-weight="bold">BENCHMARK GRADE: VERIFIED ✦ 2026 EDITION</text>
+    <text x="0" y="20" fill="#06b6d4" font-family="monospace" font-size="14" font-weight="bold">BENCHMARK GRADE: VERIFIED 2026 EDITION</text>
   </g>
 </svg>"""
 

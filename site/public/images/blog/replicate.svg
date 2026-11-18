@@ -150,13 +150,13 @@
       <!-- Code Syntax Lines -->
       <g transform="translate(24, 70)" font-family="monospace" font-size="12">
         <text x="0" y="0" fill="#8b5cf6">import <tspan fill="#38bdf8">replicate</tspan></text>
-        <text x="0" y="25" fill="#38bdf8">model</tspan><tspan fill="#94a3b8"> = replicate.</tspan><tspan fill="#06b6d4">models</tspan><tspan fill="#94a3b8">.get(</tspan><tspan fill="#d946ef">"stability-ai/sdxl"</tspan><tspan fill="#94a3b8">)</tspan>
+        <text x="0" y="25"><tspan fill="#38bdf8">model</tspan><tspan fill="#94a3b8"> = replicate.</tspan><tspan fill="#06b6d4">models</tspan><tspan fill="#94a3b8">.get(</tspan><tspan fill="#d946ef">"stability-ai/sdxl"</tspan><tspan fill="#94a3b8">)</tspan></text>
         
         <text x="0" y="60" fill="#94a3b8"># Serverless GPU cold start &amp; inference</text>
-        <text x="0" y="85" fill="#f59e0b">output</tspan><tspan fill="#94a3b8"> = model.</tspan><tspan fill="#06b6d4">predict</tspan><tspan fill="#94a3b8">(</tspan>
-        <text x="20" y="110" fill="#38bdf8">prompt</tspan><tspan fill="#94a3b8">=</tspan><tspan fill="#d946ef">"Cyberpunk architecture, glowing neon"</tspan><tspan fill="#94a3b8">,</tspan>
-        <text x="20" y="135" fill="#38bdf8">width</tspan><tspan fill="#94a3b8">=1024,</tspan>
-        <text x="20" y="160" fill="#38bdf8">height</tspan><tspan fill="#94a3b8">=1024</tspan>
+        <text x="0" y="85"><tspan fill="#f59e0b">output</tspan><tspan fill="#94a3b8"> = model.</tspan><tspan fill="#06b6d4">predict</tspan><tspan fill="#94a3b8">(</tspan></text>
+        <text x="20" y="110"><tspan fill="#38bdf8">prompt</tspan><tspan fill="#94a3b8">=</tspan><tspan fill="#d946ef">"Cyberpunk architecture, glowing neon"</tspan><tspan fill="#94a3b8">,</tspan></text>
+        <text x="20" y="135"><tspan fill="#38bdf8">width</tspan><tspan fill="#94a3b8">=1024,</tspan></text>
+        <text x="20" y="160"><tspan fill="#38bdf8">height</tspan><tspan fill="#94a3b8">=1024</tspan></text>
         <text x="0" y="185" fill="#94a3b8">)</text>
       </g>
 
