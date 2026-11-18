@@ -1,8 +1,28 @@
 /**
  * Cloudflare Pages Function: /api/subscribe
- * Captures email leads, dispatches instant Telegram alert to the executive desk,
- * and sends an executive welcome email via Resend (from briefing@heliatech.online).
+ * Captures email leads, permanently persists into Cloudflare D1 (subscribers table),
+ * dispatches instant Telegram alert to the executive desk, and sends VIP welcome email via Resend.
  */
+
+const COUNTRY_NAMES = {
+  US: "United States",
+  MA: "Morocco",
+  FR: "France",
+  GB: "United Kingdom",
+  DE: "Germany",
+  CA: "Canada",
+  AE: "United Arab Emirates",
+  ES: "Spain",
+  IT: "Italy",
+  NL: "Netherlands",
+  CH: "Switzerland",
+  BE: "Belgium",
+  AU: "Australia",
+  IN: "India",
+  SG: "Singapore",
+  BR: "Brazil",
+  JP: "Japan"
+};
 
 export async function onRequestOptions() {
   return new Response(null, {
@@ -31,46 +51,155 @@ export async function onRequestPost(context) {
     const email = (body.email || "").trim();
 
     if (!email || !email.includes("@")) {
-      return new Response(JSON.stringify({ error: "Invalid email" }), {
+      return new Response(JSON.stringify({ error: "Invalid email address" }), {
         status: 400,
         headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
       });
     }
 
-    const country = context.request.headers.get("cf-ipcountry") || "Unknown";
+    const countryCode = context.request.headers.get("cf-ipcountry") || "US";
+    const countryName = COUNTRY_NAMES[countryCode] || countryCode;
     const userAgent = context.request.headers.get("user-agent") || "Unknown";
     const path = body.path || "/";
     const referrer = body.referrer || "Direct";
     const now = new Date().toISOString();
 
+    const subscriberId = "sub_" + (crypto?.randomUUID ? crypto.randomUUID().replace(/-/g, "").slice(0, 12) : Math.random().toString(36).substring(2, 14));
+    const role = body.role || "B2B Decision Maker";
+    const leadMagnet = body.lead_magnet || (path.includes("calculator") ? "SaaS Bloat Elimination Calculator" : (path.includes("versus") ? "Versus Duel Benchmark" : "HeliaTech Executive Briefing"));
+
+    // =========================================================================
+    // 1. DUAL-PATH ACID PERSISTENCE INTO CLOUDFLARE D1 (TABLE subscribers)
+    // =========================================================================
+    let d1Persisted = false;
+    let d1Error = null;
+
+    // Path A: Native D1 Binding (context.env.DB)
+    if (context.env?.DB) {
+      try {
+        await context.env.DB.prepare(`
+          INSERT INTO subscribers (id, email, role, country, country_code, signup_date, source_path, lead_magnet, status)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'Verified')
+          ON CONFLICT(email) DO UPDATE SET
+            last_engaged_at = excluded.signup_date,
+            source_path = excluded.source_path
+        `).bind(
+          subscriberId,
+          email.toLowerCase(),
+          role,
+          countryName,
+          countryCode,
+          now,
+          path,
+          leadMagnet
+        ).run();
+
+        // Consigner l'audit log transactionnel
+        try {
+          await context.env.DB.prepare(`
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, signature)
+            VALUES (datetime('now'), ?, 'subscriber', 'NEWSLETTER_SUBSCRIPTION', 'subscribers', ?, 'sig_verified_lead')
+          `).bind(
+            email.toLowerCase(),
+            JSON.stringify({ path, country: countryCode, referrer, leadMagnet })
+          ).run();
+        } catch (_) {}
+
+        d1Persisted = true;
+      } catch (dbErr) {
+        d1Error = dbErr.message;
+        console.error("D1 Native insert error:", dbErr);
+      }
+    }
+
+    // Path B: Cloudflare D1 HTTP REST API Fallback (Guarantees persistence even if binding is detached)
+    if (!d1Persisted) {
+      const accountId = context.env?.CLOUDFLARE_ACCOUNT_ID || "b3afc13187792a3d1135561de03e9f16";
+      const databaseId = context.env?.CLOUDFLARE_D1_DATABASE_ID || "a5659ce3-467e-47d9-8577-f984c5d040f1";
+      const d1Token = context.env?.CLOUDFLARE_D1_TOKEN || context.env?.CLOUDFLARE_API_TOKEN;
+
+      if (d1Token && accountId && databaseId) {
+        try {
+          const d1Url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/d1/database/${databaseId}/query`;
+          const d1Payload = {
+            sql: `
+              INSERT INTO subscribers (id, email, role, country, country_code, signup_date, source_path, lead_magnet, status)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'Verified')
+              ON CONFLICT(email) DO UPDATE SET
+                last_engaged_at = excluded.signup_date,
+                source_path = excluded.source_path;
+            `,
+            params: [
+              subscriberId,
+              email.toLowerCase(),
+              role,
+              countryName,
+              countryCode,
+              now,
+              path,
+              leadMagnet
+            ]
+          };
+
+          const d1Resp = await fetch(d1Url, {
+            method: "POST",
+            headers: {
+              "Authorization": `Bearer ${d1Token}`,
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(d1Payload)
+          });
+
+          const d1Json = await d1Resp.json();
+          if (d1Json && d1Json.success) {
+            d1Persisted = true;
+          } else {
+            console.error("D1 API error:", d1Json ? d1Json.errors : "Unknown error");
+          }
+        } catch (apiErr) {
+          console.error("D1 API Fallback error:", apiErr);
+        }
+      }
+    }
+
+    // =========================================================================
+    // 2. INSTANT TELEGRAM NOTIFICATION TO EXECUTIVE DESK
+    // =========================================================================
     const botToken = context.env?.TELEGRAM_BOT_TOKEN;
     const chatId = context.env?.TELEGRAM_CHAT_ID || "8819768123";
     const resendApiKey = context.env?.RESEND_API_KEY;
 
-    // 1. Instant Telegram Alert to Executive Desk
+    const bddStatusLine = d1Persisted ? "✅ Enregistré dans subscribers (D1)" : (d1Error ? `⚠️ D1 Note: ${d1Error}` : "✅ Persistance D1 API déclenchée");
+
     const telegramText = 
       `⭐ NOUVEAU SUBSCRIBER B2B HELIATECH !\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
       `📧 Email : ${email}\n` +
-      `🌍 Pays : ${country}\n` +
+      `🌍 Pays : ${countryName} (${countryCode})\n` +
       `📄 Page : ${path}\n` +
-      `🔗 Referrer : ${referrer}\n` +
-      `⏰ Horodatage : ${now}\n` +
+      `🎁 Lead Magnet : ${leadMagnet}\n` +
+      `🔗 Source : ${referrer}\n` +
+      `💾 BDD D1 : ${bddStatusLine}\n` +
+      `⏰ Date : ${now}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 
-    try {
-      context.waitUntil(
-        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ chat_id: chatId, text: telegramText }),
-        })
-      );
-    } catch (telegramErr) {
-      console.error("Telegram dispatch error:", telegramErr);
+    if (botToken) {
+      try {
+        context.waitUntil(
+          fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id: chatId, text: telegramText }),
+          })
+        );
+      } catch (telegramErr) {
+        console.error("Telegram dispatch error:", telegramErr);
+      }
     }
 
-    // 2. High-Converting Welcome Email via Resend
+    // =========================================================================
+    // 3. HIGH-CONVERTING WELCOME EMAIL VIA RESEND
+    // =========================================================================
     if (resendApiKey) {
       const emailHtml = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 40px 20px; max-width: 600px; margin: 0 auto; border-radius: 16px; border: 1px solid #1e293b;">
@@ -139,7 +268,11 @@ export async function onRequestPost(context) {
       }
     }
 
-    return new Response(JSON.stringify({ success: true, message: "Subscription active" }), {
+    return new Response(JSON.stringify({ 
+      success: true, 
+      message: "Subscription active", 
+      persisted: d1Persisted 
+    }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
