@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="Manage Email Preferences | HeliaTech Intelligence"
+  description="Manage your HeliaTech Intelligence newsletter subscription and communication preferences."
+>
+  <div class="min-h-[70vh] flex items-center justify-center py-20 px-4 sm:px-6">
+    <div class="max-w-md w-full bg-slate-900/90 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden text-center backdrop-blur-xl">
+      
+      <!-- Top Cyber Glow -->
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Icon -->
+      <div id="status-icon" class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center text-2xl shadow-inner">
+        📬
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-mono font-bold tracking-widest uppercase mb-4">
+        <span>PREFERENCE CENTER</span>
+      </div>
+
+      <h1 id="unsub-title" class="text-2xl font-black text-white tracking-tight mb-3">
+        Unsubscribe from HeliaTech
+      </h1>
+
+      <p id="unsub-desc" class="text-sm text-slate-400 leading-relaxed mb-6">
+        Confirm your email address below to immediately opt out of the Thursday B2B SaaS briefings, architectural teardowns, and deals.
+      </p>
+
+      <!-- Confirmed State (Hidden by default, shown if ?status=confirmed) -->
+      <div id="unsub-confirmed-block" class="hidden space-y-4">
+        <div class="p-4 rounded-xl bg-slate-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+          Zero spam promise honored. Status: <span class="font-bold">UNSUBSCRIBED</span>
+        </div>
+
+        <div class="pt-2 flex flex-col gap-2">
+          <a 
+            href="/" 
+            class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs uppercase tracking-wider font-bold transition-all text-center"
+          >
+            Return to Homepage ➔
+          </a>
+          <a 
+            href="/repos/" 
+            class="w-full py-3 px-4 rounded-xl border border-cyan-500/30 hover:border-cyan-400 text-cyan-300 font-mono text-xs uppercase tracking-wider font-bold transition-all text-center"
+          >
+            Explore Free GitHub Radar ➔
+          </a>
+        </div>
+      </div>
+
+      <!-- Unsubscribe Form -->
+      <form id="unsub-form" class="space-y-4 text-left">
+        <div>
+          <label for="unsub-email" class="block text-xs font-mono text-slate-400 mb-2 uppercase tracking-wider">
+            Email Address
+          </label>
+          <input 
+            type="email" 
+            id="unsub-email"
+            name="email"
+            required
+            placeholder="name@company.com"
+            class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm font-mono focus:border-red-400 focus:ring-1 focus:ring-red-400 outline-none transition-all"
+          />
+        </div>
+
+        <button 
+          type="submit"
+          id="unsub-submit"
+          class="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-mono text-xs uppercase tracking-wider font-black shadow-lg shadow-red-900/30 transition-all duration-200 flex items-center justify-center gap-2"
+        >
+          <span>Confirm 1-Click Unsubscribe</span>
+          <span>➔</span>
+        </button>
+
+        <p class="text-[11px] text-slate-500 text-center font-mono pt-2">
+          Instant removal across all Cloudflare D1 nodes & Resend dispatch queues.
+        </p>
+      </form>
+
+      <div id="unsub-ajax-success" class="hidden mt-4 p-4 rounded-xl bg-slate-950 border border-emerald-500/40 text-emerald-300 font-mono text-xs text-center">
+        ✅ Unsubscribed successfully. You will not receive any further emails.
+      </div>
+
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const emailParam = params.get('email') || '';
+    const statusParam = params.get('status') || '';
+    
+    const form = document.getElementById('unsub-form');
+    const emailInput = document.getElementById('unsub-email');
+    const submitBtn = document.getElementById('unsub-submit');
+    const successBox = document.getElementById('unsub-ajax-success');
+    const confirmedBlock = document.getElementById('unsub-confirmed-block');
+    const title = document.getElementById('unsub-title');
+    const desc = document.getElementById('unsub-desc');
+    const icon = document.getElementById('status-icon');
+
+    if (emailInput && emailParam) {
+      emailInput.value = emailParam;
+    }
+
+    if (statusParam === 'confirmed' || statusParam === 'success') {
+      if (form) form.classList.add('hidden');
+      if (confirmedBlock) confirmedBlock.classList.remove('hidden');
+      if (title) title.textContent = "Unsubscribed Successfully";
+      if (desc) desc.textContent = "Your email address " + (emailParam ? "(" + emailParam + ") " : "") + "has been permanently removed from all recurring weekly briefings.";
+      if (icon) icon.textContent = "✅";
+    }
+
+    if (form && emailInput) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = "Processing removal...";
+        }
+
+        try {
+          const resp = await fetch('/api/unsubscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
+          });
+          const data = await resp.json();
+          if (data && data.success) {
+            form.classList.add('hidden');
+            if (confirmedBlock) confirmedBlock.classList.remove('hidden');
+            if (title) title.textContent = "Unsubscribed Successfully";
+            if (desc) desc.textContent = "Your email address (" + email + ") has been permanently removed.";
+            if (icon) icon.textContent = "✅";
+          } else {
+            alert(data.error || "Could not complete unsubscribe request.");
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = "Confirm 1-Click Unsubscribe ➔";
+            }
+          }
+        } catch (err) {
+          // Fallback direct redirection to API GET
+          window.location.href = `/api/unsubscribe?email=${encodeURIComponent(email)}`;
+        }
+      });
+    }
+  })();
+</script>

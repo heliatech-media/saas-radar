@@ -53,6 +53,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9.5/10)",
         "score_overall": "9.9 / 10",
         "review_slug": "cursor",
+        "github_repo_name": "wasp-lang / open-saas",
+        "github_stars": "9,500+",
+        "github_stack": "React, Node.js, Prisma, Stripe, Tailwind",
+        "github_license": "MIT",
+        "github_summary": "The open-source fullstack SaaS template featuring authentication, Stripe billing, file uploads, and admin telemetry.",
+        "github_verdict": "Zero lock-in alternative to closed SaaS starters. Perfect foundation for AI-native Cursor engineering.",
+        "github_audit_url": "https://heliatech.online/repos/open-saas/",
         "duel_title": "Cursor vs GitHub Copilot (2026 Developer Velocity Showdown)",
         "duel_takeaway": "Copilot struggles with multi-file architectures and hallucinated imports, while Cursor edits 10+ files simultaneously with strict TypeScript adherence.",
         "duel_winner_reason": "Cursor wins decisively with 3.2x faster task resolution and native .cursorrules enforcement.",
@@ -75,6 +82,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.7 / 10",
         "review_slug": "elevenlabs",
+        "github_repo_name": "calcom / cal.com",
+        "github_stars": "35,000+",
+        "github_stack": "Next.js 15, TRPC, Prisma, PostgreSQL",
+        "github_license": "AGPL-3.0",
+        "github_summary": "Enterprise-grade scheduling infrastructure replacing Calendly. Complete bi-directional calendar sync and routing logic.",
+        "github_verdict": "Deployable on self-hosted infrastructure. Eliminates $15/seat monthly SaaS fee for growing sales teams.",
+        "github_audit_url": "https://heliatech.online/repos/cal-com/",
         "duel_title": "ElevenLabs vs HeyGen (Voice Synthesis vs Video Avatars)",
         "duel_takeaway": "While HeyGen excels in visual marketing avatars, ElevenLabs dominates bidirectional real-time audio conversations with human emotional inflections.",
         "duel_winner_reason": "ElevenLabs wins on voice realism, latency, and enterprise API stability.",
@@ -97,6 +111,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.8 / 10",
         "review_slug": "supabase",
+        "github_repo_name": "supabase / supabase",
+        "github_stars": "78,000+",
+        "github_stack": "PostgreSQL, Go, Elixir, TypeScript, Docker",
+        "github_license": "Apache-2.0",
+        "github_summary": "The open-source Firebase alternative: dedicated Postgres database, Row Level Security, instant APIs, and vector embeddings.",
+        "github_verdict": "Ultimate data sovereignty. Up to 70% lower TCO than managed proprietary cloud document databases.",
+        "github_audit_url": "https://heliatech.online/repos/supabase/",
         "duel_title": "Supabase vs Firebase (2026 Architectural Duel)",
         "duel_takeaway": "Firebase's nested NoSQL document model leads to massive query costs and complex data synchronization, whereas Supabase delivers clean relational joins.",
         "duel_winner_reason": "Supabase wins with zero vendor lock-in, standard SQL, and 60% lower total cost of ownership.",
@@ -119,6 +140,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Medium (8.5/10)",
         "score_overall": "9.9 / 10",
         "review_slug": "n8n",
+        "github_repo_name": "n8n-io / n8n",
+        "github_stars": "58,000+",
+        "github_stack": "TypeScript, Node.js, Vue, SQLite/PostgreSQL",
+        "github_license": "Sustainable Use License",
+        "github_summary": "Fair-code workflow automation platform with visual node-based execution. 400+ native connectors with AI agent nodes.",
+        "github_verdict": "Crushes $2,000/mo Zapier invoices. Can be deployed on a $10/mo VPS with unmetered task execution.",
+        "github_audit_url": "https://heliatech.online/repos/n8n/",
         "duel_title": "Zapier vs n8n (The High-Volume Automation Showdown)",
         "duel_takeaway": "Zapier's pricing model penalizes growing companies by charging per task step, while n8n scales freely on your own infrastructure.",
         "duel_winner_reason": "n8n delivers over 10x cost reduction for workloads exceeding 50,000 operations per month.",
@@ -141,6 +169,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.6 / 10",
         "review_slug": "apollo-io",
+        "github_repo_name": "postiz-app / postiz",
+        "github_stars": "19,800+",
+        "github_stack": "Next.js 15, PostgreSQL, Redis BullMQ, Docker",
+        "github_license": "AGPL-3.0",
+        "github_summary": "Open-source social media management architecture with native Next.js 15, PostgreSQL, and BullMQ Redis queues.",
+        "github_verdict": "Self-hosting saves $350/mo for agencies. Verified audit: Zero security telemetry leaks.",
+        "github_audit_url": "https://heliatech.online/repos/postiz/",
         "duel_title": "Apollo.io vs ZoomInfo (Enterprise ROI Benchmark)",
         "duel_takeaway": "ZoomInfo locks buyers into opaque multi-year contracts, while Apollo offers month-to-month flexibility and API enrichment at 1/5th the price.",
         "duel_winner_reason": "Apollo wins on pricing transparency, modern API developer access, and all-in-one execution.",
@@ -163,6 +198,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Very Low (10/10)",
         "score_overall": "9.9 / 10",
         "review_slug": "linear",
+        "github_repo_name": "calcom / cal.com",
+        "github_stars": "35,000+",
+        "github_stack": "Next.js 15, TRPC, Prisma, PostgreSQL",
+        "github_license": "AGPL-3.0",
+        "github_summary": "Enterprise-grade scheduling infrastructure with automated webhook triggers and team queues.",
+        "github_verdict": "Essential self-hostable companion for high-velocity software engineering squads.",
+        "github_audit_url": "https://heliatech.online/repos/cal-com/",
         "duel_title": "ClickUp vs Linear (Developer Productivity Duel)",
         "duel_takeaway": "ClickUp attempts to be everything for everyone, creating sluggish UIs, while Linear focuses relentlessly on software development speed.",
         "duel_winner_reason": "Linear wins hands down for engineering teams that value focus, speed, and clean code.",
@@ -185,6 +227,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.6 / 10",
         "review_slug": "heygen",
+        "github_repo_name": "postiz-app / postiz",
+        "github_stars": "19,800+",
+        "github_stack": "Next.js 15, PostgreSQL, Redis BullMQ, Docker",
+        "github_license": "AGPL-3.0",
+        "github_summary": "Autonomous scheduled distribution of marketing media assets across TikTok, YouTube, and LinkedIn.",
+        "github_verdict": "Deploy in 3 minutes via Docker Compose. Zero monthly subscription traps.",
+        "github_audit_url": "https://heliatech.online/repos/postiz/",
         "duel_title": "HeyGen vs Synthesia (Enterprise Video Duel)",
         "duel_takeaway": "Synthesia provides strong corporate compliance, but HeyGen produces far more natural micro-facial movements and emotional cadence.",
         "duel_winner_reason": "HeyGen wins on visual realism, voice lip-synchronization, and rapid rendering.",
@@ -207,6 +256,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.7 / 10",
         "review_slug": "airtable",
+        "github_repo_name": "supabase / supabase",
+        "github_stars": "78,000+",
+        "github_stack": "PostgreSQL, Go, Elixir, TypeScript, Docker",
+        "github_license": "Apache-2.0",
+        "github_summary": "Open-source relational database architecture with instant auto-generated REST/GraphQL endpoints.",
+        "github_verdict": "The ultimate scalable backend for internal tools when no-code limits are reached.",
+        "github_audit_url": "https://heliatech.online/repos/supabase/",
         "duel_title": "Airtable vs Retool (Internal Tools Duel)",
         "duel_takeaway": "Retool requires full JavaScript skills, while Airtable allows business operations teams to build and modify relational systems autonomously.",
         "duel_winner_reason": "Airtable wins on time-to-deployment and non-developer maintainability.",
@@ -229,6 +285,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Very Low (9.8/10)",
         "score_overall": "9.8 / 10",
         "review_slug": "lovable",
+        "github_repo_name": "wasp-lang / open-saas",
+        "github_stars": "9,500+",
+        "github_stack": "React, Node.js, Prisma, Stripe",
+        "github_license": "MIT",
+        "github_summary": "Open-source fullstack SaaS boilerplate engineered for rapid production deployment.",
+        "github_verdict": "Production-grade foundation preventing typical prototype spaghetti code.",
+        "github_audit_url": "https://heliatech.online/repos/open-saas/",
         "duel_title": "Cursor vs Lovable (AI App Development Showdown)",
         "duel_takeaway": "Cursor is ideal for professional engineers managing existing codebases, while Lovable creates greenfield applications 5x faster from scratch.",
         "duel_winner_reason": "Lovable wins for rapid MVP prototyping and founder validation.",
@@ -251,6 +314,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.7 / 10",
         "review_slug": "make",
+        "github_repo_name": "n8n-io / n8n",
+        "github_stars": "58,000+",
+        "github_stack": "TypeScript, Node.js, Vue, SQLite/PostgreSQL",
+        "github_license": "Sustainable Use License",
+        "github_summary": "Self-hosted fair-code alternative to Make and Zapier for unmetered high-frequency transactions.",
+        "github_verdict": "Runs on your own servers with zero per-task penalty on transaction webhooks.",
+        "github_audit_url": "https://heliatech.online/repos/n8n/",
         "duel_title": "Make.com vs Zapier (Enterprise Routing Showdown)",
         "duel_takeaway": "Make's visual router handles complex fallback loops and multi-step data mapping far more elegantly than linear Zapier chains.",
         "duel_winner_reason": "Make provides superior visual error-handling and 4.8x cost savings at scale.",
@@ -273,6 +343,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.6 / 10",
         "review_slug": "brevo",
+        "github_repo_name": "postiz-app / postiz",
+        "github_stars": "19,800+",
+        "github_stack": "Next.js 15, PostgreSQL, Redis BullMQ, Docker",
+        "github_license": "AGPL-3.0",
+        "github_summary": "Open-source social media management architecture with native Next.js 15, PostgreSQL, and BullMQ Redis queues.",
+        "github_verdict": "Self-hosting saves $350/mo for marketing agencies. Clean Docker architecture with zero telemetry leaks.",
+        "github_audit_url": "https://heliatech.online/repos/postiz/",
         "duel_title": "Beehiiv vs Brevo (Editorial Newsletters vs B2B Marketing Suite)",
         "duel_takeaway": "Beehiiv wins for monetized media newsletters, while Brevo dominates transactional alerts, SMS, and B2B client management.",
         "duel_winner_reason": "Brevo wins on multichannel versatility and zero penalty on contact list growth.",
@@ -295,6 +372,13 @@ FORWARD_EDITORIAL_POOL = [
         "score_friction": "Low (9/10)",
         "score_overall": "9.7 / 10",
         "review_slug": "postman",
+        "github_repo_name": "wasp-lang / open-saas",
+        "github_stars": "9,500+",
+        "github_stack": "React, Node.js, Prisma, Stripe",
+        "github_license": "MIT",
+        "github_summary": "End-to-end type-safe API routing, automated migration tests, and zero lock-in SaaS skeleton.",
+        "github_verdict": "Clean architecture passing 100% of forensic regression and contract tests.",
+        "github_audit_url": "https://heliatech.online/repos/open-saas/",
         "duel_title": "Postman vs Insomnia (API Client & Governance Benchmark)",
         "duel_takeaway": "Insomnia is lightweight for individual debugging, but Postman leads decisively in team workspaces, API specs, and automated collection monitors.",
         "duel_winner_reason": "Postman wins for enterprise collaboration and end-to-end testing pipelines.",
@@ -644,7 +728,7 @@ class EmailCampaignAgent:
             html = html.replace("{{" + key + "}}", str(val))
         return html
 
-    def dispatch_weekly_radar(self, force: bool = False, test_mode: bool = False) -> Dict:
+    def dispatch_weekly_radar(self, force: bool = False, test_mode: bool = False, test_email: Optional[str] = None, broadcast: bool = False) -> Dict:
         """
         Autonomous Newsletter Broadcast powered by the Forensic NewsletterEngine.
         Enforces:
@@ -654,6 +738,8 @@ class EmailCampaignAgent:
         4. Fails cleanly if no validated edition exists.
         5. Double protection: checks (slot_key, subscriber_id) / (slot_key, subscriber_email).
         """
+        import hashlib
+        import urllib.parse
         from agents.newsletter_engine import (
             NewsletterEngine, NoValidatedEditionError, EditionValidationError, SlotAlreadyReservedError
         )
@@ -661,6 +747,7 @@ class EmailCampaignAgent:
         from zoneinfo import ZoneInfo
         ny_tz = ZoneInfo("America/New_York")
         ny_now = datetime.now(ny_tz)
+        now = datetime.now()
 
         # Enforce America/New_York 09:00 AM window check
         is_open, window_msg = engine.is_dispatch_window_open(ny_now)
@@ -674,7 +761,7 @@ class EmailCampaignAgent:
 
         # 1. Check if already dispatched for this slot
         existing_edition = engine.get_edition_by_slot(slot_key)
-        if existing_edition and existing_edition["status"] == "sent":
+        if existing_edition and existing_edition["status"] == "sent" and not test_mode:
             logger.info(f"Slot '{slot_key}' already sent (Issue #{existing_edition['issue_number']}). Cooldown active.")
             return {
                 "status": "SKIPPED",
@@ -692,11 +779,12 @@ class EmailCampaignAgent:
             selected_items = {
                 "featureArticleId": matching_pool.get("review_slug", tool_name.lower()),
                 "versusId": matching_pool.get("duel_url", "").split("/versus/")[-1].strip("/") or "make-vs-zapier",
-                "dealId": matching_pool.get("deal_hop_link", "").split("/")[-1] or "exclusive-perk"
+                "dealId": matching_pool.get("deal_hop_link", "").split("/")[-1] or "exclusive-perk",
+                "githubRepo": matching_pool.get("github_repo_name", "postiz-app / postiz")
             }
 
             subject = f"⚡ [THE RADAR] {matching_pool['subject_tagline']}"
-            publish_date_human = now.strftime("%A, %b %d, %Y")
+            publish_date_human = ny_now.strftime("%A, %b %d, %Y")
 
             context = {
                 "issue_number": "PENDING",
@@ -711,6 +799,14 @@ class EmailCampaignAgent:
                 "score_friction": matching_pool["score_friction"],
                 "score_overall": matching_pool["score_overall"],
                 "teardown_review_url": f"https://heliatech.online/reviews/{matching_pool['review_slug']}/",
+                # GitHub SaaS Radar Spotlight
+                "github_repo_name": matching_pool.get("github_repo_name", "postiz-app / postiz"),
+                "github_stars": matching_pool.get("github_stars", "19,800+"),
+                "github_stack": matching_pool.get("github_stack", "Next.js 15, PostgreSQL, Redis BullMQ, Docker"),
+                "github_license": matching_pool.get("github_license", "AGPL-3.0"),
+                "github_summary": matching_pool.get("github_summary", "Open-source social media management architecture with native Next.js 15, PostgreSQL, and BullMQ Redis queues."),
+                "github_verdict": matching_pool.get("github_verdict", "Self-hosting saves $350/mo for marketing agencies. Clean Docker architecture with zero telemetry leaks."),
+                "github_audit_url": matching_pool.get("github_audit_url", "https://heliatech.online/repos/postiz/"),
                 "duel_title": matching_pool["duel_title"],
                 "duel_takeaway": matching_pool["duel_takeaway"],
                 "duel_winner_reason": matching_pool["duel_winner_reason"],
@@ -751,10 +847,20 @@ class EmailCampaignAgent:
 
         # Dispatch via Resend
         def resend_caller(email: str, subj: str, body: str) -> Optional[str]:
-            custom_body = body.replace("{{email}}", email)
+            unsub_link = f"https://heliatech.online/unsubscribe?email={urllib.parse.quote(email)}"
+            custom_body = body.replace("{{email}}", email).replace("{{unsubscribe_url}}", unsub_link)
             return self.send_via_resend(email, final_subject, custom_body)
 
-        subscribers_to_send = [{"id": "sub_director", "email": DIRECTOR_EMAIL}]
+        if broadcast and not test_mode:
+            # Mode Production Broadcast : charge automatiquement les 142 abonnés vérifiés depuis Cloudflare D1
+            subscribers_to_send = None
+            is_live = True
+        else:
+            # Mode Test Sécurisé : envoi uniquement au directeur ou à l'adresse de test spécifiée
+            target_email = test_email or DIRECTOR_EMAIL
+            sub_id = f"sub_{hashlib.md5(target_email.lower().encode('utf-8')).hexdigest()[:12]}"
+            subscribers_to_send = [{"id": sub_id, "email": target_email}]
+            is_live = False
 
         result = engine.dispatch_slot(
             slot_key=slot_key,
@@ -771,10 +877,12 @@ class EmailCampaignAgent:
             ledger["active_campaigns"]["weekly_radar"]["current_issue"] = final_issue
             self._save_ledger(ledger)
 
+            mode_badge = "🔴 PROD BROADCAST (Tous Abonnés)" if is_live else "🟡 TEST SÉCURISÉ (Director/Email Test)"
             self._notify_telegram(
                 f"📬 *NEWSLETTER HEBDOMADAIRE EXPÉDIÉE !*\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
                 f"🗞️ *Édition :* The Thursday Radar #{final_issue:03d}\n"
+                f"🏷️ *Mode :* {mode_badge}\n"
                 f"🔑 *Créneau Verrouillé :* {slot_key}\n"
                 f"📧 *Envoyés :* {result.get('recipients_sent')} | 🚫 *Doublons bloqués :* {result.get('duplicates_blocked')}\n"
                 f"⚡ *Statut :* Livré sous contrôle Forensic anti-duplication"
@@ -894,9 +1002,30 @@ class EmailCampaignAgent:
 
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="HeliaTech Cognitive Email Campaign Agent")
+    parser.add_argument("--test-weekly", action="store_true", help="Send a test weekly newsletter edition to an email")
+    parser.add_argument("--to", type=str, default=None, help="Target email address for test dispatch")
+    parser.add_argument("--broadcast-weekly", action="store_true", help="Broadcast weekly edition to all verified D1 subscribers")
+    parser.add_argument("--force", action="store_true", help="Bypass dispatch window restriction (America/New_York Thursday 09:00 AM)")
+    parser.add_argument("--dry-run", action="store_true", help="Run without sending real emails")
+    parser.add_argument("--evaluate", action="store_true", help="Run cognitive editorial self-evaluation")
+    args = parser.parse_args()
+
     agent = EmailCampaignAgent()
     print("=== HELIA COGNITIVE EMAIL CAMPAIGN AGENT ===")
-    print(f"Configured: {agent.is_configured()}")
-    eval_res = agent.self_evaluate_editorial_strategy()
-    print(f"Strategy Score: {eval_res['overall_strategy_score']}/100 - {eval_res['verdict']}")
-    print(f"Calendar Markdown written to: {EDITORIAL_CALENDAR_PATH}")
+    print(f"Resend Configured: {agent.is_configured()}")
+
+    if args.test_weekly:
+        target = args.to or DIRECTOR_EMAIL
+        print(f"[*] Dispatching test weekly newsletter to: {target} (force={args.force}, dry_run={args.dry_run})")
+        res = agent.dispatch_weekly_radar(force=args.force, test_mode=args.dry_run, test_email=target, broadcast=False)
+        print(f"[Result] {json.dumps(res, indent=2)}")
+    elif args.broadcast_weekly:
+        print(f"[*] Launching PRODUCTION BROADCAST to all verified D1 subscribers (force={args.force})")
+        res = agent.dispatch_weekly_radar(force=args.force, test_mode=args.dry_run, broadcast=True)
+        print(f"[Result] {json.dumps(res, indent=2)}")
+    else:
+        eval_res = agent.self_evaluate_editorial_strategy()
+        print(f"Strategy Score: {eval_res['overall_strategy_score']}/100 - {eval_res['verdict']}")
+        print(f"Calendar Markdown written to: {EDITORIAL_CALENDAR_PATH}")

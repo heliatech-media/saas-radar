@@ -201,49 +201,164 @@ export async function onRequestPost(context) {
     // 3. HIGH-CONVERTING WELCOME EMAIL VIA RESEND
     // =========================================================================
     if (resendApiKey) {
+      const unsubUrl = `https://heliatech.online/unsubscribe?email=${encodeURIComponent(email)}`;
       const emailHtml = `
-      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 40px 20px; max-width: 600px; margin: 0 auto; border-radius: 16px; border: 1px solid #1e293b;">
-        <div style="text-align: center; margin-bottom: 30px;">
-          <div style="display: inline-block; padding: 6px 14px; border-radius: 9999px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); color: #22d3ee; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
-            ⚡ HELIATECH CONFIDENTIAL
-          </div>
-          <h1 style="color: #ffffff; font-size: 24px; font-weight: 900; margin-top: 16px; margin-bottom: 8px; letter-spacing: -0.02em;">
-            Access Granted: Your Executive SaaS Intelligence
-          </h1>
-          <p style="color: #94a3b8; font-size: 14px; margin: 0;">
-            Welcome to the private briefing circle for modern CTOs, founders, and Ops leaders.
-          </p>
-        </div>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to HeliaTech Confidential</title>
+      </head>
+      <body style="margin: 0; padding: 0; background-color: #030712; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f9fafb; -webkit-font-smoothing: antialiased;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #030712; width: 100% !important; margin: 0; padding: 40px 10px;">
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 620px; background-color: #0b0f19; border: 1px solid #1e293b; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);">
+                
+                <tr>
+                  <td height="4" style="background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 50%, #10b981 100%);"></td>
+                </tr>
 
-        <div style="background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-          <h3 style="color: #38bdf8; font-size: 15px; margin-top: 0; margin-bottom: 12px;">
-            🎯 Here are your 3 priority executive resources:
-          </h3>
-          <ul style="color: #cbd5e1; font-size: 13px; line-height: 1.8; padding-left: 20px; margin: 0;">
-            <li>
-              <strong><a href="https://heliatech.online/calculator/" style="color: #22d3ee; text-decoration: none;">Interactive SaaS ROI & Break-Even Calculator ➔</a></strong><br/>
-              Simulate operational costs, team time savings, and annual ROI across 50+ enterprise architectures.
-            </li>
-            <li style="margin-top: 10px;">
-              <strong><a href="https://heliatech.online/tools/" style="color: #22d3ee; text-decoration: none;">The 2026 Developer & Automation Stack Index ➔</a></strong><br/>
-              Uncompromising, zero-fluff code and performance audits (Make, Resend, Supabase, Vercel).
-            </li>
-            <li style="margin-top: 10px;">
-              <strong><a href="https://heliatech.online/deals/" style="color: #22d3ee; text-decoration: none;">Exclusive Enterprise Stack Discounts & Credits ➔</a></strong><br/>
-              Verified partner credits and extended trials negotiated directly for HeliaTech subscribers.
-            </li>
-          </ul>
-        </div>
+                <tr>
+                  <td style="padding: 40px 36px 20px 36px; text-align: center;">
+                    <div style="display: inline-block; padding: 6px 14px; border-radius: 9999px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); color: #22d3ee; font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;">
+                      ⚡ HELIATECH CONFIDENTIAL • BRIEFING #001
+                    </div>
+                    <h1 style="color: #ffffff; font-size: 26px; font-weight: 900; letter-spacing: -0.03em; margin: 20px 0 10px 0; line-height: 1.25;">
+                      Welcome to the Inner Circle of Modern Infrastructure.
+                    </h1>
+                    <p style="color: #94a3b8; font-size: 15px; line-height: 1.6; margin: 0;">
+                      You just joined 14,000+ founders, CTOs, and automation engineers receiving zero-fluff software audits, uncompromised ROI models, and verified partner rates.
+                    </p>
+                  </td>
+                </tr>
 
-        <p style="color: #94a3b8; font-size: 13px; line-height: 1.6; margin-bottom: 24px;">
-          Every Thursday at 9:00 AM EST, expect a razor-sharp breakdown of infrastructure shifts, hidden pricing traps, and emerging tooling before they hit mainstream tech circles.
-        </p>
+                <tr>
+                  <td style="padding: 10px 36px 26px 36px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #111827; border: 1px solid #1f2937; border-radius: 14px; padding: 24px;">
+                      <tr>
+                        <td>
+                          <div style="color: #38bdf8; font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">
+                            🎯 YOUR IMMEDIATE EXECUTIVE ACCESS KIT
+                          </div>
+                          
+                          <!-- Asset 1: ROI Calculator -->
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 18px;">
+                            <tr>
+                              <td width="32" valign="top" style="font-size: 18px;">📊</td>
+                              <td style="padding-left: 10px;">
+                                <a href="https://heliatech.online/calculator/" style="color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block;">
+                                  The 2026 SaaS ROI & Break-Even Calculator ➔
+                                </a>
+                                <div style="color: #94a3b8; font-size: 12px; line-height: 1.5; margin-top: 3px;">
+                                  Simulate exact annual tool stack consolidation savings across Make, Resend, Supabase, and 45+ enterprise tools.
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
 
-        <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 20px; font-size: 11px; color: #64748b;">
-          <p style="margin: 0;">HeliaTech Research Division &copy; 2026 • San Francisco • Paris</p>
-          <p style="margin: 4px 0 0;">Zero Spam Guarantee • If you ever wish to opt out, you can unsubscribe in one click.</p>
-        </div>
-      </div>
+                          <!-- Asset 2: NEW GitHub SaaS Radar -->
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 18px; background: rgba(6, 182, 212, 0.05); padding: 10px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+                            <tr>
+                              <td width="32" valign="top" style="font-size: 18px;">⭐</td>
+                              <td style="padding-left: 10px;">
+                                <a href="https://heliatech.online/repos/" style="color: #22d3ee; font-size: 14px; font-weight: 800; text-decoration: none; display: inline-block;">
+                                  The GitHub SaaS Radar (Open-Source Audits) ➔
+                                </a>
+                                <div style="color: #cbd5e1; font-size: 12px; line-height: 1.5; margin-top: 3px;">
+                                  Forensic architectural audits of 100% verified SaaS repos (Postiz, Cal.com, Supabase, n8n, Open SaaS) with self-host vs cloud TCO models.
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+
+                          <!-- Asset 3: Duels -->
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 18px;">
+                            <tr>
+                              <td width="32" valign="top" style="font-size: 18px;">⚔️</td>
+                              <td style="padding-left: 10px;">
+                                <a href="https://heliatech.online/versus/" style="color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block;">
+                                  Head-to-Head Architectural Duels ➔
+                                </a>
+                                <div style="color: #94a3b8; font-size: 12px; line-height: 1.5; margin-top: 3px;">
+                                  Code-level verdicts: Make vs Zapier, Resend vs Brevo, Cursor vs Copilot with total cost of ownership graphs.
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+
+                          <!-- Asset 4: Deals -->
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td width="32" valign="top" style="font-size: 18px;">💎</td>
+                              <td style="padding-left: 10px;">
+                                <a href="https://heliatech.online/deals/" style="color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block;">
+                                  Exclusive Private Partner Credits & Deals ➔
+                                </a>
+                                <div style="color: #94a3b8; font-size: 12px; line-height: 1.5; margin-top: 3px;">
+                                  Up to $15,000 in direct cloud infrastructure and SaaS startup credits reserved for HeliaTech subscribers.
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding: 0 36px 36px 36px; text-align: center;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tr>
+                        <td align="center" style="border-radius: 12px; background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);">
+                          <a href="https://heliatech.online/repos/" target="_blank" style="display: inline-block; padding: 16px 36px; font-size: 14px; font-weight: 800; letter-spacing: 0.05em; color: #020617; text-decoration: none; border-radius: 12px; text-transform: uppercase;">
+                            Access The Open-Source SaaS Radar ➔
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding: 0 36px 36px 36px;">
+                    <div style="border-top: 1px solid #1e293b; padding-top: 24px; color: #94a3b8; font-size: 13px; line-height: 1.7;">
+                      <p style="margin: 0 0 12px 0;">
+                        <strong style="color: #f1f5f9;">Our Editorial Promise:</strong> We never accept payment to bias our software ratings. When a tool fails under high-concurrency loads or inflates renewal prices, we document it with benchmarks.
+                      </p>
+                      <p style="margin: 0;">
+                        Expect our deep-dive dispatch every Thursday at 9:00 AM EST (15:00 CET). If you have a specific software stack question, hit reply—our engineering desk reads every message.
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="background-color: #070b14; border-top: 1px solid #1e293b; padding: 28px 36px; text-align: center;">
+                    <div style="color: #475569; font-size: 11px; line-height: 1.6;">
+                      <p style="margin: 0; font-weight: 600; color: #64748b;">
+                        HELIATECH RESEARCH & INTELLIGENCE DIVISION
+                      </p>
+                      <p style="margin: 4px 0 12px 0;">
+                        San Francisco • Paris • Global Edge Distribution
+                      </p>
+                      <p style="margin: 0;">
+                        Sent to ${email} because you requested private access on heliatech.online.<br/>
+                        <a href="${unsubUrl}" style="color: #06b6d4; text-decoration: underline;">Unsubscribe in 1 click</a> • <a href="https://heliatech.online/terms/" style="color: #64748b; text-decoration: none;">Privacy Policy</a>
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+      </html>
       `;
 
       try {

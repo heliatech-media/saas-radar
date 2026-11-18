@@ -675,13 +675,46 @@ class NewsletterEngine:
             return [dict(r) for r in rows]
 
     def _load_subscribers(self) -> List[Dict[str, Any]]:
+        # 1. Primary: Cloudflare D1 production database (Truth of Production)
+        try:
+            from agents.d1_client import get_d1_client
+            d1 = get_d1_client()
+            rows = d1.query(
+                "SELECT id, email, role, country FROM subscribers WHERE status = 'Verified' AND unsubscribed_at IS NULL ORDER BY signup_date DESC"
+            )
+            if rows:
+                logger.info(f"Loaded {len(rows)} verified subscribers from Cloudflare D1.")
+                return [dict(r) for r in rows]
+        except Exception as e:
+            logger.warning(f"Could not load subscribers from D1 ({e}). Falling back to local database.")
+
+        # 2. Secondary fallback: local sentinel_governance.db
+        sentinel_db = DATA_DIR / "sentinel_governance.db"
+        if sentinel_db.exists():
+            try:
+                conn = sqlite3.connect(str(sentinel_db))
+                conn.row_factory = sqlite3.Row
+                rows = conn.execute(
+                    "SELECT id, email, role, country FROM subscribers WHERE status = 'Verified' AND unsubscribed_at IS NULL"
+                ).fetchall()
+                conn.close()
+                if rows:
+                    logger.info(f"Loaded {len(rows)} verified subscribers from local sentinel_governance.db.")
+                    return [dict(r) for r in rows]
+            except Exception as e:
+                logger.error(f"Error reading local sentinel_governance.db: {e}")
+
+        # 3. Tertiary fallback: subscribers_ledger.json if populated
         subs_file = DATA_DIR / "subscribers_ledger.json"
         if subs_file.exists():
             try:
                 data = json.loads(subs_file.read_text(encoding="utf-8"))
-                return data.get("subscribers", [])
+                subs = data.get("subscribers", [])
+                if subs:
+                    return subs
             except Exception as e:
                 logger.error(f"Error loading subscribers: {e}")
+
         return [{"id": "sub_dir", "email": "director@heliatech.online"}]
 
     def export_supervision_journal(self) -> Dict[str, Any]:
