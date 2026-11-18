@@ -377,12 +377,6 @@ netlify-feedback,
   height: auto !important;
 }
 
-@media (max-width: 640px) {
-  .mermaid-body svg {
-    min-width: 540px !important;
-  }
-}
-
 .mermaid-body svg .nodeLabel, 
 .mermaid-body svg .label {
   color: #f8fafc !important;
