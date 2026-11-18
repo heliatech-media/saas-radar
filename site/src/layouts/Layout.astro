@@ -154,6 +154,8 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
     <meta property="og:image:height" content="630" />
 
+    <meta property="og:image:alt" content={`${title} - 2026 HeliaTech Teardown`} />
+
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="twitter:title" content={`${title} | HeliaTech`} />
@@ -161,6 +163,8 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
     <meta name="twitter:description" content={description} />
 
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <meta name="twitter:image:alt" content={`${title} - 2026 HeliaTech Teardown`} />
 
     <meta name="robots" content={effectiveNoindex ? "noindex, nofollow" : "index, follow"} />
 
