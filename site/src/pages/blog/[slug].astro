@@ -85,13 +85,51 @@ const jsonLd = {
           "item": `https://heliatech.online/blog/${entry.slug}/`
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": isVersus && contenderA && contenderB ? [
+        {
+          "@type": "Question",
+          "name": `Which tool is better in 2026: ${contenderA.toUpperCase()} or ${contenderB.toUpperCase()}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `In our 2026 benchmark, ${contenderA.toUpperCase()} and ${contenderB.toUpperCase()} serve different workflow strengths. Read our complete head-to-head comparison and verdict to choose the right fit.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `How do ${contenderA.toUpperCase()} and ${contenderB.toUpperCase()} compare on pricing and value?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `Both tools differ in tiered pricing and usage quotas. Explore our verified breakdown of rate cards, hidden costs, and team scalability above.`
+          }
+        }
+      ] : [
+        {
+          "@type": "Question",
+          "name": `Is ${(post.tool_slug || entry.slug).replace(/-/g, ' ').toUpperCase()} worth it in 2026?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": post.tldr && post.tldr.length > 0 ? post.tldr[0] : `${post.title} delivers high-performance capabilities for modern cloud and SaaS workflows. Read our hands-on evaluation above.`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `What are the key features and pricing of ${(post.tool_slug || entry.slug).replace(/-/g, ' ').toUpperCase()}?`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": post.description || `Explore our full teardown covering architectural benchmarks, pricing plans, and real pros and cons.`
+          }
+        }
+      ]
     }
   ]
 };
 ---
 
 <Layout 
-  title={`${post.title}`}
+  title={`${post.seo_title || post.title}`}
   description={post.description}
   jsonLd={jsonLd}
   image={post.image || `/images/blog/${post.tool_slug || entry.slug}.svg`}
@@ -147,7 +185,7 @@ const jsonLd = {
           <ToolIcon slug={post.tool_slug} size="lg" className="mt-1 hidden sm:inline-flex" />
         ) : null}
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] font-heading">
-          {post.title}
+          {post.full_headline || post.title}
         </h1>
       </div>
 

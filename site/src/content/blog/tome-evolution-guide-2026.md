@@ -1,8 +1,7 @@
 ---
-title: 'Tome: The Evolution of AI Storytelling and the Hands-On Guide to Narrative
-  Decks in 2026'
-description: Discover how Tome leverages generative AI to turn text prompts into stunning
-  presentations and pitches. Read our masterclass review.
+title: 'Tome AI Review 2026: Pricing, Features & Verdict'
+description: Comprehensive 2026 review of Tome AI. We test features, pricing plans, usability, and architecture to help you
+  decide if it is worth it for your stack.
 date: '2026-10-26'
 author: HELIA TECH
 category: AI Video & Presentation
@@ -16,19 +15,19 @@ readingTime: 5 MIN
 tool_slug: tome
 image: /images/blog/tome.svg
 tldr:
-- Tome revolutionized presentation software by shifting the paradigm from manual pixel-pushing
-  to prompt-driven generative narrative structures.
-- B2B sales teams and founders save hundreds of hours by automating multi-slide deck
-  layouts, copywriting, and native asset embeddings.
-- While export limitations exist, mastering Tome's interactive canvas enables rapid
-  pitch generation that outpaces legacy office suites.
+- Tome revolutionized presentation software by shifting the paradigm from manual pixel-pushing to prompt-driven generative
+  narrative structures.
+- B2B sales teams and founders save hundreds of hours by automating multi-slide deck layouts, copywriting, and native asset
+  embeddings.
+- While export limitations exist, mastering Tome's interactive canvas enables rapid pitch generation that outpaces legacy
+  office suites.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Experience Tome Free
-  description: Activate your account to unlock advanced enterprise features and streamline
-    team velocity.
+  description: Activate your account to unlock advanced enterprise features and streamline team velocity.
   button_text: Claim Your Free Tome Account ➔
   url: /go/tome
+full_headline: 'Tome: The Evolution of AI Storytelling and the Hands-On Guide to Narrative Decks in 2026'
 ---
 ## Introduction
 

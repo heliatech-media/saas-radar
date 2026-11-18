@@ -51,6 +51,8 @@ const blogCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    full_headline: z.string().optional(),
+    seo_title: z.string().optional(),
     description: z.string(),
     date: z.string(),
     author: z.string().default('HELIA TECH'),

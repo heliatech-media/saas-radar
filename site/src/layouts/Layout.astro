@@ -124,11 +124,21 @@ const ogImageUrl = socialImage.startsWith('http') ? socialImage : `https://helia
 
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title.toLowerCase().includes('heliatech') || title.length > 52 ? title : `${title} | HeliaTech`}</title>
+    <title>{(() => {
+      const clean = title.trim();
+      if (clean.toLowerCase().includes('heliatech')) return clean;
+      if (clean.length <= 48) return `${clean} | HeliaTech`;
+      return clean;
+    })()}</title>
 
     <meta name="description" content={description} />
 
-    <meta property="og:title" content={title.toLowerCase().includes('heliatech') ? title : `${title} | HeliaTech`} />
+    <meta property="og:title" content={(() => {
+      const clean = title.trim();
+      if (clean.toLowerCase().includes('heliatech')) return clean;
+      if (clean.length <= 48) return `${clean} | HeliaTech`;
+      return clean;
+    })()} />
 
     <meta property="og:description" content={description} />
 
