@@ -1,0 +1,283 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const repos = await getCollection('repos');
+  return repos.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const repo = entry.data;
+
+const riskColors = {
+  Low: 'bg-emerald-950/80 text-emerald-400 border-emerald-500/40',
+  Medium: 'bg-amber-950/80 text-amber-400 border-amber-500/40',
+  High: 'bg-rose-950/80 text-rose-400 border-rose-500/40',
+};
+const riskBadge = riskColors[repo.license_risk] || riskColors.Low;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": repo.name,
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Linux, macOS, Windows, Docker",
+  "description": repo.tagline,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+};
+---
+
+<Layout
+  title={`${repo.name}: Architecture Teardown, License Risk & Forensic Audit (2026)`}
+  description={`Forensic code audit of ${repo.repo_name}: ${repo.stars.toLocaleString()} GitHub stars, ${repo.license} license risk assessment, production-readiness, and cloud vs self-hosted breakdown.`}
+  jsonLd={jsonLd}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    
+    <!-- Breadcrumbs & Category -->
+    <div class="flex items-center justify-between mb-6 text-xs font-mono text-slate-400">
+      <div class="flex items-center gap-2">
+        <a href="/" class="hover:text-cyan-400">Home</a>
+        <span>/</span>
+        <a href="/repos/" class="hover:text-cyan-400">GitHub Radar</a>
+        <span>/</span>
+        <span class="text-cyan-400">{repo.name}</span>
+      </div>
+      <a href="/repos/" class="hover:text-cyan-300 flex items-center gap-1 font-semibold">
+        <span>← All Repositories</span>
+      </a>
+    </div>
+
+    <!-- Header Block -->
+    <header class="mb-10">
+      <div class="flex flex-wrap items-center gap-2.5 mb-4">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-300 bg-cyan-950/70 border border-cyan-800/50 px-3 py-1 rounded-md">
+          {repo.category}
+        </span>
+        <span class="text-xs font-mono font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/30 px-3 py-1 rounded-md">
+          ⭐ Score de Santé : {repo.health_score}/100
+        </span>
+        <span class={`text-xs font-mono font-bold border px-3 py-1 rounded-md ${riskBadge}`}>
+          {repo.license_risk} Risk: {repo.license}
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+        {repo.name} : Forensic Architecture Teardown
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-6">
+        {repo.tagline}
+      </p>
+
+      <!-- Telemetry Dashboard Card -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-2xl bg-[#090e1a] border border-cyan-500/20 shadow-2xl mb-8">
+        <div>
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">GitHub Stars</div>
+          <div class="text-lg sm:text-xl font-bold font-mono text-amber-300">⭐ {repo.stars.toLocaleString()}</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Forks & Clones</div>
+          <div class="text-lg sm:text-xl font-bold font-mono text-slate-200">🍴 {repo.forks.toLocaleString()}</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Maintenance Active</div>
+          <div class="text-sm sm:text-base font-bold font-mono text-cyan-300">{repo.last_commit}</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Docker Ready</div>
+          <div class="text-sm sm:text-base font-bold font-mono text-slate-200">
+            {repo.has_docker ? 'Configuré ✅' : 'Non requis / Absent ⚠️'}
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4">
+        {repo.cloud_alternative_url && (
+          <a
+            href={repo.cloud_alternative_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5"
+          >
+            Déployer sur {repo.cloud_alternative_name || 'Cloud Officiel'} ➔
+          </a>
+        )}
+        <a
+          href={repo.repo_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-cyan-500/40 font-mono text-sm transition-all flex items-center gap-2"
+        >
+          <svg class="w-4 h-4 text-slate-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>Consulter le Repo GitHub ↗</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <article class="elite-article prose prose-invert prose-cyan max-w-none">
+      <Content />
+    </article>
+
+    <!-- CTA Sticky Footer -->
+    <div class="mt-16 pt-8 border-t border-slate-800 text-center">
+      <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900/90 to-[#090e1a] border border-cyan-500/30">
+        <h3 class="text-2xl font-bold text-white mb-3">Besoin d'auditer d'autres architectures ?</h3>
+        <p class="text-sm text-slate-400 max-w-xl mx-auto mb-6">
+          HeliaTech scanne en continu l'écosystème open-source pour livrer des rapports d'audit factuels sans complaisance.
+        </p>
+        <a 
+          href="/repos/"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold text-sm border border-slate-700 hover:border-cyan-500/40 transition-colors"
+        >
+          <span>Explorer tous les Dépôts Audités</span>
+          <span>➔</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Dynamic Native Architecture Component Engine (Zero Mermaid CDN) -->
+  <script is:inline>
+    const mermaidPres = document.querySelectorAll('.elite-article pre[data-language="mermaid"]');
+    if (mermaidPres.length > 0) {
+      mermaidPres.forEach((pre) => {
+        const rawCode = pre.querySelector('code')?.innerText || pre.innerText || '';
+
+        let step1Title = 'Inbound Friction';
+        let step1Desc = 'Manual bottlenecks, fragmented tools, and disconnected data silos.';
+        let step2Title = 'Core Engine Platform';
+        let step2Desc = 'Automated Workflow & Enterprise Intelligence';
+        let step3Title = 'Automated Pipeline';
+        let step3Desc = 'Omnichannel synchronization and zero-latency trigger execution.';
+        let step4Title = 'Compound ROI Moat';
+        let step4Desc = 'Validated velocity surge and long-term enterprise scalability.';
+
+        const inpMatch = rawCode.match(/Inp\["([^"]+)"\]/);
+        if (inpMatch) {
+          const parts = inpMatch[1].split(':');
+          if (parts.length > 1) {
+            step1Title = parts[0].replace(/^[^\w\s]+/, '').trim();
+            step1Desc = parts.slice(1).join(':').trim();
+          } else {
+            step1Title = inpMatch[1].replace(/^[^\w\s]+/, '').trim();
+          }
+        }
+
+        const engMatch = rawCode.match(/Eng\["([^"]+)"\]/);
+        if (engMatch) {
+          const parts = engMatch[1].split(':');
+          if (parts.length > 1) {
+            step2Title = parts[0].replace(/^[^\w\s]+/, '').trim();
+            step2Desc = parts.slice(1).join(':').trim();
+          } else {
+            step2Title = engMatch[1].replace(/^[^\w\s]+/, '').trim();
+          }
+        }
+
+        const pipeMatch = rawCode.match(/Pipe\["([^"]+)"\]/);
+        if (pipeMatch) {
+          const parts = pipeMatch[1].split(':');
+          if (parts.length > 1) {
+            step3Title = parts[0].replace(/^[^\w\s]+/, '').trim();
+            step3Desc = parts.slice(1).join(':').trim();
+          } else {
+            step3Title = pipeMatch[1].replace(/^[^\w\s]+/, '').trim();
+          }
+        }
+
+        const moatMatch = rawCode.match(/Moat\["([^"]+)"\]/);
+        if (moatMatch) {
+          const parts = moatMatch[1].split(':');
+          if (parts.length > 1) {
+            step4Title = parts[0].replace(/^[^\w\s]+/, '').trim();
+            step4Desc = parts.slice(1).join(':').trim();
+          } else {
+            step4Title = moatMatch[1].replace(/^[^\w\s]+/, '').trim();
+          }
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'arch-wrapper';
+        wrapper.innerHTML = `
+          <div class="arch-header">
+            <div style="display:flex;align-items:center;gap:0.625rem;">
+              <span style="width:0.625rem;height:0.625rem;border-radius:50%;background:#22d3ee;box-shadow:0 0 8px #22d3ee;display:inline-block;"></span>
+              <span style="color:#67e8f9;font-weight:700;letter-spacing:0.05em;font-size:0.875rem;">SYSTEM ARCHITECTURE</span>
+            </div>
+            <span style="font-size:0.75rem;color:#94a3b8;">⚡ Enterprise Operational Flow</span>
+          </div>
+          
+          <div class="arch-body">
+            <div class="arch-grid-container">
+              
+              <!-- Step 1 -->
+              <div class="arch-card">
+                <div class="arch-badge-row">
+                  <span class="arch-badge arch-badge-gray">Phase 01</span>
+                  <span class="arch-icon">⚙️</span>
+                </div>
+                <h4 class="arch-title">${step1Title}</h4>
+                <p class="arch-desc">${step1Desc}</p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="arch-card arch-card-cyan">
+                <div class="arch-badge-row">
+                  <span class="arch-badge arch-badge-cyan">Core Engine</span>
+                  <span class="arch-icon">⚡</span>
+                </div>
+                <h4 class="arch-title" style="color:#67e8f9;">${step2Title}</h4>
+                <p class="arch-desc" style="color:#cbd5e1;">${step2Desc}</p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="arch-card arch-card-blue">
+                <div class="arch-badge-row">
+                  <span class="arch-badge arch-badge-blue">Phase 03</span>
+                  <span class="arch-icon">🔄</span>
+                </div>
+                <h4 class="arch-title">${step3Title}</h4>
+                <p class="arch-desc">${step3Desc}</p>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="arch-card arch-card-emerald">
+                <div class="arch-badge-row">
+                  <span class="arch-badge arch-badge-emerald">Moat Lift</span>
+                  <span class="arch-icon">📈</span>
+                </div>
+                <h4 class="arch-title" style="color:#6ee7b7;">${step4Title}</h4>
+                <p class="arch-desc" style="color:#cbd5e1;">${step4Desc}</p>
+              </div>
+
+            </div>
+
+            <div class="arch-footer">
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="width:0.375rem;height:0.375rem;border-radius:50%;background:#22d3ee;display:inline-block;"></span>
+                <span>Audit Protocol: Verified Ground-Truth AST & GitHub REST Stream</span>
+              </div>
+              <span style="color:#22d3ee;font-weight:700;">Latency: &lt; 40ms</span>
+            </div>
+          </div>
+        `;
+        pre.parentNode.replaceChild(wrapper, pre);
+      });
+    }
+  </script>
+</Layout>

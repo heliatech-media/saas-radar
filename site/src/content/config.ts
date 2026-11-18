@@ -72,7 +72,37 @@ const blogCollection = defineCollection({
   }),
 });
 
+const reposCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    repo_name: z.string(),
+    repo_url: z.string().url(),
+    category: z.string(),
+    tagline: z.string(),
+    stars: z.number(),
+    forks: z.number(),
+    open_issues: z.number(),
+    last_commit: z.string(),
+    license: z.string(),
+    license_risk: z.enum(['Low', 'Medium', 'High']),
+    health_score: z.number(),
+    stack: z.array(z.string()),
+    has_docker: z.boolean().default(false),
+    has_tests: z.boolean().default(false),
+    cloud_alternative_url: z.string().optional(),
+    cloud_alternative_name: z.string().optional(),
+    key_metrics: z.object({
+      commit_frequency: z.string(),
+      issue_response_time: z.string(),
+      cve_status: z.string().default('Clean'),
+      production_ready_rating: z.number(),
+    }).optional(),
+  }),
+});
+
 export const collections = {
   reviews: reviewsCollection,
   blog: blogCollection,
+  repos: reposCollection,
 };
