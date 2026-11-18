@@ -6,7 +6,7 @@ tagline: AI-powered content generator that converts raw audio into show notes, v
 category: Audio/Podcasting
 rating: 4.6
 website_url: https://podsqueeze.com
-affiliate_url: https://podsqueeze.com
+affiliate_url: "https://podsqueeze.com?via=heliatech"
 summary: Podsqueeze is an AI automation tool designed for podcasters, agency teams,
   and content marketers to automatically convert raw audio or video files into complete
   promotional packages. It generates timestamps, show notes, transcripts, social media

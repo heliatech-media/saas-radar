@@ -656,7 +656,8 @@
     "rating": 4.6,
     "starting_price": "$16/mo",
     "best_for": "Independent podcasters, media agencies, and marketing teams looking to automate post-production content repurposing.",
-    "affiliate_url": "https://podsqueeze.com"
+    "affiliate_url": "https://podsqueeze.com?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Postiz",

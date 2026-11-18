@@ -197,7 +197,8 @@ AFFILIATE_MAP = {
     "koalawriter": "https://koala.sh/?via=heliatech",
     "gamma": "https://gamma.app/?via=heliatech",
     "postiz": "https://postiz.com/?via=heliatech",
-    "replicate": "https://replicate.com"
+    "replicate": "https://replicate.com",
+    "podsqueeze": "https://podsqueeze.com?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
