@@ -378,8 +378,15 @@ netlify-feedback,
   gap: 1rem;
 }
 
+.arch-grid-duel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
 @media (max-width: 840px) {
-  .arch-grid-container {
+  .arch-grid-container,
+  .arch-grid-duel {
     grid-template-columns: 1fr;
     gap: 0.875rem;
   }
@@ -411,6 +418,18 @@ netlify-feedback,
 .arch-card-blue {
   background-color: #0f172a;
   border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.arch-card-purple {
+  background-color: #17102e;
+  border: 2px solid rgba(168, 85, 247, 0.75);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.arch-card-amber {
+  background-color: #21190c;
+  border: 2px solid rgba(245, 158, 11, 0.75);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
 }
 
 .arch-badge-row {
@@ -447,6 +466,55 @@ netlify-feedback,
   background-color: rgba(30, 58, 138, 0.9);
   color: #93c5fd;
   border: 1px solid rgba(59, 130, 246, 0.6);
+}
+
+.arch-badge-emerald {
+  background-color: rgba(6, 78, 59, 0.9);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.6);
+}
+
+.arch-badge-purple {
+  background-color: rgba(88, 28, 135, 0.9);
+  color: #d8b4fe;
+  border: 1px solid rgba(168, 85, 247, 0.6);
+}
+
+.arch-badge-amber {
+  background-color: rgba(120, 53, 15, 0.9);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.6);
+}
+
+.arch-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.arch-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.arch-step-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.15);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
 }
 
 .arch-badge-emerald {

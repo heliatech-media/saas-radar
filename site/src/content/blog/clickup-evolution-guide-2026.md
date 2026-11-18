@@ -48,12 +48,9 @@ Before ClickUp emerged, project management software was hopelessly compartmental
 
 ```mermaid
 flowchart TD
-    A["Disjointed Tools: Slack + Asana + Notion + Sheets"] --> B["⚡ ClickUp Unified Core"]
-    B --> C["Custom Hierarchical Spaces"]
-    B --> D["Multi-Dimensional Views: List, Gantt, Board"]
-    B --> E["Native Collaborative Docs & Whiteboards"]
-    B --> F["Built-In Automated Workflows"]
-    style B fill:#7c3aed,stroke:#a855f7,stroke-width:2px,color:#ffffff
+    Inp["⚠️ Fragmented Stack: Slack + Asana + Notion + Sheets"] --> Eng["⚡ ClickUp 3.0 Platform: Unified Hierarchical Core & Neural Engine"]
+    Eng --> Pipe["🔄 Automated Pipeline: Real-Time Multi-View Sync & Native Whiteboards"]
+    Pipe --> Moat["📈 Compound ROI Moat: 80% Context-Switching Reduction & Centralized Governance"]
 ```
 
 Zeb Evans recognized that human psychology requires different perspectives on the same underlying information. A developer wants a kanban board with sprint points; an executive wants a high-level timeline; and an accountant requires a tabular financial ledger.

@@ -49,14 +49,9 @@ Extracted from verified enterprise Master Services Agreements (MSAs) and vendor 
 
 ```mermaid
 flowchart TD
-    A["Initial HubSpot Enterprise Quote"] --> B["🔍 Procurement Audit & Risk Review"]
-    B -->|Flag 1| C["Challenge $3,500 Onboarding Fee with Readiness Charter"]
-    B -->|Flag 2| D["Cap Annual Price Escalation at 3% CPI"]
-    B -->|Flag 3| E["Counter Seat Lock-in with Decoupled Stack Threat: Apollo + Brevo"]
-    C & D & E --> F["Quarter-End Closing Leverage (March / June / Sept / Dec)"]
-    F --> G["Final Executed MSA: 35% Savings + $0 Onboarding Fee"]
-    style B fill:#e11d48,stroke:#f43f5e,stroke-width:2px,color:#ffffff
-    style G fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff
+    Inp["⚠️ Sales Proposal: $3,500 Onboarding Tax & Locked Contact Tiers"] --> Eng["⚡ HubSpot Enterprise Platform: Procurement Audit & Teardown"]
+    Eng --> Pipe["🔄 Negotiation Pipeline: Decoupled Stack Threat & Quarter-End Leverage"]
+    Pipe --> Moat["📈 Compound ROI Moat: 35% Executed MSA Savings & $0 Onboarding Fee"]
 ```
 
 ---

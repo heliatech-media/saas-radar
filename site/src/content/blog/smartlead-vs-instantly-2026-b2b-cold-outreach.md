@@ -48,12 +48,9 @@ Before comparing features, every revenue leader must understand the physics of c
 
 ```mermaid
 flowchart TD
-    Lead["Target Prospect List"] --> Router["ESP-Matching Smart Router"]
-    Router --> G["Google Recipient? --> Route via Google Workspace"]
-    Router --> O["Microsoft Recipient? --> Route via M365 Outlook"]
-    G --> Inbox["Primary Inbox Placement (98.4%)"]
-    O --> Inbox
-    style Inbox fill:#10b981,stroke:#059669,stroke-width:2px,color:#ffffff
+    Inp["⚠️ Prospect Database: Multi-Domain Spam & Blacklist Vulnerability"] --> Eng["⚡ Deliverability Platform: Dynamic ESP-Matching Smart Router"]
+    Eng --> Pipe["🔄 Routing Pipeline: Direct Workspace & M365 Outlook Alignment"]
+    Pipe --> Moat["📈 Compound ROI Moat: 98.4% Primary Inbox Placement & High Domain Health"]
 ```
 
 To maintain primary inbox placement without getting blacklisted:
@@ -125,12 +122,9 @@ In the modern B2B ecosystem, outbound campaigns are rarely written manually. Gro
 
 ```mermaid
 flowchart TD
-    Signal["🎯 Job Post / Tech Stack Signal"] --> Clay["⚡ Clay Enrichment (50+ Data Sources)"]
-    Clay --> LLM["🧠 LLM Bespoke Hook Generation"]
-    LLM --> Webhook["🌐 Smartlead API / Webhook"]
-    Webhook --> Sequence["🚀 Dynamic Outbound Injection"]
-    style Clay fill:#0c1425,stroke:#8b5cf6,stroke-width:2.5px,color:#ffffff
-    style Sequence fill:#0c1425,stroke:#0284c7,stroke-width:2.5px,color:#ffffff
+    Inp["⚠️ Job Post / Tech Stack Intent Signals"] --> Eng["⚡ Clay Platform: Multi-Source Enrichment Engine"]
+    Eng --> Pipe["🔄 Outbound Pipeline: LLM Hook Generation & Webhook Injection"]
+    Pipe --> Moat["📈 Compound ROI Moat: 100% Programmatic Dynamic Sequence Personalization"]
 ```
 
 ### Why Growth Engineers Prefer Smartlead with Clay
@@ -156,10 +150,9 @@ Both platforms advertise attractive entry-level pricing, but scaling to enterpri
 
 ```mermaid
 flowchart TD
-    Base["💳 Base Subscription Tier"] --> Volume["📈 Sending Volume & Mailbox Add-ons"]
-    Volume --> Leads["🔍 Lead Verification & Enrichment Credits"]
-    Leads --> TCO["🏆 Total Cost of Ownership (TCO) Moat"]
-    style TCO fill:#0c1425,stroke:#f59e0b,stroke-width:2.5px,color:#ffffff
+    Inp["⚠️ Base Subscription Tier: Inboxes & Domain Shards"] --> Eng["⚡ Smartlead Infrastructure: Dynamic IP Warmup & REST Core"]
+    Eng --> Pipe["🔄 Volume Scaling Pipeline: Mailbox Add-ons & Verification"]
+    Pipe --> Moat["🏆 Total Cost of Ownership Moat: 35% Lower Cost Per Delivered Lead"]
 ```
 
 ### Smartlead.ai Pricing

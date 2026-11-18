@@ -63,9 +63,9 @@ Zapier fonctionne selon un paradigme strictement linéaire. Un "Zap" est fondame
 
 ```mermaid
 flowchart TD
-    A[Déclencheur : Nouveau lead CRM] --> B[Action 1 : Enrichissement des données]
-    B --> C[Action 2 : Alerte Slack Ops]
-    C --> D[Action 3 : Mise à jour PostgreSQL]
+    Inp["⚠️ Saisie Linéaire : Nouveau Lead CRM Brut"] --> Eng["⚡ Zapier Platform : Pipeline Séquentiel Mono-Fil"]
+    Eng --> Pipe["🔄 Enrichissement & Alerte : Slack Ops & Mise à Jour PostgreSQL"]
+    Pipe --> Moat["📈 Résultat Opérationnel : Déploiement Métier Immédiat Sans Code"]
 ```
 
 *   **Le goulet d'étranglement architectural :** Bien que Zapier ait introduit des chemins (paths) et des sous-étapes, le traitement de données nécessitant une logique conditionnelle complexe, des boucles ou l'agrégation de payloads JSON hétérogènes entraîne des acrobaties structurelles. Si vous devez évaluer un tableau de 50 lignes d'une facture e-commerce, appliquer des remises conditionnelles à chacune et les écrire dans des tables relationnelles distinctes, un pipeline Zapier linéaire devient lourd, difficile à déboguer et enclin à casser sur les cas limites.
@@ -76,11 +76,9 @@ Make utilise un canevas de type Graphe Orienté Acyclic (DAG). Les workflows son
 
 ```mermaid
 flowchart TD
-    A["Déclencheur : Webhook Ingestion"] --> B["⚡ Routeur Nodal Make"]
-    B -->|Branche A| C["CRM Entreprise"]
-    B -->|Branche B| D["Moteur de facturation"]
-    B -->|Branche C| E["Base de Données Analytics"]
-    style B fill:#6366f1,stroke:#818cf8,stroke-width:2px,color:#ffffff
+    Inp["⚠️ Webhook Ingestion : Charge Utile JSON Hétérogène & Imbriquée"] --> Eng["⚡ Make Platform : Canevas Nodal & Graphe DAG Multi-Branches"]
+    Eng --> Pipe["🔄 Routage Parallèle : CRM, Facturation & Base de Données Analytics"]
+    Pipe --> Moat["📈 Compound ROI Moat : Efficacité Nodal & Zéro Surcoût à l'Échelle"]
 ```
 
 *   **Le triomphe architectural :** Make traite les données sous forme de "paquets" (bundles) circulant dans les chemins d'exécution. Vous pouvez ingérer un payload JSON profondément imbriqué et le manipuler avec une précision chirurgicale sans saturer la mémoire.
