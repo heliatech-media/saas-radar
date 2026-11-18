@@ -196,7 +196,8 @@ AFFILIATE_MAP = {
     "ahrefs": "https://ahrefs.com/?via=heliatech",
     "koalawriter": "https://koala.sh/?via=heliatech",
     "gamma": "https://gamma.app/?via=heliatech",
-    "postiz": "https://postiz.com/?via=heliatech"
+    "postiz": "https://postiz.com/?via=heliatech",
+    "replicate": "https://replicate.com"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

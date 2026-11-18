@@ -178,7 +178,7 @@ The introduction of native video creation inside a dominant Work OS creates acut
 | **Async Video Messaging** | Loom (Atlassian), Vidyard | **HIGH** | Eliminates separate $12.50–$20/user/mo license; recordings live directly inside task tickets with automatic AI summaries. |
 | **Transcription & Speech NLE** | Descript, Riverside.fm | **MEDIUM-HIGH** | Eliminates the need to export footage to transcribe and chop; subtitles and word-level edits happen in-browser. |
 | **Generative Social Video** | InVideo AI, CapCut, Canva | **MEDIUM** | For B2B marketing teams, ClickUp links video outputs directly to campaign deadlines, assigned designers, and asset reviews. |
-| **AI Avatars & Synthetic Video** | [HeyGen](/reviews/heygen), Synthesia | **MODERATE** | While HeyGen excels at hyper-realistic digital twin avatars, ClickUp satisfies 80% of internal training and update use cases without third-party fees. |
+| **AI Avatars & Synthetic Video** | [HeyGen](/reviews/heygen), Synthesia | **MODERATE** | While [HeyGen](/reviews/heygen) excels at hyper-realistic digital twin avatars, ClickUp satisfies 80% of internal training and update use cases without third-party fees. |
 
 ### The Consolidation Math for CIOs and CFOs
 For a 100-person SaaS company, maintaining fragmented tools is expensive:

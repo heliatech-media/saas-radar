@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-18 11:05:35",
+    "title": "Cycle Autonome #Podsqueeze",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Podsqueeze) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-18 11:02:58",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-18 11:00:33",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Podsqueeze: The AI Engine Turning Raw Audio into an Omnichannel Content Empire",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Podsqueeze: The AI Engine Turning Raw Audio into an Omnichannel Content Empire\n• **Catégorie :** Audio/Podcasting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/podsqueeze-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/podsqueeze-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-18 10:56:34",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Podsqueeze",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Podsqueeze\n• **Catégorie :** Audio/Podcasting\n• **Note globale :** 4.6/10\n• **Cible idéale :** Independent podcasters, media agencies, and marketing teams looking to automate post-production content repurposing.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/podsqueeze/"
+  },
+  {
     "timestamp": "2026-11-18 00:16:28",
     "title": "Cycle Autonome #Replicate",
     "category": "CYCLE",
@@ -319,34 +347,6 @@
     "title": "Alerte Lien Mort Détecté",
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-13 21:06:53",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Semrush: The Anatomy of Digital Dominance and the Blueprint for Enterprise Visibility",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Semrush: The Anatomy of Digital Dominance and the Blueprint for Enterprise Visibility\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/semrush-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/semrush-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-13 21:06:24",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Semrush",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Semrush\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.6/10\n• **Cible idéale :** In-house marketing teams, SEO agencies, and enterprise content creators requiring granular keyword data and competitor analysis.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/semrush/"
-  },
-  {
-    "timestamp": "2026-11-13 13:46:24",
-    "title": "Cycle Autonome #Resemble AI",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Resemble AI) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-13 13:45:59",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 11 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway, runway-tco-calculator, submagic, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
   }
 ]

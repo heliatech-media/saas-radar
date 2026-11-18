@@ -6,7 +6,7 @@ tagline: Run open-source machine learning models with cloud APIs in minutes with
 category: Cloud AI Model Inference & Serverless GPUs
 rating: 4.6
 website_url: https://replicate.com
-affiliate_url: https://replicate.com
+affiliate_url: "https://replicate.com"
 summary: Replicate provides a developer-friendly platform to run, fine-tune, and deploy
   open-source AI models—such as Stable Diffusion, Llama, and Whisper—using a simple
   cloud API and serverless GPUs. It abstracts away the complex infrastructure orchestration

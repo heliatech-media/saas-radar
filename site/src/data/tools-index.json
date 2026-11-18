@@ -649,6 +649,16 @@
     "affiliate_url": "https://www.podia.com/?via=heliatech"
   },
   {
+    "name": "Podsqueeze",
+    "slug": "podsqueeze",
+    "tagline": "AI-powered content generator that converts raw audio into show notes, video clips, transcripts, and social collateral.",
+    "category": "Audio/Podcasting",
+    "rating": 4.6,
+    "starting_price": "$16/mo",
+    "best_for": "Independent podcasters, media agencies, and marketing teams looking to automate post-production content repurposing.",
+    "affiliate_url": "https://podsqueeze.com"
+  },
+  {
     "name": "Postiz",
     "slug": "postiz",
     "tagline": "The open-source social media management platform for modern teams.",
@@ -689,7 +699,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "Software engineers, indie hackers, and product teams building AI-powered applications without dedicated ML infrastructure engineers.",
-    "affiliate_url": "https://replicate.com"
+    "affiliate_url": "https://replicate.com",
+    "commission_rate": "None"
   },
   {
     "name": "Resemble AI",

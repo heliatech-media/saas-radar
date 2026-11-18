@@ -1,0 +1,393 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-radial" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="60%" stop-color="#050810"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </radialGradient>
+    
+    <!-- Ambient Light Orbs -->
+    <radialGradient id="orb-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="orb-fuchsia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="orb-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Visual Element Gradients -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#e0f2fe"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="card-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="card-border-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+    </linearGradient>
+    
+    <linearGradient id="card-border-fuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="stream-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.3"/>
+    </pattern>
+
+    <pattern id="dot-matrix" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#06b6d4" fill-opacity="0.15"/>
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur1"/>
+      <feGaussianBlur stdDeviation="24" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="drop-shadow">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="630" fill="url(#bg-radial)"/>
+  
+  <!-- Cyber Grid Overlay -->
+  <rect width="1200" height="630" fill="url(#cyber-grid)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="250" cy="450" r="300" fill="url(#orb-cyan)"/>
+  <circle cx="780" cy="310" r="350" fill="url(#orb-violet)"/>
+  <circle cx="1020" cy="180" r="280" fill="url(#orb-fuchsia)"/>
+
+  <!-- Background Technical Decorator Lines -->
+  <g opacity="0.25">
+    <line x1="70" y1="0" x2="70" y2="630" stroke="#06b6d4" stroke-width="1" stroke-dasharray="4 8"/>
+    <line x1="1130" y1="0" x2="1130" y2="630" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4 8"/>
+    <line x1="0" y1="560" x2="1200" y2="560" stroke="#1e293b" stroke-width="1"/>
+    <!-- Diagonal HUD lines -->
+    <path d="M 450 0 L 500 50 H 700 L 750 0" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="5 5"/>
+  </g>
+
+  <!-- ==================== LEFT COLUMN: HEADER & METADATA ==================== -->
+  
+  <!-- Top Dossier Badge -->
+  <g transform="translate(70, 48)">
+    <rect x="0" y="0" width="310" height="30" rx="15" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="16" cy="15" r="5" fill="#06b6d4" filter="url(#glow-soft)"/>
+    <circle cx="16" cy="15" r="2" fill="#ffffff"/>
+    <text x="32" y="19" font-family="'JetBrains Mono', 'Fira Code', monospace, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Article Title -->
+  <g transform="translate(70, 128)">
+    <!-- Subtitle Category Tag -->
+    <rect x="0" y="0" width="200" height="22" rx="4" fill="url(#accent-grad)" opacity="0.15"/>
+    <rect x="0" y="0" width="200" height="22" rx="4" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" font-weight="700" fill="#d946ef" letter-spacing="1.2">AUDIO / PODCASTING AI</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="56" font-weight="900" fill="url(#title-grad)" letter-spacing="-1">PODSQUEEZE</text>
+    
+    <!-- Teardown Tagline -->
+    <text x="0" y="110" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#f1f5f9" letter-spacing="-0.2">The AI Engine Turning Raw Audio</text>
+    <text x="0" y="136" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#38bdf8" letter-spacing="-0.2">into an Omnichannel Content Empire</text>
+
+    <!-- Description Paragraph -->
+    <text x="0" y="178" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400" fill="#94a3b8" width="380" line-height="1.6">
+      <tspan x="0" dy="0">Deep-dive architectural evaluation of Podsqueeze's voice-to-text</tspan>
+      <tspan x="0" dy="20">neural synthesis, automated transcript vectorization, and multi-modal</tspan>
+      <tspan x="0" dy="20">content generation pipeline for modern media enterprises.</tspan>
+    </text>
+  </g>
+
+  <!-- Enterprise Metrics Highlights (Bottom Left) -->
+  <g transform="translate(70, 395)">
+    <!-- Metric Box 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="165" height="75" rx="10" fill="url(#card-glass)" stroke="url(#card-border-cyan)" stroke-width="1"/>
+      <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#06b6d4" letter-spacing="1">SPEECH-TO-TEXT</text>
+      <text x="16" y="52" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">99.4%</text>
+      <text x="92" y="52" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Accuracy</text>
+    </g>
+
+    <!-- Metric Box 2 -->
+    <g transform="translate(180, 0)">
+      <rect x="0" y="0" width="165" height="75" rx="10" fill="url(#card-glass)" stroke="url(#card-border-fuchsia)" stroke-width="1"/>
+      <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#d946ef" letter-spacing="1">CONTENT MULTIPLIER</text>
+      <text x="16" y="52" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">12-in-1</text>
+      <text x="100" y="52" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Assets</text>
+    </g>
+
+    <!-- Technical Pipeline Indicator Line -->
+    <g transform="translate(0, 95)">
+      <rect x="0" y="0" width="345" height="36" rx="6" fill="#0b1329" stroke="#1e293b" stroke-width="1"/>
+      <circle cx="20" cy="18" r="4" fill="#10b981"/>
+      <text x="34" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">PIPELINE: <tspan fill="#38bdf8">AUDIO</tspan> → <tspan fill="#8b5cf6">LLM AST</tspan> → <tspan fill="#d946ef">OMNICHANNEL</tspan></text>
+    </g>
+  </g>
+
+
+  <!-- ==================== RIGHT COLUMN: DIAGRAM & ISOMETRIC GRAPHIC ==================== -->
+
+  <!-- Flow Connection Lines (Background of diagram) -->
+  <g fill="none" opacity="0.8">
+    <!-- Input Audio to AI Core -->
+    <path d="M 540 315 C 590 315, 610 315, 640 315" stroke="url(#stream-line)" stroke-width="3" stroke-dasharray="6 4"/>
+    
+    <!-- AI Core to Output Nodes -->
+    <path d="M 780 270 C 830 200, 860 150, 910 150" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow-soft)"/>
+    <path d="M 800 300 C 850 270, 880 260, 930 260" stroke="#38bdf8" stroke-width="2.5" filter="url(#glow-soft)"/>
+    <path d="M 800 330 C 850 360, 880 370, 920 380" stroke="#8b5cf6" stroke-width="2.5" filter="url(#glow-soft)"/>
+    <path d="M 770 360 C 810 440, 840 480, 890 500" stroke="#d946ef" stroke-width="2.5" filter="url(#glow-soft)"/>
+  </g>
+
+  <!-- NODE 1: RAW AUDIO INPUT (Left side of visual engine) -->
+  <g transform="translate(430, 235)" filter="url(#drop-shadow)">
+    <!-- Container Glass -->
+    <rect x="0" y="0" width="120" height="160" rx="14" fill="url(#card-glass)" stroke="#06b6d4" stroke-width="1.5"/>
+    <rect x="0" y="0" width="120" height="160" rx="14" fill="url(#dot-matrix)" opacity="0.4"/>
+    
+    <!-- Mic Floating Icon Ring -->
+    <circle cx="60" cy="50" r="26" fill="#0b1528" stroke="#06b6d4" stroke-width="1.5" filter="url(#glow-soft)"/>
+    <!-- Mic Icon -->
+    <path d="M 60 38 C 55.5 38 52 41.5 52 46 L 52 54 C 52 58.5 55.5 62 60 62 C 64.5 62 68 58.5 68 54 L 68 46 C 68 41.5 64.5 38 60 38 Z" fill="#38bdf8"/>
+    <path d="M 47 52 C 47 59 53 64.5 60 64.5 C 67 64.5 73 59 73 52" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="60" y1="65" x2="60" y2="71" stroke="#38bdf8" stroke-width="2.5"/>
+
+    <!-- Dynamic Audio Equalizer Bars -->
+    <g transform="translate(25, 92)" fill="#06b6d4">
+      <rect x="0" y="12" width="4" height="16" rx="2"/>
+      <rect x="8" y="4" width="4" height="24" rx="2" fill="#38bdf8"/>
+      <rect x="16" y="18" width="4" height="10" rx="2"/>
+      <rect x="24" y="0" width="4" height="28" rx="2" fill="#8b5cf6"/>
+      <rect x="32" y="8" width="4" height="20" rx="2" fill="#38bdf8"/>
+      <rect x="40" y="14" width="4" height="14" rx="2"/>
+      <rect x="48" y="6" width="4" height="22" rx="2" fill="#d946ef"/>
+      <rect x="56" y="16" width="4" height="12" rx="2"/>
+      <rect x="64" y="10" width="4" height="18" rx="2"/>
+    </g>
+    
+    <text x="60" y="142" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1">RAW AUDIO</text>
+  </g>
+
+  <!-- NODE 2: CENTRAL ISOMETRIC AI ENGINE HUB -->
+  <g transform="translate(630, 200)">
+    <!-- Base Glow / Platform Aura -->
+    <ellipse cx="120" cy="140" rx="110" ry="60" fill="url(#orb-violet)" filter="url(#glow-intense)"/>
+
+    <!-- Isometric Layer 1: Base Grid Platform -->
+    <polygon points="120,40 220,95 120,150 20,95" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" opacity="0.9"/>
+    <polygon points="120,55 205,100 120,145 35,100" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+    <!-- Isometric Layer 2: Processing Matrix (Elevated) -->
+    <g transform="translate(0, -35)">
+      <polygon points="120,40 220,95 120,150 20,95" fill="url(#card-glass)" stroke="#8b5cf6" stroke-width="2"/>
+      
+      <!-- Internal Neural Nodes on Isometric Grid -->
+      <circle cx="120" cy="95" r="7" fill="#d946ef" filter="url(#glow-soft)"/>
+      <circle cx="80" cy="80" r="4" fill="#06b6d4"/>
+      <circle cx="160" cy="80" r="4" fill="#38bdf8"/>
+      <circle cx="90" cy="115" r="4" fill="#8b5cf6"/>
+      <circle cx="150" cy="115" r="4" fill="#06b6d4"/>
+
+      <!-- Interconnecting Neural Lattice Lines -->
+      <line x1="120" y1="95" x2="80" y2="80" stroke="#06b6d4" stroke-width="1.5"/>
+      <line x1="120" y1="95" x2="160" y2="80" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="120" y1="95" x2="90" y2="115" stroke="#8b5cf6" stroke-width="1.5"/>
+      <line x1="120" y1="95" x2="150" y2="115" stroke="#d946ef" stroke-width="1.5"/>
+    </g>
+
+    <!-- Isometric Layer 3: Neural Core Gem (Top Floating) -->
+    <g transform="translate(0, -75)" filter="url(#glow-intense)">
+      <!-- Glowing Diamond Central Core -->
+      <polygon points="120,50 150,75 120,100 90,75" fill="url(#accent-grad)" opacity="0.85"/>
+      <polygon points="120,50 150,75 120,82 90,75" fill="#ffffff" opacity="0.4"/>
+      <!-- Top Floating Ring -->
+      <ellipse cx="120" cy="75" rx="45" ry="22" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="8 6"/>
+    </g>
+
+    <!-- AI Core Label Badges -->
+    <g transform="translate(45, 175)">
+      <rect x="0" y="0" width="150" height="26" rx="13" fill="#090d16" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="75" y="17" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#e2e8f0" text-anchor="middle" letter-spacing="1">PODSQUEEZE AI CORE</text>
+    </g>
+  </g>
+
+  <!-- ==================== OMNICHANNEL OUTPUT CARDS (RIGHT SIDE) ==================== -->
+
+  <!-- OUTPUT CARD 1: SHOW NOTES & TIMESTAMPS (Top Right) -->
+  <g transform="translate(910, 85)" filter="url(#drop-shadow)">
+    <rect x="0" y="0" width="225" height="115" rx="12" fill="url(#card-glass)" stroke="url(#card-border-cyan)" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect x="12" y="12" width="26" height="26" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
+    <!-- List / Document Icon -->
+    <path d="M 20 20 H 30 M 20 25 H 28 M 20 30 H 25" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/>
+    <text x="46" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Show Notes &amp; Timestamps</text>
+    <text x="46" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38bdf8">AUTO-STRUCTURED</text>
+
+    <!-- Content Preview Lines -->
+    <g transform="translate(14, 52)">
+      <!-- Timestamp Pill 1 -->
+      <rect x="0" y="0" width="38" height="16" rx="4" fill="#0b172a" stroke="#06b6d4" stroke-width="0.8"/>
+      <text x="19" y="11" font-family="'JetBrains Mono', monospace" font-size="8" fill="#38bdf8" text-anchor="middle">00:14</text>
+      <rect x="46" y="4" width="130" height="7" rx="3.5" fill="#334155"/>
+
+      <!-- Timestamp Pill 2 -->
+      <rect x="0" y="22" width="38" height="16" rx="4" fill="#0b172a" stroke="#06b6d4" stroke-width="0.8"/>
+      <text x="19" y="33" font-family="'JetBrains Mono', monospace" font-size="8" fill="#38bdf8" text-anchor="middle">04:32</text>
+      <rect x="46" y="26" width="110" height="7" rx="3.5" fill="#334155"/>
+    </g>
+
+    <!-- Status Indicator -->
+    <circle cx="205" cy="20" r="4" fill="#10b981" filter="url(#glow-soft)"/>
+  </g>
+
+  <!-- OUTPUT CARD 2: SHORT VIDEO CLIPS / WAVEFORM (Mid-Upper Right) -->
+  <g transform="translate(935, 220)" filter="url(#drop-shadow)">
+    <rect x="0" y="0" width="215" height="110" rx="12" fill="url(#card-glass)" stroke="url(#card-border-fuchsia)" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect x="12" y="12" width="26" height="26" rx="6" fill="#d946ef" fill-opacity="0.2"/>
+    <!-- Play / Video Icon -->
+    <polygon points="20,18 28,25 20,32" fill="#d946ef"/>
+    <text x="46" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Viral Video Clips</text>
+    <text x="46" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#d946ef">4K WAVEFORM CAROUSEL</text>
+
+    <!-- Mini Video Preview Box -->
+    <rect x="14" y="48" width="187" height="48" rx="6" fill="#070c18" stroke="#1e293b" stroke-width="1"/>
+    <!-- Mini Waveform Graphic inside video -->
+    <path d="M 22 72 Q 35 55, 45 72 T 70 72 T 95 72 T 120 72 T 145 72 T 170 72 T 190 72" fill="none" stroke="url(#wave-grad)" stroke-width="2"/>
+    <!-- Subtitle overlay bar -->
+    <rect x="50" y="82" width="90" height="6" rx="3" fill="#ffffff" opacity="0.8"/>
+  </g>
+
+  <!-- OUTPUT CARD 3: NEWSLETTER & BLOG POST (Mid-Lower Right) -->
+  <g transform="translate(910, 350)" filter="url(#drop-shadow)">
+    <rect x="0" y="0" width="225" height="110" rx="12" fill="url(#card-glass)" stroke="url(#card-border-cyan)" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect x="12" y="12" width="26" height="26" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
+    <!-- Newsletter / Article Icon -->
+    <rect x="18" y="18" width="14" height="14" rx="2" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="21" y1="22" x2="29" y2="22" stroke="#8b5cf6" stroke-width="1.5"/>
+    <line x1="21" y1="26" x2="27" y2="26" stroke="#8b5cf6" stroke-width="1.5"/>
+    
+    <text x="46" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Newsletter &amp; Articles</text>
+    <text x="46" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8b5cf6">SEO DRAFT GENERATOR</text>
+
+    <!-- Mock Text Layout Lines -->
+    <g transform="translate(14, 52)">
+      <rect x="0" y="0" width="180" height="7" rx="3.5" fill="#38bdf8" opacity="0.7"/>
+      <rect x="0" y="14" width="195" height="5" rx="2.5" fill="#475569"/>
+      <rect x="0" y="24" width="160" height="5" rx="2.5" fill="#475569"/>
+      <rect x="0" y="34" width="130" height="5" rx="2.5" fill="#475569"/>
+    </g>
+  </g>
+
+  <!-- OUTPUT CARD 4: SOCIAL MEDIA ASSETS (Bottom Right) -->
+  <g transform="translate(860, 480)" filter="url(#drop-shadow)">
+    <rect x="0" y="0" width="245" height="100" rx="12" fill="url(#card-glass)" stroke="url(#card-border-fuchsia)" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect x="12" y="12" width="26" height="26" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
+    <!-- Quote / Social Icon -->
+    <text x="18" y="31" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#06b6d4">“</text>
+    
+    <text x="46" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Social Quote Cards &amp; Posts</text>
+    <text x="46" y="36" font-family="'JetBrains Mono', monospace" font-size="9" fill="#06b6d4">OMNICHANNEL PUBLISHER</text>
+
+    <!-- Quote Preview Line -->
+    <g transform="translate(14, 50)">
+      <rect x="0" y="0" width="215" height="24" rx="6" fill="#09101d" stroke="#1e293b" stroke-width="1"/>
+      <text x="10" y="16" font-family="system-ui, sans-serif" font-size="10" font-style="italic" fill="#cbd5e1">“Key takeaway extracted into viral post...”</text>
+      
+      <!-- Platform Pills -->
+      <rect x="0" y="30" width="45" height="12" rx="3" fill="#8b5cf6" opacity="0.3"/>
+      <text x="22" y="39" font-family="'JetBrains Mono', monospace" font-size="7" fill="#ffffff" text-anchor="middle">X / TWITTER</text>
+
+      <rect x="52" y="30" width="45" height="12" rx="3" fill="#06b6d4" opacity="0.3"/>
+      <text x="74" y="39" font-family="'JetBrains Mono', monospace" font-size="7" fill="#ffffff" text-anchor="middle">LINKEDIN</text>
+    </g>
+  </g>
+
+  <!-- ==================== HUD GRAPHICS & TECH DETAILS ==================== -->
+  <!-- Target Reticles / Precision Crosshairs -->
+  <g stroke="#38bdf8" stroke-width="0.8" opacity="0.4" fill="none">
+    <!-- Top Right Reticle -->
+    <circle cx="1130" cy="50" r="10"/>
+    <line x1="1130" y1="35" x2="1130" y2="65"/>
+    <line x1="1115" y1="50" x2="1145" y2="50"/>
+
+    <!-- Bottom Left Reticle -->
+    <circle cx="40" cy="590" r="8"/>
+    <line x1="40" y1="578" x2="40" y2="602"/>
+    <line x1="28" y1="590" x2="52" y2="590"/>
+  </g>
+
+  <!-- Tech Telemetry Text Overlay -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b" opacity="0.7">
+    <text x="70" y="605">LATENCY: 42ms</text>
+    <text x="170" y="605">ENGINE: NEURAL MATRIX v4.2</text>
+    <text x="340" y="605">STATUS: ACTIVE GENERATION</text>
+    <text x="1020" y="605">HELIA TECH DOSSIER #884</text>
+  </g>
+
+  <!-- Animated-like Pulsing Particle Dots along data paths -->
+  <circle cx="600" cy="315" r="3" fill="#38bdf8" filter="url(#glow-soft)"/>
+  <circle cx="830" cy="225" r="3" fill="#06b6d4" filter="url(#glow-soft)"/>
+  <circle cx="860" cy="265" r="3" fill="#38bdf8" filter="url(#glow-soft)"/>
+  <circle cx="850" cy="365" r="3" fill="#8b5cf6" filter="url(#glow-soft)"/>
+  <circle cx="820" cy="450" r="3" fill="#d946ef" filter="url(#glow-soft)"/>
+</svg>

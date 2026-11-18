@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-18 00:14:28 UTC",
+  "last_updated": "2026-11-18 11:01:37 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 97,
-    "total_published_investigations": 247,
-    "reviews_audited": 97,
-    "masterclasses_and_duels": 150,
+    "total_monetized_tools": 98,
+    "total_published_investigations": 249,
+    "reviews_audited": 98,
+    "masterclasses_and_duels": 151,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$33,950 USD",
+    "projected_monthly_mrr": "$34,300 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -398,6 +398,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "replicate",
+      "destination": "https://replicate.com",
+      "type": "Catalog Edge Hop"
+    },
+    {
       "slug": "resemble-ai",
       "destination": "https://www.resemble.ai/?via=heliatech",
       "type": "Commission Partner"
@@ -560,39 +565,39 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-14 04:07:04",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : Jasper",
+      "category": "REVIEW",
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Jasper\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.3/10\n• **Cible idéale :** Mid-to-large marketing teams, content agencies, and high-volume enterprise brands\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/jasper/"
+    },
+    {
+      "timestamp": "2026-11-13 21:09:00",
+      "title": "Cycle Autonome #Semrush",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Semrush) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-13 21:08:36",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 9 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-13 21:06:53",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Semrush: The Anatomy of Digital Dominance and the Blueprint for Enterprise Visibility",
+      "category": "CONTENT",
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Semrush: The Anatomy of Digital Dominance and the Blueprint for Enterprise Visibility\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/semrush-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/semrush-evolution-guide-2026/"
+    },
+    {
       "timestamp": "2026-11-13 21:06:24",
       "title": "⭐ NOUVELLE REVUE LOGICIEL : Semrush",
       "category": "REVIEW",
       "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Semrush\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.6/10\n• **Cible idéale :** In-house marketing teams, SEO agencies, and enterprise content creators requiring granular keyword data and competitor analysis.\n\n👉 Lire la fiche d'audit complète :",
       "link": "https://heliatech.online/reviews/semrush/"
-    },
-    {
-      "timestamp": "2026-11-13 13:46:24",
-      "title": "Cycle Autonome #Resemble AI",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Resemble AI) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-13 13:45:59",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 11 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway, runway-tco-calculator, submagic, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-13 13:39:54",
-      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Resemble AI: Architecting the Future of Synthetic Speech and the Enterprise Blueprint for Voice Sovereignty",
-      "category": "CONTENT",
-      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Resemble AI: Architecting the Future of Synthetic Speech and the Enterprise Blueprint for Voice Sovereignty\n• **Catégorie :** AI Voice & Audio Generation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/resemble-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-      "link": "https://heliatech.online/blog/resemble-ai-evolution-guide-2026/"
-    },
-    {
-      "timestamp": "2026-11-13 13:39:26",
-      "title": "⭐ NOUVELLE REVUE LOGICIEL : Resemble AI",
-      "category": "REVIEW",
-      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Resemble AI\n• **Catégorie :** AI Voice & Audio Generation\n• **Note globale :** 4.6/10\n• **Cible idéale :** Game developers, enterprise localization teams, and product engineers needing programmatic voice cloning.\n\n👉 Lire la fiche d'audit complète :",
-      "link": "https://heliatech.online/reviews/resemble-ai/"
     }
   ]
 }

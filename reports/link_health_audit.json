@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-18 00:16:04",
-  "total_links_audited": 140,
-  "healthy_links": 125,
-  "broken_links_count": 15,
-  "health_rate": "89.3%",
+  "timestamp": "2026-11-18 11:02:58",
+  "total_links_audited": 144,
+  "healthy_links": 126,
+  "broken_links_count": 18,
+  "health_rate": "87.5%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -68,6 +68,30 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.opusclip-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.opusclip-sandbox.com', port=443): Failed to resolve 'www.opusclip-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "podsqueeze-api-sandbox",
+      "target_url": "https://www.podsqueeze-api-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.podsqueeze-api-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-api-sandbox.com', port=443): Failed to resolve 'www.podsqueeze-api-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "podsqueeze-migration-calculator",
+      "target_url": "https://www.podsqueeze-migration-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.podsqueeze-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-migration-calculator.com', port=443): Failed to resolve 'www.podsqueeze-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "podsqueeze-rate-card",
+      "target_url": "https://www.podsqueeze-rate-card.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.podsqueeze-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-rate-card.com', port=443): Failed to resolve 'www.podsqueeze-rate-card.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "replit-agent",
@@ -228,7 +252,7 @@
     {
       "slug": "capcut-pro",
       "target_url": "https://www.capcut-pro.com",
-      "final_url": "https://capcut-pro.com/",
+      "final_url": "https://www.capcut-pro.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -335,7 +359,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Q0lv5wbR8TnV9Z&gsxid=Q0lv5wbR8TnV9Z&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=BkMikO7xsPm9eG&gsxid=BkMikO7xsPm9eG&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -492,7 +516,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -685,7 +709,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -698,7 +722,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=OqTUnLJDaQBOKh&gsxid=OqTUnLJDaQBOKh&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Wx6Z3671yGZjzY&gsxid=Wx6Z3671yGZjzY&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -726,7 +750,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=zuhY1aUlhaabcE&gsxid=zuhY1aUlhaabcE&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=NPDWgSpKyl9KsP&gsxid=NPDWgSpKyl9KsP&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -743,6 +767,30 @@
       "final_url": "https://www.podia.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "podsqueeze-api-sandbox",
+      "target_url": "https://www.podsqueeze-api-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.podsqueeze-api-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-api-sandbox.com', port=443): Failed to resolve 'www.podsqueeze-api-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "podsqueeze-migration-calculator",
+      "target_url": "https://www.podsqueeze-migration-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.podsqueeze-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-migration-calculator.com', port=443): Failed to resolve 'www.podsqueeze-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "podsqueeze-rate-card",
+      "target_url": "https://www.podsqueeze-rate-card.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.podsqueeze-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-rate-card.com', port=443): Failed to resolve 'www.podsqueeze-rate-card.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "postiz",
@@ -783,6 +831,13 @@
       "slug": "remote",
       "target_url": "https://remote.com",
       "final_url": "https://remote.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "replicate",
+      "target_url": "https://replicate.com",
+      "final_url": "https://replicate.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -925,8 +980,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {

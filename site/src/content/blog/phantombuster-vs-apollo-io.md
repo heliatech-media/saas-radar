@@ -110,7 +110,7 @@ Evaluating the economics of these tools requires looking beyond sticker prices t
 ### Scenario C: Enterprise Outbound Machine (500,000+ Operations / Month)
 *   **PhantomBuster:** 
     *   Impractical as a primary data source at this volume due to platform-enforced rate limits (scraping 500k profiles on LinkedIn will trigger account bans unless distributed across dozens of proxy-managed burner accounts). Best used for targeted niche sub-segments rather than brute-force volume.
-*   **Apollo.io:** 
+*   **[Apollo.io](/reviews/apollo-io):** 
     *   Built for high-volume execution. Custom enterprise tiers allow team-wide data access, automated bulk enrichments, and strict territory management. *Caveat:* Data decay at this volume requires continuous re-verification loops to maintain bounce rates under safe thresholds (<2%).
 
 ---
