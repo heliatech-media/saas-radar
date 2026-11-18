@@ -149,9 +149,27 @@ const winnerSlug = (duel.verdict?.winner === toolB.name) ? toolB.slug : toolA.sl
       {duel.headline}
     </h1>
 
-    <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-4xl mb-12">
+    <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed max-w-4xl mb-8">
       {duel.tagline} We break down raw API speeds, scalable monthly burn, developer satisfaction, and the true cost of ownership.
     </p>
+
+    <!-- Category Partner Spotlight Banner (Sponsor Slot) -->
+    <div class="mb-12 p-4 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+      <div class="flex items-center gap-2.5 text-slate-300 min-w-0">
+        <span class="px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold text-[10px] uppercase tracking-wider shrink-0">
+          PARTNER SPOTLIGHT
+        </span>
+        <span class="text-slate-400 truncate">
+          Looking to reach {duel.category} buyers &amp; engineering leads? Sponsor this vertical on HeliaTech.
+        </span>
+      </div>
+      <a 
+        href="/sponsor" 
+        class="shrink-0 text-cyan-400 hover:text-cyan-300 font-bold underline transition-colors"
+      >
+        Book Category Partner Slot ➔
+      </a>
+    </div>
 
     <!-- Contenders Ring Card (Hero Head-to-Head) -->
     <div class="p-6 sm:p-10 rounded-3xl bg-slate-900/70 border border-slate-800 backdrop-blur-2xl shadow-2xl relative overflow-hidden mb-16">
