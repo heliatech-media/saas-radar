@@ -84,6 +84,13 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
 
       <div class="h-6 w-px bg-slate-800 hidden sm:block"></div>
 
+      <!-- BADGE SYNCHRONISATION AUTOMATIQUE D1 -->
+      <div id="sentinel-sync-pill" class="px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold flex items-center gap-2 shadow-inner">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="hidden md:inline">Sync D1 :</span> <span id="sync-last-time">En direct</span>
+        <button onclick="triggerImmediateSync(this)" title="Forcer la synchronisation D1 immédiate" class="hover:text-white transition-all text-xs cursor-pointer ml-1 active:scale-95">🔄</button>
+      </div>
+
       <!-- COMPTEUR APPROBATIONS EN ATTENTE -->
       <button onclick="showSection('view-approvals')" class="px-3 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/40 text-indigo-300 text-xs font-bold transition-all flex items-center gap-1.5">
         <span>⏳</span> Approbations : <strong id="header-pending-count" class="text-white bg-indigo-500/40 px-1.5 py-0.2 rounded">1</strong>
@@ -241,14 +248,20 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
             <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-slate-500">Coût moyen : $0.00116 / article</div>
           </div>
 
-          <div class="p-5 rounded-2xl bg-[#080d16] border border-amber-500/30 shadow-lg shadow-amber-950/10">
+          <div class="p-5 rounded-2xl bg-[#080d16] border border-fuchsia-500/30 shadow-lg shadow-fuchsia-950/10">
             <div class="flex justify-between items-start">
-              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. En Attente d'Envoi</span>
-              <span class="text-amber-400 text-sm">⏳</span>
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. Abonnés Newsletter (D1)</span>
+              <span class="text-fuchsia-400 text-sm">📬</span>
             </div>
-            <div id="kpi-newsletter-date" class="text-2xl font-black text-amber-300 mt-2">Jeudi 12 Nov.</div>
-            <div class="text-[11px] text-slate-300 mt-1">Fenêtre 09:00 America/New_York</div>
-            <div class="mt-3 pt-3 border-t border-slate-800 text-[10px] text-amber-400 font-bold">Brouillon #055 verrouillé (ACID)</div>
+            <div id="kpi-subscribers-count" class="text-2xl font-black text-fuchsia-300 mt-2">142 Abonnés</div>
+            <div class="text-[11px] text-emerald-400 mt-1 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Sync Cloudflare D1 en direct
+            </div>
+            <div class="mt-3 pt-3 border-t border-slate-800 flex justify-between items-center text-[10px]">
+              <span id="kpi-newsletter-date" class="text-amber-400 font-bold">Édition #055 en attente</span>
+              <button onclick="showSection('view-newsletter')" class="text-cyan-400 hover:text-cyan-200 underline">Voir registre →</button>
+            </div>
           </div>
 
           <div class="p-5 rounded-2xl bg-[#080d16] border border-emerald-500/30 shadow-lg shadow-emerald-950/10">
@@ -2024,6 +2037,8 @@ const metaRobots = "noindex, nofollow, noarchive, nosnippet";
         if (data.subscribers_summary) {
           const subsBadge = document.getElementById('sidebar-subs-badge');
           if (subsBadge) subsBadge.innerText = data.subscribers_summary.total;
+          const kpiSubs = document.getElementById('kpi-subscribers-count');
+          if (kpiSubs) kpiSubs.innerText = `${data.subscribers_summary.total} Abonnés`;
         }
 
         if (data.inventory_summary) {
@@ -3227,9 +3242,64 @@ ${data.message || `Brief éditorial pour '${toolName}' transmis aux agents avec 
       }
     }
 
+    let isAutoSyncRunning = false;
+    async function autoSyncSentinelAdmin(showVisualFeedback = false) {
+      if (isAutoSyncRunning) return;
+      isAutoSyncRunning = true;
+      const syncBtn = document.querySelector('#sentinel-sync-pill button');
+      if (showVisualFeedback && syncBtn) syncBtn.classList.add('animate-spin');
+
+      try {
+        // 1. Synchronisation temps réel des KPIs Cockpit
+        await loadCockpit();
+
+        // 2. Synchronisation de la vue actuellement active pour l'utilisateur
+        const activeSection = document.querySelector('.content-view:not(.hidden)')?.id;
+        if (activeSection === 'view-newsletter') {
+          await fetchSubscribers(false);
+        } else if (activeSection === 'view-approvals') {
+          await fetchApprovals();
+        } else if (activeSection === 'view-agents') {
+          await fetchAgents();
+        } else if (activeSection === 'view-audit') {
+          await fetchAuditLogs();
+        }
+
+        // 3. Mise à jour de l'indicateur d'horodatage
+        const syncTimeEl = document.getElementById('sync-last-time');
+        if (syncTimeEl) {
+          const now = new Date();
+          syncTimeEl.innerText = now.toLocaleTimeString('fr-FR');
+        }
+      } catch (err) {
+        console.warn('[Sentinel AutoSync] Refresh notice:', err);
+      } finally {
+        isAutoSyncRunning = false;
+        if (showVisualFeedback && syncBtn) {
+          setTimeout(() => syncBtn.classList.remove('animate-spin'), 600);
+        }
+      }
+    }
+
+    async function triggerImmediateSync(btnEl) {
+      if (btnEl) btnEl.classList.add('animate-spin');
+      try {
+        await safeFetchJson('/api/sentinel/sync');
+      } catch (_) {}
+      await autoSyncSentinelAdmin(true);
+      if (btnEl) setTimeout(() => btnEl.classList.remove('animate-spin'), 600);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       applyDecisionsUI();
       loadCockpit();
+      fetchSubscribers(false); // Pré-charge les abonnés dès l'ouverture
+      fetchApprovals();         // Pré-charge les approbations
+
+      // Démarrage de la boucle de synchronisation automatique (toutes les 15s)
+      setInterval(() => {
+        autoSyncSentinelAdmin(false);
+      }, 15000);
     });
   
     // =========================================================================

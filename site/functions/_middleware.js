@@ -103,8 +103,11 @@ export async function onRequest(context) {
       referer.includes('127.0.0.1')
     );
 
-    // Check 5: Internal Sentinel Admin Client Request
-    const hasAdminHeader = (requestedWith === 'Sentinel-Admin');
+    // Check 5: Internal Sentinel Admin / Cockpit Client Request
+    const hasAdminHeader = (
+      requestedWith === 'Sentinel-Admin' || 
+      requestedWith === 'Sentinel-Cockpit'
+    );
 
     const isLocalhost = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
 

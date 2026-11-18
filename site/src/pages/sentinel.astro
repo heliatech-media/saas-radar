@@ -352,6 +352,35 @@ const catalogData = {
           </div>
         </div>
 
+        <!-- SENTINEL GOVERNANCE & D1 REAL-TIME SYNC BANNER -->
+        <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800/90 backdrop-blur-xl flex flex-wrap items-center justify-between gap-3 text-xs font-mono shadow-lg">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-slate-400 font-medium">Flotte Autonome :</span>
+              <span id="sentinel-fleet-status" class="text-emerald-300 font-bold">24 / 24 Agents Actifs</span>
+            </div>
+            <span class="text-slate-700 hidden sm:inline">•</span>
+            <div class="flex items-center gap-2">
+              <span class="text-fuchsia-400">📬</span>
+              <span class="text-slate-400 font-medium">Abonnés Newsletter D1 :</span>
+              <span id="sentinel-subscribers-status" class="text-fuchsia-300 font-bold">142 Abonnés Certifiés</span>
+            </div>
+            <span class="text-slate-700 hidden sm:inline">•</span>
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400">🛡️</span>
+              <span class="text-slate-400 font-medium">Partenariats Vérifiés :</span>
+              <span id="sentinel-deals-status" class="text-amber-300 font-bold">12 / 12 Offres Actives</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] text-slate-500">Sync Auto D1 : <span id="sentinel-sync-time" class="text-cyan-400">En direct (20s)</span></span>
+            <a href="/sentinel/admin" class="px-2.5 py-1 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-[10px] text-cyan-300 hover:text-white transition-all flex items-center gap-1 font-bold">
+              <span>Console Admin Patron ➔</span>
+            </a>
+          </div>
+        </div>
+
         <!-- TIME WINDOW FILTER TOOLBAR -->
         <div class="p-3 sm:p-4 rounded-2xl bg-slate-900/80 border border-slate-800/90 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs shadow-lg shadow-black/20">
           <div class="flex items-center gap-2.5 text-slate-300">
@@ -1800,6 +1829,36 @@ const catalogData = {
                 }
                 renderRealDashboard();
               }
+            }
+
+            // Synchronisation automatique temps réel avec Cloudflare D1
+            try {
+              const cockpitRes = await fetch('/api/sentinel/cockpit?t=' + Date.now(), {
+                headers: { 'X-Requested-With': 'Sentinel-Cockpit' }
+              });
+              if (cockpitRes.ok) {
+                const cp = await cockpitRes.json();
+                if (cp) {
+                  const fleetEl = document.getElementById('sentinel-fleet-status');
+                  if (fleetEl && cp.fleet) {
+                    fleetEl.innerText = `${cp.fleet.active_agents} / ${cp.fleet.total_agents} Agents Actifs`;
+                  }
+                  const subsEl = document.getElementById('sentinel-subscribers-status');
+                  if (subsEl && cp.subscribers_summary) {
+                    subsEl.innerText = `${cp.subscribers_summary.total} Abonnés Certifiés`;
+                  }
+                  const dealsEl = document.getElementById('sentinel-deals-status');
+                  if (dealsEl && cp.inventory_summary) {
+                    dealsEl.innerText = `${cp.inventory_summary.deals_verified} / 12 Offres Actives`;
+                  }
+                  const syncTimeEl = document.getElementById('sentinel-sync-time');
+                  if (syncTimeEl) {
+                    syncTimeEl.innerText = new Date().toLocaleTimeString('fr-FR');
+                  }
+                }
+              }
+            } catch (cpErr) {
+              console.warn('Sentinel cockpit sync notice:', cpErr);
             }
           } catch(e) {
             console.error('Fetch latest telemetry notice:', e);
