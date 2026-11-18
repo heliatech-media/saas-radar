@@ -1,7 +1,15 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 18,
+  "total_sent": 19,
   "dispatches": [
+    {
+      "type": "sponsor_outreach_followup_media_kit",
+      "recipient": "doyle@emaildoyle.co",
+      "from": "partnership@heliatech.online",
+      "subject": "Re: Outreach preview for HeliaTech Radar",
+      "dispatched_at": "2026-11-18T00:12:47.156462+00:00",
+      "resend_id": "01a1ebff-8e4d-7031-9403-29a56f1561d2"
+    },
     {
       "type": "sponsor_outreach_reply",
       "recipient": "doyle@emaildoyle.co",
