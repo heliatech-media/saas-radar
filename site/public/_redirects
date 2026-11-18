@@ -1,9 +1,6 @@
 # HeliaTech Autonomous Affiliate & Deep-Link Redirect Mesh
 # Format: /go/:tool <destination> 302
 
-/reviews /radar/ 301
-/reviews/ /radar/ 301
-
 /go/activepieces https://www.activepieces.com 302
 /go/adcreative-ai https://www.adcreative.ai/?fp_ref=heliatech 302
 /go/ahrefs https://ahrefs.com/?via=heliatech 302
@@ -41,7 +38,7 @@
 /go/gamma https://gamma.app/?via=heliatech 302
 /go/gamma-app https://gamma.app/signup?r=heliatech 302
 /go/gamma-enterprise-sandbox https://www.gamma-enterprise-sandbox.com 302
-/go/getimg-ai https://www.getimg-ai.com 302
+/go/getimg-ai https://getimg.ai/?via=heliatech 302
 /go/guidde https://www.guidde.com/?via=heliatech 302
 /go/height https://www.height.com 302
 /go/heygen https://www.heygen.com/?via=heliatech 302

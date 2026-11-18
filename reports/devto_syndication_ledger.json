@@ -1089,6 +1089,19 @@
         "saas",
         "automation"
       ]
+    },
+    "clickup-creative-studio-brain-2-video-ai": {
+      "id": 5060579,
+      "url": "https://dev.to/heliatech/clickup-creative-studio-ai-video-generation-inside-brain2-2a1e",
+      "title": "ClickUp Creative Studio: AI Video Generation Inside Brain²",
+      "canonical_url": "https://heliatech.online/blog/clickup-creative-studio-brain-2-video-ai",
+      "published": true,
+      "tags": [
+        "clickup",
+        "clickupcreativestudio",
+        "clickupbrain",
+        "brain"
+      ]
     }
   },
   "last_sync": null

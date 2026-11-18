@@ -103,7 +103,7 @@ Evaluating the economics of these tools requires looking beyond sticker prices t
 *   **PhantomBuster (Aggressive Scaling):** 
     *   Cost: Requires Enterprise or multiple custom capacity upgrades (approx. $399+/month).
     *   *Math:* Managing 50,000 extractions requires strict scheduling to avoid hitting platform rate limits (especially on LinkedIn). You must account for proxy costs and failure rates (e.g., authentication drops requiring manual cookie refreshes).
-*   **Apollo.io (Scale Plan):** 
+*   **[Apollo.io](/reviews/apollo-io) (Scale Plan):** 
     *   Cost: ~$119–$149 per user/month, plus credit expansions.
     *   *Math:* Predictable credit model. Querying and exporting 50,000 records takes minutes, though database match rates for niche verticals may dip below 60%.
 

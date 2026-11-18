@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-17T15:14:35.721999",
+  "timestamp": "2026-11-18T00:15:15.858432",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 244,
+    "total_content_files_scanned": 247,
     "total_redirects_active": 140,
-    "new_redirects_healed": 44,
+    "new_redirects_healed": 43,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -225,11 +225,6 @@
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
       "source_file": "best-deel-alternatives-2026.md"
-    },
-    {
-      "slug": "getimg-ai",
-      "target_url": "https://www.getimg-ai.com",
-      "source_file": "getimg-ai-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

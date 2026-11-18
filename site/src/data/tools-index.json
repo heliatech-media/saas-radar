@@ -682,6 +682,16 @@
     "commission_rate": "20% recurring for up to 12 months"
   },
   {
+    "name": "Replicate",
+    "slug": "replicate",
+    "tagline": "Run open-source machine learning models with cloud APIs in minutes without managing GPU infrastructure.",
+    "category": "Cloud AI Model Inference & Serverless GPUs",
+    "rating": 4.6,
+    "starting_price": "$0/mo",
+    "best_for": "Software engineers, indie hackers, and product teams building AI-powered applications without dedicated ML infrastructure engineers.",
+    "affiliate_url": "https://replicate.com"
+  },
+  {
     "name": "Resemble AI",
     "slug": "resemble-ai",
     "tagline": "Enterprise-grade generative voice AI platform for ultra-realistic speech synthesis and real-time voice cloning.",

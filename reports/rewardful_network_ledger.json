@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-17T15:11:55.865094",
+  "timestamp": "2026-11-18T00:13:50.481333",
   "master_token": "heliatech",
   "master_link": "https://www.rewardful.com/?via=heliatech",
   "total_rewardful_partners": 11,
-  "new_routes_added": 1,
+  "new_routes_added": 0,
   "partners": [
     {
       "slug": "rewardful",
@@ -103,9 +103,9 @@
       "payout": "25% recurring / $50k+ mo creator pool",
       "affiliate_url": "https://www.headshotpro.com/?via=heliatech",
       "redirect_path": "/go/headshotpro",
-      "discovered_at": "2026-11-17T15:11:55.972766",
+      "discovered_at": "2026-11-18T00:13:50.648782",
       "fingerprint_verified": false
     }
   ],
-  "last_discovery": "2026-11-17T15:11:55.972856"
+  "last_discovery": "2026-11-18T00:13:50.648874"
 }

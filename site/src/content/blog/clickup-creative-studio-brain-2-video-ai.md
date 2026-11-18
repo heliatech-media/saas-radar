@@ -1,34 +1,45 @@
 ---
 title: 'ClickUp Creative Studio: AI Video Generation Inside Brain²'
-description: 'ClickUp announces Creative Studio powered by Brain²: turn tasks and docs into video, shot-by-shot storyboard approvals, timeline editing, and real-time multiplayer cursors.'
+description: 'ClickUp announces Creative Studio powered by Brain²: turn tasks and
+  docs into video, shot-by-shot storyboard approvals, timeline editing, and real-time
+  multiplayer cursors.'
 date: '2026-11-18'
 author: HELIA TECH
 category: Work OS & Video AI
 tags:
-  - ClickUp
-  - ClickUp Creative Studio
-  - ClickUp Brain
-  - Brain²
-  - AI Video Generation
-  - Work OS
-  - Descript Alternatives
+- ClickUp
+- ClickUp Creative Studio
+- ClickUp Brain
+- Brain²
+- AI Video Generation
+- Work OS
+- Descript Alternatives
 readingTime: 11 MIN
 tool_slug: clickup
-image: /images/blog/clickup-creative-studio.svg
+image: /images/blog/clickup.svg
 tldr:
-  - ClickUp has officially launched Creative Studio in beta, powered by its next-generation Brain² multimodal AI engine.
-  - Teams can now convert any workspace asset—tasks, PRDs, sprint tickets, or marketing briefs—directly into fully produced AI video assets without leaving their project management interface.
-  - Key architectural features include shot-by-shot storyboard approvals, synthetic voiceovers, procedural background scores, multi-track timeline editing, and Figma-style live multiplayer cursors.
-  - By embedding a non-linear video editor directly into its Work OS data graph, ClickUp mounts a direct offensive against standalone video tools like Descript, Loom, and Canva.
-  - While offering massive consolidation potential, teams must weigh ClickUp's historical DOM latency and client-side performance against the benefits of unified video workflows.
+- ClickUp has officially launched Creative Studio in beta, powered by its next-generation
+  Brain² multimodal AI engine.
+- Teams can now convert any workspace asset—tasks, PRDs, sprint tickets, or marketing
+  briefs—directly into fully produced AI video assets without leaving their project
+  management interface.
+- Key architectural features include shot-by-shot storyboard approvals, synthetic
+  voiceovers, procedural background scores, multi-track timeline editing, and Figma-style
+  live multiplayer cursors.
+- By embedding a non-linear video editor directly into its Work OS data graph, ClickUp
+  mounts a direct offensive against standalone video tools like Descript, Loom, and
+  Canva.
+- While offering massive consolidation potential, teams must weigh ClickUp's historical
+  DOM latency and client-side performance against the benefits of unified video workflows.
 affiliate_cta:
-  badge: "BREAKING WORK OS RELEASE"
-  title: "Evaluate ClickUp Creative Studio for Your Organization"
-  description: "Test ClickUp Brain² and Creative Studio to determine whether consolidated video and task workflows can eliminate your team's third-party video licensing costs."
-  button_text: "Explore ClickUp Creative Studio ↗"
-  url: "/go/clickup"
+  badge: BREAKING WORK OS RELEASE
+  title: Evaluate ClickUp Creative Studio for Your Organization
+  description: Test ClickUp Brain² and Creative Studio to determine whether consolidated
+    video and task workflows can eliminate your team's third-party video licensing
+    costs.
+  button_text: Explore ClickUp Creative Studio ↗
+  url: /go/clickup
 ---
-
 ## Executive Summary: ClickUp's Most Ambitious Bet Since ClickUp 3.0
 
 For years, the project management sector treated video as an external artifact. Product managers drafted specs in Notion or ClickUp, recorded walkthroughs in **Loom**, chopped product highlights in **Descript** or **CapCut**, and then pasted shareable URLs back into tickets for cross-functional review. 
@@ -167,7 +178,7 @@ The introduction of native video creation inside a dominant Work OS creates acut
 | **Async Video Messaging** | Loom (Atlassian), Vidyard | **HIGH** | Eliminates separate $12.50–$20/user/mo license; recordings live directly inside task tickets with automatic AI summaries. |
 | **Transcription & Speech NLE** | Descript, Riverside.fm | **MEDIUM-HIGH** | Eliminates the need to export footage to transcribe and chop; subtitles and word-level edits happen in-browser. |
 | **Generative Social Video** | InVideo AI, CapCut, Canva | **MEDIUM** | For B2B marketing teams, ClickUp links video outputs directly to campaign deadlines, assigned designers, and asset reviews. |
-| **AI Avatars & Synthetic Video** | HeyGen, Synthesia | **MODERATE** | While HeyGen excels at hyper-realistic digital twin avatars, ClickUp satisfies 80% of internal training and update use cases without third-party fees. |
+| **AI Avatars & Synthetic Video** | [HeyGen](/reviews/heygen), Synthesia | **MODERATE** | While HeyGen excels at hyper-realistic digital twin avatars, ClickUp satisfies 80% of internal training and update use cases without third-party fees. |
 
 ### The Consolidation Math for CIOs and CFOs
 For a 100-person SaaS company, maintaining fragmented tools is expensive:
