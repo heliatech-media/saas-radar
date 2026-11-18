@@ -51,6 +51,7 @@ def generate_invoice(
     client_address: str = "San Francisco, CA, United States",
     client_tax_id: str = "N/A (International)",
     tier: str = "newsletter",
+    payment_method: str = "wire",
     custom_title: str = None,
     custom_desc: str = None,
     custom_amount: str = None,
@@ -80,12 +81,74 @@ def generate_invoice(
     with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
         html = f.read()
 
+    # Dynamic single payment method chosen by the client
+    method_normalized = (payment_method or "wire").strip().lower()
+    actual_paypal_email = paypal_email or DEFAULT_BANKING["paypal_email"]
+    actual_paypal_url = paypal_payment_url or DEFAULT_BANKING["paypal_payment_url"]
+    actual_bank_beneficiary = bank_beneficiary or DEFAULT_BANKING["bank_beneficiary"]
+    actual_bank_name = bank_name or DEFAULT_BANKING["bank_name"]
+    actual_bank_iban = bank_iban or DEFAULT_BANKING["bank_iban"]
+    actual_bank_swift = bank_swift or DEFAULT_BANKING["bank_swift"]
+
+    if method_normalized in ["paypal", "pp"]:
+        payment_method_label = "PayPal Business Instant Transfer"
+        payment_instructions_section = f"""<div class="payment-section">
+      <div class="payment-title">⚡ INSTRUCTIONS DE RÈGLEMENT / PAYMENT INSTRUCTIONS (PAYPAL BUSINESS)</div>
+      
+      <div style="background: #ffffff; padding: 22px 24px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+        <div style="flex: 1;">
+          <div style="font-weight: 800; font-size: 14px; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 18px;">🅿️</span> Règlement par Compte PayPal Business
+          </div>
+          <div style="font-size: 12px; line-height: 1.8; color: #334155;">
+            <strong>Compte PayPal destinataire :</strong> <span class="mono" style="font-weight: 800; color: #0284c7; font-size: 13px;">{actual_paypal_email}</span><br/>
+            <strong>Type de transfert :</strong> Biens &amp; Services professionnels B2B<br/>
+            <strong>Référence obligatoire :</strong> <span class="mono" style="background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-weight: 800; color: #0f172a;">Facture #{inv_num}</span>
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="{actual_paypal_url}" target="_blank" class="pay-btn" style="display: inline-block; background: #0070ba; color: #ffffff; text-decoration: none; padding: 12px 26px; border-radius: 8px; font-weight: 800; font-size: 12px; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0, 112, 186, 0.25);">
+            Régler ${amount} via PayPal.me ➔
+          </a>
+          <div style="font-size: 11px; color: #64748b; margin-top: 6px;">Confirmation et reçu comptable instantanés</div>
+        </div>
+      </div>
+    </div>"""
+    else:
+        # Default: Virement Bancaire (Bank Wire Transfer)
+        payment_method_label = "Virement Bancaire (Bank Wire / SEPA / SWIFT)"
+        payment_instructions_section = f"""<div class="payment-section">
+      <div class="payment-title">⚡ INSTRUCTIONS DE RÈGLEMENT / PAYMENT INSTRUCTIONS (BANK WIRE TRANSFER)</div>
+      
+      <div style="background: #ffffff; padding: 22px 24px; border-radius: 12px; border: 1px solid #e2e8f0;">
+        <div style="font-weight: 800; font-size: 14px; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 18px;">🏛️</span> Virement Bancaire International (SEPA / SWIFT / ACH)
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 12px; line-height: 1.8; color: #334155;">
+          <div>
+            <strong>Bénéficiaire :</strong> <span class="mono" style="font-weight: 600;">{actual_bank_beneficiary}</span><br/>
+            <strong>Établissement bancaire :</strong> <span class="mono">{actual_bank_name}</span><br/>
+            <strong>Devises acceptées :</strong> <span class="mono">USD ($) &amp; EUR (€)</span>
+          </div>
+          <div>
+            <strong>IBAN / Compte :</strong> <span class="mono" style="font-weight: 800; color: #0284c7; font-size: 13px;">{actual_bank_iban}</span><br/>
+            <strong>Code BIC / SWIFT :</strong> <span class="mono" style="font-weight: 700;">{actual_bank_swift}</span><br/>
+            <strong>Motif obligatoire du virement :</strong> <span class="mono" style="background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-weight: 800; color: #0f172a;">Facture #{inv_num}</span>
+          </div>
+        </div>
+        <div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11px; color: #64748b;">
+          ℹ️ Merci d'indiquer impérativement le numéro de facture <strong>#{inv_num}</strong> dans l'ordre de virement pour valider votre parution.
+        </div>
+      </div>
+    </div>"""
+
     replacements = {
         "invoice_number": inv_num,
         "invoice_status": "PENDING PAYMENT",
         "invoice_date": inv_date,
         "due_date": due_date,
         "payment_terms": "Due Upon Receipt (Net 15)",
+        "payment_method_label": payment_method_label,
         "currency": "USD",
         "client_company": client_company,
         "client_contact": client_contact,
@@ -96,33 +159,30 @@ def generate_invoice(
         "item_description": item_desc,
         "item_period": period,
         "amount": amount,
-        "bank_beneficiary": bank_beneficiary or DEFAULT_BANKING["bank_beneficiary"],
-        "bank_name": bank_name or DEFAULT_BANKING["bank_name"],
-        "bank_iban": bank_iban or DEFAULT_BANKING["bank_iban"],
-        "bank_swift": bank_swift or DEFAULT_BANKING["bank_swift"],
-        "paypal_email": paypal_email or DEFAULT_BANKING["paypal_email"],
-        "paypal_payment_url": paypal_payment_url or DEFAULT_BANKING["paypal_payment_url"]
+        "payment_instructions_section": payment_instructions_section
     }
 
     for key, value in replacements.items():
         html = html.replace("{{" + key + "}}", str(value))
 
     safe_name = "".join(c for c in client_company if c.isalnum() or c in ("-", "_")).lower()
-    out_name = output_filename or f"invoice_{inv_num}_{safe_name}.html"
+    method_slug = "paypal" if method_normalized in ["paypal", "pp"] else "wire"
+    out_name = output_filename or f"invoice_{inv_num}_{safe_name}_{method_slug}.html"
     out_path = OUTPUT_DIR / out_name
 
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
 
-    print(f"[+] Invoice generated successfully: {out_path}")
+    print(f"[+] Invoice generated successfully ({payment_method_label}): {out_path}")
     return out_path
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate a professional B2B invoice for HeliaTech sponsors (Wire & PayPal).")
+    parser = argparse.ArgumentParser(description="Generate a professional B2B invoice for HeliaTech sponsors with the client's chosen payment method.")
     parser.add_argument("--client", required=True, help="Client/Company name (e.g. 'Resend Inc.')")
     parser.add_argument("--contact", default="Partnerships Team", help="Contact person or department")
     parser.add_argument("--email", default="finance@company.com", help="Client billing email")
     parser.add_argument("--tier", choices=["newsletter", "spotlight", "masterclass"], default="newsletter", help="Sponsorship package tier")
+    parser.add_argument("--method", choices=["wire", "paypal", "virement"], default="wire", help="Payment method chosen by client: 'wire' (Bank wire) or 'paypal'")
     parser.add_argument("--amount", default=None, help="Custom amount in USD")
     parser.add_argument("--period", default=None, help="Custom service period / issue number")
     parser.add_argument("--iban", default=None, help="Custom IBAN or Account Number")
@@ -136,6 +196,7 @@ def main():
         client_contact=args.contact,
         client_email=args.email,
         tier=args.tier,
+        payment_method=args.method,
         custom_amount=args.amount,
         custom_period=args.period,
         bank_iban=args.iban,
