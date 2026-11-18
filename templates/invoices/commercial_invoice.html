@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice {{invoice_number}} | HeliaTech Media</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #030712;
+      color: #0f172a;
+      padding: 40px 20px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .invoice-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 48px 56px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top-accent-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .logo-badge {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: #0284c7;
+      color: #ffffff;
+      border-radius: 8px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: #0f172a;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .invoice-meta {
+      text-align: right;
+    }
+
+    .invoice-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .invoice-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: #0284c7;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #047857;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .parties-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 36px;
+    }
+
+    .party-title {
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .party-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .party-details {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .table-container {
+      margin-bottom: 32px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748b;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    td {
+      padding: 18px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 14px;
+      color: #1e293b;
+      vertical-align: top;
+    }
+
+    .item-desc {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .totals-area {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 36px;
+    }
+
+    .totals-box {
+      width: 320px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    .grand-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0 0 0;
+      margin-top: 8px;
+      border-top: 2px solid #0f172a;
+      font-size: 18px;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .grand-total .amount {
+      color: #0284c7;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .payment-section {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .payment-title {
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0284c7;
+      margin-bottom: 12px;
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .payment-cta {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pay-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: #0284c7;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 24px;
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+      }
+      .invoice-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+        max-width: 100%;
+      }
+      .pay-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="invoice-wrapper">
+    <div class="top-accent-bar"></div>
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <div class="brand-logo">
+          <div class="logo-badge">H</div>
+          <div class="brand-name">HELIATECH</div>
+        </div>
+        <div class="brand-subtitle">RESEARCH &amp; MEDIA DIVISION</div>
+        <div class="party-details" style="margin-top: 6px;">
+          https://heliatech.online • partnership@heliatech.online
+        </div>
+      </div>
+
+      <div class="invoice-meta">
+        <div class="invoice-title">INVOICE</div>
+        <div class="invoice-num">#{{invoice_number}}</div>
+        <div class="status-badge">{{invoice_status}}</div>
+      </div>
+    </div>
+
+    <!-- Parties -->
+    <div class="parties-grid">
+      <!-- Billed To -->
+      <div>
+        <div class="party-title">BILLED TO (SPONSOR)</div>
+        <div class="party-name">{{client_company}}</div>
+        <div class="party-details">
+          <strong>Attn:</strong> {{client_contact}}<br/>
+          {{client_address}}<br/>
+          <strong>Tax / VAT ID:</strong> {{client_tax_id}}<br/>
+          <strong>Email:</strong> {{client_email}}
+        </div>
+      </div>
+
+      <!-- Invoice Details -->
+      <div>
+        <div class="party-title">INVOICE DETAILS</div>
+        <div class="party-details">
+          <strong>Invoice Date:</strong> <span class="mono">{{invoice_date}}</span><br/>
+          <strong>Due Date:</strong> <span class="mono">{{due_date}}</span><br/>
+          <strong>Payment Terms:</strong> {{payment_terms}}<br/>
+          <strong>Currency:</strong> {{currency}} (USD $)
+        </div>
+      </div>
+    </div>
+
+    <!-- Line Items Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 55%;">SERVICE DESCRIPTION</th>
+            <th class="text-right" style="width: 15%;">DISPATCH / PERIOD</th>
+            <th class="text-right" style="width: 15%;">RATE</th>
+            <th class="text-right" style="width: 15%;">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong style="color: #0f172a;">{{item_title}}</strong>
+              <div class="item-desc">
+                {{item_description}}
+              </div>
+            </td>
+            <td class="text-right mono" style="font-size: 13px;">
+              {{item_period}}
+            </td>
+            <td class="text-right mono" style="font-size: 13px;">
+              ${{amount}}
+            </td>
+            <td class="text-right mono" style="font-weight: 700; color: #0284c7;">
+              ${{amount}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Totals -->
+    <div class="totals-area">
+      <div class="totals-box">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span class="mono font-bold">${{amount}}</span>
+        </div>
+        <div class="total-row">
+          <span>Taxes / VAT (0% - Reverse Charge B2B):</span>
+          <span class="mono">$0.00</span>
+        </div>
+        <div class="grand-total">
+          <span>TOTAL DUE:</span>
+          <span class="amount">${{amount}} {{currency}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Instructions -->
+    <div class="payment-section">
+      <div class="payment-title">⚡ PAYMENT INSTRUCTIONS (WIRE / ACH / ONLINE)</div>
+      
+      <div class="payment-grid">
+        <div>
+          <strong>Bank Wire / ACH / SWIFT Transfer:</strong><br/>
+          Beneficiary: <span class="mono">{{bank_beneficiary}}</span><br/>
+          Bank: <span class="mono">{{bank_name}}</span><br/>
+          Account / IBAN: <span class="mono">{{bank_iban}}</span><br/>
+          Routing / SWIFT-BIC: <span class="mono">{{bank_swift}}</span>
+        </div>
+        <div>
+          <strong>Online Instant Payment:</strong><br/>
+          Corporate Credit Card (Visa, MasterCard, Amex) or Wire via Stripe Enterprise.<br/>
+          PayPal Business: <span class="mono">{{paypal_email}}</span>
+        </div>
+      </div>
+
+      <div class="payment-cta">
+        <span style="font-size: 11px; color: #64748b;">Click to pay securely online via corporate card:</span>
+        <a href="{{stripe_payment_url}}" target="_blank" class="pay-btn">Pay Online via Stripe ➔</a>
+      </div>
+    </div>
+
+    <!-- Legal & Tax Footer -->
+    <div class="footer">
+      <p style="font-weight: 700; color: #64748b; margin-bottom: 4px;">
+        HeliaTech Research &amp; Media Division • Global Technological Intelligence
+      </p>
+      <p>
+        Digital Advertising &amp; B2B Media Placement Services. Reverse charge applies according to Art. 44 &amp; 196 of VAT Directive / International Cross-Border Service Export.<br/>
+        Thank you for partnering with HeliaTech.
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
