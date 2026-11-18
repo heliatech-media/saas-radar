@@ -1114,6 +1114,19 @@
       "url": "https://dev.to/invideo-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/invideo-evolution-guide-2026",
       "status": "already_published"
+    },
+    "jasper": {
+      "id": 5068016,
+      "url": "https://dev.to/heliatech/jasper-ai-review-2026-seo-audits-pricing-57mi",
+      "title": "Jasper AI Review (2026): SEO Audits & Pricing",
+      "canonical_url": "https://heliatech.online/blog/jasper",
+      "published": true,
+      "tags": [
+        "jasper",
+        "aiseo",
+        "copywriting",
+        "saas"
+      ]
     }
   },
   "last_sync": null

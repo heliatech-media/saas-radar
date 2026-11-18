@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-18 11:23:28",
+  "timestamp": "2026-11-18 19:48:23",
   "total_links_audited": 145,
-  "healthy_links": 126,
-  "broken_links_count": 19,
-  "health_rate": "86.9%",
+  "healthy_links": 127,
+  "broken_links_count": 18,
+  "health_rate": "87.6%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -148,14 +148,6 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.writesonic-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.writesonic-rate-card.com', port=443): Failed to resolve 'www.writesonic-rate-card.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "zoominfo",
-      "target_url": "https://www.zoominfo.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.zoominfo.com', port=443): Read timed out. (read timeout=7)"
     }
   ],
   "audit_details": [
@@ -367,7 +359,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=DhsVDrbqKbp2fy&gsxid=DhsVDrbqKbp2fy&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Zwvu97XSH3rCMx&gsxid=Zwvu97XSH3rCMx&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -730,7 +722,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=eG04tiX0VmR2ol&gsxid=eG04tiX0VmR2ol&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=rkhJ0bs36Ofx46&gsxid=rkhJ0bs36Ofx46&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -758,7 +750,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LbMsyfgjoVTGad&gsxid=LbMsyfgjoVTGad&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=oxkUZdhDQvL5d8&gsxid=oxkUZdhDQvL5d8&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1188,10 +1180,9 @@
     {
       "slug": "zoominfo",
       "target_url": "https://www.zoominfo.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.zoominfo.com', port=443): Read timed out. (read timeout=7)"
+      "final_url": "https://www.zoominfo.com/",
+      "status_code": 200,
+      "healthy": true
     }
   ]
 }

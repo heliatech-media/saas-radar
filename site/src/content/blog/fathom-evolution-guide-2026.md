@@ -1,7 +1,7 @@
 ---
 title: 'Fathom AI Review (2026): AI Voice, Audio & Cost'
-description: Comprehensive 2026 review of Fathom AI. We test features, pricing plans, usability, and architecture to help
-  you decide if it is worth it for your stack.
+description: Comprehensive 2026 review of Fathom AI. We test features, pricing plans,
+  usability, and architecture to help you decide if it is worth it for your stack.
 date: '2026-11-07'
 author: HELIA TECH
 category: Audio/Podcasting
@@ -15,19 +15,21 @@ readingTime: 5 MIN
 tool_slug: fathom
 image: /images/blog/fathom.svg
 tldr:
-- Fathom disrupted the legacy transcription market by offering a high-accuracy, free-tier product that integrates directly
-  into the executive workflow.
-- The platform's core ROI lies in its ability to automate CRM data entry and generate instant, actionable summaries that eliminate
-  administrative overhead.
-- Our 15-minute blueprint demonstrates how to transition from manual note-taking to a fully automated meeting intelligence
-  system.
+- Fathom disrupted the legacy transcription market by offering a high-accuracy, free-tier
+  product that integrates directly into the executive workflow.
+- The platform's core ROI lies in its ability to automate CRM data entry and generate
+  instant, actionable summaries that eliminate administrative overhead.
+- Our 15-minute blueprint demonstrates how to transition from manual note-taking to
+  a fully automated meeting intelligence system.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Experience Fathom Free
-  description: Activate your account to unlock advanced enterprise features and streamline team velocity.
+  description: Activate your account to unlock advanced enterprise features and streamline
+    team velocity.
   button_text: Claim Your Free Fathom Account ➔
   url: https://fathom.video/?via=heliatech
-full_headline: 'Fathom: The AI Architect of the Post-Meeting Era and the Definitive Guide to Executive Recall'
+full_headline: 'Fathom: The AI Architect of the Post-Meeting Era and the Definitive
+  Guide to Executive Recall'
 ---
 For decades, the boardroom—and eventually the Zoom room—was a graveyard of lost ideas. Executives and sales professionals were forced into a binary choice: participate fully in the conversation and lose the details, or scribble notes frantically and lose the human connection. This cognitive load created a massive bottleneck in the enterprise, where the 'meeting after the meeting'—the manual task of summarizing, emailing, and updating CRMs—consumed more time than the actual strategy sessions. The market was saturated with clunky, expensive legacy transcription services that delivered 'word soup' rather than actionable intelligence. Then came Fathom.
 

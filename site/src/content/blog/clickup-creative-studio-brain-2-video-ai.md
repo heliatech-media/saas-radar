@@ -1,7 +1,8 @@
 ---
 title: 'Clickup Creative Studio Brain 2 Video Ai Review 2026: Prici'
-description: Comprehensive 2026 review of Clickup Creative Studio Brain 2 Video Ai. We test features, pricing, and performance
-  to help you decide if it fits your tech stack.
+description: Comprehensive 2026 review of Clickup Creative Studio Brain 2 Video Ai.
+  We test features, pricing, and performance to help you decide if it fits your tech
+  stack.
 date: '2026-11-18'
 author: HELIA TECH
 category: Work OS & Video AI
@@ -17,20 +18,25 @@ readingTime: 11 MIN
 tool_slug: clickup
 image: /images/blog/clickup.svg
 tldr:
-- ClickUp has officially launched Creative Studio in beta, powered by its next-generation Brain² multimodal AI engine.
-- Teams can now convert any workspace asset—tasks, PRDs, sprint tickets, or marketing briefs—directly into fully produced
-  AI video assets without leaving their project management interface.
-- Key architectural features include shot-by-shot storyboard approvals, synthetic voiceovers, procedural background scores,
-  multi-track timeline editing, and Figma-style live multiplayer cursors.
-- By embedding a non-linear video editor directly into its Work OS data graph, ClickUp mounts a direct offensive against standalone
-  video tools like Descript, Loom, and Canva.
-- While offering massive consolidation potential, teams must weigh ClickUp's historical DOM latency and client-side performance
-  against the benefits of unified video workflows.
+- ClickUp has officially launched Creative Studio in beta, powered by its next-generation
+  Brain² multimodal AI engine.
+- Teams can now convert any workspace asset—tasks, PRDs, sprint tickets, or marketing
+  briefs—directly into fully produced AI video assets without leaving their project
+  management interface.
+- Key architectural features include shot-by-shot storyboard approvals, synthetic
+  voiceovers, procedural background scores, multi-track timeline editing, and Figma-style
+  live multiplayer cursors.
+- By embedding a non-linear video editor directly into its Work OS data graph, ClickUp
+  mounts a direct offensive against standalone video tools like Descript, Loom, and
+  Canva.
+- While offering massive consolidation potential, teams must weigh ClickUp's historical
+  DOM latency and client-side performance against the benefits of unified video workflows.
 affiliate_cta:
   badge: BREAKING WORK OS RELEASE
   title: Evaluate ClickUp Creative Studio for Your Organization
-  description: Test ClickUp Brain² and Creative Studio to determine whether consolidated video and task workflows can eliminate
-    your team's third-party video licensing costs.
+  description: Test ClickUp Brain² and Creative Studio to determine whether consolidated
+    video and task workflows can eliminate your team's third-party video licensing
+    costs.
   button_text: Explore ClickUp Creative Studio ↗
   url: /go/clickup
 full_headline: 'ClickUp Creative Studio: AI Video Generation Inside Brain²'

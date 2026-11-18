@@ -1,7 +1,7 @@
 ---
 title: 'Minvo Review 2026: Pricing, Features & Verdict'
-description: Comprehensive 2026 review of Minvo. We test features, pricing plans, usability, and architecture to help you
-  decide if it is worth it for your stack.
+description: Comprehensive 2026 review of Minvo. We test features, pricing plans,
+  usability, and architecture to help you decide if it is worth it for your stack.
 date: '2026-11-07'
 author: HELIA TECH
 category: AI Video
@@ -15,16 +15,21 @@ readingTime: 5 MIN
 tool_slug: minvo
 image: /images/blog/minvo.svg
 tldr:
-- Minvo disrupts legacy editing bottlenecks by instantly converting hour-long recordings into platform-optimized short clips.
-- B2B marketing teams save hundreds of hours using automated speaker tracking, hook generation, and brand kit styling.
-- While credit consumption requires monitoring and hooks occasionally need manual tweaks, its speed and ROI remain unmatched.
+- Minvo disrupts legacy editing bottlenecks by instantly converting hour-long recordings
+  into platform-optimized short clips.
+- B2B marketing teams save hundreds of hours using automated speaker tracking, hook
+  generation, and brand kit styling.
+- While credit consumption requires monitoring and hooks occasionally need manual
+  tweaks, its speed and ROI remain unmatched.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Experience Minvo Free
-  description: Activate your account to unlock advanced enterprise features and streamline team velocity.
+  description: Activate your account to unlock advanced enterprise features and streamline
+    team velocity.
   button_text: Claim Your Free Minvo Account ➔
   url: /go/minvo
-full_headline: 'Minvo: The Genesis of AI Video Repurposing and the Hands-on Guide to Viral Velocity in 2026'
+full_headline: 'Minvo: The Genesis of AI Video Repurposing and the Hands-on Guide
+  to Viral Velocity in 2026'
 ---
 ## Architectural Overview: The 100k-Scale Video Repurposing Bottleneck
 

@@ -1,7 +1,7 @@
 ---
 title: 'Clay.com Review (2026): Workflow Speed & Cost'
-description: Comprehensive 2026 review of Clay.com. We test features, pricing plans, usability, and architecture to help you
-  decide if it is worth it for your stack.
+description: Comprehensive 2026 review of Clay.com. We test features, pricing plans,
+  usability, and architecture to help you decide if it is worth it for your stack.
 date: '2026-11-04'
 author: HELIA TECH
 category: B2B Sales Automation
@@ -15,18 +15,21 @@ readingTime: 5 MIN
 tool_slug: clay
 image: /images/blog/clay.svg
 tldr:
-- Clay disrupts the legacy prospecting model by acting as a connective layer between disparate data sources and AI-driven
-  automation.
-- The platform's 'waterfall' enrichment and programmable table interface save teams hundreds of hours by automating complex
-  manual research workflows.
-- Our 15-minute blueprint demonstrates how to transition from cold, generic outreach to context-aware, high-conversion communication.
+- Clay disrupts the legacy prospecting model by acting as a connective layer between
+  disparate data sources and AI-driven automation.
+- The platform's 'waterfall' enrichment and programmable table interface save teams
+  hundreds of hours by automating complex manual research workflows.
+- Our 15-minute blueprint demonstrates how to transition from cold, generic outreach
+  to context-aware, high-conversion communication.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Experience Clay Free
-  description: Activate your account to unlock advanced enterprise features and streamline team velocity.
+  description: Activate your account to unlock advanced enterprise features and streamline
+    team velocity.
   button_text: Claim Your Free Clay Account ➔
   url: /go/clay
-full_headline: 'Clay: The Death of Manual Prospecting and the Rise of the Data-Driven Outbound Engine'
+full_headline: 'Clay: The Death of Manual Prospecting and the Rise of the Data-Driven
+  Outbound Engine'
 ---
 ## The Death of the 'Spray and Pray' Era
 

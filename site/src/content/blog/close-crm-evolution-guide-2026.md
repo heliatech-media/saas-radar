@@ -1,7 +1,7 @@
 ---
 title: 'Close Crm Review (2026): B2B Leads & Pricing'
-description: Comprehensive 2026 review of Close Crm. We test features, pricing plans, usability, and architecture to help
-  you decide if it is worth it for your stack.
+description: Comprehensive 2026 review of Close Crm. We test features, pricing plans,
+  usability, and architecture to help you decide if it is worth it for your stack.
 date: '2026-11-12'
 author: HELIA TECH
 category: B2B Sales & CRM Intelligence
@@ -15,17 +15,21 @@ readingTime: 5 MIN
 tool_slug: close-crm
 image: /images/blog/close-crm.svg
 tldr:
-- Close was born from the frustration of bloated, legacy CRM systems, prioritizing speed and integrated communication over
-  administrative overhead.
-- By embedding calling, SMS, and email natively, Close eliminates the 'tab-switching' tax that drains sales team productivity.
-- Our 15-minute blueprint reveals how to architect an automated outreach sequence that reduces manual data entry by 40%.
+- Close was born from the frustration of bloated, legacy CRM systems, prioritizing
+  speed and integrated communication over administrative overhead.
+- By embedding calling, SMS, and email natively, Close eliminates the 'tab-switching'
+  tax that drains sales team productivity.
+- Our 15-minute blueprint reveals how to architect an automated outreach sequence
+  that reduces manual data entry by 40%.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Experience Close CRM Free
-  description: Activate your account to unlock advanced enterprise features and streamline team velocity.
+  description: Activate your account to unlock advanced enterprise features and streamline
+    team velocity.
   button_text: Claim Your Free Close CRM Account ➔
   url: /go/close-crm
-full_headline: 'Close CRM: The Anatomy of High-Velocity Sales and the Blueprint for Outpacing the Competition'
+full_headline: 'Close CRM: The Anatomy of High-Velocity Sales and the Blueprint for
+  Outpacing the Competition'
 ---
 ## The Friction Tax
 

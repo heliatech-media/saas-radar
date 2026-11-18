@@ -1,7 +1,7 @@
 ---
 title: 'Runway Review 2026: Pricing, Features & Verdict'
-description: Comprehensive 2026 review of Runway. We test features, pricing plans, usability, and architecture to help you
-  decide if it is worth it for your stack.
+description: Comprehensive 2026 review of Runway. We test features, pricing plans,
+  usability, and architecture to help you decide if it is worth it for your stack.
 date: '2026-11-11'
 author: HELIA TECH
 category: AI Video & Content Creation
@@ -15,18 +15,21 @@ readingTime: 5 MIN
 tool_slug: runway
 image: /images/blog/runway.svg
 tldr:
-- Runway evolved from an experimental art school project into the premier multimodal AI video engine dominating modern creative
-  workflows.
-- Gen-3 Alpha delivers cinematic b-roll, advanced rotoscoping, and physics-consistent video generation, saving studios thousands
-  of hours.
-- Mastering prompt engineering and browser-based timelines unlocks high-velocity video production for lean enterprise teams.
+- Runway evolved from an experimental art school project into the premier multimodal
+  AI video engine dominating modern creative workflows.
+- Gen-3 Alpha delivers cinematic b-roll, advanced rotoscoping, and physics-consistent
+  video generation, saving studios thousands of hours.
+- Mastering prompt engineering and browser-based timelines unlocks high-velocity video
+  production for lean enterprise teams.
 affiliate_cta:
   badge: OFFICIAL HELIATECH PARTNERSHIP
   title: Experience Runway Free
-  description: Activate your account to unlock advanced enterprise features and streamline team velocity.
+  description: Activate your account to unlock advanced enterprise features and streamline
+    team velocity.
   button_text: Claim Your Free Runway Account ➔
   url: /go/runway
-full_headline: 'Runway: The Evolution of Generative Cinema and the Masterclass Guide to AI Video Production'
+full_headline: 'Runway: The Evolution of Generative Cinema and the Masterclass Guide
+  to AI Video Production'
 ---
 # Runway Gen-3 Alpha Enterprise TCO & Autonomous Video Generation Analysis
 
