@@ -91,26 +91,26 @@ def generate_invoice(
     actual_bank_swift = bank_swift or DEFAULT_BANKING["bank_swift"]
 
     if method_normalized in ["paypal", "pp"]:
-        payment_method_label = "PayPal Business Instant Transfer"
+        payment_method_label = "PayPal Instant Transfer"
         payment_instructions_section = f"""<div class="payment-section">
-      <div class="payment-title">⚡ INSTRUCTIONS DE RÈGLEMENT / PAYMENT INSTRUCTIONS (PAYPAL BUSINESS)</div>
+      <div class="payment-title">⚡ INSTRUCTIONS DE RÈGLEMENT / PAYMENT INSTRUCTIONS (PAYPAL)</div>
       
       <div style="background: #ffffff; padding: 22px 24px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
         <div style="flex: 1;">
           <div style="font-weight: 800; font-size: 14px; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 18px;">🅿️</span> Règlement par Compte PayPal Business
+            <span style="font-size: 18px;">🅿️</span> Règlement par Compte PayPal
           </div>
           <div style="font-size: 12px; line-height: 1.8; color: #334155;">
             <strong>Compte PayPal destinataire :</strong> <span class="mono" style="font-weight: 800; color: #0284c7; font-size: 13px;">{actual_paypal_email}</span><br/>
-            <strong>Type de transfert :</strong> Biens &amp; Services professionnels B2B<br/>
+            <strong>Lien direct :</strong> <span class="mono" style="color: #0284c7;">{actual_paypal_url}</span><br/>
             <strong>Référence obligatoire :</strong> <span class="mono" style="background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-weight: 800; color: #0f172a;">Facture #{inv_num}</span>
           </div>
         </div>
         <div style="text-align: right;">
           <a href="{actual_paypal_url}" target="_blank" class="pay-btn" style="display: inline-block; background: #0070ba; color: #ffffff; text-decoration: none; padding: 12px 26px; border-radius: 8px; font-weight: 800; font-size: 12px; letter-spacing: 0.05em; box-shadow: 0 4px 12px rgba(0, 112, 186, 0.25);">
-            Régler ${amount} via PayPal.me ➔
+            Régler ${amount} via PayPal ➔
           </a>
-          <div style="font-size: 11px; color: #64748b; margin-top: 6px;">Confirmation et reçu comptable instantanés</div>
+          <div style="font-size: 11px; color: #64748b; margin-top: 6px;">Transfert direct avec confirmation immédiate</div>
         </div>
       </div>
     </div>"""
