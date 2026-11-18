@@ -62,12 +62,18 @@ In an era of stringent global privacy regulations, buying or scraping data reckl
 Data is only valuable if it flows smoothly into your tech stack. Lusha offers powerful integrations with leading CRMs like Salesforce and HubSpot, enabling automated contact enrichment, deduplication, and lead routing straight out of the box.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[Lusha Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ Lusha Core Engine<br/>Automated B2B Sales Intelligence Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 > [!TIP]

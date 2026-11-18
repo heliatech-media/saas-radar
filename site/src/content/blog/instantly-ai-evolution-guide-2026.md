@@ -50,12 +50,18 @@ Instantly.ai serves as the centralized command center for revenue teams, offerin
 *   **Advanced Deliverability Stack:** From custom tracking domains to smart ESP rotation, the tool handles the technical heavy lifting that keeps your domain health in the green.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[Instantly.ai Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ Instantly.ai Core Engine<br/>Automated Sales Automation Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 > [!TIP]

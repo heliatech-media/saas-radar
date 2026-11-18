@@ -52,12 +52,18 @@ Modern organizations operate at a relentless pace where speed-to-market and visu
 *   **Modern, Non-Corporate Aesthetics:** Forget generic, dated templates. Tome’s design engine naturally enforces modern typography, whitespace, and visual balance that instantly elevates brand authority.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[Tome Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ Tome Core Engine<br/>Automated AI Video + Presentation Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 ## 3. Hands-on Workshop (15-Minute Blueprint)

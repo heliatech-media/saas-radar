@@ -60,12 +60,18 @@ For enterprise organizations, software must do more than look sleek—it must di
 * **Built-in Engagement Analytics:** Sharing PDFs is a black hole—you never know if the recipient actually read your proposal. Gamma generates live web links with embedded analytics, tracking view counts, time spent per card, and audience drop-off points, giving sales and customer success teams actionable intelligence.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[Gamma Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ Gamma Core Engine<br/>Automated AI Presentation + Document C Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 ## 3. Hands-on Workshop (15-Minute Blueprint): From Prompt to Enterprise Pitch

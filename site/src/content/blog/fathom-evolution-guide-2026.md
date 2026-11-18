@@ -49,12 +49,18 @@ Fathom’s dominance in the B2B sector is built on three pillars of high-value a
 *   **Instant Snippet Architecture:** Fathom allows users to 'highlight' moments during a live call. These highlights are instantly converted into shareable video snippets. Instead of sending a 60-minute recording to a VP, a manager can send a 30-second clip of the client expressing a specific pain point. This radical transparency accelerates the feedback loop across the entire organization.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[Fathom Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ Fathom Core Engine<br/>Automated Audio/Podcasting Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 > [!TIP]

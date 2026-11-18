@@ -491,22 +491,22 @@ const jsonLd = {
             theme: 'dark',
             securityLevel: 'loose',
             flowchart: {
-              useMaxWidth: false,
+              useMaxWidth: true,
               htmlLabels: true,
               curve: 'basis',
-              nodeSpacing: 35,
-              rankSpacing: 40
+              nodeSpacing: 45,
+              rankSpacing: 50
             },
             themeVariables: {
               darkMode: true,
-              background: '#090e1a',
+              background: 'transparent',
               primaryColor: '#0c1425',
               primaryTextColor: '#f8fafc',
               primaryBorderColor: '#0284c7',
               lineColor: '#38bdf8',
               secondaryColor: '#1e293b',
               tertiaryColor: '#0c1425',
-              fontSize: '13.5px',
+              fontSize: '14px',
               fontFamily: 'Inter, system-ui, sans-serif'
             }
           });
@@ -516,19 +516,18 @@ const jsonLd = {
             wrapper.className = 'my-8 rounded-2xl bg-[#090e1a] border border-cyan-500/20 shadow-2xl overflow-hidden';
 
             const header = document.createElement('div');
-            header.className = 'flex items-center justify-between px-5 py-2.5 bg-slate-900/80 border-b border-white/[0.08] text-xs font-mono text-slate-400';
+            header.className = 'flex items-center justify-between px-5 py-3 bg-slate-900/90 border-b border-white/[0.08] text-xs font-mono text-slate-400';
             header.innerHTML = `
               <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
                 <span class="text-cyan-300 font-bold tracking-wider">SYSTEM ARCHITECTURE</span>
               </div>
-              <span class="text-[11px] text-slate-500 hidden sm:inline">↔ Drag or scroll to explore</span>
+              <span class="text-[11px] text-slate-400 hidden sm:inline">↔ Drag or scroll to explore</span>
             `;
             wrapper.appendChild(header);
 
             const canvas = document.createElement('div');
-            canvas.className = 'mermaid-body p-6 overflow-x-auto flex justify-center items-center';
-            canvas.style.webkitOverflowScrolling = 'touch';
+            canvas.className = 'mermaid-body';
             wrapper.appendChild(canvas);
 
             try {

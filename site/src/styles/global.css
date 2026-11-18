@@ -347,11 +347,10 @@ netlify-feedback,
    MERMAID HIGH-IMPACT ARCHITECTURAL DIAGRAMS (ELITE FORENSIC SUITE)
    ========================================================================== */
 .mermaid-body {
-  padding: 1.5rem;
+  padding: 2.25rem 1.75rem;
   overflow-x: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.04) 0%, rgba(9, 14, 26, 0.98) 100%);
+  -webkit-overflow-scrolling: touch;
 }
 
 .mermaid-body::-webkit-scrollbar {
@@ -372,19 +371,26 @@ netlify-feedback,
 }
 
 .mermaid-body svg {
-  height: auto !important;
-  max-width: 100% !important;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 640px) {
+  .mermaid-body svg {
+    min-width: 540px !important;
+  }
 }
 
 .mermaid-body svg .nodeLabel, 
 .mermaid-body svg .label {
-  color: #f1f5f9 !important;
+  color: #f8fafc !important;
   font-family: 'Inter', system-ui, sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
   line-height: 1.4 !important;
+  letter-spacing: -0.01em !important;
 }
 
 .mermaid-body svg .cluster-label span,
@@ -394,29 +400,30 @@ netlify-feedback,
   font-size: 12px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
+  letter-spacing: 0.06em !important;
 }
 
 .mermaid-body svg .cluster rect {
-  fill: rgba(15, 23, 42, 0.65) !important;
+  fill: rgba(15, 23, 42, 0.75) !important;
   stroke: rgba(56, 189, 248, 0.35) !important;
   stroke-width: 1.5px !important;
-  rx: 12px !important;
-  ry: 12px !important;
+  rx: 14px !important;
+  ry: 14px !important;
 }
 
 .mermaid-body svg .node rect,
 .mermaid-body svg .node polygon {
   fill: #0c1425 !important;
   stroke: #0284c7 !important;
-  stroke-width: 1.5px !important;
-  rx: 8px !important;
-  ry: 8px !important;
+  stroke-width: 2px !important;
+  rx: 10px !important;
+  ry: 10px !important;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.55)) !important;
 }
 
 .mermaid-body svg .edgePath path {
   stroke: #38bdf8 !important;
-  stroke-width: 1.75px !important;
+  stroke-width: 2px !important;
 }
 
 .mermaid-body svg marker path {
@@ -434,9 +441,9 @@ netlify-feedback,
   background-color: #0c1425 !important;
   color: #38bdf8 !important;
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  padding: 1px 5px !important;
-  border-radius: 4px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
   border: 1px solid rgba(56, 189, 248, 0.35) !important;
 }

@@ -53,12 +53,18 @@ No software exists in a vacuum. HubSpot features a robust, highly reliable third
 Unlike legacy enterprise software that requires expensive third-party training, HubSpot practically invented the modern SaaS education model. HubSpot Academy provides free, globally recognized certifications in inbound marketing, revenue operations, sales management, and customer success, empowering internal teams to upskill rapidly.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[HubSpot Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ HubSpot Core Engine<br/>Automated B2B Sales + CRM Intelligence Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 > [!TIP]

@@ -124,13 +124,13 @@ HeliaTech conducted a 30-day controlled experiment across 20 secondary domains a
 In the modern B2B ecosystem, outbound campaigns are rarely written manually. Growth engineers use **Clay** for deep multi-source enrichment and **n8n** for intelligent orchestration.
 
 ```mermaid
-flowchart LR
-    Signal["Job Post / Tech Stack Signal"] --> Clay["Clay Enrichment (50+ Data Sources)"]
-    Clay --> LLM["LLM Bespoke Hook Generation"]
-    LLM --> Webhook["Smartlead API / Webhook"]
-    Webhook --> Sequence["Dynamic Outbound Injection"]
-    style Clay fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#ffffff
-    style Sequence fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#ffffff
+flowchart TD
+    Signal["🎯 Job Post / Tech Stack Signal"] --> Clay["⚡ Clay Enrichment (50+ Data Sources)"]
+    Clay --> LLM["🧠 LLM Bespoke Hook Generation"]
+    LLM --> Webhook["🌐 Smartlead API / Webhook"]
+    Webhook --> Sequence["🚀 Dynamic Outbound Injection"]
+    style Clay fill:#0c1425,stroke:#8b5cf6,stroke-width:2.5px,color:#ffffff
+    style Sequence fill:#0c1425,stroke:#0284c7,stroke-width:2.5px,color:#ffffff
 ```
 
 ### Why Growth Engineers Prefer Smartlead with Clay
@@ -155,11 +155,11 @@ If you do not have a dedicated growth engineer to maintain Clay tables and n8n w
 Both platforms advertise attractive entry-level pricing, but scaling to enterprise volume reveals significant structural divergence.
 
 ```mermaid
-flowchart LR
-    Base["Base Subscription"] --> Volume["Sending Volume Add-ons"]
-    Volume --> Leads["Lead Verification Credits"]
-    Leads --> TCO["Total Cost of Ownership (TCO)"]
-    style TCO fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#ffffff
+flowchart TD
+    Base["💳 Base Subscription Tier"] --> Volume["📈 Sending Volume & Mailbox Add-ons"]
+    Volume --> Leads["🔍 Lead Verification & Enrichment Credits"]
+    Leads --> TCO["🏆 Total Cost of Ownership (TCO) Moat"]
+    style TCO fill:#0c1425,stroke:#f59e0b,stroke-width:2.5px,color:#ffffff
 ```
 
 ### Smartlead.ai Pricing

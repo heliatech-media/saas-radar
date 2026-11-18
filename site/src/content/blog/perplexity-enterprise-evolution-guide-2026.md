@@ -60,12 +60,18 @@ One of Perplexity’s most underrated strengths is its lack of ego. In the Enter
 The primary barrier to AI adoption in the Fortune 500 is data leakage. Perplexity Enterprise solves this with a strict zero-training policy. Your internal queries, your uploaded PDFs, and your proprietary market research are never used to train the underlying models. It is a secure silo for your company’s intellectual property.
 
 ```mermaid
-flowchart LR
-    A[Manual Bottleneck] --> B[Perplexity Enterprise Engine]
-    B --> C[Automated Workflow]
-    C --> D[ROI Multiplier]
-    style B fill:#06b6d4,stroke:#0891b2,stroke-width:2px,color:#030712
-    style D fill:#d946ef,stroke:#c026d3,stroke-width:2px,color:#ffffff
+flowchart TD
+    subgraph S1["PHASE 1: ENTERPRISE INGESTION & DATA FLOW"]
+        direction LR
+        A["⚙️ Legacy Friction<br/>Manual Overhead & Data Silos"] --> B["⚡ Perplexity Enterprise Core Engine<br/>Automated AI Research + Productivity Platform"]
+    end
+    subgraph S2["PHASE 2: ORCHESTRATION & IMPACT SURGE"]
+        direction LR
+        C["🔄 Continuous Pipeline<br/>Omnichannel Workflow Automation"] --> D["📈 Enterprise ROI Moat<br/>Maximized Velocity & Compound Yield"]
+    end
+    S1 -->|High-Speed Protocol| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style D fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 ## 3. Hands-on Workshop: The 15-Minute Market Intelligence Blueprint

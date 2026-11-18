@@ -52,15 +52,20 @@ When analyzing enterprise contracts executed across high-scale deployments, the 
 ### ⚡ Conversational Latency Breakdown: Turbo v4 vs OpenAI Realtime
 
 ```mermaid
-flowchart LR
-    A[User Audio Stream] --> B[VAD & Speech Turn Detection
-< 20ms]
-    B --> C[Streaming WebSocket Transport
-Edge Layer]
-    C --> D[Conversational LLM Context Engine]
-    D --> E[ElevenLabs Turbo v4 Synthesis
-TTFB ~95ms]
-    E --> F[Continuous Audio Playback Buffer]
+flowchart TD
+    subgraph S1["PHASE 1: LOW-LATENCY INGESTION & CONTEXT"]
+        direction LR
+        A["🎙️ User Audio Stream"] --> B["⚡ Edge VAD Detection<br/>< 20ms Turn Latency"]
+        B --> C["🌐 WebSocket Transport<br/>Real-Time Edge Layer"]
+    end
+    subgraph S2["PHASE 2: INTELLIGENCE & NEURAL SYNTHESIS"]
+        direction LR
+        D["🧠 Conversational LLM<br/>Context Engine"] --> E["⚡ ElevenLabs Turbo v4<br/>TTFB ~95ms Synthesis"]
+        E --> F["🔊 Low-Jitter Audio<br/>Continuous Playback Buffer"]
+    end
+    S1 -->|Streaming Audio Pipeline| S2
+    style B fill:#0c1425,stroke:#06b6d4,stroke-width:2.5px,color:#f8fafc
+    style E fill:#0c1425,stroke:#10b981,stroke-width:2.5px,color:#f8fafc
 ```
 
 ## 🛠️ The Strategic Transition Blueprint
