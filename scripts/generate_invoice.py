@@ -37,11 +37,11 @@ TIERS_CONFIG = {
 
 DEFAULT_BANKING = {
     "bank_beneficiary": "HeliaTech Research & Media Division",
-    "bank_name": "International Business Clearing Bank",
+    "bank_name": "International Commercial Bank (SEPA / SWIFT / ACH)",
     "bank_iban": "US89 BANA 0001 2345 6789 01",
     "bank_swift": "BANAUS33XXX",
     "paypal_email": "partnership@heliatech.online",
-    "stripe_payment_url": "https://buy.stripe.com/heliatech_sponsor_checkout"
+    "paypal_payment_url": "https://paypal.me/heliatech"
 }
 
 def generate_invoice(
@@ -56,6 +56,12 @@ def generate_invoice(
     custom_amount: str = None,
     custom_period: str = None,
     invoice_number: str = None,
+    bank_beneficiary: str = None,
+    bank_name: str = None,
+    bank_iban: str = None,
+    bank_swift: str = None,
+    paypal_email: str = None,
+    paypal_payment_url: str = None,
     output_filename: str = None
 ) -> Path:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -90,12 +96,12 @@ def generate_invoice(
         "item_description": item_desc,
         "item_period": period,
         "amount": amount,
-        "bank_beneficiary": DEFAULT_BANKING["bank_beneficiary"],
-        "bank_name": DEFAULT_BANKING["bank_name"],
-        "bank_iban": DEFAULT_BANKING["bank_iban"],
-        "bank_swift": DEFAULT_BANKING["bank_swift"],
-        "paypal_email": DEFAULT_BANKING["paypal_email"],
-        "stripe_payment_url": DEFAULT_BANKING["stripe_payment_url"]
+        "bank_beneficiary": bank_beneficiary or DEFAULT_BANKING["bank_beneficiary"],
+        "bank_name": bank_name or DEFAULT_BANKING["bank_name"],
+        "bank_iban": bank_iban or DEFAULT_BANKING["bank_iban"],
+        "bank_swift": bank_swift or DEFAULT_BANKING["bank_swift"],
+        "paypal_email": paypal_email or DEFAULT_BANKING["paypal_email"],
+        "paypal_payment_url": paypal_payment_url or DEFAULT_BANKING["paypal_payment_url"]
     }
 
     for key, value in replacements.items():
@@ -112,13 +118,17 @@ def generate_invoice(
     return out_path
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate a professional B2B invoice for HeliaTech sponsors.")
+    parser = argparse.ArgumentParser(description="Generate a professional B2B invoice for HeliaTech sponsors (Wire & PayPal).")
     parser.add_argument("--client", required=True, help="Client/Company name (e.g. 'Resend Inc.')")
     parser.add_argument("--contact", default="Partnerships Team", help="Contact person or department")
     parser.add_argument("--email", default="finance@company.com", help="Client billing email")
     parser.add_argument("--tier", choices=["newsletter", "spotlight", "masterclass"], default="newsletter", help="Sponsorship package tier")
     parser.add_argument("--amount", default=None, help="Custom amount in USD")
     parser.add_argument("--period", default=None, help="Custom service period / issue number")
+    parser.add_argument("--iban", default=None, help="Custom IBAN or Account Number")
+    parser.add_argument("--swift", default=None, help="Custom SWIFT/BIC")
+    parser.add_argument("--paypal-email", default=None, help="Custom PayPal email")
+    parser.add_argument("--paypal-url", default=None, help="Custom PayPal.me payment URL")
     args = parser.parse_args()
 
     generate_invoice(
@@ -127,7 +137,11 @@ def main():
         client_email=args.email,
         tier=args.tier,
         custom_amount=args.amount,
-        custom_period=args.period
+        custom_period=args.period,
+        bank_iban=args.iban,
+        bank_swift=args.swift,
+        paypal_email=args.paypal_email,
+        paypal_payment_url=args.paypal_url
     )
 
 if __name__ == "__main__":

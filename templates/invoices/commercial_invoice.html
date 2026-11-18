@@ -412,26 +412,37 @@
 
     <!-- Payment Instructions -->
     <div class="payment-section">
-      <div class="payment-title">⚡ PAYMENT INSTRUCTIONS (WIRE / ACH / ONLINE)</div>
+      <div class="payment-title">⚡ MODES DE RÈGLEMENT EXCLUSIFS / PAYMENT METHODS (BANK WIRE &amp; PAYPAL ONLY)</div>
       
       <div class="payment-grid">
-        <div>
-          <strong>Bank Wire / ACH / SWIFT Transfer:</strong><br/>
-          Beneficiary: <span class="mono">{{bank_beneficiary}}</span><br/>
-          Bank: <span class="mono">{{bank_name}}</span><br/>
-          Account / IBAN: <span class="mono">{{bank_iban}}</span><br/>
-          Routing / SWIFT-BIC: <span class="mono">{{bank_swift}}</span>
+        <div style="background: #ffffff; padding: 18px; border-radius: 10px; border: 1px solid #e2e8f0;">
+          <div style="font-weight: 800; font-size: 13px; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 16px;">🏛️</span> Option 1: Virement Bancaire (Bank Wire / SEPA / SWIFT)
+          </div>
+          <div style="font-size: 11px; line-height: 1.8; color: #475569;">
+            <strong>Bénéficiaire :</strong> <span class="mono">{{bank_beneficiary}}</span><br/>
+            <strong>Établissement :</strong> <span class="mono">{{bank_name}}</span><br/>
+            <strong>IBAN / Compte :</strong> <span class="mono" style="font-weight: 700; color: #0284c7;">{{bank_iban}}</span><br/>
+            <strong>Code BIC / SWIFT :</strong> <span class="mono">{{bank_swift}}</span><br/>
+            <strong>Motif / Référence :</strong> <span class="mono" style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Facture #{{invoice_number}}</span>
+          </div>
         </div>
-        <div>
-          <strong>Online Instant Payment:</strong><br/>
-          Corporate Credit Card (Visa, MasterCard, Amex) or Wire via Stripe Enterprise.<br/>
-          PayPal Business: <span class="mono">{{paypal_email}}</span>
-        </div>
-      </div>
 
-      <div class="payment-cta">
-        <span style="font-size: 11px; color: #64748b;">Click to pay securely online via corporate card:</span>
-        <a href="{{stripe_payment_url}}" target="_blank" class="pay-btn">Pay Online via Stripe ➔</a>
+        <div style="background: #ffffff; padding: 18px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-weight: 800; font-size: 13px; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 16px;">🅿️</span> Option 2: PayPal Business Instantané
+            </div>
+            <div style="font-size: 11px; line-height: 1.8; color: #475569;">
+              <strong>Compte PayPal :</strong> <span class="mono" style="font-weight: 700; color: #0284c7;">{{paypal_email}}</span><br/>
+              <strong>Type de transfert :</strong> Biens &amp; Services professionnels B2B<br/>
+              <strong>Objet du paiement :</strong> Indiquer la référence <span class="mono" style="font-weight: 700;">#{{invoice_number}}</span>
+            </div>
+          </div>
+          <div style="margin-top: 14px; padding-top: 12px; border-top: 1px dashed #e2e8f0;">
+            <a href="{{paypal_payment_url}}" target="_blank" class="pay-btn" style="display: block; text-align: center; background: #0070ba; color: #ffffff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-weight: 800; font-size: 11px; letter-spacing: 0.05em;">Régler via PayPal.me ➔</a>
+          </div>
+        </div>
       </div>
     </div>
 
