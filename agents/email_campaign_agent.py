@@ -791,6 +791,7 @@ class EmailCampaignAgent:
             context = {
                 "issue_number": "PENDING",
                 "publish_date": publish_date_human,
+                "preheader_text": "Empirical benchmark on 450+ refactorings, Postiz 41k★ architecture teardown, and setup notes.",
                 "issue_title": matching_pool["headline"],
                 "issue_headline": matching_pool["headline"],
                 "executive_summary": matching_pool["summary"],
