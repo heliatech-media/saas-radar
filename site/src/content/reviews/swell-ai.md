@@ -140,7 +140,7 @@ Swell AI is an automated post-production content repurposing platform designed s
 - **Multi-Speaker Diarization and Timestamp Generation**
 - **Custom AI Prompt Engineering & Style Guides**
 - **Multilingual Transcription and Translation (100+ languages)**
-- **Headless Content API and Zapier Integration**
+- **Headless Content API and [Zapier](/reviews/zapier) Integration**
 
 ## Pricing Overview
 

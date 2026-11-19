@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-19T15:24:41.198146",
+  "last_synced": "2026-11-19T19:47:40.923040",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-22 - 2026-11-19)",
-  "total_visitors_network": 49343,
-  "total_requests": 226344,
-  "total_visits": 15296,
-  "total_pageviews": 52080,
+  "total_visitors_network": 49545,
+  "total_requests": 227453,
+  "total_visits": 15358,
+  "total_pageviews": 52249,
   "percent_cached": "56.14%",
-  "data_served_mb": 3103.9,
+  "data_served_mb": 3123.3,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
       "date": "2026-11-19",
-      "visitors": 1633,
-      "rumVisits": 457,
-      "pageviews": 1991,
-      "requests": 6611,
+      "visitors": 1835,
+      "rumVisits": 513,
+      "pageviews": 2160,
+      "requests": 7720,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0382
+      "viewMultiplier": 0.0413
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 14130,
-      "rumVisits": 3673,
-      "pageviews": 13664,
-      "requests": 55149,
+      "visitors": 14332,
+      "rumVisits": 3726,
+      "pageviews": 13833,
+      "requests": 56258,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.2624
+      "viewMultiplier": 0.2648
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 49343,
-      "rumVisits": 15296,
-      "pageviews": 52080,
-      "requests": 226344,
+      "visitors": 49545,
+      "rumVisits": 15358,
+      "pageviews": 52249,
+      "requests": 227453,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 49343,
-      "rumVisits": 15296,
-      "pageviews": 52080,
-      "requests": 226344,
+      "visitors": 49545,
+      "rumVisits": 15358,
+      "pageviews": 52249,
+      "requests": 227453,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 49343,
-      "rumVisits": 15296,
-      "pageviews": 52080,
-      "requests": 226344,
+      "visitors": 49545,
+      "rumVisits": 15358,
+      "pageviews": 52249,
+      "requests": 227453,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,7 +70,7 @@
   "top_pages": [
     {
       "path": "/api/telemetry",
-      "views": 14820
+      "views": 15330
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -78,15 +78,15 @@
     },
     {
       "path": "/",
-      "views": 5280
+      "views": 5300
     },
     {
       "path": "/api/sentinel/cockpit",
-      "views": 4010
+      "views": 4140
     },
     {
       "path": "/calculator/",
-      "views": 2980
+      "views": 2990
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
@@ -94,7 +94,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 1010
+      "views": 1020
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
@@ -145,6 +145,14 @@
       "views": 290
     },
     {
+      "path": "/versus/",
+      "views": 290
+    },
+    {
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 290
+    },
+    {
       "path": "/awards/",
       "views": 280
     },
@@ -157,46 +165,38 @@
       "views": 280
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 280
-    },
-    {
-      "path": "/versus/",
-      "views": 280
-    },
-    {
       "path": "/reviews/elevenlabs/",
       "views": 270
-    },
-    {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 260
     },
     {
       "path": "/reviews/supabase/",
       "views": 260
     },
     {
-      "path": "/reviews/brevo/",
-      "views": 250
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "views": 260
     },
     {
       "path": "/blog/make-automation-revolution/",
       "views": 250
     },
     {
-      "path": "/media-kit/",
+      "path": "/reviews/brevo/",
+      "views": 250
+    },
+    {
+      "path": "/reviews/adcreative-ai/",
       "views": 240
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 44530
+      "views": 44750
     },
     {
       "country": "Morocco",
-      "views": 39630
+      "views": 40330
     },
     {
       "country": "Germany",
@@ -208,7 +208,7 @@
     },
     {
       "country": "Brazil",
-      "views": 1900
+      "views": 1910
     },
     {
       "country": "CN",
@@ -240,11 +240,11 @@
     },
     {
       "country": "HK",
-      "views": 760
+      "views": 770
     },
     {
       "country": "Spain",
-      "views": 630
+      "views": 640
     },
     {
       "country": "FI",

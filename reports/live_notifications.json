@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-19 19:49:15",
+    "title": "Cycle Autonome #CodeRabbit",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (CodeRabbit) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-19 19:49:05",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-19 19:47:29",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : CodeRabbit: The AI Architect Revolutionizing Pull Requests and Developer Velocity",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** CodeRabbit: The AI Architect Revolutionizing Pull Requests and Developer Velocity\n• **Catégorie :** DevTools\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/coderabbit-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/coderabbit-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-19 19:47:17",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : CodeRabbit",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** CodeRabbit\n• **Catégorie :** DevTools\n• **Note globale :** 4.7/10\n• **Cible idéale :** Engineering teams and individual developers looking to automate PR feedback and accelerate the code review cycle.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/coderabbit/"
+  },
+  {
     "timestamp": "2026-11-19 15:33:17",
     "title": "Cycle Autonome #Swell AI",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "REVIEW",
     "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Gamma\n• **Catégorie :** AI Presentation & Document Creator\n• **Note globale :** 4.7/10\n• **Cible idéale :** Marketers, founders, educators, and sales teams who need to build high-converting pitches quickly.\n\n👉 Lire la fiche d'audit complète :",
     "link": "https://heliatech.online/reviews/gamma/"
-  },
-  {
-    "timestamp": "2026-11-15 00:36:17",
-    "title": "Cycle Autonome #KoalaWriter",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (KoalaWriter) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-15 00:35:46",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 12 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, koalawriter, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-15 00:34:07",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : KoalaWriter: The Evolution of SERP Dominance and the Hands-on Guide to AI Content Scale in 2026",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** KoalaWriter: The Evolution of SERP Dominance and the Hands-on Guide to AI Content Scale in 2026\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/koalawriter-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/koalawriter-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-15 00:33:43",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : KoalaWriter",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** KoalaWriter\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.5/10\n• **Cible idéale :** SEO agencies, content marketers, and niche site owners looking to scale programmatic SEO content.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/koalawriter/"
   }
 ]

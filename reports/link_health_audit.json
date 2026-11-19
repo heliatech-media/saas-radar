@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-19 15:26:08",
-  "total_links_audited": 146,
-  "healthy_links": 126,
-  "broken_links_count": 20,
-  "health_rate": "86.3%",
+  "timestamp": "2026-11-19 19:49:05",
+  "total_links_audited": 147,
+  "healthy_links": 129,
+  "broken_links_count": 18,
+  "health_rate": "87.8%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -116,22 +116,6 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "speechify",
-      "target_url": "https://speechify.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection broken: IncompleteRead(3329 bytes read, 6911 more expected)', IncompleteRead(3329 bytes read, 6911 more expected))"
-    },
-    {
-      "slug": "swell-ai",
-      "target_url": "https://www.swell-ai.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.swell-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.swell-ai.com', port=443): Failed to resolve 'www.swell-ai.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tome",
@@ -315,6 +299,13 @@
       "healthy": true
     },
     {
+      "slug": "coderabbit",
+      "target_url": "https://www.coderabbit.com",
+      "final_url": "https://www.coderabbit.ai/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "cognism",
       "target_url": "https://www.cognism.com",
       "final_url": "https://www.cognism.com/",
@@ -375,7 +366,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=GV7uHWEMLVI8w3&gsxid=GV7uHWEMLVI8w3&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=GiR3t5ZAOrynRS&gsxid=GiR3t5ZAOrynRS&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -532,7 +523,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -725,7 +716,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -738,7 +729,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=97MNeEdmUqoYge&gsxid=97MNeEdmUqoYge&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2MwgrpDfED44dK&gsxid=2MwgrpDfED44dK&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -766,7 +757,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ymzgLTCgZcbsFf&gsxid=ymzgLTCgZcbsFf&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=yXOuSpQWzRAoFx&gsxid=yXOuSpQWzRAoFx&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -989,10 +980,9 @@
     {
       "slug": "speechify",
       "target_url": "https://speechify.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection broken: IncompleteRead(3329 bytes read, 6911 more expected)', IncompleteRead(3329 bytes read, 6911 more expected))"
+      "final_url": "https://speechify.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "submagic",
@@ -1004,8 +994,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -1024,11 +1014,10 @@
     },
     {
       "slug": "swell-ai",
-      "target_url": "https://www.swell-ai.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.swell-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.swell-ai.com', port=443): Failed to resolve 'www.swell-ai.com' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://www.swellai.com",
+      "final_url": "https://www.swellai.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "synthesia",

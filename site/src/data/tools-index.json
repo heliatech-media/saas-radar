@@ -174,6 +174,16 @@
     "commission_rate": "20% recurring for 12 months"
   },
   {
+    "name": "CodeRabbit",
+    "slug": "coderabbit",
+    "tagline": "AI-powered code reviews that actually improve code quality and developer velocity.",
+    "category": "DevTools",
+    "rating": 4.7,
+    "starting_price": "$30/mo",
+    "best_for": "Engineering teams and individual developers looking to automate PR feedback and accelerate the code review cycle.",
+    "affiliate_url": "https://coderabbit.ai"
+  },
+  {
     "name": "Cursor",
     "slug": "cursor",
     "tagline": "The AI-first code editor built for maximum engineering velocity and deep codebase understanding.",
