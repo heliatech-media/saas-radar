@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-18T19:00:00Z",
+  "updated_at": "2026-11-19T01:10:00Z",
   "campaign": "Wave 1 - Pilot Thursday Radar Sponsors",
   "leads": [
     {
@@ -12,9 +12,9 @@
       "role": "Founder",
       "email": "nevo@postiz.com",
       "target_format": "The Thursday Radar Solo Sponsor ($250)",
-      "status": "Ready to Contact",
-      "date_contacted": null,
-      "follow_up_date": null,
+      "status": "Contacted",
+      "date_contacted": "2026-11-19",
+      "follow_up_date": "2026-11-22",
       "invoice_id": null,
       "amount": 250,
       "notes": "Feature self-hosted social media management. Very active on X."
@@ -28,9 +28,9 @@
       "role": "Co-founder & Co-CEO",
       "email": "peer@cal.com",
       "target_format": "The Thursday Radar Solo Sponsor ($250)",
-      "status": "Ready to Contact",
-      "date_contacted": null,
-      "follow_up_date": null,
+      "status": "Contacted",
+      "date_contacted": "2026-11-19",
+      "follow_up_date": "2026-11-22",
       "invoice_id": null,
       "amount": 250,
       "notes": "Focus on data sovereignty & enterprise scheduling API."
@@ -44,9 +44,9 @@
       "role": "Founder & CEO",
       "email": "zeno@resend.com",
       "target_format": "The Thursday Radar Solo Sponsor ($250)",
-      "status": "Ready to Contact",
-      "date_contacted": null,
-      "follow_up_date": null,
+      "status": "Contacted",
+      "date_contacted": "2026-11-19",
+      "follow_up_date": "2026-11-22",
       "invoice_id": null,
       "amount": 250,
       "notes": "Highlight clean developer experience, React Email and webhook reliability."
@@ -74,14 +74,14 @@
       "repo_slug": null,
       "contact_person": "Partnership & Growth Team",
       "role": "Head of Growth",
-      "email": "partners@make.com",
+      "email": "partners@make.com (routed via contact form)",
       "target_format": "Category Partner Spotlight ($400/mo)",
-      "status": "Ready to Contact",
-      "date_contacted": null,
-      "follow_up_date": null,
+      "status": "Contacted",
+      "date_contacted": "2026-11-19",
+      "follow_up_date": "2026-11-22",
       "invoice_id": null,
       "amount": 400,
-      "notes": "Position against Zapier high pricing on our Make vs Zapier duel page."
+      "notes": "Position against Zapier high pricing on our Make vs Zapier duel page. Submitted via portal."
     },
     {
       "id": "lead-006",
@@ -92,9 +92,9 @@
       "role": "Co-founder",
       "email": "marie@tally.so",
       "target_format": "Category Partner Spotlight ($400/mo)",
-      "status": "Ready to Contact",
-      "date_contacted": null,
-      "follow_up_date": null,
+      "status": "Contacted",
+      "date_contacted": "2026-11-19",
+      "follow_up_date": "2026-11-22",
       "invoice_id": null,
       "amount": 400,
       "notes": "Target users seeking 99% free features vs Typeform limitations."
