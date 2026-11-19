@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-18T19:46:42.127154",
+  "last_synced": "2026-11-19T02:09:09.549728",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-21 - 2026-11-18)",
-  "total_visitors_network": 47545,
-  "total_requests": 217125,
-  "total_visits": 14738,
-  "total_pageviews": 49868,
+  "time_window": "28 Days (2026-10-22 - 2026-11-19)",
+  "total_visitors_network": 47864,
+  "total_requests": 220572,
+  "total_visits": 14837,
+  "total_pageviews": 50207,
   "percent_cached": "56.14%",
-  "data_served_mb": 2811.5,
+  "data_served_mb": 2840.5,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
-      "date": "2026-11-18",
-      "visitors": 1120,
-      "rumVisits": 313,
-      "pageviews": 1311,
-      "requests": 11287,
+      "date": "2026-11-19",
+      "visitors": 154,
+      "rumVisits": 120,
+      "pageviews": 118,
+      "requests": 839,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0263
+      "viewMultiplier": 0.0024
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 14900,
-      "rumVisits": 3874,
-      "pageviews": 13869,
-      "requests": 55817,
+      "visitors": 12651,
+      "rumVisits": 3289,
+      "pageviews": 11791,
+      "requests": 49377,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.2781
+      "viewMultiplier": 0.2348
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 47545,
-      "rumVisits": 14738,
-      "pageviews": 49868,
-      "requests": 217125,
+      "visitors": 47864,
+      "rumVisits": 14837,
+      "pageviews": 50207,
+      "requests": 220572,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 47545,
-      "rumVisits": 14738,
-      "pageviews": 49868,
-      "requests": 217125,
+      "visitors": 47864,
+      "rumVisits": 14837,
+      "pageviews": 50207,
+      "requests": 220572,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 47545,
-      "rumVisits": 14738,
-      "pageviews": 49868,
-      "requests": 217125,
+      "visitors": 47864,
+      "rumVisits": 14837,
+      "pageviews": 50207,
+      "requests": 220572,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,7 +70,7 @@
   "top_pages": [
     {
       "path": "/api/telemetry",
-      "views": 13500
+      "views": 14700
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -78,15 +78,15 @@
     },
     {
       "path": "/",
-      "views": 5060
-    },
-    {
-      "path": "/calculator/",
-      "views": 2910
+      "views": 5100
     },
     {
       "path": "/api/sentinel/cockpit",
-      "views": 2390
+      "views": 3900
+    },
+    {
+      "path": "/calculator/",
+      "views": 2930
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
@@ -94,7 +94,7 @@
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 980
+      "views": 1000
     },
     {
       "path": "/blog/heroku-free-tier-alternatives-2026/",
@@ -114,11 +114,11 @@
     },
     {
       "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
-      "views": 340
+      "views": 350
     },
     {
       "path": "/radar/",
-      "views": 330
+      "views": 350
     },
     {
       "path": "/deals/",
@@ -138,22 +138,22 @@
     },
     {
       "path": "/blog/rewardful-evolution-guide-2026/",
-      "views": 290
-    },
-    {
-      "path": "/blog/linear-evolution-guide-2026/",
-      "views": 280
+      "views": 300
     },
     {
       "path": "/blog/resend-evolution-guide-2026/",
       "views": 280
     },
     {
-      "path": "/awards/",
-      "views": 270
+      "path": "/blog/elevenlabs-vs-heygen/",
+      "views": 280
     },
     {
-      "path": "/blog/elevenlabs-vs-heygen/",
+      "path": "/blog/linear-evolution-guide-2026/",
+      "views": 280
+    },
+    {
+      "path": "/versus/",
       "views": 270
     },
     {
@@ -161,7 +161,7 @@
       "views": 270
     },
     {
-      "path": "/versus/",
+      "path": "/awards/",
       "views": 270
     },
     {
@@ -169,15 +169,11 @@
       "views": 260
     },
     {
-      "path": "/reviews/supabase/",
-      "views": 250
-    },
-    {
       "path": "/blog/best-zapier-alternatives-2026/",
       "views": 250
     },
     {
-      "path": "/reviews/brevo/",
+      "path": "/reviews/supabase/",
       "views": 250
     },
     {
@@ -185,30 +181,34 @@
       "views": 250
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/reviews/brevo/",
+      "views": 250
+    },
+    {
+      "path": "/blog/mcp-protocol-enterprise-stack-revolution-2026/",
       "views": 230
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 42540
+      "views": 42800
     },
     {
       "country": "Morocco",
-      "views": 36460
+      "views": 39270
     },
     {
       "country": "Germany",
-      "views": 3350
+      "views": 3370
     },
     {
       "country": "Singapore",
-      "views": 2920
+      "views": 2930
     },
     {
       "country": "Brazil",
-      "views": 1780
+      "views": 1790
     },
     {
       "country": "CN",
@@ -216,7 +216,7 @@
     },
     {
       "country": "United Kingdom",
-      "views": 1120
+      "views": 1130
     },
     {
       "country": "France",
@@ -232,11 +232,11 @@
     },
     {
       "country": "Canada",
-      "views": 780
+      "views": 790
     },
     {
       "country": "HK",
-      "views": 740
+      "views": 750
     },
     {
       "country": "Spain",

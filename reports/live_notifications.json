@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-11-19 02:10:33",
+    "title": "Cycle Autonome #Cloud Growth Refresh",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cloud Growth Refresh) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-19 02:10:19",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-11-18 19:49:22",
     "title": "Cycle Autonome #Cloud Growth Refresh",
     "category": "CYCLE",
@@ -334,19 +348,5 @@
     "category": "REVIEW",
     "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** WriteSonic\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.6/10\n• **Cible idéale :** Content marketing teams, SEO agencies, and freelance writers scaling output without sacrificing quality.\n\n👉 Lire la fiche d'audit complète :",
     "link": "https://heliatech.online/reviews/writesonic/"
-  },
-  {
-    "timestamp": "2026-11-14 04:09:31",
-    "title": "Cycle Autonome #Jasper",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Jasper) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-14 04:09:06",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, jasper, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]
