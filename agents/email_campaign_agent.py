@@ -34,7 +34,9 @@ EDITORIAL_CALENDAR_PATH = REPORTS_DIR / "newsletter_editorial_calendar.md"
 DISPATCH_QUEUE_PATH = DATA_DIR / "email_dispatch_queue.json"
 SUBSCRIBERS_PATH = REPORTS_DIR / "subscribers_master.json"
 
-DEFAULT_SENDER = "HeliaTech <partnership@heliatech.online>"
+DEFAULT_EDITORIAL_SENDER = "The Thursday Radar <radar@heliatech.online>"
+DEFAULT_PARTNERSHIP_SENDER = "HeliaTech Partnerships <partnership@heliatech.online>"
+DEFAULT_SENDER = DEFAULT_EDITORIAL_SENDER
 DIRECTOR_EMAIL = os.getenv("DIRECTOR_EMAIL", "director@heliatech.online")
 
 
@@ -845,11 +847,11 @@ class EmailCampaignAgent:
         final_subject = validated_ed["subject"].replace("[THE RADAR]", f"[THE RADAR #{final_issue:03d}]")
         final_html = validated_ed["content_html"].replace("PENDING", f"#{final_issue:03d}")
 
-        # Dispatch via Resend
+        # Dispatch via Resend (Strictly from radar@heliatech.online)
         def resend_caller(email: str, subj: str, body: str) -> Optional[str]:
             unsub_link = f"https://heliatech.online/unsubscribe?email={urllib.parse.quote(email)}"
             custom_body = body.replace("{{email}}", email).replace("{{unsubscribe_url}}", unsub_link)
-            return self.send_via_resend(email, final_subject, custom_body)
+            return self.send_via_resend(email, final_subject, custom_body, sender=DEFAULT_EDITORIAL_SENDER)
 
         if broadcast and not test_mode:
             # Mode Production Broadcast : charge automatiquement les 142 abonnés vérifiés depuis Cloudflare D1
@@ -924,7 +926,7 @@ class EmailCampaignAgent:
             html = self.render_template("sponsor_pitch", context)
             subject = f"🤝 Official Accreditation & Media Partnership: {brand} x HeliaTech 2026"
 
-            dispatch_id = self.send_via_resend(DIRECTOR_EMAIL, subject, html)
+            dispatch_id = self.send_via_resend(DIRECTOR_EMAIL, subject, html, sender=DEFAULT_PARTNERSHIP_SENDER)
 
             if dispatch_id:
                 sent_brands.append(brand)

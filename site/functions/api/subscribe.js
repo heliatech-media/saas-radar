@@ -371,7 +371,7 @@ export async function onRequestPost(context) {
               "User-Agent": "HeliaTech-Worker/1.0"
             },
             body: JSON.stringify({
-              from: "HeliaTech <partnership@heliatech.online>",
+              from: "The Thursday Radar <radar@heliatech.online>",
               to: [email],
               subject: "⚡ [HELIATECH] Your Executive SaaS Briefing & ROI Intelligence Access",
               html: emailHtml

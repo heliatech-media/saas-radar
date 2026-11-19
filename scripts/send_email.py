@@ -16,7 +16,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 RESEND_API_KEY = os.getenv("RESEND_API_KEY")
-DEFAULT_SENDER = "HeliaTech <partnership@heliatech.online>"
+DEFAULT_EDITORIAL_SENDER = "The Thursday Radar <radar@heliatech.online>"
+DEFAULT_PARTNERSHIP_SENDER = "HeliaTech Partnerships <partnership@heliatech.online>"
+DEFAULT_SENDER = DEFAULT_EDITORIAL_SENDER
 
 def send_email(to_email: str, subject: str, html_content: str, sender: str = DEFAULT_SENDER):
     if not RESEND_API_KEY:

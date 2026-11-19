@@ -206,3 +206,5 @@ AFFILIATE_MAP = {
 DEFAULT_BRAND_SIGNATURE = "The HeliaTech Partnerships Team"
 DEFAULT_EDITORIAL_SIGNATURE = "The HeliaTech Editorial Team"
 DEFAULT_EXECUTIVE_SENDER = "HeliaTech <partnership@heliatech.online>"
+DEFAULT_EDITORIAL_SENDER = "The Thursday Radar <radar@heliatech.online>"
+DEFAULT_PARTNERSHIP_SENDER = "HeliaTech Partnerships <partnership@heliatech.online>"
