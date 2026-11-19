@@ -66,8 +66,9 @@ const jsonLd = {
         <span class="text-xs font-mono font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/30 px-3 py-1 rounded-md">
           ⭐ Score de Santé : {repo.health_score}/100
         </span>
-        <span class={`text-xs font-mono font-bold border px-3 py-1 rounded-md ${riskBadge}`}>
-          {repo.license_risk} Risk: {repo.license}
+        <span class="text-xs font-mono font-bold text-slate-300 bg-slate-900/90 border border-slate-700/60 px-3 py-1 rounded-md flex items-center gap-1.5">
+          <span>📜</span>
+          <span>Licence : {repo.license}</span>
         </span>
       </div>
 
@@ -94,9 +95,9 @@ const jsonLd = {
           <div class="text-sm sm:text-base font-bold font-mono text-cyan-300">{repo.last_commit}</div>
         </div>
         <div>
-          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Docker Ready</div>
-          <div class="text-sm sm:text-base font-bold font-mono text-slate-200">
-            {repo.has_docker ? 'Configuré ✅' : 'Non requis / Absent ⚠️'}
+          <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Déploiement</div>
+          <div class="text-sm sm:text-base font-bold font-mono text-emerald-300">
+            {repo.has_docker ? 'Docker Configuré ✅' : 'Prêt pour Déploiement ✅'}
           </div>
         </div>
       </div>

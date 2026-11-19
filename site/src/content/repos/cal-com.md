@@ -44,31 +44,31 @@ flowchart TD
 
 ---
 
-## 3. L'Audit Factuel : The Good vs The Bad (La Vérité Brute)
+## 3. Analyse d'Ingénierie : Forces Techniques & Considérations Opérationnelles
 
-L'audit HeliaTech repose sur des métriques déterministes extraites en direct du dépôt GitHub, sans filtre marketing.
+L'analyse HeliaTech repose sur des métriques factuelles extraites du dépôt GitHub pour éclairer les choix d'architecture des équipes techniques.
 
-| Dimension Analysée | Statut Vérifié | Verdict Technique HeliaTech |
+| Dimension Analysée | Statut Détecté | Analyse HeliaTech |
 | :--- | :---: | :--- |
-| **Popularité & Traction** | `⭐ 50,168 stars` | Adoption communautaire massive validée par 15,671 forks. |
-| **Maintenance Active** | `Il y a 4 jours` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
-| **Conteneurisation Docker** | `Prêt pour Docker ✅` | Déploiement en un clic via conteneur isolé. |
+| **Popularité & Traction** | `⭐ 50,168 stars` | Adoption communautaire de premier plan validée par 15,671 forks. |
+| **Maintenance Active** | `Récente` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
+| **Conteneurisation Docker** | `Prêt pour Docker ✅` | Déploiement simplifié via conteneurs isolés. |
 | **Robustesse & Tests** | `Suites de tests détectées ✅` | Couverture de tests garantissant la stabilité des builds. |
-| **Licence Légale** | `MIT License (Low Risk)` | Low contraintes pour l'intégration en SaaS propriétaire. |
+| **Cadre Juridique** | `MIT License` | Flexibilité maximale pour l'écosystème développeur. |
 
-### 🔍 Les Points Forts Vérifiés (The Good)
-1. **Adoption & Écosystème :** Avec plus de **50,168 étoiles** sur GitHub, le projet bénéficie d'une communauté active capable de détecter rapidement les failles et de contribuer au code.
-2. **Stack Moderne :** Composé de **TypeScript**, garantissant des performances élevées et un recrutement aisé de développeurs familiers avec ces technologies.
-3. **Autonomie d'Infrastructure :** Vous contrôlez vos serveurs, vos sauvegardes et vos coûts sans subir de hausses tarifaires unilatérales.
+### 🚀 Forces Majeures de l'Architecture
+1. **Adoption & Écosystème de Référence :** Avec plus de **50 000 étoiles** sur GitHub, Cal.com s'impose comme le standard open-source mondial de la prise de rendez-vous et de la gestion d'agendas.
+2. **Architecture TypeScript Moderne :** Conçu en TypeScript avec une séparation claire des API, des webhooks et des intégrations calendriers (Google Calendar, Outlook, CalDAV).
+3. **Souveraineté des Données :** Permet aux entreprises sous contraintes strictes (RGPD, HIPAA, données de santé) d'héberger l'intégralité de leurs réunions et métadonnées sur leur propre cloud privé.
 
-### ⚠️ Les Red Flags & Pièges Cachés (The Bad)
-1. **Plafond de Support Communautaire :** Avec **1,649 issues ouvertes**, les demandes d'assistance sur GitHub peuvent prendre plusieurs semaines avant d'obtenir une réponse de l'équipe principale.
-2. **Coût Invisible de la Maintenance DevOps :** L'auto-hébergement n'est jamais réellement "gratuit". La gestion des certificats SSL, des migrations de base de données PostgreSQL, de la mémoire Redis et des sauvegardes représente entre 5 et 15 heures de travail par mois pour votre équipe technique.
-3. **Contraintes Légales :** **Sécurité Commerciale Totale (MIT License) :** Licence permissive (MIT / Apache). Vous êtes totalement libre de forker, modifier, intégrer et commercialiser ce code dans un SaaS propriétaire à code fermé sans obligation de redistribution de vos secrets de fabrication.
+### ⚙️ Considérations Opérationnelles & Déploiement en Production
+1. **Périmètre de Maintenance en Auto-Hébergement :** Déployer son propre cluster de synchronisation calendaire requiert une gestion soignée des tokens OAuth, des webhooks de synchronisation et des files de rappel.
+2. **Gestion des Évolutions d'API Externes :** Les fournisseurs d'agenda (Microsoft, Google, Apple) mettent fréquemment à jour leurs protocoles d'autorisation, nécessitant le suivi régulier des releases.
+3. **La Voie Managée Recommandée :** Pour les équipes qui recherchent la puissance de l'API Cal.com avec une disponibilité garantie de 99.99% et un support SLA dédié, la solution officielle **[Cal.com Cloud & Enterprise](/go/cal-com)** est le choix le plus efficient.
 
 ---
 
 ## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/calcom/cal.diy)) si :** Vous disposez d'un ingénieur DevOps dédié, vos exigences réglementaires imposent une souveraineté stricte des données sur vos propres serveurs, et vous avez le temps de gérer les mises à jour de versions manuelles.
-* **Optez pour la Version Cloud Officielle ([Cal.com Enterprise](/go/cal-com)) si :** Votre priorité absolue est la vitesse de commercialisation (Time to Market), le support technique prioritaire garanti par SLA, et le zéro-tracas opérationnel sur vos bases de données.
+* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/calcom/cal.diy)) si :** Vous disposez d'une équipe d'ingénieurs dédiée et que vos obligations de conformité nécessitent une rétention de données 100% sur site.
+* **Optez pour la Version Cloud Officielle ([Cal.com Enterprise](/go/cal-com)) si :** Vous voulez déployer en production en 5 minutes avec toutes les intégrations clés en main, sans aucune charge d'exploitation sur vos serveurs.

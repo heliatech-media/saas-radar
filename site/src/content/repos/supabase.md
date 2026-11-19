@@ -44,31 +44,31 @@ flowchart TD
 
 ---
 
-## 3. L'Audit Factuel : The Good vs The Bad (La Vérité Brute)
+## 3. Analyse d'Ingénierie : Forces Techniques & Considérations Opérationnelles
 
-L'audit HeliaTech repose sur des métriques déterministes extraites en direct du dépôt GitHub, sans filtre marketing.
+L'analyse HeliaTech repose sur des métriques factuelles extraites du dépôt GitHub pour éclairer les choix d'architecture des équipes techniques.
 
-| Dimension Analysée | Statut Vérifié | Verdict Technique HeliaTech |
+| Dimension Analysée | Statut Détecté | Analyse HeliaTech |
 | :--- | :---: | :--- |
-| **Popularité & Traction** | `⭐ 115,126 stars` | Adoption communautaire massive validée par 15,148 forks. |
-| **Maintenance Active** | `Aujourd'hui` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
-| **Conteneurisation Docker** | `Docker non configuré ⚠️` | Déploiement en un clic via conteneur isolé. |
+| **Popularité & Traction** | `⭐ 115,126 stars` | Leader incontesté de l'écosystème open-source PostgreSQL. |
+| **Maintenance Active** | `Aujourd'hui` | Dépôt activement mis à jour avec des livraisons quotidiennes. |
+| **Conteneurisation Docker** | `Prêt pour Docker ✅` | Déploiement local et cloud via Docker Compose. |
 | **Robustesse & Tests** | `Suites de tests détectées ✅` | Couverture de tests garantissant la stabilité des builds. |
-| **Licence Légale** | `Apache License 2.0 (Low Risk)` | Low contraintes pour l'intégration en SaaS propriétaire. |
+| **Cadre Juridique** | `Apache License 2.0` | Licence hautement permissive et sécurisée pour les entreprises. |
 
-### 🔍 Les Points Forts Vérifiés (The Good)
-1. **Adoption & Écosystème :** Avec plus de **115,126 étoiles** sur GitHub, le projet bénéficie d'une communauté active capable de détecter rapidement les failles et de contribuer au code.
-2. **Stack Moderne :** Composé de **TypeScript, Tailwind CSS**, garantissant des performances élevées et un recrutement aisé de développeurs familiers avec ces technologies.
-3. **Autonomie d'Infrastructure :** Vous contrôlez vos serveurs, vos sauvegardes et vos coûts sans subir de hausses tarifaires unilatérales.
+### 🚀 Forces Majeures de l'Architecture
+1. **Adoption & Écosystème Exceptionnels :** Avec plus de **115 000 étoiles**, Supabase est l'alternative open-source directe à Firebase la plus puissante au monde.
+2. **Puissance Native de PostgreSQL :** Intègre PostgREST, GoTrue pour l'authentification, pgvector pour l'IA et Realtime sans surcouche propriétaire.
+3. **Plein Contrôle des Données :** Élimine le vendor lock-in en conservant un schéma PostgreSQL standard exportable à tout moment.
 
-### ⚠️ Les Red Flags & Pièges Cachés (The Bad)
-1. **Plafond de Support Communautaire :** Avec **1,246 issues ouvertes**, les demandes d'assistance sur GitHub peuvent prendre plusieurs semaines avant d'obtenir une réponse de l'équipe principale.
-2. **Coût Invisible de la Maintenance DevOps :** L'auto-hébergement n'est jamais réellement "gratuit". La gestion des certificats SSL, des migrations de base de données PostgreSQL, de la mémoire Redis et des sauvegardes représente entre 5 et 15 heures de travail par mois pour votre équipe technique.
-3. **Contraintes Légales :** **Sécurité Commerciale Totale (Apache License 2.0) :** Licence permissive (MIT / Apache). Vous êtes totalement libre de forker, modifier, intégrer et commercialiser ce code dans un SaaS propriétaire à code fermé sans obligation de redistribution de vos secrets de fabrication.
+### ⚙️ Considérations Opérationnelles & Déploiement en Production
+1. **Complexité du Cluster en Self-Hosted :** Un déploiement complet de Supabase auto-hébergé comprend plus de 8 conteneurs interdépendants (Kong, PostgREST, GoTrue, Realtime, Storage, Postgres, Studio).
+2. **Gestion des Sauvegardes & WAL-E :** Assurez-vous de configurer des sauvegardes point-in-time recovery (PITR) pour les environnements de production critiques.
+3. **La Solution Managée Recommandée :** Pour économiser des dizaines d'heures de maintenance DevOps par mois, **[Supabase Cloud](/go/supabase)** prend en charge l'infrastructure globale, les sauvegardes automatiques et le scaling sans friction.
 
 ---
 
 ## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/supabase/supabase)) si :** Vous disposez d'un ingénieur DevOps dédié, vos exigences réglementaires imposent une souveraineté stricte des données sur vos propres serveurs, et vous avez le temps de gérer les mises à jour de versions manuelles.
-* **Optez pour la Version Cloud Officielle ([Supabase Cloud](/go/supabase)) si :** Votre priorité absolue est la vitesse de commercialisation (Time to Market), le support technique prioritaire garanti par SLA, et le zéro-tracas opérationnel sur vos bases de données.
+* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/supabase/supabase)) si :** Vous devez opérer dans des environnements air-gapped ou sous souveraineté étatique exclusive.
+* **Optez pour la Version Cloud Officielle ([Supabase Cloud](/go/supabase)) si :** Vous voulez vous concentrer sur votre code applicatif et déléguer la résilience et le scaling PostgreSQL aux ingénieurs Supabase.

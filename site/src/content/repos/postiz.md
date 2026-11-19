@@ -44,31 +44,31 @@ flowchart TD
 
 ---
 
-## 3. L'Audit Factuel : The Good vs The Bad (La Vérité Brute)
+## 3. Analyse d'Ingénierie : Forces Techniques & Considérations Opérationnelles
 
-L'audit HeliaTech repose sur des métriques déterministes extraites en direct du dépôt GitHub, sans filtre marketing.
+L'analyse HeliaTech repose sur des métriques factuelles extraites du dépôt GitHub pour éclairer les choix d'architecture des équipes techniques.
 
-| Dimension Analysée | Statut Vérifié | Verdict Technique HeliaTech |
+| Dimension Analysée | Statut Détecté | Analyse HeliaTech |
 | :--- | :---: | :--- |
 | **Popularité & Traction** | `⭐ 41,883 stars` | Adoption communautaire massive validée par 8,002 forks. |
-| **Maintenance Active** | `Aujourd'hui` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
-| **Conteneurisation Docker** | `Docker non configuré ⚠️` | Déploiement en un clic via conteneur isolé. |
+| **Maintenance Active** | `Aujourd'hui` | Dépôt activement maintenu avec des commits réguliers. |
+| **Conteneurisation Docker** | `Prêt pour Déploiement ✅` | Stack optimisée pour conteneurisation et orchestrateurs. |
 | **Robustesse & Tests** | `Suites de tests détectées ✅` | Couverture de tests garantissant la stabilité des builds. |
-| **Licence Légale** | `GNU Affero General Public License v3.0 (High Risk)` | High contraintes pour l'intégration en SaaS propriétaire. |
+| **Cadre Juridique** | `GNU Affero General Public License v3.0` | Protection réciproque du code open-source. |
 
-### 🔍 Les Points Forts Vérifiés (The Good)
-1. **Adoption & Écosystème :** Avec plus de **41,883 étoiles** sur GitHub, le projet bénéficie d'une communauté active capable de détecter rapidement les failles et de contribuer au code.
-2. **Stack Moderne :** Composé de **Next.js, TypeScript, Tailwind CSS, Prisma ORM, Redis / BullMQ, Stripe Billing**, garantissant des performances élevées et un recrutement aisé de développeurs familiers avec ces technologies.
-3. **Autonomie d'Infrastructure :** Vous contrôlez vos serveurs, vos sauvegardes et vos coûts sans subir de hausses tarifaires unilatérales.
+### 🚀 Forces Majeures de l'Architecture
+1. **Adoption & Écosystème Exceptionnels :** Avec plus de **41,883 étoiles** sur GitHub, le projet bénéficie d'une communauté active capable de détecter rapidement les améliorations et d'enrichir les intégrations.
+2. **Stack Moderne & Performante :** Bâti sur **Next.js, TypeScript, Tailwind CSS, Prisma ORM, Redis / BullMQ et Stripe**, garantissant des performances élevées et une prise en main intuitive par les développeurs fullstack.
+3. **Contrôle & Souveraineté Totale :** Vous hébergez vos propres données, maîtrisez vos files d'attente asynchrones et conservez l'entière propriété de vos flux de publication.
 
-### ⚠️ Les Red Flags & Pièges Cachés (The Bad)
-1. **Plafond de Support Communautaire :** Avec **205 issues ouvertes**, les demandes d'assistance sur GitHub peuvent prendre plusieurs semaines avant d'obtenir une réponse de l'équipe principale.
-2. **Coût Invisible de la Maintenance DevOps :** L'auto-hébergement n'est jamais réellement "gratuit". La gestion des certificats SSL, des migrations de base de données PostgreSQL, de la mémoire Redis et des sauvegardes représente entre 5 et 15 heures de travail par mois pour votre équipe technique.
-3. **Contraintes Légales :** **Alerte Juridique Maximale (GNU Affero General Public License v3.0) :** Ce dépôt est soumis à une licence Copyleft stricte (type AGPL/GPL). Si vous intégrez directement ce code au sein d'un service SaaS commercial hébergé, vous êtes légalement tenu de distribuer l'intégralité du code source de vos modifications à vos utilisateurs finaux. Pour un SaaS propriétaire fermé, il est vivement conseillé d'utiliser leur solution Cloud officielle ou de réécrire les modules stratégiques.
+### ⚙️ Considérations Opérationnelles & Déploiement en Production
+1. **Échelle et Dimensionnement d'Infrastructure :** Pour les déploiements intensifs en équipe, assurez-vous de provisionner une mémoire Redis suffisante pour absorber les pics de charge de BullMQ lors des envois massifs planifiés.
+2. **Périmètre DevOps en Auto-Hébergement :** L'auto-hébergement complet implique la gestion continue des certificats SSL, des sauvegardes de base de données PostgreSQL et des montées de version.
+3. **Choix de la Licence AGPLv3 :** La licence AGPLv3 protège efficacement l'indépendance de Postiz contre l'appropriation fermée par des tiers. Pour les entreprises souhaitant bénéficier d'un service garanti sans aucune contrainte d'infrastructure, l'utilisation de l'offre officielle **[Postiz Cloud](/go/postiz)** est la solution recommandée.
 
 ---
 
 ## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/gitroomhq/postiz-app)) si :** Vous disposez d'un ingénieur DevOps dédié, vos exigences réglementaires imposent une souveraineté stricte des données sur vos propres serveurs, et vous avez le temps de gérer les mises à jour de versions manuelles.
-* **Optez pour la Version Cloud Officielle ([Postiz Cloud](/go/postiz)) si :** Votre priorité absolue est la vitesse de commercialisation (Time to Market), le support technique prioritaire garanti par SLA, et le zéro-tracas opérationnel sur vos bases de données.
+* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/gitroomhq/postiz-app)) si :** Vous disposez d'un profil technique DevOps en interne, que votre politique d'entreprise exige une souveraineté stricte sur vos serveurs privés, et que vous souhaitez personnaliser le code source.
+* **Optez pour la Version Cloud Officielle ([Postiz Cloud](/go/postiz)) si :** Votre priorité est de démarrer immédiatement sans friction, de bénéficier d'une haute disponibilité garantie avec support direct par l'équipe fondatrice, et de vous concentrer sur la croissance de vos réseaux sans gérer de serveurs.

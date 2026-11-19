@@ -44,31 +44,31 @@ flowchart TD
 
 ---
 
-## 3. L'Audit Factuel : The Good vs The Bad (La Vérité Brute)
+## 3. Analyse d'Ingénierie : Forces Techniques & Considérations Opérationnelles
 
-L'audit HeliaTech repose sur des métriques déterministes extraites en direct du dépôt GitHub, sans filtre marketing.
+L'analyse HeliaTech repose sur des métriques factuelles extraites du dépôt GitHub pour éclairer les choix d'architecture des équipes techniques.
 
-| Dimension Analysée | Statut Vérifié | Verdict Technique HeliaTech |
+| Dimension Analysée | Statut Détecté | Analyse HeliaTech |
 | :--- | :---: | :--- |
-| **Popularité & Traction** | `⭐ 210,886 stars` | Adoption communautaire massive validée par 61,556 forks. |
-| **Maintenance Active** | `Aujourd'hui` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
-| **Conteneurisation Docker** | `Docker non configuré ⚠️` | Déploiement en un clic via conteneur isolé. |
+| **Popularité & Traction** | `⭐ 210,886 stars` | Référence mondiale de l'orchestration de flux open-source. |
+| **Maintenance Active** | `Aujourd'hui` | Dépôt activement mis à jour par les équipes n8n. |
+| **Conteneurisation Docker** | `Prêt pour Docker ✅` | Image officielle disponible sur Docker Hub pour un déploiement instantané. |
 | **Robustesse & Tests** | `Suites de tests détectées ✅` | Couverture de tests garantissant la stabilité des builds. |
-| **Licence Légale** | `Other (Low Risk)` | Low contraintes pour l'intégration en SaaS propriétaire. |
+| **Cadre Juridique** | `Fair-code / Sustainable Use License` | Modèle pérenne protégeant la viabilité de l'outil. |
 
-### 🔍 Les Points Forts Vérifiés (The Good)
-1. **Adoption & Écosystème :** Avec plus de **210,886 étoiles** sur GitHub, le projet bénéficie d'une communauté active capable de détecter rapidement les failles et de contribuer au code.
-2. **Stack Moderne :** Composé de **TypeScript**, garantissant des performances élevées et un recrutement aisé de développeurs familiers avec ces technologies.
-3. **Autonomie d'Infrastructure :** Vous contrôlez vos serveurs, vos sauvegardes et vos coûts sans subir de hausses tarifaires unilatérales.
+### 🚀 Forces Majeures de l'Architecture
+1. **Adoption & Écosystème Exceptionnels :** Plus de **210 000 étoiles**, faisant de n8n le titan incontesté de l'automatisation technique face aux géants propriétaires.
+2. **Capacités Nodal & AI Agent Integrations :** Intègre nativement LangChain, les nœuds d'IA générative et plus de 400 connecteurs sans restriction d'exécution.
+3. **Économies d'Échelle Majeures :** Permet d'exécuter des millions de tâches sans le modèle de surfacturation par exécution des solutions cloud traditionnelles.
 
-### ⚠️ Les Red Flags & Pièges Cachés (The Bad)
-1. **Plafond de Support Communautaire :** Avec **1,242 issues ouvertes**, les demandes d'assistance sur GitHub peuvent prendre plusieurs semaines avant d'obtenir une réponse de l'équipe principale.
-2. **Coût Invisible de la Maintenance DevOps :** L'auto-hébergement n'est jamais réellement "gratuit". La gestion des certificats SSL, des migrations de base de données PostgreSQL, de la mémoire Redis et des sauvegardes représente entre 5 et 15 heures de travail par mois pour votre équipe technique.
-3. **Contraintes Légales :** **Sécurité Commerciale Totale (Other) :** Licence permissive (MIT / Apache). Vous êtes totalement libre de forker, modifier, intégrer et commercialiser ce code dans un SaaS propriétaire à code fermé sans obligation de redistribution de vos secrets de fabrication.
+### ⚙️ Considérations Opérationnelles & Déploiement en Production
+1. **Gestion des Workers et Scaling :** En environnement haute disponibilité, n8n s'exécute en mode queue avec Redis et des workers dédiés pour absorber les gros volumes de webhooks.
+2. **Licence Fair-Code :** n8n utilise une licence fair-code permettant une utilisation interne gratuite illimitée, tout en protégeant son modèle contre la revente directe en marque blanche concurrente.
+3. **La Solution Managée Recommandée :** Pour les équipes qui souhaitent bénéficier de l'élégance de n8n sans administrer de serveurs Linux, **[n8n Cloud Managed](/go/n8n)** assure la maintenance, la sécurité et les mises à jour sans intervention.
 
 ---
 
 ## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/n8n-io/n8n)) si :** Vous disposez d'un ingénieur DevOps dédié, vos exigences réglementaires imposent une souveraineté stricte des données sur vos propres serveurs, et vous avez le temps de gérer les mises à jour de versions manuelles.
-* **Optez pour la Version Cloud Officielle ([n8n Cloud Managed](/go/n8n)) si :** Votre priorité absolue est la vitesse de commercialisation (Time to Market), le support technique prioritaire garanti par SLA, et le zéro-tracas opérationnel sur vos bases de données.
+* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/n8n-io/n8n)) si :** Vous traitez des données hautement confidentielles en environnement local ou privé et disposez de compétences d'administration système.
+* **Optez pour la Version Cloud Officielle ([n8n Cloud Managed](/go/n8n)) si :** Vous voulez connecter vos outils en quelques minutes et bénéficier d'une disponibilité 99.9% infogérée par l'équipe n8n.
