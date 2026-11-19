@@ -1,5 +1,47 @@
 [
   {
+    "timestamp": "2026-11-19 15:33:17",
+    "title": "Cycle Autonome #Swell AI",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Swell AI) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-19 15:33:17",
+    "title": "🚀 NEWSLETTER OFFICIELLEMENT EXPÉDIÉE : #055",
+    "category": "NEWSLETTER",
+    "message": "L'édition #055 vient d'être envoyée avec succès aux abonnés de la communauté !\n\n• **Créneau :** `2026-11-19:thursday`\n• **Sujet :** The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows\n• **Abonnés touchés :** 1\n• **Doublons interceptés :** 0\n\n👉 Historique complet dans Sentinel Admin :",
+    "link": "https://heliatech.online/sentinel/admin"
+  },
+  {
+    "timestamp": "2026-11-19 15:33:15",
+    "title": "📅 NOUVELLE NEWSLETTER PLANIFIÉE",
+    "category": "NEWSLETTER",
+    "message": "Une nouvelle édition de newsletter vient d'être planifiée par Helia !\n\n• **Créneau :** `2026-11-19:thursday`\n• **Type :** THURSDAY\n• **Date prévue :** 2026-11-19\n• **Sujet :** The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows\n• **Statut :** Brouillon créé (en attente d'approbation)\n\n👉 Valider ou inspecter dans Sentinel Admin :",
+    "link": "https://heliatech.online/sentinel/admin"
+  },
+  {
+    "timestamp": "2026-11-19 15:26:08",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, speechify, swell-ai, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-19 15:24:36",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Swell AI: The Autonomous Engine Reshaping Podcast Repurposing and Media Velocity",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Swell AI: The Autonomous Engine Reshaping Podcast Repurposing and Media Velocity\n• **Catégorie :** Audio/Podcasting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/swell-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/swell-ai-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-19 15:19:54",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Swell AI",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Swell AI\n• **Catégorie :** Audio/Podcasting\n• **Note globale :** 4.5/10\n• **Cible idéale :** Podcast production agencies, independent podcasters, and B2B content marketing teams producing high-frequency audio or video content\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/swell-ai/"
+  },
+  {
     "timestamp": "2026-11-19 10:58:00",
     "title": "Cycle Autonome #Cloud Growth Refresh",
     "category": "CYCLE",
@@ -306,47 +348,5 @@
     "category": "REVIEW",
     "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** KoalaWriter\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.5/10\n• **Cible idéale :** SEO agencies, content marketers, and niche site owners looking to scale programmatic SEO content.\n\n👉 Lire la fiche d'audit complète :",
     "link": "https://heliatech.online/reviews/koalawriter/"
-  },
-  {
-    "timestamp": "2026-11-14 19:39:43",
-    "title": "Cycle Autonome #Ahrefs",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Ahrefs) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-14 19:39:10",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-14 19:37:15",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Ahrefs: The Architecture of Search Dominance and the Hands-On Blueprint for Enterprise Organic Growth",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Ahrefs: The Architecture of Search Dominance and the Hands-On Blueprint for Enterprise Organic Growth\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/ahrefs-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/ahrefs-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-14 19:36:54",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Ahrefs",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Ahrefs\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.7/10\n• **Cible idéale :** In-house SEO professionals, digital marketing agencies, and content-driven enterprises\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/ahrefs/"
-  },
-  {
-    "timestamp": "2026-11-14 12:46:56",
-    "title": "Cycle Autonome #WriteSonic",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (WriteSonic) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-14 12:46:28",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]

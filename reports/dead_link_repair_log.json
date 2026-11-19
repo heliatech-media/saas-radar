@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-19T10:57:17.642266",
+  "timestamp": "2026-11-19T15:25:24.841644",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 249,
-    "total_redirects_active": 145,
-    "new_redirects_healed": 46,
+    "total_content_files_scanned": 251,
+    "total_redirects_active": 146,
+    "new_redirects_healed": 47,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -240,6 +240,11 @@
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
       "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "swell-ai",
+      "target_url": "https://www.swell-ai.com",
+      "source_file": "swell-ai-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

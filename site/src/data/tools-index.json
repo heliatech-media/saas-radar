@@ -842,6 +842,16 @@
     "commission_rate": "25% recurring"
   },
   {
+    "name": "Swell AI",
+    "slug": "swell-ai",
+    "tagline": "Autonomous AI content engine for podcasters and content marketing teams",
+    "category": "Audio/Podcasting",
+    "rating": 4.5,
+    "starting_price": "$29/mo",
+    "best_for": "Podcast production agencies, independent podcasters, and B2B content marketing teams producing high-frequency audio or video content",
+    "affiliate_url": "https://www.swellai.com"
+  },
+  {
     "name": "Synthesia",
     "slug": "synthesia",
     "tagline": "Turn text into professional AI videos with human-like avatars and multilingual voiceovers in minutes.",

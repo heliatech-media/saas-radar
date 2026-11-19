@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-19T10:56:42.236979",
+  "last_synced": "2026-11-19T15:24:41.198146",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
   "time_window": "28 Days (2026-10-22 - 2026-11-19)",
-  "total_visitors_network": 49133,
-  "total_requests": 224637,
-  "total_visits": 15231,
-  "total_pageviews": 51728,
+  "total_visitors_network": 49343,
+  "total_requests": 226344,
+  "total_visits": 15296,
+  "total_pageviews": 52080,
   "percent_cached": "56.14%",
-  "data_served_mb": 2985.4,
+  "data_served_mb": 3103.9,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
       "date": "2026-11-19",
-      "visitors": 1423,
-      "rumVisits": 398,
-      "pageviews": 1639,
-      "requests": 4904,
+      "visitors": 1633,
+      "rumVisits": 457,
+      "pageviews": 1991,
+      "requests": 6611,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0317
+      "viewMultiplier": 0.0382
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 13920,
-      "rumVisits": 3619,
-      "pageviews": 13312,
-      "requests": 53442,
+      "visitors": 14130,
+      "rumVisits": 3673,
+      "pageviews": 13664,
+      "requests": 55149,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.2573
+      "viewMultiplier": 0.2624
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 49133,
-      "rumVisits": 15231,
-      "pageviews": 51728,
-      "requests": 224637,
+      "visitors": 49343,
+      "rumVisits": 15296,
+      "pageviews": 52080,
+      "requests": 226344,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 49133,
-      "rumVisits": 15231,
-      "pageviews": 51728,
-      "requests": 224637,
+      "visitors": 49343,
+      "rumVisits": 15296,
+      "pageviews": 52080,
+      "requests": 226344,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 49133,
-      "rumVisits": 15231,
-      "pageviews": 51728,
-      "requests": 224637,
+      "visitors": 49343,
+      "rumVisits": 15296,
+      "pageviews": 52080,
+      "requests": 226344,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -78,7 +78,7 @@
     },
     {
       "path": "/",
-      "views": 5270
+      "views": 5280
     },
     {
       "path": "/api/sentinel/cockpit",
@@ -90,7 +90,7 @@
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1550
+      "views": 1560
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
@@ -121,11 +121,11 @@
       "views": 360
     },
     {
-      "path": "/terms/",
-      "views": 330
+      "path": "/deals/",
+      "views": 340
     },
     {
-      "path": "/deals/",
+      "path": "/terms/",
       "views": 330
     },
     {
@@ -145,7 +145,7 @@
       "views": 290
     },
     {
-      "path": "/versus/",
+      "path": "/awards/",
       "views": 280
     },
     {
@@ -153,27 +153,27 @@
       "views": 280
     },
     {
+      "path": "/blog/best-zapier-alternatives-2026/",
+      "views": 280
+    },
+    {
       "path": "/blog/elevenlabs-vs-heygen/",
       "views": 280
     },
     {
-      "path": "/awards/",
+      "path": "/versus/",
       "views": 280
-    },
-    {
-      "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 270
     },
     {
       "path": "/reviews/elevenlabs/",
       "views": 270
     },
     {
-      "path": "/reviews/supabase/",
+      "path": "/blog/elevenlabs-ia-voix-revolution/",
       "views": 260
     },
     {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
+      "path": "/reviews/supabase/",
       "views": 260
     },
     {
@@ -185,18 +185,18 @@
       "views": 250
     },
     {
-      "path": "/reviews/adcreative-ai/",
+      "path": "/media-kit/",
       "views": 240
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 43740
+      "views": 44530
     },
     {
       "country": "Morocco",
-      "views": 39560
+      "views": 39630
     },
     {
       "country": "Germany",
@@ -204,7 +204,7 @@
     },
     {
       "country": "Singapore",
-      "views": 3050
+      "views": 3070
     },
     {
       "country": "Brazil",
@@ -224,7 +224,7 @@
     },
     {
       "country": "Netherlands",
-      "views": 910
+      "views": 930
     },
     {
       "country": "Belgium",
