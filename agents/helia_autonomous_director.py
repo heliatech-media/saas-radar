@@ -73,6 +73,7 @@ from agents.auto_evolution_agent import HeliaAutoEvolutionAgent
 from agents.breaking_news_sniffer_agent import BreakingNewsSnifferAgent
 from agents.devto_syndication_agent import syndicate_next_monetized_article
 from agents.linkedin_syndication_agent import LinkedInSyndicator
+from agents.github_saas_radar_agent import GitHubSaaSRadarAgent
 from agents.cloudflare_analytics_agent import CloudflareAnalyticsAgent
 from agents.paved_sponsorship_agent import PavedSponsorshipAgent
 from agents.models import ToolReview
@@ -118,6 +119,7 @@ class HeliaAutonomousDirector:
         self.linkedin_syndicator = LinkedInSyndicator()
         self.cloudflare_analytics = CloudflareAnalyticsAgent()
         self.paved = PavedSponsorshipAgent()
+        self.github_radar = GitHubSaaSRadarAgent()
         from agents.cognitive_core import HeliaSwarmCognitiveCoordinator
         self.cognitive_core = HeliaSwarmCognitiveCoordinator(api_key=api_key)
         from agents.design_jury_agent import HeliaDesignJuryAgent
@@ -163,6 +165,7 @@ class HeliaAutonomousDirector:
             "SocialGrowth": ["SocialGrowth", "Social Publisher", "SocialPublisher"],
             "VersusEngine": ["VersusEngine", "Benchmark Runner", "BenchmarkRunner"],
             "AlternativesEngine": ["AlternativesEngine", "Benchmark Runner", "BenchmarkRunner"],
+            "GitHubRadar": ["GitHubRadar", "GitHubSaaSRadarAgent", "GitHub Radar"],
             "SocialScheduler": ["SocialScheduler", "Social Publisher", "SocialPublisher"],
             "CRO": ["CRO", "SEO Optimizer", "SEOOptimizer"],
             "DataVisualizer": ["DataVisualizer", "Benchmark Runner", "BenchmarkRunner"],
@@ -389,6 +392,20 @@ class HeliaAutonomousDirector:
                 self.log("Helia-AlternativesEngine", f"Published Top 7 Alternatives masterclass: {alt_res[0].name}", "🌟")
         except Exception as e:
             self.log("Helia-AlternativesEngine", f"Alternatives engine notice: {e}", "⚠️")
+
+        # Step 5.7: Sub-Agent GitHubRadar (Forensic SaaS Repository Teardowns)
+        if self.is_agent_suspended("GitHubRadar", suspended_agents):
+            self.log("Helia-GitHubRadar", "⏸️ Sub-agent GitHubRadar suspended by Owner in D1. Skipping.", "⏸️")
+        else:
+            try:
+                self.log("Helia-GitHubRadar", "Scouting trending open-source SaaS repos for architectural teardown...", "🛰️")
+                repo_res = self.github_radar.execute_radar_sweep(limit=1)
+                if repo_res:
+                    self.log("Helia-GitHubRadar", f"Published forensic repository teardown: {repo_res[0].name}", "📦")
+                else:
+                    self.log("Helia-GitHubRadar", "All cohort repositories currently audited and up to date.", "✅")
+            except Exception as e:
+                self.log("Helia-GitHubRadar", f"GitHub radar notice: {e}", "⚠️")
 
         # Step 6.5: Sub-Agent SocialScheduler (Monetized Partner Campaign Scheduler)
         try:

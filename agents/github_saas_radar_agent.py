@@ -352,27 +352,64 @@ L'audit HeliaTech repose sur des métriques déterministes extraites en direct d
 """
         return md
 
+    def execute_radar_sweep(self, limit: int = 1) -> List[Path]:
+        """
+        Discovers un-audited repositories from the master cohort, performs
+        deterministic forensic audit, and writes new markdown teardowns to site/src/content/repos/*.md.
+        Returns list of newly published file paths.
+        """
+        existing_slugs = {f.stem for f in REPOS_CONTENT_DIR.glob("*.md")}
+        published = []
+
+        for owner_repo, slug, cloud_alt in EXPANDED_COHORT:
+            if slug in existing_slugs:
+                continue
+
+            audit = self.audit_repository(owner_repo, custom_slug=slug, cloud_alt=cloud_alt)
+            if audit:
+                md_content = self.generate_markdown_teardown(audit)
+                target_path = REPOS_CONTENT_DIR / f"{slug}.md"
+                with open(target_path, "w", encoding="utf-8") as f:
+                    f.write(md_content)
+                print(f"✅ Published repository teardown: site/src/content/repos/{slug}.md (Health Score: {audit['health_score']}/100)")
+                published.append(target_path)
+                existing_slugs.add(slug)
+
+            if len(published) >= limit:
+                break
+
+        return published
+
+
+EXPANDED_COHORT = [
+    ("gitroomhq/postiz-app", "postiz", {"name": "Postiz Cloud", "url": "/go/postiz"}),
+    ("calcom/cal.com", "cal-com", {"name": "Cal.com Enterprise", "url": "/go/cal-com"}),
+    ("wasp-lang/open-saas", "open-saas", {"name": "Open SaaS Official", "url": "https://opensaas.sh"}),
+    ("supabase/supabase", "supabase", {"name": "Supabase Cloud", "url": "/go/supabase"}),
+    ("n8n-io/n8n", "n8n", {"name": "n8n Cloud Managed", "url": "/go/n8n"}),
+    ("twentyhq/twenty", "twenty", {"name": "Twenty Cloud", "url": "https://twenty.com"}),
+    ("documenso/documenso", "documenso", {"name": "Documenso Cloud", "url": "https://documenso.com"}),
+    ("formbricks/formbricks", "formbricks", {"name": "Formbricks Cloud", "url": "https://formbricks.com"}),
+    ("chatwoot/chatwoot", "chatwoot", {"name": "Chatwoot Cloud", "url": "https://chatwoot.com"}),
+    ("plausible/analytics", "plausible", {"name": "Plausible Cloud", "url": "/go/plausible"}),
+    ("nocodb/nocodb", "nocodb", {"name": "NocoDB Cloud", "url": "https://nocodb.com"}),
+    ("typebot-io/typebot.io", "typebot", {"name": "Typebot Cloud", "url": "https://typebot.io"}),
+    ("appflowy-io/appflowy", "appflowy", {"name": "AppFlowy Cloud", "url": "https://appflowy.io"}),
+    ("ghost/ghost", "ghost", {"name": "Ghost(Pro)", "url": "https://ghost.org"}),
+    ("outline/outline", "outline", {"name": "Outline Cloud", "url": "https://getoutline.com"}),
+    ("umami-software/umami", "umami", {"name": "Umami Cloud", "url": "https://umami.is"}),
+    ("hoppscotch/hoppscotch", "hoppscotch", {"name": "Hoppscotch Cloud", "url": "https://hoppscotch.com"}),
+    ("infisical/infisical", "infisical", {"name": "Infisical Cloud", "url": "https://infisical.com"}),
+    ("dubinc/dub", "dub", {"name": "Dub.co Cloud", "url": "https://dub.co"}),
+    ("toeverything/AFFiNE", "affine", {"name": "AFFiNE Cloud", "url": "https://affine.pro"}),
+]
+
 
 if __name__ == "__main__":
     agent = GitHubSaaSRadarAgent()
-    
-    # Target cohort of initial 5 repos
-    cohort = [
-        ("gitroomhq/postiz-app", "postiz", {"name": "Postiz Cloud", "url": "/go/postiz"}),
-        ("calcom/cal.com", "cal-com", {"name": "Cal.com Enterprise", "url": "/go/cal-com"}),
-        ("wasp-lang/open-saas", "open-saas", {"name": "Open SaaS Official", "url": "https://opensaas.sh"}),
-        ("supabase/supabase", "supabase", {"name": "Supabase Cloud", "url": "/go/supabase"}),
-        ("n8n-io/n8n", "n8n", {"name": "n8n Cloud Managed", "url": "/go/n8n"}),
-    ]
-
-    print(f"🚀 [HeliaTech Radar] Starting forensic audit of {len(cohort)} repositories...")
-    for owner_repo, slug, cloud_alt in cohort:
-        audit = agent.audit_repository(owner_repo, custom_slug=slug, cloud_alt=cloud_alt)
-        if audit:
-            md_content = agent.generate_markdown_teardown(audit)
-            target_path = REPOS_CONTENT_DIR / f"{slug}.md"
-            with open(target_path, "w", encoding="utf-8") as f:
-                f.write(md_content)
-            print(f"✅ Generated forensic teardown at: site/src/content/repos/{slug}.md (Score: {audit['health_score']}/100)")
-
-    print("\n✨ [HeliaTech Radar] Initial cohort audit complete!")
+    print("🚀 [HeliaTech Radar] Executing automated sweep...")
+    results = agent.execute_radar_sweep(limit=1)
+    if results:
+        print(f"✨ Successfully published: {[r.name for r in results]}")
+    else:
+        print("ℹ️ All repositories in cohort already audited.")

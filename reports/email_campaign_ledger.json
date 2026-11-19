@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-01T02:09:31.611795",
-  "total_sent": 19,
+  "total_sent": 164,
   "dispatches": [
     {
       "type": "sponsor_outreach_followup_media_kit",
@@ -147,8 +147,8 @@
   ],
   "active_campaigns": {
     "weekly_radar": {
-      "last_sent": "2026-11-05T23:05:07.413856",
-      "current_issue": 54
+      "last_sent": "2026-11-19T14:39:08.535519",
+      "current_issue": 55
     },
     "pr_outreach": {
       "last_sent": "2026-11-19T10:58:00.458779",
