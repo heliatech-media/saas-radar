@@ -1140,6 +1140,19 @@
         "saas",
         "automation"
       ]
+    },
+    "lemlist-vs-brevo": {
+      "id": 5073441,
+      "url": "https://dev.to/heliatech/lemlist-vs-brevo-2026-which-one-wins-3ok",
+      "title": "Lemlist vs Brevo (2026): Which One Wins?",
+      "canonical_url": "https://heliatech.online/blog/lemlist-vs-brevo",
+      "published": true,
+      "tags": [
+        "lemlist",
+        "brevo",
+        "lemlistvsbrevo",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

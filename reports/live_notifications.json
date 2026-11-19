@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-11-19 10:58:00",
+    "title": "Cycle Autonome #Cloud Growth Refresh",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cloud Growth Refresh) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-19 10:57:53",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-11-19 02:10:33",
     "title": "Cycle Autonome #Cloud Growth Refresh",
     "category": "CYCLE",
@@ -334,19 +348,5 @@
     "category": "ALERT",
     "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 10 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
     "link": null
-  },
-  {
-    "timestamp": "2026-11-14 12:44:28",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : WriteSonic: The AI Content Engine Evolution and the 15-Minute SEO Blueprint for Enterprise Domination",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** WriteSonic: The AI Content Engine Evolution and the 15-Minute SEO Blueprint for Enterprise Domination\n• **Catégorie :** AI SEO & Copywriting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/writesonic-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/writesonic-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-14 12:43:56",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : WriteSonic",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** WriteSonic\n• **Catégorie :** AI SEO & Copywriting\n• **Note globale :** 4.6/10\n• **Cible idéale :** Content marketing teams, SEO agencies, and freelance writers scaling output without sacrificing quality.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/writesonic/"
   }
 ]
