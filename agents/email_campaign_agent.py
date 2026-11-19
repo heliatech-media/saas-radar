@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 import json
 import logging
 from datetime import datetime, timedelta
@@ -771,7 +772,7 @@ class EmailCampaignAgent:
             }
 
         # 2. Check if a validated edition exists
-        if not existing_edition or existing_edition["status"] != "validated":
+        if not existing_edition or existing_edition["status"] not in ("validated", "sending"):
             brain = self._get_brain()
             forward_plan = brain.get("editorial_forward_plan", [])
             planned_item = forward_plan[0] if forward_plan else FORWARD_EDITORIAL_POOL[0]
@@ -846,13 +847,15 @@ class EmailCampaignAgent:
         validated_ed = engine.get_edition_by_slot(slot_key)
         final_issue = validated_ed["issue_number"]
         final_subject = validated_ed["subject"].replace("[THE RADAR]", f"[THE RADAR #{final_issue:03d}]")
-        final_html = validated_ed["content_html"].replace("PENDING", f"#{final_issue:03d}")
+        final_html = validated_ed["content_html"].replace("PENDING", f"{final_issue:03d}")
 
         # Dispatch via Resend (Strictly from radar@heliatech.online)
         def resend_caller(email: str, subj: str, body: str) -> Optional[str]:
             unsub_link = f"https://heliatech.online/unsubscribe?email={urllib.parse.quote(email)}"
             custom_body = body.replace("{{email}}", email).replace("{{unsubscribe_url}}", unsub_link)
-            return self.send_via_resend(email, final_subject, custom_body, sender=DEFAULT_EDITORIAL_SENDER)
+            res = self.send_via_resend(email, final_subject, custom_body, sender=DEFAULT_EDITORIAL_SENDER)
+            time.sleep(0.12)
+            return res
 
         if broadcast and not test_mode:
             # Mode Production Broadcast : charge automatiquement les 142 abonnés vérifiés depuis Cloudflare D1
