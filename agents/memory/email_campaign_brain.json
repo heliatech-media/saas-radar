@@ -1,7 +1,7 @@
 {
   "domain": "Autonomous B2B Newsletter Planning, Dispatch Memory & Audience Retention",
   "version": "2.0",
-  "last_evolution": "2026-11-19T10:56:17.607759",
+  "last_evolution": "2026-11-19T14:13:50.818498",
   "heuristics": [
     {
       "id": "HEUR-EMAIL-01",
@@ -134,7 +134,7 @@
       "status": "NEXT_IN_LINE",
       "tool_name": "Cursor",
       "category": "Developer Tools & AI IDE",
-      "subject_tagline": "Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
+      "subject_tagline": "The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows",
       "headline": "The Autonomous IDE Shift: Why High-Velocity Teams Are Leaving Copilot for Cursor",
       "duel_title": "Cursor vs GitHub Copilot (2026 Developer Velocity Showdown)",
       "deal_headline": "Cursor Rules Masterpack: Next.js 15, Tailwind & Supabase ($19)",

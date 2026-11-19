@@ -46,7 +46,7 @@ FORWARD_EDITORIAL_POOL = [
         "slot_index": 1,
         "tool_name": "Cursor",
         "category": "Developer Tools & AI IDE",
-        "subject_tagline": "Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
+        "subject_tagline": "The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows",
         "headline": "The Autonomous IDE Shift: Why High-Velocity Teams Are Leaving Copilot for Cursor",
         "summary": "We analyzed 450+ multi-file refactoring workflows across engineering teams. Here is how Cursor's context indexer cuts PR review cycles by 40%.",
         "verdict_title": "Context-Engineered Development & The End of Shallow Autocomplete",
@@ -652,7 +652,7 @@ class EmailCampaignAgent:
                     "format": f"The Thursday Radar #{item['issue_number']:03d}",
                     "scheduled_date": f"{item['target_date']}T14:00:00Z",
                     "scheduled_date_fr": f"{item['target_date_human']} à 15:00",
-                    "subject": f"⚡ [THE RADAR #{item['issue_number']:03d}] {item['subject_tagline']}",
+                    "subject": item['subject_tagline'],
                     "sender": DEFAULT_SENDER,
                     "recipients_scope": "All Verified B2B Subscribers & Director",
                     "featured_topics": [
@@ -785,7 +785,7 @@ class EmailCampaignAgent:
                 "githubRepo": matching_pool.get("github_repo_name", "postiz-app / postiz")
             }
 
-            subject = f"⚡ [THE RADAR] {matching_pool['subject_tagline']}"
+            subject = matching_pool['subject_tagline']
             publish_date_human = ny_now.strftime("%A, %b %d, %Y")
 
             context = {

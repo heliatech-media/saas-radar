@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T10:56:17.608809",
+  "updated_at": "2026-11-19T14:13:50.831800",
   "queue_status": "ACTIVE_DISPATCH_PIPELINE",
   "total_upcoming": 12,
   "next_scheduled_dispatch": "2026-11-26T14:00:00Z",
@@ -10,7 +10,7 @@
       "format": "The Thursday Radar #055",
       "scheduled_date": "2026-11-26T14:00:00Z",
       "scheduled_date_fr": "Thursday, Nov 26, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #055] Cursor vs GitHub Copilot: The 2026 Engineering Speed Benchmark",
+      "subject": "The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows",
       "sender": "The Thursday Radar <radar@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -28,7 +28,7 @@
       "format": "The Thursday Radar #056",
       "scheduled_date": "2026-12-03T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 03, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #056] The Zero-Latency Voice Revolution: ElevenLabs Agents Teardown",
+      "subject": "The Zero-Latency Voice Revolution: ElevenLabs Agents Teardown",
       "sender": "The Thursday Radar <radar@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -46,7 +46,7 @@
       "format": "The Thursday Radar #057",
       "scheduled_date": "2026-12-10T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 10, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #057] The End of Database Lock-In: Serverless Postgres & Supabase",
+      "subject": "The End of Database Lock-In: Serverless Postgres & Supabase",
       "sender": "The Thursday Radar <radar@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -64,7 +64,7 @@
       "format": "The Thursday Radar #058",
       "scheduled_date": "2026-12-17T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 17, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #058] The Great Workflow Migration: n8n Crushes $2,000/mo Zapier Invoices",
+      "subject": "The Great Workflow Migration: n8n Crushes $2,000/mo Zapier Invoices",
       "sender": "The Thursday Radar <radar@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -82,7 +82,7 @@
       "format": "The Thursday Radar #059",
       "scheduled_date": "2026-12-24T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 24, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #059] Apollo.io vs ZoomInfo: The 2026 B2B Prospecting Audit",
+      "subject": "Apollo.io vs ZoomInfo: The 2026 B2B Prospecting Audit",
       "sender": "The Thursday Radar <radar@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
@@ -100,7 +100,7 @@
       "format": "The Thursday Radar #060",
       "scheduled_date": "2026-12-31T14:00:00Z",
       "scheduled_date_fr": "Thursday, Dec 31, 2026 à 15:00",
-      "subject": "⚡ [THE RADAR #060] Ditching Jira: How Linear Restores 4+ Hours of Focus Per Week",
+      "subject": "Ditching Jira: How Linear Restores 4+ Hours of Focus Per Week",
       "sender": "The Thursday Radar <radar@heliatech.online>",
       "recipients_scope": "All Verified B2B Subscribers & Director",
       "featured_topics": [
