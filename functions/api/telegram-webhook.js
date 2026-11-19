@@ -1,14 +1,33 @@
 /**
- * Cloudflare Pages Function: /api/telegram-webhook
- * Autonomous Telegram Human-in-the-Loop Governance Controller.
- * Handles interactive inline keyboard approvals & modification feedback directly from Hamza's Telegram.
+ * Cloudflare Pages / Worker Function: /api/telegram-webhook
+ * Diagnostic & Sovereign Telegram Governance Controller.
  */
 
 export async function onRequestGet(context) {
+  const envKeys = Object.keys(context.env || {});
+  const db = context.env?.DB;
+  let testQuery = null;
+  let dbError = null;
+
+  if (db) {
+    try {
+      const row = await db.prepare("SELECT count(*) as count FROM owner_approvals").first();
+      testQuery = row;
+    } catch (e) {
+      dbError = e.message;
+    }
+  }
+
   return new Response(JSON.stringify({
     service: "HeliaTech Sovereign Telegram Governance Webhook",
     status: "HEALTHY",
     runtime: "Cloudflare Edge Worker",
+    env_keys: envKeys,
+    has_db: Boolean(db),
+    has_bot_token: Boolean(context.env?.TELEGRAM_BOT_TOKEN),
+    has_chat_id: Boolean(context.env?.TELEGRAM_CHAT_ID),
+    d1_test_query: testQuery,
+    d1_error: dbError,
     timestamp: new Date().toISOString()
   }), {
     status: 200,
@@ -17,22 +36,32 @@ export async function onRequestGet(context) {
 }
 
 export async function onRequestPost(context) {
+  const diag = {
+    step: "start",
+    timestamp: new Date().toISOString()
+  };
+
   try {
     const db = context.env?.DB;
     const botToken = context.env?.TELEGRAM_BOT_TOKEN;
     const authorizedChatId = String(context.env?.TELEGRAM_CHAT_ID || "");
+    diag.has_db = Boolean(db);
+    diag.has_bot_token = Boolean(botToken);
+    diag.authorized_chat_id = authorizedChatId;
 
     const update = await context.request.json();
+    diag.update_keys = Object.keys(update || {});
 
-    // 0. Always persist raw incoming update to D1 audit logs for forensic visibility
+    // Always log raw update to D1 audit logs
     if (db) {
       try {
         await db.prepare(`
-          INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-          VALUES (datetime('now'), 'telegram:incoming', 'webhook', 'TELEGRAM_INCOMING_RAW', 'update', ?, '', '', 'sig_raw')
+          INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, signature)
+          VALUES (datetime('now'), 'telegram:incoming', 'webhook', 'TELEGRAM_RAW_UPDATE', 'update', ?, 'sig_raw')
         `).bind(JSON.stringify(update)).run();
+        diag.raw_audit_logged = true;
       } catch (logErr) {
-        console.error("Error logging raw update to D1:", logErr);
+        diag.raw_audit_error = logErr.message;
       }
     }
 
@@ -46,23 +75,20 @@ export async function onRequestPost(context) {
       const messageId = message?.message_id;
       const chatId = message?.chat?.id;
 
-      // Generous authorization: match fromId or chatId or authorizedChatId
-      const isAuth = !authorizedChatId || fromId === authorizedChatId || String(chatId) === authorizedChatId || authorizedChatId.includes(fromId);
-
-      if (!isAuth) {
-        await answerCallback(botToken, callbackId, "⛔ Accès réservé au fondateur.", true);
-        return new Response("OK", { status: 200 });
-      }
+      diag.callback_data = data;
+      diag.from_id = fromId;
+      diag.chat_id = chatId;
 
       if (data.startsWith("nl_approve:")) {
         const slotKey = data.replace("nl_approve:", "").trim();
 
         if (db) {
-          await db.prepare(`
+          const res1 = await db.prepare(`
             UPDATE owner_approvals 
             SET status = 'APPROVED', decided_at = datetime('now'), decided_by = 'Telegram Owner (Hamza)', decision_notes = 'Approuvé via bouton Telegram'
             WHERE item_ref = ?
           `).bind(slotKey).run();
+          diag.approval_update = res1;
 
           await db.prepare(`
             UPDATE newsletter_editions 
@@ -71,8 +97,8 @@ export async function onRequestPost(context) {
           `).bind(slotKey).run();
 
           await db.prepare(`
-            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_APPROVE_NEWSLETTER', ?, '{"source":"telegram_inline_button"}', 'PENDING', 'APPROVED', 'sig_tg_approve')
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, signature)
+            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_APPROVE_NEWSLETTER', ?, '{"source":"button"}', 'sig_approve')
           `).bind(`slot:${slotKey}`).run();
         }
 
@@ -87,18 +113,22 @@ export async function onRequestPost(context) {
           ]);
         }
 
-        return new Response("OK", { status: 200 });
+        return new Response(JSON.stringify({ success: true, action: "APPROVED", diag }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
       }
 
       if (data.startsWith("nl_reject:")) {
         const slotKey = data.replace("nl_reject:", "").trim();
 
         if (db) {
-          await db.prepare(`
+          const res2 = await db.prepare(`
             UPDATE owner_approvals 
             SET status = 'REJECTED', decided_at = datetime('now'), decided_by = 'Telegram Owner (Hamza)', decision_notes = 'Rejeté via bouton Telegram'
             WHERE item_ref = ?
           `).bind(slotKey).run();
+          diag.reject_update = res2;
 
           await db.prepare(`
             UPDATE newsletter_editions 
@@ -107,8 +137,8 @@ export async function onRequestPost(context) {
           `).bind(slotKey).run();
 
           await db.prepare(`
-            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_REJECT_NEWSLETTER', ?, '{"source":"telegram_inline_button"}', 'PENDING', 'REJECTED', 'sig_tg_reject')
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, signature)
+            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_REJECT_NEWSLETTER', ?, '{"source":"button"}', 'sig_reject')
           `).bind(`slot:${slotKey}`).run();
         }
 
@@ -119,30 +149,36 @@ export async function onRequestPost(context) {
           await editMessageText(botToken, chatId, messageId, updatedText, []);
         }
 
-        return new Response("OK", { status: 200 });
+        return new Response(JSON.stringify({ success: true, action: "REJECTED", diag }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
       }
 
       if (data.startsWith("nl_edit:")) {
         const slotKey = data.replace("nl_edit:", "").trim();
 
         if (db) {
-          await db.prepare(`
+          const res3 = await db.prepare(`
             UPDATE owner_approvals 
             SET status = 'MODIFICATION_REQUESTED', decided_at = datetime('now'), decided_by = 'Telegram Owner (Hamza)'
             WHERE item_ref = ?
           `).bind(slotKey).run();
+          diag.edit_update = res3;
         }
 
-        await answerCallback(botToken, callbackId, "📝 Mode modification activé.", false);
+        await answerCallback(botToken, callbackId, "📝 Mode modification activé. Tapez votre consigne ci-dessous.", false);
 
         await sendTelegramMessage(botToken, chatId, 
-          `📝 **Demande de Modification enregistrée pour l'édition \`${slotKey}\`**\n\n` +
-          `Veuillez taper votre consigne directement ci-dessous en réponse à ce message ` +
-          `(ex : *"Change le sujet pour X"*, *"Remplace l'outil en spotlight par n8n"*, etc.).\n` +
-          `L'agent intégrera vos directives avant de vous soumettre une nouvelle version.`
+          `📝 **Mode Modification Activé pour l'édition \`${slotKey}\`**\n\n` +
+          `Veuillez taper votre consigne directement ci-dessous en réponse à ce message.\n` +
+          `Dès réception, l'agent mettra à jour le contenu.`
         );
 
-        return new Response("OK", { status: 200 });
+        return new Response(JSON.stringify({ success: true, action: "MODIFICATION_REQUESTED", diag }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
       }
     }
 
@@ -153,7 +189,10 @@ export async function onRequestPost(context) {
       const fromId = String(msg.from?.id);
       const chatId = msg.chat?.id;
 
-      // Handle /status command
+      diag.message_text = text;
+      diag.from_id = fromId;
+      diag.chat_id = chatId;
+
       if (text === "/status") {
         let pendingCount = 0;
         let latestPending = null;
@@ -170,34 +209,50 @@ export async function onRequestPost(context) {
           : `✅ **Sentinel Gouvernance : Aucun envoi en attente.**\n\nToutes les éditions sont soit archivées, soit diffusées. Prochaine édition programmée selon le calendrier.`;
 
         await sendTelegramMessage(botToken, chatId, statusMsg);
-        return new Response("OK", { status: 200 });
+        return new Response(JSON.stringify({ success: true, action: "STATUS_COMMAND", diag }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" }
+        });
       }
 
-      // If the founder sends feedback or editing instruction
+      // Record any incoming feedback message into owner_approvals
       if (db) {
         const pending = await db.prepare("SELECT * FROM owner_approvals WHERE status IN ('MODIFICATION_REQUESTED', 'PENDING') ORDER BY id DESC LIMIT 1").first();
+        diag.found_pending = pending;
+
         if (pending) {
-          await db.prepare(`
+          const updateRes = await db.prepare(`
             UPDATE owner_approvals 
             SET decision_notes = ?, status = 'MODIFICATION_REQUESTED', decided_at = datetime('now'), decided_by = 'Telegram Owner (Hamza)'
             WHERE id = ?
           `).bind(text, pending.id).run();
+          diag.feedback_update_res = updateRes;
 
           await db.prepare(`
-            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_FEEDBACK_SAVED', ?, ?, 'PENDING', 'MODIFICATION_REQUESTED', 'sig_tg_feedback')
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, signature)
+            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_FEEDBACK_SAVED', ?, ?, 'sig_feedback')
           `).bind(`approval:${pending.id}`, JSON.stringify({ feedback: text, fromId, chatId })).run();
 
           await sendTelegramMessage(botToken, chatId, `✍️ **Consigne de modification enregistrée avec succès en base D1 !**\n\n> *"${text}"*\n\nL'agent adapte immédiatement le contenu.`);
-          return new Response("OK", { status: 200 });
+
+          return new Response(JSON.stringify({ success: true, action: "FEEDBACK_SAVED", diag }), {
+            status: 200,
+            headers: { "Content-Type": "application/json" }
+          });
         }
       }
     }
 
-    return new Response("OK", { status: 200 });
+    return new Response(JSON.stringify({ success: true, action: "IGNORED_UNRECOGNIZED", diag }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
   } catch (err) {
     console.error("Telegram Webhook Error:", err);
-    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
+    return new Response(JSON.stringify({ error: err.message, stack: err.stack, diag }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
   }
 }
 
@@ -205,43 +260,53 @@ export async function onRequestPost(context) {
 async function answerCallback(botToken, callbackQueryId, text, showAlert = false) {
   if (!botToken || !callbackQueryId) return;
   const url = `https://api.telegram.org/bot${botToken}/answerCallbackQuery`;
-  await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      callback_query_id: callbackQueryId,
-      text: text,
-      show_alert: showAlert
-    })
-  });
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        callback_query_id: callbackQueryId,
+        text: text,
+        show_alert: showAlert
+      })
+    });
+  } catch (e) {
+    console.error("answerCallback error:", e);
+  }
 }
 
 async function editMessageText(botToken, chatId, messageId, text, inlineKeyboard = []) {
   if (!botToken || !chatId || !messageId) return;
   const url = `https://api.telegram.org/bot${botToken}/editMessageText`;
-  await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      chat_id: chatId,
-      message_id: messageId,
-      text: text,
-      parse_mode: "Markdown",
-      reply_markup: inlineKeyboard.length > 0 ? { inline_keyboard: inlineKeyboard } : undefined
-    })
-  });
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        message_id: messageId,
+        text: text,
+        reply_markup: inlineKeyboard.length > 0 ? { inline_keyboard: inlineKeyboard } : undefined
+      })
+    });
+  } catch (e) {
+    console.error("editMessageText error:", e);
+  }
 }
 
 async function sendTelegramMessage(botToken, chatId, text) {
   if (!botToken || !chatId) return;
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-  await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: text,
-      parse_mode: "Markdown"
-    })
-  });
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: text
+      })
+    });
+  } catch (e) {
+    console.error("sendTelegramMessage error:", e);
+  }
 }
