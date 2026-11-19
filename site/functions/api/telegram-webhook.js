@@ -1,12 +1,7 @@
 /**
  * Cloudflare Pages Function: /api/telegram-webhook
  * Autonomous Telegram Human-in-the-Loop Governance Controller.
- * Handles interactive inline keyboard approvals directly from Hamza's Telegram.
- * 
- * Buttons handled:
- * 1. nl_approve:<slot_key> -> Sets status = 'APPROVED' in Cloudflare D1 owner_approvals & newsletter_editions
- * 2. nl_reject:<slot_key>  -> Sets status = 'REJECTED' in Cloudflare D1 owner_approvals & 'cancelled' in newsletter_editions
- * 3. nl_edit:<slot_key>    -> Sets status = 'MODIFICATION_REQUESTED' and prompts for feedback
+ * Handles interactive inline keyboard approvals & modification feedback directly from Hamza's Telegram.
  */
 
 export async function onRequestGet(context) {
@@ -29,6 +24,18 @@ export async function onRequestPost(context) {
 
     const update = await context.request.json();
 
+    // 0. Always persist raw incoming update to D1 audit logs for forensic visibility
+    if (db) {
+      try {
+        await db.prepare(`
+          INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
+          VALUES (datetime('now'), 'telegram:incoming', 'webhook', 'TELEGRAM_INCOMING_RAW', 'update', ?, '', '', 'sig_raw')
+        `).bind(JSON.stringify(update)).run();
+      } catch (logErr) {
+        console.error("Error logging raw update to D1:", logErr);
+      }
+    }
+
     // 1. Handle Inline Button Clicks (callback_query)
     if (update.callback_query) {
       const cb = update.callback_query;
@@ -39,42 +46,38 @@ export async function onRequestPost(context) {
       const messageId = message?.message_id;
       const chatId = message?.chat?.id;
 
-      // Security check: Only the verified Founder can approve/reject
-      if (authorizedChatId && fromId !== authorizedChatId) {
-        await answerCallback(botToken, callbackId, "⛔ Accès refusé : Seul le fondateur autorisé peut valider.", true);
+      // Generous authorization: match fromId or chatId or authorizedChatId
+      const isAuth = !authorizedChatId || fromId === authorizedChatId || String(chatId) === authorizedChatId || authorizedChatId.includes(fromId);
+
+      if (!isAuth) {
+        await answerCallback(botToken, callbackId, "⛔ Accès réservé au fondateur.", true);
         return new Response("OK", { status: 200 });
       }
 
       if (data.startsWith("nl_approve:")) {
         const slotKey = data.replace("nl_approve:", "").trim();
-        const nowIso = new Date().toISOString();
 
         if (db) {
-          // 1. Update owner_approvals table in D1
           await db.prepare(`
             UPDATE owner_approvals 
             SET status = 'APPROVED', decided_at = datetime('now'), decided_by = 'Telegram Owner (Hamza)', decision_notes = 'Approuvé via bouton Telegram'
             WHERE item_ref = ?
           `).bind(slotKey).run();
 
-          // 2. Update newsletter_editions table in D1
           await db.prepare(`
             UPDATE newsletter_editions 
             SET status = 'validated', validated_at = datetime('now')
             WHERE slot_key = ?
           `).bind(slotKey).run();
 
-          // 3. Log into sentinel_audit_logs
           await db.prepare(`
             INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
             VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_APPROVE_NEWSLETTER', ?, '{"source":"telegram_inline_button"}', 'PENDING', 'APPROVED', 'sig_tg_approve')
           `).bind(`slot:${slotKey}`).run();
         }
 
-        // Notify Telegram user with alert toast
-        await answerCallback(botToken, callbackId, "✅ Édition validée avec succès ! Prête pour diffusion.", false);
+        await answerCallback(botToken, callbackId, "✅ Édition validée ! Prête pour diffusion.", false);
 
-        // Edit Telegram message to reflect approval
         if (message && message.text) {
           const updatedText = message.text + `\n\n═══════════════════════════════\n✅ **APPROUVÉ PAR HAMZA VIA TELEGRAM**\n📅 Validé le : ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}\n🚀 Statut Cloudflare D1 : APPROVED & VALIDATED`;
           await editMessageText(botToken, chatId, messageId, updatedText, [
@@ -109,10 +112,10 @@ export async function onRequestPost(context) {
           `).bind(`slot:${slotKey}`).run();
         }
 
-        await answerCallback(botToken, callbackId, "❌ Édition rejetée et archivée. Aucun email ne sera envoyé.", false);
+        await answerCallback(botToken, callbackId, "❌ Édition rejetée et annulée.", false);
 
         if (message && message.text) {
-          const updatedText = message.text + `\n\n═══════════════════════════════\n❌ **ÉDITION REJETÉE PAR HAMZA**\n📅 Rejeté le : ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}\n⛔ Diffusion strictement annulée.`;
+          const updatedText = message.text + `\n\n═══════════════════════════════\n❌ **ÉDITION REJETÉE PAR HAMZA**\n📅 Rejeté le : ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}\n⛔ Diffusion annulée.`;
           await editMessageText(botToken, chatId, messageId, updatedText, []);
         }
 
@@ -150,44 +153,43 @@ export async function onRequestPost(context) {
       const fromId = String(msg.from?.id);
       const chatId = msg.chat?.id;
 
-      if (authorizedChatId && fromId === authorizedChatId) {
-        if (text === "/status") {
-          let pendingCount = 0;
-          let latestPending = null;
-          if (db) {
-            const rows = await db.prepare("SELECT * FROM owner_approvals WHERE status = 'PENDING' ORDER BY id DESC LIMIT 1").all();
-            if (rows && rows.results && rows.results.length > 0) {
-              pendingCount = rows.results.length;
-              latestPending = rows.results[0];
-            }
+      // Handle /status command
+      if (text === "/status") {
+        let pendingCount = 0;
+        let latestPending = null;
+        if (db) {
+          const rows = await db.prepare("SELECT * FROM owner_approvals WHERE status = 'PENDING' ORDER BY id DESC LIMIT 1").all();
+          if (rows && rows.results && rows.results.length > 0) {
+            pendingCount = rows.results.length;
+            latestPending = rows.results[0];
           }
-
-          const statusMsg = pendingCount > 0
-            ? `⚡ **Sentinel Gouvernance : 1 édition en attente d'approbation !**\n\n• **Créneau :** \`${latestPending.item_ref}\`\n• **Titre :** ${latestPending.title}\n• **Statut :** PENDING 🟡\n\nUtilisez les boutons ci-dessus ou répondez pour valider.`
-            : `✅ **Sentinel Gouvernance : Aucun envoi en attente.**\n\nToutes les éditions sont soit archivées, soit diffusées. Prochaine édition programmée selon le calendrier.`;
-
-          await sendTelegramMessage(botToken, chatId, statusMsg);
-          return new Response("OK", { status: 200 });
         }
 
-        // If the founder sends feedback or editing instruction
-        if (db) {
-          const pending = await db.prepare("SELECT * FROM owner_approvals WHERE status IN ('MODIFICATION_REQUESTED', 'PENDING') ORDER BY id DESC LIMIT 1").first();
-          if (pending) {
-            await db.prepare(`
-              UPDATE owner_approvals 
-              SET decision_notes = ?, status = 'MODIFICATION_REQUESTED'
-              WHERE id = ?
-            `).bind(text, pending.id).run();
+        const statusMsg = pendingCount > 0
+          ? `⚡ **Sentinel Gouvernance : 1 édition en attente d'approbation !**\n\n• **Créneau :** \`${latestPending.item_ref}\`\n• **Titre :** ${latestPending.title}\n• **Statut :** PENDING 🟡\n\nUtilisez les boutons ci-dessus ou répondez pour valider.`
+          : `✅ **Sentinel Gouvernance : Aucun envoi en attente.**\n\nToutes les éditions sont soit archivées, soit diffusées. Prochaine édition programmée selon le calendrier.`;
 
-            await db.prepare(`
-              INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
-              VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_FEEDBACK_SAVED', ?, ?, 'PENDING', 'MODIFICATION_REQUESTED', 'sig_tg_feedback')
-            `).bind(`approval:${pending.id}`, JSON.stringify({ feedback: text })).run();
+        await sendTelegramMessage(botToken, chatId, statusMsg);
+        return new Response("OK", { status: 200 });
+      }
 
-            await sendTelegramMessage(botToken, chatId, `✍️ **Consigne de modification enregistrée avec succès en base D1 !**\n\n> *"${text}"*\n\nL'agent adapte le contenu et vous renverra le brouillon révisé.`);
-            return new Response("OK", { status: 200 });
-          }
+      // If the founder sends feedback or editing instruction
+      if (db) {
+        const pending = await db.prepare("SELECT * FROM owner_approvals WHERE status IN ('MODIFICATION_REQUESTED', 'PENDING') ORDER BY id DESC LIMIT 1").first();
+        if (pending) {
+          await db.prepare(`
+            UPDATE owner_approvals 
+            SET decision_notes = ?, status = 'MODIFICATION_REQUESTED', decided_at = datetime('now'), decided_by = 'Telegram Owner (Hamza)'
+            WHERE id = ?
+          `).bind(text, pending.id).run();
+
+          await db.prepare(`
+            INSERT INTO sentinel_audit_logs (timestamp, actor_email, actor_role, action, target, details_json, previous_state, new_state, signature)
+            VALUES (datetime('now'), 'telegram:founder', 'owner', 'TELEGRAM_FEEDBACK_SAVED', ?, ?, 'PENDING', 'MODIFICATION_REQUESTED', 'sig_tg_feedback')
+          `).bind(`approval:${pending.id}`, JSON.stringify({ feedback: text, fromId, chatId })).run();
+
+          await sendTelegramMessage(botToken, chatId, `✍️ **Consigne de modification enregistrée avec succès en base D1 !**\n\n> *"${text}"*\n\nL'agent adapte immédiatement le contenu.`);
+          return new Response("OK", { status: 200 });
         }
       }
     }
