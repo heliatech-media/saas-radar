@@ -30,6 +30,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
 
 class SocialGrowthAgent:
     def __init__(self, api_key: str = GEMINI_API_KEY, model: str = GEMINI_MODEL):
+        self.api_key = api_key
         self.client = genai.Client(api_key=api_key) if api_key else None
         self.model = model
 
@@ -285,7 +286,7 @@ We just published our complete architectural teardown and hands-on workshop on t
                 raw_post = response.text.strip()
                 try:
                     from agents.cognitive_core import CognitiveReflectionEngine
-                    reflector = CognitiveReflectionEngine(api_key=self.client.api_key if self.client else None, model=self.model)
+                    reflector = CognitiveReflectionEngine(api_key=self.api_key, model=self.model)
                     reflection = reflector.reflect_and_refine(
                         agent_name='SocialGrowthAgent',
                         domain='social',

@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "name": "Helia Director",
+    "class": "agents.helia_autonomous_director.HeliaAutonomousDirector",
+    "status": "HEALTHY",
+    "elapsed_seconds": 34.663,
+    "details": "Initialized successfully | Governance fleet_status: RUNNING",
+    "error": null
+  },
+  {
+    "id": 2,
+    "name": "Trend Scout",
+    "class": "agents.radar_agent.RadarAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 1.492,
+    "details": "RadarAgent ready | Model configured",
+    "error": null
+  },
+  {
+    "id": 3,
+    "name": "Software Analyst",
+    "class": "agents.analyst_agent.AnalystAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 1.504,
+    "details": "AnalystAgent initialized | Gemini model loaded",
+    "error": null
+  },
+  {
+    "id": 4,
+    "name": "Content Writer",
+    "class": "agents.blog_agent.BlogAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 1.517,
+    "details": "BlogAgent initialized | Templates ready",
+    "error": null
+  },
+  {
+    "id": 5,
+    "name": "SEO Optimizer",
+    "class": "agents.link_weaver_agent & cro_agent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.087,
+    "details": "CRO audited 0 pages | LinkWeaver ready",
+    "error": null
+  },
+  {
+    "id": 6,
+    "name": "Code Reviewer",
+    "class": "agents.auto_repair_agent.AutoRepairAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 1.705,
+    "details": "AutoRepair scanned 257 files | Repaired: 0",
+    "error": null
+  },
+  {
+    "id": 7,
+    "name": "Affiliate Matcher",
+    "class": "agents.affiliate_hub_agent & rewardful_engine_agent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.003,
+    "details": "Rewardful synced 10 partners | Token: heliatech",
+    "error": null
+  },
+  {
+    "id": 8,
+    "name": "Link Health Inspector",
+    "class": "agents.link_doctor_agent & link_sentinel_agent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 173.961,
+    "details": "Healed redirects: 49 | Repaired: 0",
+    "error": null
+  },
+  {
+    "id": 9,
+    "name": "Data Verifier",
+    "class": "agents.quality_enforcer_agent.QualityEnforcerAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.834,
+    "details": "Audited 0 files | Slop warnings: 0",
+    "error": null
+  },
+  {
+    "id": 10,
+    "name": "SecurityAgent",
+    "class": "agents.security_agent.SecurityAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.171,
+    "details": "Security posture: SECURE | Passed: True",
+    "error": null
+  },
+  {
+    "id": 11,
+    "name": "MarketplaceSecuritySentinel",
+    "class": "agents.marketplace_security_agent.MarketplaceSecuritySentinel",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.004,
+    "details": "MarketplaceSecuritySentinel initialized | Brain ready",
+    "error": null
+  },
+  {
+    "id": 12,
+    "name": "NotifierAgent",
+    "class": "agents.notifier_agent.NotifierAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.0,
+    "details": "NotifierAgent ready | Telegram channel configured",
+    "error": null
+  },
+  {
+    "id": 13,
+    "name": "Price Tracker",
+    "class": "agents.budget_sentinel_agent.BudgetSentinelAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.001,
+    "details": "Daily burn rate calculated: 0$ | Run rate: None",
+    "error": null
+  },
+  {
+    "id": 14,
+    "name": "Benchmark Runner",
+    "class": "agents.versus_agent & alternatives_agent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 4.644,
+    "details": "VersusAgent & AlternativesAgent initialized successfully",
+    "error": null
+  },
+  {
+    "id": 15,
+    "name": "Social Publisher",
+    "class": "agents.social_scheduler_agent.SocialSchedulerAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 5.598,
+    "details": "Social calendar: 91 monetized posts scheduled",
+    "error": null
+  },
+  {
+    "id": 16,
+    "name": "Community Scout",
+    "class": "agents.reddit_infiltrator_agent & badge_trojan_agent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 1.511,
+    "details": "BadgeTrojan generated 6 badges | RedditInfiltrator ready",
+    "error": null
+  },
+  {
+    "id": 17,
+    "name": "Newsletter Engine",
+    "class": "agents.email_campaign_agent.EmailCampaignAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.018,
+    "details": "EmailCampaignAgent ready | Configured: True | Calendar generated (5403 chars)",
+    "error": null
+  },
+  {
+    "id": 18,
+    "name": "Subscriber Desk",
+    "class": "agents.email_reporter_agent.EmailReporterAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.0,
+    "details": "EmailReporterAgent initialized | Templates ready",
+    "error": null
+  },
+  {
+    "id": 19,
+    "name": "Ad Manager",
+    "class": "agents.paved_sponsorship_agent.PavedSponsorshipAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 2.019,
+    "details": "Paved sync: 0 active bookings | Slot value: None$",
+    "error": null
+  },
+  {
+    "id": 20,
+    "name": "TCO Calculator Engine",
+    "class": "Pricing Shock Calculator & tools-index.json",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.001,
+    "details": "TCO Engine verified | 100 tools indexed with pricing metadata",
+    "error": null
+  },
+  {
+    "id": 21,
+    "name": "Design Jury Agent",
+    "class": "agents.design_jury_agent.HeliaDesignJuryAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 11.84,
+    "details": "Grand Jury score: 9.42/10 | Status: SITE OF THE DAY CALIBER (HONORABLE MENTION GUARANTEED)",
+    "error": null
+  },
+  {
+    "id": 22,
+    "name": "Deployment Supervisor",
+    "class": "agents.publisher_agent.PublisherAgent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 0.001,
+    "details": "PublisherAgent initialized | Cloudflare/Astro targets verified",
+    "error": null
+  },
+  {
+    "id": 23,
+    "name": "Compliance Officer",
+    "class": "agents.localizer_agent & lupin_agent",
+    "status": "HEALTHY",
+    "elapsed_seconds": 1.507,
+    "details": "International audit: 0 regions | Lupin ready",
+    "error": null
+  },
+  {
+    "id": 24,
+    "name": "Memory Archiver",
+    "class": "agents.cognitive_core.HeliaSwarmCognitiveCoordinator",
+    "status": "HEALTHY",
+    "elapsed_seconds": 4.535,
+    "details": "CognitiveCoordinator ready | 11 brain vaults indexed",
+    "error": null
+  }
+]

@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-11-20T10:53:16.138191",
+  "timestamp": "2026-11-20T14:07:21.274934",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
     "total_content_files_scanned": 257,
-    "total_redirects_active": 150,
-    "new_redirects_healed": 48,
+    "total_redirects_active": 151,
+    "new_redirects_healed": 49,
     "internal_links_repaired": 0,
-    "external_targets_repaired": 17,
+    "external_targets_repaired": 16,
     "content_files_modified": 0
   },
   "healed_redirects": [
     {
+      "slug": "zoominfo",
+      "target_url": "https://www.zoominfo.com",
+      "source_file": "apollo-io-vs-zoominfo.md"
+    },
+    {
       "slug": "substack",
       "target_url": "https://www.substack.com",
       "source_file": "beehiiv-vs-substack.md"
-    },
-    {
-      "slug": "zoominfo",
-      "target_url": "https://www.zoominfo.com",
-      "source_file": "best-apollo-alternatives-2026.md"
     },
     {
       "slug": "cognism",
@@ -42,84 +42,29 @@
       "source_file": "best-apollo-alternatives-2026.md"
     },
     {
-      "slug": "relay",
-      "target_url": "https://www.relay.app",
-      "source_file": "best-zapier-alternatives-2026.md"
+      "slug": "asana",
+      "target_url": "https://www.asana.com",
+      "source_file": "best-clickup-alternatives-2026.md"
     },
     {
-      "slug": "workato",
-      "target_url": "https://www.workato.com",
-      "source_file": "best-zapier-alternatives-2026.md"
+      "slug": "notion",
+      "target_url": "https://www.notion.com",
+      "source_file": "best-clickup-alternatives-2026.md"
     },
     {
-      "slug": "activepieces",
-      "target_url": "https://www.activepieces.com",
-      "source_file": "best-zapier-alternatives-2026.md"
+      "slug": "basecamp",
+      "target_url": "https://www.basecamp.com",
+      "source_file": "best-clickup-alternatives-2026.md"
     },
     {
-      "slug": "tray-io",
-      "target_url": "https://tray.ai",
-      "source_file": "best-zapier-alternatives-2026.md"
+      "slug": "height",
+      "target_url": "https://www.height.com",
+      "source_file": "best-clickup-alternatives-2026.md"
     },
     {
-      "slug": "power-automate",
-      "target_url": "https://powerautomate.microsoft.com",
-      "source_file": "best-zapier-alternatives-2026.md"
-    },
-    {
-      "slug": "riverside-sandbox",
-      "target_url": "https://www.riverside-sandbox.com",
-      "source_file": "riverside-fm-evolution-guide-2026.md"
-    },
-    {
-      "slug": "opusclip-sandbox",
-      "target_url": "https://www.opusclip-sandbox.com",
-      "source_file": "opus-clip-evolution-guide-2026.md"
-    },
-    {
-      "slug": "smartlead",
-      "target_url": "https://www.smartlead.com",
-      "source_file": "smartlead-vs-instantly-2026-b2b-cold-outreach.md"
-    },
-    {
-      "slug": "descript-sandbox-leaks",
-      "target_url": "https://www.descript-sandbox-leaks.com",
-      "source_file": "descript-evolution-guide-2026.md"
-    },
-    {
-      "slug": "descript-migration-calculator",
-      "target_url": "https://www.descript-migration-calculator.com",
-      "source_file": "descript-evolution-guide-2026.md"
-    },
-    {
-      "slug": "writesonic-rate-card",
-      "target_url": "https://www.writesonic-rate-card.com",
-      "source_file": "writesonic-evolution-guide-2026.md"
-    },
-    {
-      "slug": "gamma-enterprise-sandbox",
-      "target_url": "https://www.gamma-enterprise-sandbox.com",
-      "source_file": "gamma-evolution-guide-2026.md"
-    },
-    {
-      "slug": "firebase",
-      "target_url": "https://www.firebase.com",
-      "source_file": "supabase-vs-firebase.md"
-    },
-    {
-      "slug": "runway-tco-calculator",
-      "target_url": "https://www.runway-tco-calculator.com",
-      "source_file": "runway-evolution-guide-2026.md"
-    },
-    {
-      "slug": "invideo-ai-sandbox",
-      "target_url": "https://www.invideo-ai-sandbox.com",
-      "source_file": "invideo-ai-evolution-guide-2026.md"
-    },
-    {
-      "slug": "bolt-new",
-      "target_url": "https://www.bolt-new.com",
-      "source_file": "bolt-new-vs-lovable-2026-vibe-coding-showdown.md"
+      "slug": "jira",
+      "target_url": "https://www.jira.com",
+      "source_file": "best-clickup-alternatives-2026.md"
     },
     {
       "slug": "papaya-global",
@@ -157,6 +102,16 @@
       "source_file": "best-deel-alternatives-2026.md"
     },
     {
+      "slug": "capcut",
+      "target_url": "https://www.capcut.com",
+      "source_file": "best-descript-alternatives-2026.md"
+    },
+    {
+      "slug": "davinci-resolve",
+      "target_url": "https://www.davinci-resolve.com",
+      "source_file": "best-descript-alternatives-2026.md"
+    },
+    {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
       "source_file": "best-elevenlabs-alternatives-2026.md"
@@ -177,54 +132,64 @@
       "source_file": "best-elevenlabs-alternatives-2026.md"
     },
     {
+      "slug": "relay",
+      "target_url": "https://www.relay.app",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "workato",
+      "target_url": "https://www.workato.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "activepieces",
+      "target_url": "https://www.activepieces.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "tray-io",
+      "target_url": "https://tray.ai",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "power-automate",
+      "target_url": "https://powerautomate.microsoft.com",
+      "source_file": "best-zapier-alternatives-2026.md"
+    },
+    {
+      "slug": "bolt-new",
+      "target_url": "https://www.bolt-new.com",
+      "source_file": "bolt-new-vs-lovable-2026-vibe-coding-showdown.md"
+    },
+    {
+      "slug": "descript-sandbox-leaks",
+      "target_url": "https://www.descript-sandbox-leaks.com",
+      "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "descript-migration-calculator",
+      "target_url": "https://www.descript-migration-calculator.com",
+      "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "gamma-enterprise-sandbox",
+      "target_url": "https://www.gamma-enterprise-sandbox.com",
+      "source_file": "gamma-evolution-guide-2026.md"
+    },
+    {
+      "slug": "invideo-ai-sandbox",
+      "target_url": "https://www.invideo-ai-sandbox.com",
+      "source_file": "invideo-ai-evolution-guide-2026.md"
+    },
+    {
       "slug": "minvo-testing-sandbox",
       "target_url": "https://www.minvo-testing-sandbox.com",
       "source_file": "minvo-evolution-guide-2026.md"
     },
     {
-      "slug": "replit-agent",
-      "target_url": "https://www.replit-agent.com",
-      "source_file": "replit-agent-vs-cursor-composer-2026.md"
-    },
-    {
-      "slug": "davinci-resolve",
-      "target_url": "https://www.davinci-resolve.com",
-      "source_file": "best-descript-alternatives-2026.md"
-    },
-    {
-      "slug": "asana",
-      "target_url": "https://www.asana.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "notion",
-      "target_url": "https://www.notion.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "basecamp",
-      "target_url": "https://www.basecamp.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "height",
-      "target_url": "https://www.height.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "jira",
-      "target_url": "https://www.jira.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "veed-architecture-sandbox",
-      "target_url": "https://www.veed-architecture-sandbox.com",
-      "source_file": "veed-io-evolution-guide-2026.md"
-    },
-    {
-      "slug": "veed-migration-sandbox",
-      "target_url": "https://www.veed-migration-sandbox.com",
-      "source_file": "veed-io-evolution-guide-2026.md"
+      "slug": "opusclip-sandbox",
+      "target_url": "https://www.opusclip-sandbox.com",
+      "source_file": "opus-clip-evolution-guide-2026.md"
     },
     {
       "slug": "pictory-sandbox-calculator",
@@ -250,6 +215,46 @@
       "slug": "podsqueeze-api-sandbox",
       "target_url": "https://www.podsqueeze-api-sandbox.com",
       "source_file": "podsqueeze-evolution-guide-2026.md"
+    },
+    {
+      "slug": "replit-agent",
+      "target_url": "https://www.replit-agent.com",
+      "source_file": "replit-agent-vs-cursor-composer-2026.md"
+    },
+    {
+      "slug": "riverside-sandbox",
+      "target_url": "https://www.riverside-sandbox.com",
+      "source_file": "riverside-fm-evolution-guide-2026.md"
+    },
+    {
+      "slug": "runway-tco-calculator",
+      "target_url": "https://www.runway-tco-calculator.com",
+      "source_file": "runway-evolution-guide-2026.md"
+    },
+    {
+      "slug": "smartlead",
+      "target_url": "https://www.smartlead.com",
+      "source_file": "smartlead-vs-instantly-2026-b2b-cold-outreach.md"
+    },
+    {
+      "slug": "firebase",
+      "target_url": "https://www.firebase.com",
+      "source_file": "supabase-vs-firebase.md"
+    },
+    {
+      "slug": "veed-architecture-sandbox",
+      "target_url": "https://www.veed-architecture-sandbox.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
+    },
+    {
+      "slug": "veed-migration-sandbox",
+      "target_url": "https://www.veed-migration-sandbox.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
+    },
+    {
+      "slug": "writesonic-rate-card",
+      "target_url": "https://www.writesonic-rate-card.com",
+      "source_file": "writesonic-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],
@@ -270,12 +275,6 @@
       "slug": "capcut-pro",
       "dead_target": "https://capcut.pxf.io/heliatech",
       "healed_target": "https://www.capcut-pro.com",
-      "status_code": 404
-    },
-    {
-      "slug": "capcut",
-      "dead_target": "https://capcut.pxf.io/heliatech",
-      "healed_target": "https://www.capcut.com",
       "status_code": 404
     },
     {
