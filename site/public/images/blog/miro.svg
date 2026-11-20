@@ -1,0 +1,391 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-radial-main" cx="70%" cy="40%" r="80%" fx="60%" fy="30%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <radialGradient id="glow-cyan-orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-violet-orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-fuchsia-orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur1" />
+      <feGaussianBlur stdDeviation="30" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="shadow-card" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Linear Gradients for UI Elements -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#38bdf8" />
+      <stop offset="80%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="badge-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="glass-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="glass-card-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="cyan-fuchsia-wire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="yellow-sticky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+
+    <linearGradient id="cyan-sticky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a5f3fc" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="fuchsia-sticky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0abfc" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <!-- Seamless Infinite Canvas Pattern -->
+    <pattern id="canvas-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.35" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.4" />
+    </pattern>
+
+    <pattern id="dot-matrix" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#475569" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="630" fill="url(#bg-radial-main)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="950" cy="250" r="350" fill="url(#glow-cyan-orb)" />
+  <circle cx="750" cy="420" r="300" fill="url(#glow-violet-orb)" />
+  <circle cx="1050" cy="500" r="280" fill="url(#glow-fuchsia-orb)" />
+
+  <!-- Infinite Perspective Grid Overlay -->
+  <g opacity="0.4">
+    <rect width="1200" height="630" fill="url(#canvas-grid)" />
+  </g>
+
+  <!-- Dynamic Curved Visual Vector Rays (Background Flow) -->
+  <g opacity="0.25" filter="url(#glow-soft)">
+    <path d="M -100 500 C 300 500, 400 150, 800 200 C 1000 220, 1100 100, 1300 50" fill="none" stroke="url(#cyan-fuchsia-wire)" stroke-width="3" stroke-dasharray="8 6" />
+    <path d="M -50 580 C 350 580, 450 230, 850 280 C 1050 300, 1150 180, 1350 130" fill="none" stroke="#06b6d4" stroke-width="1.5" />
+  </g>
+
+  <!-- ================= LEFT COLUMN: HERO TYPOGRAPHY & BRANDING ================= -->
+  <g transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 75)">
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#090d16" fill-opacity="0.8" stroke="url(#badge-border)" stroke-width="1.5" />
+      <circle cx="16" cy="16" r="4" fill="#06b6d4" filter="url(#glow-soft)" />
+      <circle cx="16" cy="16" r="2" fill="#ffffff" />
+      <text x="30" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="1.8" fill="#a5f3fc">
+        HELIATECH ARCHITECTURAL DOSSIER
+      </text>
+    </g>
+
+    <!-- Main Title: MIRO -->
+    <g transform="translate(0, 190)">
+      <!-- Glow Underlay -->
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="84" font-weight="900" letter-spacing="2" fill="url(#title-grad)" filter="url(#glow-intense)" opacity="0.6">
+        MIRO
+      </text>
+      <!-- Foreground Text -->
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="84" font-weight="900" letter-spacing="2" fill="url(#title-grad)">
+        MIRO
+      </text>
+    </g>
+
+    <!-- Category Subtitle -->
+    <g transform="translate(0, 230)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#38bdf8">
+        PRODUCTIVITY &amp; VISUAL COLLABORATION
+      </text>
+    </g>
+
+    <!-- Article Focus Title Box -->
+    <g transform="translate(0, 265)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#f8fafc" width="460">
+        <tspan x="0" dy="0">The Genesis of Visual Collaboration</tspan>
+        <tspan x="0" dy="30" fill="#94a3b8">and the Enterprise Playbook for</tspan>
+        <tspan x="0" dy="30" fill="#06b6d4">Distributed Velocity</tspan>
+      </text>
+    </g>
+
+    <!-- Accent Divider Line -->
+    <g transform="translate(0, 370)">
+      <line x1="0" y1="0" x2="420" y2="0" stroke="url(#cyan-fuchsia-wire)" stroke-width="2" opacity="0.8" />
+      <circle cx="0" cy="0" r="3" fill="#06b6d4" filter="url(#glow-soft)" />
+      <circle cx="420" cy="0" r="3" fill="#d946ef" filter="url(#glow-soft)" />
+    </g>
+
+    <!-- Key Metrics / Technical Specifications Chips -->
+    <g transform="translate(0, 400)">
+      <!-- Feature Chip 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="195" height="54" rx="10" fill="url(#glass-card-bg)" stroke="url(#glass-card-stroke)" stroke-width="1" />
+        <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#64748b">
+          CANVAS ENGINE
+        </text>
+        <text x="14" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#38bdf8">
+          Infinite Spatial Graph
+        </text>
+      </g>
+
+      <!-- Feature Chip 2 -->
+      <g transform="translate(210, 0)">
+        <rect x="0" y="0" width="195" height="54" rx="10" fill="url(#glass-card-bg)" stroke="url(#glass-card-stroke)" stroke-width="1" />
+        <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#64748b">
+          REAL-TIME TELEMETRY
+        </text>
+        <text x="14" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#d946ef">
+          Multi-User Sync
+        </text>
+      </g>
+    </g>
+
+    <!-- Dossier Footer Metadata -->
+    <g transform="translate(0, 555)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" letter-spacing="1.5" fill="#475569">
+        HELIA TECH // SYSTEM ARCHITECTURE RESEARCH // REF-MIRO-2025
+      </text>
+    </g>
+
+  </g>
+
+  <!-- ================= RIGHT COLUMN: 3D ISOMETRIC WORKSPACE SYSTEM ================= -->
+  <!-- Main Isometric Stage Container -->
+  <g transform="translate(810, 310) rotate(-16) skewX(22) scale(0.95)">
+    
+    <!-- Outer Glow Under Base -->
+    <rect x="-270" y="-210" width="540" height="420" rx="28" fill="#06b6d4" opacity="0.08" filter="url(#glow-intense)" />
+
+    <!-- Main Glass Board Base (The Infinite Canvas Plate) -->
+    <rect x="-260" y="-200" width="520" height="400" rx="24" fill="#0b1329" fill-opacity="0.75" stroke="url(#glass-card-stroke)" stroke-width="2" filter="url(#shadow-card)" />
+    <rect x="-260" y="-200" width="520" height="400" rx="24" fill="url(#dot-matrix)" />
+
+    <!-- Floating Canvas Header / Toolbar (Isometric Top Edge) -->
+    <g transform="translate(-240, -180)">
+      <rect x="0" y="0" width="180" height="28" rx="8" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <circle cx="16" cy="14" r="5" fill="#ef4444" />
+      <circle cx="32" cy="14" r="5" fill="#f59e0b" />
+      <circle cx="48" cy="14" r="5" fill="#10b981" />
+      <line x1="68" y1="8" x2="68" y2="20" stroke="#475569" stroke-width="1" />
+      <!-- Mini Tool Icons representation -->
+      <rect x="80" y="8" width="12" height="12" rx="2" fill="#06b6d4" />
+      <rect x="100" y="8" width="12" height="12" rx="2" fill="#8b5cf6" />
+      <rect x="120" y="8" width="12" height="12" rx="2" fill="#d946ef" />
+    </g>
+
+    <g transform="translate(130, -180)">
+      <rect x="0" y="0" width="110" height="28" rx="14" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-width="1" />
+      <text x="55" y="18" font-family="system-ui, sans-serif" font-size="10" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="1">
+        LIVE WORKSPACE
+      </text>
+    </g>
+
+    <!-- CONNECTING FLOW LINES (Workflow logic graph) -->
+    <g filter="url(#glow-soft)">
+      <!-- Path 1: System Node to Sticky 1 -->
+      <path d="M -120 -60 C -60 -60, -80 40, -20 40" fill="none" stroke="#06b6d4" stroke-width="2.5" />
+      <!-- Path 2: Sticky 1 to Central Architecture Node -->
+      <path d="M 80 40 C 140 40, 100 -50, 140 -50" fill="none" stroke="#d946ef" stroke-width="2.5" stroke-dasharray="6 4" />
+      <!-- Path 3: Sticky 1 to Bottom Flow Node -->
+      <path d="M 30 90 C 30 140, -40 120, -40 160" fill="none" stroke="#8b5cf6" stroke-width="2" />
+      <!-- Path 4: Central Arch Node to East Flow -->
+      <path d="M 180 -10 C 220 -10, 200 100, 160 120" fill="none" stroke="#facc15" stroke-width="2" />
+    </g>
+
+    <!-- Glowing Pulse Nodes on Paths -->
+    <circle cx="-70" cy="-10" r="4" fill="#38bdf8" filter="url(#glow-soft)" />
+    <circle cx="115" cy="-5" r="4" fill="#d946ef" filter="url(#glow-soft)" />
+    <circle cx="-10" cy="140" r="4" fill="#a7f3d0" filter="url(#glow-soft)" />
+
+    <!-- ISOMETRIC CANVAS NODES / CARDS -->
+
+    <!-- NODE 1: System Input (Top Left Glass Card) -->
+    <g transform="translate(-220, -100)" filter="url(#shadow-card)">
+      <rect x="0" y="0" width="130" height="80" rx="12" fill="url(#glass-card-bg)" stroke="#06b6d4" stroke-width="1.5" />
+      <rect x="10" y="12" width="40" height="6" rx="3" fill="#06b6d4" />
+      <rect x="10" y="26" width="90" height="4" rx="2" fill="#94a3b8" />
+      <rect x="10" y="36" width="70" height="4" rx="2" fill="#475569" />
+      <!-- Wireframe UI elements -->
+      <circle cx="20" cy="58" r="8" fill="#06b6d4" fill-opacity="0.3" />
+      <rect x="34" y="54" width="45" height="8" rx="4" fill="#334155" />
+    </g>
+
+    <!-- NODE 2: Central Architecture Flow (Top Right Translucent Card) -->
+    <g transform="translate(80, -110)" filter="url(#shadow-card)">
+      <rect x="0" y="0" width="140" height="90" rx="12" fill="url(#glass-card-bg)" stroke="#8b5cf6" stroke-width="1.5" />
+      <rect x="12" y="12" width="50" height="6" rx="3" fill="#8b5cf6" />
+      <rect x="12" y="28" width="116" height="4" rx="2" fill="#94a3b8" />
+      <!-- Wireframe Chart Inside -->
+      <rect x="12" y="44" width="12" height="30" rx="2" fill="#8b5cf6" fill-opacity="0.4" />
+      <rect x="30" y="36" width="12" height="38" rx="2" fill="#8b5cf6" />
+      <rect x="48" y="52" width="12" height="22" rx="2" fill="#8b5cf6" fill-opacity="0.6" />
+      <circle cx="95" cy="55" r="14" fill="none" stroke="#d946ef" stroke-width="2.5" />
+      <path d="M 95 41 L 95 55 L 105 55" fill="none" stroke="#d946ef" stroke-width="2" />
+    </g>
+
+    <!-- NODE 3: Yellow Sticky Note (Interactive Visual Object) -->
+    <g transform="translate(-30, 0) rotate(-4)" filter="url(#shadow-card)">
+      <rect x="0" y="0" width="110" height="100" rx="6" fill="url(#yellow-sticky)" />
+      <!-- Sticky Content -->
+      <rect x="12" y="16" width="70" height="6" rx="3" fill="#854d0e" fill-opacity="0.7" />
+      <rect x="12" y="30" width="86" height="4" rx="2" fill="#a16207" fill-opacity="0.5" />
+      <rect x="12" y="40" width="80" height="4" rx="2" fill="#a16207" fill-opacity="0.5" />
+      <rect x="12" y="50" width="50" height="4" rx="2" fill="#a16207" fill-opacity="0.5" />
+      <!-- Mini Avatar Badge -->
+      <circle cx="88" cy="78" r="10" fill="#78350f" />
+      <text x="88" y="81" font-family="system-ui, sans-serif" font-size="8" font-weight="900" fill="#fef08a" text-anchor="middle">JS</text>
+    </g>
+
+    <!-- NODE 4: Fuchsia Sticky Note (Elevated 3D Layer) -->
+    <g transform="translate(110, 70) rotate(6)" filter="url(#shadow-card)">
+      <rect x="0" y="0" width="95" height="90" rx="6" fill="url(#fuchsia-sticky)" />
+      <rect x="10" y="14" width="50" height="6" rx="3" fill="#701a75" fill-opacity="0.8" />
+      <rect x="10" y="28" width="75" height="4" rx="2" fill="#86198f" fill-opacity="0.6" />
+      <rect x="10" y="38" width="65" height="4" rx="2" fill="#86198f" fill-opacity="0.6" />
+      <!-- User reaction pill -->
+      <rect x="10" y="58" width="38" height="18" rx="9" fill="#ffffff" fill-opacity="0.3" />
+      <text x="29" y="70" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">🔥 4</text>
+    </g>
+
+    <!-- NODE 5: Bottom Pipeline Node (Cyan Glass Panel) -->
+    <g transform="translate(-110, 130)" filter="url(#shadow-card)">
+      <rect x="0" y="0" width="150" height="75" rx="12" fill="url(#glass-card-bg)" stroke="#38bdf8" stroke-width="1.5" />
+      <rect x="12" y="12" width="60" height="6" rx="3" fill="#38bdf8" />
+      <rect x="12" y="26" width="126" height="4" rx="2" fill="#64748b" />
+      <rect x="12" y="42" width="24" height="24" rx="6" fill="#0284c7" fill-opacity="0.4" />
+      <rect x="44" y="42" width="24" height="24" rx="6" fill="#0284c7" fill-opacity="0.4" />
+      <rect x="76" y="42" width="24" height="24" rx="6" fill="#0284c7" fill-opacity="0.4" />
+      <circle cx="124" cy="54" r="10" fill="#38bdf8" />
+      <path d="M 120 54 L 128 54 M 124 50 L 124 58" stroke="#090d16" stroke-width="2" />
+    </g>
+
+    <!-- MULTIPLAYER CURSORS (The Visual Collaboration Metaphor) -->
+
+    <!-- Cursor 1: Alex (Product Lead) - Cyan -->
+    <g transform="translate(-40, -30)" filter="url(#glow-soft)">
+      <!-- Motion Trail -->
+      <path d="M -30 -40 L 0 0" stroke="#06b6d4" stroke-width="2" stroke-dasharray="2 4" opacity="0.7" />
+      <!-- Pointer Icon -->
+      <path d="M 0 0 L 0 18 L 4 14 L 9 22 L 13 20 L 8 12 L 15 12 Z" fill="#06b6d4" stroke="#ffffff" stroke-width="1.2" />
+      <!-- User Label Tag -->
+      <g transform="translate(12, 18)">
+        <rect x="0" y="0" width="92" height="20" rx="10" fill="#06b6d4" />
+        <text x="46" y="13" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#030712" text-anchor="middle">
+          ALEX // LEAD
+        </text>
+      </g>
+    </g>
+
+    <!-- Cursor 2: Elena (System Arch) - Fuchsia -->
+    <g transform="translate(160, -60)" filter="url(#glow-soft)">
+      <!-- Motion Trail -->
+      <path d="M 40 -30 L 0 0" stroke="#d946ef" stroke-width="2" stroke-dasharray="2 4" opacity="0.7" />
+      <!-- Pointer Icon -->
+      <path d="M 0 0 L 0 18 L 4 14 L 9 22 L 13 20 L 8 12 L 15 12 Z" fill="#d946ef" stroke="#ffffff" stroke-width="1.2" />
+      <!-- User Label Tag -->
+      <g transform="translate(12, 18)">
+        <rect x="0" y="0" width="105" height="20" rx="10" fill="#d946ef" />
+        <text x="52" y="13" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">
+          ELENA // ARCHITECT
+        </text>
+      </g>
+    </g>
+
+    <!-- Cursor 3: AI Engine Node - Glowing Gold -->
+    <g transform="translate(20, 110)" filter="url(#glow-soft)">
+      <path d="M 0 0 L 0 18 L 4 14 L 9 22 L 13 20 L 8 12 L 15 12 Z" fill="#facc15" stroke="#000000" stroke-width="1.2" />
+      <g transform="translate(12, 18)">
+        <rect x="0" y="0" width="85" height="20" rx="10" fill="#facc15" />
+        <text x="42" y="13" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#422006" text-anchor="middle">
+          ⚡ AI SYNAPSE
+        </text>
+      </g>
+    </g>
+
+    <!-- Floating HUD Elements & Scale Vectors -->
+    <g transform="translate(-240, 160)">
+      <text x="0" y="0" font-family="monospace" font-size="9" fill="#06b6d4" opacity="0.8">
+        SCALE: ∞ INFINITE CANVAS
+      </text>
+      <text x="0" y="12" font-family="monospace" font-size="9" fill="#64748b" opacity="0.8">
+        POS: [8492.12, -3109.88]
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Foreground Dynamic Sparkles / Particle Field -->
+  <g opacity="0.6">
+    <circle cx="680" cy="140" r="1.5" fill="#38bdf8" filter="url(#glow-soft)" />
+    <circle cx="740" cy="480" r="2" fill="#d946ef" filter="url(#glow-soft)" />
+    <circle cx="1120" cy="180" r="1.5" fill="#06b6d4" filter="url(#glow-soft)" />
+    <circle cx="560" cy="380" r="1" fill="#ffffff" />
+    <circle cx="980" cy="560" r="2.5" fill="#facc15" filter="url(#glow-soft)" />
+  </g>
+
+  <!-- High-Tech Framing Overlay Corners -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.4">
+    <!-- Top Left Corner -->
+    <path d="M 30 50 L 30 30 L 50 30" />
+    <!-- Bottom Left Corner -->
+    <path d="M 30 580 L 30 600 L 50 600" />
+    <!-- Top Right Corner -->
+    <path d="M 1170 50 L 1170 30 L 1150 30" />
+    <!-- Bottom Right Corner -->
+    <path d="M 1170 580 L 1170 600 L 1150 600" />
+  </g>
+</svg>

@@ -181,7 +181,8 @@
     "rating": 4.7,
     "starting_price": "$30/mo",
     "best_for": "Engineering teams and individual developers looking to automate PR feedback and accelerate the code review cycle.",
-    "affiliate_url": "https://coderabbit.ai"
+    "affiliate_url": "https://coderabbit.ai/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Cursor",
@@ -527,6 +528,16 @@
     "best_for": "Content creators, marketing agencies, podcasters, and B2B brands scaling short-form social video.",
     "affiliate_url": "https://minvo.pro/?via=heliatech",
     "commission_rate": "30% recurring"
+  },
+  {
+    "name": "Miro",
+    "slug": "miro",
+    "tagline": "The visual collaboration platform that turns complex ideas into actionable workflows.",
+    "category": "Productivity/Collaboration",
+    "rating": 4.6,
+    "starting_price": "$8/mo",
+    "best_for": "Product teams, UX designers, and distributed engineering squads requiring visual alignment.",
+    "affiliate_url": "https://miro.com"
   },
   {
     "name": "Monday.com",

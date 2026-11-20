@@ -1172,6 +1172,19 @@
       "url": "https://dev.to/loops-evolution-guide-2026",
       "canonical_url": "https://heliatech.online/blog/loops-evolution-guide-2026",
       "status": "already_published"
+    },
+    "make-vs-n8n": {
+      "id": 5078083,
+      "url": "https://dev.to/heliatech/makecom-vs-n8n-2026-which-one-wins-4a08",
+      "title": "Make.com vs n8n (2026): Which One Wins?",
+      "canonical_url": "https://heliatech.online/blog/make-vs-n8n",
+      "published": true,
+      "tags": [
+        "make",
+        "n8n",
+        "makevsn8n",
+        "comparison"
+      ]
     }
   },
   "last_sync": null

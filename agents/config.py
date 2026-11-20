@@ -198,7 +198,8 @@ AFFILIATE_MAP = {
     "gamma": "https://gamma.app/?via=heliatech",
     "postiz": "https://postiz.com/?via=heliatech",
     "replicate": "https://replicate.com",
-    "podsqueeze": "https://podsqueeze.com?via=heliatech"
+    "podsqueeze": "https://podsqueeze.com?via=heliatech",
+    "coderabbit": "https://coderabbit.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

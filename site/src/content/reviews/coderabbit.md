@@ -6,7 +6,7 @@ tagline: AI-powered code reviews that actually improve code quality and develope
 category: DevTools
 rating: 4.7
 website_url: https://coderabbit.ai
-affiliate_url: https://coderabbit.ai
+affiliate_url: "https://coderabbit.ai/?via=heliatech"
 summary: CodeRabbit is an AI-driven code review assistant that integrates directly
   into GitHub, GitLab, and Bitbucket pull requests. It provides automated, context-aware
   feedback, summaries, and suggestions to reduce the burden of manual code reviews.

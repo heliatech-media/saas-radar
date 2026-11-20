@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-18T10:59:10.027376",
-  "total_heuristics_stored": 78,
+  "total_heuristics_stored": 79,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -363,6 +363,13 @@
       "domain": "content",
       "score": 96,
       "critique_summary": "Violates HEUR-CONT-02 (Cold Opening Mandate) with fluff intro; lacks mandatory RCIA cost-inflection equation C_step(n); contains no zero-shot cryptogr"
+    },
+    {
+      "timestamp": "2026-11-20T01:57:55.211741",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "monetization",
+      "heuristic_name": "Enterprise Shadow Free-Tier Consolidation Matrix",
+      "curriculum_module": "Enterprise Free-Tier Migration Funnels: Guiding users from restrictive free tiers to high-margin recurring affiliate partnerships"
     }
   ]
 }

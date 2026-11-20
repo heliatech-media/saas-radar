@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-19T19:47:40.923040",
+  "last_synced": "2026-11-20T01:59:34.983282",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-22 - 2026-11-19)",
-  "total_visitors_network": 49545,
-  "total_requests": 227453,
-  "total_visits": 15358,
-  "total_pageviews": 52249,
+  "time_window": "28 Days (2026-10-23 - 2026-11-20)",
+  "total_visitors_network": 49831,
+  "total_requests": 228513,
+  "total_visits": 15447,
+  "total_pageviews": 52565,
   "percent_cached": "56.14%",
-  "data_served_mb": 3123.3,
+  "data_served_mb": 3143.4,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
-      "date": "2026-11-19",
-      "visitors": 1835,
-      "rumVisits": 513,
-      "pageviews": 2160,
-      "requests": 7720,
+      "date": "2026-11-20",
+      "visitors": 118,
+      "rumVisits": 120,
+      "pageviews": 99,
+      "requests": 191,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0413
+      "viewMultiplier": 0.0019
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 14332,
-      "rumVisits": 3726,
-      "pageviews": 13833,
-      "requests": 56258,
+      "visitors": 12098,
+      "rumVisits": 3145,
+      "pageviews": 12408,
+      "requests": 51535,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.2648
+      "viewMultiplier": 0.2361
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 49545,
-      "rumVisits": 15358,
-      "pageviews": 52249,
-      "requests": 227453,
+      "visitors": 49831,
+      "rumVisits": 15447,
+      "pageviews": 52565,
+      "requests": 228513,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 49545,
-      "rumVisits": 15358,
-      "pageviews": 52249,
-      "requests": 227453,
+      "visitors": 49831,
+      "rumVisits": 15447,
+      "pageviews": 52565,
+      "requests": 228513,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 49545,
-      "rumVisits": 15358,
-      "pageviews": 52249,
-      "requests": 227453,
+      "visitors": 49831,
+      "rumVisits": 15447,
+      "pageviews": 52565,
+      "requests": 228513,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,7 +70,7 @@
   "top_pages": [
     {
       "path": "/api/telemetry",
-      "views": 15330
+      "views": 15630
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
@@ -78,15 +78,15 @@
     },
     {
       "path": "/",
-      "views": 5300
+      "views": 5340
     },
     {
       "path": "/api/sentinel/cockpit",
-      "views": 4140
+      "views": 4170
     },
     {
       "path": "/calculator/",
-      "views": 2990
+      "views": 3030
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
@@ -102,7 +102,7 @@
     },
     {
       "path": "/blog/",
-      "views": 410
+      "views": 420
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
@@ -133,11 +133,11 @@
       "views": 320
     },
     {
-      "path": "/reviews/beehiiv/",
+      "path": "/blog/rewardful-evolution-guide-2026/",
       "views": 300
     },
     {
-      "path": "/blog/rewardful-evolution-guide-2026/",
+      "path": "/reviews/beehiiv/",
       "views": 300
     },
     {
@@ -145,15 +145,15 @@
       "views": 290
     },
     {
-      "path": "/versus/",
-      "views": 290
-    },
-    {
       "path": "/blog/elevenlabs-vs-heygen/",
       "views": 290
     },
     {
-      "path": "/awards/",
+      "path": "/versus/",
+      "views": 290
+    },
+    {
+      "path": "/blog/best-zapier-alternatives-2026/",
       "views": 280
     },
     {
@@ -161,7 +161,7 @@
       "views": 280
     },
     {
-      "path": "/blog/best-zapier-alternatives-2026/",
+      "path": "/awards/",
       "views": 280
     },
     {
@@ -177,11 +177,11 @@
       "views": 260
     },
     {
-      "path": "/blog/make-automation-revolution/",
+      "path": "/reviews/brevo/",
       "views": 250
     },
     {
-      "path": "/reviews/brevo/",
+      "path": "/blog/make-automation-revolution/",
       "views": 250
     },
     {
@@ -192,11 +192,11 @@
   "top_countries": [
     {
       "country": "United States",
-      "views": 44750
+      "views": 45000
     },
     {
       "country": "Morocco",
-      "views": 40330
+      "views": 40670
     },
     {
       "country": "Germany",
@@ -204,15 +204,15 @@
     },
     {
       "country": "Singapore",
-      "views": 3070
+      "views": 3120
     },
     {
       "country": "Brazil",
-      "views": 1910
+      "views": 1930
     },
     {
       "country": "CN",
-      "views": 1240
+      "views": 1250
     },
     {
       "country": "United Kingdom",
@@ -228,14 +228,14 @@
     },
     {
       "country": "Belgium",
-      "views": 820
-    },
-    {
-      "country": "Canada",
-      "views": 790
+      "views": 830
     },
     {
       "country": "KR",
+      "views": 800
+    },
+    {
+      "country": "Canada",
       "views": 790
     },
     {
@@ -248,7 +248,7 @@
     },
     {
       "country": "FI",
-      "views": 480
+      "views": 490
     }
   ],
   "top_referrers": [

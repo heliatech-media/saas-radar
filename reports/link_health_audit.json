@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-19 19:49:05",
-  "total_links_audited": 147,
-  "healthy_links": 129,
+  "timestamp": "2026-11-20 02:00:53",
+  "total_links_audited": 148,
+  "healthy_links": 130,
   "broken_links_count": 18,
   "health_rate": "87.8%",
   "broken_links": [
@@ -300,8 +300,8 @@
     },
     {
       "slug": "coderabbit",
-      "target_url": "https://www.coderabbit.com",
-      "final_url": "https://www.coderabbit.ai/",
+      "target_url": "https://coderabbit.ai/?via=heliatech",
+      "final_url": "https://www.coderabbit.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -366,7 +366,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=GiR3t5ZAOrynRS&gsxid=GiR3t5ZAOrynRS&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0e2aUlOzXydtCJ&gsxid=0e2aUlOzXydtCJ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -523,7 +523,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -627,6 +627,13 @@
       "error": "HTTPSConnectionPool(host='www.minvo-testing-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.minvo-testing-sandbox.com', port=443): Failed to resolve 'www.minvo-testing-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
+      "slug": "miro",
+      "target_url": "https://www.miro.com",
+      "final_url": "https://miro.com:443/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "monday-com",
       "target_url": "https://monday.com/?ref=heliatech",
       "final_url": "https://monday.com/?ref=heliatech",
@@ -716,7 +723,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -729,7 +736,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2MwgrpDfED44dK&gsxid=2MwgrpDfED44dK&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=aYQCcyJg0zS1n5&gsxid=aYQCcyJg0zS1n5&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -757,7 +764,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=yXOuSpQWzRAoFx&gsxid=yXOuSpQWzRAoFx&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=4I39XRqLhE2uES&gsxid=4I39XRqLhE2uES&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -994,8 +1001,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://substack.com/",
-      "status_code": 200,
+      "final_url": "https://www.substack.com/",
+      "status_code": 403,
       "healthy": true
     },
     {
