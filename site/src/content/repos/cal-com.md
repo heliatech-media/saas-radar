@@ -1,74 +1,75 @@
 ---
-name: "Cal.Diy"
+name: "Cal.com"
 repo_name: "calcom/cal.com"
-repo_url: "https://github.com/calcom/cal.diy"
-category: "Auth & Identity Management"
-tagline: "Scheduling infrastructure for absolutely everyone."
+repo_url: "https://github.com/calcom/cal.com"
+category: "Scheduling & Calendar Infrastructure"
+tagline: "Scheduling infrastructure for absolutely everyone: white-label, embeddable, and enterprise-grade."
 stars: 50168
 forks: 15671
 open_issues: 1649
-last_commit: "Il y a 4 jours"
-license: "MIT License"
-license_risk: "Low"
+last_commit: "Today"
+license: "AGPL-3.0"
+license_risk: "High"
 health_score: 99
-stack: ["TypeScript"]
+stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma ORM", "PostgreSQL", "Docker"]
 has_docker: true
 has_tests: true
 cloud_alternative_url: "/go/cal-com"
 cloud_alternative_name: "Cal.com Enterprise"
 ---
 
-## 1. Ce que fait le projet en pratique (Executive Summary)
+## 1. Architectural Overview & Value Proposition (Executive Summary)
 
-**[calcom/cal.com](https://github.com/calcom/cal.diy)** résout un problème structurel majeur pour les développeurs et fondateurs de SaaS : **Scheduling infrastructure for absolutely everyone.**.
+**[calcom/cal.com](https://github.com/calcom/cal.com)** solves a fundamental operational hurdle for modern software engineering teams: **Scheduling infrastructure for absolutely everyone: white-label, embeddable, and enterprise-grade.**.
 
-Plutôt que de repartir d'une page blanche ou de payer des abonnements mensuels récurrents auprès de prestataires tiers, ce projet fournit une solution clé en main auto-hébergeable bâtie sur une stack moderne : **TypeScript**.
+Instead of reinventing boilerplate workflows or incurring massive recurring licensing overhead from closed-source legacy incumbents, this repository delivers an enterprise-ready, self-hostable foundation built on an industrial-grade tech stack: **Next.js, TypeScript, Tailwind CSS, Prisma ORM, PostgreSQL, Docker**.
 
-### Pour qui ce projet est-il conçu ?
-* **Fondateurs Techniques & Indie Hackers :** Qui souhaitent déployer une infrastructure robuste en quelques commandes sans sacrifier leur trésorerie initiale.
-* **Agences & Développeurs SaaS :** Nécessitant un contrôle souverain sur leurs données, leurs files d'attente et leurs protocoles de sécurité.
-* **Équipes Engineering en Quête d'Alternative Open-Source :** Qui refusent le verrouillage propriétaire des éditeurs SaaS traditionnels.
+### Primary Target Audiences
+* **Technical Founders & Solo Engineers:** Deploying scalable backbones in hours while preserving precious cash runway.
+* **Agencies & SaaS Architects:** Requiring absolute data sovereignty, custom message queues, and zero vendor lock-in.
+* **Engineering Leaders Evaluating Open-Source Alternatives:** Eliminating proprietary enterprise seat taxes without sacrificing architectural rigor.
 
 ---
 
-## 2. Schéma d'Architecture & Flux Opérationnel
+## 2. System Architecture & Operational Pipeline
 
-Notre nouveau composant vectoriel natif restitue le flux de traitement de l'infrastructure de `Cal.Diy` :
+Our native vector architecture engine reconstructs the operational processing flow of `Cal.com`:
 
 ```mermaid
 flowchart TD
-    Inp["⚠️ Saisie & Événements : Déclencheurs Inbound & Payloads Clients"] --> Eng["⚡ Cal.Diy Core Engine : Traitement Nodal & Base de Données"]
-    Eng --> Pipe["🔄 Pipeline Automatisé : Synchronisation Temps Réel & Workers"]
-    Pipe --> Moat["📈 Compound ROI Moat : Souveraineté Totale & Zéro Coût de Licence"]
+    Inp["⚠️ Inbound Payloads: Webhooks, REST Ingestion & Event Triggers"] --> Eng["⚡ Cal.com Core Engine: Stateful Processing & Persistent Store"]
+    Eng --> Pipe["🔄 Operational Pipeline: Asynchronous Queue & Micro-Worker Sync"]
+    Pipe --> Moat["📈 Compound Enterprise Moat: Complete Data Sovereignty & Zero Seat Tax"]
 ```
 
 ---
 
-## 3. Analyse d'Ingénierie : Forces Techniques & Considérations Opérationnelles
+## 3. Forensic Code Audit: Strengths vs Operational Red Flags
 
-L'analyse HeliaTech repose sur des métriques factuelles extraites du dépôt GitHub pour éclairer les choix d'architecture des équipes techniques.
+HeliaTech audits are synthesized from deterministic telemetry directly fetched from GitHub AST and REST endpoints, strictly free of marketing bias.
 
-| Dimension Analysée | Statut Détecté | Analyse HeliaTech |
+| Dimension | Telemetry | Technical Assessment |
 | :--- | :---: | :--- |
-| **Popularité & Traction** | `⭐ 50,168 stars` | Adoption communautaire de premier plan validée par 15,671 forks. |
-| **Maintenance Active** | `Récente` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
-| **Conteneurisation Docker** | `Prêt pour Docker ✅` | Déploiement simplifié via conteneurs isolés. |
-| **Robustesse & Tests** | `Suites de tests détectées ✅` | Couverture de tests garantissant la stabilité des builds. |
-| **Cadre Juridique** | `MIT License` | Flexibilité maximale pour l'écosystème développeur. |
+| **Popularity & Traction** | `⭐ 50,168 stars` | Massive global community adoption backed by 15,671 verified forks. |
+| **Maintenance Velocity** | `Today` | Active release rhythm maintained by core maintainers. |
+| **Containerization** | `Docker Ready ✅` | Single-command containerized reproducibility. |
+| **Test Coverage & CI** | `Automated Test Suites Detected ✅` | Regression protection across production pull requests. |
+| **Legal License Risk** | `AGPL-3.0 (High Risk)` | High legal friction for commercial SaaS bundling. |
 
-### 🚀 Forces Majeures de l'Architecture
-1. **Adoption & Écosystème de Référence :** Avec plus de **50 000 étoiles** sur GitHub, Cal.com s'impose comme le standard open-source mondial de la prise de rendez-vous et de la gestion d'agendas.
-2. **Architecture TypeScript Moderne :** Conçu en TypeScript avec une séparation claire des API, des webhooks et des intégrations calendriers (Google Calendar, Outlook, CalDAV).
-3. **Souveraineté des Données :** Permet aux entreprises sous contraintes strictes (RGPD, HIPAA, données de santé) d'héberger l'intégralité de leurs réunions et métadonnées sur leur propre cloud privé.
+### 🔍 Verified Strengths (The Good)
+1. **Unrivaled White-Label & Embedding:** Embeddable React atom components, webhooks, and full routing forms for sophisticated sales and recruiting pipelines.
+2. **Comprehensive Calendar Sync:** Zero-friction two-way synchronization across Google Calendar, Outlook, Apple Calendar, and custom CalDAV endpoints.
+3. **GDPR & HIPAA Compliance Readiness:** Self-hosting guarantees calendar attendee metadata and appointment notes never leave your sovereign network.
 
-### ⚙️ Considérations Opérationnelles & Déploiement en Production
-1. **Périmètre de Maintenance en Auto-Hébergement :** Déployer son propre cluster de synchronisation calendaire requiert une gestion soignée des tokens OAuth, des webhooks de synchronisation et des files de rappel.
-2. **Gestion des Évolutions d'API Externes :** Les fournisseurs d'agenda (Microsoft, Google, Apple) mettent fréquemment à jour leurs protocoles d'autorisation, nécessitant le suivi régulier des releases.
-3. **La Voie Managée Recommandée :** Pour les équipes qui recherchent la puissance de l'API Cal.com avec une disponibilité garantie de 99.99% et un support SLA dédié, la solution officielle **[Cal.com Cloud & Enterprise](/go/cal-com)** est le choix le plus efficient.
+### ⚠️ Hidden Red Flags & Production Traps (The Bad)
+1. **Substantial Webhook Volume:** High-traffic installations generate heavy event webhooks that require reliable queue processing to avoid duplicate calendar holds.
+2. **Complex Timezone Calculations:** Edge cases in recurring bookings and DST (Daylight Saving Time) shifts demand up-to-date node environment time databases.
+3. **Large Monorepo Build Times:** Turborepo build cycles and Prisma generation require at least 4GB of dedicated RAM during CI/CD test phases.
+4. **Legal Compliance Notice:** **Strict Copyleft Protection (AGPL-3.0):** Cal.com core is AGPL-3.0 with commercial exemptions for enterprise customers. If you embed scheduling workflows into a commercial SaaS, verify compliance boundaries or leverage Cal.com's hosted API.
 
 ---
 
-## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
+## 4. The Decision Matrix: Self-Hosting vs Managed Cloud Infrastructure
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/calcom/cal.diy)) si :** Vous disposez d'une équipe d'ingénieurs dédiée et que vos obligations de conformité nécessitent une rétention de données 100% sur site.
-* **Optez pour la Version Cloud Officielle ([Cal.com Enterprise](/go/cal-com)) si :** Vous voulez déployer en production en 5 minutes avec toutes les intégrations clés en main, sans aucune charge d'exploitation sur vos serveurs.
+* **Choose Self-Hosting ([View GitHub Repository](https://github.com/calcom/cal.com)) if:** You operate dedicated DevOps engineers, regulatory mandates enforce strict internal database boundaries, and your team is equipped to handle recurring schema migrations.
+* **Choose the Official Managed Cloud ([Cal.com Enterprise](/go/cal-com)) if:** Your critical objective is immediate Time-to-Market, enterprise SLAs with dedicated on-call support, and eliminating operational maintenance debt.

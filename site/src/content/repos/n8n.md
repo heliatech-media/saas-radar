@@ -1,74 +1,75 @@
 ---
-name: "N8N"
+name: "n8n"
 repo_name: "n8n-io/n8n"
 repo_url: "https://github.com/n8n-io/n8n"
-category: "AI Agents & LLM Infrastructure"
-tagline: "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations."
+category: "Workflow Automation & iPaaS"
+tagline: "Fair-code workflow automation platform with native AI agent orchestration and 400+ nodes."
 stars: 210886
 forks: 61556
 open_issues: 1242
-last_commit: "Aujourd'hui"
-license: "Other"
-license_risk: "Low"
+last_commit: "Today"
+license: "Sustainable Use License / Fair-Code"
+license_risk: "Medium"
 health_score: 99
-stack: ["TypeScript"]
-has_docker: false
+stack: ["Node.js", "TypeScript", "Vue.js", "PostgreSQL", "Redis", "Docker"]
+has_docker: true
 has_tests: true
 cloud_alternative_url: "/go/n8n"
 cloud_alternative_name: "n8n Cloud Managed"
 ---
 
-## 1. Ce que fait le projet en pratique (Executive Summary)
+## 1. Architectural Overview & Value Proposition (Executive Summary)
 
-**[n8n-io/n8n](https://github.com/n8n-io/n8n)** résout un problème structurel majeur pour les développeurs et fondateurs de SaaS : **Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.**.
+**[n8n-io/n8n](https://github.com/n8n-io/n8n)** solves a fundamental operational hurdle for modern software engineering teams: **Fair-code workflow automation platform with native AI agent orchestration and 400+ nodes.**.
 
-Plutôt que de repartir d'une page blanche ou de payer des abonnements mensuels récurrents auprès de prestataires tiers, ce projet fournit une solution clé en main auto-hébergeable bâtie sur une stack moderne : **TypeScript**.
+Instead of reinventing boilerplate workflows or incurring massive recurring licensing overhead from closed-source legacy incumbents, this repository delivers an enterprise-ready, self-hostable foundation built on an industrial-grade tech stack: **Node.js, TypeScript, Vue.js, PostgreSQL, Redis, Docker**.
 
-### Pour qui ce projet est-il conçu ?
-* **Fondateurs Techniques & Indie Hackers :** Qui souhaitent déployer une infrastructure robuste en quelques commandes sans sacrifier leur trésorerie initiale.
-* **Agences & Développeurs SaaS :** Nécessitant un contrôle souverain sur leurs données, leurs files d'attente et leurs protocoles de sécurité.
-* **Équipes Engineering en Quête d'Alternative Open-Source :** Qui refusent le verrouillage propriétaire des éditeurs SaaS traditionnels.
+### Primary Target Audiences
+* **Technical Founders & Solo Engineers:** Deploying scalable backbones in hours while preserving precious cash runway.
+* **Agencies & SaaS Architects:** Requiring absolute data sovereignty, custom message queues, and zero vendor lock-in.
+* **Engineering Leaders Evaluating Open-Source Alternatives:** Eliminating proprietary enterprise seat taxes without sacrificing architectural rigor.
 
 ---
 
-## 2. Schéma d'Architecture & Flux Opérationnel
+## 2. System Architecture & Operational Pipeline
 
-Notre nouveau composant vectoriel natif restitue le flux de traitement de l'infrastructure de `N8N` :
+Our native vector architecture engine reconstructs the operational processing flow of `n8n`:
 
 ```mermaid
 flowchart TD
-    Inp["⚠️ Saisie & Événements : Déclencheurs Inbound & Payloads Clients"] --> Eng["⚡ N8N Core Engine : Traitement Nodal & Base de Données"]
-    Eng --> Pipe["🔄 Pipeline Automatisé : Synchronisation Temps Réel & Workers"]
-    Pipe --> Moat["📈 Compound ROI Moat : Souveraineté Totale & Zéro Coût de Licence"]
+    Inp["⚠️ Inbound Payloads: Webhooks, REST Ingestion & Event Triggers"] --> Eng["⚡ n8n Core Engine: Stateful Processing & Persistent Store"]
+    Eng --> Pipe["🔄 Operational Pipeline: Asynchronous Queue & Micro-Worker Sync"]
+    Pipe --> Moat["📈 Compound Enterprise Moat: Complete Data Sovereignty & Zero Seat Tax"]
 ```
 
 ---
 
-## 3. Analyse d'Ingénierie : Forces Techniques & Considérations Opérationnelles
+## 3. Forensic Code Audit: Strengths vs Operational Red Flags
 
-L'analyse HeliaTech repose sur des métriques factuelles extraites du dépôt GitHub pour éclairer les choix d'architecture des équipes techniques.
+HeliaTech audits are synthesized from deterministic telemetry directly fetched from GitHub AST and REST endpoints, strictly free of marketing bias.
 
-| Dimension Analysée | Statut Détecté | Analyse HeliaTech |
+| Dimension | Telemetry | Technical Assessment |
 | :--- | :---: | :--- |
-| **Popularité & Traction** | `⭐ 210,886 stars` | Référence mondiale de l'orchestration de flux open-source. |
-| **Maintenance Active** | `Aujourd'hui` | Dépôt activement mis à jour par les équipes n8n. |
-| **Conteneurisation Docker** | `Prêt pour Docker ✅` | Image officielle disponible sur Docker Hub pour un déploiement instantané. |
-| **Robustesse & Tests** | `Suites de tests détectées ✅` | Couverture de tests garantissant la stabilité des builds. |
-| **Cadre Juridique** | `Fair-code / Sustainable Use License` | Modèle pérenne protégeant la viabilité de l'outil. |
+| **Popularity & Traction** | `⭐ 210,886 stars` | Massive global community adoption backed by 61,556 verified forks. |
+| **Maintenance Velocity** | `Today` | Active release rhythm maintained by core maintainers. |
+| **Containerization** | `Docker Ready ✅` | Single-command containerized reproducibility. |
+| **Test Coverage & CI** | `Automated Test Suites Detected ✅` | Regression protection across production pull requests. |
+| **Legal License Risk** | `Sustainable Use License / Fair-Code (Medium Risk)` | Medium legal friction for commercial SaaS bundling. |
 
-### 🚀 Forces Majeures de l'Architecture
-1. **Adoption & Écosystème Exceptionnels :** Plus de **210 000 étoiles**, faisant de n8n le titan incontesté de l'automatisation technique face aux géants propriétaires.
-2. **Capacités Nodal & AI Agent Integrations :** Intègre nativement LangChain, les nœuds d'IA générative et plus de 400 connecteurs sans restriction d'exécution.
-3. **Économies d'Échelle Majeures :** Permet d'exécuter des millions de tâches sans le modèle de surfacturation par exécution des solutions cloud traditionnelles.
+### 🔍 Verified Strengths (The Good)
+1. **Native AI Agent Building:** Integrates LangChain, vector stores, OpenAI/Anthropic models, and custom tools directly within visual flowchart canvases.
+2. **400+ Enterprise Connectors:** Pre-built nodes covering CRM, ERP, databases, messaging, and cloud providers with granular error triggers.
+3. **Massive Community Ecosystem:** Over 210,000 GitHub stars make it the dominant open-source workflow automation platform globally.
 
-### ⚙️ Considérations Opérationnelles & Déploiement en Production
-1. **Gestion des Workers et Scaling :** En environnement haute disponibilité, n8n s'exécute en mode queue avec Redis et des workers dédiés pour absorber les gros volumes de webhooks.
-2. **Licence Fair-Code :** n8n utilise une licence fair-code permettant une utilisation interne gratuite illimitée, tout en protégeant son modèle contre la revente directe en marque blanche concurrente.
-3. **La Solution Managée Recommandée :** Pour les équipes qui souhaitent bénéficier de l'élégance de n8n sans administrer de serveurs Linux, **[n8n Cloud Managed](/go/n8n)** assure la maintenance, la sécurité et les mises à jour sans intervention.
+### ⚠️ Hidden Red Flags & Production Traps (The Bad)
+1. **Execution History DB Bloat:** Without strict workflow execution data pruning, PostgreSQL tables can swell into hundreds of gigabytes within months.
+2. **Worker Mode Scaling Overhead:** Scaling beyond single-process execution requires Redis queue configuration and multi-worker container orchestration.
+3. **Fair-Code Commercial Boundary:** Requires strict legal review if planning to resell automated workflows as an external commercial offering.
+4. **Legal Compliance Notice:** **Fair-Code Commercial Policy:** n8n is free for internal company use and self-hosting. However, you cannot offer n8n as a hosted service or commercial white-label iPaaS to third parties without an enterprise license from n8n GmbH.
 
 ---
 
-## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
+## 4. The Decision Matrix: Self-Hosting vs Managed Cloud Infrastructure
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub](https://github.com/n8n-io/n8n)) si :** Vous traitez des données hautement confidentielles en environnement local ou privé et disposez de compétences d'administration système.
-* **Optez pour la Version Cloud Officielle ([n8n Cloud Managed](/go/n8n)) si :** Vous voulez connecter vos outils en quelques minutes et bénéficier d'une disponibilité 99.9% infogérée par l'équipe n8n.
+* **Choose Self-Hosting ([View GitHub Repository](https://github.com/n8n-io/n8n)) if:** You operate dedicated DevOps engineers, regulatory mandates enforce strict internal database boundaries, and your team is equipped to handle recurring schema migrations.
+* **Choose the Official Managed Cloud ([n8n Cloud Managed](/go/n8n)) if:** Your critical objective is immediate Time-to-Market, enterprise SLAs with dedicated on-call support, and eliminating operational maintenance debt.

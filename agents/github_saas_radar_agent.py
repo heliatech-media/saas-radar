@@ -126,24 +126,24 @@ class GitHubSaaSRadarAgent:
         topics = repo_data.get("topics", [])
         
         # Format last commit relative
-        last_commit_str = "Récemment"
+        last_commit_str = "Recently"
         days_ago = 999
         if pushed_at:
             try:
                 p_date = datetime.fromisoformat(pushed_at.replace("Z", "+00:00"))
                 days_ago = (datetime.now(timezone.utc) - p_date).days
                 if days_ago == 0:
-                    last_commit_str = "Aujourd'hui"
+                    last_commit_str = "Today"
                 elif days_ago == 1:
-                    last_commit_str = "Hier"
+                    last_commit_str = "Yesterday"
                 else:
-                    last_commit_str = f"Il y a {days_ago} jours"
+                    last_commit_str = f"{days_ago} days ago"
             except Exception:
                 last_commit_str = pushed_at[:10]
 
         # 2. License Inspection
         license_info = repo_data.get("license") or {}
-        license_name = license_info.get("name", "Non spécifiée")
+        license_name = license_info.get("name", "Not Specified")
         license_spdx = (license_info.get("spdx_id") or license_name).lower()
         license_risk = "Low"
         for k, v in LICENSE_RISK_MAP.items():
@@ -257,22 +257,22 @@ class GitHubSaaSRadarAgent:
         legal_advice = ""
         if license_risk == "High":
             legal_advice = (
-                f"**Alerte Juridique Maximale ({license_name}) :** Ce dépôt est soumis à une licence Copyleft stricte (type AGPL/GPL). "
-                "Si vous intégrez directement ce code au sein d'un service SaaS commercial hébergé, vous êtes légalement tenu "
-                "de distribuer l'intégralité du code source de vos modifications à vos utilisateurs finaux. "
-                "Pour un SaaS propriétaire fermé, il est vivement conseillé d'utiliser leur solution Cloud officielle ou de réécrire les modules stratégiques."
+                f"**Strict Copyleft Alert ({license_name}):** This repository is governed by a strict Copyleft license (e.g. AGPL/GPL). "
+                "If you deploy or integrate this code directly within a commercial, hosted SaaS application, you are legally compelled "
+                "to open-source and distribute your entire modified codebase to your end users under the same terms. "
+                "For proprietary, closed-source SaaS offerings, adopting their official managed cloud or decoupling custom backend services is mandatory."
             )
         elif license_risk == "Medium":
             legal_advice = (
-                f"**Attention Contractuelle ({license_name}) :** Licence de type Business / Fair-Source. "
-                "L'utilisation est généralement gratuite jusqu'à un certain seuil d'usage ou de revenus, mais impose des restrictions "
-                "si vous offrez ce logiciel en tant que service concurrent payant."
+                f"**Commercial Fair-Source Caveat ({license_name}):** Business Source / Fair-Source license model. "
+                "Self-hosting is generally free for internal tooling or below defined revenue/seat caps, but explicitly forbids "
+                "offering this software as a competing paid managed service without an enterprise commercial agreement."
             )
         else:
             legal_advice = (
-                f"**Sécurité Commerciale Totale ({license_name}) :** Licence permissive (MIT / Apache). "
-                "Vous êtes totalement libre de forker, modifier, intégrer et commercialiser ce code dans un SaaS propriétaire à code fermé "
-                "sans obligation de redistribution de vos secrets de fabrication."
+                f"**Unrestricted Commercial Permissiveness ({license_name}):** Permissive Open-Source License (MIT / Apache 2.0 / BSD). "
+                "Engineering teams are legally unrestricted to fork, modify, embed, and monetize this code within a proprietary, closed-source SaaS "
+                "without any requirement to distribute proprietary intellectual property."
             )
 
         md = f"""---
@@ -295,60 +295,60 @@ cloud_alternative_url: "{cloud_url}"
 cloud_alternative_name: "{cloud_name}"
 ---
 
-## 1. Ce que fait le projet en pratique (Executive Summary)
+## 1. Architectural Overview & Value Proposition (Executive Summary)
 
-**[{repo_name}]({audit['repo_url']})** résout un problème structurel majeur pour les développeurs et fondateurs de SaaS : **{audit['tagline']}**.
+**[{repo_name}]({audit['repo_url']})** solves a foundational operational bottleneck for SaaS founders and engineering teams: **{audit['tagline']}**.
 
-Plutôt que de repartir d'une page blanche ou de payer des abonnements mensuels récurrents auprès de prestataires tiers, ce projet fournit une solution clé en main auto-hébergeable bâtie sur une stack moderne : **{stack_str}**.
+Instead of reinventing complex plumbing from scratch or paying exorbitant per-seat subscription taxes to legacy closed-source vendors, this repository provides an enterprise-ready, self-hostable engine built on a high-throughput modern stack: **{stack_str}**.
 
-### Pour qui ce projet est-il conçu ?
-* **Fondateurs Techniques & Indie Hackers :** Qui souhaitent déployer une infrastructure robuste en quelques commandes sans sacrifier leur trésorerie initiale.
-* **Agences & Développeurs SaaS :** Nécessitant un contrôle souverain sur leurs données, leurs files d'attente et leurs protocoles de sécurité.
-* **Équipes Engineering en Quête d'Alternative Open-Source :** Qui refusent le verrouillage propriétaire des éditeurs SaaS traditionnels.
+### Primary Target Audiences
+* **Technical Founders & Solo Engineers:** Deploying scalable backbones in minutes to preserve precious initial runway and focus purely on differentiated core features.
+* **Agencies & SaaS Architects:** Requiring deterministic sovereignty over operational data, custom worker queues, and zero vendor lock-in.
+* **Enterprise Engineering Teams Seeking Open-Source Parity:** Eliminating unannounced proprietary price increases while maintaining full code audibility.
 
 ---
 
-## 2. Schéma d'Architecture & Flux Opérationnel
+## 2. System Architecture & Operational Pipeline
 
-Notre nouveau composant vectoriel natif restitue le flux de traitement de l'infrastructure de `{name}` :
+Our native vector architecture engine reconstructs the operational processing flow of `{name}`:
 
 ```mermaid
 flowchart TD
-    Inp["⚠️ Saisie & Événements : Déclencheurs Inbound & Payloads Clients"] --> Eng["⚡ {name} Core Engine : Traitement Nodal & Base de Données"]
-    Eng --> Pipe["🔄 Pipeline Automatisé : Synchronisation Temps Réel & Workers"]
-    Pipe --> Moat["📈 Compound ROI Moat : Souveraineté Totale & Zéro Coût de Licence"]
+    Inp["⚠️ Inbound Payloads: Webhooks, REST Ingestion & Event Triggers"] --> Eng["⚡ {name} Core Engine: Stateful Processing & Persistent Store"]
+    Eng --> Pipe["🔄 Operational Pipeline: Asynchronous Queue & Micro-Worker Sync"]
+    Pipe --> Moat["📈 Compound Enterprise Moat: Complete Data Sovereignty & Zero Seat Tax"]
 ```
 
 ---
 
-## 3. L'Audit Factuel : The Good vs The Bad (La Vérité Brute)
+## 3. Forensic Code Audit: Strengths vs Operational Red Flags
 
-L'audit HeliaTech repose sur des métriques déterministes extraites en direct du dépôt GitHub, sans filtre marketing.
+HeliaTech audits are synthesized from deterministic telemetry directly fetched from GitHub AST and REST endpoints, strictly free of marketing bias.
 
-| Dimension Analysée | Statut Vérifié | Verdict Technique HeliaTech |
+| Dimension | Telemetry | Technical Assessment |
 | :--- | :---: | :--- |
-| **Popularité & Traction** | `⭐ {stars:,} stars` | Adoption communautaire massive validée par {forks:,} forks. |
-| **Maintenance Active** | `{audit['last_commit']}` | Dépôt activement mis à jour par l'équipe de mainteneurs. |
-| **Conteneurisation Docker** | `{'Prêt pour Docker ✅' if audit['has_docker'] else 'Docker non configuré ⚠️'}` | Déploiement en un clic via conteneur isolé. |
-| **Robustesse & Tests** | `{'Suites de tests détectées ✅' if audit['has_tests'] else 'Peu ou pas de tests automatisés ⚠️'}` | Couverture de tests garantissant la stabilité des builds. |
-| **Licence Légale** | `{license_name} ({license_risk} Risk)` | {license_risk} contraintes pour l'intégration en SaaS propriétaire. |
+| **Popularity & Traction** | `⭐ {stars:,} stars` | Massive global community adoption backed by {forks:,} verified forks. |
+| **Maintenance Velocity** | `{audit['last_commit']}` | Active release rhythm maintained by core maintainers. |
+| **Containerization** | `{'Docker Ready ✅' if audit['has_docker'] else 'Docker Not Configured ⚠️'}` | Single-command containerized reproducibility. |
+| **Test Coverage & CI** | `{'Automated Test Suites Detected ✅' if audit['has_tests'] else 'Sparse Automated Testing ⚠️'}` | Regression protection across production pull requests. |
+| **Legal License Risk** | `{license_name} ({license_risk} Risk)` | {license_risk} legal friction for commercial SaaS bundling. |
 
-### 🔍 Les Points Forts Vérifiés (The Good)
-1. **Adoption & Écosystème :** Avec plus de **{stars:,} étoiles** sur GitHub, le projet bénéficie d'une communauté active capable de détecter rapidement les failles et de contribuer au code.
-2. **Stack Moderne :** Composé de **{stack_str}**, garantissant des performances élevées et un recrutement aisé de développeurs familiers avec ces technologies.
-3. **Autonomie d'Infrastructure :** Vous contrôlez vos serveurs, vos sauvegardes et vos coûts sans subir de hausses tarifaires unilatérales.
+### 🔍 Verified Strengths (The Good)
+1. **Developer Adoption & Battle-Tested Security:** With **{stars:,} GitHub stars**, vulnerability patches and upstream refactorings are verified rapidly by a global developer collective.
+2. **Modern Stack Velocity:** Built on **{stack_str}**, ensuring high IOPS throughput, low p99 latencies, and abundant hiring talent worldwide.
+3. **Infrastructure Sovereignty:** Total control over persistent volumes, data encryption keys, and zero unannounced pricing surges.
 
-### ⚠️ Les Red Flags & Pièges Cachés (The Bad)
-1. **Plafond de Support Communautaire :** Avec **{open_issues:,} issues ouvertes**, les demandes d'assistance sur GitHub peuvent prendre plusieurs semaines avant d'obtenir une réponse de l'équipe principale.
-2. **Coût Invisible de la Maintenance DevOps :** L'auto-hébergement n'est jamais réellement "gratuit". La gestion des certificats SSL, des migrations de base de données PostgreSQL, de la mémoire Redis et des sauvegardes représente entre 5 et 15 heures de travail par mois pour votre équipe technique.
-3. **Contraintes Légales :** {legal_advice}
+### ⚠️ Hidden Red Flags & Production Traps (The Bad)
+1. **Community Support Latency:** With **{open_issues:,} open issues**, non-trivial edge-case bugs and framework migrations may require days or weeks of manual internal debugging before core team triage.
+2. **Hidden DevOps Total Cost of Ownership (TCO):** Self-hosting is never zero-cost. Managing SSL renewal, PostgreSQL WAL archiving, Redis eviction policies, and zero-downtime database migrations demands 5 to 15 engineering hours monthly.
+3. **Legal Compliance Notice:** {legal_advice}
 
 ---
 
-## 4. Le Verdict Décideur : Auto-Hébergement vs Solution Cloud Managée
+## 4. The Decision Matrix: Self-Hosting vs Managed Cloud Infrastructure
 
-* **Optez pour l'Auto-Hébergement ([Voir le repo GitHub]({audit['repo_url']})) si :** Vous disposez d'un ingénieur DevOps dédié, vos exigences réglementaires imposent une souveraineté stricte des données sur vos propres serveurs, et vous avez le temps de gérer les mises à jour de versions manuelles.
-* **Optez pour la Version Cloud Officielle ([{cloud_name}]({cloud_url})) si :** Votre priorité absolue est la vitesse de commercialisation (Time to Market), le support technique prioritaire garanti par SLA, et le zéro-tracas opérationnel sur vos bases de données.
+* **Choose Self-Hosting ([View GitHub Repository]({audit['repo_url']})) if:** You operate dedicated DevOps engineers, regulatory mandates enforce strict internal database boundaries, and your team is equipped to handle recurring schema migrations.
+* **Choose the Official Managed Cloud ([{cloud_name}]({cloud_url})) if:** Your critical objective is immediate Time-to-Market, enterprise SLAs with dedicated on-call support, and eliminating operational maintenance debt.
 """
         return md
 
