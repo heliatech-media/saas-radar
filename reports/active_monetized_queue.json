@@ -23,7 +23,7 @@
     "edge_redirect_url": "https://heliatech.online/go/make",
     "article_url": "https://heliatech.online/blog/best-zapier-alternatives-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/make.png",
-    "seo_score": 100.0,
+    "seo_score": 80.0,
     "scheduled_x_time": "2026-11-21 09:15 UTC",
     "scheduled_linkedin_time": "2026-11-21 14:30 UTC",
     "x_thread": [
@@ -59,7 +59,7 @@
     "edge_redirect_url": "https://heliatech.online/go/airtable",
     "article_url": "https://heliatech.online/blog/airtable",
     "hero_artwork_url": "https://heliatech.online/images/blog/airtable.png",
-    "seo_score": 100.0,
+    "seo_score": 80.0,
     "scheduled_x_time": "2026-11-23 09:15 UTC",
     "scheduled_linkedin_time": "2026-11-23 14:30 UTC",
     "x_thread": [
@@ -95,7 +95,7 @@
     "edge_redirect_url": "https://heliatech.online/go/beehiiv",
     "article_url": "https://heliatech.online/blog/beehiiv-evolution-guide-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/beehiiv.png",
-    "seo_score": 100.0,
+    "seo_score": 80.0,
     "scheduled_x_time": "2026-11-25 09:15 UTC",
     "scheduled_linkedin_time": "2026-11-25 14:30 UTC",
     "x_thread": [
@@ -167,7 +167,7 @@
     "edge_redirect_url": "https://heliatech.online/go/cursor",
     "article_url": "https://heliatech.online/blog/cursor-evolution-guide-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/cursor.png",
-    "seo_score": 80.0,
+    "seo_score": 100.0,
     "scheduled_x_time": "2026-11-29 09:15 UTC",
     "scheduled_linkedin_time": "2026-11-29 14:30 UTC",
     "x_thread": [
@@ -239,7 +239,7 @@
     "edge_redirect_url": "https://heliatech.online/go/lusha",
     "article_url": "https://heliatech.online/blog/best-apollo-alternatives-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/lusha.png",
-    "seo_score": 100.0,
+    "seo_score": 80.0,
     "scheduled_x_time": "2026-12-03 09:15 UTC",
     "scheduled_linkedin_time": "2026-12-03 14:30 UTC",
     "x_thread": [
@@ -401,7 +401,7 @@
     "edge_redirect_url": "https://heliatech.online/go/phantombuster",
     "article_url": "https://heliatech.online/blog/phantombuster-evolution-guide-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/phantombuster.png",
-    "seo_score": 80.0,
+    "seo_score": 100.0,
     "scheduled_x_time": "2026-12-12 09:15 UTC",
     "scheduled_linkedin_time": "2026-12-12 14:30 UTC",
     "x_thread": [
@@ -829,7 +829,7 @@
     "edge_redirect_url": "https://heliatech.online/go/veed",
     "article_url": "https://heliatech.online/blog/veed-evolution-guide-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/veed.png",
-    "seo_score": 100.0,
+    "seo_score": 80.0,
     "scheduled_x_time": "2027-01-06 09:15 UTC",
     "scheduled_linkedin_time": "2027-01-06 14:30 UTC",
     "x_thread": [
@@ -1367,7 +1367,7 @@
     "edge_redirect_url": "https://heliatech.online/go/hubspot",
     "article_url": "https://heliatech.online/blog/hubspot-enterprise-pricing-rate-card-leaks-2026",
     "hero_artwork_url": "https://heliatech.online/images/blog/hubspot.png",
-    "seo_score": 80.0,
+    "seo_score": 100.0,
     "scheduled_x_time": "2027-02-11 09:15 UTC",
     "scheduled_linkedin_time": "2027-02-11 14:30 UTC",
     "x_thread": [
@@ -1569,6 +1569,24 @@
       "Read our full architectural teardown and hands-on guide here: https://heliatech.online/blog/podsqueeze-evolution-guide-2026"
     ],
     "linkedin_post": "Most engineering and operations leaders are still evaluating software based on legacy 2022 metrics.\n\nHere is the reality we observed in our latest forensic benchmark of Podsqueeze:\n\n⚡ Context switching costs teams up to 40% of productive weekly output.\n⚡ Point tools create data silos that throttle enterprise agility.\n⚡ Consolidating workflows onto an integrated engine recovers hundreds of hours each quarter.\n\nWe just published our complete architectural teardown and hands-on workshop on the HeliaTech Observatory:\n\n👉 Read the full investigation here: https://heliatech.online/blog/podsqueeze-evolution-guide-2026\n\n#SaaS #EnterpriseTech #Automation #Productivity #HeliaTech",
+    "status": "QUEUED_STANDBY"
+  },
+  {
+    "tool_slug": "coderabbit",
+    "partner_tracking_url": "https://coderabbit.ai/?via=heliatech",
+    "edge_redirect_url": "https://heliatech.online/go/coderabbit",
+    "article_url": "https://heliatech.online/blog/coderabbit-evolution-guide-2026",
+    "hero_artwork_url": "https://heliatech.online/images/blog/coderabbit.png",
+    "seo_score": 100.0,
+    "scheduled_x_time": "2027-02-24 09:15 UTC",
+    "scheduled_linkedin_time": "2027-02-24 14:30 UTC",
+    "x_thread": [
+      "How Coderabbit quietly disrupted enterprise software in 2026. A breakdown of their secret playbook 🧵👇",
+      "Most companies lose hours juggling fragmented point tools. Here is why modern teams are consolidating onto Coderabbit.",
+      "In our 15-minute benchmark test, automating this single pipeline unlocked $950/mo in recovered team capacity.",
+      "Read our full architectural teardown and hands-on guide here: https://heliatech.online/blog/coderabbit-evolution-guide-2026"
+    ],
+    "linkedin_post": "Most engineering and operations leaders are still evaluating software based on legacy 2022 metrics.\n\nHere is the reality we observed in our latest forensic benchmark of Coderabbit:\n\n⚡ Context switching costs teams up to 40% of productive weekly output.\n⚡ Point tools create data silos that throttle enterprise agility.\n⚡ Consolidating workflows onto an integrated engine recovers hundreds of hours each quarter.\n\nWe just published our complete architectural teardown and hands-on workshop on the HeliaTech Observatory:\n\n👉 Read the full investigation here: https://heliatech.online/blog/coderabbit-evolution-guide-2026\n\n#SaaS #EnterpriseTech #Automation #Productivity #HeliaTech",
     "status": "QUEUED_STANDBY"
   }
 ]

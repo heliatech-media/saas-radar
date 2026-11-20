@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-20 02:00:53",
-  "total_links_audited": 148,
+  "timestamp": "2026-11-20 10:54:16",
+  "total_links_audited": 150,
   "healthy_links": 130,
-  "broken_links_count": 18,
-  "health_rate": "87.8%",
+  "broken_links_count": 20,
+  "health_rate": "86.7%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -68,6 +68,22 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.opusclip-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.opusclip-sandbox.com', port=443): Failed to resolve 'www.opusclip-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "pictory-rate-card-leak",
+      "target_url": "https://www.pictory-rate-card-leak.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.pictory-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-rate-card-leak.com', port=443): Failed to resolve 'www.pictory-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "pictory-sandbox-calculator",
+      "target_url": "https://www.pictory-sandbox-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.pictory-sandbox-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-sandbox-calculator.com', port=443): Failed to resolve 'www.pictory-sandbox-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "podsqueeze-api-sandbox",
@@ -366,7 +382,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0e2aUlOzXydtCJ&gsxid=0e2aUlOzXydtCJ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=CkJoKI6rNQdkIT&gsxid=CkJoKI6rNQdkIT&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -628,8 +644,8 @@
     },
     {
       "slug": "miro",
-      "target_url": "https://www.miro.com",
-      "final_url": "https://miro.com:443/",
+      "target_url": "https://miro.com/?via=heliatech",
+      "final_url": "https://miro.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -736,7 +752,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=aYQCcyJg0zS1n5&gsxid=aYQCcyJg0zS1n5&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=HMuUB9Nw4pTZcF&gsxid=HMuUB9Nw4pTZcF&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -755,6 +771,22 @@
       "healthy": true
     },
     {
+      "slug": "pictory-rate-card-leak",
+      "target_url": "https://www.pictory-rate-card-leak.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.pictory-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-rate-card-leak.com', port=443): Failed to resolve 'www.pictory-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "pictory-sandbox-calculator",
+      "target_url": "https://www.pictory-sandbox-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.pictory-sandbox-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-sandbox-calculator.com', port=443): Failed to resolve 'www.pictory-sandbox-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "plane",
       "target_url": "https://plane.so",
       "final_url": "https://plane.so/",
@@ -764,7 +796,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=4I39XRqLhE2uES&gsxid=4I39XRqLhE2uES&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TaI4VncagAG8mm&gsxid=TaI4VncagAG8mm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

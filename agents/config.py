@@ -199,7 +199,8 @@ AFFILIATE_MAP = {
     "postiz": "https://postiz.com/?via=heliatech",
     "replicate": "https://replicate.com",
     "podsqueeze": "https://podsqueeze.com?via=heliatech",
-    "coderabbit": "https://coderabbit.ai/?via=heliatech"
+    "coderabbit": "https://coderabbit.ai/?via=heliatech",
+    "miro": "https://miro.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

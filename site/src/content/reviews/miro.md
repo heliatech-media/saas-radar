@@ -6,7 +6,7 @@ tagline: The visual collaboration platform that turns complex ideas into actiona
 category: Productivity/Collaboration
 rating: 4.6
 website_url: https://miro.com
-affiliate_url: https://miro.com
+affiliate_url: "https://miro.com/?via=heliatech"
 summary: Miro is an infinite canvas whiteboard platform designed for distributed teams
   to brainstorm, map processes, and manage agile workflows. It bridges the gap between
   unstructured whiteboarding and structured project management through extensive templates

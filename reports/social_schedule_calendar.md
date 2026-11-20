@@ -1,5 +1,5 @@
 # 🛰️ HELIATECH MONETIZED SOCIAL BROADCAST CALENDAR
-*Generated on 2026-11-20 01:59 • Strategy: 100% Monetized Assets Only*
+*Generated on 2026-11-20 10:52 • Strategy: 100% Monetized Assets Only*
 
 > [!NOTE]
 > Social distribution bandwidth is strictly reserved for high-converting partner tools with verified affiliate tracking URLs.
@@ -8,19 +8,19 @@
 | Tool | Affiliate Tracking Hop | SEO Score | X (Twitter) Window | LinkedIn Window | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Elevenlabs** | [`/go/elevenlabs`](https://heliatech.online/go/elevenlabs) | **80.0%** | `2026-11-20 09:15 UTC` | `2026-11-20 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Make** | [`/go/make`](https://heliatech.online/go/make) | **100.0%** | `2026-11-21 09:15 UTC` | `2026-11-21 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Make** | [`/go/make`](https://heliatech.online/go/make) | **80.0%** | `2026-11-21 09:15 UTC` | `2026-11-21 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Adcreative-ai** | [`/go/adcreative-ai`](https://heliatech.online/go/adcreative-ai) | **80.0%** | `2026-11-22 09:15 UTC` | `2026-11-22 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Airtable** | [`/go/airtable`](https://heliatech.online/go/airtable) | **100.0%** | `2026-11-23 09:15 UTC` | `2026-11-23 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Airtable** | [`/go/airtable`](https://heliatech.online/go/airtable) | **80.0%** | `2026-11-23 09:15 UTC` | `2026-11-23 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Apollo-io** | [`/go/apollo-io`](https://heliatech.online/go/apollo-io) | **100.0%** | `2026-11-24 09:15 UTC` | `2026-11-24 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Beehiiv** | [`/go/beehiiv`](https://heliatech.online/go/beehiiv) | **100.0%** | `2026-11-25 09:15 UTC` | `2026-11-25 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Beehiiv** | [`/go/beehiiv`](https://heliatech.online/go/beehiiv) | **80.0%** | `2026-11-25 09:15 UTC` | `2026-11-25 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Brevo** | [`/go/brevo`](https://heliatech.online/go/brevo) | **100.0%** | `2026-11-26 09:15 UTC` | `2026-11-26 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Castmagic** | [`/go/castmagic`](https://heliatech.online/go/castmagic) | **80.0%** | `2026-11-27 09:15 UTC` | `2026-11-27 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Clickup** | [`/go/clickup`](https://heliatech.online/go/clickup) | **80.0%** | `2026-11-28 09:15 UTC` | `2026-11-28 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Cursor** | [`/go/cursor`](https://heliatech.online/go/cursor) | **80.0%** | `2026-11-29 09:15 UTC` | `2026-11-29 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Cursor** | [`/go/cursor`](https://heliatech.online/go/cursor) | **100.0%** | `2026-11-29 09:15 UTC` | `2026-11-29 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Getimg-ai** | [`/go/getimg-ai`](https://heliatech.online/go/getimg-ai) | **100.0%** | `2026-11-30 09:15 UTC` | `2026-11-30 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Heygen** | [`/go/heygen`](https://heliatech.online/go/heygen) | **80.0%** | `2026-12-01 09:15 UTC` | `2026-12-01 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Linear** | [`/go/linear`](https://heliatech.online/go/linear) | **80.0%** | `2026-12-02 09:15 UTC` | `2026-12-02 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Lusha** | [`/go/lusha`](https://heliatech.online/go/lusha) | **100.0%** | `2026-12-03 09:15 UTC` | `2026-12-03 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Lusha** | [`/go/lusha`](https://heliatech.online/go/lusha) | **80.0%** | `2026-12-03 09:15 UTC` | `2026-12-03 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Memberstack** | [`/go/memberstack`](https://heliatech.online/go/memberstack) | **100.0%** | `2026-12-04 09:15 UTC` | `2026-12-04 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Monday-com** | [`/go/monday-com`](https://heliatech.online/go/monday-com) | **80.0%** | `2026-12-05 09:15 UTC` | `2026-12-05 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Framer** | [`/go/framer`](https://heliatech.online/go/framer) | **100.0%** | `2026-12-06 09:15 UTC` | `2026-12-06 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
@@ -29,7 +29,7 @@
 | **Notion-ai** | [`/go/notion-ai`](https://heliatech.online/go/notion-ai) | **100.0%** | `2026-12-09 09:15 UTC` | `2026-12-09 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Opus-clip** | [`/go/opus-clip`](https://heliatech.online/go/opus-clip) | **100.0%** | `2026-12-10 09:15 UTC` | `2026-12-10 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Partnerstack** | [`/go/partnerstack`](https://heliatech.online/go/partnerstack) | **100.0%** | `2026-12-11 09:15 UTC` | `2026-12-11 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Phantombuster** | [`/go/phantombuster`](https://heliatech.online/go/phantombuster) | **80.0%** | `2026-12-12 09:15 UTC` | `2026-12-12 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Phantombuster** | [`/go/phantombuster`](https://heliatech.online/go/phantombuster) | **100.0%** | `2026-12-12 09:15 UTC` | `2026-12-12 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Podia** | [`/go/podia`](https://heliatech.online/go/podia) | **100.0%** | `2026-12-13 09:15 UTC` | `2026-12-13 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Printify** | [`/go/printify`](https://heliatech.online/go/printify) | **100.0%** | `2026-12-14 09:15 UTC` | `2026-12-14 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Retool** | [`/go/retool`](https://heliatech.online/go/retool) | **100.0%** | `2026-12-15 09:15 UTC` | `2026-12-15 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
@@ -53,7 +53,7 @@
 | **Riverside** | [`/go/riverside`](https://heliatech.online/go/riverside) | **100.0%** | `2027-01-03 09:15 UTC` | `2027-01-03 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Tally** | [`/go/tally`](https://heliatech.online/go/tally) | **100.0%** | `2027-01-04 09:15 UTC` | `2027-01-04 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Tome** | [`/go/tome`](https://heliatech.online/go/tome) | **100.0%** | `2027-01-05 09:15 UTC` | `2027-01-05 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Veed** | [`/go/veed`](https://heliatech.online/go/veed) | **100.0%** | `2027-01-06 09:15 UTC` | `2027-01-06 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Veed** | [`/go/veed`](https://heliatech.online/go/veed) | **80.0%** | `2027-01-06 09:15 UTC` | `2027-01-06 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Klap** | [`/go/klap`](https://heliatech.online/go/klap) | **100.0%** | `2027-01-07 09:15 UTC` | `2027-01-07 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **V0** | [`/go/v0`](https://heliatech.online/go/v0) | **100.0%** | `2027-01-08 09:15 UTC` | `2027-01-08 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Minicong** | [`/go/minicong`](https://heliatech.online/go/minicong) | **100.0%** | `2027-01-09 09:15 UTC` | `2027-01-09 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
@@ -84,7 +84,7 @@
 | **Invideo** | [`/go/invideo`](https://heliatech.online/go/invideo) | **100.0%** | `2027-02-08 09:15 UTC` | `2027-02-08 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Opusclip** | [`/go/opusclip`](https://heliatech.online/go/opusclip) | **100.0%** | `2027-02-09 09:15 UTC` | `2027-02-09 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Runway** | [`/go/runway`](https://heliatech.online/go/runway) | **100.0%** | `2027-02-10 09:15 UTC` | `2027-02-10 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
-| **Hubspot** | [`/go/hubspot`](https://heliatech.online/go/hubspot) | **80.0%** | `2027-02-11 09:15 UTC` | `2027-02-11 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Hubspot** | [`/go/hubspot`](https://heliatech.online/go/hubspot) | **100.0%** | `2027-02-11 09:15 UTC` | `2027-02-11 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Close-crm** | [`/go/close-crm`](https://heliatech.online/go/close-crm) | **100.0%** | `2027-02-12 09:15 UTC` | `2027-02-12 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Surfer-seo** | [`/go/surfer-seo`](https://heliatech.online/go/surfer-seo) | **100.0%** | `2027-02-14 09:15 UTC` | `2027-02-14 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Resemble-ai** | [`/go/resemble-ai`](https://heliatech.online/go/resemble-ai) | **100.0%** | `2027-02-15 09:15 UTC` | `2027-02-15 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
@@ -96,6 +96,7 @@
 | **Gamma** | [`/go/gamma`](https://heliatech.online/go/gamma) | **100.0%** | `2027-02-21 09:15 UTC` | `2027-02-21 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Postiz** | [`/go/postiz`](https://heliatech.online/go/postiz) | **100.0%** | `2027-02-22 09:15 UTC` | `2027-02-22 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 | **Podsqueeze** | [`/go/podsqueeze`](https://heliatech.online/go/podsqueeze) | **100.0%** | `2027-02-23 09:15 UTC` | `2027-02-23 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
+| **Coderabbit** | [`/go/coderabbit`](https://heliatech.online/go/coderabbit) | **100.0%** | `2027-02-24 09:15 UTC` | `2027-02-24 14:30 UTC` | 🔒 `QUEUED_STANDBY` |
 
 ---
 
@@ -3431,6 +3432,38 @@ Read the full investigative masterclass here: https://heliatech.online/blog/rese
 > We just published our complete architectural teardown and hands-on workshop on the HeliaTech Observatory:
 >
 > 👉 Read the full investigation here: https://heliatech.online/blog/podsqueeze-evolution-guide-2026
+>
+> #SaaS #EnterpriseTech #Automation #Productivity #HeliaTech
+
+---
+
+## 💎 Focus Campaign: CODERABBIT
+- **Article URL:** https://heliatech.online/blog/coderabbit-evolution-guide-2026
+- **Hero Visual:** `https://heliatech.online/images/blog/coderabbit.png`
+- **Direct Affiliate Hop:** `https://coderabbit.ai/?via=heliatech`
+
+### 🐦 X (Twitter) 4-Tweet Viral Thread:
+- **Tweet 1** (101 chars):
+  > How Coderabbit quietly disrupted enterprise software in 2026. A breakdown of their secret playbook 🧵👇
+- **Tweet 2** (118 chars):
+  > Most companies lose hours juggling fragmented point tools. Here is why modern teams are consolidating onto Coderabbit.
+- **Tweet 3** (109 chars):
+  > In our 15-minute benchmark test, automating this single pipeline unlocked $950/mo in recovered team capacity.
+- **Tweet 4** (123 chars):
+  > Read our full architectural teardown and hands-on guide here: https://heliatech.online/blog/coderabbit-evolution-guide-2026
+
+### 💼 LinkedIn Executive Authority Breakdown:
+> Most engineering and operations leaders are still evaluating software based on legacy 2022 metrics.
+>
+> Here is the reality we observed in our latest forensic benchmark of Coderabbit:
+>
+> ⚡ Context switching costs teams up to 40% of productive weekly output.
+> ⚡ Point tools create data silos that throttle enterprise agility.
+> ⚡ Consolidating workflows onto an integrated engine recovers hundreds of hours each quarter.
+>
+> We just published our complete architectural teardown and hands-on workshop on the HeliaTech Observatory:
+>
+> 👉 Read the full investigation here: https://heliatech.online/blog/coderabbit-evolution-guide-2026
 >
 > #SaaS #EnterpriseTech #Automation #Productivity #HeliaTech
 

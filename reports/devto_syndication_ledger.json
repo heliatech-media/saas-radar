@@ -1185,6 +1185,19 @@
         "makevsn8n",
         "comparison"
       ]
+    },
+    "coderabbit-evolution-guide-2026": {
+      "id": 5081122,
+      "url": "https://dev.to/heliatech/coderabbit-the-ai-architect-revolutionizing-pull-requests-and-developer-velocity-48i2",
+      "title": "CodeRabbit: The AI Architect Revolutionizing Pull Requests and Developer Velocity",
+      "canonical_url": "https://heliatech.online/blog/coderabbit-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "coderabbit",
+        "productivity",
+        "saas",
+        "automation"
+      ]
     }
   },
   "last_sync": null

@@ -566,7 +566,14 @@
       "title": "Linear vs Monday.com (2026): Which One Wins?",
       "tool_slug": "linear",
       "canonical_url": "https://heliatech.online/blog/linear-vs-monday-com"
+    },
+    "coderabbit-evolution-guide-2026": {
+      "published_at": "2026-11-20T11:04:00.809547",
+      "share_urn": "urn:li:share:7529499783452033024",
+      "title": "CodeRabbit: The AI Architect Revolutionizing Pull Requests and Developer Velocity",
+      "tool_slug": "coderabbit",
+      "canonical_url": "https://heliatech.online/blog/coderabbit-evolution-guide-2026"
     }
   },
-  "last_publish": "2026-11-20T02:01:49.007803"
+  "last_publish": "2026-11-20T11:04:00.809562"
 }

@@ -537,7 +537,8 @@
     "rating": 4.6,
     "starting_price": "$8/mo",
     "best_for": "Product teams, UX designers, and distributed engineering squads requiring visual alignment.",
-    "affiliate_url": "https://miro.com"
+    "affiliate_url": "https://miro.com/?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Monday.com",
@@ -647,6 +648,16 @@
     "best_for": "B2B growth marketers, sales development reps (SDRs), and recruiters scaling outbound campaigns.",
     "affiliate_url": "https://phantombuster.com/?via=heliatech",
     "commission_rate": "20% recurring for 12 months"
+  },
+  {
+    "name": "Pictory",
+    "slug": "pictory",
+    "tagline": "Turn long-form content and scripts into engaging, high-converting social videos automatically using AI.",
+    "category": "AI Video",
+    "rating": 4.4,
+    "starting_price": "$19/mo",
+    "best_for": "Content marketers, agencies, podcasters, and corporate communications teams looking to rapidly repurpose long-form text and video into short social media clips.",
+    "affiliate_url": "https://pictory.ai"
   },
   {
     "name": "Podcastle",
