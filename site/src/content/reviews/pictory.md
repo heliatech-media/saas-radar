@@ -6,7 +6,7 @@ tagline: Turn long-form content and scripts into engaging, high-converting socia
 category: AI Video
 rating: 4.4
 website_url: https://pictory.ai
-affiliate_url: https://pictory.ai
+affiliate_url: "https://pictory.ai?fpr=heliatech"
 summary: Pictory is an AI-driven video generation and editing platform designed to
   repurpose long-form content like webinars, podcasts, and blog posts into short,
   shareable video clips. By utilizing automatic transcript extraction, text-based
@@ -187,4 +187,4 @@ Yes, Pictory allows you to record your own audio, upload custom voiceovers, uplo
 
 ### Does Pictory integrate with ElevenLabs for AI voices?
 
-Yes, Pictory's higher-tier plans feature built-in integration with ElevenLabs, enabling users to generate realistic AI voiceovers directly within the video creation workspace.
+Yes, Pictory's higher-tier plans feature built-in integration with [ElevenLabs](/reviews/elevenlabs), enabling users to generate realistic AI voiceovers directly within the video creation workspace.

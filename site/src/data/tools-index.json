@@ -152,6 +152,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Cleanvoice AI",
+    "slug": "cleanvoice-ai",
+    "tagline": "AI-powered audio editing tool that automatically removes filler words, mouth sounds, silence, and background noise from podcast recordings.",
+    "category": "Audio AI",
+    "rating": 4.4,
+    "starting_price": "Free",
+    "best_for": "Podcasters, audio engineers, remote interviewers, and media production teams seeking automated vocal cleanup.",
+    "affiliate_url": "https://cleanvoice.ai"
+  },
+  {
     "name": "ClickUp",
     "slug": "clickup",
     "tagline": "The one app to replace them all with customizable tasks, docs, goals, and chat.",
@@ -657,7 +667,8 @@
     "rating": 4.4,
     "starting_price": "$19/mo",
     "best_for": "Content marketers, agencies, podcasters, and corporate communications teams looking to rapidly repurpose long-form text and video into short social media clips.",
-    "affiliate_url": "https://pictory.ai"
+    "affiliate_url": "https://pictory.ai?fpr=heliatech",
+    "commission_rate": "20% - 50% recurring"
   },
   {
     "name": "Podcastle",

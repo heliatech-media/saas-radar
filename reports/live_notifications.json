@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-20 19:32:56",
+    "title": "Cycle Autonome #Cleanvoice AI",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cleanvoice AI) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-20 19:32:46",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 21 lien(s) d'affiliation en anomalie :\n• `cleanvoice-ai, descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-20 19:30:03",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Cleanvoice AI: The End of Audio Friction and the Future of Automated Post-Production",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Cleanvoice AI: The End of Audio Friction and the Future of Automated Post-Production\n• **Catégorie :** Audio AI\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/cleanvoice-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/cleanvoice-ai-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-20 19:28:25",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Cleanvoice AI",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Cleanvoice AI\n• **Catégorie :** Audio AI\n• **Note globale :** 4.4/10\n• **Cible idéale :** Podcasters, audio engineers, remote interviewers, and media production teams seeking automated vocal cleanup.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/cleanvoice-ai/"
+  },
+  {
     "timestamp": "2026-11-20 11:04:00",
     "title": "Cycle Autonome #Pictory",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "REVIEW",
     "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Postiz\n• **Catégorie :** Social Media Automation\n• **Note globale :** 4.5/10\n• **Cible idéale :** Marketing agencies, solo founders, and developers who prioritize data ownership and automation flexibility.\n\n👉 Lire la fiche d'audit complète :",
     "link": "https://heliatech.online/reviews/postiz/"
-  },
-  {
-    "timestamp": "2026-11-16 10:25:36",
-    "title": "Cycle Autonome #Riverside-fm",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Riverside-fm) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-16 10:25:11",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 13 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-16 10:23:29",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Riverside.fm: The Genesis of Local-Sync Remote Recording and the Hands-on Guide to Studio-Quality Video Automation",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Riverside.fm: The Genesis of Local-Sync Remote Recording and the Hands-on Guide to Studio-Quality Video Automation\n• **Catégorie :** Video Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/riverside-fm-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/riverside-fm-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-16 10:23:05",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Riverside.fm",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Riverside.fm\n• **Catégorie :** Video Automation\n• **Note globale :** 4.6/10\n• **Cible idéale :** Professional podcasters, remote interviewers, agencies, and content teams seeking broadcast-grade media assets.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/riverside-fm/"
   }
 ]

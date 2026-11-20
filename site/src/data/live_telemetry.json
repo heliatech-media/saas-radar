@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-20 10:52:20 UTC",
+  "last_updated": "2026-11-20 19:30:48 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 102,
-    "total_published_investigations": 257,
-    "reviews_audited": 102,
-    "masterclasses_and_duels": 155,
+    "total_monetized_tools": 103,
+    "total_published_investigations": 259,
+    "reviews_audited": 103,
+    "masterclasses_and_duels": 156,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$35,700 USD",
+    "projected_monthly_mrr": "$36,050 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -383,6 +383,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "pictory",
+      "destination": "https://pictory.ai?fpr=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "podcastle",
       "destination": "https://podcastle.ai/?via=heliatech",
       "type": "Commission Partner"
@@ -585,38 +590,38 @@
   ],
   "recent_events": [
     {
-      "timestamp": "2026-11-16 10:25:11",
+      "timestamp": "2026-11-16 21:30:01",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 13 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     },
     {
-      "timestamp": "2026-11-16 10:23:29",
-      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Riverside.fm: The Genesis of Local-Sync Remote Recording and the Hands-on Guide to Studio-Quality Video Automation",
+      "timestamp": "2026-11-16 21:27:46",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Postiz: The Open-Source Social Revolution and the Blueprint for Cross-Platform Dominance",
       "category": "CONTENT",
-      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Riverside.fm: The Genesis of Local-Sync Remote Recording and the Hands-on Guide to Studio-Quality Video Automation\n• **Catégorie :** Video Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/riverside-fm-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-      "link": "https://heliatech.online/blog/riverside-fm-evolution-guide-2026/"
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Postiz: The Open-Source Social Revolution and the Blueprint for Cross-Platform Dominance\n• **Catégorie :** Social Media Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/postiz-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/postiz-evolution-guide-2026/"
     },
     {
-      "timestamp": "2026-11-16 10:23:05",
-      "title": "⭐ NOUVELLE REVUE LOGICIEL : Riverside.fm",
+      "timestamp": "2026-11-16 21:26:57",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : Postiz",
       "category": "REVIEW",
-      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Riverside.fm\n• **Catégorie :** Video Automation\n• **Note globale :** 4.6/10\n• **Cible idéale :** Professional podcasters, remote interviewers, agencies, and content teams seeking broadcast-grade media assets.\n\n👉 Lire la fiche d'audit complète :",
-      "link": "https://heliatech.online/reviews/riverside-fm/"
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Postiz\n• **Catégorie :** Social Media Automation\n• **Note globale :** 4.5/10\n• **Cible idéale :** Marketing agencies, solo founders, and developers who prioritize data ownership and automation flexibility.\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/postiz/"
     },
     {
-      "timestamp": "2026-11-16 00:35:22",
-      "title": "Cycle Autonome #Transistor-fm",
+      "timestamp": "2026-11-16 10:25:36",
+      "title": "Cycle Autonome #Riverside-fm",
       "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Transistor-fm) et mis à jour le calendrier social.",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Riverside-fm) et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-11-16 00:34:56",
+      "timestamp": "2026-11-16 10:25:11",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 13 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, runway-tco-calculator, tome, transistor-fm, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 13 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     }
   ]

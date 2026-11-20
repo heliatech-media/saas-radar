@@ -1,0 +1,398 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bg-radial" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    
+    <radialGradient id="glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-fuchsia" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Visuals -->
+    <linearGradient id="cyan-to-sky" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="text-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="wave-clean" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="wave-dirty" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#ec4899" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="glass-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.3" />
+    </linearGradient>
+
+    <linearGradient id="prism-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="blur-bg">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.4" />
+    </pattern>
+    <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="630" fill="url(#bg-radial)" />
+  <rect width="1200" height="630" fill="url(#cyber-grid)" />
+  <rect width="1200" height="630" fill="url(#dot-grid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="850" cy="315" r="300" fill="url(#glow-cyan)" filter="url(#blur-bg)" />
+  <circle cx="980" cy="200" r="250" fill="url(#glow-violet)" filter="url(#blur-bg)" />
+  <circle cx="700" cy="450" r="220" fill="url(#glow-fuchsia)" filter="url(#blur-bg)" />
+  <circle cx="200" cy="150" r="250" fill="url(#glow-cyan)" filter="url(#blur-bg)" />
+
+  <!-- Abstract Vector Audio Waves (Background Context Layer) -->
+  <g opacity="0.15">
+    <path d="M 0 500 C 300 400, 400 600, 700 450 C 1000 300, 1100 550, 1200 480" fill="none" stroke="#06b6d4" stroke-width="3" />
+    <path d="M 0 520 C 250 420, 450 580, 650 470 C 850 360, 1050 520, 1200 450" fill="none" stroke="#8b5cf6" stroke-width="1.5" />
+  </g>
+
+  <!-- ================= RIGHT SIDE: AUDIO AI NEURAL ENGINE METAPHOR ================= -->
+  
+  <!-- Central AI Energy Aura -->
+  <circle cx="840" cy="315" r="180" fill="url(#core-glow)" />
+
+  <!-- Equalizer Frequency Background Ring (Isometric View) -->
+  <g transform="translate(840, 315) rotate(-15)">
+    <!-- Tech Rings -->
+    <circle cx="0" cy="0" r="210" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4 8" />
+    <circle cx="0" cy="0" r="180" fill="none" stroke="url(#cyan-to-sky)" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="12 6 4 6" />
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="100 20 40 10" />
+
+    <!-- Orbital Frequency Bars -->
+    <g opacity="0.7">
+      <line x1="0" y1="-190" x2="0" y2="-205" stroke="#06b6d4" stroke-width="3" filter="url(#glow-soft)"/>
+      <line x1="30" y1="-185" x2="33" y2="-198" stroke="#06b6d4" stroke-width="2" />
+      <line x1="60" y1="-170" x2="65" y2="-182" stroke="#38bdf8" stroke-width="4" />
+      <line x1="90" y1="-150" x2="97" y2="-162" stroke="#38bdf8" stroke-width="2" />
+      <line x1="120" y1="-120" x2="130" y2="-130" stroke="#8b5cf6" stroke-width="3" />
+      <line x1="150" y1="-90" x2="162" y2="-97" stroke="#8b5cf6" stroke-width="5" filter="url(#glow-soft)"/>
+      <line x1="170" y1="-60" x2="182" y2="-65" stroke="#d946ef" stroke-width="2" />
+      <line x1="185" y1="-30" x2="198" y2="-33" stroke="#d946ef" stroke-width="3" />
+
+      <line x1="-30" y1="-185" x2="-33" y2="-198" stroke="#06b6d4" stroke-width="4" />
+      <line x1="-60" y1="-170" x2="-65" y2="-182" stroke="#06b6d4" stroke-width="2" />
+      <line x1="-90" y1="-150" x2="-97" y2="-162" stroke="#38bdf8" stroke-width="3" />
+      <line x1="-120" y1="-120" x2="-130" y2="-130" stroke="#8b5cf6" stroke-width="2" />
+      <line x1="-150" y1="-90" x2="-162" y2="-97" stroke="#d946ef" stroke-width="4" />
+    </g>
+  </g>
+
+  <!-- INPUT: Raw/Dirty/Noisy Audio Stream (Left side entering core) -->
+  <g id="input-dirty-stream">
+    <!-- Stream Vector Flow Line -->
+    <path d="M 450 315 L 680 315" stroke="url(#wave-dirty)" stroke-width="2" stroke-dasharray="6 4" opacity="0.6" />
+
+    <!-- Jagged Noisy Audio Waveform -->
+    <path d="M 440 315 
+             L 455 270 L 465 350 L 475 240 L 485 380 
+             L 495 290 L 505 340 L 515 220 L 525 395 
+             L 535 285 L 545 330 L 555 250 L 565 365 
+             L 575 300 L 585 330 L 595 275 L 605 345 
+             L 615 295 L 635 320 L 650 315" 
+          fill="none" stroke="url(#wave-dirty)" stroke-width="2.5" stroke-linejoin="round" filter="url(#glow-soft)" />
+
+    <!-- Noise Artifact Tags / Debris (Being Isolated & Extracted) -->
+    <!-- Filler Word Badge: 'UM' -->
+    <g transform="translate(485, 210)">
+      <rect x="-18" y="-12" width="36" height="20" rx="4" fill="#1e1b4b" stroke="#d946ef" stroke-width="1" />
+      <text x="0" y="2" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#f472b6" text-anchor="middle">UM</text>
+      <line x1="0" y1="8" x2="0" y2="28" stroke="#d946ef" stroke-width="1" stroke-dasharray="2 2" />
+    </g>
+
+    <!-- Noise Spike: Background Hum -->
+    <g transform="translate(530, 420)">
+      <rect x="-32" y="-10" width="64" height="20" rx="4" fill="#0f172a" stroke="#ec4899" stroke-width="1" />
+      <text x="0" y="3" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#f43f5e" text-anchor="middle">HUM -60dB</text>
+      <line x1="0" y1="-10" x2="-5" y2="-30" stroke="#ec4899" stroke-width="1" stroke-dasharray="2 2" />
+    </g>
+
+    <!-- Mouth Click Badge -->
+    <g transform="translate(580, 230)">
+      <rect x="-24" y="-10" width="48" height="20" rx="4" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1" />
+      <text x="0" y="3" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#c084fc" text-anchor="middle">CLICK</text>
+      <line x1="0" y1="10" x2="-5" y2="40" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="2 2" />
+    </g>
+  </g>
+
+  <!-- CENTRAL PROCESSOR NODE: Holographic AI Prism Glass Engine -->
+  <g id="neural-core" transform="translate(740, 315)">
+    <!-- Outer Hexagonal Hologram Shield -->
+    <polygon points="0,-110 95,-55 95,55 0,110 -95,55 -95,-55" fill="url(#prism-grad)" stroke="url(#glass-border)" stroke-width="2" filter="url(#glow-heavy)" />
+    <polygon points="0,-90 78,-45 78,45 0,90 -78,45 -78,-45" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="10 5" />
+
+    <!-- Neural Network Node Lattice Inside Core -->
+    <g stroke="#38bdf8" stroke-width="1" opacity="0.6">
+      <line x1="-50" y1="-30" x2="0" y2="-60" />
+      <line x1="50" y1="-30" x2="0" y2="-60" />
+      <line x1="-50" y1="-30" x2="-40" y2="30" />
+      <line x1="50" y1="-30" x2="40" y2="30" />
+      <line x1="-40" y1="30" x2="0" y2="60" />
+      <line x1="40" y1="30" x2="0" y2="60" />
+      <line x1="-50" y1="-30" x2="50" y2="-30" />
+      <line x1="-40" y1="30" x2="40" y2="30" />
+      <line x1="0" y1="-60" x2="0" y2="60" />
+    </g>
+
+    <!-- Glowing Intersect Nodes -->
+    <circle cx="0" cy="-60" r="5" fill="#38bdf8" filter="url(#glow-soft)" />
+    <circle cx="-50" cy="-30" r="4" fill="#06b6d4" />
+    <circle cx="50" cy="-30" r="4" fill="#8b5cf6" />
+    <circle cx="-40" cy="30" r="4" fill="#8b5cf6" />
+    <circle cx="40" cy="30" r="4" fill="#06b6d4" />
+    <circle cx="0" cy="60" r="5" fill="#38bdf8" filter="url(#glow-soft)" />
+    
+    <!-- Central Processing Nucleus -->
+    <circle cx="0" cy="0" r="28" fill="#030712" stroke="url(#cyan-to-sky)" stroke-width="2" />
+    <circle cx="0" cy="0" r="16" fill="url(#cyan-to-sky)" filter="url(#glow-heavy)" />
+    <circle cx="0" cy="0" r="6" fill="#ffffff" />
+
+    <!-- Floating Technical Data Overlay -->
+    <path d="M -80 -70 L -110 -90 L -160 -90" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.7"/>
+    <text x="-165" y="-94" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#06b6d4" text-anchor="end" letter-spacing="1">CLEANVOICE NEURAL CORE v4.2</text>
+    <text x="-165" y="-82" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8" text-anchor="end">REALTIME SPECTRAL RECONSTRUCTION</text>
+  </g>
+
+  <!-- OUTPUT: Pristine 3D Master Audio Ribbon Waveforms (Right side exiting core) -->
+  <g id="output-clean-stream">
+    <!-- Glowing Fluid Sine Wave Ribbon 1 (Main Pitch) -->
+    <path d="M 835 315 
+             C 870 230, 910 230, 945 315 
+             C 980 400, 1020 400, 1055 315 
+             C 1090 230, 1130 230, 1170 315" 
+          fill="none" stroke="url(#wave-clean)" stroke-width="4.5" filter="url(#glow-heavy)" />
+
+    <!-- Harmonic Wave Line 2 (Secondary Harmonic Layer) -->
+    <path d="M 835 315 
+             C 865 260, 895 260, 925 315 
+             C 955 370, 985 370, 1015 315 
+             C 1045 260, 1075 260, 1105 315 
+             C 1135 370, 1165 370, 1195 315" 
+          fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.8" filter="url(#glow-soft)" />
+
+    <!-- Harmonic Wave Line 3 (High Upper Harmonic) -->
+    <path d="M 835 315 
+             C 880 200, 930 200, 975 315 
+             C 1020 430, 1070 430, 1115 315 
+             C 1145 240, 1175 240, 1200 315" 
+          fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5" />
+
+    <!-- Clean Audio Studio Equalizer Bars Grid (Pristine Output Spectrum) -->
+    <g transform="translate(880, 440)" opacity="0.85">
+      <!-- Background baseline -->
+      <line x1="0" y1="0" x2="260" y2="0" stroke="#334155" stroke-width="1" />
+      
+      <!-- EQ Bars -->
+      <line x1="10" y1="0" x2="10" y2="-25" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" />
+      <line x1="25" y1="0" x2="25" y2="-45" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" />
+      <line x1="40" y1="0" x2="40" y2="-30" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" />
+      <line x1="55" y1="0" x2="55" y2="-65" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" filter="url(#glow-soft)" />
+      <line x1="70" y1="0" x2="70" y2="-85" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" filter="url(#glow-soft)" />
+      <line x1="85" y1="0" x2="85" y2="-50" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+      <line x1="100" y1="0" x2="100" y2="-95" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" filter="url(#glow-soft)" />
+      <line x1="115" y1="0" x2="115" y2="-70" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" />
+      <line x1="130" y1="0" x2="130" y2="-110" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" filter="url(#glow-soft)" />
+      <line x1="145" y1="0" x2="145" y2="-60" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" />
+      <line x1="160" y1="0" x2="160" y2="-40" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" />
+      <line x1="175" y1="0" x2="175" y2="-75" stroke="#d946ef" stroke-width="3" stroke-linecap="round" />
+      <line x1="190" y1="0" x2="190" y2="-50" stroke="#d946ef" stroke-width="3" stroke-linecap="round" />
+      <line x1="205" y1="0" x2="205" y2="-30" stroke="#d946ef" stroke-width="3" stroke-linecap="round" />
+      <line x1="220" y1="0" x2="220" y2="-15" stroke="#d946ef" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Equalizer Peaks Curve Line -->
+      <path d="M 10 -25 Q 40 -35 55 -65 T 100 -95 T 130 -110 T 175 -75 T 220 -15" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7" stroke-dasharray="3 3" />
+      <text x="0" y="16" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" letter-spacing="1.5">20Hz</text>
+      <text x="120" y="16" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" letter-spacing="1.5">1kHz</text>
+      <text x="230" y="16" font-family="system-ui, sans-serif" font-size="9" fill="#64748b" letter-spacing="1.5">20kHz</text>
+    </g>
+
+    <!-- High-Tech Quality Status Badge -->
+    <g transform="translate(1000, 160)">
+      <rect x="-60" y="-14" width="120" height="28" rx="14" fill="url(#glass-card)" stroke="#06b6d4" stroke-width="1" filter="url(#glow-soft)" />
+      <circle cx="-42" cy="0" r="4" fill="#10b981" filter="url(#glow-soft)" />
+      <text x="10" y="4" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">AUDIO PURITY 99.9%</text>
+    </g>
+  </g>
+
+  <!-- Floating particles / Sparkles representing studio clarity -->
+  <g fill="#38bdf8" opacity="0.7">
+    <circle cx="880" cy="220" r="1.5" />
+    <circle cx="940" cy="180" r="2" filter="url(#glow-soft)" />
+    <circle cx="1020" cy="250" r="1" />
+    <circle cx="1100" cy="200" r="2.5" filter="url(#glow-soft)" />
+    <circle cx="960" cy="390" r="1.5" />
+    <circle cx="1060" cy="420" r="2" />
+  </g>
+
+  <!-- ================= LEFT SIDE: TYPOGRAPHY & DOSSIER BRANDING ================= -->
+
+  <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="310" height="30" rx="15" fill="rgba(6, 182, 212, 0.06)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1" />
+    <circle cx="16" cy="15" r="4" fill="#06b6d4" filter="url(#glow-soft)" />
+    <circle cx="16" cy="15" r="2" fill="#ffffff" />
+    <text x="30" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="2">HELIATECH ARCHITECTURAL DOSSIER</text>
+  </g>
+
+  <!-- Main Article Title -->
+  <g transform="translate(80, 145)">
+    <!-- Tool Title -->
+    <text x="0" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="900" fill="url(#title-grad)" letter-spacing="-1px">
+      CLEANVOICE AI
+    </text>
+
+    <!-- Category Subtitle Tag -->
+    <g transform="translate(0, 58)">
+      <rect x="0" y="0" width="105" height="22" rx="4" fill="rgba(139, 92, 246, 0.15)" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1" />
+      <text x="52" y="15" font-family="system-ui, sans-serif" font-size="10" font-weight="800" fill="#c084fc" text-anchor="middle" letter-spacing="1.5">AUDIO AI</text>
+      <text x="120" y="15" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="2">| SYSTEM INVESTIGATION</text>
+    </g>
+  </g>
+
+  <!-- Investigation Headline / Subtitle -->
+  <g transform="translate(80, 275)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="300" fill="#f1f5f9" letter-spacing="-0.5px">
+      The End of Audio Friction &amp;
+    </text>
+    <text x="0" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="url(#cyan-to-sky)" letter-spacing="-0.5px">
+      The Future of Automated Post-Production
+    </text>
+    
+    <text x="0" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#94a3b8" width="450" opacity="0.9">
+      An enterprise-grade analysis of spectral voice isolation,
+    </text>
+    <text x="0" y="95" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#94a3b8">
+      automated stutter removal, and neural audio scrubbing workflows.
+    </text>
+  </g>
+
+  <!-- Enterprise Tech Chips / Feature Cards (Bottom Left) -->
+  <g transform="translate(80, 445)">
+    <!-- Chip 1: Multilingual Dead-Air Removal -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="145" height="54" rx="8" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1" />
+      <text x="14" y="22" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1">LATENCY ENGINE</text>
+      <text x="14" y="40" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#06b6d4">&lt; 15ms REALTIME</text>
+    </g>
+
+    <!-- Chip 2: Mouth Sound Removal -->
+    <g transform="translate(160, 0)">
+      <rect x="0" y="0" width="145" height="54" rx="8" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1" />
+      <text x="14" y="22" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1">ARTIFACT SCRUBBING</text>
+      <text x="14" y="40" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#38bdf8">SPECTRAL RECOVERY</text>
+    </g>
+
+    <!-- Chip 3: Silence & Filler Deletion -->
+    <g transform="translate(320, 0)">
+      <rect x="0" y="0" width="145" height="54" rx="8" fill="url(#glass-card)" stroke="url(#glass-border)" stroke-width="1" />
+      <text x="14" y="22" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1">FILLER RECOGNITION</text>
+      <text x="14" y="40" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#8b5cf6">AUTO-CUT AI</text>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM HUD & SYSTEM STATUS BAR ================= -->
+  <g transform="translate(0, 580)">
+    <!-- Bottom Separator Line -->
+    <line x1="80" y1="0" x2="1120" y2="0" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Left System Metadata -->
+    <text x="80" y="26" font-family="monospace" font-size="11" fill="#475569" letter-spacing="1">
+      FILE_ID: <tspan fill="#94a3b8">CV_AI_2025_REF</tspan>
+    </text>
+    <text x="250" y="26" font-family="monospace" font-size="11" fill="#475569" letter-spacing="1">
+      TIMECODE: <tspan fill="#06b6d4">00:14:32:08</tspan>
+    </text>
+
+    <!-- Right Enterprise URL Brand -->
+    <text x="1120" y="26" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="end" letter-spacing="2">
+      HELIATECH.ONLINE
+    </text>
+    <circle cx="985" cy="22" r="3" fill="#10b981" />
+    <text x="975" y="26" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#475569" text-anchor="end" letter-spacing="1">SYSTEM ONLINE</text>
+  </g>
+
+  <!-- Accent Geometry & Framing Corner Markers -->
+  <g stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.6">
+    <!-- Top-Left Corner Bracket -->
+    <path d="M 30 50 L 30 30 L 50 30" />
+    <!-- Top-Right Corner Bracket -->
+    <path d="M 1150 30 L 1170 30 L 1170 50" />
+    <!-- Bottom-Left Corner Bracket -->
+    <path d="M 30 580 L 30 600 L 50 600" />
+    <!-- Bottom-Right Corner Bracket -->
+    <path d="M 1170 580 L 1170 600 L 1150 600" />
+  </g>
+</svg>
