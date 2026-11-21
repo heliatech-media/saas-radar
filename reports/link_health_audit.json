@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-11-20 19:32:46",
-  "total_links_audited": 152,
+  "timestamp": "2026-11-21 01:59:39",
+  "total_links_audited": 155,
   "healthy_links": 131,
-  "broken_links_count": 21,
-  "health_rate": "86.2%",
+  "broken_links_count": 24,
+  "health_rate": "84.5%",
   "broken_links": [
     {
-      "slug": "cleanvoice-ai",
-      "target_url": "https://www.cleanvoice-ai.com",
+      "slug": "clay",
+      "target_url": "https://clay.com/?via=heliatech",
       "final_url": "FAILED",
       "status_code": 0,
       "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.cleanvoice-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.cleanvoice-ai.com', port=443): Failed to resolve 'www.cleanvoice-ai.com' ([Errno -2] Name or service not known)\"))"
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     {
       "slug": "descript-migration-calculator",
@@ -46,6 +46,14 @@
       "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
+      "slug": "legacy-ffmpeg-audit",
+      "target_url": "https://www.legacy-ffmpeg-audit.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.legacy-ffmpeg-audit.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.legacy-ffmpeg-audit.com', port=443): Failed to resolve 'www.legacy-ffmpeg-audit.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "minicong",
       "target_url": "https://minicong.ai/?via=heliatech",
       "final_url": "FAILED",
@@ -60,6 +68,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.minvo-testing-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.minvo-testing-sandbox.com', port=443): Failed to resolve 'www.minvo-testing-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "nle-labor-calculator",
+      "target_url": "https://www.nle-labor-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.nle-labor-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nle-labor-calculator.com', port=443): Failed to resolve 'www.nle-labor-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "notion-ai",
@@ -140,6 +156,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "tella-migration-calculator",
+      "target_url": "https://www.tella-migration-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.tella-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tella-migration-calculator.com', port=443): Failed to resolve 'www.tella-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tome",
@@ -297,9 +321,10 @@
     {
       "slug": "clay",
       "target_url": "https://clay.com/?via=heliatech",
-      "final_url": "https://www.clay.com/?via=heliatech",
-      "status_code": 200,
-      "healthy": true
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     {
       "slug": "clay-com",
@@ -310,11 +335,10 @@
     },
     {
       "slug": "cleanvoice-ai",
-      "target_url": "https://www.cleanvoice-ai.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.cleanvoice-ai.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.cleanvoice-ai.com', port=443): Failed to resolve 'www.cleanvoice-ai.com' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://cleanvoice.ai?via=heliatech",
+      "final_url": "https://cleanvoice.ai/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "clickup",
@@ -398,7 +422,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=VJfsmp79gJAGg1&gsxid=VJfsmp79gJAGg1&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ptP4WhLJInFTfY&gsxid=ptP4WhLJInFTfY&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -587,6 +611,14 @@
       "healthy": true
     },
     {
+      "slug": "legacy-ffmpeg-audit",
+      "target_url": "https://www.legacy-ffmpeg-audit.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.legacy-ffmpeg-audit.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.legacy-ffmpeg-audit.com', port=443): Failed to resolve 'www.legacy-ffmpeg-audit.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "lemlist",
       "target_url": "https://lemlist.com/?via=heliatech",
       "final_url": "https://www.lemlist.com/?via=heliatech",
@@ -701,6 +733,14 @@
       "healthy": true
     },
     {
+      "slug": "nle-labor-calculator",
+      "target_url": "https://www.nle-labor-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.nle-labor-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nle-labor-calculator.com', port=443): Failed to resolve 'www.nle-labor-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "notion",
       "target_url": "https://www.notion.com",
       "final_url": "https://www.notion.com/",
@@ -768,7 +808,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LPUgIFAHehKu5C&gsxid=LPUgIFAHehKu5C&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=D2DECrtKFXNj7J&gsxid=D2DECrtKFXNj7J&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -819,7 +859,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=j9dr1tAxa0uBDI&gsxid=j9dr1tAxa0uBDI&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xKmWtSymbjuTlO&gsxid=xKmWtSymbjuTlO&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1094,6 +1134,14 @@
       "final_url": "https://tally.so/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "tella-migration-calculator",
+      "target_url": "https://www.tella-migration-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.tella-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tella-migration-calculator.com', port=443): Failed to resolve 'www.tella-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tome",

@@ -6,7 +6,7 @@ tagline: AI-powered audio editing tool that automatically removes filler words, 
 category: Audio AI
 rating: 4.4
 website_url: https://cleanvoice.ai
-affiliate_url: https://cleanvoice.ai
+affiliate_url: "https://cleanvoice.ai?via=heliatech"
 summary: Cleanvoice AI automates post-production audio cleanup for podcast creators,
   interviewers, and audio engineers. Its neural networks detect and strip multilingual
   filler words, stuttering, hesitations, dead air, and mouth clicking across complex

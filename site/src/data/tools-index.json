@@ -159,7 +159,8 @@
     "rating": 4.4,
     "starting_price": "Free",
     "best_for": "Podcasters, audio engineers, remote interviewers, and media production teams seeking automated vocal cleanup.",
-    "affiliate_url": "https://cleanvoice.ai"
+    "affiliate_url": "https://cleanvoice.ai?via=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "ClickUp",
@@ -744,7 +745,7 @@
     "starting_price": "$0/mo",
     "best_for": "Software engineers, indie hackers, and product teams building AI-powered applications without dedicated ML infrastructure engineers.",
     "affiliate_url": "https://replicate.com",
-    "commission_rate": "None"
+    "commission_rate": "None (No official affiliate program)"
   },
   {
     "name": "Resemble AI",
@@ -914,6 +915,16 @@
     "starting_price": "$29/mo",
     "best_for": "Bootstrapped founders, indie hackers, agencies, and product teams needing high-converting forms on a tight budget.",
     "affiliate_url": "https://tally.so/?via=heliatech"
+  },
+  {
+    "name": "Tella",
+    "slug": "tella",
+    "tagline": "The fastest way to record, edit, and share high-quality screen recordings for professional teams.",
+    "category": "AI Video",
+    "rating": 4.7,
+    "starting_price": "$19/mo",
+    "best_for": "Product managers, designers, and customer success teams who need to create polished, branded video content quickly.",
+    "affiliate_url": "https://www.tella.tv/"
   },
   {
     "name": "Tome",

@@ -201,7 +201,8 @@ AFFILIATE_MAP = {
     "podsqueeze": "https://podsqueeze.com?via=heliatech",
     "coderabbit": "https://coderabbit.ai/?via=heliatech",
     "miro": "https://miro.com/?via=heliatech",
-    "pictory": "https://pictory.ai?fpr=heliatech"
+    "pictory": "https://pictory.ai?fpr=heliatech",
+    "cleanvoice-ai": "https://cleanvoice.ai?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

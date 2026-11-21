@@ -1,44 +1,44 @@
 {
-  "last_synced": "2026-11-20T19:30:50.565410",
+  "last_synced": "2026-11-21T01:58:06.313947",
   "status": "LIVE_CLOUDFLARE_GRAPHQL_SYNCED",
   "site": "heliatech.online",
-  "time_window": "28 Days (2026-10-23 - 2026-11-20)",
-  "total_visitors_network": 51265,
-  "total_requests": 235163,
-  "total_visits": 15892,
-  "total_pageviews": 53792,
+  "time_window": "28 Days (2026-10-24 - 2026-11-21)",
+  "total_visitors_network": 51979,
+  "total_requests": 231585,
+  "total_visits": 16113,
+  "total_pageviews": 53146,
   "percent_cached": "56.14%",
-  "data_served_mb": 3385.2,
+  "data_served_mb": 3372.7,
   "periods": {
     "today": {
       "label": "Aujourd'hui (24h)",
-      "date": "2026-11-20",
-      "visitors": 1552,
-      "rumVisits": 434,
-      "pageviews": 1326,
-      "requests": 6841,
+      "date": "2026-11-21",
+      "visitors": 153,
+      "rumVisits": 120,
+      "pageviews": 88,
+      "requests": 496,
       "hops": 8,
       "dwell": "2m 55s",
       "revenue": 280,
-      "viewMultiplier": 0.0247
+      "viewMultiplier": 0.0017
     },
     "week": {
       "label": "1 Semaine (7j)",
-      "visitors": 13532,
-      "rumVisits": 3518,
-      "pageviews": 13635,
-      "requests": 58185,
+      "visitors": 12571,
+      "rumVisits": 3268,
+      "pageviews": 11994,
+      "requests": 53764,
       "hops": 24,
       "dwell": "2m 48s",
       "revenue": 840,
-      "viewMultiplier": 0.2535
+      "viewMultiplier": 0.2257
     },
     "month": {
       "label": "1 Mois (30j)",
-      "visitors": 51265,
-      "rumVisits": 15892,
-      "pageviews": 53792,
-      "requests": 235163,
+      "visitors": 51979,
+      "rumVisits": 16113,
+      "pageviews": 53146,
+      "requests": 231585,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -46,10 +46,10 @@
     },
     "quarter": {
       "label": "3 Mois (90j)",
-      "visitors": 51265,
-      "rumVisits": 15892,
-      "pageviews": 53792,
-      "requests": 235163,
+      "visitors": 51979,
+      "rumVisits": 16113,
+      "pageviews": 53146,
+      "requests": 231585,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -57,10 +57,10 @@
     },
     "all": {
       "label": "Depuis l'ouverture (Global)",
-      "visitors": 51265,
-      "rumVisits": 15892,
-      "pageviews": 53792,
-      "requests": 235163,
+      "visitors": 51979,
+      "rumVisits": 16113,
+      "pageviews": 53146,
+      "requests": 231585,
       "hops": 38,
       "dwell": "2m 50s",
       "revenue": 1330,
@@ -70,185 +70,185 @@
   "top_pages": [
     {
       "path": "/api/telemetry",
-      "views": 16630
+      "views": 16470
     },
     {
       "path": "/blog/screen-studio-evolution-guide-2026/",
-      "views": 6380
+      "views": 6740
     },
     {
       "path": "/",
-      "views": 5390
+      "views": 5200
     },
     {
       "path": "/api/sentinel/cockpit",
-      "views": 5180
+      "views": 5070
     },
     {
       "path": "/calculator/",
-      "views": 3080
+      "views": 3270
     },
     {
       "path": "/blog/beehiiv-evolution-guide-2026/",
-      "views": 1560
+      "views": 1590
     },
     {
       "path": "/blog/eleven-v4-voice-ai-benchmark/",
-      "views": 1040
+      "views": 1140
     },
     {
-      "path": "/blog/heroku-free-tier-alternatives-2026/",
-      "views": 440
-    },
-    {
-      "path": "/blog/",
-      "views": 430
+      "path": "/radar/",
+      "views": 490
     },
     {
       "path": "/blog/elevenagents-ai-receptionist-guide/",
+      "views": 450
+    },
+    {
+      "path": "/awards/",
+      "views": 420
+    },
+    {
+      "path": "/blog/heroku-free-tier-alternatives-2026/",
       "views": 400
     },
     {
       "path": "/blog/julius-ai-evolution-guide-2026/",
-      "views": 390
-    },
-    {
-      "path": "/radar/",
-      "views": 370
-    },
-    {
-      "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
-      "views": 370
-    },
-    {
-      "path": "/deals/",
-      "views": 350
-    },
-    {
-      "path": "/reviews/clickup/",
-      "views": 330
-    },
-    {
-      "path": "/terms/",
-      "views": 330
-    },
-    {
-      "path": "/versus/",
-      "views": 300
-    },
-    {
-      "path": "/reviews/beehiiv/",
-      "views": 300
-    },
-    {
-      "path": "/blog/elevenlabs-vs-heygen/",
-      "views": 300
-    },
-    {
-      "path": "/blog/rewardful-evolution-guide-2026/",
-      "views": 300
-    },
-    {
-      "path": "/blog/linear-evolution-guide-2026/",
-      "views": 290
-    },
-    {
-      "path": "/awards/",
-      "views": 290
-    },
-    {
-      "path": "/blog/resend-evolution-guide-2026/",
-      "views": 290
+      "views": 400
     },
     {
       "path": "/blog/best-zapier-alternatives-2026/",
-      "views": 280
-    },
-    {
-      "path": "/blog/elevenlabs-ia-voix-revolution/",
-      "views": 270
+      "views": 390
     },
     {
       "path": "/blog/cursor-vs-github-copilot/",
+      "views": 380
+    },
+    {
+      "path": "/versus/",
+      "views": 360
+    },
+    {
+      "path": "/blog/",
+      "views": 350
+    },
+    {
+      "path": "/blog/rewardful-evolution-guide-2026/",
+      "views": 340
+    },
+    {
+      "path": "/terms/",
+      "views": 300
+    },
+    {
+      "path": "/reviews/make/",
+      "views": 300
+    },
+    {
+      "path": "/blog/jasper-ai-evolution-guide-2026/",
+      "views": 290
+    },
+    {
+      "path": "/deals/",
+      "views": 290
+    },
+    {
+      "path": "/blog/mcp-protocol-enterprise-stack-revolution-2026/",
+      "views": 290
+    },
+    {
+      "path": "/advisor/",
       "views": 270
     },
     {
-      "path": "/reviews/elevenlabs/",
-      "views": 270
-    },
-    {
-      "path": "/reviews/supabase/",
+      "path": "/blog/resend-evolution-guide-2026/",
       "views": 260
     },
     {
-      "path": "/reviews/brevo/",
+      "path": "/blog/rask-ai-evolution-guide-2026/",
+      "views": 260
+    },
+    {
+      "path": "/blog/retool/",
       "views": 250
     },
     {
+      "path": "/blog/hubspot-enterprise-pricing-rate-card-leaks-2026/",
+      "views": 240
+    },
+    {
+      "path": "/reviews/supabase/",
+      "views": 240
+    },
+    {
       "path": "/blog/make-automation-revolution/",
-      "views": 250
+      "views": 240
+    },
+    {
+      "path": "/blog/apollo-io-vs-lusha/",
+      "views": 240
     }
   ],
   "top_countries": [
     {
       "country": "United States",
-      "views": 46950
+      "views": 48080
     },
     {
       "country": "Morocco",
-      "views": 42720
-    },
-    {
-      "country": "Germany",
-      "views": 3390
+      "views": 40870
     },
     {
       "country": "Singapore",
-      "views": 3210
+      "views": 3270
+    },
+    {
+      "country": "Germany",
+      "views": 3260
     },
     {
       "country": "Brazil",
-      "views": 1960
-    },
-    {
-      "country": "CN",
-      "views": 1290
-    },
-    {
-      "country": "United Kingdom",
-      "views": 1180
-    },
-    {
-      "country": "France",
-      "views": 1090
+      "views": 1820
     },
     {
       "country": "Netherlands",
-      "views": 930
+      "views": 1100
     },
     {
-      "country": "HK",
-      "views": 840
+      "country": "CN",
+      "views": 1060
     },
     {
-      "country": "Belgium",
-      "views": 830
+      "country": "France",
+      "views": 1040
     },
     {
-      "country": "Canada",
-      "views": 810
+      "country": "United Kingdom",
+      "views": 980
     },
     {
       "country": "KR",
-      "views": 800
+      "views": 940
+    },
+    {
+      "country": "HK",
+      "views": 760
+    },
+    {
+      "country": "Canada",
+      "views": 750
+    },
+    {
+      "country": "Belgium",
+      "views": 730
     },
     {
       "country": "Spain",
-      "views": 650
+      "views": 530
     },
     {
-      "country": "FI",
-      "views": 490
+      "country": "India",
+      "views": 520
     }
   ],
   "top_referrers": [
