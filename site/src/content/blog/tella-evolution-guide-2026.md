@@ -13,7 +13,7 @@ tags:
 - Automation
 - B2B Software
 - Video Marketing
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: tella
 image: /images/blog/tella.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Tella Account ➔
   url: /go/tella
 ---
-
 Migrating asynchronous video workflows from client-side raw MP4 stitching to WebGL browser-native canvas compositing slashes enterprise compute expenditure by $142,000 per 100,000 rendered assets while cutting video payload latency from 4,200ms to 380ms. Traditional video workflows force organizations into an unsustainable trade-off: spending $84.50 per 1,000 assets on cloud FFmpeg EC2 rendering clusters or wasting 14.2 engineering hours per developer monthly on local post-production overhead. Tella eliminates this structural TCO tax by shifting compositing execution directly into the client-side browser DOM via zero-overhead WebGL state management.
 
 > [!NOTE]

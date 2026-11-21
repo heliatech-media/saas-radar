@@ -202,7 +202,8 @@ AFFILIATE_MAP = {
     "coderabbit": "https://coderabbit.ai/?via=heliatech",
     "miro": "https://miro.com/?via=heliatech",
     "pictory": "https://pictory.ai?fpr=heliatech",
-    "cleanvoice-ai": "https://cleanvoice.ai?via=heliatech"
+    "cleanvoice-ai": "https://cleanvoice.ai?via=heliatech",
+    "swell-ai": "https://www.swellai.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

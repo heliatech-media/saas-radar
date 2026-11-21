@@ -1,18 +1,10 @@
 {
-  "timestamp": "2026-11-21 01:59:39",
-  "total_links_audited": 155,
-  "healthy_links": 131,
-  "broken_links_count": 24,
-  "health_rate": "84.5%",
+  "timestamp": "2026-11-21 18:33:27",
+  "total_links_audited": 156,
+  "healthy_links": 133,
+  "broken_links_count": 23,
+  "health_rate": "85.3%",
   "broken_links": [
-    {
-      "slug": "clay",
-      "target_url": "https://clay.com/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
     {
       "slug": "descript-migration-calculator",
       "target_url": "https://www.descript-migration-calculator.com",
@@ -321,10 +313,9 @@
     {
       "slug": "clay",
       "target_url": "https://clay.com/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "final_url": "https://www.clay.com/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "clay-com",
@@ -422,7 +413,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=ptP4WhLJInFTfY&gsxid=ptP4WhLJInFTfY&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=6QlFLOxhergU53&gsxid=6QlFLOxhergU53&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -579,7 +570,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -795,7 +786,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -808,7 +799,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=D2DECrtKFXNj7J&gsxid=D2DECrtKFXNj7J&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=1NWe6zwd8sN6RY&gsxid=1NWe6zwd8sN6RY&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -859,7 +850,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xKmWtSymbjuTlO&gsxid=xKmWtSymbjuTlO&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bv4dNAn9dqOOzt&gsxid=bv4dNAn9dqOOzt&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1096,8 +1087,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -1116,8 +1107,8 @@
     },
     {
       "slug": "swell-ai",
-      "target_url": "https://www.swellai.com",
-      "final_url": "https://www.swellai.com/",
+      "target_url": "https://www.swellai.com/?via=heliatech",
+      "final_url": "https://www.swellai.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -1132,6 +1123,13 @@
       "slug": "tally",
       "target_url": "https://tally.so/?via=heliatech",
       "final_url": "https://tally.so/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "tella",
+      "target_url": "https://www.tella.tv/",
+      "final_url": "https://www.tella.com/",
       "status_code": 200,
       "healthy": true
     },

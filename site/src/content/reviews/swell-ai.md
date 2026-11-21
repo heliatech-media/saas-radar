@@ -5,7 +5,7 @@ tagline: Autonomous AI content engine for podcasters and content marketing teams
 category: Audio/Podcasting
 rating: 4.5
 website_url: https://www.swellai.com
-affiliate_url: https://www.swellai.com
+affiliate_url: "https://www.swellai.com/?via=heliatech"
 summary: Swell AI is an automated post-production content repurposing platform designed
   specifically for audio and video podcasters. It processes raw media uploads or RSS
   feeds into production-ready show notes, timestamps, comprehensive transcripts, SEO
