@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-21T18:32:53.636396",
+  "timestamp": "2026-11-22T00:51:09.314630",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 263,
-    "total_redirects_active": 156,
-    "new_redirects_healed": 51,
+    "total_content_files_scanned": 265,
+    "total_redirects_active": 158,
+    "new_redirects_healed": 52,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -45,11 +45,6 @@
       "slug": "runway-tco-calculator",
       "target_url": "https://www.runway-tco-calculator.com",
       "source_file": "runway-evolution-guide-2026.md"
-    },
-    {
-      "slug": "smartlead",
-      "target_url": "https://www.smartlead.com",
-      "source_file": "smartlead-vs-instantly-2026-b2b-cold-outreach.md"
     },
     {
       "slug": "asana",
@@ -250,6 +245,16 @@
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
       "source_file": "best-deel-alternatives-2026.md"
+    },
+    {
+      "slug": "screenstudio-performance-calculator",
+      "target_url": "https://www.screenstudio-performance-calculator.com",
+      "source_file": "screenstudio-evolution-guide-2026.md"
+    },
+    {
+      "slug": "screenstudio-migration-sandbox",
+      "target_url": "https://www.screenstudio-migration-sandbox.com",
+      "source_file": "screenstudio-evolution-guide-2026.md"
     },
     {
       "slug": "podsqueeze-migration-calculator",

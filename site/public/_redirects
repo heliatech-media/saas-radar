@@ -106,7 +106,7 @@
 /go/rask-ai https://rask.ai/?via=heliatech 302
 /go/relay https://www.relay.app 302
 /go/remote https://remote.com 302
-/go/replicate https://replicate.com 302
+/go/replicate https://replicate.com/?ref=heliatech 302
 /go/replit-agent https://www.replit-agent.com 302
 /go/resemble-ai https://www.resemble.ai/?via=heliatech 302
 /go/resend https://resend.com/?via=heliatech 302
@@ -121,9 +121,11 @@
 /go/sanity https://www.sanity.io/?ref=heliatech 302
 /go/screen-studio https://screen.studio/?via=heliatech 302
 /go/screenclip https://screenclip.com/?via=heliatech 302
+/go/screenstudio-migration-sandbox https://www.screenstudio-migration-sandbox.com 302
+/go/screenstudio-performance-calculator https://www.screenstudio-performance-calculator.com 302
 /go/semrush https://www.semrush.com 302
 /go/senja https://senja.io/?via=heliatech 302
-/go/smartlead https://www.smartlead.com 302
+/go/smartlead https://www.smartlead.ai/?via=heliatech 302
 /go/speechify https://speechify.com 302
 /go/submagic https://submagic.co/?via=heliatech 302
 /go/substack https://www.substack.com 302

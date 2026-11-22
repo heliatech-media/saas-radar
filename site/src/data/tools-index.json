@@ -744,8 +744,8 @@
     "rating": 4.6,
     "starting_price": "$0/mo",
     "best_for": "Software engineers, indie hackers, and product teams building AI-powered applications without dedicated ML infrastructure engineers.",
-    "affiliate_url": "https://replicate.com",
-    "commission_rate": "No public affiliate program"
+    "affiliate_url": "https://replicate.com/?ref=heliatech",
+    "commission_rate": "None (No public affiliate program)"
   },
   {
     "name": "Resemble AI",
@@ -843,6 +843,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "ScreenStudio",
+    "slug": "screenstudio",
+    "tagline": "Create stunning, high-quality screen recordings with automated zoom and motion effects.",
+    "category": "AI Video",
+    "rating": 4.7,
+    "starting_price": "$89",
+    "best_for": "Product managers, SaaS founders, and content creators who need professional demos without the overhead of Premiere Pro or After Effects.",
+    "affiliate_url": "https://www.screen.studio/?via=heliatech"
+  },
+  {
     "name": "Semrush",
     "slug": "semrush",
     "tagline": "The all-in-one visibility management platform for digital marketing and SEO professionals.",
@@ -861,7 +871,8 @@
     "rating": 4.7,
     "starting_price": "$39/mo",
     "best_for": "Lead generation agencies, B2B sales development teams, and high-volume outbound growth marketers.",
-    "affiliate_url": "https://www.smartlead.ai"
+    "affiliate_url": "https://www.smartlead.ai/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Submagic",

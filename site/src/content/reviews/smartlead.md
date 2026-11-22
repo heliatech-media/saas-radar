@@ -6,7 +6,7 @@ tagline: Scale cold email outreach with unlimited mailbox warming, centralized m
 category: Cold Email & Automation
 rating: 4.7
 website_url: https://www.smartlead.ai
-affiliate_url: https://www.smartlead.ai
+affiliate_url: "https://www.smartlead.ai/?via=heliatech"
 summary: Smartlead is an enterprise-grade cold email automation platform designed
   for outbound sales teams and lead generation agencies. It enables unlimited email
   account connections, automated warm-ups, multi-channel sequences, and consolidated

@@ -197,13 +197,14 @@ AFFILIATE_MAP = {
     "koalawriter": "https://koala.sh/?via=heliatech",
     "gamma": "https://gamma.app/?via=heliatech",
     "postiz": "https://postiz.com/?via=heliatech",
-    "replicate": "https://replicate.com",
+    "replicate": "https://replicate.com/?ref=heliatech",
     "podsqueeze": "https://podsqueeze.com?via=heliatech",
     "coderabbit": "https://coderabbit.ai/?via=heliatech",
     "miro": "https://miro.com/?via=heliatech",
     "pictory": "https://pictory.ai?fpr=heliatech",
     "cleanvoice-ai": "https://cleanvoice.ai?via=heliatech",
-    "swell-ai": "https://www.swellai.com/?via=heliatech"
+    "swell-ai": "https://www.swellai.com/?via=heliatech",
+    "smartlead": "https://www.smartlead.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
