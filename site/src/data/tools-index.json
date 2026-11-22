@@ -303,6 +303,16 @@
     "affiliate_url": "https://getimg.ai/?via=heliatech"
   },
   {
+    "name": "Ghost",
+    "slug": "ghost",
+    "tagline": "An open-source, high-performance publishing platform for independent newsletters and digital subscriptions.",
+    "category": "Newsletters & Publishing",
+    "rating": 4.7,
+    "starting_price": "$9/mo",
+    "best_for": "Independent journalists, digital media startups, creators, and newsletter operators seeking full data ownership and 0% revenue take rates.",
+    "affiliate_url": "https://ghost.org"
+  },
+  {
     "name": "Guidde",
     "slug": "guidde",
     "tagline": "Create professional video documentation and how-to guides in seconds using AI.",
@@ -946,7 +956,8 @@
     "rating": 4.7,
     "starting_price": "$19/mo",
     "best_for": "Product managers, designers, and customer success teams who need to create polished, branded video content quickly.",
-    "affiliate_url": "https://www.tella.tv/"
+    "affiliate_url": "https://www.tella.tv/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Tome",

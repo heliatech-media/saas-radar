@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-22 00:51:33",
-  "total_links_audited": 158,
-  "healthy_links": 133,
-  "broken_links_count": 25,
-  "health_rate": "84.2%",
+  "timestamp": "2026-11-22 10:37:38",
+  "total_links_audited": 161,
+  "healthy_links": 134,
+  "broken_links_count": 27,
+  "health_rate": "83.2%",
   "broken_links": [
     {
       "slug": "descript-migration-calculator",
@@ -28,6 +28,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "ghost-tco-calculator",
+      "target_url": "https://www.ghost-tco-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.ghost-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.ghost-tco-calculator.com', port=443): Failed to resolve 'www.ghost-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "invideo-ai-sandbox",
@@ -124,6 +132,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.podsqueeze-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-rate-card.com', port=443): Failed to resolve 'www.podsqueeze-rate-card.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "rate-card-declassified",
+      "target_url": "https://www.rate-card-declassified.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.rate-card-declassified.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.rate-card-declassified.com', port=443): Failed to resolve 'www.rate-card-declassified.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "replit-agent",
@@ -429,7 +445,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=FQBW2952dPFonD&gsxid=FQBW2952dPFonD&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3EPNEtZXfOgLNJ&gsxid=3EPNEtZXfOgLNJ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -489,6 +505,14 @@
       "final_url": "https://getimg.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "ghost-tco-calculator",
+      "target_url": "https://www.ghost-tco-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.ghost-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.ghost-tco-calculator.com', port=443): Failed to resolve 'www.ghost-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "guidde",
@@ -586,7 +610,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -802,7 +826,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -815,7 +839,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Dm32Sb09P8tSrk&gsxid=Dm32Sb09P8tSrk&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=jwp81qQaEGyejv&gsxid=jwp81qQaEGyejv&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -866,7 +890,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=MroSkboHyyYIo3&gsxid=MroSkboHyyYIo3&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=FaQJTM6SYGSkxQ&gsxid=FaQJTM6SYGSkxQ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -942,6 +966,14 @@
       "final_url": "https://www.rask.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "rate-card-declassified",
+      "target_url": "https://www.rate-card-declassified.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.rate-card-declassified.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.rate-card-declassified.com', port=443): Failed to resolve 'www.rate-card-declassified.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "relay",
@@ -1066,6 +1098,13 @@
       "healthy": true
     },
     {
+      "slug": "screenstudio",
+      "target_url": "https://www.screen.studio/?via=heliatech",
+      "final_url": "https://screen.studio/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "screenstudio-migration-sandbox",
       "target_url": "https://www.screenstudio-migration-sandbox.com",
       "final_url": "FAILED",
@@ -1119,8 +1158,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://substack.com/",
-      "status_code": 200,
+      "final_url": "https://www.substack.com/",
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -1160,8 +1199,8 @@
     },
     {
       "slug": "tella",
-      "target_url": "https://www.tella.tv/",
-      "final_url": "https://www.tella.com/",
+      "target_url": "https://www.tella.tv/?via=heliatech",
+      "final_url": "https://www.tella.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

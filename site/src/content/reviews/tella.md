@@ -6,7 +6,7 @@ tagline: The fastest way to record, edit, and share high-quality screen recordin
 category: AI Video
 rating: 4.7
 website_url: https://www.tella.tv/
-affiliate_url: https://www.tella.tv/
+affiliate_url: "https://www.tella.tv/?via=heliatech"
 summary: Tella is a browser-based screen recording tool designed for high-fidelity
   product demos and internal communication. It stands out by allowing users to record,
   edit, and style their videos within a single interface, eliminating the need for

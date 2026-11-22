@@ -1,16 +1,46 @@
 {
-  "timestamp": "2026-11-22T00:51:09.314630",
+  "timestamp": "2026-11-22T10:37:00.098478",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 265,
-    "total_redirects_active": 158,
-    "new_redirects_healed": 52,
+    "total_content_files_scanned": 267,
+    "total_redirects_active": 161,
+    "new_redirects_healed": 54,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
   },
   "healed_redirects": [
+    {
+      "slug": "substack",
+      "target_url": "https://www.substack.com",
+      "source_file": "beehiiv-vs-substack.md"
+    },
+    {
+      "slug": "zoominfo",
+      "target_url": "https://www.zoominfo.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "cognism",
+      "target_url": "https://www.cognism.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "kaspr",
+      "target_url": "https://www.kaspr.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "leadiq",
+      "target_url": "https://leadiq.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
+    {
+      "slug": "uplead",
+      "target_url": "https://www.uplead.com",
+      "source_file": "best-apollo-alternatives-2026.md"
+    },
     {
       "slug": "relay",
       "target_url": "https://www.relay.app",
@@ -37,49 +67,9 @@
       "source_file": "best-zapier-alternatives-2026.md"
     },
     {
-      "slug": "minvo-testing-sandbox",
-      "target_url": "https://www.minvo-testing-sandbox.com",
-      "source_file": "minvo-evolution-guide-2026.md"
-    },
-    {
-      "slug": "runway-tco-calculator",
-      "target_url": "https://www.runway-tco-calculator.com",
-      "source_file": "runway-evolution-guide-2026.md"
-    },
-    {
-      "slug": "asana",
-      "target_url": "https://www.asana.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "notion",
-      "target_url": "https://www.notion.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "basecamp",
-      "target_url": "https://www.basecamp.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "height",
-      "target_url": "https://www.height.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "jira",
-      "target_url": "https://www.jira.com",
-      "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
       "slug": "riverside-sandbox",
       "target_url": "https://www.riverside-sandbox.com",
       "source_file": "riverside-fm-evolution-guide-2026.md"
-    },
-    {
-      "slug": "replit-agent",
-      "target_url": "https://www.replit-agent.com",
-      "source_file": "replit-agent-vs-cursor-composer-2026.md"
     },
     {
       "slug": "opusclip-sandbox",
@@ -87,14 +77,29 @@
       "source_file": "opus-clip-evolution-guide-2026.md"
     },
     {
-      "slug": "pictory-sandbox-calculator",
-      "target_url": "https://www.pictory-sandbox-calculator.com",
-      "source_file": "pictory-evolution-guide-2026.md"
+      "slug": "descript-sandbox-leaks",
+      "target_url": "https://www.descript-sandbox-leaks.com",
+      "source_file": "descript-evolution-guide-2026.md"
     },
     {
-      "slug": "pictory-rate-card-leak",
-      "target_url": "https://www.pictory-rate-card-leak.com",
-      "source_file": "pictory-evolution-guide-2026.md"
+      "slug": "descript-migration-calculator",
+      "target_url": "https://www.descript-migration-calculator.com",
+      "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "writesonic-rate-card",
+      "target_url": "https://www.writesonic-rate-card.com",
+      "source_file": "writesonic-evolution-guide-2026.md"
+    },
+    {
+      "slug": "gamma-enterprise-sandbox",
+      "target_url": "https://www.gamma-enterprise-sandbox.com",
+      "source_file": "gamma-evolution-guide-2026.md"
+    },
+    {
+      "slug": "firebase",
+      "target_url": "https://www.firebase.com",
+      "source_file": "supabase-vs-firebase.md"
     },
     {
       "slug": "tella-migration-calculator",
@@ -112,39 +117,9 @@
       "source_file": "tella-evolution-guide-2026.md"
     },
     {
-      "slug": "papaya-global",
-      "target_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "source_file": "papaya-global-2026-pricing-rate-card-leaks.md"
-    },
-    {
-      "slug": "substack",
-      "target_url": "https://www.substack.com",
-      "source_file": "beehiiv-vs-substack.md"
-    },
-    {
-      "slug": "veed-architecture-sandbox",
-      "target_url": "https://www.veed-architecture-sandbox.com",
-      "source_file": "veed-io-evolution-guide-2026.md"
-    },
-    {
-      "slug": "veed-migration-sandbox",
-      "target_url": "https://www.veed-migration-sandbox.com",
-      "source_file": "veed-io-evolution-guide-2026.md"
-    },
-    {
-      "slug": "descript-sandbox-leaks",
-      "target_url": "https://www.descript-sandbox-leaks.com",
-      "source_file": "descript-evolution-guide-2026.md"
-    },
-    {
-      "slug": "descript-migration-calculator",
-      "target_url": "https://www.descript-migration-calculator.com",
-      "source_file": "descript-evolution-guide-2026.md"
-    },
-    {
-      "slug": "zoominfo",
-      "target_url": "https://www.zoominfo.com",
-      "source_file": "apollo-io-vs-zoominfo.md"
+      "slug": "runway-tco-calculator",
+      "target_url": "https://www.runway-tco-calculator.com",
+      "source_file": "runway-evolution-guide-2026.md"
     },
     {
       "slug": "invideo-ai-sandbox",
@@ -152,69 +127,14 @@
       "source_file": "invideo-ai-evolution-guide-2026.md"
     },
     {
-      "slug": "davinci-resolve",
-      "target_url": "https://www.davinci-resolve.com",
-      "source_file": "best-descript-alternatives-2026.md"
-    },
-    {
-      "slug": "playht",
-      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "openai-tts",
-      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "speechify",
-      "target_url": "https://speechify.com",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
-      "slug": "coqui",
-      "target_url": "https://github.com/coqui-ai/TTS",
-      "source_file": "best-elevenlabs-alternatives-2026.md"
-    },
-    {
       "slug": "bolt-new",
       "target_url": "https://www.bolt-new.com",
       "source_file": "bolt-new-vs-lovable-2026-vibe-coding-showdown.md"
     },
     {
-      "slug": "cognism",
-      "target_url": "https://www.cognism.com",
-      "source_file": "best-apollo-alternatives-2026.md"
-    },
-    {
-      "slug": "kaspr",
-      "target_url": "https://www.kaspr.com",
-      "source_file": "best-apollo-alternatives-2026.md"
-    },
-    {
-      "slug": "leadiq",
-      "target_url": "https://leadiq.com",
-      "source_file": "best-apollo-alternatives-2026.md"
-    },
-    {
-      "slug": "uplead",
-      "target_url": "https://www.uplead.com",
-      "source_file": "best-apollo-alternatives-2026.md"
-    },
-    {
-      "slug": "gamma-enterprise-sandbox",
-      "target_url": "https://www.gamma-enterprise-sandbox.com",
-      "source_file": "gamma-evolution-guide-2026.md"
-    },
-    {
-      "slug": "firebase",
-      "target_url": "https://www.firebase.com",
-      "source_file": "supabase-vs-firebase.md"
-    },
-    {
-      "slug": "writesonic-rate-card",
-      "target_url": "https://www.writesonic-rate-card.com",
-      "source_file": "writesonic-evolution-guide-2026.md"
+      "slug": "papaya-global",
+      "target_url": "https://www.papayaglobal.com/?ref=heliatech",
+      "source_file": "best-deel-alternatives-2026.md"
     },
     {
       "slug": "rippling",
@@ -255,6 +175,96 @@
       "slug": "screenstudio-migration-sandbox",
       "target_url": "https://www.screenstudio-migration-sandbox.com",
       "source_file": "screenstudio-evolution-guide-2026.md"
+    },
+    {
+      "slug": "playht",
+      "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "openai-tts",
+      "target_url": "https://platform.openai.com/docs/guides/text-to-speech",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "speechify",
+      "target_url": "https://speechify.com",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "coqui",
+      "target_url": "https://github.com/coqui-ai/TTS",
+      "source_file": "best-elevenlabs-alternatives-2026.md"
+    },
+    {
+      "slug": "minvo-testing-sandbox",
+      "target_url": "https://www.minvo-testing-sandbox.com",
+      "source_file": "minvo-evolution-guide-2026.md"
+    },
+    {
+      "slug": "replit-agent",
+      "target_url": "https://www.replit-agent.com",
+      "source_file": "replit-agent-vs-cursor-composer-2026.md"
+    },
+    {
+      "slug": "davinci-resolve",
+      "target_url": "https://www.davinci-resolve.com",
+      "source_file": "best-descript-alternatives-2026.md"
+    },
+    {
+      "slug": "asana",
+      "target_url": "https://www.asana.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "notion",
+      "target_url": "https://www.notion.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "basecamp",
+      "target_url": "https://www.basecamp.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "height",
+      "target_url": "https://www.height.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "jira",
+      "target_url": "https://www.jira.com",
+      "source_file": "best-clickup-alternatives-2026.md"
+    },
+    {
+      "slug": "veed-architecture-sandbox",
+      "target_url": "https://www.veed-architecture-sandbox.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
+    },
+    {
+      "slug": "veed-migration-sandbox",
+      "target_url": "https://www.veed-migration-sandbox.com",
+      "source_file": "veed-io-evolution-guide-2026.md"
+    },
+    {
+      "slug": "ghost-tco-calculator",
+      "target_url": "https://www.ghost-tco-calculator.com",
+      "source_file": "ghost-evolution-guide-2026.md"
+    },
+    {
+      "slug": "rate-card-declassified",
+      "target_url": "https://www.rate-card-declassified.com",
+      "source_file": "ghost-evolution-guide-2026.md"
+    },
+    {
+      "slug": "pictory-sandbox-calculator",
+      "target_url": "https://www.pictory-sandbox-calculator.com",
+      "source_file": "pictory-evolution-guide-2026.md"
+    },
+    {
+      "slug": "pictory-rate-card-leak",
+      "target_url": "https://www.pictory-rate-card-leak.com",
+      "source_file": "pictory-evolution-guide-2026.md"
     },
     {
       "slug": "podsqueeze-migration-calculator",

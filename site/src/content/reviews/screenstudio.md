@@ -93,7 +93,7 @@ ScreenStudio is a macOS-native screen recording tool that automates the post-pro
 ## Key Features & Capabilities
 
 - **Auto-zoom to active windows**
-- **Cursor path smoothing**
+- **[Cursor](/reviews/cursor) path smoothing**
 - **Customizable device frames (MacBook, iPhone, etc.)**
 - **Background blur and color customization**
 - **Direct export to 4K/60fps**
@@ -123,7 +123,7 @@ ScreenStudio is a macOS-native screen recording tool that automates the post-pro
 
 ScreenStudio is arguably the most efficient tool on the market for creating high-fidelity product demos. By automating the 'boring' parts of video editing—specifically the camera movement—it allows non-editors to produce content that looks like it was handled by a motion graphics professional. The software’s strength lies in its opinionated design; it doesn't try to be a full-fledged video editor, which prevents feature bloat and keeps the UX incredibly snappy.
 
-However, it is not a replacement for a full NLE (Non-Linear Editor). If your workflow requires complex multi-camera switching, heavy audio mixing, or intricate compositing, you will still need to export your ScreenStudio footage into a tool like Final Cut or Premiere. The one-time purchase model is refreshing in a sea of SaaS subscriptions, making it a high-value investment for teams that produce regular product updates.
+However, it is not a replacement for a full NLE (Non-[Linear](/reviews/linear) Editor). If your workflow requires complex multi-camera switching, heavy audio mixing, or intricate compositing, you will still need to export your ScreenStudio footage into a tool like Final Cut or Premiere. The one-time purchase model is refreshing in a sea of SaaS subscriptions, making it a high-value investment for teams that produce regular product updates.
 
 I recommend this tool specifically for teams that value speed-to-market for their marketing assets. If you are a solo founder or a product team that spends more than 2 hours a week manually keyframing zooms in other software, ScreenStudio will pay for itself within the first month of use.
 

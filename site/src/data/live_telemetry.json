@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-22 00:50:40 UTC",
+  "last_updated": "2026-11-22 10:36:15 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 106,
-    "total_published_investigations": 265,
-    "reviews_audited": 106,
-    "masterclasses_and_duels": 159,
+    "total_monetized_tools": 107,
+    "total_published_investigations": 267,
+    "reviews_audited": 107,
+    "masterclasses_and_duels": 160,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$37,100 USD",
+    "projected_monthly_mrr": "$37,450 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -478,6 +478,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "screenstudio",
+      "destination": "https://www.screen.studio/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "semrush",
       "destination": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
       "type": "Commission Partner"
@@ -524,8 +529,8 @@
     },
     {
       "slug": "tella",
-      "destination": "https://www.tella.tv/",
-      "type": "Catalog Edge Hop"
+      "destination": "https://www.tella.tv/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "tome",
@@ -605,38 +610,38 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-18 11:02:58",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-18 11:00:33",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Podsqueeze: The AI Engine Turning Raw Audio into an Omnichannel Content Empire",
+      "category": "CONTENT",
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Podsqueeze: The AI Engine Turning Raw Audio into an Omnichannel Content Empire\n• **Catégorie :** Audio/Podcasting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/podsqueeze-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/podsqueeze-evolution-guide-2026/"
+    },
+    {
+      "timestamp": "2026-11-18 10:56:34",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : Podsqueeze",
+      "category": "REVIEW",
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Podsqueeze\n• **Catégorie :** Audio/Podcasting\n• **Note globale :** 4.6/10\n• **Cible idéale :** Independent podcasters, media agencies, and marketing teams looking to automate post-production content repurposing.\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/podsqueeze/"
+    },
+    {
+      "timestamp": "2026-11-18 00:16:28",
+      "title": "Cycle Autonome #Replicate",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Replicate) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-18 00:16:04",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 15 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-18 00:14:23",
-      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Replicate: The Genesis of Serverless AI Inference and the Enterprise Blueprint for Rapid Model Deployment",
-      "category": "CONTENT",
-      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Replicate: The Genesis of Serverless AI Inference and the Enterprise Blueprint for Rapid Model Deployment\n• **Catégorie :** Cloud AI Model Inference & Serverless GPUs\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/replicate-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-      "link": "https://heliatech.online/blog/replicate-evolution-guide-2026/"
-    },
-    {
-      "timestamp": "2026-11-18 00:14:00",
-      "title": "⭐ NOUVELLE REVUE LOGICIEL : Replicate",
-      "category": "REVIEW",
-      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Replicate\n• **Catégorie :** Cloud AI Model Inference & Serverless GPUs\n• **Note globale :** 4.6/10\n• **Cible idéale :** Software engineers, indie hackers, and product teams building AI-powered applications without dedicated ML infrastructure engineers.\n\n👉 Lire la fiche d'audit complète :",
-      "link": "https://heliatech.online/reviews/replicate/"
-    },
-    {
-      "timestamp": "2026-11-17 15:17:12",
-      "title": "Cycle Autonome #Getimg-ai",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Getimg-ai) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-17 15:15:21",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 16 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, getimg-ai, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     }
   ]
