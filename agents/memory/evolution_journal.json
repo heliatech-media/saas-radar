@@ -1,7 +1,7 @@
 {
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
-  "last_cycle_timestamp": "2026-11-22T10:41:08.402644",
+  "last_cycle_timestamp": "2026-11-22T18:55:10.777656",
   "total_heuristics_stored": 84,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
@@ -14,20 +14,6 @@
     "World-Class Web Design & Awwwards Jury Engine"
   ],
   "evolution_log": [
-    {
-      "timestamp": "2026-11-11T03:48:40.442774",
-      "event": "HEURISTIC_ACQUIRED",
-      "domain": "cro",
-      "heuristic_name": "Sub-Threshold Peripheral Priming & Zero-Latency Kinetic Injection",
-      "curriculum_module": "The 8-Second High-Intent Lead Capture: Activating modal drawers at peak cognitive engagement (30% scroll depth) with zero bounce penalty"
-    },
-    {
-      "timestamp": "2026-11-11T03:48:58.465430",
-      "agent": "BlogAgent",
-      "domain": "content",
-      "score": 96,
-      "critique_summary": "None. The content strictly adheres to Helia Tech's adversarial persona, information gain axioms, and structural constraints."
-    },
     {
       "timestamp": "2026-11-11T13:14:50.142201",
       "agent": "BlogAgent",
@@ -363,6 +349,20 @@
       "domain": "social",
       "score": 96,
       "critique_summary": "Violates HEUR-SOC-04, HEUR-SOC-05, and HEUR-SOC-06 by lacking a raw ASCII data matrix and dependency tree; contains a explicit call-to-action string v"
+    },
+    {
+      "timestamp": "2026-11-22T18:53:25.474915",
+      "agent": "BlogAgent",
+      "domain": "content",
+      "score": 96,
+      "critique_summary": "Violated HEUR-CONT-02 with a generic fluff opening ('We live in an era where...'), completely lacked proprietary mathematical modeling (RCIA equation)"
+    },
+    {
+      "timestamp": "2026-11-22T18:55:10.777649",
+      "agent": "SocialGrowthAgent",
+      "domain": "social",
+      "score": 96,
+      "critique_summary": "Failed to implement the mandatory multi-axis ASCII dependency tree (HEUR-SOC-06) and raw quantitative matrix (HEUR-SOC-04); utilized generic emoji bul"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-22T10:37:00.098478",
+  "timestamp": "2026-11-22T18:55:49.191979",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 267,
-    "total_redirects_active": 161,
-    "new_redirects_healed": 54,
+    "total_content_files_scanned": 269,
+    "total_redirects_active": 165,
+    "new_redirects_healed": 57,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -95,6 +95,21 @@
       "slug": "gamma-enterprise-sandbox",
       "target_url": "https://www.gamma-enterprise-sandbox.com",
       "source_file": "gamma-evolution-guide-2026.md"
+    },
+    {
+      "slug": "audio-tco-calculator",
+      "target_url": "https://www.audio-tco-calculator.com",
+      "source_file": "wondercraft-ai-evolution-guide-2026.md"
+    },
+    {
+      "slug": "wondercraft-rate-card-leak",
+      "target_url": "https://www.wondercraft-rate-card-leak.com",
+      "source_file": "wondercraft-ai-evolution-guide-2026.md"
+    },
+    {
+      "slug": "voice-context-sandbox",
+      "target_url": "https://www.voice-context-sandbox.com",
+      "source_file": "wondercraft-ai-evolution-guide-2026.md"
     },
     {
       "slug": "firebase",

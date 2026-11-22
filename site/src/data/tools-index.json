@@ -310,7 +310,8 @@
     "rating": 4.7,
     "starting_price": "$9/mo",
     "best_for": "Independent journalists, digital media startups, creators, and newsletter operators seeking full data ownership and 0% revenue take rates.",
-    "affiliate_url": "https://ghost.org"
+    "affiliate_url": "https://ghost.org/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Guidde",
@@ -1088,6 +1089,16 @@
     "best_for": "UI/UX designers, marketing agencies, and scaling tech companies needing bespoke web experiences",
     "affiliate_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
     "commission_rate": "50% recurring for the first year"
+  },
+  {
+    "name": "Wondercraft AI",
+    "slug": "wondercraft-ai",
+    "tagline": "The studio-quality AI audio platform for creators and businesses.",
+    "category": "Audio/Podcasting",
+    "rating": 4.6,
+    "starting_price": "$29/mo",
+    "best_for": "Content marketers, podcasters, and corporate communications teams needing rapid audio production.",
+    "affiliate_url": "https://www.wondercraft.ai/"
   },
   {
     "name": "WriteSonic",

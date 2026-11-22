@@ -12,7 +12,7 @@ tags:
 - Newsletters
 - B2B Software
 - SaaS
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: ghost
 image: /images/blog/ghost.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Ghost Account ➔
   url: /go/ghost
 ---
-
 At 100,000 paid subscribers ($10/mo average billing), Substack’s 10% platform take-rate extracts $120,000 annually in pure friction revenue, while a legacy WordPress stack suffers a 418ms Time-To-First-Byte (TTFB) degradation across 14 third-party execution plugins. Monolithic CMS debt and platform rent-seeking represent the two largest operational failure vectors in modern digital media engineering. Modernizing to Ghost 5.x on a Node.js V8 execution engine caps tail latency at 38.4ms TTFB while reducing 100k-subscriber infrastructure costs to $0.00041 per active newsletter dispatch.
 
 > [!NOTE]

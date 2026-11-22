@@ -1,10 +1,18 @@
 {
-  "timestamp": "2026-11-22 10:37:38",
-  "total_links_audited": 161,
-  "healthy_links": 134,
-  "broken_links_count": 27,
-  "health_rate": "83.2%",
+  "timestamp": "2026-11-22 18:56:24",
+  "total_links_audited": 165,
+  "healthy_links": 135,
+  "broken_links_count": 30,
+  "health_rate": "81.8%",
   "broken_links": [
+    {
+      "slug": "audio-tco-calculator",
+      "target_url": "https://www.audio-tco-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.audio-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.audio-tco-calculator.com', port=443): Failed to resolve 'www.audio-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
     {
       "slug": "descript-migration-calculator",
       "target_url": "https://www.descript-migration-calculator.com",
@@ -214,6 +222,22 @@
       "error": "HTTPSConnectionPool(host='www.veed-migration-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-migration-sandbox.com', port=443): Failed to resolve 'www.veed-migration-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
+      "slug": "voice-context-sandbox",
+      "target_url": "https://www.voice-context-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.voice-context-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.voice-context-sandbox.com', port=443): Failed to resolve 'www.voice-context-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "wondercraft-rate-card-leak",
+      "target_url": "https://www.wondercraft-rate-card-leak.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.wondercraft-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.wondercraft-rate-card-leak.com', port=443): Failed to resolve 'www.wondercraft-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "writesonic-rate-card",
       "target_url": "https://www.writesonic-rate-card.com",
       "final_url": "FAILED",
@@ -264,6 +288,14 @@
       "final_url": "https://asana.com/",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "audio-tco-calculator",
+      "target_url": "https://www.audio-tco-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.audio-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.audio-tco-calculator.com', port=443): Failed to resolve 'www.audio-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "axiom-ai",
@@ -445,7 +477,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=3EPNEtZXfOgLNJ&gsxid=3EPNEtZXfOgLNJ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=1OfS4xUoevljFf&gsxid=1OfS4xUoevljFf&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -503,6 +535,13 @@
       "slug": "getimg-ai",
       "target_url": "https://getimg.ai/?via=heliatech",
       "final_url": "https://getimg.ai/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "ghost",
+      "target_url": "https://ghost.org/?via=heliatech",
+      "final_url": "https://ghost.org/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -839,7 +878,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=jwp81qQaEGyejv&gsxid=jwp81qQaEGyejv&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=I33ZYFN4P4IDKA&gsxid=I33ZYFN4P4IDKA&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -890,7 +929,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=FaQJTM6SYGSkxQ&gsxid=FaQJTM6SYGSkxQ&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=WhmhkoGQY4Yg97&gsxid=WhmhkoGQY4Yg97&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1321,6 +1360,14 @@
       "healthy": true
     },
     {
+      "slug": "voice-context-sandbox",
+      "target_url": "https://www.voice-context-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.voice-context-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.voice-context-sandbox.com', port=443): Failed to resolve 'www.voice-context-sandbox.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
       "slug": "voiceflow",
       "target_url": "https://www.voiceflow.com",
       "final_url": "https://www.voiceflow.com/",
@@ -1340,6 +1387,14 @@
       "final_url": "https://webflow.com/",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "wondercraft-rate-card-leak",
+      "target_url": "https://www.wondercraft-rate-card-leak.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.wondercraft-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.wondercraft-rate-card-leak.com', port=443): Failed to resolve 'www.wondercraft-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "workato",
