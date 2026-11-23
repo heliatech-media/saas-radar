@@ -260,6 +260,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "FlutterFlow",
+    "slug": "flutterflow",
+    "tagline": "Accelerate cross-platform mobile and web application development with a visual builder that exports production-ready Flutter code.",
+    "category": "DevTools",
+    "rating": 4.6,
+    "starting_price": "$30/mo",
+    "best_for": "Startup founders, cross-functional engineering teams, product managers, and agencies needing to build and launch production-grade Flutter applications in half the standard development time.",
+    "affiliate_url": "https://flutterflow.io"
+  },
+  {
     "name": "Framer",
     "slug": "framer",
     "tagline": "Design and publish stunning, production-ready responsive websites with the power of a canvas and React under the hood.",
@@ -893,7 +903,8 @@
     "rating": 4.6,
     "starting_price": "$59/mo",
     "best_for": "Operations managers, agencies building client portals, and solo founders building database-driven MVP web apps.",
-    "affiliate_url": "https://www.softr.io"
+    "affiliate_url": "https://www.softr.io/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Submagic",

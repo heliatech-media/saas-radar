@@ -6,7 +6,7 @@ tagline: Turn Airtable and Google Sheets data into web apps, client portals, and
 category: DevTools & No-Code
 rating: 4.6
 website_url: https://www.softr.io
-affiliate_url: https://www.softr.io
+affiliate_url: "https://www.softr.io/?via=heliatech"
 summary: Softr is a no-code web application builder that allows non-technical teams
   to transform Airtable bases and Google Sheets into client portals, internal tools,
   and membership sites. It leverages modular drag-and-drop building blocks paired
@@ -126,7 +126,7 @@ competitor_matches:
 
 ## Executive Summary
 
-Softr is a no-code web application builder that allows non-technical teams to transform Airtable bases and Google Sheets into client portals, internal tools, and membership sites. It leverages modular drag-and-drop building blocks paired with granular user permissions and roles. While fast to launch, advanced logic and non-relational database connections require custom code or external automation tools.
+Softr is a no-code web application builder that allows non-technical teams to transform [Airtable](/reviews/airtable) bases and Google Sheets into client portals, internal tools, and membership sites. It leverages modular drag-and-drop building blocks paired with granular user permissions and roles. While fast to launch, advanced logic and non-relational database connections require custom code or external automation tools.
 
 ### Who is Softr Best For?
 **Target Audience:** Operations managers, agencies building client portals, and solo founders building database-driven MVP web apps.
@@ -159,7 +159,7 @@ Softr is a no-code web application builder that allows non-technical teams to tr
 
 ### Cons
 - Strict block-based layout model limits free-form UI design and bespoke responsive styling.
-- Deep relational data queries and complex back-end business logic require third-party tools like Make or Zapier.
+- Deep relational data queries and complex back-end business logic require third-party tools like [Make](/reviews/make) or [Zapier](/reviews/zapier).
 - Higher-tier pricing gets expensive quickly if requiring multi-domain routing or heavy record volumes.
 
 ## Detailed Verdict & Technical Analysis
@@ -168,7 +168,7 @@ Softr shines as a rapid web application wrapper for structured relational databa
 
 However, Softr is strictly constrained by its block-based layout paradigm. Teams requiring pixel-perfect designs, custom canvas positioning, or complex client-side state manipulation will quickly run into design walls. Furthermore, logic complex enough to demand custom back-end endpoints will require routing through webhooks to Make, Zapier, or serverless functions.
 
-For agencies managing client deliverables or internal ops teams replacing spreadsheets with controlled interfaces, Softr delivers exceptional speed-to-value. If your project relies heavily on Airtable schema and requires clear user isolation, Softr is the most efficient vector on the market. If your app requires heavy algorithmic computations or non-standard UI workflows, consider Bubble or Retool.
+For agencies managing client deliverables or internal ops teams replacing spreadsheets with controlled interfaces, Softr delivers exceptional speed-to-value. If your project relies heavily on Airtable schema and requires clear user isolation, Softr is the most efficient vector on the market. If your app requires heavy algorithmic computations or non-standard UI workflows, consider Bubble or [Retool](/reviews/retool).
 
 ## Frequently Asked Questions
 
