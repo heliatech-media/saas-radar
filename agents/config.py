@@ -206,7 +206,8 @@ AFFILIATE_MAP = {
     "swell-ai": "https://www.swellai.com/?via=heliatech",
     "smartlead": "https://www.smartlead.ai/?via=heliatech",
     "tella": "https://www.tella.tv/?via=heliatech",
-    "ghost": "https://ghost.org/?via=heliatech"
+    "ghost": "https://ghost.org/?via=heliatech",
+    "wondercraft-ai": "https://www.wondercraft.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

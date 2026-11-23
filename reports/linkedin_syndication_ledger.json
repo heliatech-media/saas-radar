@@ -615,7 +615,14 @@
       "title": "Anthropic MCP Protocol Guide (2026): Enterprise Stack",
       "tool_slug": "supabase",
       "canonical_url": "https://heliatech.online/blog/mcp-protocol-enterprise-stack-revolution-2026"
+    },
+    "ghost-evolution-guide-2026": {
+      "published_at": "2026-11-23T01:18:57.333499",
+      "share_urn": "urn:li:share:7530439714273710080",
+      "title": "Ghost: The Open-Source Publishing Engine Disrupting Substack and WordPress in 2026",
+      "tool_slug": "ghost",
+      "canonical_url": "https://heliatech.online/blog/ghost-evolution-guide-2026"
     }
   },
-  "last_publish": "2026-11-22T18:56:55.883256"
+  "last_publish": "2026-11-23T01:18:57.333510"
 }

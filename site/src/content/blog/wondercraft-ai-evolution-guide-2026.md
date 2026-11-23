@@ -12,7 +12,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: wondercraft-ai
 image: /images/blog/wondercraft-ai.svg
 tldr:
@@ -30,7 +30,6 @@ affiliate_cta:
   button_text: Claim Your Free Wondercraft AI Account ➔
   url: /go/wondercraft-ai
 ---
-
 ## The $420k Studio Collapse: Deconstructing Text-to-Audio Unit Economics
 
 Legacy audio production workflows burn $420,000 per 1,000 localized enterprise audio assets, bottlenecked by $150/hr DAW engineering and multi-track manual editing latency averaging 4.2 hours per 10-minute episode. By shifting synthetic voice orchestration directly to an asynchronous browser context, platform architectures like Wondercraft AI reduce per-minute audio generation costs from $45.00 to $0.14 while maintaining voice-clone fidelity thresholds above 0.94 P.800 MOS. However, uncompressed context buffers in multi-turn voice tuning introduce progressive execution degradation if context windows are not dynamically pruned.
@@ -58,7 +57,7 @@ At step $n = 14$ in an uncompressed edit session, the unit-cost per audio minute
 
 ### 2. Empirical Benchmark: Legacy DAW vs. Wondercraft Engine Unit Costs
 
-| Production Metric | Legacy Studio Pipeline | Standard TTS APIs (ElevenLabs Raw) | Wondercraft Engine Swarm |
+| Production Metric | Legacy Studio Pipeline | Standard TTS APIs ([ElevenLabs](/reviews/elevenlabs) Raw) | Wondercraft Engine Swarm |
 | :--- | :--- | :--- | :--- |
 | **Cost per 10-Min Episode** | $450.00 | $1.80 | **$0.34** |
 | **Editing Latency (p95)** | 252 minutes | 18 minutes | **1.2 minutes** |

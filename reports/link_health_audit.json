@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-22 18:56:24",
-  "total_links_audited": 165,
-  "healthy_links": 135,
+  "timestamp": "2026-11-23 01:18:35",
+  "total_links_audited": 167,
+  "healthy_links": 137,
   "broken_links_count": 30,
-  "health_rate": "81.8%",
+  "health_rate": "82.0%",
   "broken_links": [
     {
       "slug": "audio-tco-calculator",
@@ -477,7 +477,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=1OfS4xUoevljFf&gsxid=1OfS4xUoevljFf&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=JP4E10fWWDjLsp&gsxid=JP4E10fWWDjLsp&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -878,7 +878,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=I33ZYFN4P4IDKA&gsxid=I33ZYFN4P4IDKA&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=oFAPvMDY0Cs0nZ&gsxid=oFAPvMDY0Cs0nZ&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -929,7 +929,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=WhmhkoGQY4Yg97&gsxid=WhmhkoGQY4Yg97&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Lm4O3pLjgTRNna&gsxid=Lm4O3pLjgTRNna&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1181,6 +1181,13 @@
       "healthy": true
     },
     {
+      "slug": "softr",
+      "target_url": "https://www.softr.com",
+      "final_url": "https://www.softr.io",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "speechify",
       "target_url": "https://speechify.com",
       "final_url": "https://speechify.com/",
@@ -1385,6 +1392,13 @@
       "slug": "webflow",
       "target_url": "https://www.webflow.com",
       "final_url": "https://webflow.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "wondercraft-ai",
+      "target_url": "https://www.wondercraft.ai/?via=heliatech",
+      "final_url": "https://www.wondercraft.ai/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },

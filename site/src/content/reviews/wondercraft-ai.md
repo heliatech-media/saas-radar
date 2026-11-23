@@ -5,7 +5,7 @@ tagline: The studio-quality AI audio platform for creators and businesses.
 category: Audio/Podcasting
 rating: 4.6
 website_url: https://www.wondercraft.ai/
-affiliate_url: https://www.wondercraft.ai/
+affiliate_url: "https://www.wondercraft.ai/?via=heliatech"
 summary: Wondercraft AI is a sophisticated text-to-audio platform that leverages advanced
   generative AI to create professional-grade podcasts, ads, and audio content. It
   replaces traditional recording setups with a browser-based studio featuring high-fidelity

@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-22 18:55:10 UTC",
+  "last_updated": "2026-11-23 01:17:11 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 108,
-    "total_published_investigations": 269,
-    "reviews_audited": 108,
-    "masterclasses_and_duels": 161,
+    "total_monetized_tools": 109,
+    "total_published_investigations": 271,
+    "reviews_audited": 109,
+    "masterclasses_and_duels": 162,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$37,800 USD",
+    "projected_monthly_mrr": "$38,150 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -603,6 +603,11 @@
       "type": "Catalog Edge Hop"
     },
     {
+      "slug": "wondercraft-ai",
+      "destination": "https://www.wondercraft.ai/?via=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "writesonic",
       "destination": "https://writesonic.grsm.io/heliatech",
       "type": "Commission Partner"
@@ -615,35 +620,35 @@
   ],
   "recent_events": [
     {
-      "timestamp": "2026-11-18 19:48:23",
+      "timestamp": "2026-11-19 10:57:53",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     },
     {
-      "timestamp": "2026-11-18 11:25:19",
+      "timestamp": "2026-11-19 02:10:33",
       "title": "Cycle Autonome #Cloud Growth Refresh",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cloud Growth Refresh) et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-11-18 11:23:28",
+      "timestamp": "2026-11-19 02:10:19",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 19 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card, zoominfo`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     },
     {
-      "timestamp": "2026-11-18 11:05:35",
-      "title": "Cycle Autonome #Podsqueeze",
+      "timestamp": "2026-11-18 19:49:22",
+      "title": "Cycle Autonome #Cloud Growth Refresh",
       "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Podsqueeze) et mis à jour le calendrier social.",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cloud Growth Refresh) et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     },
     {
-      "timestamp": "2026-11-18 11:02:58",
+      "timestamp": "2026-11-18 19:48:23",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",

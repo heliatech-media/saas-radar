@@ -886,6 +886,16 @@
     "commission_rate": "30% recurring"
   },
   {
+    "name": "Softr",
+    "slug": "softr",
+    "tagline": "Turn Airtable and Google Sheets data into web apps, client portals, and internal tools without code.",
+    "category": "DevTools & No-Code",
+    "rating": 4.6,
+    "starting_price": "$59/mo",
+    "best_for": "Operations managers, agencies building client portals, and solo founders building database-driven MVP web apps.",
+    "affiliate_url": "https://www.softr.io"
+  },
+  {
     "name": "Submagic",
     "slug": "submagic",
     "tagline": "AI-powered video captioning and editing tool that transforms raw footage into viral short-form clips in minutes.",
@@ -1098,7 +1108,8 @@
     "rating": 4.6,
     "starting_price": "$29/mo",
     "best_for": "Content marketers, podcasters, and corporate communications teams needing rapid audio production.",
-    "affiliate_url": "https://www.wondercraft.ai/"
+    "affiliate_url": "https://www.wondercraft.ai/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "WriteSonic",

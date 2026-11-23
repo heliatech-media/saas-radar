@@ -1269,6 +1269,19 @@
         "phantombustervsapolloio",
         "comparison"
       ]
+    },
+    "ghost-evolution-guide-2026": {
+      "id": 5096617,
+      "url": "https://dev.to/heliatech/ghost-the-open-source-publishing-engine-disrupting-substack-and-wordpress-in-2026-16a8",
+      "title": "Ghost: The Open-Source Publishing Engine Disrupting Substack and WordPress in 2026",
+      "canonical_url": "https://heliatech.online/blog/ghost-evolution-guide-2026",
+      "published": true,
+      "tags": [
+        "ghost",
+        "publishing",
+        "newsletters",
+        "b2bsoftware"
+      ]
     }
   },
   "last_sync": null
