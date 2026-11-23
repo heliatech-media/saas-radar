@@ -135,7 +135,7 @@ competitor_matches:
 
 ## Executive Summary
 
-FlutterFlow is a low-code visual application builder powered by Google's Flutter framework, allowing teams to design, prototype, and build native iOS, Android, web, and desktop apps. It bridges the gap between visual design and traditional software development by providing clean, exportable Dart code alongside deep Firebase and Supabase integrations. While it dramatically speeds up UI building and state management setup, complex custom logic still requires manual code writing and architecture planning.
+FlutterFlow is a low-code visual application builder powered by Google's Flutter framework, allowing teams to design, prototype, and build native iOS, Android, web, and desktop apps. It bridges the gap between visual design and traditional software development by providing clean, exportable Dart code alongside deep Firebase and [Supabase](/reviews/supabase) integrations. While it dramatically speeds up UI building and state management setup, complex custom logic still requires manual code writing and architecture planning.
 
 ### Who is FlutterFlow Best For?
 **Target Audience:** Startup founders, cross-functional engineering teams, product managers, and agencies needing to build and launch production-grade Flutter applications in half the standard development time.

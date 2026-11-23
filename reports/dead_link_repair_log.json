@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-23T11:43:08.590030",
+  "timestamp": "2026-11-23T23:09:11.983099",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
     "total_content_files_scanned": 273,
     "total_redirects_active": 168,
-    "new_redirects_healed": 58,
+    "new_redirects_healed": 57,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -215,11 +215,6 @@
       "slug": "minvo-testing-sandbox",
       "target_url": "https://www.minvo-testing-sandbox.com",
       "source_file": "minvo-evolution-guide-2026.md"
-    },
-    {
-      "slug": "flutterflow",
-      "target_url": "https://www.flutterflow.com",
-      "source_file": "flutterflow-evolution-guide-2026.md"
     },
     {
       "slug": "replit-agent",

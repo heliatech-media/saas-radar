@@ -44,7 +44,7 @@ Softr obliterated this bottleneck by introducing a fundamental paradigm shift: w
 
 Founded by Mariam Hakobyan and Artur Chakhoyan, Softr emerged out of a acute realization: small-to-medium businesses and fast-scaling startups were continuously re-inventing the wheel. Building a client portal, dynamic marketplace, or employee dashboard traditionally required setting up user authentication systems, styling CSS components, wiring up APIs, and maintaining custom hosting environments.
 
-While legacy low-code dinosaurs like [Webflow](/reviews/webflow) targeted high-end designers with steep learning curves, and tools like Bubble offered complex visual programming that still felt like software engineering, Softr took a radically different path. It bet heavily on the modular block architecture combined with instant, bi-directional sync to operational databases like Airtable and Google Sheets.
+While legacy low-code dinosaurs like [Webflow](/reviews/webflow) targeted high-end designers with steep learning curves, and tools like Bubble offered complex visual programming that still felt like software engineering, Softr took a radically different path. It bet heavily on the modular block architecture combined with instant, bi-directional sync to operational databases like [Airtable](/reviews/airtable) and Google Sheets.
 
 By treating spreadsheet rows and columns as the single source of truth, Softr allowed non-technical product managers, operations leads, and agency founders to launch fully responsive, secure web apps in a single afternoon. What began as a simple web builder quickly evolved into an enterprise-grade platform featuring deep Role-Based Access Control (RBAC), native Stripe monetization, and robust multi-user permission engines.
 
