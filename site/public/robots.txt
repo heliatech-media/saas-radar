@@ -43,4 +43,10 @@ Disallow: /creator/
 Disallow: /checkout/
 Disallow: /admin/
 
+User-agent: Google-adstxt
+Allow: /ads.txt
+
+User-agent: Mediapartners-Google
+Allow: /
+
 Sitemap: https://heliatech.online/sitemap.xml
