@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-23 23:09:54",
+  "timestamp": "2026-11-24 07:41:21",
   "total_links_audited": 168,
   "healthy_links": 138,
   "broken_links_count": 30,
@@ -477,7 +477,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=sFrips5rKFYruG&gsxid=sFrips5rKFYruG&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xS4D0QlIPfXGVm&gsxid=xS4D0QlIPfXGVm&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -656,7 +656,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -872,7 +872,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -885,7 +885,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=wnoW6MjUo7Uvmr&gsxid=wnoW6MjUo7Uvmr&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=QV74rfpzjthutj&gsxid=QV74rfpzjthutj&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -936,7 +936,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=TrV9V7VvQUERub&gsxid=TrV9V7VvQUERub&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IkqAJ593vZlKG5&gsxid=IkqAJ593vZlKG5&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1211,8 +1211,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {

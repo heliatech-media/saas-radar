@@ -55,7 +55,7 @@ By treating spreadsheet rows and columns as the single source of truth, Softr al
 To understand why Softr has captured significant market share across enterprise operations and agency ecosystems, one must examine its core technical superpowers:
 
 ### A. Instant Relational Data Synchronization
-Softr doesn't just import data; it establishes a native, real-time bi-directional pipeline with backend data sources like Airtable and Google Sheets. Changes made by external users inside the Softr frontend instantly update the underlying database records, while backend team updates dynamically render across public or authenticated user dashboards without manual deployment cycles.
+Softr doesn't just import data; it establishes a native, real-time bi-directional pipeline with backend data sources like [Airtable](/reviews/airtable) and Google Sheets. Changes made by external users inside the Softr frontend instantly update the underlying database records, while backend team updates dynamically render across public or authenticated user dashboards without manual deployment cycles.
 
 ### B. Enterprise-Grade RBAC & Dynamic Field Visibility
 Data privacy is non-negotiable for enterprise deployments. Softr features a powerful Role-Based Access Control (RBAC) engine. Operations leaders can define custom user groups (e.g., *VIP Clients*, *External Contractors*, *Regional Managers*) and enforce granular visibility rules at the page level, block level, and even individual field level. A field service worker sees only their assigned tickets, while a project manager views global operational telemetry—all within the exact same page layout.

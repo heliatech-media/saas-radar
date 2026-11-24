@@ -145,7 +145,7 @@ FlutterFlow is a low-code visual application builder powered by Google's Flutter
 - **Visual UI Builder & Dart Code Generator**
 - **One-Click App Store & Google Play Deployment**
 - **Direct GitHub Integration & Automated Code Export**
-- **Built-in Supabase and Firebase Realtime Backend Sync**
+- **Built-in [Supabase](/reviews/supabase) and Firebase Realtime Backend Sync**
 - **Custom Dart Code Editor & Third-Party Library Support**
 
 ## Pricing Overview

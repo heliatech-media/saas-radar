@@ -1,5 +1,19 @@
 [
   {
+    "timestamp": "2026-11-24 07:41:31",
+    "title": "Cycle Autonome #Cloud Growth Refresh",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cloud Growth Refresh) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-24 07:41:21",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 30 lien(s) d'affiliation en anomalie :\n• `audio-tco-calculator, descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, ghost-tco-calculator, invideo-ai-sandbox, legacy-ffmpeg-audit, minicong, minvo-testing-sandbox, nle-labor-calculator, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, rate-card-declassified, replit-agent, riverside-sandbox, runway-tco-calculator, screenstudio-migration-sandbox, screenstudio-performance-calculator, tella-migration-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, voice-context-sandbox, wondercraft-rate-card-leak, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
     "timestamp": "2026-11-23 23:10:51",
     "title": "Cycle Autonome #Cloud Growth Refresh",
     "category": "CYCLE",
@@ -334,19 +348,5 @@
     "category": "NEWSLETTER",
     "message": "L'édition #055 vient d'être envoyée avec succès aux abonnés de la communauté !\n\n• **Créneau :** `2026-11-19:thursday`\n• **Sujet :** The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows\n• **Abonnés touchés :** 1\n• **Doublons interceptés :** 0\n\n👉 Historique complet dans Sentinel Admin :",
     "link": "https://heliatech.online/sentinel/admin"
-  },
-  {
-    "timestamp": "2026-11-19 15:33:15",
-    "title": "📅 NOUVELLE NEWSLETTER PLANIFIÉE",
-    "category": "NEWSLETTER",
-    "message": "Une nouvelle édition de newsletter vient d'être planifiée par Helia !\n\n• **Créneau :** `2026-11-19:thursday`\n• **Type :** THURSDAY\n• **Date prévue :** 2026-11-19\n• **Sujet :** The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows\n• **Statut :** Brouillon créé (en attente d'approbation)\n\n👉 Valider ou inspecter dans Sentinel Admin :",
-    "link": "https://heliatech.online/sentinel/admin"
-  },
-  {
-    "timestamp": "2026-11-19 15:26:08",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, speechify, swell-ai, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
   }
 ]

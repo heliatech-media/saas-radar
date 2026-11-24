@@ -151,7 +151,7 @@ Softr is a no-code web application builder that allows non-technical teams to tr
 ## Pros & Cons
 
 ### Pros
-- Instant data synchronization with Airtable and Google Sheets for relational data rendering.
+- Instant data synchronization with [Airtable](/reviews/airtable) and Google Sheets for relational data rendering.
 - Built-in user authentication, role-based access control (RBAC), and user-level field restrictions.
 - Extensive block library for rapid UI construction without CSS layout overhead.
 - Native integration with Stripe for subscription and digital product monetization.
