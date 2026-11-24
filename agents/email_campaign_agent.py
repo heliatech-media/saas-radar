@@ -758,7 +758,7 @@ class EmailCampaignAgent:
             logger.info(f"Newsletter dispatch skipped: {window_msg}")
             return {"status": "SKIPPED", "reason": window_msg}
 
-        edition_type = "thursday" if ny_now.weekday() == 3 else "tuesday"
+        edition_type = "thursday"
         today_date = ny_now.strftime("%Y-%m-%d")
         slot_key = engine.compute_slot_key(today_date, edition_type)
 
@@ -849,24 +849,26 @@ class EmailCampaignAgent:
         final_subject = validated_ed["subject"].replace("[THE RADAR]", f"[THE RADAR #{final_issue:03d}]")
         final_html = validated_ed["content_html"].replace("PENDING", f"{final_issue:03d}")
 
-        # Dispatch via Resend (Strictly from radar@heliatech.online)
-        def resend_caller(email: str, subj: str, body: str) -> Optional[str]:
-            unsub_link = f"https://heliatech.online/unsubscribe?email={urllib.parse.quote(email)}"
-            custom_body = body.replace("{{email}}", email).replace("{{unsubscribe_url}}", unsub_link)
-            res = self.send_via_resend(email, final_subject, custom_body, sender=DEFAULT_EDITORIAL_SENDER)
-            time.sleep(0.12)
-            return res
-
         if broadcast and not test_mode:
             # Mode Production Broadcast : charge automatiquement les 142 abonnés vérifiés depuis Cloudflare D1
             subscribers_to_send = None
             is_live = True
+            subject_to_send = final_subject
         else:
             # Mode Test Sécurisé : envoi uniquement au directeur ou à l'adresse de test spécifiée
             target_email = test_email or DIRECTOR_EMAIL
             sub_id = f"sub_{hashlib.md5(target_email.lower().encode('utf-8')).hexdigest()[:12]}"
             subscribers_to_send = [{"id": sub_id, "email": target_email}]
             is_live = False
+            subject_to_send = f"[TEST] {final_subject}"
+
+        # Dispatch via Resend (Strictly from radar@heliatech.online)
+        def resend_caller(email: str, subj: str, body: str) -> Optional[str]:
+            unsub_link = f"https://heliatech.online/unsubscribe?email={urllib.parse.quote(email)}"
+            custom_body = body.replace("{{email}}", email).replace("{{unsubscribe_url}}", unsub_link)
+            res = self.send_via_resend(email, subject_to_send, custom_body, sender=DEFAULT_EDITORIAL_SENDER)
+            time.sleep(0.12)
+            return res
 
         result = engine.dispatch_slot(
             slot_key=slot_key,

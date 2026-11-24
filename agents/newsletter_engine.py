@@ -166,8 +166,8 @@ class NewsletterEngine:
         day_name = ny_now.strftime("%A")
         time_str = ny_now.strftime("%H:%M %Z")
 
-        if weekday not in (1, 3):  # 1 = Tuesday, 3 = Thursday
-            return False, f"Today is {day_name} ({time_str}). Broadcast only permitted on Tuesday or Thursday."
+        if weekday != 3:  # 3 = Thursday
+            return False, f"Today is {day_name} ({time_str}). The Thursday Radar broadcast is strictly scheduled for Thursday."
 
         # Target 09:00 AM America/New_York window (08:30 - 12:00)
         decimal_hour = ny_now.hour + (ny_now.minute / 60.0)
