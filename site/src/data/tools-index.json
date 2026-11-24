@@ -267,7 +267,8 @@
     "rating": 4.6,
     "starting_price": "$30/mo",
     "best_for": "Startup founders, cross-functional engineering teams, product managers, and agencies needing to build and launch production-grade Flutter applications in half the standard development time.",
-    "affiliate_url": "https://flutterflow.io"
+    "affiliate_url": "https://flutterflow.io?fpr=heliatech",
+    "commission_rate": "20% recurring"
   },
   {
     "name": "Framer",
@@ -969,6 +970,16 @@
     "starting_price": "$29/mo",
     "best_for": "Bootstrapped founders, indie hackers, agencies, and product teams needing high-converting forms on a tight budget.",
     "affiliate_url": "https://tally.so/?via=heliatech"
+  },
+  {
+    "name": "Taplio",
+    "slug": "taplio",
+    "tagline": "AI-powered LinkedIn content creation, scheduling, and analytics tailored for personal brands and founders.",
+    "category": "Social Media Automation",
+    "rating": 4.4,
+    "starting_price": "$39/mo",
+    "best_for": "B2B founders, agency owners, creators, and executive ghostwriters building personal brands exclusively on LinkedIn.",
+    "affiliate_url": "https://taplio.com"
   },
   {
     "name": "Tella",

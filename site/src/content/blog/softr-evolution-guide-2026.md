@@ -76,7 +76,7 @@ flowchart LR
 
 ## 3. Hands-on Workshop: Building an Enterprise Client Portal in 15 Minutes
 
-Follow this tactical blueprint to construct a secure, authenticated Client Portal powered by Airtable and Softr.
+Follow this tactical blueprint to construct a secure, authenticated Client Portal powered by [Airtable](/reviews/airtable) and Softr.
 
 ### Step 1: Prepare the Data Foundation (Airtable)
 Create a new base in Airtable titled **Enterprise Client Portal**. Set up two core tables:

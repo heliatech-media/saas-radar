@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-24 07:41:21",
-  "total_links_audited": 168,
+  "timestamp": "2026-11-24 19:53:48",
+  "total_links_audited": 171,
   "healthy_links": 138,
-  "broken_links_count": 30,
-  "health_rate": "82.1%",
+  "broken_links_count": 33,
+  "health_rate": "80.7%",
   "broken_links": [
     {
       "slug": "audio-tco-calculator",
@@ -60,6 +60,14 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.legacy-ffmpeg-audit.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.legacy-ffmpeg-audit.com', port=443): Failed to resolve 'www.legacy-ffmpeg-audit.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "linkedin-automation-calculator",
+      "target_url": "https://www.linkedin-automation-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.linkedin-automation-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.linkedin-automation-calculator.com', port=443): Failed to resolve 'www.linkedin-automation-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "minicong",
@@ -188,6 +196,22 @@
       "status_code": 0,
       "healthy": false,
       "error": "HTTPSConnectionPool(host='www.screenstudio-performance-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.screenstudio-performance-calculator.com', port=443): Failed to resolve 'www.screenstudio-performance-calculator.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "taplio-rate-card",
+      "target_url": "https://www.taplio-rate-card.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.taplio-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-rate-card.com', port=443): Failed to resolve 'www.taplio-rate-card.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "taplio-sandbox",
+      "target_url": "https://www.taplio-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.taplio-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-sandbox.com', port=443): Failed to resolve 'www.taplio-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tella-migration-calculator",
@@ -477,7 +501,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=xS4D0QlIPfXGVm&gsxid=xS4D0QlIPfXGVm&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=yqR59VIkrp424N&gsxid=yqR59VIkrp424N&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -504,8 +528,8 @@
     },
     {
       "slug": "flutterflow",
-      "target_url": "https://flutterflow.io",
-      "final_url": "https://flutterflow.io/",
+      "target_url": "https://flutterflow.io?fpr=heliatech",
+      "final_url": "https://flutterflow.io/?fpr=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -656,7 +680,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -708,6 +732,14 @@
       "final_url": "https://linear.app/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "linkedin-automation-calculator",
+      "target_url": "https://www.linkedin-automation-calculator.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.linkedin-automation-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.linkedin-automation-calculator.com', port=443): Failed to resolve 'www.linkedin-automation-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "loops",
@@ -872,7 +904,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -885,7 +917,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=QV74rfpzjthutj&gsxid=QV74rfpzjthutj&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=wRXUt2bBBXII3x&gsxid=wRXUt2bBBXII3x&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -936,7 +968,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IkqAJ593vZlKG5&gsxid=IkqAJ593vZlKG5&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=bFATZxT4U4oXog&gsxid=bFATZxT4U4oXog&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1211,8 +1243,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://substack.com/",
-      "status_code": 200,
+      "final_url": "https://www.substack.com/",
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -1249,6 +1281,22 @@
       "final_url": "https://tally.so/?via=heliatech",
       "status_code": 200,
       "healthy": true
+    },
+    {
+      "slug": "taplio-rate-card",
+      "target_url": "https://www.taplio-rate-card.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.taplio-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-rate-card.com', port=443): Failed to resolve 'www.taplio-rate-card.com' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "slug": "taplio-sandbox",
+      "target_url": "https://www.taplio-sandbox.com",
+      "final_url": "FAILED",
+      "status_code": 0,
+      "healthy": false,
+      "error": "HTTPSConnectionPool(host='www.taplio-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-sandbox.com', port=443): Failed to resolve 'www.taplio-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "tella",

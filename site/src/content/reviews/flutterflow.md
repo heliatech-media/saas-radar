@@ -6,7 +6,7 @@ tagline: Accelerate cross-platform mobile and web application development with a
 category: DevTools
 rating: 4.6
 website_url: https://flutterflow.io
-affiliate_url: https://flutterflow.io
+affiliate_url: "https://flutterflow.io?fpr=heliatech"
 summary: FlutterFlow is a low-code visual application builder powered by Google's
   Flutter framework, allowing teams to design, prototype, and build native iOS, Android,
   web, and desktop apps. It bridges the gap between visual design and traditional
@@ -161,7 +161,7 @@ FlutterFlow is a low-code visual application builder powered by Google's Flutter
 
 ### Pros
 - Generates clean, human-readable Dart code with zero platform lock-in via full GitHub sync and local code export.
-- Native integration with Firebase, Supabase, REST API endpoints, and custom Dart widgets.
+- Native integration with Firebase, [Supabase](/reviews/supabase), REST API endpoints, and custom Dart widgets.
 - Multi-platform targeted deployment (iOS App Store, Google Play Store, Web, Desktop) directly from the visual interface.
 - Built-in visual database management, state management setup, and automated CI/CD pipeline triggers.
 - Powerful visual builder featuring real-time collaborative editing, custom animation builders, and instant preview modes.

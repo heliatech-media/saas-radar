@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-24 07:39:59 UTC",
+  "last_updated": "2026-11-24 19:52:22 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
     "total_monetized_tools": 111,
-    "total_published_investigations": 273,
-    "reviews_audited": 110,
-    "masterclasses_and_duels": 163,
+    "total_published_investigations": 275,
+    "reviews_audited": 111,
+    "masterclasses_and_duels": 164,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
     "projected_monthly_mrr": "$38,850 USD",
@@ -199,8 +199,8 @@
     },
     {
       "slug": "flutterflow",
-      "destination": "https://flutterflow.io",
-      "type": "Catalog Edge Hop"
+      "destination": "https://flutterflow.io?fpr=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "framer",
@@ -630,39 +630,39 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-20 01:58:11",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : Miro",
+      "category": "REVIEW",
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Miro\n• **Catégorie :** Productivity/Collaboration\n• **Note globale :** 4.6/10\n• **Cible idéale :** Product teams, UX designers, and distributed engineering squads requiring visual alignment.\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/miro/"
+    },
+    {
+      "timestamp": "2026-11-19 19:49:15",
+      "title": "Cycle Autonome #CodeRabbit",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (CodeRabbit) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-19 19:49:05",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-19 19:47:29",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : CodeRabbit: The AI Architect Revolutionizing Pull Requests and Developer Velocity",
+      "category": "CONTENT",
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** CodeRabbit: The AI Architect Revolutionizing Pull Requests and Developer Velocity\n• **Catégorie :** DevTools\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/coderabbit-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/coderabbit-evolution-guide-2026/"
+    },
+    {
       "timestamp": "2026-11-19 19:47:17",
       "title": "⭐ NOUVELLE REVUE LOGICIEL : CodeRabbit",
       "category": "REVIEW",
       "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** CodeRabbit\n• **Catégorie :** DevTools\n• **Note globale :** 4.7/10\n• **Cible idéale :** Engineering teams and individual developers looking to automate PR feedback and accelerate the code review cycle.\n\n👉 Lire la fiche d'audit complète :",
       "link": "https://heliatech.online/reviews/coderabbit/"
-    },
-    {
-      "timestamp": "2026-11-19 15:33:17",
-      "title": "Cycle Autonome #Swell AI",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Swell AI) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-19 15:33:17",
-      "title": "🚀 NEWSLETTER OFFICIELLEMENT EXPÉDIÉE : #055",
-      "category": "NEWSLETTER",
-      "message": "L'édition #055 vient d'être envoyée avec succès aux abonnés de la communauté !\n\n• **Créneau :** `2026-11-19:thursday`\n• **Sujet :** The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows\n• **Abonnés touchés :** 1\n• **Doublons interceptés :** 0\n\n👉 Historique complet dans Sentinel Admin :",
-      "link": "https://heliatech.online/sentinel/admin"
-    },
-    {
-      "timestamp": "2026-11-19 15:33:15",
-      "title": "📅 NOUVELLE NEWSLETTER PLANIFIÉE",
-      "category": "NEWSLETTER",
-      "message": "Une nouvelle édition de newsletter vient d'être planifiée par Helia !\n\n• **Créneau :** `2026-11-19:thursday`\n• **Type :** THURSDAY\n• **Date prévue :** 2026-11-19\n• **Sujet :** The State of AI-Assisted IDEs: Context Indexing and Multi-File Workflows\n• **Statut :** Brouillon créé (en attente d'approbation)\n\n👉 Valider ou inspecter dans Sentinel Admin :",
-      "link": "https://heliatech.online/sentinel/admin"
-    },
-    {
-      "timestamp": "2026-11-19 15:26:08",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, speechify, swell-ai, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
     }
   ]
 }

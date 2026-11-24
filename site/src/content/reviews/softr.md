@@ -164,7 +164,7 @@ Softr is a no-code web application builder that allows non-technical teams to tr
 
 ## Detailed Verdict & Technical Analysis
 
-Softr shines as a rapid web application wrapper for structured relational databases like Airtable and Google Sheets. Its strength lies in democratizing custom client portals, internal directories, and membership platforms without writing front-end code or spending months on authentication boilerplate. By combining out-of-the-box block layouts with robust role-based access control (RBAC), operational teams can deploy fully functional applications in hours rather than weeks.
+Softr shines as a rapid web application wrapper for structured relational databases like [Airtable](/reviews/airtable) and Google Sheets. Its strength lies in democratizing custom client portals, internal directories, and membership platforms without writing front-end code or spending months on authentication boilerplate. By combining out-of-the-box block layouts with robust role-based access control (RBAC), operational teams can deploy fully functional applications in hours rather than weeks.
 
 However, Softr is strictly constrained by its block-based layout paradigm. Teams requiring pixel-perfect designs, custom canvas positioning, or complex client-side state manipulation will quickly run into design walls. Furthermore, logic complex enough to demand custom back-end endpoints will require routing through webhooks to [Make](/reviews/make), [Zapier](/reviews/zapier), or serverless functions.
 
