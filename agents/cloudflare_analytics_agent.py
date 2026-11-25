@@ -408,12 +408,14 @@ class CloudflareAnalyticsAgent:
                 name = COUNTRY_CODE_MAP.get(code, code)
                 top_countries.append({"country": name, "views": c.get("count", 0)})
 
-            # Process top paths (filter out static assets like _astro, fonts, etc.)
+            # Process top paths (filter out static assets, /api/ polling, and internal admin endpoints)
             raw_paths = zone_data.get("topPaths", [])
             top_pages = []
             for p in raw_paths:
                 path_str = p.get("dimensions", {}).get("clientRequestPath") or "/"
-                if any(ext in path_str for ext in [".css", ".js", ".svg", ".png", ".jpg", ".webp", ".ico", ".woff", ".woff2", "_astro", "robots.txt", "sitemap.xml"]):
+                if path_str.startswith("/api/") or path_str.startswith("/sentinel/admin") or path_str.startswith("/sentinel/suivicontrol"):
+                    continue
+                if any(ext in path_str for ext in [".css", ".js", ".svg", ".png", ".jpg", ".webp", ".ico", ".woff", ".woff2", "_astro", "robots.txt", "sitemap.xml", "ads.txt"]):
                     continue
                 top_pages.append({"path": path_str, "views": p.get("count", 0)})
 

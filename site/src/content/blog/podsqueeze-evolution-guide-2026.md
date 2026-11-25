@@ -35,7 +35,7 @@ full_headline: 'Podsqueeze: The AI Engine Turning Raw Audio into an Omnichannel 
 
 Operating a manual B2B media pipeline incurs a 412% unit-cost penalty over automated speech-to-structured-data architectures, burning $14,200 annually per 60-minute weekly show in wasted human-in-the-loop transcription and clipping latency. Legacy post-production workflows fail because they treat high-density audio as unstructured flat files rather than multi-dimensional relational data nodes. Podsqueeze refactors this paradigm by applying fine-tuned Whisper-derivative models and constrained context windowing to reduce time-to-market from 18 hours down to 240 seconds per episode.
 
-To run an audited benchmark of your team's current media pipeline against our proprietary unit-cost model, execute the [Declassified Podsqueeze Migration Sandbox](/go/podsqueeze-migration-calculator).
+To run an audited benchmark of your team's current media pipeline against our proprietary unit-cost model, execute the [Declassified Podsqueeze Migration Sandbox](/go/podsqueeze).
 
 > [!NOTE]
 > **Executive Takeaway:** ### ⚠️ DECLASSIFIED BENCHMARK DATASET: HELIA-POD-2025-V4
@@ -93,7 +93,7 @@ The following audited multi-column benchmark compares legacy fragmented workflow
 | **Context Bloat Penalty ($n=10$)** | $1.48 per run | $0.04 per run | **37x Token Efficiency** |
 | **Multi-Platform Yield** | 3 assets (Show notes, 1 clip) | 14 assets (Notes, newsletter, 8 clips) | **4.6x Output Density** |
 
-For real-time pricing verification and dynamic quota modeling, access our [Declassified Podsqueeze Rate Card Leak](/go/podsqueeze-rate-card).
+For real-time pricing verification and dynamic quota modeling, access our [Declassified Podsqueeze Rate Card Leak](/go/podsqueeze).
 
 ```mermaid
 flowchart TD
@@ -118,11 +118,11 @@ To deploy Podsqueeze within an enterprise B2B content infrastructure without con
 2. **Targeted Lexicon Injection:** Supply corporate brand terms, technical acronyms, and product slugs into the platform's custom dictionary to suppress Word Error Rate (WER) below 2%.
 3. **Granular Clip Framing:** Utilize the AI Video Clip Engine to isolate dynamic multi-speaker visual regions, forcing auto-captions to strictly match target aspect ratios (9:16 and 16:9).
 4. **Persona Anchor Prompting:** Hardcode system prompts with explicit tone constraints (`System: Output strict markdown; enforce active voice; reject fluff adjectives`).
-5. **API Webhook Distribution:** Program automated webhook triggers to push generated payloads straight into CMS sandboxes and social queues via the [Podsqueeze Direct API Integration Sandbox](/go/podsqueeze-api-sandbox).
+5. **API Webhook Distribution:** Program automated webhook triggers to push generated payloads straight into CMS sandboxes and social queues via the [Podsqueeze Direct API Integration Sandbox](/go/podsqueeze).
 
 ## 4. Final Audit Verdict & System Recommendation
 
 Podsqueeze is not a cosmetic writing assistant; it is a critical unit-cost compression utility for high-throughput media teams. By eliminating the manual post-production friction layer and mitigating the RCIA context-bloat penalty, Podsqueeze establishes an impenetrable operational efficiency ceiling for competitors operating legacy stacks.
 
 **Final Rating:** 94/100 (Enterprise Infrastructure Standard)
-**Deployment Mandate:** Immediate pilot across next 3 production cycles. Track time-to-market reduction and verify unit cost savings against our [Proprietary TCO Calculator](/go/podsqueeze-migration-calculator).
+**Deployment Mandate:** Immediate pilot across next 3 production cycles. Track time-to-market reduction and verify unit cost savings against our [Proprietary TCO Calculator](/go/podsqueeze).

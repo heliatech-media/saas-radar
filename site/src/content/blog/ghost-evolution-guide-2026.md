@@ -64,7 +64,7 @@ Where $C_{base} = 0.00012$ USD per request, $\alpha_{bloat} = 0.042$ context acc
 }
 ```
 
-Access our declassified infrastructure benchmark suite via the [Ghost TCO Sandbox & Rate Card Leak](/go/ghost-tco-calculator) to simulate your custom subscriber volume.
+Access our declassified infrastructure benchmark suite via the [Ghost TCO Sandbox & Rate Card Leak](/go/ghost) to simulate your custom subscriber volume.
 
 ---
 
@@ -144,7 +144,7 @@ Execute this sequence to migrate from platform dependencies to an autonomous Gho
 1. Navigate to **Settings ➔ Memberships** and click **Connect with Stripe**.
 2. Authenticate your production Stripe keys (`pk_live_...` and `sk_live_...`).
 3. Set custom subscription tiers (e.g., $10/month or $100/year).
-4. Verify zero fee overhead using our [Declassified Stripe Fee Audit Leak](/go/rate-card-declassified).
+4. Verify zero fee overhead using our [Declassified Stripe Fee Audit Leak](/go/ghost).
 
 ### Step 3: Configure Bulk Mailgun Ingestion Pipeline
 1. In **Settings ➔ Email newsletter**, select **Mailgun API** as your provider.

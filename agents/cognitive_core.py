@@ -160,10 +160,10 @@ DRAFT TO CRITIQUE:
 
 CRITIQUE REQUIREMENTS:
 1. Identify any generic marketing fluff, unproven claims, or weak transitions.
-2. Verify that hard metrics (prices in $, latency in ms, error rates) are present.
-3. Check that /go/[slug] links are seamlessly integrated as valuable resources, not cheap spam.
+2. Verify that realistic pricing, limits, or operational trade-offs are grounded and honest.
+3. STRICT LINK RULE: Keep ONLY the exact /go/[slug] URLs already in the draft or internal /reviews/[slug]/ links. NEVER invent new /go/*-calculator, /go/*-sandbox, or /go/*-rate-card URLs or unverified external domains.
 4. Verify that formatting (Markdown tables, lists, bold highlights) provides maximum Information Gain.
-5. In your refined version, fix ALL weaknesses and elevate the score to 92+.
+5. In your refined version, fix ALL weaknesses while preserving the full length and depth of the draft (do NOT shorten or truncate).
 
 Respond ONLY with valid JSON:
 {{
@@ -191,10 +191,16 @@ Respond ONLY with valid JSON:
             # Record in evolution journal
             self._log_reflection_event(agent_name, domain, score, result.get("weaknesses", ""))
 
+            refined = result.get("refined_content", draft_content)
+            # Guard against accidental truncation of long articles (>6500 chars input snippet)
+            if not refined or len(refined) < int(len(draft_content) * 0.75):
+                logger.warning(f"[{agent_name}] Reflection output shorter than draft ({len(refined or '')} vs {len(draft_content)}). Preserving original draft.")
+                refined = draft_content
+
             return {
                 "score": score,
                 "critique": result.get("weaknesses", "Elevated to 90+ standard."),
-                "refined_content": result.get("refined_content", draft_content),
+                "refined_content": refined,
                 "approved": score >= 80
             }
         except Exception as e:
@@ -357,6 +363,13 @@ class DomainUpskiller:
 
         brain_data = json.loads(brain_path.read_text(encoding="utf-8"))
         existing_heuristics = brain_data.get("heuristics", [])
+
+        # Cap vault growth to prevent bloated/duplicate rules poisoning prompts
+        MAX_HEURISTICS_PER_DOMAIN = 8
+        if len(existing_heuristics) >= MAX_HEURISTICS_PER_DOMAIN:
+            logger.info(f"🧠 Brain vault '{domain}' already at capacity ({len(existing_heuristics)}/{MAX_HEURISTICS_PER_DOMAIN} heuristics). Skipping append.")
+            return None
+
         existing_rules = "\n".join([h.get("rule", "") for h in existing_heuristics])
 
         # Pick a curriculum focus
@@ -378,15 +391,18 @@ EXISTING HEURISTICS ALREADY LEARNED:
 {existing_rules}
 
 TASK:
-Synthesize ONE new, highly advanced, mathematically sound and practical heuristic or operational rule.
-It must give our {domain} swarm an unfair competitive advantage in 2026.
+Synthesize ONE practical, verifiable operational rule for our {domain} agents.
+STRICT CONSTRAINTS:
+- NEVER propose inventing fake /go/*-sandbox, /go/*-calculator, or /go/*-rate-card URLs.
+- NEVER propose fake cryptographic hashes, fictional units, or fabricated benchmark metrics.
+- Must be genuinely distinct from existing heuristics.
 
 Respond ONLY with valid JSON:
 {{
   "id": "HEUR-{domain[:3].upper()}-{len(existing_heuristics) + 1:02d}",
   "name": "<Short punchy name for the heuristic>",
   "rule": "<Exact actionable directive for the agent>",
-  "confidence_score": 0.98,
+  "confidence_score": 0.96,
   "impact": "<Predicted business or engineering impact>"
 }}
 """

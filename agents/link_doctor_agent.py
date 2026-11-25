@@ -17,6 +17,7 @@ import logging
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Set, Tuple, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import difflib
 import requests
 from dotenv import load_dotenv
@@ -58,7 +59,11 @@ KNOWN_SAAS_DOMAINS: Dict[str, str] = {
     "remote": "https://remote.com",
     "multiplier": "https://www.usemultiplier.com",
     "oyster": "https://www.oysterhr.com",
-    "velocity-global": "https://velocityglobal.com",
+    "velocity-global": "https://hellopebl.com/",
+    "replit-agent": "https://replit.com/agent",
+    "notion-ai": "https://www.notion.so/product/ai",
+    "tome": "https://gamma.app/?via=heliatech",
+    "minicong": "https://invideo.io/?fpr=heliatech",
     "playht": "https://try.elevenlabs.io/ajhd6t7k04dh", # Play.ht shut down by Meta -> route to ElevenLabs
     "murf-ai": "https://murf.ai",
     "speechify": "https://speechify.com",
@@ -126,16 +131,45 @@ class LinkDoctorAgent:
                 # Case A: /go/<tool> links
                 if clean_url.startswith("/go/"):
                     slug = clean_url.replace("/go/", "").strip("/")
-                    if slug and slug not in redirect_map:
-                        # Auto-heal: Register into _redirects!
-                        target_url = KNOWN_SAAS_DOMAINS.get(slug, f"https://www.{slug}.com")
-                        redirect_map[slug] = target_url
-                        healed_redirects.append({
-                            "slug": slug,
-                            "target_url": target_url,
-                            "source_file": filepath.name
+                    hallucinated_suffixes = (
+                        "-sandbox", "-sandbox-leaks", "-calculator",
+                        "-rate-card", "-rate-card-leak", "-audit", "-leaks", "-declassified"
+                    )
+                    if slug and any(slug.endswith(suf) for suf in hallucinated_suffixes):
+                        # Rewrite hallucinated /go/* links inside markdown instead of poisoning _redirects
+                        base_tool = None
+                        m_tool = re.search(r'^tool_slug:\s*["\']?([a-zA-Z0-9_\-]+)["\']?', updated_text, re.MULTILINE)
+                        if m_tool and m_tool.group(1) in redirect_map:
+                            base_tool = m_tool.group(1)
+                        replacement_url = f"/go/{base_tool}" if base_tool else "/calculator/"
+                        updated_text = updated_text.replace(f"({url})", f"({replacement_url})")
+                        file_changed = True
+                        healed_internal_links.append({
+                            "file": filepath.name,
+                            "old_url": url,
+                            "new_url": replacement_url,
+                            "reason": f"Removed hallucinated /go/ redirect '{slug}'"
                         })
-                        logger.info(f"💉 Auto-healed missing redirect: /go/{slug} -> {target_url}")
+                        logger.info(f"🧹 Repaired hallucinated /go/ link in {filepath.name}: {url} -> {replacement_url}")
+                    elif slug and slug not in redirect_map:
+                        # Auto-heal ONLY if domain resolves and is in KNOWN_SAAS_DOMAINS or reachable HTTP
+                        candidate_url = KNOWN_SAAS_DOMAINS.get(slug)
+                        if not candidate_url:
+                            guess = f"https://www.{slug}.com"
+                            try:
+                                r = requests.head(guess, timeout=4, allow_redirects=True)
+                                if r.status_code < 500 and r.status_code != 404:
+                                    candidate_url = guess
+                            except Exception:
+                                candidate_url = None
+                        if candidate_url:
+                            redirect_map[slug] = candidate_url
+                            healed_redirects.append({
+                                "slug": slug,
+                                "target_url": candidate_url,
+                                "source_file": filepath.name
+                            })
+                            logger.info(f"💉 Auto-healed missing redirect: /go/{slug} -> {candidate_url}")
 
                 # Case B: /blog/<slug> links
                 elif clean_url.startswith("/blog/"):
@@ -237,7 +271,7 @@ class LinkDoctorAgent:
 
     def _audit_and_heal_target_urls(self, redirect_map: Dict[str, str]) -> List[Dict]:
         """
-        Pings each redirect destination. If an affiliate link returns 404 or drops,
+        Pings each redirect destination in parallel. If an affiliate link returns 404 or drops,
         auto-heals by replacing with the official root domain fallback.
         """
         healed = []
@@ -246,26 +280,44 @@ class LinkDoctorAgent:
         }
         modified_map = False
 
-        for slug, target in list(redirect_map.items()):
-            # Only test if target looks suspect or we want to ensure zero 404
+        # Prune hallucinated fake domains already present in _redirects
+        hallucinated_suffixes = (
+            "-sandbox", "-sandbox-leaks", "-calculator",
+            "-rate-card", "-rate-card-leak", "-audit", "-leaks", "-declassified"
+        )
+        for slug in list(redirect_map.keys()):
+            if any(slug.endswith(suf) for suf in hallucinated_suffixes):
+                dead_target = redirect_map.pop(slug)
+                healed.append({"slug": slug, "dead_target": dead_target, "healed_target": "PRUNED", "status_code": 0})
+                modified_map = True
+
+        def _check_one(item):
+            slug, target = item
             try:
-                res = requests.get(target, headers=headers, timeout=6, allow_redirects=True)
+                res = requests.get(target, headers=headers, timeout=5, allow_redirects=True)
                 if res.status_code == 404:
-                    # Target is DEAD! Auto-heal with root official domain
-                    fallback = KNOWN_SAAS_DOMAINS.get(slug, f"https://www.{slug}.com")
-                    if fallback != target:
-                        logger.warning(f"🚨 Dead destination detected: /go/{slug} -> {target} (404). Auto-healing to {fallback}!")
-                        redirect_map[slug] = fallback
-                        healed.append({
-                            "slug": slug,
-                            "dead_target": target,
-                            "healed_target": fallback,
-                            "status_code": 404
-                        })
-                        modified_map = True
+                    fallback = KNOWN_SAAS_DOMAINS.get(slug)
+                    if fallback and fallback != target:
+                        return (slug, target, fallback, 404)
             except Exception:
-                # Timeout or connection error — leave as is or fallback
-                pass
+                fallback = KNOWN_SAAS_DOMAINS.get(slug)
+                if fallback and fallback != target:
+                    return (slug, target, fallback, 0)
+            return None
+
+        with ThreadPoolExecutor(max_workers=12) as pool:
+            for outcome in pool.map(_check_one, list(redirect_map.items())):
+                if outcome:
+                    slug, target, fallback, code = outcome
+                    logger.warning(f"🚨 Dead destination detected: /go/{slug} -> {target} ({code}). Auto-healing to {fallback}!")
+                    redirect_map[slug] = fallback
+                    healed.append({
+                        "slug": slug,
+                        "dead_target": target,
+                        "healed_target": fallback,
+                        "status_code": code
+                    })
+                    modified_map = True
 
         if modified_map:
             self._save_redirects(redirect_map)

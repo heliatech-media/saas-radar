@@ -50,7 +50,7 @@ Enterprise creative teams migrating from local GPU clusters (e.g., dual NVIDIA H
 | **Hardware CapEx** | $18,000 per Workstation | $0 (Browser / Cloud Render) | 100% CapEx Elimination |
 | **Revision Iteration Time** | 5 Business Days per Pass | 45 Seconds per Prompt Iteration | 98.5% Cycle Acceleration |
 
-For teams ready to benchmark their own asset generation workflows against enterprise benchmarks, access the [Helia Tech Runway Migration Sandbox](/go/runway-tco-calculator) for live rate card leaks and cost calculators.
+For teams ready to benchmark their own asset generation workflows against enterprise benchmarks, access the [Helia Tech Runway Migration Sandbox](/go/runway) for live rate card leaks and cost calculators.
 
 ```mermaid
 flowchart TD
@@ -101,4 +101,4 @@ To prevent credit hemorrhage during iterative generation cycles, enterprise arch
 
 ## 5. Final Engineering Verdict
 
-Runway transitions video production from a capital-intensive physical bottleneck into a high-velocity, mathematically predictable software process. By leveraging cloud-native inference and adhering to strict RCIA cost-inflection thresholds, organizations can achieve cinematic output at marginal software costs. Audit your infrastructure readiness today via the [Helia Tech Enterprise Sandbox](/go/runway-tco-calculator).
+Runway transitions video production from a capital-intensive physical bottleneck into a high-velocity, mathematically predictable software process. By leveraging cloud-native inference and adhering to strict RCIA cost-inflection thresholds, organizations can achieve cinematic output at marginal software costs. Audit your infrastructure readiness today via the [Helia Tech Enterprise Sandbox](/go/runway).

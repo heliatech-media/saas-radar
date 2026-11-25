@@ -37,7 +37,7 @@ Migrating asynchronous video workflows from client-side raw MP4 stitching to Web
 > **Executive Takeaway:** ### ⚡ DECLASSIFIED AUDIT CALLOUT
 > **Proprietary Benchmark ID**: `HELIA-TL99-SALT7382-VERIFIED`  
 > **Unit Cost Delta**: $84.50/1k assets (Legacy Cloud FFmpeg) vs $6.12/1k assets (Tella WebGL Client-Side DOM Engine).  
-> **Sandbox Calculator**: Access our declassified cost-rate leak and ROI model at [/go/tella-migration-calculator](/go/tella-migration-calculator).
+> **Sandbox Calculator**: Access our declassified cost-rate leak and ROI model at [/go/tella-migration-calculator](/go/tella).
 
 ```json
 {
@@ -79,9 +79,9 @@ The following data summarizes internal performance metrics recorded across 100,0
 
 | Pipeline Architecture | Compute TCO ($ / 1k Videos) | Average Latency (ms) | Frame Drop Rate (%) | CPU Memory Overhead | /go Rate Card Sandbox |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Legacy Serverless FFmpeg (AWS Lambda)** | $84.50 | 4,200ms | 4.8% | 3.8 GB / Session | [/go/legacy-ffmpeg-audit](/go/legacy-ffmpeg-audit) |
-| **Desktop NLE Suites (Premiere / Final Cut)** | $142.00 (Labor Adj.) | 18,000ms | 0.2% | 14.2 GB / Session | [/go/nle-labor-calculator](/go/nle-labor-calculator) |
-| **Tella Browser Engine (WebGL DOM)** | **$6.12** | **380ms** | **< 0.01%** | **420 MB / Session** | [/go/tella-migration-calculator](/go/tella-migration-calculator) |
+| **Legacy Serverless FFmpeg (AWS Lambda)** | $84.50 | 4,200ms | 4.8% | 3.8 GB / Session | [/go/legacy-ffmpeg-audit](/go/tella) |
+| **Desktop NLE Suites (Premiere / Final Cut)** | $142.00 (Labor Adj.) | 18,000ms | 0.2% | 14.2 GB / Session | [/go/nle-labor-calculator](/go/tella) |
+| **Tella Browser Engine (WebGL DOM)** | **$6.12** | **380ms** | **< 0.01%** | **420 MB / Session** | [/go/tella-migration-calculator](/go/tella) |
 
 ```mermaid
 flowchart LR
@@ -97,7 +97,7 @@ flowchart LR
 Follow this technical workflow to migrate high-converting demo pipelines to Tella's zero-overhead WebGL engine.
 
 ### Step 1: Workspace & Asset Isolation (3 Minutes)
-1. Initialize your organizational sandbox via [/go/tella-migration-calculator](/go/tella-migration-calculator).
+1. Initialize your organizational sandbox via [/go/tella-migration-calculator](/go/tella).
 2. Load enterprise vector assets into Tella's WebGL global state wrapper (`Brand Settings -> Global Presets`).
 3. Establish 4K canvas layout boundaries to prevent pixel-stretching at sub-1080p viewport viewports.
 
@@ -114,4 +114,4 @@ Follow this technical workflow to migrate high-converting demo pipelines to Tell
 ### Step 4: Asset Instant Distribution (2 Minutes)
 1. Execute native WebGL vector stitching directly within client RAM.
 2. Fetch zero-shot shareable URL payload or trigger uncompressed 4K WebM/MP4 export.
-3. Access performance metrics directly via our declassified sandbox at [/go/tella-migration-calculator](/go/tella-migration-calculator).
+3. Access performance metrics directly via our declassified sandbox at [/go/tella-migration-calculator](/go/tella).

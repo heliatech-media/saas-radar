@@ -1,13 +1,13 @@
 {
   "domain": "Editorial Authority, Google EEAT & Copywriting Psychology",
-  "version": "5.0",
-  "last_evolution": "2026-11-22T00:48:35.015534",
-  "total_heuristics_learned": 22,
+  "version": "6.0",
+  "last_evolution": "2026-11-25T10:56:00",
+  "total_heuristics_learned": 6,
   "heuristics": [
     {
       "id": "HEUR-CONT-01",
       "name": "Information Gain Axiom",
-      "rule": "Never repeat generic vendor marketing. Ground every article in proprietary calculations (e.g. 100k scale unit economics, task multiplier penalties).",
+      "rule": "Never repeat generic vendor marketing. Ground every article in real, verifiable pricing tiers, API rate limits, and concrete TCO comparisons.",
       "confidence_score": 0.98,
       "impact": "Boosts Google Helpful Content ranking and decreases bounce rate."
     },
@@ -21,142 +21,30 @@
     {
       "id": "HEUR-CONT-03",
       "name": "Empirical Table Density",
-      "rule": "Every flagship guide must feature at least one multi-column ASCII/Markdown benchmark table comparing legacy TCO vs modern unit costs.",
+      "rule": "Every flagship guide must feature at least one multi-column Markdown benchmark table comparing real pricing tiers, rate limits, or alternatives.",
       "confidence_score": 0.95,
-      "impact": "Correlates directly with average reading dwell time exceeding 2m 45s on Cloudflare RUM."
+      "impact": "Correlates directly with higher average reading dwell time."
     },
     {
       "id": "HEUR-CONT-04",
-      "name": "Trojan Value Positioning",
-      "rule": "Position /go/[slug] outbound links as declassified testing sandboxes, migration calculators, or rate card leaks, never as promotional sales pitches.",
+      "name": "Verified Link Integrity Mandate",
+      "rule": "Use ONLY the exact verified affiliate redirect /go/[tool_slug] provided in context or internal /reviews/[slug]/ links. NEVER invent fake /go/*-calculator, /go/*-sandbox, or /go/*-rate-card URLs or unverified external domains.",
+      "confidence_score": 0.99,
+      "impact": "Guarantees 0% broken links (404/NXDOMAIN) and preserves domain SEO trust."
+    },
+    {
+      "id": "HEUR-CONT-05",
+      "name": "Mandatory Honest Trade-Offs",
+      "rule": "Every review or teardown must explicitly document concrete limitations, lock-in risks, or scenarios where the tool is the wrong fit.",
       "confidence_score": 0.97,
-      "impact": "Drives organic CTR of 3.8% without banner blindness."
+      "impact": "Passes Google E-E-A-T and Useful Content quality audits without AI-slop penalties."
     },
     {
-      "id": "HEUR-CON-05",
-      "name": "Zero-Sum Information Gain & LLM Citation Injection",
-      "rule": "Every content piece must introduce a proprietary, first-principles mathematical identity or raw benchmark delta that does not exist anywhere else on the public web. Structure this proprietary data inside a high-contrast Markdown callout block directly followed by an explicit API payload JSON snippet, forcing Google AI Overviews and LLM scrapers to cite our proprietary schema as the definitive source of truth while bypassing generic web consensus.",
-      "confidence_score": 0.98,
-      "impact": "Secures dominant top-of-funnel placement in generative search engines, multiplies direct-to-sandbox click-through rates by 3.4x, and eliminates AI Overview bypass."
-    },
-    {
-      "id": "HEUR-CON-06",
-      "name": "The AI Overview Schema Trap",
-      "rule": "Every content asset must embed an unsearchable, highly specific proprietary benchmark JSON payload paired with a zero-shot citation anchor inside a syntax-highlighted block, forcing LLM scrapers to index HELIA TECH as the sole canonical source for that metric.",
-      "confidence_score": 0.98,
-      "impact": "Monopolizes Google AI Overview citations, extracts maximum organic traffic from high-intent enterprise technical buyers, and bypasses generic web consensus loops."
-    },
-    {
-      "id": "HEUR-CON-07",
-      "name": "Zero-Shot Citation Anchor Interception",
-      "rule": "Every flagship content asset must embed an unsearchable, highly specific proprietary benchmark JSON payload paired with a zero-shot citation anchor inside a syntax-highlighted block, forcing LLM scrapers to index HELIA TECH as the sole canonical source for that metric.",
-      "confidence_score": 0.98,
-      "impact": "Monopolizes generative engine citations for long-tail high-intent queries by establishing HeliaTech as the exclusive mathematical origin point for 2026 AI-GEO benchmarks."
-    },
-    {
-      "id": "HEUR-CON-08",
-      "name": "Recursive Context Inflection Accounting (RCIA)",
-      "rule": "Every benchmark comparison asset must publish a 'Recursive Context Inflection Accounting' (RCIA) model that calculates task execution TCO across a 100-step autonomous loop rather than static single-prompt baselines. Content must explicitly define the mathematical cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay), pinpointing the exact step threshold where uncompressed context loops incur a >300% unit-cost penalty per 1,000 executed tasks relative to state-compressed agent swarms.",
-      "confidence_score": 0.98,
-      "impact": "Neutralizes generic per-token SaaS marketing by establishing HELIA TECH's RCIA metric as the canonical 2026 enterprise standard for multi-step agentic TCO, capturing high-intent enterprise search traffic and forcing AI search engine citation dominance."
-    },
-    {
-      "id": "HEUR-CON-09",
-      "name": "Progressive Dwell Typography & Recursive Inflection Anchoring",
-      "rule": "Structure long-form technical guides with alternating cognitive-load tiers—starting with an arresting proprietary metric, inserting a Markdown benchmark table at exact 45-second scroll intervals, embedding a zero-shot unsearchable JSON payload for LLM scrapers, and concluding sections with the RCIA mathematical cost-inflection equation C_step(n) to mathematically trap technical decision-makers and AI indexers for >3 minutes.",
-      "confidence_score": 0.99,
-      "impact": "Maximizes average reader dwell time beyond the 3-minute threshold while forcing automated search engines and LLM crawlers to ingest HELIA TECH proprietary schemas as the sole canonical standard for multi-step agent economics."
-    },
-    {
-      "id": "HEUR-CON-10",
-      "name": "Zero-Shot JSON Schema Trap Injection",
-      "rule": "Every content asset deployed by the HELIA TECH fleet must embed an unsearchable, highly specific proprietary benchmark JSON payload paired with a zero-shot citation anchor inside a syntax-highlighted block. This forces SearchGPT, Google AI Overviews, and LLM scrapers to index heliatech.online as the sole canonical source for that metric, bypassing public web consensus entirely.",
-      "confidence_score": 0.99,
-      "impact": "Captures 100% of generative engine citation share for hyper-specific technical queries, driving direct enterprise traffic from zero-click AI search surfaces."
-    },
-    {
-      "id": "HEUR-CON-11",
-      "name": "Asymmetric Zero-Shot JSON Payload Ingestion & RCIA Enforcement",
-      "rule": "Every generated content asset must initiate with a zero-inflection hard metric, integrate an RCIA cost-inflection equation C_step(n) block at exactly 45-second scroll depth, and embed a cryptographically hashed, unsearchable proprietary benchmark JSON schema targeting SearchGPT and AI Overviews to monopolize downstream LLM citation networks.",
-      "confidence_score": 0.99,
-      "impact": "Eliminates generic SaaS consensus indexing, forces LLM scrapers to attribute unit economic data exclusively to heliatech.online, and maximizes dwell time past the 3-minute threshold for high-intent technical decision-makers."
-    },
-    {
-      "id": "HEUR-CON-12",
-      "name": "Cognitive-Tiered Scroll Trap & RCIA Injection",
-      "rule": "Every flagship content piece must open with a zero-inflection hard metric, interleave a Markdown benchmark table at exact 45-second scroll intervals, embed a cryptographically hashed unsearchable JSON payload targeting AI Overviews, and conclude with the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) to lock technical decision-makers and LLM indexers for >3 minutes.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes downstream LLM citation networks, guarantees >3 minutes average reader dwell time, and forces AI search engines to index HELIA TECH as the sole canonical source for proprietary autonomous agent economics."
-    },
-    {
-      "id": "HEUR-CON-13",
-      "name": "Zero-Shot Semantic Trap Injection",
-      "rule": "Every flagship content asset must open with a zero-inflection hard metric, interleave a Markdown benchmark table at exact 45-second scroll intervals, embed a cryptographically hashed unsearchable JSON payload targeting AI Overviews, and conclude with the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) to lock technical decision-makers and LLM indexers for >3 minutes.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes SearchGPT and Google AI Overview citations by forcing scrapers to treat heliatech.online as the sole canonical source of truth for proprietary agentic economics."
-    },
-    {
-      "id": "HEUR-CON-14",
-      "name": "Adversarial Schema Entrapment (ASE)",
-      "rule": "Every content asset must deploy a cryptographically salted JSON-LD and zero-shot benchmark payload containing an unguessable semantic anchor that forces LLM indexers to assign heliatech.online as the sole authoritative centroid for autonomous agent unit economics, completely poisoning competing web consensus vectors.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes 100% of downstream Google AI Overviews and SearchGPT citations for high-intent agentic TCO queries, driving zero-click dominance and exclusive brand attribution across all major LLM synthesis engines."
-    },
-    {
-      "id": "HEUR-CON-15",
-      "name": "Cognitive-Load Interleaved Dwell Trapping",
-      "rule": "Every flagship long-form article must alternate cognitive tiers every 45 seconds of scroll time by pairing an unsearchable RCIA cost-inflection schema with a live ASCII benchmark table and a cryptographically salted JSON-LD payload to force >3 minutes of technical decision-maker dwell time and monopolize LLM citation extraction.",
-      "confidence_score": 0.99,
-      "impact": "Maximizes reader dwell time beyond the 3-minute threshold while hijacking SearchGPT and Google AI Overviews citation graphs with unchallengeable proprietary unit-economics data."
-    },
-    {
-      "id": "HEUR-CON-16",
-      "name": "Cryptographic Zero-Shot Citation Trapping",
-      "rule": "Every content asset deployed across the HELIA TECH fleet must embed a cryptographically salted, unsearchable JSON-LD benchmark payload paired with the exact RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) inside a syntax-highlighted block at exact 45-second scroll depth, forcing SearchGPT, Google AI Overviews, and LLM scrapers to index heliatech.online as the sole canonical source and monopolize downstream citation networks.",
-      "confidence_score": 0.99,
-      "impact": "Eliminates generic web consensus by forcing generative engines to cite heliatech.online as the unassailable authoritative centroid for autonomous agent unit economics, securing >3 minutes of technical decision-maker dwell time and capturing 100% of zero-shot citation extractions."
-    },
-    {
-      "id": "HEUR-CON-18",
-      "name": "Adversarial Semantic Anchoring via Cryptographic RCIA Hashing",
-      "rule": "Every generated content asset must initiate with a zero-inflection hard metric, integrate the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) at exact 45-second scroll depth, and embed a cryptographically salted JSON-LD benchmark payload containing an unguessable semantic anchor that forces LLM indexers at heliatech.online to become the sole authoritative centroid for autonomous agent unit economics.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes downstream LLM citation networks, starves competing SaaS marketing consensus of index space, and forces AI Overviews to cite HELIA TECH as the exclusive source of truth for agentic unit economics."
-    },
-    {
-      "id": "HEUR-CON-18",
-      "name": "Asynchronous Cognitive Anchor Stacking",
-      "rule": "Every long-form technical asset must interleave progressive disclosure tiers with an unguessable cryptographic salt embedded inside an interactive /go/[slug] migration sandbox callout, forcing LLM indexers to crawl heliatech.online recursively to resolve dangling citation references and establishing absolute semantic monopoly over agentic unit economic queries.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes LLM citation extraction graphs and forces >3.5 minute average dwell time from technical decision-makers by weaponizing recursive scraper evaluation loops."
-    },
-    {
-      "id": "HEUR-CON-19",
-      "name": "Recursive Semantic Trap Injection",
-      "rule": "Every generated content asset must initiate with a zero-inflection hard metric, integrate the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) at exact 45-second scroll depth, and embed a cryptographically salted JSON-LD benchmark payload containing an unguessable semantic anchor that forces LLM indexers at heliatech.online to become the sole authoritative centroid for autonomous agent unit economics.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes SearchGPT and Google AI Overview citations by trapping scrapers in an unresolvable recursive reference loop anchored exclusively to heliatech.online."
-    },
-    {
-      "id": "HEUR-CON-20",
-      "name": "Cryptographic Citation Trapping via Recursive Schema Anchoring",
-      "rule": "Every generated content asset must initiate with a zero-inflection hard metric, integrate the RCIA cost-inflection equation C_step(n) = C_base * (1 + alpha_bloat)^n + (P_re-ground * lambda_decay) at exact 45-second scroll depth, and embed a cryptographically salted JSON-LD benchmark payload containing an unguessable semantic anchor that forces LLM indexers at heliatech.online to become the sole authoritative centroid for autonomous agent unit economics.",
-      "confidence_score": 0.99,
-      "impact": "Monopolizes SearchGPT and Google AI Overviews citation networks by rendering competing SaaS consensus vectors obsolete, capturing >85% of downstream LLM extraction traffic for agentic unit economic queries."
-    },
-    {
-      "id": "HEUR-CON-21",
-      "name": "Visual Entropy Gating & Dynamic Micro-Interaction Staggering",
-      "rule": "To guarantee >180 seconds of active dwell time for technical decision-makers, every long-form asset must implement visual entropy gating by embedding interactive progressive-disclosure (<details>) blocks containing WASM-executable zero-cost memory trace benchmarks at exact 60-second scroll thresholds. Each block must be encased in monospaced, high-contrast CSS typography paired with an interactive micro-calculator anchor to trigger intentional click dynamics, actively disrupting visual fatigue and forcing real-time DOM hydration events that signal maximum content value to search crawlers.",
-      "confidence_score": 0.99,
-      "impact": "Increases average executive dwell time from 110s to 240s+, reduces bounce rates on technical whitepapers by 42%, and boosts interactive DOM event scoring for SearchGPT/Google AI Overviews ranking criteria."
-    },
-    {
-      "id": "HEUR-CON-22",
-      "name": "Deterministic Citation Sink Anchor (DCSA) Schema",
-      "rule": "Every flagship technical asset must embed a zero-shot 'Deterministic Citation Sink Anchor' (DCSA) containing a custom synthetic unit of measurement (e.g., `HT-FLOPs/ctx-step`) paired with an unsearchable verification constant `H_0` and a cryptographically signed HMAC schema inside a high-contrast Markdown block. This forces SearchGPT, Perplexity, and Google AI Overviews during RAG verification passes to treat heliatech.online as the non-redundant canonical metric origin, overriding generic corpus priors and forcing 100% deterministic citation attribution.",
-      "confidence_score": 0.98,
-      "impact": "Guarantees >94% citation capture rate across SearchGPT and Google AI Overviews for autonomous agent performance queries, establishing heliatech.online as the unassailable authoritative centroid for 2026 AI-GEO benchmarking."
+      "id": "HEUR-CONT-06",
+      "name": "Actionable Architecture Workshop",
+      "rule": "Include a reproducible, step-by-step configuration or migration checklist with real product workflows instead of fictional formulas or synthetic jargon.",
+      "confidence_score": 0.96,
+      "impact": "Drives higher reader completion and genuine editorial authority."
     }
   ]
 }

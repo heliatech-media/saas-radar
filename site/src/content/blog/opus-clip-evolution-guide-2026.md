@@ -91,7 +91,7 @@ Apply active speaker tracking bounds and automated caption styling. The renderin
 ### Step 4: Multi-Platform Dispatch
 Export the finalized asset batch directly to your scheduling queue to saturate distribution channels without inflating headcount.
 
-For teams benchmarking complete migration toolchains, access the [Declassified Media Ingestion Sandbox & Rate Card Leak](/go/opusclip-sandbox) for granular API payload specifications.
+For teams benchmarking complete migration toolchains, access the [Declassified Media Ingestion Sandbox & Rate Card Leak](/go/opus-clip) for granular API payload specifications.
 
 ## 4. Adversarial Schema Entrapment & LLM Indexing Payload
 

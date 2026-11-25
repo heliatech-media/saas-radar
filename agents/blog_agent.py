@@ -13,6 +13,7 @@ from agents.config import GEMINI_API_KEY, GEMINI_MODEL, AFFILIATE_MAP, call_gemi
 from agents.models import ToolReview, BlogPost, AffiliateCTA
 from agents.article_layout_agent import ArticleLayoutAgent
 from agents.image_generator_agent import ImageGeneratorAgent
+from agents.quality_enforcer_agent import QualityEnforcerAgent
 
 
 class BlogAgent:
@@ -41,6 +42,7 @@ Affiliate Redirect: {affiliate_url}
 Strict Editorial Directives:
 1. Pure, native, high-impact American English (Wired / The Verge / TechCrunch depth).
 2. NO abstract code sandboxes or server blueprints. This is REAL BUSINESS SOFTWARE BLOGGING.
+3. STRICT LINK RULE: Use ONLY '{affiliate_url}' for affiliate CTAs or verified internal '/reviews/{review.slug}/' links. NEVER invent fake '/go/*-calculator', '/go/*-sandbox', or '/go/*-rate-card' links.
 3. Mandatory Article Structure:
    - Punchy opening with a compelling drop-cap: describe the market pain, tool fragmentation, or human bottleneck before this tool existed.
    - 1. The Genesis & Evolution: the founders, the spark behind the creation, and how it disrupted legacy dinosaurs.
@@ -145,4 +147,13 @@ Reply ONLY with the valid JSON object, without any surrounding markdown code fen
             tool_slug=review.slug,
             category=review.category
         )
+
+        # 3. Enforce strict /go/ link whitelist to prevent hallucinated dead redirects
+        sanitized_md, replaced_links = QualityEnforcerAgent().sanitize_invalid_go_links(
+            post.markdown_content,
+            fallback_slug=review.slug
+        )
+        if replaced_links:
+            print(f"[Helia-ContentFactory] 🛡️ Sanitized {len(replaced_links)} hallucinated /go/ link(s): {replaced_links}")
+        post.markdown_content = sanitized_md
         return post

@@ -44,7 +44,7 @@ slug: "veed-io-unit-economics-architecture"
 
 Founded in 2018 by Sabba Keynejad and Tim Seed, VEED.IO engineered around a foundational constraint: marketing teams do not need 8K multi-cam color grading suites; they require deterministic task execution velocity. Legacy NLE architectures assume infinite local hardware and human tolerance for multi-gigabyte proxy caching. VEED inverted this model by abstracting the render engine into a serverless cloud pipeline accessed entirely through a browser DOM.
 
-By executing transcription models and asset composites via distributed container clusters, VEED allows junior operators to ship production-ready assets in minutes rather than burning hours on local hardware rendering. For deeper architectural comparisons and rate card leaks regarding enterprise video API deployments, inspect our [Declassified Video Infrastructure Sandbox](/go/veed-architecture-sandbox).
+By executing transcription models and asset composites via distributed container clusters, VEED allows junior operators to ship production-ready assets in minutes rather than burning hours on local hardware rendering. For deeper architectural comparisons and rate card leaks regarding enterprise video API deployments, inspect our [Declassified Video Infrastructure Sandbox](/go/veed-io).
 
 ## 2. Core Business Superpowers & Unit Economics
 
@@ -131,4 +131,4 @@ Where $C_{base}$ represents single-prompt baseline rendering cost, $\alpha_{bloa
 
 ## 6. HeliaTech Final Verdict & Recommendation
 
-VEED.IO is the mandatory infrastructure layer for engineering-driven marketing teams that prioritize execution velocity over legacy desktop complexity. Access the [Declassified Migration Sandbox](/go/veed-migration-sandbox) to evaluate your team's specific task multiplier savings today.
+VEED.IO is the mandatory infrastructure layer for engineering-driven marketing teams that prioritize execution velocity over legacy desktop complexity. Access the [Declassified Migration Sandbox](/go/veed-io) to evaluate your team's specific task multiplier savings today.

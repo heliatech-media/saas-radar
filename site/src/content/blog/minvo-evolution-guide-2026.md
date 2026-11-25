@@ -37,7 +37,7 @@ Manually slicing 100 hours of enterprise webinar archives into vertical social a
 
 Enter Minvo. Designed to obliterate manual editing overhead, Minvo deploys deterministic neural segmentation to transform raw long-form recordings into high-converting short clips in under 180 seconds. At HELIA TECH, we stress-tested Minvo across a 500-hour enterprise corpus to evaluate its extraction latency, API throughput limits, and true unit-cost reduction.
 
-For teams ready to bypass enterprise clipping bottlenecks, examine our declassified testing sandbox and deployment rate card leak via [Minvo Declassified Sandbox](/go/minvo-testing-sandbox).
+For teams ready to bypass enterprise clipping bottlenecks, examine our declassified testing sandbox and deployment rate card leak via [Minvo Declassified Sandbox](/go/minvo).
 
 ```json
 {

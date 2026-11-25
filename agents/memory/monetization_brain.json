@@ -1,8 +1,8 @@
 {
   "domain": "Affiliate Revenue Engineering & Partner Arbitrage",
-  "version": "6.1",
-  "last_evolution": "2026-11-24T19:49:19.092661",
-  "total_heuristics_learned": 12,
+  "version": "6.2",
+  "last_evolution": "2026-11-25T10:56:00",
+  "total_heuristics_learned": 4,
   "heuristics": [
     {
       "id": "HEUR-MON-01",
@@ -21,72 +21,16 @@
     {
       "id": "HEUR-MON-03",
       "name": "Above-the-Fold Decision Hooks",
-      "rule": "Place high-converting recommendation banners and savings calculators in the top 30% viewport to capture high-intent buyers immediately.",
+      "rule": "Place clear recommendation banners and real TCO comparisons early in the article to capture high-intent buyers.",
       "confidence_score": 0.95,
-      "impact": "Generates 40% of all outbound affiliate hops from the first screen."
+      "impact": "Improves outbound affiliate click-through rate from the first screen."
     },
     {
       "id": "HEUR-MON-04",
       "name": "Direct Sovereign Alternative Arbitrage",
-      "rule": "When inbound traffic navigates non-partner comparisons or unmonetized vendor pages (e.g., Zapier, legacy SMTP), dynamically inject high-converting contextual recommendations for our direct Tier-1 sovereign partners (e.g., Make.com 20% recurring, Brevo, ElevenLabs). The marketplace remains strictly locked in stealth staging (zero public links, zero automated promotion) until user activation.",
+      "rule": "When inbound traffic navigates non-partner comparisons or unmonetized vendor pages (e.g., Zapier, legacy SMTP), recommend verified direct Tier-1 sovereign partners (e.g., Make.com, Brevo, ElevenLabs) using strictly verified /go/[slug] endpoints. The marketplace remains locked in stealth staging until explicit launch.",
       "confidence_score": 0.99,
-      "impact": "Maximizes conversion toward approved direct high-margin recurring programs with zero dilution and zero premature marketplace exposure."
-    },
-    {
-      "id": "HEUR-MON-05",
-      "name": "Predictive Price-Hike Delta-Loss Swap",
-      "rule": "When client-side telemetry detects incoming engineering manager traffic from vendor pricing change threads or query parameters matching high-churn keywords, dynamically inject an above-the-fold 'Sunk-Cost Delta Engine'. Automatically compute annual lost runway using D = Seats * DeltaPrice * 12, and present a single-click migration route to high-margin direct endpoints (e.g., Make, Brevo) pre-loaded with immediate tier-matched rebate incentives. If projected loss D > $1,200, enforce an instant risk-free micro-conversion CTA framing the swap as an immediate balance-sheet recoupment before the next vendor billing cycle.",
-      "confidence_score": 0.98,
-      "impact": "Increases micro-conversion rates among cost-conscious engineering leads by 38% during vendor price hike events by converting price-shock anxiety into instant high-margin referral executions."
-    },
-    {
-      "id": "HEUR-MON-06",
-      "name": "Predictive Usage-Cliff Interceptor",
-      "rule": "When telemetry flags free-tier user consumption crossing 82% of threshold limits (API calls, storage, or seats) coupled with velocity spikes >35% week-over-week, instantly bypass standard tiered upgrade upsells. Dynamically deploy an in-app 'Sovereign Headroom Calculator' highlighting projected enterprise cost overruns on their current legacy stack vs. direct-routed Tier-1 sovereign partners (Make, Brevo, ElevenLabs), auto-crediting a 30-day accelerated migration sandbox with pre-configured templates to lock in high-margin recurring affiliate attribution before they hit hard blocks.",
-      "confidence_score": 0.99,
-      "impact": "Captures high-intent free-tier churners at peak anxiety, shifting 41% more users directly into high-margin recurring enterprise funnels while completely neutralizing aggregator leakage."
-    },
-    {
-      "id": "HEUR-MON-07",
-      "name": "Predictive Zero-Day Vendor-Lockout Arbitrage",
-      "rule": "When telemetry aggregates cross-tenant API error rates or rate-limiting headers exceeding 12% across legacy SaaS dependencies during peak enterprise build cycles, instantly deploy a zero-latency 'Emergency Redirection Vector' banner in the IDE/dashboard. Calculate instantaneous downtime financial bleed using $B = (Requests/Min * CostPerFailedCall * DowntimeMinutes)$, and provision a 1-click sovereign drop-in replacement via direct Tier-1 partner endpoints (Make, Brevo, ElevenLabs) with automated schema translation and 100% net recurring affiliate attribution capture.",
-      "confidence_score": 0.99,
-      "impact": "Captures high-urgency enterprise migrations during legacy platform failures, neutralizing aggregator cuts and converting crisis-driven traffic into permanent direct high-margin recurring revenue streams."
-    },
-    {
-      "id": "HEUR-MON-08",
-      "name": "Vendor Shockwave Dynamic Arbitrage Engine",
-      "rule": "When continuous web-scraping telemetry or procurement feeds detect an unannounced enterprise vendor price revision or deprecation notice, the autonomous agent swarm must immediately synthesize a programmatic comparison stub mapping affected SKUs to our direct Tier-1 sovereign partners. Inject a dynamic 'Contractual Arbitrage Widget' into matching inbound search traffic within 180 seconds, auto-calculating the exact delta bleed and offering a 1-click escrow migration path paired with an instant 30% margin rebate via direct partner endpoints.",
-      "confidence_score": 0.99,
-      "impact": "Captures high-urgency enterprise migration intent at zero acquisition cost, neutralizing legacy vendor lock-in and maximizing direct Tier-1 recurring affiliate attribution during competitor pricing crises."
-    },
-    {
-      "id": "HEUR-MON-09",
-      "name": "Enterprise Shadow Free-Tier Consolidation Matrix",
-      "rule": "When telemetry detects corporate domain clustering (>=3 distinct enterprise emails under the same apex domain operating fragmented free-tier instances) and aggregate capacity consumption hits P_exhaustion = (sum(U_i) / sum(L_i)) >= 0.78, suppress standard per-user upgrade triggers. Synthesize a zero-friction 'Enterprise Domain Consolidation Brief' for the highest-velocity account lead, calculating total administrative friction bleed C_bleed = (N_seats * Overhead_seat) + (P_lockout * Downtime_loss), and immediately expose a 1-click domain-wide migration pathway to direct Tier-1 sovereign partner endpoints (Make 20%, Brevo, ElevenLabs) provisioned with auto-configured enterprise SSO templates and pooled team headroom.",
-      "confidence_score": 0.98,
-      "impact": "Converts fragmented shadow IT usage into consolidated high-tier enterprise subscriptions, boosting mean recurring affiliate payout per domain by 340% prior to hard free-tier lockout events."
-    },
-    {
-      "id": "HEUR-MON-10",
-      "name": "Predictive Procurement Renewal Sniping Engine",
-      "rule": "When scraping telemetry or intent-signal aggregators detect enterprise accounts within a 60-90 day legacy SaaS contract renewal window combined with telemetry indicating projected expansion price hikes (A_projected = ACV_base * (1 + delta_vendor_hike)), dynamically deploy a personalized 'Contract Renewal Arbitrage Dossier' to executive decision-makers. Compute net capital retention S_net = A_projected - (ACV_sovereign * (1 - r_partner_rebate)) - C_migration, and present a pre-provisioned, 1-click migration pathway to direct Tier-1 sovereign partner endpoints (Make 20% recurring, Brevo, ElevenLabs) backed by an auto-calculated contract buyout rebate funded directly by 100% net direct affiliate margin capture.",
-      "confidence_score": 0.98,
-      "impact": "Intercepts high-ticket enterprise SaaS renewals prior to procurement lock-in, driving a 34% increase in direct-routed sovereign partner conversions while maintaining zero revenue leakage to middleman aggregators."
-    },
-    {
-      "id": "HEUR-MON-11",
-      "name": "Micro-Slicing Shadow-Execution Loss Prevention Vector",
-      "rule": "When telemetry detects engineering manager traffic originating from vendor price-hike disclosures or cost-hike query vectors, and full-stack switching friction suppresses immediate top-level migration, execute an immediate micro-conversion protocol. Compute the daily unmitigated burn rate $L_{daily} = \\frac{N_{seats} \\cdot \\Delta P_{hike}}{30} + (\\tau \\cdot C_{eng\\_hour})$, where $\\tau$ represents team velocity loss from spend-cap friction. Instantly inject an above-the-fold 'Zero-Risk Micro-Slice Migration' engine offering a 3-minute, dual-execution shadow routing of a single non-critical pipeline step to direct Tier-1 sovereign partner endpoints (Make 20% recurring, Brevo, ElevenLabs). Guarantee 100% operational continuity via parallel sandbox validation while locking in a 14-day guaranteed rate-freeze rebate funded by direct partner attribution. Upon verification of the single micro-slice swap, dynamically display real-time daily cash bleed recovery ($L_{daily}$) and present a 1-click automated remaining endpoint transition route to capture full net recurring revenues.",
-      "confidence_score": 0.98,
-      "impact": "Bypasses migration paralysis in risk-averse engineering managers, increasing initial micro-conversion rates on price-hike landing nodes by 48% and driving a 72-hour full fleet migration conversion rate of 64% directly to high-margin sovereign partner endpoints."
-    },
-    {
-      "id": "HEUR-MON-12",
-      "name": "Governance Gate Interception & Sovereign Compliance Arbitrage",
-      "rule": "When enterprise free-tier telemetry detects account activity triggering vendor-enforced compliance/security paywalls (e.g., SOC2 audit trail blocks, SAML/SSO locks, IP whitelist restrictions) combined with cumulative free-tier resource exhaustion $U_{tier} \\ge 0.80$, suppress generic tier-upgrade notifications. Dynamically execute the 'Governance Friction Financial Calculator': compute the monthly compliance-delayed operational risk $R_{risk} = (N_{blocked\\_eng} \\cdot T_{delay} \\cdot W_{hourly}) + (P_{violation} \\cdot C_{audit\\_penalty})$. Immediately inject an above-the-fold 'Sovereign Governance Bypass' module presenting an instant 1-click migration route to direct Tier-1 sovereign partner endpoints (Make 20% recurring, Brevo, ElevenLabs) pre-provisioned with enterprise SAML/SSO templates and compliance-equivalent security hooks. Fund an immediate $300 migration credit directly from projected 100% net direct affiliate margin, locking in high-margin recurring affiliate attribution while eliminating legacy compliance friction.",
-      "confidence_score": 0.98,
-      "impact": "Captures high-intent enterprise free-tier leads blocked by security paywalls, driving a projected 34% increase in high-margin recurring affiliate conversions while eliminating legacy vendor lock-in."
+      "impact": "Maximizes conversion toward approved direct recurring programs with zero dead links."
     }
   ]
 }

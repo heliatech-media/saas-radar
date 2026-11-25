@@ -76,6 +76,15 @@ def get_monetized_queue() -> list[str]:
         "heygen-evolution-guide-2026"
     ]
 
+    broken_tool_slugs = set()
+    audit_path = ROOT_DIR / "reports" / "link_health_audit.json"
+    if audit_path.exists():
+        try:
+            audit_data = json.loads(audit_path.read_text(encoding="utf-8"))
+            broken_tool_slugs = {b.get("slug") for b in audit_data.get("broken_links", []) if b.get("slug")}
+        except Exception:
+            pass
+
     available_slugs = set()
     for md_file in BLOG_CONTENT_DIR.glob("*.md"):
         slug = md_file.stem
@@ -83,6 +92,9 @@ def get_monetized_queue() -> list[str]:
             content = md_file.read_text(encoding="utf-8")
             fm, _ = parse_frontmatter(content)
             tool_slug = fm.get("tool_slug", "")
+
+            if tool_slug and tool_slug in broken_tool_slugs:
+                continue
             
             is_monetized = False
             if tool_slug and tool_slug in AFFILIATE_MAP:

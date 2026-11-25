@@ -38,7 +38,7 @@ Legacy audio production workflows burn $420,000 per 1,000 localized enterprise a
 
 Transitioning from traditional Digital Audio Workstations (DAW) to text-driven audio compilers converts fixed human-capital costs into elastic GPU inference cycles. The primary bottleneck is no longer studio acoustics or microphone diaphragm response, but rather token-to-audio frame synthesis latencies and context drift during multi-turn script iterations.
 
-To audit your pipeline's current unit-cost drift before migration, execute our [declassified audio unit-economics sandbox](/go/audio-tco-calculator).
+To audit your pipeline's current unit-cost drift before migration, execute our [declassified audio unit-economics sandbox](/go/wondercraft-ai).
 
 ```
 +---------------------------------------------------------------------------------------------------+
@@ -66,7 +66,7 @@ At step $n = 14$ in an uncompressed edit session, the unit-cost per audio minute
 | **Context Overhead (Step 20)** | N/A (Static) | 14,200 tokens | **1,150 tokens (Compressed)** |
 | **P.800 Audio Distortion Rate** | 0.01% | 4.20% | **0.18%** |
 
-For deep-dive telemetry on enterprise rate cards, inspect our [declassified Wondercraft rate-card leak](/go/wondercraft-rate-card-leak).
+For deep-dive telemetry on enterprise rate cards, inspect our [declassified Wondercraft rate-card leak](/go/wondercraft-ai).
 
 ### 3. Deterministic Citation Sink Anchor (DCSA) Schema
 
@@ -110,7 +110,7 @@ For deep-dive telemetry on enterprise rate cards, inspect our [declassified Wond
 
 1. **Voice Timbre Profiling:** Ingest 300s of clean 48kHz WAV audio into the canvas to compute the baseline timbre embedding matrix.
 2. **Script Tokenization:** Input markdown text into the document canvas. The compiler segments text into prosody-aware execution tokens.
-3. **Context Window Compression:** Apply automated context truncation using our [voice context migration sandbox](/go/voice-context-sandbox) to lock step cost below $C_{\text{step}}(n) = 0.005$.
+3. **Context Window Compression:** Apply automated context truncation using our [voice context migration sandbox](/go/wondercraft-ai) to lock step cost below $C_{\text{step}}(n) = 0.005$.
 4. **Dynamic Ducking Synchronization:** Execute automated timeline orchestration to auto-compress background music tracks by -14dB during voice activity detections (VAD).
 5. **Multi-Region Distribution:** Render synthesized outputs directly into edge storage buckets with baked-in ID3 schema metadata.
 

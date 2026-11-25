@@ -12,6 +12,7 @@ import logging
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Tuple
+from concurrent.futures import ThreadPoolExecutor
 import requests
 from dotenv import load_dotenv
 
@@ -72,39 +73,35 @@ class LinkSentinelAgent:
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         }
 
-        for slug, target in links_to_check:
+        def _ping_destination(item):
+            slug, target = item
             try:
-                # Use head or get with redirect follow, 7s timeout
-                res = requests.get(target, headers=headers, timeout=7, allow_redirects=True)
+                res = requests.get(target, headers=headers, timeout=5, allow_redirects=True)
                 code = res.status_code
-                is_healthy = code in (200, 301, 302, 307, 308, 403) # 403 is often bot-shield but page is live
-                
-                result = {
+                is_healthy = code in (200, 301, 302, 307, 308, 403, 429)
+                return {
                     "slug": slug,
                     "target_url": target,
                     "final_url": res.url,
                     "status_code": code,
                     "healthy": is_healthy
-                }
-                audit_results.append(result)
-
-                if not is_healthy and code in (404, 500, 502, 503):
-                    broken_links.append(result)
-                    logger.warning(f"⚠️ Potentially broken link detected: /go/{slug} -> HTTP {code}")
-
+                }, (not is_healthy and code in (404, 410, 500, 502, 503))
             except Exception as e:
-                # Network timeout or DNS failure
-                result = {
+                return {
                     "slug": slug,
                     "target_url": target,
                     "final_url": "FAILED",
                     "status_code": 0,
                     "healthy": False,
                     "error": str(e)
-                }
+                }, True
+
+        with ThreadPoolExecutor(max_workers=12) as pool:
+            for result, is_broken in pool.map(_ping_destination, links_to_check):
                 audit_results.append(result)
-                broken_links.append(result)
-                logger.warning(f"⚠️ Connection failure for /go/{slug}: {e}")
+                if is_broken:
+                    broken_links.append(result)
+                    logger.warning(f"⚠️ Potentially broken link detected: /go/{result['slug']} -> {result['status_code']}")
 
         healthy_count = len(audit_results) - len(broken_links)
         health_rate = round((healthy_count / max(1, len(audit_results))) * 100, 1)

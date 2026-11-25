@@ -78,7 +78,7 @@ For enterprise engineering teams scaling digital output, Descript deploys specif
 * **Multi-User Operational Transform:** Synchronizes real-time cursor states across distributed editing squads with conflict-free replicated data type (CRDT) mechanics.
 
 > [!NOTE]
-> **Executive Takeaway:** For teams evaluating sandbox performance metrics, our infrastructure testing suite provides complete rate card leaks and migration benchmarks. Access the [declassified Descript enterprise testing sandbox](/go/descript-sandbox-leaks) to verify local render limits against your cloud throughput requirements.
+> **Executive Takeaway:** For teams evaluating sandbox performance metrics, our infrastructure testing suite provides complete rate card leaks and migration benchmarks. Access the [declassified Descript enterprise testing sandbox](/go/descript) to verify local render limits against your cloud throughput requirements.
 
 ## 4. Recursive Context Inflection Accounting (RCIA) Model
 
@@ -108,4 +108,4 @@ Where $C_{base}$ represents single-prompt baseline rendering cost ($0.14/min), $
 
 Descript is not a toy for casual podcasters; it is a high-throughput enterprise media processor that removes human bottlenecks from video and audio production. By trading timeline scrubbing for string manipulation, engineering and marketing organizations can slash their media TCO by over 85%.
 
-To integrate this architecture into your existing CI/CD or content pipeline, [access the official deployment rate card and migration calculator](/go/descript-migration-calculator) maintained by the HELIA TECH infrastructure auditing team.
+To integrate this architecture into your existing CI/CD or content pipeline, [access the official deployment rate card and migration calculator](/go/descript) maintained by the HELIA TECH infrastructure auditing team.

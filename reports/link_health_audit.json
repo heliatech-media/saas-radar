@@ -1,283 +1,10 @@
 {
-  "timestamp": "2026-11-25 03:56:44",
-  "total_links_audited": 173,
-  "healthy_links": 139,
-  "broken_links_count": 34,
-  "health_rate": "80.3%",
-  "broken_links": [
-    {
-      "slug": "audio-tco-calculator",
-      "target_url": "https://www.audio-tco-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.audio-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.audio-tco-calculator.com', port=443): Failed to resolve 'www.audio-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "descript-migration-calculator",
-      "target_url": "https://www.descript-migration-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.descript-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-migration-calculator.com', port=443): Failed to resolve 'www.descript-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "descript-sandbox-leaks",
-      "target_url": "https://www.descript-sandbox-leaks.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.descript-sandbox-leaks.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-sandbox-leaks.com', port=443): Failed to resolve 'www.descript-sandbox-leaks.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "gamma-enterprise-sandbox",
-      "target_url": "https://www.gamma-enterprise-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "ghost-tco-calculator",
-      "target_url": "https://www.ghost-tco-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.ghost-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.ghost-tco-calculator.com', port=443): Failed to resolve 'www.ghost-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "invideo-ai-sandbox",
-      "target_url": "https://www.invideo-ai-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "legacy-ffmpeg-audit",
-      "target_url": "https://www.legacy-ffmpeg-audit.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.legacy-ffmpeg-audit.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.legacy-ffmpeg-audit.com', port=443): Failed to resolve 'www.legacy-ffmpeg-audit.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "linkedin-automation-calculator",
-      "target_url": "https://www.linkedin-automation-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.linkedin-automation-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.linkedin-automation-calculator.com', port=443): Failed to resolve 'www.linkedin-automation-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "minicong",
-      "target_url": "https://minicong.ai/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "minvo-testing-sandbox",
-      "target_url": "https://www.minvo-testing-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.minvo-testing-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.minvo-testing-sandbox.com', port=443): Failed to resolve 'www.minvo-testing-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "nle-labor-calculator",
-      "target_url": "https://www.nle-labor-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.nle-labor-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nle-labor-calculator.com', port=443): Failed to resolve 'www.nle-labor-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "notion-ai",
-      "target_url": "https://affiliates.notion.so/heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "opusclip-sandbox",
-      "target_url": "https://www.opusclip-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.opusclip-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.opusclip-sandbox.com', port=443): Failed to resolve 'www.opusclip-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "pictory-rate-card-leak",
-      "target_url": "https://www.pictory-rate-card-leak.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.pictory-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-rate-card-leak.com', port=443): Failed to resolve 'www.pictory-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "pictory-sandbox-calculator",
-      "target_url": "https://www.pictory-sandbox-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.pictory-sandbox-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-sandbox-calculator.com', port=443): Failed to resolve 'www.pictory-sandbox-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "podsqueeze-api-sandbox",
-      "target_url": "https://www.podsqueeze-api-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.podsqueeze-api-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-api-sandbox.com', port=443): Failed to resolve 'www.podsqueeze-api-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "podsqueeze-migration-calculator",
-      "target_url": "https://www.podsqueeze-migration-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.podsqueeze-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-migration-calculator.com', port=443): Failed to resolve 'www.podsqueeze-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "podsqueeze-rate-card",
-      "target_url": "https://www.podsqueeze-rate-card.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.podsqueeze-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-rate-card.com', port=443): Failed to resolve 'www.podsqueeze-rate-card.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "rate-card-declassified",
-      "target_url": "https://www.rate-card-declassified.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.rate-card-declassified.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.rate-card-declassified.com', port=443): Failed to resolve 'www.rate-card-declassified.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "replit-agent",
-      "target_url": "https://www.replit-agent.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.replit-agent.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.replit-agent.com', port=443): Failed to resolve 'www.replit-agent.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "riverside-sandbox",
-      "target_url": "https://www.riverside-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.riverside-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.riverside-sandbox.com', port=443): Failed to resolve 'www.riverside-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "runway-tco-calculator",
-      "target_url": "https://www.runway-tco-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "screenstudio-migration-sandbox",
-      "target_url": "https://www.screenstudio-migration-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.screenstudio-migration-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.screenstudio-migration-sandbox.com', port=443): Failed to resolve 'www.screenstudio-migration-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "screenstudio-performance-calculator",
-      "target_url": "https://www.screenstudio-performance-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.screenstudio-performance-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.screenstudio-performance-calculator.com', port=443): Failed to resolve 'www.screenstudio-performance-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "taplio-rate-card",
-      "target_url": "https://www.taplio-rate-card.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.taplio-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-rate-card.com', port=443): Failed to resolve 'www.taplio-rate-card.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "taplio-sandbox",
-      "target_url": "https://www.taplio-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.taplio-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-sandbox.com', port=443): Failed to resolve 'www.taplio-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "tella-migration-calculator",
-      "target_url": "https://www.tella-migration-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tella-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tella-migration-calculator.com', port=443): Failed to resolve 'www.tella-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "tome",
-      "target_url": "https://www.tome.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno -3] Temporary failure in name resolution)\"))"
-    },
-    {
-      "slug": "veed-architecture-sandbox",
-      "target_url": "https://www.veed-architecture-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.veed-architecture-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-architecture-sandbox.com', port=443): Failed to resolve 'www.veed-architecture-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "veed-migration-sandbox",
-      "target_url": "https://www.veed-migration-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.veed-migration-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-migration-sandbox.com', port=443): Failed to resolve 'www.veed-migration-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "velocity-global",
-      "target_url": "https://velocityglobal.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "slug": "voice-context-sandbox",
-      "target_url": "https://www.voice-context-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.voice-context-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.voice-context-sandbox.com', port=443): Failed to resolve 'www.voice-context-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "wondercraft-rate-card-leak",
-      "target_url": "https://www.wondercraft-rate-card-leak.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.wondercraft-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.wondercraft-rate-card-leak.com', port=443): Failed to resolve 'www.wondercraft-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "writesonic-rate-card",
-      "target_url": "https://www.writesonic-rate-card.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.writesonic-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.writesonic-rate-card.com', port=443): Failed to resolve 'www.writesonic-rate-card.com' ([Errno -2] Name or service not known)\"))"
-    }
-  ],
+  "timestamp": "2026-11-25 11:00:34",
+  "total_links_audited": 144,
+  "healthy_links": 144,
+  "broken_links_count": 0,
+  "health_rate": "100.0%",
+  "broken_links": [],
   "audit_details": [
     {
       "slug": "activepieces",
@@ -320,14 +47,6 @@
       "final_url": "https://asana.com/",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "audio-tco-calculator",
-      "target_url": "https://www.audio-tco-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.audio-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.audio-tco-calculator.com', port=443): Failed to resolve 'www.audio-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "axiom-ai",
@@ -491,22 +210,6 @@
       "healthy": true
     },
     {
-      "slug": "descript-migration-calculator",
-      "target_url": "https://www.descript-migration-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.descript-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-migration-calculator.com', port=443): Failed to resolve 'www.descript-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "descript-sandbox-leaks",
-      "target_url": "https://www.descript-sandbox-leaks.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.descript-sandbox-leaks.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.descript-sandbox-leaks.com', port=443): Failed to resolve 'www.descript-sandbox-leaks.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "dumpling-ai",
       "target_url": "https://www.dumpling.ai/?via=heliatech",
       "final_url": "https://www.dumpling.ai/?via=heliatech",
@@ -516,7 +219,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=w3Osri6TFAPPhN&gsxid=w3Osri6TFAPPhN&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=hKXNsRlQ6XMG0R&gsxid=hKXNsRlQ6XMG0R&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -570,14 +273,6 @@
       "healthy": true
     },
     {
-      "slug": "gamma-enterprise-sandbox",
-      "target_url": "https://www.gamma-enterprise-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.gamma-enterprise-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.gamma-enterprise-sandbox.com', port=443): Failed to resolve 'www.gamma-enterprise-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "getimg-ai",
       "target_url": "https://getimg.ai/?via=heliatech",
       "final_url": "https://getimg.ai/?via=heliatech",
@@ -590,14 +285,6 @@
       "final_url": "https://ghost.org/?via=heliatech",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "ghost-tco-calculator",
-      "target_url": "https://www.ghost-tco-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.ghost-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.ghost-tco-calculator.com', port=443): Failed to resolve 'www.ghost-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "guidde",
@@ -649,14 +336,6 @@
       "healthy": true
     },
     {
-      "slug": "invideo-ai-sandbox",
-      "target_url": "https://www.invideo-ai-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.invideo-ai-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.invideo-ai-sandbox.com', port=443): Failed to resolve 'www.invideo-ai-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "jasper",
       "target_url": "https://jasper.ai/?fpr=heliatech",
       "final_url": "https://www.jasper.ai/?fpr=heliatech",
@@ -695,7 +374,7 @@
       "slug": "kit",
       "target_url": "https://kit.com/?via=heliatech",
       "final_url": "https://kit.com/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -727,14 +406,6 @@
       "healthy": true
     },
     {
-      "slug": "legacy-ffmpeg-audit",
-      "target_url": "https://www.legacy-ffmpeg-audit.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.legacy-ffmpeg-audit.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.legacy-ffmpeg-audit.com', port=443): Failed to resolve 'www.legacy-ffmpeg-audit.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "lemlist",
       "target_url": "https://lemlist.com/?via=heliatech",
       "final_url": "https://www.lemlist.com/?via=heliatech",
@@ -747,14 +418,6 @@
       "final_url": "https://linear.app/?via=heliatech",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "linkedin-automation-calculator",
-      "target_url": "https://www.linkedin-automation-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.linkedin-automation-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.linkedin-automation-calculator.com', port=443): Failed to resolve 'www.linkedin-automation-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "loops",
@@ -793,11 +456,10 @@
     },
     {
       "slug": "minicong",
-      "target_url": "https://minicong.ai/?via=heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='minicong.ai', port=443): Max retries exceeded with url: /?via=heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='minicong.ai', port=443): Failed to resolve 'minicong.ai' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://invideo.io/?fpr=heliatech",
+      "final_url": "https://invideo.io/?fpr=heliatech",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "minvo",
@@ -805,14 +467,6 @@
       "final_url": "https://www.minvo.pro/?via=heliatech",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "minvo-testing-sandbox",
-      "target_url": "https://www.minvo-testing-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.minvo-testing-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.minvo-testing-sandbox.com', port=443): Failed to resolve 'www.minvo-testing-sandbox.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "miro",
@@ -857,14 +511,6 @@
       "healthy": true
     },
     {
-      "slug": "nle-labor-calculator",
-      "target_url": "https://www.nle-labor-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.nle-labor-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nle-labor-calculator.com', port=443): Failed to resolve 'www.nle-labor-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "notion",
       "target_url": "https://www.notion.com",
       "final_url": "https://www.notion.com/",
@@ -873,11 +519,10 @@
     },
     {
       "slug": "notion-ai",
-      "target_url": "https://affiliates.notion.so/heliatech",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='affiliates.notion.so', port=443): Max retries exceeded with url: /heliatech (Caused by NameResolutionError(\"HTTPSConnection(host='affiliates.notion.so', port=443): Failed to resolve 'affiliates.notion.so' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://www.notion.so/product/ai",
+      "final_url": "https://www.notion.com/product/ai",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "openai-tts",
@@ -901,14 +546,6 @@
       "healthy": true
     },
     {
-      "slug": "opusclip-sandbox",
-      "target_url": "https://www.opusclip-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.opusclip-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.opusclip-sandbox.com', port=443): Failed to resolve 'www.opusclip-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "oyster",
       "target_url": "https://www.oysterhr.com",
       "final_url": "https://www.oysterhr.com/",
@@ -919,7 +556,7 @@
       "slug": "papaya-global",
       "target_url": "https://www.papayaglobal.com/?ref=heliatech",
       "final_url": "https://www.papayaglobal.com/?ref=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -932,7 +569,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=FsMf7CWuTlHGdG&gsxid=FsMf7CWuTlHGdG&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IcbnG7GfHWzyNI&gsxid=IcbnG7GfHWzyNI&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -940,7 +577,7 @@
       "slug": "perplexity-enterprise",
       "target_url": "https://www.perplexity.ai/?via=heliatech",
       "final_url": "https://www.perplexity.ai/?via=heliatech",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -958,22 +595,6 @@
       "healthy": true
     },
     {
-      "slug": "pictory-rate-card-leak",
-      "target_url": "https://www.pictory-rate-card-leak.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.pictory-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-rate-card-leak.com', port=443): Failed to resolve 'www.pictory-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "pictory-sandbox-calculator",
-      "target_url": "https://www.pictory-sandbox-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.pictory-sandbox-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.pictory-sandbox-calculator.com', port=443): Failed to resolve 'www.pictory-sandbox-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "plane",
       "target_url": "https://plane.so",
       "final_url": "https://plane.so/",
@@ -983,7 +604,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cQow07toEbWysz&gsxid=cQow07toEbWysz&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=a40XnsQCbFYMlN&gsxid=a40XnsQCbFYMlN&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -1007,30 +628,6 @@
       "final_url": "https://podsqueeze.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "podsqueeze-api-sandbox",
-      "target_url": "https://www.podsqueeze-api-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.podsqueeze-api-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-api-sandbox.com', port=443): Failed to resolve 'www.podsqueeze-api-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "podsqueeze-migration-calculator",
-      "target_url": "https://www.podsqueeze-migration-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.podsqueeze-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-migration-calculator.com', port=443): Failed to resolve 'www.podsqueeze-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "podsqueeze-rate-card",
-      "target_url": "https://www.podsqueeze-rate-card.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.podsqueeze-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.podsqueeze-rate-card.com', port=443): Failed to resolve 'www.podsqueeze-rate-card.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "postiz",
@@ -1061,14 +658,6 @@
       "healthy": true
     },
     {
-      "slug": "rate-card-declassified",
-      "target_url": "https://www.rate-card-declassified.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.rate-card-declassified.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.rate-card-declassified.com', port=443): Failed to resolve 'www.rate-card-declassified.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "relay",
       "target_url": "https://www.relay.app",
       "final_url": "https://relay.app/",
@@ -1091,11 +680,10 @@
     },
     {
       "slug": "replit-agent",
-      "target_url": "https://www.replit-agent.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.replit-agent.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.replit-agent.com', port=443): Failed to resolve 'www.replit-agent.com' ([Errno -2] Name or service not known)\"))"
+      "target_url": "https://replit.com/agent",
+      "final_url": "https://replit.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "resemble-ai",
@@ -1129,7 +717,7 @@
       "slug": "rippling",
       "target_url": "https://www.rippling.com",
       "final_url": "https://www.rippling.com/",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -1147,27 +735,11 @@
       "healthy": true
     },
     {
-      "slug": "riverside-sandbox",
-      "target_url": "https://www.riverside-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.riverside-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.riverside-sandbox.com', port=443): Failed to resolve 'www.riverside-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "runway",
       "target_url": "https://runwayml.com/?via=heliatech",
       "final_url": "https://runway.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "runway-tco-calculator",
-      "target_url": "https://www.runway-tco-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.runway-tco-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.runway-tco-calculator.com', port=443): Failed to resolve 'www.runway-tco-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "sanity",
@@ -1196,22 +768,6 @@
       "final_url": "https://screen.studio/?via=heliatech",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "screenstudio-migration-sandbox",
-      "target_url": "https://www.screenstudio-migration-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.screenstudio-migration-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.screenstudio-migration-sandbox.com', port=443): Failed to resolve 'www.screenstudio-migration-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "screenstudio-performance-calculator",
-      "target_url": "https://www.screenstudio-performance-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.screenstudio-performance-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.screenstudio-performance-calculator.com', port=443): Failed to resolve 'www.screenstudio-performance-calculator.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "semrush",
@@ -1258,8 +814,8 @@
     {
       "slug": "substack",
       "target_url": "https://www.substack.com",
-      "final_url": "https://www.substack.com/",
-      "status_code": 403,
+      "final_url": "https://substack.com/",
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -1305,22 +861,6 @@
       "healthy": true
     },
     {
-      "slug": "taplio-rate-card",
-      "target_url": "https://www.taplio-rate-card.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.taplio-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-rate-card.com', port=443): Failed to resolve 'www.taplio-rate-card.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
-      "slug": "taplio-sandbox",
-      "target_url": "https://www.taplio-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.taplio-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.taplio-sandbox.com', port=443): Failed to resolve 'www.taplio-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "tella",
       "target_url": "https://www.tella.tv/?via=heliatech",
       "final_url": "https://www.tella.com/?via=heliatech",
@@ -1328,20 +868,11 @@
       "healthy": true
     },
     {
-      "slug": "tella-migration-calculator",
-      "target_url": "https://www.tella-migration-calculator.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tella-migration-calculator.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tella-migration-calculator.com', port=443): Failed to resolve 'www.tella-migration-calculator.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "tome",
-      "target_url": "https://www.tome.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.tome.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tome.com', port=443): Failed to resolve 'www.tome.com' ([Errno -3] Temporary failure in name resolution)\"))"
+      "target_url": "https://gamma.app/?via=heliatech",
+      "final_url": "https://gamma.app/?via=heliatech",
+      "status_code": 403,
+      "healthy": true
     },
     {
       "slug": "transistor",
@@ -1400,14 +931,6 @@
       "healthy": true
     },
     {
-      "slug": "veed-architecture-sandbox",
-      "target_url": "https://www.veed-architecture-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.veed-architecture-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-architecture-sandbox.com', port=443): Failed to resolve 'www.veed-architecture-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "veed-io",
       "target_url": "https://www.veed.io/?via=heliatech",
       "final_url": "https://www.veed.io/?via=heliatech",
@@ -1415,20 +938,11 @@
       "healthy": true
     },
     {
-      "slug": "veed-migration-sandbox",
-      "target_url": "https://www.veed-migration-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.veed-migration-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.veed-migration-sandbox.com', port=443): Failed to resolve 'www.veed-migration-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "velocity-global",
       "target_url": "https://velocityglobal.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "final_url": "https://hellopebl.com/",
+      "status_code": 200,
+      "healthy": true
     },
     {
       "slug": "vercel",
@@ -1445,14 +959,6 @@
       "healthy": true
     },
     {
-      "slug": "voice-context-sandbox",
-      "target_url": "https://www.voice-context-sandbox.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.voice-context-sandbox.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.voice-context-sandbox.com', port=443): Failed to resolve 'www.voice-context-sandbox.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "voiceflow",
       "target_url": "https://www.voiceflow.com",
       "final_url": "https://www.voiceflow.com/",
@@ -1462,7 +968,7 @@
     {
       "slug": "wati",
       "target_url": "https://www.wati.io/?fp_ref=heliatech",
-      "final_url": "https://www.wati.io/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/ar/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -1481,14 +987,6 @@
       "healthy": true
     },
     {
-      "slug": "wondercraft-rate-card-leak",
-      "target_url": "https://www.wondercraft-rate-card-leak.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.wondercraft-rate-card-leak.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.wondercraft-rate-card-leak.com', port=443): Failed to resolve 'www.wondercraft-rate-card-leak.com' ([Errno -2] Name or service not known)\"))"
-    },
-    {
       "slug": "workato",
       "target_url": "https://www.workato.com",
       "final_url": "https://www.workato.com/",
@@ -1501,14 +999,6 @@
       "final_url": "https://writesonic.com/",
       "status_code": 200,
       "healthy": true
-    },
-    {
-      "slug": "writesonic-rate-card",
-      "target_url": "https://www.writesonic-rate-card.com",
-      "final_url": "FAILED",
-      "status_code": 0,
-      "healthy": false,
-      "error": "HTTPSConnectionPool(host='www.writesonic-rate-card.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.writesonic-rate-card.com', port=443): Failed to resolve 'www.writesonic-rate-card.com' ([Errno -2] Name or service not known)\"))"
     },
     {
       "slug": "zapier",

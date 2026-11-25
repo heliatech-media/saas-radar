@@ -38,7 +38,7 @@ Traditional presentation workflows suffer from an average task multiplier penalt
 > [!NOTE]
 > **Executive Takeaway:** "The future of enterprise communication isn't about making pixel-pushing easier; it's about removing the medium entirely so that pure intent translates instantly into visual reality."
 
-Enter Gamma. By merging generative AI with a revolutionary card-based layout engine, Gamma eliminates the friction of modern document and presentation creation. Instead of formatting elements manually, you provide a prompt, and the platform weaves text, imagery, and structural hierarchy into polished, responsive assets. For teams looking to audit exact cost structures and migration benchmarks, access the declassified [Gamma Enterprise Sandbox & TCO Rate Card Leak](/go/gamma-enterprise-sandbox).
+Enter Gamma. By merging generative AI with a revolutionary card-based layout engine, Gamma eliminates the friction of modern document and presentation creation. Instead of formatting elements manually, you provide a prompt, and the platform weaves text, imagery, and structural hierarchy into polished, responsive assets. For teams looking to audit exact cost structures and migration benchmarks, access the declassified [Gamma Enterprise Sandbox & TCO Rate Card Leak](/go/gamma).
 
 ## 1. The Genesis & Evolution: How Gamma Outpaced Legacy Dinosaurs
 

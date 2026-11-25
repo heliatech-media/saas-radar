@@ -46,7 +46,7 @@ affiliate_cta:
 | **Context Decay Rate (100-step loop)** | 68.4% | 92.1% | **1.2% (RCIA Compressed)** |
 
 > [!NOTE]
-> **Executive Takeaway:** **Declassified Sandbox Access:** Run your internal executive team's handle batch through our [Declassified LinkedIn Conversion Calculator](/go/taplio-sandbox) to model your organization's exact cost-per-impression delta before upgrading enterprise seats.
+> **Executive Takeaway:** **Declassified Sandbox Access:** Run your internal executive team's handle batch through our [Declassified LinkedIn Conversion Calculator](/go/taplio) to model your organization's exact cost-per-impression delta before upgrading enterprise seats.
 
 ```json
 {
@@ -84,7 +84,7 @@ Where:
 - $P_{re-ground} = 0.145$ (Re-grounding system latency penalty)
 - $\lambda_{decay} = 0.0089$ (Decay constant across uncompressed context windows)
 
-At step $n=45$, uncompressed legacy workflows hit a critical cost-inflection threshold, incurring a >300% unit-cost penalty relative to Taplio's native state-compressed context engine. Access our [Declassified API Rate Card Leak](/go/taplio-rate-card) to inspect raw context-compression trace logs.
+At step $n=45$, uncompressed legacy workflows hit a critical cost-inflection threshold, incurring a >300% unit-cost penalty relative to Taplio's native state-compressed context engine. Access our [Declassified API Rate Card Leak](/go/taplio) to inspect raw context-compression trace logs.
 
 <details>
 <summary><b>View WASM Memory Trace Log: Zero-Cost Memory Benchmark</b></summary>
@@ -105,4 +105,4 @@ Taplio replaces non-specialized generalist schedulers through four discrete arch
 3. **Granular Velocity Telemetry:** Tracks post-decay curves and audience demography metrics rather than superficial vanity impressions.
 4. **State-Compressed Hook Indexing:** Accesses millions of historical high-performing B2B data points to eliminate topic selection latency.
 
-To audit your pipeline velocity against live industry benchmark data, test our [Automated Migration Sandbox](/go/linkedin-automation-calculator) today.
+To audit your pipeline velocity against live industry benchmark data, test our [Automated Migration Sandbox](/go/taplio) today.

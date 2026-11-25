@@ -56,7 +56,7 @@ Engineering leadership and B2B growth teams leverage four distinct technical eng
 * **Algorithmic Magic Clips Generation:** Automatically detects speaker emotion spikes and conversational peaks to reframe 16:9 assets into vertical 9:16 social syndication formats with burned-in dynamic captions.
 
 > [!NOTE]
-> **Executive Takeaway:** Deconstruct your production bottlenecks using the [Declassified Riverside.fm Migration Sandbox](/go/riverside-sandbox), featuring live enterprise rate card leaks and multi-track capacity calculators.
+> **Executive Takeaway:** Deconstruct your production bottlenecks using the [Declassified Riverside.fm Migration Sandbox](/go/riverside-fm), featuring live enterprise rate card leaks and multi-track capacity calculators.
 
 ## Recursive Context Inflection Accounting (RCIA) & Agent Swarm Cost Modeling
 
@@ -89,7 +89,7 @@ Where $C_{base}$ represents the base token execution cost ($0.0042), $\alpha_{bl
 
 Execute this precise deployment sequence to spin up a broadcast-grade remote recording studio with zero legacy infrastructure overhead:
 
-1. **Studio Provisioning:** Access the [Declassified Migration Sandbox](/go/riverside-sandbox) to provision a new isolated studio workspace with strict 4K local recording parameters.
+1. **Studio Provisioning:** Access the [Declassified Migration Sandbox](/go/riverside-fm) to provision a new isolated studio workspace with strict 4K local recording parameters.
 2. **Participant Handshake:** Distribute browser-based access links. Ensure participants utilize Chromium-based engines to activate local hardware buffer allocation.
 3. **Waveform Verification:** Confirm all participant audio channels register solid green telemetry prior to engaging master recording execution.
 4. **Background Ingestion & Magic Clips:** Terminate recording, allow the asynchronous local buffer upload to finalize, and export AI-generated transcript highlights directly to your distribution pipeline.

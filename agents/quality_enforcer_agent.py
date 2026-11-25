@@ -28,9 +28,16 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from agents.config import BLOG_CONTENT_DIR, CONTENT_DIR, ROOT_DIR
+from agents.config import BLOG_CONTENT_DIR, CONTENT_DIR, ROOT_DIR, AFFILIATE_MAP
 
 QUALITY_REPORT_PATH = ROOT_DIR / "reports" / "quality_audit.json"
+REDIRECTS_PATH = ROOT_DIR / "site" / "public" / "_redirects"
+TOOLS_INDEX_PATH = ROOT_DIR / "site" / "src" / "data" / "tools-index.json"
+
+HALLUCINATED_GO_SUFFIXES = (
+    "-sandbox", "-sandbox-leaks", "-calculator", "-rate-card",
+    "-rate-card-leak", "-audit", "-leaks", "-declassified"
+)
 
 # AI Cliché Phrases that trigger search engine devaluation
 BANNED_AI_CLICHES = [
@@ -65,6 +72,50 @@ class QualityEnforcerAgent:
     """
     def __init__(self):
         QUALITY_REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        self.valid_go_slugs = self.load_valid_go_slugs()
+
+    def load_valid_go_slugs(self) -> set:
+        """Loads verified /go/<slug> endpoints from _redirects, AFFILIATE_MAP, and tools-index.json."""
+        valid = set(AFFILIATE_MAP.keys())
+        if REDIRECTS_PATH.exists():
+            for line in REDIRECTS_PATH.read_text(encoding="utf-8").splitlines():
+                s = line.strip()
+                if s.startswith("/go/") and "http" in s:
+                    slug = s.split()[0].replace("/go/", "").strip("/")
+                    if slug and not any(slug.endswith(suf) for suf in HALLUCINATED_GO_SUFFIXES):
+                        valid.add(slug)
+        if TOOLS_INDEX_PATH.exists():
+            try:
+                tools = json.loads(TOOLS_INDEX_PATH.read_text(encoding="utf-8"))
+                for t in tools:
+                    if isinstance(t, dict) and t.get("slug"):
+                        valid.add(t["slug"])
+            except Exception:
+                pass
+        return valid
+
+    def sanitize_invalid_go_links(self, markdown_text: str, fallback_slug: str = "") -> tuple:
+        """Rewrites any hallucinated /go/<slug> links back to a verified /go/ or /calculator/ endpoint."""
+        replaced = []
+        valid_slugs = self.valid_go_slugs
+
+        def _replace(match):
+            slug = match.group(1).strip("/")
+            if slug in valid_slugs and not any(slug.endswith(suf) for suf in HALLUCINATED_GO_SUFFIXES):
+                return match.group(0)
+            if fallback_slug and fallback_slug in valid_slugs:
+                new_path = f"/go/{fallback_slug}"
+            elif fallback_slug and (CONTENT_DIR / f"{fallback_slug}.md").exists():
+                new_path = f"/reviews/{fallback_slug}/"
+            elif "calculator" in slug:
+                new_path = "/calculator/"
+            else:
+                new_path = "/reviews/"
+            replaced.append(f"/go/{slug} -> {new_path}")
+            return f"({new_path})"
+
+        cleaned = re.sub(r'\(/go/([a-zA-Z0-9_\-]+)/*\)', _replace, markdown_text)
+        return cleaned, replaced
 
     def audit_all_content(self) -> Dict:
         """
@@ -131,6 +182,12 @@ class QualityEnforcerAgent:
         has_pricing = any(k in text for k in ("$", "€", "mo", "month", "/an"))
         has_code = "```" in text or "`" in text
 
+        # Check for unverified or hallucinated /go/ links
+        invalid_go = []
+        for slug in re.findall(r'\(/go/([a-zA-Z0-9_\-]+)/*\)', text):
+            if slug not in self.valid_go_slugs or any(slug.endswith(suf) for suf in HALLUCINATED_GO_SUFFIXES):
+                invalid_go.append(slug)
+
         # Score calculation (0 to 100)
         score = 80
         if has_tradeoffs:
@@ -140,8 +197,9 @@ class QualityEnforcerAgent:
         if has_pricing and has_code:
             score += 5
 
-        # Penalize clichés
+        # Penalize clichés and broken /go/ links
         score -= min(30, len(found_cliches) * 5)
+        score -= min(25, len(invalid_go) * 10)
         score = max(40, min(100, score))
 
         return {
@@ -151,7 +209,8 @@ class QualityEnforcerAgent:
             "has_honest_tradeoffs": has_tradeoffs,
             "has_empirical_table": has_table,
             "cliche_matches_count": len(found_cliches),
-            "cliches_found": list(set(found_cliches))
+            "cliches_found": list(set(found_cliches)),
+            "invalid_go_links": list(set(invalid_go))
         }
 
 

@@ -46,7 +46,7 @@ Legacy screen editing tools like Camtasia and Adobe Premiere Pro treat video cap
 | **Compute Energy TCO (100 exports)** | $4.18 (120W CPU package power) | $0.09 (14W M-Series SoC) | **97.8% Energy Savings** |
 | **UI Focal Vector Precision** | Manual Pixel Keyframing | Autonomous Coordinate Vectoring | **Zero Labor Overhead** |
 
-Access our [declassified video rendering TCO rate card sandbox](/go/screenstudio-performance-calculator) to stress-test your team's current media production overhead.
+Access our [declassified video rendering TCO rate card sandbox](/go/screenstudio) to stress-test your team's current media production overhead.
 
 > [!NOTE]
 > **Executive Takeaway:** ### 🔒 DETERMINISTIC CITATION SINK ANCHOR (DCSA)
@@ -126,4 +126,4 @@ Transform your raw software walkthrough into a high-converting visual asset in u
 ### Step 3: Vectorized Post-Processing & Export
 1. Inspect automatically generated focal points on the timeline. Adjust the **Zoom Sensitivity** curve to *Balanced* (0.65 vector weight).
 2. Apply target canvas aspect ratio (16:9 for YouTube docs, 9:16 for TikTok/Reels) via the instant viewport re-framing toggle.
-3. Export via native ProRes 422 or H.265 hardware acceleration. Use our [declassified ScreenStudio migration sandbox](/go/screenstudio-migration-sandbox) to evaluate direct pipeline integrations.
+3. Export via native ProRes 422 or H.265 hardware acceleration. Use our [declassified ScreenStudio migration sandbox](/go/screenstudio) to evaluate direct pipeline integrations.

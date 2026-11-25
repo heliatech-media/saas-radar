@@ -49,7 +49,7 @@ Pictory shifts the post-production operational baseline by decoupling video edit
 | **B-Roll Matching Cost** | $150/clip (Stock Sourcing) | $0.00 (Getty API Native) | **-100% Variable** |
 | **TCO at 10,000 Clips/Year** | $425,000 | $18,500 | **-$406,500 Net Savings** |
 
-Engineers can model custom infrastructure costs using our [declassified testing sandbox](/go/pictory-sandbox-calculator) to stress-test rendering pipeline overhead against internal benchmark targets.
+Engineers can model custom infrastructure costs using our [declassified testing sandbox](/go/pictory) to stress-test rendering pipeline overhead against internal benchmark targets.
 
 ---
 
@@ -99,4 +99,4 @@ By evaluating sentence-level embedding vectors against licensed asset taxonomy t
 ### C. Automated Highlight Extraction & Subtitle Engine
 Pictory's summarization layer tracks acoustic energy peaks, speech density, and keyword frequency vectors to extract high-yield 60-second social nuggets from 60-minute recordings. Closed captions are rendered directly onto output layers with dynamic brand styling applied via automated CSS layout rule sets.
 
-To audit corporate rate cards and tier pricing structures, access the verified [enterprise rate card leak](/go/pictory-rate-card-leak).
+To audit corporate rate cards and tier pricing structures, access the verified [enterprise rate card leak](/go/pictory).

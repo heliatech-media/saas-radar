@@ -85,7 +85,7 @@ flowchart TD
 Deploying InVideo AI into an enterprise workflow requires a disciplined prompt engineering methodology. Follow this structured blueprint to eliminate generation drift and ensure broadcast-ready output.
 
 ### Phase 1: Semantic Prompt Engineering
-1. Access your InVideo AI operational dashboard via our [declassified testing sandbox](/go/invideo-ai-sandbox).
+1. Access your InVideo AI operational dashboard via our [declassified testing sandbox](/go/invideo-ai).
 2. Construct a bounded prompt specifying domain constraints, exact runtime, and brand voice. *Example: "Generate a 60-second technical explainer for senior DevOps engineers detailing zero-downtime Kubernetes cluster migrations. Tone: Authoritative, precise, fast-paced."*
 3. Lock down voice profile parameters (e.g., synthetic neural engine, neutral American accent, 1.1x cadence multiplier).
 
