@@ -6,7 +6,7 @@ tagline: AI-powered content marketing platform engineered specifically for podca
 category: Audio/Podcasting
 rating: 4.3
 website_url: https://www.capsho.com
-affiliate_url: https://www.capsho.com
+affiliate_url: "https://www.capsho.com/?via=heliatech"
 summary: Capsho is an autonomous content generation suite designed to convert podcast
   audio and video files into complete marketing collateral. It automates post-production
   tasks by generating episode titles, detailed show notes, timestamps, blog posts,

@@ -86,7 +86,7 @@ Create a new base in [Airtable](/reviews/airtable) titled **Enterprise Client Po
 ### Step 2: Establish the Softr Data Pipeline
 1. Log into your Softr dashboard and click **Create New Application**.
 2. Select **Client Portal** from the application templates or start from a blank canvas.
-3. Navigate to **Settings -> Data Sources** and select **Airtable**. Authorize your workspace using personal access tokens and map the application to your *Enterprise Client Portal* base.
+3. Navigate to **Settings -> Data Sources** and select **[Airtable](/reviews/airtable)**. Authorize your workspace using personal access tokens and map the application to your *Enterprise Client Portal* base.
 
 ### Step 3: Configure Role-Based User Groups
 1. Inside Softr, head to **Users -> User Groups**.

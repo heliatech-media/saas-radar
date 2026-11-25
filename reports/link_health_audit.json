@@ -1,10 +1,116 @@
 {
-  "timestamp": "2026-11-25 11:00:34",
+  "timestamp": "2026-11-25 16:34:58",
   "total_links_audited": 144,
-  "healthy_links": 144,
-  "broken_links_count": 0,
-  "health_rate": "100.0%",
-  "broken_links": [],
+  "healthy_links": 129,
+  "broken_links_count": 15,
+  "health_rate": "89.6%",
+  "broken_links": [
+    {
+      "slug": "brevo",
+      "target_url": "https://brevo.partnerlinks.io/heliatech",
+      "final_url": "https://brevo.partnerlinks.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "capcut",
+      "target_url": "https://capcut.pxf.io/heliatech",
+      "final_url": "https://capcut.pxf.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "capcut-pro",
+      "target_url": "https://capcut.pxf.io/heliatech",
+      "final_url": "https://capcut.pxf.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "clickup",
+      "target_url": "https://clickup.pxf.io/c/heliatech",
+      "final_url": "https://clickup.pxf.io/c/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "descript",
+      "target_url": "https://descript.grsm.io/heliatech",
+      "final_url": "https://descript.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "hubspot",
+      "target_url": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
+      "final_url": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "jasper-ai",
+      "target_url": "https://partnerstack.com/jasper?via=heliatech",
+      "final_url": "https://partnerstack.com/jasper?via=heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "klaviyo",
+      "target_url": "https://partnerstack.com/klaviyo?via=heliatech",
+      "final_url": "https://partnerstack.com/klaviyo?via=heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "lusha",
+      "target_url": "https://lusha.pxf.io/heliatech",
+      "final_url": "https://lusha.pxf.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "printify",
+      "target_url": "https://printify.pxf.io/c/heliatech",
+      "final_url": "https://printify.pxf.io/c/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "semrush",
+      "target_url": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+      "final_url": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "typeform",
+      "target_url": "https://typeform.grsm.io/heliatech",
+      "final_url": "https://typeform.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "voiceflow",
+      "target_url": "https://voiceflow.grsm.io/heliatech",
+      "final_url": "https://voiceflow.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "webflow",
+      "target_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
+      "final_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
+      "status_code": 404,
+      "healthy": false
+    },
+    {
+      "slug": "writesonic",
+      "target_url": "https://writesonic.grsm.io/heliatech",
+      "final_url": "https://writesonic.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
+    }
+  ],
   "audit_details": [
     {
       "slug": "activepieces",
@@ -85,10 +191,10 @@
     },
     {
       "slug": "brevo",
-      "target_url": "https://www.brevo.com",
-      "final_url": "https://www.brevo.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://brevo.partnerlinks.io/heliatech",
+      "final_url": "https://brevo.partnerlinks.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "cal-com",
@@ -99,22 +205,22 @@
     },
     {
       "slug": "capcut",
-      "target_url": "https://www.capcut.com",
-      "final_url": "https://www.capcut.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://capcut.pxf.io/heliatech",
+      "final_url": "https://capcut.pxf.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "capcut-pro",
-      "target_url": "https://www.capcut-pro.com",
-      "final_url": "https://capcut-pro.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://capcut.pxf.io/heliatech",
+      "final_url": "https://capcut.pxf.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "capsho",
-      "target_url": "https://www.capsho.com",
-      "final_url": "https://www.capsho.com/",
+      "target_url": "https://www.capsho.com/?via=heliatech",
+      "final_url": "https://www.capsho.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -155,10 +261,10 @@
     },
     {
       "slug": "clickup",
-      "target_url": "https://www.clickup.com",
-      "final_url": "https://clickup.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://clickup.pxf.io/c/heliatech",
+      "final_url": "https://clickup.pxf.io/c/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "close-crm",
@@ -204,10 +310,10 @@
     },
     {
       "slug": "descript",
-      "target_url": "https://www.descript.com",
-      "final_url": "https://www.descript.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://descript.grsm.io/heliatech",
+      "final_url": "https://descript.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "dumpling-ai",
@@ -219,7 +325,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=hKXNsRlQ6XMG0R&gsxid=hKXNsRlQ6XMG0R&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=7oShFhkhv6Fial&gsxid=7oShFhkhv6Fial&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -309,10 +415,10 @@
     },
     {
       "slug": "hubspot",
-      "target_url": "https://www.hubspot.com",
-      "final_url": "https://www.hubspot.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
+      "final_url": "https://hubspot.pxf.io/c/4198270/123456/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "instantly-ai",
@@ -344,10 +450,10 @@
     },
     {
       "slug": "jasper-ai",
-      "target_url": "https://www.jasper-ai.com",
-      "final_url": "https://www.jasper-ai.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://partnerstack.com/jasper?via=heliatech",
+      "final_url": "https://partnerstack.com/jasper?via=heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "jira",
@@ -386,10 +492,10 @@
     },
     {
       "slug": "klaviyo",
-      "target_url": "https://www.klaviyo.com",
-      "final_url": "https://www.klaviyo.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://partnerstack.com/klaviyo?via=heliatech",
+      "final_url": "https://partnerstack.com/klaviyo?via=heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "koalawriter",
@@ -435,10 +541,10 @@
     },
     {
       "slug": "lusha",
-      "target_url": "https://www.lusha.com",
-      "final_url": "https://www.lusha.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://lusha.pxf.io/heliatech",
+      "final_url": "https://lusha.pxf.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "make",
@@ -569,7 +675,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IcbnG7GfHWzyNI&gsxid=IcbnG7GfHWzyNI&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=cPG51HyAIXhD5a&gsxid=cPG51HyAIXhD5a&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -577,7 +683,7 @@
       "slug": "perplexity-enterprise",
       "target_url": "https://www.perplexity.ai/?via=heliatech",
       "final_url": "https://www.perplexity.ai/?via=heliatech",
-      "status_code": 200,
+      "status_code": 403,
       "healthy": true
     },
     {
@@ -604,7 +710,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=a40XnsQCbFYMlN&gsxid=a40XnsQCbFYMlN&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=z9dDOljfrkMC6S&gsxid=z9dDOljfrkMC6S&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -645,10 +751,10 @@
     },
     {
       "slug": "printify",
-      "target_url": "https://www.printify.com",
-      "final_url": "https://printify.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://printify.pxf.io/c/heliatech",
+      "final_url": "https://printify.pxf.io/c/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "rask-ai",
@@ -717,7 +823,7 @@
       "slug": "rippling",
       "target_url": "https://www.rippling.com",
       "final_url": "https://www.rippling.com/",
-      "status_code": 403,
+      "status_code": 200,
       "healthy": true
     },
     {
@@ -771,10 +877,10 @@
     },
     {
       "slug": "semrush",
-      "target_url": "https://www.semrush.com",
-      "final_url": "https://www.semrush.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+      "final_url": "https://semrush.sjv.io/c/4198145/1199321/13055?subId1=heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "senja",
@@ -897,10 +1003,10 @@
     },
     {
       "slug": "typeform",
-      "target_url": "https://www.typeform.com",
-      "final_url": "https://www.typeform.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://typeform.grsm.io/heliatech",
+      "final_url": "https://typeform.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "typing-mind",
@@ -939,7 +1045,7 @@
     },
     {
       "slug": "velocity-global",
-      "target_url": "https://velocityglobal.com",
+      "target_url": "https://hellopebl.com/",
       "final_url": "https://hellopebl.com/",
       "status_code": 200,
       "healthy": true
@@ -960,24 +1066,24 @@
     },
     {
       "slug": "voiceflow",
-      "target_url": "https://www.voiceflow.com",
-      "final_url": "https://www.voiceflow.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://voiceflow.grsm.io/heliatech",
+      "final_url": "https://voiceflow.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "wati",
       "target_url": "https://www.wati.io/?fp_ref=heliatech",
-      "final_url": "https://www.wati.io/ar/?fp_ref=heliatech",
+      "final_url": "https://www.wati.io/?fp_ref=heliatech",
       "status_code": 200,
       "healthy": true
     },
     {
       "slug": "webflow",
-      "target_url": "https://www.webflow.com",
-      "final_url": "https://webflow.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
+      "final_url": "https://webflow.pxf.io/c/4923491/1231885/15172",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "wondercraft-ai",
@@ -995,10 +1101,10 @@
     },
     {
       "slug": "writesonic",
-      "target_url": "https://www.writesonic.com",
-      "final_url": "https://writesonic.com/",
-      "status_code": 200,
-      "healthy": true
+      "target_url": "https://writesonic.grsm.io/heliatech",
+      "final_url": "https://writesonic.grsm.io/heliatech",
+      "status_code": 404,
+      "healthy": false
     },
     {
       "slug": "zapier",

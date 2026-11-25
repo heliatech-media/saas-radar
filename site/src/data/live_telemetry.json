@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-25 03:54:56 UTC",
+  "last_updated": "2026-11-25 16:34:38 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 112,
+    "total_monetized_tools": 113,
     "total_published_investigations": 277,
     "reviews_audited": 112,
     "masterclasses_and_duels": 165,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$39,200 USD",
+    "projected_monthly_mrr": "$39,550 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -126,6 +126,11 @@
       "slug": "capcut",
       "destination": "https://capcut.pxf.io/heliatech",
       "type": "Catalog Edge Hop"
+    },
+    {
+      "slug": "capsho",
+      "destination": "https://www.capsho.com/?via=heliatech",
+      "type": "Commission Partner"
     },
     {
       "slug": "captions",
@@ -635,6 +640,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-20 10:54:16",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-20 10:51:20",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Pictory: The Genesis of AI Text-to-Video Engine and the Enterprise Workflow Guide for 2026",
+      "category": "CONTENT",
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Pictory: The Genesis of AI Text-to-Video Engine and the Enterprise Workflow Guide for 2026\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/pictory-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/pictory-evolution-guide-2026/"
+    },
+    {
       "timestamp": "2026-11-20 10:48:52",
       "title": "⭐ NOUVELLE REVUE LOGICIEL : Pictory",
       "category": "REVIEW",
@@ -654,20 +673,6 @@
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
-    },
-    {
-      "timestamp": "2026-11-20 01:59:20",
-      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Miro: The Genesis of Visual Collaboration and the Enterprise Playbook for Distributed Velocity",
-      "category": "CONTENT",
-      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Miro: The Genesis of Visual Collaboration and the Enterprise Playbook for Distributed Velocity\n• **Catégorie :** Productivity/Collaboration\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/miro-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-      "link": "https://heliatech.online/blog/miro-evolution-guide-2026/"
-    },
-    {
-      "timestamp": "2026-11-20 01:58:11",
-      "title": "⭐ NOUVELLE REVUE LOGICIEL : Miro",
-      "category": "REVIEW",
-      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Miro\n• **Catégorie :** Productivity/Collaboration\n• **Note globale :** 4.6/10\n• **Cible idéale :** Product teams, UX designers, and distributed engineering squads requiring visual alignment.\n\n👉 Lire la fiche d'audit complète :",
-      "link": "https://heliatech.online/reviews/miro/"
     }
   ]
 }

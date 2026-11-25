@@ -174,7 +174,7 @@ For agencies managing client deliverables or internal ops teams replacing spread
 
 ### Can I build a SaaS app on Softr?
 
-Yes, you can build low-to-medium complexity SaaS applications using Softr paired with Airtable/Google Sheets as a backend and Stripe for user payments. However, complex multi-tenant logic or high-frequency API operations may require external backend workflows.
+Yes, you can build low-to-medium complexity SaaS applications using Softr paired with [Airtable](/reviews/airtable)/Google Sheets as a backend and Stripe for user payments. However, complex multi-tenant logic or high-frequency API operations may require external backend workflows.
 
 ### How does Softr handle user security and access control?
 
