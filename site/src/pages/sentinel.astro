@@ -1320,6 +1320,10 @@ const catalogData = {
           if (computedHash === AUTHORIZED_DIGEST) {
             sessionStorage.setItem(SESSION_KEY, computedHash);
             localStorage.setItem(ADMIN_FLAG, 'true'); // Filter out owner
+            try {
+              document.cookie = "_helia_sentinel_auth=1; Path=/; SameSite=Lax; Secure; Max-Age=86400";
+              document.cookie = "_helia_sentinel_auth_token=" + computedHash + "; Path=/; SameSite=Lax; Secure; Max-Age=86400";
+            } catch (_) {}
             keyInput.value = '';
             authError.classList.add('hidden');
             checkAuth();
@@ -1332,6 +1336,10 @@ const catalogData = {
 
         logoutBtn.onclick = function() {
           sessionStorage.removeItem(SESSION_KEY);
+          try {
+            document.cookie = "_helia_sentinel_auth=; Path=/; Max-Age=0";
+            document.cookie = "_helia_sentinel_auth_token=; Path=/; Max-Age=0";
+          } catch (_) {}
           checkAuth();
         };
 

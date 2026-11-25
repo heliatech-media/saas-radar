@@ -8,10 +8,13 @@
   Content-Security-Policy: upgrade-insecure-requests;
 
 /ads.txt
+  ! Cache-Control
   Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *
 
 /sentinel/*
+  ! Cache-Control
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
   Cache-Control: private, no-cache, no-store, must-revalidate
 
