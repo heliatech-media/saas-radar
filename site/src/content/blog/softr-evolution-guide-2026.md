@@ -79,7 +79,7 @@ flowchart LR
 Follow this tactical blueprint to construct a secure, authenticated Client Portal powered by [Airtable](/reviews/airtable) and Softr.
 
 ### Step 1: Prepare the Data Foundation (Airtable)
-Create a new base in Airtable titled **Enterprise Client Portal**. Set up two core tables:
+Create a new base in [Airtable](/reviews/airtable) titled **Enterprise Client Portal**. Set up two core tables:
 1. **Clients**: Columns for `Client ID`, `Name`, `Company Email`, `Status`, and `Account Manager`.
 2. **Projects**: Columns for `Project Name`, `Status` (Single Select), `Budget`, `Deliverables` (Attachment), and `Client Link` (Linked Record connecting to the Clients table).
 

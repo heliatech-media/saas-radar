@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-24T19:53:11.903336",
+  "timestamp": "2026-11-25T03:55:56.278140",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 275,
-    "total_redirects_active": 171,
-    "new_redirects_healed": 60,
+    "total_content_files_scanned": 277,
+    "total_redirects_active": 173,
+    "new_redirects_healed": 61,
     "internal_links_repaired": 0,
     "external_targets_repaired": 17,
     "content_files_modified": 0
@@ -100,6 +100,11 @@
       "slug": "descript-migration-calculator",
       "target_url": "https://www.descript-migration-calculator.com",
       "source_file": "descript-evolution-guide-2026.md"
+    },
+    {
+      "slug": "capsho",
+      "target_url": "https://www.capsho.com",
+      "source_file": "capsho-evolution-guide-2026.md"
     },
     {
       "slug": "writesonic-rate-card",

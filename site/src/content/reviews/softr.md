@@ -168,7 +168,7 @@ Softr shines as a rapid web application wrapper for structured relational databa
 
 However, Softr is strictly constrained by its block-based layout paradigm. Teams requiring pixel-perfect designs, custom canvas positioning, or complex client-side state manipulation will quickly run into design walls. Furthermore, logic complex enough to demand custom back-end endpoints will require routing through webhooks to [Make](/reviews/make), [Zapier](/reviews/zapier), or serverless functions.
 
-For agencies managing client deliverables or internal ops teams replacing spreadsheets with controlled interfaces, Softr delivers exceptional speed-to-value. If your project relies heavily on Airtable schema and requires clear user isolation, Softr is the most efficient vector on the market. If your app requires heavy algorithmic computations or non-standard UI workflows, consider Bubble or [Retool](/reviews/retool).
+For agencies managing client deliverables or internal ops teams replacing spreadsheets with controlled interfaces, Softr delivers exceptional speed-to-value. If your project relies heavily on [Airtable](/reviews/airtable) schema and requires clear user isolation, Softr is the most efficient vector on the market. If your app requires heavy algorithmic computations or non-standard UI workflows, consider Bubble or [Retool](/reviews/retool).
 
 ## Frequently Asked Questions
 

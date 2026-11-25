@@ -6,7 +6,7 @@ tagline: AI-powered LinkedIn content creation, scheduling, and analytics tailore
 category: Social Media Automation
 rating: 4.4
 website_url: https://taplio.com
-affiliate_url: https://taplio.com
+affiliate_url: "https://taplio.com/?via=heliatech"
 summary: Taplio is an all-in-one LinkedIn growth platform engineered specifically
   for solo founders, executive personal brands, and agency marketers. It combines
   AI draft generation trained on top-performing posts, advanced post scheduling, automated

@@ -2,7 +2,7 @@
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
   "last_cycle_timestamp": "2026-11-24T19:56:44.780531",
-  "total_heuristics_stored": 87,
+  "total_heuristics_stored": 88,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -363,6 +363,13 @@
       "domain": "social",
       "score": 95,
       "critique_summary": "Violates HEUR-SOC-04, HEUR-SOC-05, and HEUR-SOC-06 by omitting an raw unmasked ASCII data matrix and dependency tree; contains a low-authority marketi"
+    },
+    {
+      "timestamp": "2026-11-25T03:53:05.559193",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "cro",
+      "heuristic_name": "Chromatic Affordance Synthesis & Neural Foveal Trapping",
+      "curriculum_module": "Visual Affordance Hierarchy: High-contrast glowing accents and official recommendation badges that double click-through rates"
     }
   ]
 }

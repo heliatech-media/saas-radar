@@ -109,6 +109,16 @@
     "commission_rate": "20% - 35% recurring"
   },
   {
+    "name": "Capsho",
+    "slug": "capsho",
+    "tagline": "AI-powered content marketing platform engineered specifically for podcasters and media creators.",
+    "category": "Audio/Podcasting",
+    "rating": 4.3,
+    "starting_price": "$29/mo",
+    "best_for": "Solo podcasters, media agencies, and content teams seeking to streamline podcast post-production marketing without writing collateral from scratch.",
+    "affiliate_url": "https://www.capsho.com"
+  },
+  {
     "name": "Captions",
     "slug": "captions",
     "tagline": "An AI-powered video editor designed to create, edit, and translate professional talking-head videos with a single tap.",
@@ -979,7 +989,8 @@
     "rating": 4.4,
     "starting_price": "$39/mo",
     "best_for": "B2B founders, agency owners, creators, and executive ghostwriters building personal brands exclusively on LinkedIn.",
-    "affiliate_url": "https://taplio.com"
+    "affiliate_url": "https://taplio.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Tella",

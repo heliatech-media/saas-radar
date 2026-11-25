@@ -209,7 +209,8 @@ AFFILIATE_MAP = {
     "ghost": "https://ghost.org/?via=heliatech",
     "wondercraft-ai": "https://www.wondercraft.ai/?via=heliatech",
     "softr": "https://www.softr.io/?via=heliatech",
-    "flutterflow": "https://flutterflow.io?fpr=heliatech"
+    "flutterflow": "https://flutterflow.io?fpr=heliatech",
+    "taplio": "https://taplio.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
