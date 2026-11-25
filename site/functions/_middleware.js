@@ -18,8 +18,10 @@ export async function onRequest(context) {
     return Response.redirect('https://heliatech.online/', 301);
   }
 
-  // 3. Static duplicate blog redirects to canonical guides
+  // 3. Static duplicate blog redirects & canonical /reviews/ -> /radar/ 301
   const duplicateRedirects = {
+    '/reviews': '/radar/',
+    '/reviews/': '/radar/',
     '/blog/riverside': '/blog/riverside-evolution-guide-2026/',
     '/blog/riverside/': '/blog/riverside-evolution-guide-2026/',
     '/blog/riverside-fm-evolution-guide-2026': '/blog/riverside-evolution-guide-2026/',
@@ -110,12 +112,17 @@ export async function onRequest(context) {
     );
 
     const isLocalhost = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
+    const isApiRoute = url.pathname.startsWith('/api/sentinel');
+    const isAuthorized = isApiRoute
+      ? (hasCfAccess || hasBearer || hasSessionCookie || isSameOrigin || isLocalhost || hasAdminHeader)
+      : (hasCfAccess || hasBearer || hasSessionCookie || isLocalhost);
 
-    if (hasCfAccess || hasBearer || hasSessionCookie || isSameOrigin || isLocalhost || hasAdminHeader) {
+    if (isAuthorized) {
       const response = await context.next();
-      response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet');
-      response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-      return response;
+      const secured = new Response(response.body, response);
+      secured.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet');
+      secured.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+      return secured;
     }
 
     // For API routes, return clean JSON 401 instead of HTML to prevent client-side parsing failures
