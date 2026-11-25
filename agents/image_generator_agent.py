@@ -214,10 +214,47 @@ Visual & Aesthetic Directives:
                 page.set_content(html)
                 page.screenshot(path=str(png_path), type="png")
                 browser.close()
-            self.log(f"Rasterized OpenGraph PNG: {png_path.name} ({round(png_path.stat().st_size / 1024, 1)} KB)", "🖼️")
+            self.log(f"Rasterized OpenGraph PNG (Playwright): {png_path.name} ({round(png_path.stat().st_size / 1024, 1)} KB)", "🖼️")
             return True
         except Exception as e:
-            self.log(f"Rasterization notice: {e}", "⚠️")
+            self.log(f"Playwright rasterization fallback triggered ({e})", "⚠️")
+
+        # Headless CI fallback using Pillow (always available in requirements.txt)
+        try:
+            import re
+            import html as html_lib
+            from PIL import Image, ImageDraw, ImageFont
+
+            svg_content = svg_path.read_text(encoding="utf-8")
+            texts = [html_lib.unescape(t.strip()) for t in re.findall(r"<text[^>]*>(.*?)</text>", svg_content, re.DOTALL)]
+            tool_title = texts[1] if len(texts) > 1 else svg_path.stem.upper()
+            category_line = texts[2] if len(texts) > 2 else "ENTERPRISE SOFTWARE"
+
+            img = Image.new("RGB", (1200, 630), (3, 7, 18))
+            draw = ImageDraw.Draw(img)
+            # Subtle grid & cyber accent bar
+            for x in range(0, 1200, 40):
+                draw.line([(x, 0), (x, 630)], fill=(15, 23, 42), width=1)
+            for y in range(0, 630, 40):
+                draw.line([(0, y), (1200, y)], fill=(15, 23, 42), width=1)
+            draw.rectangle([(100, 140), (350, 174)], outline=(6, 182, 212), fill=(8, 47, 73))
+            draw.line([(100, 360), (1100, 360)], fill=(51, 65, 85), width=2)
+
+            font_lg = ImageFont.load_default(size=60) if hasattr(ImageFont, "load_default") else ImageFont.load_default()
+            font_md = ImageFont.load_default(size=26) if hasattr(ImageFont, "load_default") else ImageFont.load_default()
+            font_sm = ImageFont.load_default(size=18) if hasattr(ImageFont, "load_default") else ImageFont.load_default()
+
+            draw.text((118, 147), "HELIATECH DOSSIER", fill=(56, 189, 248), font=font_sm)
+            draw.text((100, 220), tool_title[:28], fill=(255, 255, 255), font=font_lg)
+            draw.text((100, 305), category_line[:52], fill=(6, 182, 212), font=font_md)
+            draw.text((100, 405), "Enterprise Software Teardown & Engineering Benchmark", fill=(148, 163, 184), font=font_sm)
+            draw.text((100, 475), "BENCHMARK GRADE: VERIFIED 2026 EDITION", fill=(6, 182, 212), font=font_sm)
+
+            img.save(str(png_path), format="PNG", optimize=True)
+            self.log(f"Rasterized OpenGraph PNG (Pillow CI fallback): {png_path.name} ({round(png_path.stat().st_size / 1024, 1)} KB)", "🖼️")
+            return True
+        except Exception as e2:
+            self.log(f"Rasterization notice: {e2}", "⚠️")
             return False
 
     def ensure_image_for_article(self, article_path: Path) -> str:

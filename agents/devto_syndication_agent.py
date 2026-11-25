@@ -160,7 +160,15 @@ def publish_article(
     title = fm.get("title", slug.replace("-", " ").title())
     description = fm.get("description", title)
     canonical_url = f"https://heliatech.online/blog/{slug}"
-    main_image = f"https://heliatech.online/images/blog/{slug}.png"
+    raw_img = fm.get("image") or f"/images/blog/{fm.get('tool_slug') or slug}.png"
+    img_stem = Path(str(raw_img)).stem
+    blog_img_dir = ROOT_DIR / "site" / "public" / "images" / "blog"
+    if (blog_img_dir / f"{img_stem}.png").exists():
+        main_image = f"https://heliatech.online/images/blog/{img_stem}.png"
+    elif (blog_img_dir / f"{slug}.png").exists():
+        main_image = f"https://heliatech.online/images/blog/{slug}.png"
+    else:
+        main_image = "https://heliatech.online/images/blog/cursor.png"
 
     # Tags formatting
     raw_tags = []
