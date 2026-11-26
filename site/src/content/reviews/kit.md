@@ -140,7 +140,7 @@ Kit is a robust email marketing engine built for creators, offering sophisticate
 
 Kit is the gold standard for creators who view their email list as a primary business asset rather than just a broadcast channel. Its architecture is built around 'tags' rather than 'lists,' which prevents the common pitfall of paying for the same subscriber multiple times across different segments. This makes it significantly more efficient for managing complex content funnels than traditional ESPs like Mailchimp.
 
-However, it is not for everyone. If your primary goal is a highly stylized, image-heavy newsletter design, you will find Kit’s editor restrictive. It prioritizes text-based, high-deliverability emails that feel personal. Furthermore, as your list grows into the tens of thousands, the cost-per-subscriber can become a significant line item, leading some to migrate to more 'newsletter-native' platforms like Beehiiv.
+However, it is not for everyone. If your primary goal is a highly stylized, image-heavy newsletter design, you will find Kit’s editor restrictive. It prioritizes text-based, high-deliverability emails that feel personal. Furthermore, as your list grows into the tens of thousands, the cost-per-subscriber can become a significant line item, leading some to migrate to more 'newsletter-native' platforms like [Beehiiv](/reviews/beehiiv).
 
 Ultimately, you should choose Kit if you are building an automated business. If you are a solo creator or a small team that relies on evergreen funnels to sell courses, coaching, or digital products, the ROI on Kit’s automation suite is unmatched. It turns a static list into a self-sustaining revenue machine.
 

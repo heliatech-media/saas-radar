@@ -112,7 +112,7 @@ While Softr offers extraordinary velocity, enterprise architects must evaluate i
 | Feature Category | Softr Capability | Trade-off / Limitation |
 | :--- | :--- | :--- |
 | **Design Customization** | Modular drag-and-drop pre-built block library. Fast UI creation. | Strict block-based layout model limits free-form UI design and bespoke responsive pixel adjustments. |
-| **Data Integration** | Native real-time sync with Airtable, Google Sheets, BigQuery, and SQL databases. | Deep complex multi-relational database queries require third-party tools like [Make](/reviews/make) or [Zapier](/reviews/zapier). |
+| **Data Integration** | Native real-time sync with [Airtable](/reviews/airtable), Google Sheets, BigQuery, and SQL databases. | Deep complex multi-relational database queries require third-party tools like [Make](/reviews/make) or [Zapier](/reviews/zapier). |
 | **User Security & Access** | Built-in authentication, magic links, SSO, and granular block-level RBAC. | Highly complex enterprise SSO SAML setups require top-tier pricing plans. |
 | **Monetization** | Direct out-of-the-box Stripe payment gateways and subscription management. | Limited native support for non-Stripe local payment gateways without custom webhooks. |
 | **Development Speed** | Go from raw spreadsheet to live production app in under 1 hour. | Advanced backend logic requires custom JavaScript injection or API webhooks. |

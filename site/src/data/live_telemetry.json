@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-26 01:22:22 UTC",
+  "last_updated": "2026-11-26 11:42:47 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
@@ -640,6 +640,20 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-21 01:54:31",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : Tella",
+      "category": "REVIEW",
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Tella\n• **Catégorie :** AI Video\n• **Note globale :** 4.7/10\n• **Cible idéale :** Product managers, designers, and customer success teams who need to create polished, branded video content quickly.\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/tella/"
+    },
+    {
+      "timestamp": "2026-11-20 19:32:56",
+      "title": "Cycle Autonome #Cleanvoice AI",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Cleanvoice AI) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-20 19:32:46",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
@@ -659,20 +673,6 @@
       "category": "REVIEW",
       "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Cleanvoice AI\n• **Catégorie :** Audio AI\n• **Note globale :** 4.4/10\n• **Cible idéale :** Podcasters, audio engineers, remote interviewers, and media production teams seeking automated vocal cleanup.\n\n👉 Lire la fiche d'audit complète :",
       "link": "https://heliatech.online/reviews/cleanvoice-ai/"
-    },
-    {
-      "timestamp": "2026-11-20 11:04:00",
-      "title": "Cycle Autonome #Pictory",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Pictory) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-20 10:54:16",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
     }
   ]
 }
