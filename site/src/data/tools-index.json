@@ -434,15 +434,14 @@
     "affiliate_url": "https://julius.ai/?via=heliatech"
   },
   {
-    "name": "Kit",
+    "name": "Kit (formerly ConvertKit)",
     "slug": "kit",
-    "tagline": "The creator-first email marketing platform built to scale newsletters and digital product sales.",
-    "category": "Creator SaaS & Newsletters",
-    "rating": 4.6,
-    "starting_price": "$29/mo",
-    "best_for": "Professional creators, newsletter publishers, and independent educators scaling digital businesses.",
-    "affiliate_url": "https://kit.com/?via=heliatech",
-    "commission_rate": "30% recurring for up to 12 months"
+    "tagline": "The creator-focused email marketing platform designed for professional newsletters and automated funnels.",
+    "category": "Newsletter",
+    "rating": 4.5,
+    "starting_price": "$25/mo",
+    "best_for": "Professional creators, newsletter operators, and small-to-medium businesses focused on list growth and automated monetization.",
+    "affiliate_url": "https://kit.com/?via=heliatech"
   },
   {
     "name": "Klap",

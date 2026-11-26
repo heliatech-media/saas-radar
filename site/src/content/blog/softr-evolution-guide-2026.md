@@ -90,7 +90,7 @@ Create a new base in [Airtable](/reviews/airtable) titled **Enterprise Client Po
 
 ### Step 3: Configure Role-Based User Groups
 1. Inside Softr, head to **Users -> User Groups**.
-2. Create Group 1: **Client Users**. Set the mapping rule: `Logged-in User's Email matches Client Email in Airtable`.
+2. Create Group 1: **Client Users**. Set the mapping rule: `Logged-in User's Email matches Client Email in [Airtable](/reviews/airtable)`.
 3. Create Group 2: **Account Managers**. Set rule: `User Role equals Manager`.
 
 ### Step 4: Build Dynamic Data Layouts & Visibility Rules

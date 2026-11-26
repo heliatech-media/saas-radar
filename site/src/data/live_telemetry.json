@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-25 16:34:38 UTC",
+  "last_updated": "2026-11-26 01:22:22 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
@@ -640,38 +640,38 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-20 19:32:46",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 21 lien(s) d'affiliation en anomalie :\n• `cleanvoice-ai, descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-20 19:30:03",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Cleanvoice AI: The End of Audio Friction and the Future of Automated Post-Production",
+      "category": "CONTENT",
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Cleanvoice AI: The End of Audio Friction and the Future of Automated Post-Production\n• **Catégorie :** Audio AI\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/cleanvoice-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/cleanvoice-ai-evolution-guide-2026/"
+    },
+    {
+      "timestamp": "2026-11-20 19:28:25",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : Cleanvoice AI",
+      "category": "REVIEW",
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Cleanvoice AI\n• **Catégorie :** Audio AI\n• **Note globale :** 4.4/10\n• **Cible idéale :** Podcasters, audio engineers, remote interviewers, and media production teams seeking automated vocal cleanup.\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/cleanvoice-ai/"
+    },
+    {
+      "timestamp": "2026-11-20 11:04:00",
+      "title": "Cycle Autonome #Pictory",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Pictory) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
       "timestamp": "2026-11-20 10:54:16",
       "title": "Alerte Lien Mort Détecté",
       "category": "ALERT",
       "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-20 10:51:20",
-      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Pictory: The Genesis of AI Text-to-Video Engine and the Enterprise Workflow Guide for 2026",
-      "category": "CONTENT",
-      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Pictory: The Genesis of AI Text-to-Video Engine and the Enterprise Workflow Guide for 2026\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/pictory-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-      "link": "https://heliatech.online/blog/pictory-evolution-guide-2026/"
-    },
-    {
-      "timestamp": "2026-11-20 10:48:52",
-      "title": "⭐ NOUVELLE REVUE LOGICIEL : Pictory",
-      "category": "REVIEW",
-      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Pictory\n• **Catégorie :** AI Video\n• **Note globale :** 4.4/10\n• **Cible idéale :** Content marketers, agencies, podcasters, and corporate communications teams looking to rapidly repurpose long-form text and video into short social media clips.\n\n👉 Lire la fiche d'audit complète :",
-      "link": "https://heliatech.online/reviews/pictory/"
-    },
-    {
-      "timestamp": "2026-11-20 02:01:49",
-      "title": "Cycle Autonome #Miro",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Miro) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-20 02:00:53",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 18 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
       "link": null
     }
   ]

@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-26 01:22:48",
+    "title": "Cycle Autonome #Beehiiv Alternative: ConvertKit (Kit)",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Beehiiv Alternative: ConvertKit (Kit)) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-26 01:22:38",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 15 lien(s) d'affiliation en anomalie :\n• `brevo, capcut, capcut-pro, clickup, descript, hubspot, jasper-ai, klaviyo, lusha, printify, semrush, typeform, voiceflow, webflow, writesonic`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-26 01:21:39",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Kit: The Creator's Engine and the Blueprint for Automated Audience Growth",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Kit: The Creator's Engine and the Blueprint for Automated Audience Growth\n• **Catégorie :** Newsletter\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/kit-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/kit-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-26 01:21:30",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Kit (formerly ConvertKit)",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Kit (formerly ConvertKit)\n• **Catégorie :** Newsletter\n• **Note globale :** 4.5/10\n• **Cible idéale :** Professional creators, newsletter operators, and small-to-medium businesses focused on list growth and automated monetization.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/kit/"
+  },
+  {
     "timestamp": "2026-11-25 16:44:09",
     "title": "Cycle Autonome #Cloud Growth Refresh",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "REVIEW",
     "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Cleanvoice AI\n• **Catégorie :** Audio AI\n• **Note globale :** 4.4/10\n• **Cible idéale :** Podcasters, audio engineers, remote interviewers, and media production teams seeking automated vocal cleanup.\n\n👉 Lire la fiche d'audit complète :",
     "link": "https://heliatech.online/reviews/cleanvoice-ai/"
-  },
-  {
-    "timestamp": "2026-11-20 11:04:00",
-    "title": "Cycle Autonome #Pictory",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Pictory) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-20 10:54:16",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 20 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, minicong, minvo-testing-sandbox, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-20 10:51:20",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Pictory: The Genesis of AI Text-to-Video Engine and the Enterprise Workflow Guide for 2026",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Pictory: The Genesis of AI Text-to-Video Engine and the Enterprise Workflow Guide for 2026\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/pictory-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/pictory-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-20 10:48:52",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Pictory",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Pictory\n• **Catégorie :** AI Video\n• **Note globale :** 4.4/10\n• **Cible idéale :** Content marketers, agencies, podcasters, and corporate communications teams looking to rapidly repurpose long-form text and video into short social media clips.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/pictory/"
   }
 ]
