@@ -228,6 +228,16 @@
     "affiliate_url": "https://descript.grsm.io/heliatech"
   },
   {
+    "name": "Dub.co",
+    "slug": "dub-co",
+    "tagline": "Open-source link management infrastructure for modern marketing and engineering teams.",
+    "category": "DevTools",
+    "rating": 4.8,
+    "starting_price": "$24/mo",
+    "best_for": "Developers, SaaS founders, and growth engineering teams needing programmatic link infrastructure and real-time attribution tracking.",
+    "affiliate_url": "https://dub.co"
+  },
+  {
     "name": "Dumpling AI",
     "slug": "dumpling-ai",
     "tagline": "Turn long-form video into high-converting, bite-sized social clips with AI-powered multi-format reframing.",

@@ -125,6 +125,6 @@ Softr has redefined the operational economics of enterprise software buildouts. 
 
 While it intentionally sacrifices free-form, pixel-perfect frontend code in favor of structured modularity, this dynamic is precisely what makes it bulletproof for non-engineers. It prevents code rot, eliminates responsive layout breakage, and ensures data integrity across your entire organizational workflow.
 
-**Executive Recommendation:** If your organization relies heavily on Airtable or Google Sheets to run core workflows, Softr is an imperative addition to your tech stack. It converts static database records into interactive, revenue-generating web experiences overnight.
+**Executive Recommendation:** If your organization relies heavily on [Airtable](/reviews/airtable) or Google Sheets to run core workflows, Softr is an imperative addition to your tech stack. It converts static database records into interactive, revenue-generating web experiences overnight.
 
 [Claim Your Free Softr Account ➔](/go/softr)

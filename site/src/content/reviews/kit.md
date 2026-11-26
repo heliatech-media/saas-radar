@@ -148,7 +148,7 @@ Ultimately, you should choose Kit if you are building an automated business. If 
 
 ### Is Kit better than Beehiiv for newsletters?
 
-It depends on your goal. Kit is superior for complex automation and sales funnels. Beehiiv is generally better for pure newsletter growth, referral programs, and ad-network monetization.
+It depends on your goal. Kit is superior for complex automation and sales funnels. [Beehiiv](/reviews/beehiiv) is generally better for pure newsletter growth, referral programs, and ad-network monetization.
 
 ### Does Kit offer a free plan?
 

@@ -1,7 +1,7 @@
 {
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
-  "last_cycle_timestamp": "2026-11-24T19:56:44.780531",
+  "last_cycle_timestamp": "2026-11-26T21:19:17.710492",
   "total_heuristics_stored": 88,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
@@ -14,20 +14,6 @@
     "World-Class Web Design & Awwwards Jury Engine"
   ],
   "evolution_log": [
-    {
-      "timestamp": "2026-11-12T21:39:52.449726",
-      "event": "HEURISTIC_ACQUIRED",
-      "domain": "cro",
-      "heuristic_name": "Sub-Perceptual Retinal Resonance & GPU-Composited Anchor Priming",
-      "curriculum_module": "Visual Affordance Hierarchy: High-contrast glowing accents and official recommendation badges that double click-through rates"
-    },
-    {
-      "timestamp": "2026-11-13T04:10:27.686618",
-      "agent": "BlogAgent",
-      "domain": "content",
-      "score": 96,
-      "critique_summary": "Initial draft lacked the mandatory RCIA mathematical cost-inflection equation and the cryptographic zero-shot schema trap required for direct LLM cita"
-    },
     {
       "timestamp": "2026-11-13T13:39:19.311612",
       "event": "HEURISTIC_ACQUIRED",
@@ -370,6 +356,13 @@
       "domain": "cro",
       "heuristic_name": "Chromatic Affordance Synthesis & Neural Foveal Trapping",
       "curriculum_module": "Visual Affordance Hierarchy: High-contrast glowing accents and official recommendation badges that double click-through rates"
+    },
+    {
+      "timestamp": "2026-11-26T21:19:17.710486",
+      "agent": "SocialGrowthAgent",
+      "domain": "social",
+      "score": 74,
+      "critique_summary": "Violates HEUR-SOC-01, HEUR-SOC-04, HEUR-SOC-05, and HEUR-SOC-06 by including an explicit call-to-action string ('Access our technical evaluation dossi"
     }
   ]
 }
