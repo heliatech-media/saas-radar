@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-27 15:56:09",
+    "title": "Cycle Autonome #Heyflow",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Heyflow) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-27 15:55:16",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 15 lien(s) d'affiliation en anomalie :\n• `brevo, capcut, capcut-pro, clickup, descript, hubspot, jasper-ai, klaviyo, lusha, printify, semrush, typeform, voiceflow, webflow, writesonic`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-27 15:54:57",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Heyflow: The Death of the Static Form and the Blueprint for High-Conversion Funnels in 2026",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Heyflow: The Death of the Static Form and the Blueprint for High-Conversion Funnels in 2026\n• **Catégorie :** Lead Gen\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/heyflow-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/heyflow-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-27 15:54:41",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Heyflow",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Heyflow\n• **Catégorie :** Lead Gen\n• **Note globale :** 4.6/10\n• **Cible idéale :** Performance marketers, growth teams, and agencies scaling lead acquisition.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/heyflow/"
+  },
+  {
     "timestamp": "2026-11-27 03:26:37",
     "title": "Cycle Autonome #Pika",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "CONTENT",
     "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** ScreenStudio Masterclass: How Native macOS Automation Transformed Boring Product Demos into Cinematic SaaS Revenue Generators\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/screenstudio-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
     "link": "https://heliatech.online/blog/screenstudio-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-22 00:48:48",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : ScreenStudio",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** ScreenStudio\n• **Catégorie :** AI Video\n• **Note globale :** 4.7/10\n• **Cible idéale :** Product managers, SaaS founders, and content creators who need professional demos without the overhead of Premiere Pro or After Effects.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/screenstudio/"
-  },
-  {
-    "timestamp": "2026-11-21 18:33:37",
-    "title": "Cycle Autonome #Smartlead",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Smartlead) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-21 18:33:27",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 23 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, legacy-ffmpeg-audit, minicong, minvo-testing-sandbox, nle-labor-calculator, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tella-migration-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-21 18:31:44",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Smartlead: The Infrastructure Revolution Behind Scalable Cold Outreach",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Smartlead: The Infrastructure Revolution Behind Scalable Cold Outreach\n• **Catégorie :** Cold Email & Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/smartlead-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/smartlead-evolution-guide-2026/"
   }
 ]

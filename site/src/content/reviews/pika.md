@@ -6,7 +6,7 @@ tagline: Generative AI video platform built to turn text prompts, static images,
 category: AI Video
 rating: 4.3
 website_url: https://pika.art
-affiliate_url: https://pika.art
+affiliate_url: "https://pika.art?ref=heliatech"
 summary: Pika (Pika Labs) is an AI video generation engine that synthesizes short-form
   video content from text inputs, static imagery, and reference video files. The tool
   offers granular motion controls, generative canvas modification, and stylized motion

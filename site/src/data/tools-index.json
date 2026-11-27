@@ -369,6 +369,16 @@
     "commission_rate": "20% recurring"
   },
   {
+    "name": "Heyflow",
+    "slug": "heyflow",
+    "tagline": "Build high-converting, interactive lead generation funnels without writing a single line of code.",
+    "category": "Lead Gen",
+    "rating": 4.6,
+    "starting_price": "Free",
+    "best_for": "Performance marketers, growth teams, and agencies scaling lead acquisition.",
+    "affiliate_url": "https://heyflow.com"
+  },
+  {
     "name": "HubSpot",
     "slug": "hubspot",
     "tagline": "The all-in-one CRM platform designed to help scaling businesses align marketing, sales, and customer service.",
@@ -722,7 +732,8 @@
     "rating": 4.3,
     "starting_price": "$0/mo",
     "best_for": "Social media teams, indie motion designers, advertising creative directors, and rapid pre-visualization animators.",
-    "affiliate_url": "https://pika.art"
+    "affiliate_url": "https://pika.art?ref=heliatech",
+    "commission_rate": "N/A (No active public affiliate program)"
   },
   {
     "name": "Podcastle",

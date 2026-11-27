@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-11-27 03:26:11 UTC",
+  "last_updated": "2026-11-27 15:54:59 UTC",
   "director": "Helia (Autonomous Executive Director v4.0)",
   "mission_status": "OPERATIONAL_OPTIMAL",
   "kpis": {
-    "total_monetized_tools": 114,
-    "total_published_investigations": 280,
-    "reviews_audited": 114,
-    "masterclasses_and_duels": 166,
+    "total_monetized_tools": 115,
+    "total_published_investigations": 282,
+    "reviews_audited": 115,
+    "masterclasses_and_duels": 167,
     "target_monthly_visitors": "100,000",
     "estimated_conversion_rate": "2.8%",
-    "projected_monthly_mrr": "$39,900 USD",
+    "projected_monthly_mrr": "$40,250 USD",
     "fleet_agents_count": 22
   },
   "category_distribution": [
@@ -413,6 +413,11 @@
       "type": "Commission Partner"
     },
     {
+      "slug": "pika",
+      "destination": "https://pika.art?ref=heliatech",
+      "type": "Commission Partner"
+    },
+    {
       "slug": "podcastle",
       "destination": "https://podcastle.ai/?via=heliatech",
       "type": "Commission Partner"
@@ -645,38 +650,38 @@
   ],
   "recent_events": [
     {
+      "timestamp": "2026-11-22 00:51:42",
+      "title": "Cycle Autonome #ScreenStudio",
+      "category": "CYCLE",
+      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (ScreenStudio) et mis à jour le calendrier social.",
+      "link": "https://heliatech.online/sentinel/suivicontrol"
+    },
+    {
+      "timestamp": "2026-11-22 00:51:33",
+      "title": "Alerte Lien Mort Détecté",
+      "category": "ALERT",
+      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 25 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, legacy-ffmpeg-audit, minicong, minvo-testing-sandbox, nle-labor-calculator, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, screenstudio-migration-sandbox, screenstudio-performance-calculator, tella-migration-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+      "link": null
+    },
+    {
+      "timestamp": "2026-11-22 00:50:15",
+      "title": "📰 NOUVEL ARTICLE PUBLIÉ : ScreenStudio Masterclass: How Native macOS Automation Transformed Boring Product Demos into Cinematic SaaS Revenue Generators",
+      "category": "CONTENT",
+      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** ScreenStudio Masterclass: How Native macOS Automation Transformed Boring Product Demos into Cinematic SaaS Revenue Generators\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/screenstudio-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+      "link": "https://heliatech.online/blog/screenstudio-evolution-guide-2026/"
+    },
+    {
+      "timestamp": "2026-11-22 00:48:48",
+      "title": "⭐ NOUVELLE REVUE LOGICIEL : ScreenStudio",
+      "category": "REVIEW",
+      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** ScreenStudio\n• **Catégorie :** AI Video\n• **Note globale :** 4.7/10\n• **Cible idéale :** Product managers, SaaS founders, and content creators who need professional demos without the overhead of Premiere Pro or After Effects.\n\n👉 Lire la fiche d'audit complète :",
+      "link": "https://heliatech.online/reviews/screenstudio/"
+    },
+    {
       "timestamp": "2026-11-21 18:33:37",
       "title": "Cycle Autonome #Smartlead",
       "category": "CYCLE",
       "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Smartlead) et mis à jour le calendrier social.",
-      "link": "https://heliatech.online/sentinel/suivicontrol"
-    },
-    {
-      "timestamp": "2026-11-21 18:33:27",
-      "title": "Alerte Lien Mort Détecté",
-      "category": "ALERT",
-      "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 23 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, legacy-ffmpeg-audit, minicong, minvo-testing-sandbox, nle-labor-calculator, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tella-migration-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-      "link": null
-    },
-    {
-      "timestamp": "2026-11-21 18:31:44",
-      "title": "📰 NOUVEL ARTICLE PUBLIÉ : Smartlead: The Infrastructure Revolution Behind Scalable Cold Outreach",
-      "category": "CONTENT",
-      "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Smartlead: The Infrastructure Revolution Behind Scalable Cold Outreach\n• **Catégorie :** Cold Email & Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/smartlead-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-      "link": "https://heliatech.online/blog/smartlead-evolution-guide-2026/"
-    },
-    {
-      "timestamp": "2026-11-21 18:31:36",
-      "title": "⭐ NOUVELLE REVUE LOGICIEL : Smartlead",
-      "category": "REVIEW",
-      "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Smartlead\n• **Catégorie :** Cold Email & Automation\n• **Note globale :** 4.7/10\n• **Cible idéale :** Lead generation agencies, B2B sales development teams, and high-volume outbound growth marketers.\n\n👉 Lire la fiche d'audit complète :",
-      "link": "https://heliatech.online/reviews/smartlead/"
-    },
-    {
-      "timestamp": "2026-11-21 02:00:29",
-      "title": "Cycle Autonome #Tella",
-      "category": "CYCLE",
-      "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Tella) et mis à jour le calendrier social.",
       "link": "https://heliatech.online/sentinel/suivicontrol"
     }
   ]

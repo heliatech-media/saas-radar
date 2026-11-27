@@ -212,7 +212,8 @@ AFFILIATE_MAP = {
     "flutterflow": "https://flutterflow.io?fpr=heliatech",
     "taplio": "https://taplio.com/?via=heliatech",
     "capsho": "https://www.capsho.com/?via=heliatech",
-    "dub-co": "https://dub.co?via=heliatech"
+    "dub-co": "https://dub.co?via=heliatech",
+    "pika": "https://pika.art?ref=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

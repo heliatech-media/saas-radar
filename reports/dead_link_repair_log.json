@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-27T03:26:22.983548",
+  "timestamp": "2026-11-27T15:55:11.730828",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 280,
-    "total_redirects_active": 145,
-    "new_redirects_healed": 31,
+    "total_content_files_scanned": 282,
+    "total_redirects_active": 147,
+    "new_redirects_healed": 32,
     "internal_links_repaired": 0,
     "external_targets_repaired": 4,
     "content_files_modified": 0
@@ -140,6 +140,11 @@
       "slug": "davinci-resolve",
       "target_url": "https://www.davinci-resolve.com",
       "source_file": "best-descript-alternatives-2026.md"
+    },
+    {
+      "slug": "heyflow",
+      "target_url": "https://www.heyflow.com",
+      "source_file": "heyflow-evolution-guide-2026.md"
     },
     {
       "slug": "asana",
