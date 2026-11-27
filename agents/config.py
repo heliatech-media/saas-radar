@@ -211,7 +211,8 @@ AFFILIATE_MAP = {
     "softr": "https://www.softr.io/?via=heliatech",
     "flutterflow": "https://flutterflow.io?fpr=heliatech",
     "taplio": "https://taplio.com/?via=heliatech",
-    "capsho": "https://www.capsho.com/?via=heliatech"
+    "capsho": "https://www.capsho.com/?via=heliatech",
+    "dub-co": "https://dub.co?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

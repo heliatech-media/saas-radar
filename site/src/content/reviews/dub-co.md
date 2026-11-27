@@ -6,7 +6,7 @@ tagline: Open-source link management infrastructure for modern marketing and eng
 category: DevTools
 rating: 4.8
 website_url: https://dub.co
-affiliate_url: https://dub.co
+affiliate_url: "https://dub.co?via=heliatech"
 summary: Dub.co is an open-source link management platform built for modern engineering
   and growth teams. It offers custom short domains, deep real-time analytics, and
   programmatic link creation via SDKs and APIs, all powered by global Edge infrastructure.

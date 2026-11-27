@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-26 21:06:23",
-  "total_links_audited": 144,
-  "healthy_links": 129,
+  "timestamp": "2026-11-27 03:26:28",
+  "total_links_audited": 145,
+  "healthy_links": 130,
   "broken_links_count": 15,
-  "health_rate": "89.6%",
+  "health_rate": "89.7%",
   "broken_links": [
     {
       "slug": "brevo",
@@ -316,6 +316,13 @@
       "healthy": false
     },
     {
+      "slug": "dub-co",
+      "target_url": "https://dub.co?via=heliatech",
+      "final_url": "https://dub.co/?via=heliatech",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
       "slug": "dumpling-ai",
       "target_url": "https://www.dumpling.ai/?via=heliatech",
       "final_url": "https://www.dumpling.ai/?via=heliatech",
@@ -325,7 +332,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=zfcroKmgGzW8Zk&gsxid=zfcroKmgGzW8Zk&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=Ufwu2dzW8Sw99t&gsxid=Ufwu2dzW8Sw99t&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -675,7 +682,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=4qLsdTq5HKcIUr&gsxid=4qLsdTq5HKcIUr&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=n8qRC1T56Uena7&gsxid=n8qRC1T56Uena7&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -710,7 +717,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=hRz1ccj8gYlhTn&gsxid=hRz1ccj8gYlhTn&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=gUnXszekGI1SK4&gsxid=gUnXszekGI1SK4&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

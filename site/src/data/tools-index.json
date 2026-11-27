@@ -235,7 +235,8 @@
     "rating": 4.8,
     "starting_price": "$24/mo",
     "best_for": "Developers, SaaS founders, and growth engineering teams needing programmatic link infrastructure and real-time attribution tracking.",
-    "affiliate_url": "https://dub.co"
+    "affiliate_url": "https://dub.co?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "Dumpling AI",
@@ -712,6 +713,16 @@
     "best_for": "Content marketers, agencies, podcasters, and corporate communications teams looking to rapidly repurpose long-form text and video into short social media clips.",
     "affiliate_url": "https://pictory.ai?fpr=heliatech",
     "commission_rate": "20% - 50% recurring"
+  },
+  {
+    "name": "Pika",
+    "slug": "pika",
+    "tagline": "Generative AI video platform built to turn text prompts, static images, and raw footage into dynamic, cinematic animations.",
+    "category": "AI Video",
+    "rating": 4.3,
+    "starting_price": "$0/mo",
+    "best_for": "Social media teams, indie motion designers, advertising creative directors, and rapid pre-visualization animators.",
+    "affiliate_url": "https://pika.art"
   },
   {
     "name": "Podcastle",

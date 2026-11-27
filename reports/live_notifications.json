@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-27 03:26:37",
+    "title": "Cycle Autonome #Pika",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Pika) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-27 03:26:28",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 15 lien(s) d'affiliation en anomalie :\n• `brevo, capcut, capcut-pro, clickup, descript, hubspot, jasper-ai, klaviyo, lusha, printify, semrush, typeform, voiceflow, webflow, writesonic`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-27 03:26:02",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Pika: The Genesis of Generative Motion and the Executive Playbook for AI Video Velocity in 2026",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Pika: The Genesis of Generative Motion and the Executive Playbook for AI Video Velocity in 2026\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/pika-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/pika-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-27 03:24:19",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Pika",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Pika\n• **Catégorie :** AI Video\n• **Note globale :** 4.3/10\n• **Cible idéale :** Social media teams, indie motion designers, advertising creative directors, and rapid pre-visualization animators.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/pika/"
+  },
+  {
     "timestamp": "2026-11-26 21:19:18",
     "title": "Cycle Autonome #Dub.co",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "CONTENT",
     "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Smartlead: The Infrastructure Revolution Behind Scalable Cold Outreach\n• **Catégorie :** Cold Email & Automation\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/smartlead-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
     "link": "https://heliatech.online/blog/smartlead-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-21 18:31:36",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Smartlead",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Smartlead\n• **Catégorie :** Cold Email & Automation\n• **Note globale :** 4.7/10\n• **Cible idéale :** Lead generation agencies, B2B sales development teams, and high-volume outbound growth marketers.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/smartlead/"
-  },
-  {
-    "timestamp": "2026-11-21 02:00:29",
-    "title": "Cycle Autonome #Tella",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Tella) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-21 01:59:39",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 24 lien(s) d'affiliation en anomalie :\n• `clay, descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, invideo-ai-sandbox, legacy-ffmpeg-audit, minicong, minvo-testing-sandbox, nle-labor-calculator, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, replit-agent, riverside-sandbox, runway-tco-calculator, tella-migration-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-21 01:56:41",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Tella Masterclass 2026: The Browser-Based Video Revolution Transforming Modern Enterprise Demos",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Tella Masterclass 2026: The Browser-Based Video Revolution Transforming Modern Enterprise Demos\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/tella-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/tella-evolution-guide-2026/"
   }
 ]

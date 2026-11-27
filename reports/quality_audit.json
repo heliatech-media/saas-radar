@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-26 21:06:24",
-  "total_articles_scanned": 278,
-  "average_authenticity_score": "92.5/100",
+  "timestamp": "2026-11-27 03:26:29",
+  "total_articles_scanned": 280,
+  "average_authenticity_score": "92.4/100",
   "honest_tradeoffs_coverage": "99.6%",
-  "total_cliches_detected": 18,
+  "total_cliches_detected": 19,
   "status": "APPROVED_HIGH_INTEGRITY",
   "enforced_standards": [
     "Strict blacklisting of generic AI filler vocabulary",
@@ -11,5 +11,20 @@
     "Empirical data tables & pricing calculations per article",
     "Technical architecture & forensic engineer persona"
   ],
-  "flagged_files": []
+  "flagged_files": [
+    {
+      "slug": "pika-evolution-guide-2026",
+      "file": "pika-evolution-guide-2026.md",
+      "authenticity_score": 65,
+      "has_honest_tradeoffs": true,
+      "has_empirical_table": false,
+      "cliche_matches_count": 1,
+      "cliches_found": [
+        "unprecedented"
+      ],
+      "invalid_go_links": [
+        "pika"
+      ]
+    }
+  ]
 }
