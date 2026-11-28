@@ -5,7 +5,7 @@ tagline: Transform messy, unscripted voice notes into clear, structured prose in
 category: Voice Notes & AI Writing
 rating: 4.6
 website_url: https://audiopen.ai
-affiliate_url: https://audiopen.ai
+affiliate_url: "https://audiopen.ai/?via=heliatech"
 summary: AudioPen is an AI-powered voice recording and text transformation tool designed
   to capture unstructured spoken thoughts and distill them into coherent written drafts.
   Unlike standard transcription apps, AudioPen active-edits your speech, removing
@@ -126,7 +126,7 @@ AudioPen is an AI-powered voice recording and text transformation tool designed 
 - **Intelligent Voice Distillation Engine**
 - **Custom Output Style and Tone Presets**
 - **Multi-Language Speech Processing**
-- **Webhook and Zapier Workflow Automations**
+- **Webhook and [Zapier](/reviews/zapier) Workflow Automations**
 - **Custom Vocabulary and Technical Term Mapping**
 
 ## Pricing Overview

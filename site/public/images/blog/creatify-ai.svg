@@ -1,0 +1,401 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background & Glowing Gradients -->
+    <linearGradient id="bg-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#02040a"/>
+    </linearGradient>
+
+    <radialGradient id="glow-cyan" cx="75%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#06b6d4" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-fuchsia" cx="85%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow-violet-left" cx="20%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Linear Gradients for UI & Accents -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#e0f2fe"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="cyan-fuchsia" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+
+    <linearGradient id="glass-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#080d1a" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.15"/>
+      <stop offset="80%" stop-color="#8b5cf6" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <linearGradient id="stream-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="video-overlay" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#030712" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#030712" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-heavy" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur1"/>
+      <feGaussianBlur stdDeviation="24" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.3"/>
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.2"/>
+    </pattern>
+
+    <pattern id="dots-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#94a3b8" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- ================= BACKGROUND LAYER ================= -->
+  <rect width="1200" height="630" fill="url(#bg-base)"/>
+  
+  <!-- Perspective Cyber Grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid-pattern)"/>
+  
+  <!-- Ambient Lighting Orbs -->
+  <rect width="1200" height="630" fill="url(#glow-cyan)"/>
+  <rect width="1200" height="630" fill="url(#glow-fuchsia)"/>
+  <rect width="1200" height="630" fill="url(#glow-violet-left)"/>
+
+  <!-- Decorative Circuit / Tech Background Rays -->
+  <g stroke="#1e293b" stroke-width="1" stroke-opacity="0.4" fill="none">
+    <line x1="0" y1="150" x2="1200" y2="150" stroke-dasharray="8 8"/>
+    <line x1="0" y1="480" x2="1200" y2="480" stroke-dasharray="4 4"/>
+    <line x1="650" y1="0" x2="650" y2="630" stroke-dasharray="12 12"/>
+  </g>
+
+  <!-- Background Particle Dust -->
+  <g fill="#38bdf8" opacity="0.4">
+    <circle cx="720" cy="120" r="1.5"/>
+    <circle cx="1100" cy="180" r="2" fill="#d946ef"/>
+    <circle cx="600" cy="420" r="1.5"/>
+    <circle cx="850" cy="540" r="2.5" fill="#06b6d4"/>
+    <circle cx="1020" cy="490" r="1"/>
+    <circle cx="680" cy="280" r="2"/>
+  </g>
+
+  <!-- ================= RIGHT SIDE: 3D GRAPHIC ENGINE (CREATIFY URL-TO-VIDEO CORE) ================= -->
+  <g id="architecture-engine">
+    
+    <!-- Outer Glow Ambient behind core -->
+    <circle cx="880" cy="315" r="220" fill="url(#core-glow)" opacity="0.75" filter="url(#glow-heavy)"/>
+
+    <!-- Dynamic Flow Waves (Audio / AI Neural Waveforms) -->
+    <g opacity="0.6">
+      <!-- Wave 1 -->
+      <path d="M 600 350 Q 680 220 780 320 T 960 300 T 1150 250" fill="none" stroke="url(#cyan-fuchsia)" stroke-width="2" filter="url(#glow-soft)"/>
+      <!-- Wave 2 -->
+      <path d="M 620 380 Q 720 480 840 350 T 1020 340 T 1180 390" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
+      <!-- Wave 3 -->
+      <path d="M 580 310 Q 700 260 820 380 T 1060 280 T 1160 310" fill="none" stroke="#d946ef" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <!-- Isometric Central Pipeline: URL Input Bar (Floating 3D Box Top Right) -->
+    <g transform="translate(640, 90)">
+      <!-- URL Glass Input Container -->
+      <rect x="0" y="0" width="380" height="54" rx="12" fill="url(#glass-card-bg)" stroke="url(#glass-border)" stroke-width="1.5" filter="url(#glow-soft)"/>
+      <rect x="2" y="2" width="376" height="50" rx="10" fill="none" stroke="#38bdf8" stroke-opacity="0.2"/>
+      
+      <!-- HTTP Icon & URL Text -->
+      <circle cx="30" cy="27" r="14" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1.5"/>
+      <path d="M 25 27 C 25 23 35 23 35 27 C 35 31 25 31 25 27 Z" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+      <circle cx="30" cy="27" r="3" fill="#38bdf8"/>
+
+      <text x="56" y="24" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1">TARGET E-COM PRODUCT URL</text>
+      <text x="56" y="39" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="600">https://store.com/product/v-2026</text>
+
+      <!-- Action Trigger Pill Inside Bar -->
+      <rect x="270" y="10" width="98" height="34" rx="8" fill="url(#cyan-fuchsia)"/>
+      <text x="319" y="31" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle" letter-spacing="0.5">PARSE &amp; AI CONVERT</text>
+    </g>
+
+    <!-- Data Stream Beams connecting URL to Render Engine -->
+    <path d="M 830 144 L 830 200 Q 830 230 860 240 L 880 245" fill="none" stroke="url(#stream-cyan)" stroke-width="3" stroke-dasharray="8 4" filter="url(#glow-soft)"/>
+    <circle cx="830" cy="144" r="4" fill="#38bdf8" filter="url(#glow-heavy)"/>
+
+    <!-- MAIN 3D DISPLAY CARD: AI Video Studio Render Viewport (Center Right) -->
+    <g transform="translate(670, 210)">
+      <!-- Main Outer Frame with Glass Effect -->
+      <rect x="0" y="0" width="360" height="230" rx="16" fill="url(#glass-card-bg)" stroke="url(#glass-border)" stroke-width="1.5" filter="url(#glow-heavy)"/>
+      
+      <!-- Video Viewport Inner Screen -->
+      <rect x="12" y="12" width="336" height="160" rx="10" fill="#040814"/>
+      <!-- Mock E-Commerce Video Artwork inside screen -->
+      <rect x="12" y="12" width="336" height="160" rx="10" fill="url(#video-overlay)"/>
+      
+      <!-- Abstract 3D Product Mesh Hologram inside Video Screen -->
+      <g transform="translate(180, 85)">
+        <!-- Dynamic rotating cube / product frame -->
+        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="#06b6d4" fill-opacity="0.1" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <polygon points="0,-40 35,-20 0,0 -35,-20" fill="#38bdf8" fill-opacity="0.2" stroke="#06b6d4" stroke-width="1"/>
+        <line x1="0" y1="0" x2="0" y2="40" stroke="#38bdf8" stroke-width="1.5"/>
+        <line x1="35" y1="-20" x2="0" y2="0" stroke="#38bdf8" stroke-width="1"/>
+        <line x1="-35" y1="-20" x2="0" y2="0" stroke="#38bdf8" stroke-width="1"/>
+        
+        <!-- Glowing Core Particle in Center of Product -->
+        <circle cx="0" cy="0" r="10" fill="#d946ef" filter="url(#glow-heavy)" opacity="0.8"/>
+        
+        <!-- Floating AI Bounding Box Overlay -->
+        <rect x="-50" y="-48" width="100" height="96" rx="4" fill="none" stroke="#06b6d4" stroke-width="0.8" stroke-dasharray="6 6"/>
+        <text x="-48" y="-52" fill="#06b6d4" font-family="monospace" font-size="8">AI OBJECT DETECT: 99.4%</text>
+      </g>
+
+      <!-- Video Control Timeline (Bottom of Main Card) -->
+      <rect x="12" y="180" width="336" height="38" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+      
+      <!-- Play Button -->
+      <polygon points="30,193 30,205 42,199" fill="#38bdf8"/>
+      
+      <!-- Waveform audio track -->
+      <g fill="#06b6d4" opacity="0.7">
+        <rect x="54" y="194" width="3" height="10" rx="1"/>
+        <rect x="60" y="190" width="3" height="18" rx="1" fill="#38bdf8"/>
+        <rect x="66" y="196" width="3" height="6" rx="1"/>
+        <rect x="72" y="188" width="3" height="22" rx="1" fill="#d946ef"/>
+        <rect x="78" y="192" width="3" height="14" rx="1"/>
+        <rect x="84" y="195" width="3" height="8" rx="1"/>
+        <rect x="90" y="189" width="3" height="20" rx="1" fill="#38bdf8"/>
+        <rect x="96" y="193" width="3" height="12" rx="1"/>
+      </g>
+
+      <!-- Scrubber Track & Progress Line -->
+      <line x1="110" y1="199" x2="280" y2="199" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="110" y1="199" x2="210" y2="199" stroke="url(#cyan-fuchsia)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="210" cy="199" r="6" fill="#ffffff" filter="url(#glow-soft)"/>
+      
+      <text x="336" y="203" fill="#94a3b8" font-family="monospace" font-size="9" text-anchor="end">00:15 / 00:30</text>
+      
+      <!-- Floating Badge on Viewport -->
+      <rect x="24" y="24" width="105" height="22" rx="6" fill="#030712" fill-opacity="0.8" stroke="#06b6d4" stroke-width="1"/>
+      <circle cx="34" cy="35" r="3" fill="#22c55e" filter="url(#glow-soft)"/>
+      <text x="44" y="38" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9" font-weight="700">RENDER READY</text>
+    </g>
+
+    <!-- FOREGROUND 3D MOBILE CARD (Vertical Ad Format 9:16 Preview) -->
+    <g transform="translate(970, 290)">
+      <!-- Glass Card Background -->
+      <rect x="0" y="0" width="165" height="270" rx="16" fill="url(#glass-card-bg)" stroke="url(#glass-border)" stroke-width="1.8" filter="url(#glow-heavy)"/>
+      <rect x="2" y="2" width="161" height="266" rx="14" fill="none" stroke="#d946ef" stroke-opacity="0.2"/>
+
+      <!-- Vertical Video Simulation Screen -->
+      <rect x="8" y="8" width="149" height="215" rx="10" fill="#050b14"/>
+      
+      <!-- Content Elements -->
+      <!-- Avatar Bubble -->
+      <circle cx="30" cy="30" r="12" fill="#8b5cf6" fill-opacity="0.3" stroke="#8b5cf6" stroke-width="1"/>
+      <circle cx="30" cy="28" r="5" fill="#38bdf8"/>
+      <path d="M 22 38 C 22 34 38 34 38 38" fill="none" stroke="#38bdf8" stroke-width="1"/>
+      <text x="48" y="28" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8" font-weight="700">AI Creator</text>
+      <text x="48" y="37" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="7">@creatify_agent</text>
+
+      <!-- Simulated AI Video Caption Callout -->
+      <rect x="16" y="140" width="125" height="42" rx="6" fill="#030712" fill-opacity="0.85" stroke="#38bdf8" stroke-width="0.8"/>
+      <text x="22" y="154" fill="#ffffff" font-family="system-ui, sans-serif" font-size="8" font-weight="700">Stop scrolling! 🚀</text>
+      <text x="22" y="165" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7">This tool converts URLs</text>
+      <text x="22" y="174" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7">into viral video ads instantly.</text>
+
+      <!-- CTA Button -->
+      <rect x="16" y="188" width="133" height="24" rx="6" fill="url(#cyan-fuchsia)"/>
+      <text x="82" y="203" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="800" text-anchor="middle" letter-spacing="0.5">SHOP NOW</text>
+
+      <!-- Social Interaction Icons (Right side floating) -->
+      <g transform="translate(136, 80)" fill="#ffffff" opacity="0.8">
+        <circle cx="9" cy="0" r="7" fill="#1e293b"/>
+        <path d="M 6 -2 L 12 -2 L 9 3 Z" fill="#d946ef"/>
+        <circle cx="9" cy="22" r="7" fill="#1e293b"/>
+        <circle cx="9" cy="44" r="7" fill="#1e293b"/>
+      </g>
+
+      <!-- ROAS Performance Badge Floating at Bottom of Card -->
+      <g transform="translate(10, 230)">
+        <rect x="0" y="0" width="145" height="32" rx="8" fill="#090d16" stroke="#06b6d4" stroke-width="1"/>
+        <text x="12" y="15" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="7" font-weight="700" letter-spacing="0.5">PROJECTED AD SCALE</text>
+        <text x="12" y="26" fill="#22c55e" font-family="system-ui, sans-serif" font-size="11" font-weight="900">5.4x ROAS</text>
+        <text x="80" y="26" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="700">+420% CTR</text>
+      </g>
+    </g>
+
+    <!-- FLOATING 3D METRIC NODES & GEOMETRY CORE -->
+    <!-- Neural Node / Vector Hub floating (Left of Render Viewport) -->
+    <g transform="translate(560, 360)" filter="url(#glow-soft)">
+      <rect x="0" y="0" width="130" height="70" rx="10" fill="url(#glass-card-bg)" stroke="url(#glass-border)" stroke-width="1.2"/>
+      <circle cx="20" cy="22" r="8" fill="#d946ef" fill-opacity="0.2" stroke="#d946ef" stroke-width="1.5"/>
+      <circle cx="20" cy="22" r="3" fill="#d946ef"/>
+      <text x="36" y="25" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" font-weight="700">SCRIPT GENERATOR</text>
+      <text x="12" y="46" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8">LLM Hook Extraction</text>
+      <text x="12" y="58" fill="#06b6d4" font-family="monospace" font-size="8.5" font-weight="700">STATUS: OPTIMIZED</text>
+    </g>
+
+    <!-- Connection Line Node to Viewport -->
+    <path d="M 625 360 L 625 315 L 670 315" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <circle cx="625" cy="360" r="3" fill="#8b5cf6"/>
+    <circle cx="670" cy="315" r="3" fill="#38bdf8"/>
+
+    <!-- Floating Graphic Badges / Keyframes -->
+    <g transform="translate(860, 470)" filter="url(#glow-soft)">
+      <!-- Diamond Keyframe Icon -->
+      <polygon points="20,0 40,20 20,40 0,20" fill="#030712" stroke="#06b6d4" stroke-width="1.5"/>
+      <polygon points="20,8 32,20 20,32 8,20" fill="url(#cyan-fuchsia)"/>
+    </g>
+
+    <g transform="translate(630, 200)" filter="url(#glow-soft)">
+      <polygon points="15,0 30,15 15,30 0,15" fill="#030712" stroke="#d946ef" stroke-width="1.5"/>
+      <polygon points="15,6 24,15 15,24 6,15" fill="#d946ef"/>
+    </g>
+
+  </g>
+
+  <!-- ================= LEFT SIDE: TYPOGRAPHY & DOSSIER BRANDING ================= -->
+  <g id="dossier-text-content" transform="translate(70, 0)">
+    
+    <!-- Top Pill Badge: HELIATECH ARCHITECTURAL DOSSIER -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="310" height="30" rx="15" fill="#0f172a" fill-opacity="0.8" stroke="url(#glass-border)" stroke-width="1.2" filter="url(#glow-soft)"/>
+      
+      <!-- Pulsing Dot -->
+      <circle cx="16" cy="15" r="4" fill="#06b6d4" filter="url(#glow-heavy)"/>
+      <circle cx="16" cy="15" r="2" fill="#ffffff"/>
+      
+      <text x="30" y="19" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" letter-spacing="1.5">HELIATECH ARCHITECTURAL DOSSIER</text>
+      <text x="268" y="19" fill="#64748b" font-family="system-ui, sans-serif" font-size="10" font-weight="600">| 2026</text>
+    </g>
+
+    <!-- Main Software Tool Title: CREATIFY AI -->
+    <g transform="translate(0, 160)">
+      <!-- Background subtle glowing block text for 3D depth -->
+      <text x="2" y="2" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" letter-spacing="-1.5" opacity="0.3" filter="url(#glow-heavy)">CREATIFY AI</text>
+      <!-- Foreground Gradient Text -->
+      <text x="0" y="0" fill="url(#title-grad)" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" letter-spacing="-1.5">CREATIFY AI</text>
+    </g>
+
+    <!-- Subtitle / Category Header -->
+    <g transform="translate(2, 202)">
+      <text x="0" y="0" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" letter-spacing="3">AI VIDEO AUTOMATION &amp; AD SCALING ENGINE</text>
+    </g>
+
+    <!-- Headline Focus Card (Glassmorphic Container) -->
+    <g transform="translate(0, 235)">
+      <rect x="0" y="0" width="510" height="148" rx="14" fill="url(#glass-card-bg)" stroke="url(#glass-border)" stroke-width="1.2" filter="url(#glow-soft)"/>
+      <rect x="0" y="0" width="4" height="148" rx="2" fill="url(#cyan-fuchsia)"/>
+
+      <!-- Inner Focus Badge -->
+      <rect x="20" y="18" width="140" height="20" rx="4" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="0.8"/>
+      <text x="26" y="32" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="800" letter-spacing="1">FLAGSHIP INVESTIGATION</text>
+
+      <!-- Main Article Title Text -->
+      <text x="20" y="62" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" width="470">
+        <tspan x="20" dy="0">URL-to-Video Automation: How Next-Gen</tspan>
+        <tspan x="20" dy="24">AI Engines Are Revolutionizing E-Commerce</tspan>
+        <tspan x="20" dy="24">Ad Scale &amp; ROAS in 2026</tspan>
+      </text>
+
+      <!-- Decorative Micro Grid Line -->
+      <line x1="20" y1="124" x2="490" y2="124" stroke="#1e293b" stroke-width="1"/>
+      <text x="20" y="136" fill="#94a3b8" font-family="monospace" font-size="9">AUTHOR: HELIA TECH ANALYTICS LABS</text>
+      <text x="490" y="136" fill="#d946ef" font-family="monospace" font-size="9" text-anchor="end">SYSTEM ARCHITECTURE BRIEF</text>
+    </g>
+
+    <!-- Architecture Pillars / Feature Cards (3 Columns) -->
+    <g transform="translate(0, 410)">
+      <!-- Pillar 1: URL Scraping -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="160" height="95" rx="10" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+        <rect x="12" y="12" width="28" height="28" rx="6" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1"/>
+        <!-- Link Icon -->
+        <path d="M 21 26 L 27 20 M 23 21 L 27 17 M 21 29 L 17 25" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="12" y="58" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="700">URL-to-Script</text>
+        <text x="12" y="72" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Instant asset parsing</text>
+        <text x="12" y="84" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="700">0.4s Scraping</text>
+      </g>
+
+      <!-- Pillar 2: Avatar & Render -->
+      <g transform="translate(175, 0)">
+        <rect x="0" y="0" width="160" height="95" rx="10" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+        <rect x="12" y="12" width="28" height="28" rx="6" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+        <!-- Video Play Icon -->
+        <polygon points="22,20 22,32 31,26" fill="none" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="12" y="58" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Hyper-Real Avatars</text>
+        <text x="12" y="72" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">4K Lipsync &amp; Voice</text>
+        <text x="12" y="84" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="9" font-weight="700">140+ Languages</text>
+      </g>
+
+      <!-- Pillar 3: Ad Velocity -->
+      <g transform="translate(350, 0)">
+        <rect x="0" y="0" width="160" height="95" rx="10" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+        <rect x="12" y="12" width="28" height="28" rx="6" fill="#d946ef" fill-opacity="0.15" stroke="#d946ef" stroke-width="1"/>
+        <!-- Rocket / Scale Icon -->
+        <path d="M 26 17 L 30 21 L 24 27 L 19 27 L 19 22 Z" fill="none" stroke="#d946ef" stroke-width="1.5"/>
+        <text x="12" y="58" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Batch Ad Scale</text>
+        <text x="12" y="72" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">100s of Variants/hr</text>
+        <text x="12" y="84" fill="#d946ef" font-family="system-ui, sans-serif" font-size="9" font-weight="700">10x CTR Yield</text>
+      </g>
+    </g>
+
+    <!-- Bottom Footer / Helia Tech Verification Bar -->
+    <g transform="translate(0, 535)">
+      <line x1="0" y1="0" x2="510" y2="0" stroke="#1e293b" stroke-width="1"/>
+      
+      <!-- Tech Badge & Link -->
+      <circle cx="6" cy="18" r="4" fill="#06b6d4"/>
+      <text x="18" y="21" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">
+        PUBLISHED BY <tspan fill="#e2e8f0" font-weight="700">HELIATECH LABS</tspan>
+      </text>
+      
+      <text x="510" y="21" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700" text-anchor="end">heliatech.online</text>
+    </g>
+
+  </g>
+
+  <!-- Outer Fine Border Frame for Canvas Frame Aesthetics -->
+  <rect x="1" y="1" width="1198" height="628" rx="0" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.6"/>
+</svg>

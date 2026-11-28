@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-28T01:01:45.830824",
+  "timestamp": "2026-11-28T11:13:22.577104",
   "agent": "Helia-LinkDoctor",
   "status": "PLATFORM_HEALTHY_100",
   "stats": {
-    "total_content_files_scanned": 284,
+    "total_content_files_scanned": 286,
     "total_redirects_active": 148,
-    "new_redirects_healed": 32,
+    "new_redirects_healed": 31,
     "internal_links_repaired": 0,
     "external_targets_repaired": 4,
     "content_files_modified": 0
@@ -165,11 +165,6 @@
       "slug": "jira",
       "target_url": "https://www.jira.com",
       "source_file": "best-clickup-alternatives-2026.md"
-    },
-    {
-      "slug": "audiopen",
-      "target_url": "https://www.audiopen.com",
-      "source_file": "audiopen-evolution-guide-2026.md"
     }
   ],
   "healed_internal_links": [],

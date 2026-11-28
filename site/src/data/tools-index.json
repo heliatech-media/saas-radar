@@ -51,7 +51,8 @@
     "rating": 4.6,
     "starting_price": "$75/yr",
     "best_for": "Founders, executives, researchers, and content creators who generate ideas better by speaking than by typing.",
-    "affiliate_url": "https://audiopen.ai"
+    "affiliate_url": "https://audiopen.ai/?via=heliatech",
+    "commission_rate": "25% recurring"
   },
   {
     "name": "Axiom.ai",
@@ -215,6 +216,16 @@
     "best_for": "Engineering teams and individual developers looking to automate PR feedback and accelerate the code review cycle.",
     "affiliate_url": "https://coderabbit.ai/?via=heliatech",
     "commission_rate": "20% recurring"
+  },
+  {
+    "name": "Creatify AI",
+    "slug": "creatify-ai",
+    "tagline": "Turn e-commerce product URLs into high-converting UGC video ads in minutes with AI avatars.",
+    "category": "AI Video",
+    "rating": 4.4,
+    "starting_price": "$39/mo",
+    "best_for": "E-commerce brands, performance marketing agencies, media buyers, and TikTok/Meta ad creators seeking high-volume ad iteration.",
+    "affiliate_url": "https://creatify.ai"
   },
   {
     "name": "Cursor",

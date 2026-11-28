@@ -214,7 +214,8 @@ AFFILIATE_MAP = {
     "capsho": "https://www.capsho.com/?via=heliatech",
     "dub-co": "https://dub.co?via=heliatech",
     "pika": "https://pika.art?ref=heliatech",
-    "heyflow": "https://heyflow.com/?via=heliatech"
+    "heyflow": "https://heyflow.com/?via=heliatech",
+    "audiopen": "https://audiopen.ai/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:

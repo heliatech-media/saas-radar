@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-11-28 11:17:30",
+    "title": "Cycle Autonome #Creatify AI",
+    "category": "CYCLE",
+    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Creatify AI) et mis à jour le calendrier social.",
+    "link": "https://heliatech.online/sentinel/suivicontrol"
+  },
+  {
+    "timestamp": "2026-11-28 11:13:27",
+    "title": "Alerte Lien Mort Détecté",
+    "category": "ALERT",
+    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 15 lien(s) d'affiliation en anomalie :\n• `brevo, capcut, capcut-pro, clickup, descript, hubspot, jasper-ai, klaviyo, lusha, printify, semrush, typeform, voiceflow, webflow, writesonic`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
+    "link": null
+  },
+  {
+    "timestamp": "2026-11-28 11:12:20",
+    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Creatify AI Masterclass: How URL-to-Video Automation Is Revolutionizing E-Commerce Ad Scale in 2026",
+    "category": "CONTENT",
+    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Creatify AI Masterclass: How URL-to-Video Automation Is Revolutionizing E-Commerce Ad Scale in 2026\n• **Catégorie :** AI Video\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/creatify-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
+    "link": "https://heliatech.online/blog/creatify-ai-evolution-guide-2026/"
+  },
+  {
+    "timestamp": "2026-11-28 11:09:36",
+    "title": "⭐ NOUVELLE REVUE LOGICIEL : Creatify AI",
+    "category": "REVIEW",
+    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Creatify AI\n• **Catégorie :** AI Video\n• **Note globale :** 4.4/10\n• **Cible idéale :** E-commerce brands, performance marketing agencies, media buyers, and TikTok/Meta ad creators seeking high-volume ad iteration.\n\n👉 Lire la fiche d'audit complète :",
+    "link": "https://heliatech.online/reviews/creatify-ai/"
+  },
+  {
     "timestamp": "2026-11-28 01:02:08",
     "title": "Cycle Autonome #AudioPen",
     "category": "CYCLE",
@@ -320,33 +348,5 @@
     "category": "CONTENT",
     "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Wondercraft AI: The Death of the Recording Studio and the Rise of Generative Audio Sovereignty\n• **Catégorie :** Audio/Podcasting\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/wondercraft-ai-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
     "link": "https://heliatech.online/blog/wondercraft-ai-evolution-guide-2026/"
-  },
-  {
-    "timestamp": "2026-11-22 18:52:38",
-    "title": "⭐ NOUVELLE REVUE LOGICIEL : Wondercraft AI",
-    "category": "REVIEW",
-    "message": "Une nouvelle analyse technique vient d'être compilée et publiée sur HeliaTech !\n\n• **Outil :** Wondercraft AI\n• **Catégorie :** Audio/Podcasting\n• **Note globale :** 4.6/10\n• **Cible idéale :** Content marketers, podcasters, and corporate communications teams needing rapid audio production.\n\n👉 Lire la fiche d'audit complète :",
-    "link": "https://heliatech.online/reviews/wondercraft-ai/"
-  },
-  {
-    "timestamp": "2026-11-22 10:41:09",
-    "title": "Cycle Autonome #Ghost",
-    "category": "CYCLE",
-    "message": "Helia a audité le site, renforcé le maillage interne, publié l'analyse (Ghost) et mis à jour le calendrier social.",
-    "link": "https://heliatech.online/sentinel/suivicontrol"
-  },
-  {
-    "timestamp": "2026-11-22 10:37:38",
-    "title": "Alerte Lien Mort Détecté",
-    "category": "ALERT",
-    "message": "🚨 *ALERTE LIENS MORTS DÉTECTÉS !*\n\nHelia-LinkSentinel a identifié 27 lien(s) d'affiliation en anomalie :\n• `descript-migration-calculator, descript-sandbox-leaks, gamma-enterprise-sandbox, ghost-tco-calculator, invideo-ai-sandbox, legacy-ffmpeg-audit, minicong, minvo-testing-sandbox, nle-labor-calculator, notion-ai, opusclip-sandbox, pictory-rate-card-leak, pictory-sandbox-calculator, podsqueeze-api-sandbox, podsqueeze-migration-calculator, podsqueeze-rate-card, rate-card-declassified, replit-agent, riverside-sandbox, runway-tco-calculator, screenstudio-migration-sandbox, screenstudio-performance-calculator, tella-migration-calculator, tome, veed-architecture-sandbox, veed-migration-sandbox, writesonic-rate-card`\n\nVérifiez le rapport : `reports/link_health_audit.json`",
-    "link": null
-  },
-  {
-    "timestamp": "2026-11-22 10:35:15",
-    "title": "📰 NOUVEL ARTICLE PUBLIÉ : Ghost: The Open-Source Publishing Engine Disrupting Substack and WordPress in 2026",
-    "category": "CONTENT",
-    "message": "Une nouvelle masterclass d'autorité vient d'être rédigée et déployée sur HeliaTech !\n\n• **Titre :** Ghost: The Open-Source Publishing Engine Disrupting Substack and WordPress in 2026\n• **Catégorie :** Newsletters & Publishing\n• **Temps de lecture :** 11 MIN\n• **Slug :** `/blog/ghost-evolution-guide-2026/`\n\n👉 Découvrir la masterclass en direct :",
-    "link": "https://heliatech.online/blog/ghost-evolution-guide-2026/"
   }
 ]
