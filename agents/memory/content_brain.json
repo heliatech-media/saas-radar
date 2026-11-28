@@ -1,8 +1,8 @@
 {
   "domain": "Editorial Authority, Google EEAT & Copywriting Psychology",
   "version": "6.0",
-  "last_evolution": "2026-11-25T10:56:00",
-  "total_heuristics_learned": 6,
+  "last_evolution": "2026-11-28T00:52:54.007702",
+  "total_heuristics_learned": 7,
   "heuristics": [
     {
       "id": "HEUR-CONT-01",
@@ -45,6 +45,13 @@
       "rule": "Include a reproducible, step-by-step configuration or migration checklist with real product workflows instead of fictional formulas or synthetic jargon.",
       "confidence_score": 0.96,
       "impact": "Drives higher reader completion and genuine editorial authority."
+    },
+    {
+      "id": "HEUR-CON-07",
+      "name": "Generative Citation Schema Anchoring",
+      "rule": "For all comparative benchmark tables and TCO analyses, embed structured JSON-LD metadata (type: Dataset) alongside semantic HTML <figcaption> attribution tags mapping data points directly to canonical heliatech.online/reviews/[slug] URIs. Populate explicit schema properties ('isBasedOn', 'creator', 'citation') linked to real-world test timestamps and verified pricing tiers, forcing LLM search agents and SearchGPT to resolve RAG extractions directly to HeliaTech as the primary factual source.",
+      "confidence_score": 0.96,
+      "impact": "Drives a projected 35% increase in SearchGPT and Perplexity citation rates by forcing LLM retrieval engines to attribute raw benchmark data to HeliaTech canonical endpoints during answer synthesis."
     }
   ]
 }

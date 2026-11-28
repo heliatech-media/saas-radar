@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-11-27 15:55:16",
-  "total_links_audited": 147,
-  "healthy_links": 132,
+  "timestamp": "2026-11-28 01:01:50",
+  "total_links_audited": 148,
+  "healthy_links": 133,
   "broken_links_count": 15,
-  "health_rate": "89.8%",
+  "health_rate": "89.9%",
   "broken_links": [
     {
       "slug": "brevo",
@@ -151,6 +151,13 @@
       "slug": "asana",
       "target_url": "https://www.asana.com",
       "final_url": "https://asana.com/",
+      "status_code": 200,
+      "healthy": true
+    },
+    {
+      "slug": "audiopen",
+      "target_url": "https://www.audiopen.com",
+      "final_url": "https://www.audiopen.com/",
       "status_code": 200,
       "healthy": true
     },
@@ -332,7 +339,7 @@
     {
       "slug": "elevenlabs",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=VMO4IRdxA7msUy&gsxid=VMO4IRdxA7msUy&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=LcsppI6qyAi3XT&gsxid=LcsppI6qyAi3XT&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -415,8 +422,8 @@
     },
     {
       "slug": "heyflow",
-      "target_url": "https://www.heyflow.com",
-      "final_url": "https://heyflow.com/",
+      "target_url": "https://heyflow.com/?via=heliatech",
+      "final_url": "https://heyflow.com/?via=heliatech",
       "status_code": 200,
       "healthy": true
     },
@@ -689,7 +696,7 @@
     {
       "slug": "peripety",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=0sJrhSQV6gjltL&gsxid=0sJrhSQV6gjltL&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IcYIbpErNGB5zi&gsxid=IcYIbpErNGB5zi&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },
@@ -731,7 +738,7 @@
     {
       "slug": "playht",
       "target_url": "https://try.elevenlabs.io/ajhd6t7k04dh",
-      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=2AePCPOrKovdWc&gsxid=2AePCPOrKovdWc&gspk=OTFiYjM2Mzg5MDIy",
+      "final_url": "https://elevenlabs.io/?utm_campaign=affiliates-_91bb36389022&utm_medium=affiliates&utm_source=affiliates&pscd=try.elevenlabs.io&ps_partner_key=OTFiYjM2Mzg5MDIy&ps_xid=IiIlavBc5FJ1Cv&gsxid=IiIlavBc5FJ1Cv&gspk=OTFiYjM2Mzg5MDIy",
       "status_code": 200,
       "healthy": true
     },

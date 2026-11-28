@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-27 15:55:17",
-  "total_articles_scanned": 282,
+  "timestamp": "2026-11-28 01:01:50",
+  "total_articles_scanned": 284,
   "average_authenticity_score": "92.4/100",
   "honest_tradeoffs_coverage": "99.6%",
   "total_cliches_detected": 19,
@@ -11,5 +11,18 @@
     "Empirical data tables & pricing calculations per article",
     "Technical architecture & forensic engineer persona"
   ],
-  "flagged_files": []
+  "flagged_files": [
+    {
+      "slug": "audiopen-evolution-guide-2026",
+      "file": "audiopen-evolution-guide-2026.md",
+      "authenticity_score": 75,
+      "has_honest_tradeoffs": true,
+      "has_empirical_table": false,
+      "cliche_matches_count": 0,
+      "cliches_found": [],
+      "invalid_go_links": [
+        "audiopen"
+      ]
+    }
+  ]
 }

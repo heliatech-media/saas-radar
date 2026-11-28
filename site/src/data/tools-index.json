@@ -44,6 +44,16 @@
     "commission_rate": "20% recurring for up to 12 months"
   },
   {
+    "name": "AudioPen",
+    "slug": "audiopen",
+    "tagline": "Transform messy, unscripted voice notes into clear, structured prose instantly.",
+    "category": "Voice Notes & AI Writing",
+    "rating": 4.6,
+    "starting_price": "$75/yr",
+    "best_for": "Founders, executives, researchers, and content creators who generate ideas better by speaking than by typing.",
+    "affiliate_url": "https://audiopen.ai"
+  },
+  {
     "name": "Axiom.ai",
     "slug": "axiom-ai",
     "tagline": "Automate any browser-based task without writing a single line of code.",
@@ -376,7 +386,8 @@
     "rating": 4.6,
     "starting_price": "Free",
     "best_for": "Performance marketers, growth teams, and agencies scaling lead acquisition.",
-    "affiliate_url": "https://heyflow.com"
+    "affiliate_url": "https://heyflow.com/?via=heliatech",
+    "commission_rate": "30% recurring"
   },
   {
     "name": "HubSpot",

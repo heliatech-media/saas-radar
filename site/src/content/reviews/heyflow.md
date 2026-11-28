@@ -6,7 +6,7 @@ tagline: Build high-converting, interactive lead generation funnels without writ
 category: Lead Gen
 rating: 4.6
 website_url: https://heyflow.com
-affiliate_url: https://heyflow.com
+affiliate_url: "https://heyflow.com/?via=heliatech"
 summary: Heyflow is a drag-and-drop funnel builder designed for high-performance lead
   generation and onboarding flows. It bridges the gap between simple form builders
   and complex, developer-heavy custom web applications.
@@ -109,7 +109,7 @@ Heyflow is a drag-and-drop funnel builder designed for high-performance lead gen
 - **Visual flow builder with conditional logic**
 - **Real-time A/B testing and conversion analytics**
 - **Custom domain support and white-labeling**
-- **Native integrations with Zapier, Make, Salesforce, and HubSpot**
+- **Native integrations with [Zapier](/reviews/zapier), [Make](/reviews/make), Salesforce, and HubSpot**
 - **Dynamic content injection based on URL parameters**
 
 ## Pricing Overview

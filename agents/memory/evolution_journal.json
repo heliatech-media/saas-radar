@@ -1,8 +1,8 @@
 {
   "fleet_evolution_generation": 5,
   "system_status": "COGNITIVE_SWARM_INTELLIGENCE_ACTIVE",
-  "last_cycle_timestamp": "2026-11-26T21:19:17.710492",
-  "total_heuristics_stored": 88,
+  "last_cycle_timestamp": "2026-11-28T01:01:34.919202",
+  "total_heuristics_stored": 89,
   "critique_pass_rate": "98.4%",
   "active_learning_modules": [
     "Content Editorial & AI-GEO Engine",
@@ -14,27 +14,6 @@
     "World-Class Web Design & Awwwards Jury Engine"
   ],
   "evolution_log": [
-    {
-      "timestamp": "2026-11-13T13:39:19.311612",
-      "event": "HEURISTIC_ACQUIRED",
-      "domain": "monetization",
-      "heuristic_name": "Predictive Zero-Day Vendor-Lockout Arbitrage",
-      "curriculum_module": "High-Ticket SaaS Partner Sovereignty: Structuring direct high-yield affiliate routes & proprietary marketplace monetization while eliminating 25% aggregator cuts"
-    },
-    {
-      "timestamp": "2026-11-13T13:39:43.759461",
-      "agent": "BlogAgent",
-      "domain": "content",
-      "score": 90,
-      "critique_summary": ""
-    },
-    {
-      "timestamp": "2026-11-13T21:06:18.720855",
-      "event": "HEURISTIC_ACQUIRED",
-      "domain": "cro",
-      "heuristic_name": "Sub-Perceptual Retinal Prefetch & Zero-Latency Modal Projection",
-      "curriculum_module": "The 8-Second High-Intent Lead Capture: Activating modal drawers at peak cognitive engagement (30% scroll depth) with zero bounce penalty"
-    },
     {
       "timestamp": "2026-11-13T21:06:45.072060",
       "agent": "BlogAgent",
@@ -363,6 +342,27 @@
       "domain": "social",
       "score": 74,
       "critique_summary": "Violates HEUR-SOC-01, HEUR-SOC-04, HEUR-SOC-05, and HEUR-SOC-06 by including an explicit call-to-action string ('Access our technical evaluation dossi"
+    },
+    {
+      "timestamp": "2026-11-28T00:52:54.008356",
+      "event": "HEURISTIC_ACQUIRED",
+      "domain": "content",
+      "heuristic_name": "Generative Citation Schema Anchoring",
+      "curriculum_module": "2026 AI-GEO & SearchGPT Citation Architecture: How to structure unsearchable benchmark schemas that force generative engines to cite HeliaTech"
+    },
+    {
+      "timestamp": "2026-11-28T00:59:06.947053",
+      "agent": "BlogAgent",
+      "domain": "content",
+      "score": 58,
+      "critique_summary": "Violates HEUR-CONT-02 with a generic 'knowledge workers' fluff intro; lacks an empirical markdown benchmark table (HEUR-CONT-03) and JSON-LD dataset s"
+    },
+    {
+      "timestamp": "2026-11-28T01:01:34.919193",
+      "agent": "SocialGrowthAgent",
+      "domain": "social",
+      "score": 78,
+      "critique_summary": "The draft uses superficial emoji bullets (⚡) instead of quantitative data structures, violating HEUR-SOC-04 and HEUR-SOC-06 by failing to provide an A"
     }
   ]
 }

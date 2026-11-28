@@ -13,7 +13,7 @@ tags:
 - SaaS
 - Automation
 - B2B Software
-readingTime: 11 MIN
+readingTime: 5 MIN
 tool_slug: heyflow
 image: /images/blog/heyflow.svg
 tldr:
@@ -31,7 +31,6 @@ affiliate_cta:
   button_text: Claim Your Free Heyflow Account ➔
   url: /go/heyflow
 ---
-
 ## The Friction Tax on Modern Growth
 
 **H**ave you ever audited your own conversion path? Most B2B brands spend thousands on high-intent traffic, only to dump those prospects into a digital graveyard: the static web form. It is the silent killer of ROI. For years, marketers were forced to choose between rigid, ugly form builders or expensive, custom-coded web applications that required a dedicated engineering sprint for every minor tweak. 

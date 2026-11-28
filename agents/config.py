@@ -213,7 +213,8 @@ AFFILIATE_MAP = {
     "taplio": "https://taplio.com/?via=heliatech",
     "capsho": "https://www.capsho.com/?via=heliatech",
     "dub-co": "https://dub.co?via=heliatech",
-    "pika": "https://pika.art?ref=heliatech"
+    "pika": "https://pika.art?ref=heliatech",
+    "heyflow": "https://heyflow.com/?via=heliatech"
 }
 
 # Strict Anonymity & Institutional Branding Policy:
